@@ -1,0 +1,350 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Atom > feed 1`] = `
+{
+  "feed": [
+    {
+      "_attr": {
+        "xmlns": "http://www.w3.org/2005/Atom",
+      },
+    },
+    {
+      "title": [
+        {
+          "_attr": {
+            "type": "text",
+          },
+        },
+        "Human Accomplishment",
+      ],
+    },
+    {
+      "subtitle": [
+        {
+          "_attr": {
+            "type": "html",
+          },
+        },
+        "Bringing you the &lt;em&gt;most&lt;/em&gt; accomplished humans every day",
+      ],
+    },
+    {
+      "updated": "2095-07-31T12:00:00.000Z",
+    },
+    {
+      "id": "https://projects.hoster.app",
+    },
+    {
+      "link": [
+        {
+          "_attr": {
+            "href": "https://projects.hoster.app",
+            "hreflang": "en",
+            "rel": "alternate",
+            "type": "text/html",
+          },
+        },
+      ],
+    },
+    {
+      "link": [
+        {
+          "_attr": {
+            "href": "https://projects.hoster.app/feed/atom",
+            "rel": "self",
+            "type": "application/atom+xml",
+          },
+        },
+      ],
+    },
+    {
+      "author": {
+        "name": "Human Accomplishment Editors",
+      },
+    },
+    {
+      "author": [
+        {
+          "name": "Human Accomplishment Editors",
+        },
+        {
+          "email": "editor@accomplishedh.com",
+        },
+      ],
+    },
+    {
+      "rights": "Copyright (c) 2095, Human Accomplishment",
+    },
+    {
+      "entry": [
+        {
+          "id": "urn:uri:dfh5",
+        },
+        {
+          "title": "SUBJECT 000005",
+        },
+        {
+          "updated": "2095-07-31T12:00:00.000Z",
+        },
+        {
+          "link": [
+            {
+              "_attr": {
+                "href": "https://projects.hoster.app/featured/dfh5",
+                "rel": "alternate",
+                "type": "text/html",
+              },
+            },
+          ],
+        },
+        {
+          "link": [
+            {
+              "_attr": {
+                "href": "https://upload.wikimedia.org/wikipedia/commons/thumb/p5.jpg",
+                "rel": "enclosure",
+                "type": "image/jpeg",
+              },
+            },
+          ],
+        },
+        {
+          "content": [
+            {
+              "_attr": {
+                "type": "html",
+              },
+            },
+            "&lt;h1&gt;SUBJECT 000005&lt;/h1&gt;&lt;div&gt;a guy featured on 2095-07-31&lt;/div&gt;",
+          ],
+        },
+      ],
+    },
+    {
+      "entry": [
+        {
+          "id": "urn:uri:dfh4",
+        },
+        {
+          "title": "SUBJECT 000004",
+        },
+        {
+          "updated": "2095-07-31T12:00:00.000Z",
+        },
+        {
+          "link": [
+            {
+              "_attr": {
+                "href": "https://projects.hoster.app/featured/dfh4",
+                "rel": "alternate",
+                "type": "text/html",
+              },
+            },
+          ],
+        },
+        {
+          "link": [
+            {
+              "_attr": {
+                "href": "https://upload.wikimedia.org/wikipedia/commons/thumb/p4.jpg",
+                "rel": "enclosure",
+                "type": "image/jpeg",
+              },
+            },
+          ],
+        },
+        {
+          "content": [
+            {
+              "_attr": {
+                "type": "html",
+              },
+            },
+            "&lt;h1&gt;SUBJECT 000004&lt;/h1&gt;&lt;div&gt;a guy featured on 2095-07-31&lt;/div&gt;",
+          ],
+        },
+      ],
+    },
+    {
+      "entry": [
+        {
+          "id": "urn:uri:dfh3",
+        },
+        {
+          "title": "SUBJECT 000003",
+        },
+        {
+          "updated": "2095-07-31T12:00:00.000Z",
+        },
+        {
+          "link": [
+            {
+              "_attr": {
+                "href": "https://projects.hoster.app/featured/dfh3",
+                "rel": "alternate",
+                "type": "text/html",
+              },
+            },
+          ],
+        },
+        {
+          "link": [
+            {
+              "_attr": {
+                "href": "https://upload.wikimedia.org/wikipedia/commons/thumb/p3.jpg",
+                "rel": "enclosure",
+                "type": "image/jpeg",
+              },
+            },
+          ],
+        },
+        {
+          "content": [
+            {
+              "_attr": {
+                "type": "html",
+              },
+            },
+            "&lt;h1&gt;SUBJECT 000003&lt;/h1&gt;&lt;div&gt;a guy featured on 2095-07-31&lt;/div&gt;",
+          ],
+        },
+      ],
+    },
+    {
+      "entry": [
+        {
+          "id": "urn:uri:dfh2",
+        },
+        {
+          "title": "SUBJECT 000002",
+        },
+        {
+          "updated": "2095-07-30T12:00:00.000Z",
+        },
+        {
+          "link": [
+            {
+              "_attr": {
+                "href": "https://projects.hoster.app/featured/dfh2",
+                "rel": "alternate",
+                "type": "text/html",
+              },
+            },
+          ],
+        },
+        {
+          "link": [
+            {
+              "_attr": {
+                "href": "https://upload.wikimedia.org/wikipedia/commons/thumb/p2.jpg",
+                "rel": "enclosure",
+                "type": "image/jpeg",
+              },
+            },
+          ],
+        },
+        {
+          "content": [
+            {
+              "_attr": {
+                "type": "html",
+              },
+            },
+            "&lt;h1&gt;SUBJECT 000002&lt;/h1&gt;&lt;div&gt;a guy featured on 2095-07-30&lt;/div&gt;",
+          ],
+        },
+      ],
+    },
+    {
+      "entry": [
+        {
+          "id": "urn:uri:dfh1",
+        },
+        {
+          "title": "SUBJECT 000001",
+        },
+        {
+          "updated": "2095-07-30T12:00:00.000Z",
+        },
+        {
+          "link": [
+            {
+              "_attr": {
+                "href": "https://projects.hoster.app/featured/dfh1",
+                "rel": "alternate",
+                "type": "text/html",
+              },
+            },
+          ],
+        },
+        {
+          "link": [
+            {
+              "_attr": {
+                "href": "https://upload.wikimedia.org/wikipedia/commons/thumb/p1.jpg",
+                "rel": "enclosure",
+                "type": "image/jpeg",
+              },
+            },
+          ],
+        },
+        {
+          "content": [
+            {
+              "_attr": {
+                "type": "html",
+              },
+            },
+            "&lt;h1&gt;SUBJECT 000001&lt;/h1&gt;&lt;div&gt;a guy featured on 2095-07-30&lt;/div&gt;",
+          ],
+        },
+      ],
+    },
+    {
+      "entry": [
+        {
+          "id": "urn:uri:dfh0",
+        },
+        {
+          "title": "SUBJECT 000000",
+        },
+        {
+          "updated": "2095-07-30T12:00:00.000Z",
+        },
+        {
+          "link": [
+            {
+              "_attr": {
+                "href": "https://projects.hoster.app/featured/dfh0",
+                "rel": "alternate",
+                "type": "text/html",
+              },
+            },
+          ],
+        },
+        {
+          "link": [
+            {
+              "_attr": {
+                "href": "https://upload.wikimedia.org/wikipedia/commons/thumb/p0.jpg",
+                "rel": "enclosure",
+                "type": "image/jpeg",
+              },
+            },
+          ],
+        },
+        {
+          "content": [
+            {
+              "_attr": {
+                "type": "html",
+              },
+            },
+            "&lt;h1&gt;SUBJECT 000000&lt;/h1&gt;&lt;div&gt;a guy featured on 2095-07-30&lt;/div&gt;",
+          ],
+        },
+      ],
+    },
+  ],
+}
+`;

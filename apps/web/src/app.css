@@ -1,0 +1,92 @@
+@import "reset";
+@import "@fontsource/montserrat";
+
+:root {
+  font-family: "Montserrat", sans-serif;
+  --primary-color: rgb(31, 186, 186);
+  --secondary-color: hsla(11, 50%, 87%, 1);
+  --tertiary-color: #edf0f8;
+  --text-color: black;
+  --background-color: #fff;
+  --ruby-red: hsla(355, 74%, 33%, 1);
+  --kf-bg-color: #cdf7f7;
+  --greenish: rgb(92, 184, 92);
+  --warn-yellow: #ffffcc;
+  --alert-red: #e91e63;
+  --shadow-15: 2px 8px 20px 0 rgba(0, 0, 0, 0.15);
+  --shadow-20: 0 2px 2px 0 var(--light-black), 0 12px 22px 0 var(--light-black);
+  --light-black: rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] {
+  --primary-color: hsla(11, 50%, 87%, 1);
+  --secondary-color: rgb(31, 186, 186);
+  --tertiary-color: #edf0f8;
+  --text-color: #fff;
+  --background-color: #000;
+  --kf-bg-color: #177070;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font: inherit;
+  vertical-align: baseline;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-size: 14px;
+  height: 100%;
+  line-height: 1.2;
+  transition:
+    background-color 0.25s,
+    text-color 0.25s,
+    color 0.25s;
+}
+
+.more-link {
+  font-weight: 600;
+  font-variant: small-caps;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+}
+button.plain {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+section.wikidata {
+  margin: 0.5em auto;
+}
+
+section.wikidata h1 {
+  font-weight: bold;
+  margin: 0.5em auto;
+}
+
+section.wikidata > .bod {
+  border: thin solid #ccc;
+}
+
+.wikidata-card {
+  box-shadow: var(--shadow-20);
+  overflow: hidden;
+  line-height: 1.5;
+}
+
+.wikidata-cap {
+  font-size: 1.3em;
+}

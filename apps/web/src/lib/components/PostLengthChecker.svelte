@@ -1,0 +1,47 @@
+<script lang="ts">
+  interface Props {
+    text: string;
+  }
+
+  let { text }: Props = $props();
+  function isTweetable(message: string) {
+    return message.length < 200;
+  }
+</script>
+
+<div class:valid={isTweetable(text)}>
+  {text.length}
+</div>
+
+<!-- <span
+</span> -->
+<style>
+  div {
+    display: inline-block;
+    padding: 0 0.5em;
+    background: rgb(228, 61, 61);
+  }
+  .valid {
+    background-color: rgb(62, 223, 62);
+  }
+
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+  }
+
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+  }
+
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+  }
+
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+  }
+
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+  }
+</style>
