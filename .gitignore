@@ -1,0 +1,14 @@
+*.tsbuildinfo
+**/dist/
+**/coverage/
+**/vite.config.ts.timestamp*
+**/.svelte-kit/
+**/.vercel/
+apps/web/test-results/
+apps/web/playwright-report/
+node_modules/
+tmp/
+.env
+.env.*
+!.env.example
+pnpm-exec-summary.json

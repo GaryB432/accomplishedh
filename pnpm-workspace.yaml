@@ -1,0 +1,9 @@
+packages:
+  - apps/*
+  - libraries/*
+
+onlyBuiltDependencies:
+  - '@parcel/watcher'
+  - esbuild
+
+version: 1

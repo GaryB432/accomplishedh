@@ -1,0 +1,16 @@
+{
+  "search.exclude": {
+    "**/web/.svelte-kit": true,
+    "**/web/build": true,
+    "**/coverage": true,
+    "**/dist": true,
+    "**/node_modules": true,
+    "**/*-lock.json": true
+  },
+  "editor.inlayHints.enabled": "offUnlessPressed",
+  "typescript.inlayHints.parameterNames.enabled": "all",
+  "typescript.tsdk": "node_modules/typescript/lib/",
+  "git.branchProtection": ["master", "next"],
+  "git.branchRandomName.enable": true,
+  "git.branchRandomName.dictionary": ["adjectives", "animals"]
+}
