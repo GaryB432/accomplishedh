@@ -1,0 +1,5331 @@
+[
+  {
+    "adultbasic": "Britain",
+    "adultregion": "E.NW",
+    "yob": "1842",
+    "death": "1912-02-21T00:00:00.000Z",
+    "dob": "08-23",
+    "era": "1800+",
+    "id": "01ab5141-5352-4182-b67d-a69f4bb4e5c5",
+    "inventory": "Science",
+    "knownFor": "an Irish-born innovator in the understanding of fluid dynamics. Separately, his studies of heat transfer between solids and fluids brought improvements in boiler and condenser design.",
+    "name": "Osborne Reynolds",
+    "osfName": "Reynolds, Osborne",
+    "portrait": {
+      "above": "Osborne Reynolds",
+      "img": {
+        "alt": "OsborneReynolds.jpg",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/1/1d/OsborneReynolds.jpg/150px-OsborneReynolds.jpg",
+        "decoding": "async",
+        "width": "150",
+        "height": "191",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/thumb/1/1d/OsborneReynolds.jpg/225px-OsborneReynolds.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/1d/OsborneReynolds.jpg/300px-OsborneReynolds.jpg 2x",
+        "data-file-width": "470",
+        "data-file-height": "600"
+      },
+      "caption": "Osborne Reynolds in 1903"
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "23 August 1842 Belfast, Ireland",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "21 February 1912 (aged 69) Watchet, Somerset, England",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Nationality",
+        "seq": 2,
+        "value": "United Kingdom of Great Britain and Ireland",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Alma mater",
+        "seq": 3,
+        "value": "Queens' College, Cambridge Victoria University of Manchester",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Known for",
+        "seq": 4,
+        "value": "Fluid dynamics, Reynolds number",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Awards",
+        "seq": 5,
+        "value": "Royal Medal (1888) Dalton Medal (1903)",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Fields",
+        "seq": 6,
+        "value": "Physics, Mechanical Engineering",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "6869",
+    "sr": {
+      "ns": 0,
+      "title": "Osborne Reynolds",
+      "pageid": 321921,
+      "size": 16333,
+      "wordcount": 1621,
+      "snippet": "<span class=\"searchmatch\">Osborne</span> <span class=\"searchmatch\">Reynolds</span> FRS (23 August <span class=\"searchmatch\">1842</span> – 21 February 1912) was an Irish-born innovator in the understanding of fluid dynamics. Separately, his studies of",
+      "timestamp": "2022-03-05T20:38:52Z"
+    }
+  },
+  {
+    "adultbasic": "Britain",
+    "adultregion": "E.SE",
+    "yob": "1812",
+    "death": "1889-12-12T00:00:00.000Z",
+    "dob": "05-07",
+    "era": "1800+",
+    "id": "0670519f-6ee6-47ef-ab4b-dc90ce69884b",
+    "inventory": "Lit.West",
+    "knownFor": "an English poet and playwright whose dramatic monologues put him high among the Victorian poets",
+    "name": "Robert Browning",
+    "osfName": "Browning, Robert",
+    "portrait": {
+      "above": "Robert Browning",
+      "img": {
+        "alt": "Browning, c. 1888",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/5/58/Robert_Browning_by_Herbert_Rose_Barraud_c1888.jpg/220px-Robert_Browning_by_Herbert_Rose_Barraud_c1888.jpg",
+        "decoding": "async",
+        "width": "220",
+        "height": "305",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/thumb/5/58/Robert_Browning_by_Herbert_Rose_Barraud_c1888.jpg/330px-Robert_Browning_by_Herbert_Rose_Barraud_c1888.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/58/Robert_Browning_by_Herbert_Rose_Barraud_c1888.jpg/440px-Robert_Browning_by_Herbert_Rose_Barraud_c1888.jpg 2x",
+        "data-file-width": "1510",
+        "data-file-height": "2095"
+      },
+      "caption": "Browning, c.&#8201;1888"
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "7 May 1812 Camberwell, London, England",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "12 December 1889 (aged 77) Venice, Kingdom of Italy",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Resting place",
+        "seq": 2,
+        "value": "Westminster Abbey",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Occupation",
+        "seq": 3,
+        "value": "Poet",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Alma mater",
+        "seq": 4,
+        "value": "University College London",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Literary movement",
+        "seq": 5,
+        "value": "Victorian",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Notable works",
+        "seq": 6,
+        "value": "\"The Pied Piper of Hamelin\", Men and Women, The Ring and the Book, Dramatis Personae, Dramatic Lyrics, Dramatic Romances and Lyrics, Asolando",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Spouse",
+        "seq": 7,
+        "value": "Elizabeth Barrett Browning ​ ​ ( m. 1846 ; died 1861) ​",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Children",
+        "seq": 8,
+        "value": "Robert Wiedeman Barrett \"Pen\" Browning ",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Relatives",
+        "seq": 9,
+        "value": "Robert Browning (Father); Sarah Anna Wiedemann (Mother)",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "10740",
+    "sr": {
+      "ns": 0,
+      "title": "Robert Browning",
+      "pageid": 61180,
+      "size": 47550,
+      "wordcount": 5363,
+      "snippet": "<span class=\"searchmatch\">Robert</span> <span class=\"searchmatch\">Browning</span> (7 May <span class=\"searchmatch\">1812</span> – 12 December 1889) was an English poet and playwright whose dramatic monologues put him high among the Victorian poets. He",
+      "timestamp": "2022-03-03T12:23:23Z"
+    }
+  },
+  {
+    "adultbasic": "Belgium",
+    "adultregion": "Belgium",
+    "yob": "1827",
+    "death": "1879-05-07T00:00:00.000Z",
+    "dob": "08-20",
+    "era": "1800+",
+    "id": "082d511d-938f-4513-8488-8c3aadb97cc6",
+    "inventory": "Lit.West",
+    "knownFor": "a Belgian novelist whose efforts laid the basis for a native Belgian literature.",
+    "name": "Charles De Coster",
+    "osfName": "Coster, Charles de",
+    "portrait": {
+      "above": "Charles De Coster",
+      "img": {
+        "alt": "Charles de Coster",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/2/26/Charles_de_Coster.jpg/220px-Charles_de_Coster.jpg",
+        "decoding": "async",
+        "width": "220",
+        "height": "279",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/2/26/Charles_de_Coster.jpg 1.5x",
+        "data-file-width": "300",
+        "data-file-height": "380"
+      }
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "Charles-Theodore-Henri De Coster 20 August 1827 Munich, Germany",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "7 May 1879 (aged 51) Ixelles, Belgium",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Nationality",
+        "seq": 2,
+        "value": "Belgian",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Occupation",
+        "seq": 3,
+        "value": "novelist",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "11082",
+    "sr": {
+      "ns": 0,
+      "title": "Charles De Coster",
+      "pageid": 1505251,
+      "size": 5566,
+      "wordcount": 650,
+      "snippet": "<span class=\"searchmatch\">Charles</span>-Theodore-Henri <span class=\"searchmatch\">De</span> <span class=\"searchmatch\">Coster</span> (20 August <span class=\"searchmatch\">1827</span> – 7 May 1879) was a Belgian novelist whose efforts laid the basis for a native Belgian literature. He",
+      "timestamp": "2021-12-17T21:16:39Z"
+    }
+  },
+  {
+    "adultbasic": "Italy",
+    "adultregion": "I.Tusca",
+    "yob": "1625",
+    "death": "1712-09-14T00:00:00.000Z",
+    "dob": "06-08",
+    "era": "1600-1800",
+    "id": "09465f80-c7ae-4040-8dd1-9ee8250f5ef8",
+    "inventory": "Science",
+    "knownFor": "an Italian (naturalised French) mathematician, astronomer and engineer.",
+    "name": "Giovanni Domenico Cassini",
+    "osfName": "Cassini, Giovanni",
+    "portrait": {
+      "above": "Giovanni Domenico Cassini",
+      "img": {
+        "alt": "Giovanni Cassini.jpg",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Giovanni_Cassini.jpg/220px-Giovanni_Cassini.jpg",
+        "decoding": "async",
+        "width": "220",
+        "height": "306",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Giovanni_Cassini.jpg/330px-Giovanni_Cassini.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/d/d6/Giovanni_Cassini.jpg 2x",
+        "data-file-width": "423",
+        "data-file-height": "588"
+      }
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "8 June 1625 Perinaldo, Republic of Genova",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "14 September 1712 (aged 87) Paris, France",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Nationality",
+        "seq": 2,
+        "value": "Italian, French",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Alma mater",
+        "seq": 3,
+        "value": "The Jesuit College at Genoa",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Known for",
+        "seq": 4,
+        "value": "Cassini Division Cassini identity Cassini's laws Cassini oval First to observe the division in the rings of Saturn",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Fields",
+        "seq": 5,
+        "value": "Mathematics, astrology astronomy, engineering",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Institutions",
+        "seq": 6,
+        "value": "University of Bologna",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "1502",
+    "sr": {
+      "ns": 0,
+      "title": "Giovanni Domenico Cassini",
+      "pageid": 5215428,
+      "size": 23294,
+      "wordcount": 2511,
+      "snippet": "<span class=\"searchmatch\">Giovanni</span> Domenico <span class=\"searchmatch\">Cassini</span>, also known as Jean-Dominique <span class=\"searchmatch\">Cassini</span> (8 June <span class=\"searchmatch\">1625</span> – 14 September 1712) was an Italian (naturalised French) mathematician, astronomer",
+      "timestamp": "2022-02-27T23:48:42Z"
+    }
+  },
+  {
+    "adultbasic": "Britain",
+    "adultregion": "E.gx",
+    "yob": "1885",
+    "death": "1930-03-02T00:00:00.000Z",
+    "dob": "09-11",
+    "era": "1800+",
+    "id": "0b1f591a-5e02-452e-8861-b425ef8b4286",
+    "inventory": "Lit.West",
+    "knownFor": "an English writer, novelist, poet and essayist. His works reflect on modernity, industrialization, sexuality, emotional health, vitality, spontaneity and instinct.",
+    "name": "D. H. Lawrence",
+    "osfName": "Lawrence, D.H.",
+    "portrait": {
+      "above": "D. H. Lawrence",
+      "img": {
+        "alt": "D. H. Lawrence, 1929",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/4/44/D_H_Lawrence_passport_photograph.jpg/220px-D_H_Lawrence_passport_photograph.jpg",
+        "decoding": "async",
+        "width": "220",
+        "height": "280",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/thumb/4/44/D_H_Lawrence_passport_photograph.jpg/330px-D_H_Lawrence_passport_photograph.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/44/D_H_Lawrence_passport_photograph.jpg/440px-D_H_Lawrence_passport_photograph.jpg 2x",
+        "data-file-width": "1507",
+        "data-file-height": "1919"
+      },
+      "caption": "D. H. Lawrence, 1929"
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "David Herbert Lawrence 11 September 1885 Eastwood, Nottinghamshire, England",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "2 March 1930 (aged 44) Vence, Alpes-Maritimes Department, France",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Resting place",
+        "seq": 2,
+        "value": "D. H. Lawrence Ranch, Taos, New Mexico",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Occupation",
+        "seq": 3,
+        "value": "Novelist, poet",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Language",
+        "seq": 4,
+        "value": "English",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Alma mater",
+        "seq": 5,
+        "value": "University College Nottingham",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Period",
+        "seq": 6,
+        "value": "1907–1930",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Genre",
+        "seq": 7,
+        "value": "Modernism",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Notable works",
+        "seq": 8,
+        "value": "Novels: Sons and Lovers The Rainbow Women in Love John Thomas and Lady Jane Lady Chatterley's Lover Short stories: Odour of Chrysanthemums The Virgin and the Gypsy The Rocking-Horse Winner",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "12442",
+    "sr": {
+      "ns": 0,
+      "title": "D. H. Lawrence",
+      "pageid": 44191,
+      "size": 80196,
+      "wordcount": 10386,
+      "snippet": "David Herbert <span class=\"searchmatch\">Lawrence</span> (11 September <span class=\"searchmatch\">1885</span> – 2 March 1930) was an English writer and poet. His collected works represent, among other things, an extended",
+      "timestamp": "2022-03-08T02:04:21Z"
+    }
+  },
+  {
+    "adultbasic": "Denmark",
+    "adultregion": "Denmark",
+    "yob": "1857",
+    "death": "1912-01-29T00:00:00.000Z",
+    "dob": "04-20",
+    "era": "1800+",
+    "id": "100e532b-38f3-41d7-a39e-95810b483895",
+    "inventory": "Lit.West",
+    "knownFor": "a Danish journalist and author, one of the men of the Modern Breakthrough",
+    "name": "Herman Bang",
+    "osfName": "Bang, Hermann",
+    "portrait": {
+      "above": "Herman Bang",
+      "img": {
+        "alt": "Herman Bang sitting.jpg",
+        "src": "//upload.wikimedia.org/wikipedia/commons/d/de/Herman_Bang_sitting.jpg",
+        "decoding": "async",
+        "width": "200",
+        "height": "262",
+        "data-file-width": "200",
+        "data-file-height": "262"
+      }
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "20 April 1857 Asserballe, Schleswig",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "29 January 1912 (aged 54) Ogden, Utah",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Occupation",
+        "seq": 2,
+        "value": "Writer",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Nationality",
+        "seq": 3,
+        "value": "Danish",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "10349",
+    "sr": {
+      "ns": 0,
+      "title": "Herman Bang",
+      "pageid": 1374023,
+      "size": 6954,
+      "wordcount": 737,
+      "snippet": "Herman Joachim <span class=\"searchmatch\">Bang</span> (20 April <span class=\"searchmatch\">1857</span> – 29 January 1912) was a Danish journalist and author, one of the men of the Modern Breakthrough. <span class=\"searchmatch\">Bang</span> was born in Asserballe",
+      "timestamp": "2021-11-07T19:44:08Z"
+    }
+  },
+  {
+    "adultbasic": "Germany",
+    "adultregion": "G.Baden",
+    "yob": "1778",
+    "death": "1842-07-28T00:00:00.000Z",
+    "dob": "09-09",
+    "era": "1800+",
+    "id": "240e5f21-808d-46f8-a026-10aa3c2b68eb",
+    "inventory": "Lit.West",
+    "knownFor": "a German poet and novelist, and a major figure of German Romanticism",
+    "name": "Clemens Brentano",
+    "osfName": "Brentano, Clemens",
+    "portrait": {
+      "above": "Clemens Brentano",
+      "img": {
+        "alt": "Portrait by Emilie Linder, painted in 1835; printed in from Meyer's Encyclopedia, 1906",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/2/25/Clemens_Brentano2.jpg/150px-Clemens_Brentano2.jpg",
+        "decoding": "async",
+        "width": "150",
+        "height": "222",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/thumb/2/25/Clemens_Brentano2.jpg/225px-Clemens_Brentano2.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/25/Clemens_Brentano2.jpg/300px-Clemens_Brentano2.jpg 2x",
+        "data-file-width": "585",
+        "data-file-height": "867"
+      },
+      "caption": "Portrait by Emilie Linder, painted in 1835; printed in from Meyer's Encyclopedia, 1906"
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "9 September 1778 Ehrenbreitstein near Koblenz (today in Koblenz), Electorate of Trier, Holy Roman Empire",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "28 July 1842 (aged 63) Aschaffenburg, Germany",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Occupation",
+        "seq": 2,
+        "value": "Writer",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Nationality",
+        "seq": 3,
+        "value": "German",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Alma mater",
+        "seq": 4,
+        "value": "University of Halle",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Period",
+        "seq": 5,
+        "value": "Romantic",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Genre",
+        "seq": 6,
+        "value": "Poetry",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Notable works",
+        "seq": 7,
+        "value": "Des Knaben Wunderhorn",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Relatives",
+        "seq": 8,
+        "value": "Bettina von Arnim (sister) Christian Brentano (brother) Franz Brentano (nephew) Lujo Brentano (nephew) Gisela von Arnim (niece)",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "10693",
+    "sr": {
+      "ns": 0,
+      "title": "Clemens Brentano",
+      "pageid": 84596,
+      "size": 14226,
+      "wordcount": 1442,
+      "snippet": "<span class=\"searchmatch\">Clemens</span> Wenzeslaus <span class=\"searchmatch\">Brentano</span> (also Klemens; pseudonym: <span class=\"searchmatch\">Clemens</span> Maria <span class=\"searchmatch\">Brentano</span> /brɛnˈtɑːnoʊ/; German: [<span class=\"searchmatch\">bʁɛnˈtaːno</span>]; 9 September <span class=\"searchmatch\">1778</span> – 28 July 1842) was",
+      "timestamp": "2022-02-03T23:31:51Z"
+    }
+  },
+  {
+    "adultbasic": "Czech",
+    "adultregion": "C.Bohem",
+    "yob": "1781",
+    "death": "1848-12-18T00:00:00.000Z",
+    "dob": "10-05",
+    "era": "1800+",
+    "id": "26fe509d-ff23-41c0-9688-35deeba5adac",
+    "inventory": "Science",
+    "knownFor": "a Bohemian mathematician, logician, philosopher, theologian and Catholic priest of Italian extraction, also known for his liberal views.",
+    "name": "Bernard Bolzano",
+    "osfName": "Bolzano, Bernardus",
+    "portrait": {
+      "above": "Bernard Bolzano",
+      "img": {
+        "alt": "Bernard Bolzano.jpg",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Bernard_Bolzano.jpg/220px-Bernard_Bolzano.jpg",
+        "decoding": "async",
+        "width": "220",
+        "height": "253",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Bernard_Bolzano.jpg/330px-Bernard_Bolzano.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Bernard_Bolzano.jpg/440px-Bernard_Bolzano.jpg 2x",
+        "data-file-width": "599",
+        "data-file-height": "689"
+      }
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "Bernardus Placidus Johann Nepomuk Gonzal Bolzano 5 October 1781 Prague, Kingdom of Bohemia",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "18 December 1848 (aged 67) Prague, Kingdom of Bohemia",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Education",
+        "seq": 2,
+        "value": "University of Prague ( PhD, 1804)",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Era",
+        "seq": 3,
+        "value": "19th-century philosophy",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Region",
+        "seq": 4,
+        "value": "Western philosophy",
+        "source": "wikimedia"
+      },
+      {
+        "name": "School",
+        "seq": 5,
+        "value": "Logical objectivism   Utilitarianism  Classical liberalism",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Institutions",
+        "seq": 6,
+        "value": "University of Prague (1805–1819)",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Thesis",
+        "seq": 7,
+        "value": "Betrachtungen über einige Gegenstände der Elementargeometrie (Considerations on Some Objects of Elementary Geometry) (1804)",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Academic advisors",
+        "seq": 8,
+        "value": "Franz Josef Gerstner",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Notable students",
+        "seq": 9,
+        "value": "Robert von Zimmermann",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Main interests",
+        "seq": 10,
+        "value": "Logic, epistemology, theology",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Notable ideas",
+        "seq": 11,
+        "value": "Logical objectivism  Bolzano's theorem (the first purely analytic proof of the intermediate value theorem ) Bolzano–Weierstrass theorem (ε, δ)-definition of limit Least-upper-bound property",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Religion",
+        "seq": 12,
+        "value": "Christianity",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Church",
+        "seq": 13,
+        "value": "Catholic Church",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Ordained",
+        "seq": 14,
+        "value": "1805 ",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "970",
+    "sr": {
+      "ns": 0,
+      "title": "Bernard Bolzano",
+      "pageid": 302185,
+      "size": 38421,
+      "wordcount": 4714,
+      "snippet": "<span class=\"searchmatch\">Bolzano</span> (UK: /bɒlˈtsɑːnoʊ/, US: /boʊltˈsɑː-, boʊlˈzɑː-/; German: [bɔlˈtsaːno]; Italian: [bolˈtsaːno]; born <span class=\"searchmatch\">Bernardus</span> Placidus Johann Nepomuk <span class=\"searchmatch\">Bolzano</span>;",
+      "timestamp": "2022-01-31T09:56:51Z"
+    }
+  },
+  {
+    "adultbasic": "France",
+    "adultregion": "F.Isle",
+    "yob": "1742",
+    "death": "1806-01-16T00:00:00.000Z",
+    "dob": "12-06",
+    "era": "1600-1800",
+    "id": "276f57fb-c29a-48a0-8904-8b086574192e",
+    "inventory": "Science",
+    "knownFor": "a French chemist and surgeon who discovered how to manufacture soda ash from common salt",
+    "name": "Nicolas Leblanc",
+    "osfName": "Leblanc, Nicolas",
+    "portrait": {
+      "above": "Nicolas Leblanc",
+      "img": {
+        "alt": "NicholasLeblanc.jpg",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/6/6e/NicholasLeblanc.jpg/220px-NicholasLeblanc.jpg",
+        "decoding": "async",
+        "width": "220",
+        "height": "456",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/6/6e/NicholasLeblanc.jpg 1.5x",
+        "data-file-width": "237",
+        "data-file-height": "491"
+      },
+      "caption": "Nicolas Leblanc chemist &amp; physician"
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "December 6, 1742 Ivoy-le-Pré, France",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "January 16, 1806 (aged 63) Paris, France",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Known for",
+        "seq": 2,
+        "value": "soda common salt",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Fields",
+        "seq": 3,
+        "value": "chemistry physics",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "4843",
+    "sr": {
+      "ns": 0,
+      "title": "Nicolas Leblanc",
+      "pageid": 911242,
+      "size": 4726,
+      "wordcount": 463,
+      "snippet": "<span class=\"searchmatch\">Nicolas</span> <span class=\"searchmatch\">Leblanc</span> (December 6, <span class=\"searchmatch\">1742</span> – January 16, 1806) was a French chemist and surgeon who discovered how to manufacture soda ash from common salt. Leblanc",
+      "timestamp": "2021-12-23T01:56:17Z"
+    }
+  },
+  {
+    "adultbasic": "France",
+    "adultregion": "F.Isle",
+    "yob": "1758",
+    "death": "1823-02-16T00:00:00.000Z",
+    "dob": "04-04",
+    "era": "1600-1800",
+    "id": "2b6c5497-ab83-43ad-8fcc-ea3dfb9e0a54",
+    "inventory": "Art.West",
+    "knownFor": "a French Romantic painter and draughtsman best known for his allegorical paintings and portraits such as Madame Georges Anthony and Her Two Sons (1796).",
+    "name": "Pierre-Paul Prud'hon",
+    "osfName": "Prud'hon, Pierre-Paul",
+    "portrait": {
+      "above": "Pierre-Paul Prud'hon",
+      "img": {
+        "alt": "Pierre Paul Prudhon Selbstporträt.jpg",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/8/83/Pierre_Paul_Prudhon_Selbstportr%C3%A4t.jpg/220px-Pierre_Paul_Prudhon_Selbstportr%C3%A4t.jpg",
+        "decoding": "async",
+        "width": "220",
+        "height": "272",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/thumb/8/83/Pierre_Paul_Prudhon_Selbstportr%C3%A4t.jpg/330px-Pierre_Paul_Prudhon_Selbstportr%C3%A4t.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/83/Pierre_Paul_Prudhon_Selbstportr%C3%A4t.jpg/440px-Pierre_Paul_Prudhon_Selbstportr%C3%A4t.jpg 2x",
+        "data-file-width": "526",
+        "data-file-height": "650"
+      },
+      "caption": "Prud'hon's only known self-portrait, c.&#8201;1788–1790"
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "4 April 1758 Cluny, Saône-et-Loire, France",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "16 February 1823 (aged 64) Paris, France",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Nationality",
+        "seq": 2,
+        "value": "French",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Known for",
+        "seq": 3,
+        "value": "Painting, drawing",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Notable work",
+        "seq": 4,
+        "value": "Madame Georges Anthony and Her Two Sons",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Movement",
+        "seq": 5,
+        "value": "Neoclassicism, Romanticism",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "22197",
+    "sr": {
+      "ns": 0,
+      "title": "Pierre-Paul Prud'hon",
+      "pageid": 769426,
+      "size": 9314,
+      "wordcount": 734,
+      "snippet": "<span class=\"searchmatch\">Pierre</span>-<span class=\"searchmatch\">Paul</span> <span class=\"searchmatch\">Prud</span>'<span class=\"searchmatch\">hon</span> (4 April <span class=\"searchmatch\">1758</span> – 16 February 16, 1823) was a French Romantic painter and draughtsman best known for his allegorical paintings and portraits",
+      "timestamp": "2022-01-24T07:43:08Z"
+    }
+  },
+  {
+    "adultbasic": "Netherlands",
+    "adultregion": "Netherlands",
+    "yob": "1756",
+    "death": "1831-12-18T00:00:00.000Z",
+    "dob": "09-07",
+    "era": "1600-1800",
+    "id": "38a95807-34b6-4e61-9779-9f9fda4d10c6",
+    "inventory": "Lit.West",
+    "knownFor": "a Dutch poet, historian, lawyer, and linguist.",
+    "name": "Willem Bilderdijk",
+    "osfName": "Bilderdijk, Willem",
+    "portrait": {
+      "above": "Willem Bilderdijk",
+      "img": {
+        "alt": "Willem Bilderdijk (Charles Howard Hodges, 1810)",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/0/08/Willem_Bilderdijk_%281756-1831%29%2C_by_Charles_Howard_Hodges.jpg/220px-Willem_Bilderdijk_%281756-1831%29%2C_by_Charles_Howard_Hodges.jpg",
+        "decoding": "async",
+        "width": "220",
+        "height": "277",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/thumb/0/08/Willem_Bilderdijk_%281756-1831%29%2C_by_Charles_Howard_Hodges.jpg/330px-Willem_Bilderdijk_%281756-1831%29%2C_by_Charles_Howard_Hodges.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/08/Willem_Bilderdijk_%281756-1831%29%2C_by_Charles_Howard_Hodges.jpg/440px-Willem_Bilderdijk_%281756-1831%29%2C_by_Charles_Howard_Hodges.jpg 2x",
+        "data-file-width": "2029",
+        "data-file-height": "2552"
+      },
+      "caption": "Willem Bilderdijk (Charles Howard Hodges, 1810)"
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "7 September 1756 Amsterdam, Dutch Republic",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "18 December 1831 (aged 75) Haarlem, United Kingdom of the Netherlands",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Occupation",
+        "seq": 2,
+        "value": "lawyer",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Nationality",
+        "seq": 3,
+        "value": "Dutch",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Alma mater",
+        "seq": 4,
+        "value": "Leiden University",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Genre",
+        "seq": 5,
+        "value": "Poet",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "10535",
+    "sr": {
+      "ns": 0,
+      "title": "Willem Bilderdijk",
+      "pageid": 608042,
+      "size": 6836,
+      "wordcount": 598,
+      "snippet": "<span class=\"searchmatch\">Willem</span> <span class=\"searchmatch\">Bilderdijk</span> (Dutch pronunciation: [ˈʋɪləm ˈbɪldərˌdɛi̯k]) (7 September <span class=\"searchmatch\">1756</span> – 18 December 1831) was a Dutch poet, historian, lawyer, and linguist",
+      "timestamp": "2022-01-07T23:18:07Z"
+    }
+  },
+  {
+    "adultbasic": "Germany",
+    "adultregion": "G.LSaxo",
+    "yob": "1907",
+    "death": "1950-11-25T00:00:00.000Z",
+    "dob": "01-20",
+    "era": "1800+",
+    "id": "3bbb5170-e0b7-48c6-ac1e-8f4243ba8493",
+    "inventory": "Science",
+    "knownFor": "a Danish author, known as one of the great Danish writers of the first half of 20th century.",
+    "name": "Johannes V. Jensen",
+    "osfName": "Jensen, Johannes",
+    "portrait": {
+      "above": "Johannes V. Jensen",
+      "img": {
+        "alt": "Johannes Vilhelm Jensen 1944.jpg",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/8/85/Johannes_Vilhelm_Jensen_1944.jpg/220px-Johannes_Vilhelm_Jensen_1944.jpg",
+        "decoding": "async",
+        "width": "220",
+        "height": "311",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/8/85/Johannes_Vilhelm_Jensen_1944.jpg 1.5x",
+        "data-file-width": "280",
+        "data-file-height": "396"
+      }
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "Johannes Vilhelm Jensen 20 January 1873 Farsø, Jutland, Denmark",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "25 November 1950 (aged 77) Østerbro, Copenhagen, Denmark",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Occupation",
+        "seq": 2,
+        "value": "Writer",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Nationality",
+        "seq": 3,
+        "value": "Danish",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Notable awards",
+        "seq": 4,
+        "value": "Nobel Prize in Literature 1944",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "4213",
+    "sr": {
+      "ns": 0,
+      "title": "Johannes V. Jensen",
+      "pageid": 65134,
+      "size": 10057,
+      "wordcount": 1158,
+      "snippet": "<span class=\"searchmatch\">Johannes</span> Vilhelm <span class=\"searchmatch\">Jensen</span> (commonly known as <span class=\"searchmatch\">Johannes</span> V. <span class=\"searchmatch\">Jensen</span>; 20 January 1873 – 25 November 1950) was a Danish author, known as one of the great Danish",
+      "timestamp": "2022-02-09T02:26:17Z"
+    },
+    "nobel": {
+      "laureate": {
+        "id": "614",
+        "firstname": "Johannes V.",
+        "surname": "Jensen",
+        "born": "1873-01-20",
+        "died": "1950-11-25",
+        "bornCountry": "Denmark",
+        "bornCountryCode": "DK",
+        "bornCity": "Farsø",
+        "diedCountry": "Denmark",
+        "diedCountryCode": "DK",
+        "diedCity": "Copenhagen",
+        "gender": "male",
+        "prizes": [
+          {
+            "year": "1944",
+            "category": "literature",
+            "share": "1",
+            "motivation": "\"for the rare strength and fertility of his poetic imagination with which is combined an intellectual curiosity of wide scope and a bold, freshly creative style\"",
+            "affiliations": [[]],
+            "url": "nobel_prizes/literature/laureates/1944/jensen-facts.html",
+            "portrait": "tbd"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "adultbasic": "Germany",
+    "adultregion": "G.Baden",
+    "yob": "1857",
+    "death": "1894-01-01T00:00:00.000Z",
+    "dob": "02-22",
+    "era": "1800+",
+    "id": "3cb95593-9e3c-44e3-89b2-eeb13d3d01b7",
+    "inventory": "Science",
+    "knownFor": "a German physicist who first conclusively proved the existence of the electromagnetic waves predicted by James Clerk Maxwell's equations of electromagnetism.",
+    "name": "Heinrich Hertz",
+    "osfName": "Hertz, Heinrich",
+    "portrait": {
+      "above": "Heinrich Hertz",
+      "img": {
+        "alt": "Heinrich Rudolf Hertz",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/5/50/Heinrich_Rudolf_Hertz.jpg/220px-Heinrich_Rudolf_Hertz.jpg",
+        "decoding": "async",
+        "width": "220",
+        "height": "255",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/thumb/5/50/Heinrich_Rudolf_Hertz.jpg/330px-Heinrich_Rudolf_Hertz.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/50/Heinrich_Rudolf_Hertz.jpg/440px-Heinrich_Rudolf_Hertz.jpg 2x",
+        "data-file-width": "558",
+        "data-file-height": "646"
+      }
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "Heinrich Rudolf Hertz 22 February 1857 Hamburg, German Confederation",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "1 January 1894 (aged 36) Bonn, German Empire",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Alma mater",
+        "seq": 2,
+        "value": "University of Munich University of Berlin",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Known for",
+        "seq": 3,
+        "value": "Contact mechanics Electromagnetic radiation Emagram Parabolic antenna Photoelectric effect Hertzian cone Hertzian dipole antenna Hertz vector Hertz-Knudsen equation Hertz's principle of least curvature",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Awards",
+        "seq": 4,
+        "value": "Matteucci Medal (1888) Rumford Medal (1890)",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Fields",
+        "seq": 5,
+        "value": "Electromagnetism Electrical engineering Contact mechanics",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Institutions",
+        "seq": 6,
+        "value": "University of Kiel University of Karlsruhe University of Bonn",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Doctoral advisor",
+        "seq": 7,
+        "value": "Hermann von Helmholtz",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Doctoral students",
+        "seq": 8,
+        "value": "Vilhelm Bjerknes",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "3790",
+    "sr": {
+      "ns": 0,
+      "title": "Heinrich Hertz",
+      "pageid": 13445,
+      "size": 38830,
+      "wordcount": 3694,
+      "snippet": "<span class=\"searchmatch\">Heinrich</span> Rudolf <span class=\"searchmatch\">Hertz</span> (/hɜːrts/ HURTS; German: [ˈhaɪnʁɪç ˈhɛʁts]; 22 February <span class=\"searchmatch\">1857</span> – 1 January 1894) was a German physicist who first conclusively proved",
+      "timestamp": "2022-02-19T19:50:14Z"
+    }
+  },
+  {
+    "adultbasic": "Netherlands",
+    "adultregion": "Netherlands",
+    "yob": "1894",
+    "death": "1947-03-18T00:00:00.000Z",
+    "dob": "09-08",
+    "era": "1800+",
+    "id": "413b5ca9-786c-426c-98bc-a987fe8a14dc",
+    "inventory": "Music.West",
+    "knownFor": "a Dutch composer, music critic and music teacher. Pijper is considered to be among the most important Dutch composers of the first half of the 20th century.",
+    "name": "Willem Pijper",
+    "osfName": "Pijper, Willem",
+    "portrait": {
+      "above": "Willem Pijper",
+      "img": {
+        "alt": "A man playing a piano",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/1/1f/WillemPijper.jpg/220px-WillemPijper.jpg",
+        "decoding": "async",
+        "width": "220",
+        "height": "157",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/thumb/1/1f/WillemPijper.jpg/330px-WillemPijper.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/1f/WillemPijper.jpg/440px-WillemPijper.jpg 2x",
+        "data-file-width": "500",
+        "data-file-height": "356"
+      },
+      "caption": "Pijper c.&#8201;1935"
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "Willem Frederik Johannes Pijper 8 September 1894 Zeist, Netherlands",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "18 March 1947 (aged 52) Utrecht, Netherlands",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Education",
+        "seq": 2,
+        "value": "Utrecht Academy of Music",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Occupation",
+        "seq": 3,
+        "value": "Composer music critic music teacher",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Known for",
+        "seq": 4,
+        "value": "Having the Dutch term for \" octatonic scale \" named after him ( Pijper toonladder )",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "42170",
+    "sr": {
+      "ns": 0,
+      "title": "Willem Pijper",
+      "pageid": 1937571,
+      "size": 10881,
+      "wordcount": 1327,
+      "snippet": "<span class=\"searchmatch\">Willem</span> Frederik Johannes <span class=\"searchmatch\">Pijper</span> (Dutch pronunciation: [ˈʋɪləm ˈpɛipər]; 8 September <span class=\"searchmatch\">1894</span> – 18 March 1947) was a Dutch composer, music critic and music",
+      "timestamp": "2022-01-12T08:02:03Z"
+    }
+  },
+  {
+    "adultbasic": "Sweden",
+    "adultregion": "S.SU",
+    "yob": "1814",
+    "death": "1874-06-21T00:00:00.000Z",
+    "dob": "08-13",
+    "era": "1800+",
+    "id": "48cc50ad-801b-45c0-afcb-3bda44cbebe1",
+    "inventory": "Science",
+    "knownFor": "a Swedish physicist and one of the founders of the science of spectroscopy.",
+    "name": "Anders Jonas Ångström",
+    "osfName": "Angstrom, Anders",
+    "portrait": {
+      "above": "Anders Jonas Ångström",
+      "img": {
+        "alt": "Anders Jonas Ångström - 001.png",
+        "src": "//upload.wikimedia.org/wikipedia/commons/1/1f/Anders_Jonas_%C3%85ngstr%C3%B6m_-_001.png",
+        "decoding": "async",
+        "width": "200",
+        "height": "270",
+        "data-file-width": "200",
+        "data-file-height": "270"
+      },
+      "caption": "Anders Jonas Ångström"
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "13 August 1814 Lögdö, Medelpad, Sweden",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "21 June 1874 (aged 59) Uppsala, Sweden",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Alma mater",
+        "seq": 2,
+        "value": "Uppsala University",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Known for",
+        "seq": 3,
+        "value": "Spectroscopy Airglow",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Awards",
+        "seq": 4,
+        "value": "Rumford Medal (1872)",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Fields",
+        "seq": 5,
+        "value": "Physics, Astronomy",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "230",
+    "sr": {
+      "ns": 0,
+      "title": "Anders Jonas Ångström",
+      "pageid": 23275314,
+      "size": 9537,
+      "wordcount": 940,
+      "snippet": "<span class=\"searchmatch\">Anders</span> Jonas <span class=\"searchmatch\">Ångström</span> (Swedish: [ˈânːdɛʂ ˈjûːnas ˈɔ̂ŋːstrœm]; 13 August <span class=\"searchmatch\">1814</span> – 21 June 1874) was a Swedish physicist <span class=\"searchmatch\">and</span> one of the founders of the science",
+      "timestamp": "2021-12-23T22:06:08Z"
+    }
+  },
+  {
+    "adultbasic": "Britain",
+    "adultregion": "E.SE",
+    "yob": "1804",
+    "death": "1892-12-18T00:00:00.000Z",
+    "dob": "07-20",
+    "era": "1800+",
+    "id": "52675276-793f-4b23-bf29-88bc19ddbd25",
+    "inventory": "Science",
+    "knownFor": "an English biologist, comparative anatomist and paleontologist. Owen is generally considered to have been an outstanding naturalist with a remarkable gift for interpreting fossils.",
+    "name": "Richard Owen",
+    "osfName": "Owen, Richard",
+    "portrait": {
+      "above": "Richard Owen",
+      "img": {
+        "alt": "Richard-owen2.jpg",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/1/13/Richard-owen2.jpg/250px-Richard-owen2.jpg",
+        "decoding": "async",
+        "width": "250",
+        "height": "310",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/thumb/1/13/Richard-owen2.jpg/375px-Richard-owen2.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/13/Richard-owen2.jpg/500px-Richard-owen2.jpg 2x",
+        "data-file-width": "714",
+        "data-file-height": "885"
+      },
+      "caption": "Portrait of Owen, c.&#8201;1878"
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "20 July 1804 Lancaster, England",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "18 December 1892 (aged 88) Richmond Park, London, England",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Nationality",
+        "seq": 2,
+        "value": "British",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Alma mater",
+        "seq": 3,
+        "value": "University of Edinburgh St Bartholomew's Hospital",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Known for",
+        "seq": 4,
+        "value": "Coining the term dinosaur, presenting them as a distinct taxonomic group. British Museum of Natural History",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Awards",
+        "seq": 5,
+        "value": "Wollaston Medal (1838) Royal Medal (1846) Copley Medal (1851) Baly Medal (1869) Clarke Medal (1878) Linnean Medal (1888)",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Fields",
+        "seq": 6,
+        "value": "Comparative anatomy Paleontology Zoology  Biology ",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "6199",
+    "sr": {
+      "ns": 0,
+      "title": "Richard Owen",
+      "pageid": 21811584,
+      "size": 54074,
+      "wordcount": 6413,
+      "snippet": "Sir <span class=\"searchmatch\">Richard</span> <span class=\"searchmatch\">Owen</span> KCB FRMS FRS (20 July <span class=\"searchmatch\">1804</span> – 18 December 1892) was an English biologist, comparative anatomist and paleontologist. Despite being a controversial",
+      "timestamp": "2022-03-07T15:36:00Z"
+    }
+  },
+  {
+    "adultbasic": "Netherlands",
+    "adultregion": "F.Isle",
+    "yob": "1853",
+    "death": "1890-07-29T00:00:00.000Z",
+    "dob": "03-30",
+    "era": "1800+",
+    "id": "52985642-2bb6-4511-b199-b834e33ef446",
+    "inventory": "Art.West",
+    "knownFor": "a Dutch Post-Impressionist painter who posthumously became one of the most famous and influential figures in Western art history.",
+    "name": "Vincent van Gogh",
+    "osfName": "Gogh, Vincent van",
+    "portrait": {
+      "above": "Vincent van Gogh",
+      "img": {
+        "alt": "A head and shoulders portrait of a thirty something man, with a red beard, facing to the left",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project_%28454045%29.jpg/220px-Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project_%28454045%29.jpg",
+        "decoding": "async",
+        "width": "220",
+        "height": "278",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project_%28454045%29.jpg/330px-Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project_%28454045%29.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project_%28454045%29.jpg/440px-Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project_%28454045%29.jpg 2x",
+        "data-file-width": "4747",
+        "data-file-height": "6000"
+      },
+      "caption": "Self-Portrait, 1887, Art Institute of Chicago"
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "Vincent Willem van Gogh 30 March 1853 Zundert, Netherlands",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "29 July 1890 (aged 37) Auvers-sur-Oise, France",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Cause of death",
+        "seq": 2,
+        "value": "Suicide by gunshot",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Nationality",
+        "seq": 4,
+        "value": "Dutch",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Education",
+        "seq": 5,
+        "value": "Anton Mauve",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Known for",
+        "seq": 6,
+        "value": "Painting, drawing still life, portraits and landscapes",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Notable work",
+        "seq": 7,
+        "value": "The Potato Eaters (1885) Sunflowers (1887) Bedroom in Arles (1888) The Starry Night (1889) Portrait of Dr. Gachet (1890) Wheatfield with Crows (1890) The Siesta (1890) Church at Auvers (1890)",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Movement",
+        "seq": 8,
+        "value": "Post-Impressionism",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Family",
+        "seq": 9,
+        "value": "Theodorus van Gogh (brother)",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "21079",
+    "sr": {
+      "ns": 0,
+      "title": "Vincent van Gogh",
+      "pageid": 32603,
+      "size": 154421,
+      "wordcount": 16454,
+      "snippet": "<span class=\"searchmatch\">Vincent</span> Willem <span class=\"searchmatch\">van</span> <span class=\"searchmatch\">Gogh</span> (Dutch: [ˈvɪnsənt ˈʋɪləɱ <span class=\"searchmatch\">vɑŋ</span> ˈɣɔx] (listen); 30 March <span class=\"searchmatch\">1853</span> – 29 July 1890) was a Dutch Post-Impressionist painter who posthumously",
+      "timestamp": "2022-03-07T08:25:02Z"
+    }
+  },
+  {
+    "adultbasic": "France",
+    "adultregion": "F.Isle",
+    "yob": "1818",
+    "death": "1881-07-01T00:00:00.000Z",
+    "dob": "03-11",
+    "era": "1800+",
+    "id": "53eb5d4a-2829-44f8-9e20-645e6fba8fdb",
+    "inventory": "Science",
+    "knownFor": "a French chemist, discoverer of toluene",
+    "name": "Henri Étienne Sainte-Claire Deville",
+    "osfName": "Sainte-Claire Deville, Henri",
+    "portrait": {
+      "above": "Henri Sainte-Claire Deville",
+      "img": {
+        "alt": "Henri Sainte-Claire Deville.jpg",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/0/06/Henri_Sainte-Claire_Deville.jpg/220px-Henri_Sainte-Claire_Deville.jpg",
+        "decoding": "async",
+        "width": "220",
+        "height": "259",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/thumb/0/06/Henri_Sainte-Claire_Deville.jpg/330px-Henri_Sainte-Claire_Deville.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/06/Henri_Sainte-Claire_Deville.jpg/440px-Henri_Sainte-Claire_Deville.jpg 2x",
+        "data-file-width": "1000",
+        "data-file-height": "1176"
+      }
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "11 March 1818 St Thomas, Danish West Indies",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "1 July 1881 (aged 63) Boulogne-sur-Seine, France",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Nationality",
+        "seq": 2,
+        "value": "French",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Institutions",
+        "seq": 3,
+        "value": "École Normale Sorbonne",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Doctoral students",
+        "seq": 4,
+        "value": "Louis Joseph Troost",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "7198",
+    "sr": {
+      "ns": 0,
+      "title": "Henri Étienne Sainte-Claire Deville",
+      "pageid": 1440715,
+      "size": 6316,
+      "wordcount": 645,
+      "snippet": "<span class=\"searchmatch\">Henri</span> Étienne <span class=\"searchmatch\">Sainte</span>-<span class=\"searchmatch\">Claire</span> <span class=\"searchmatch\">Deville</span> (11 March <span class=\"searchmatch\">1818</span> – 1 July 1881) was a French chemist. He was born in the island of St Thomas in the Danish West Indies",
+      "timestamp": "2021-12-28T22:10:32Z"
+    }
+  },
+  {
+    "adultbasic": "Britain",
+    "adultregion": "E.SE",
+    "yob": "1667",
+    "death": "1745-10-19T00:00:00.000Z",
+    "dob": "11-30",
+    "era": "1600-1800",
+    "id": "59c65410-8e1a-4762-932e-7dec22a10dd8",
+    "inventory": "Lit.West",
+    "knownFor": "an Anglo-Irish satirist, author, essayist, political pamphleteer, poet, and Anglican cleric who became Dean of St Patrick's Cathedral, Dublin, hence his common sobriquet, \"Dean Swift\".",
+    "name": "Jonathan Swift",
+    "osfName": "Swift, Jonathan",
+    "portrait": {
+      "above": "Jonathan Swift",
+      "img": {
+        "alt": "Portrait by Charles Jervas, 1710",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Jonathan_Swift_by_Charles_Jervas_detail.jpg/220px-Jonathan_Swift_by_Charles_Jervas_detail.jpg",
+        "decoding": "async",
+        "width": "220",
+        "height": "247",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Jonathan_Swift_by_Charles_Jervas_detail.jpg/330px-Jonathan_Swift_by_Charles_Jervas_detail.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Jonathan_Swift_by_Charles_Jervas_detail.jpg/440px-Jonathan_Swift_by_Charles_Jervas_detail.jpg 2x",
+        "data-file-width": "1544",
+        "data-file-height": "1736"
+      },
+      "caption": "Portrait by Charles Jervas, 1710"
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "30 November 1667 Dublin, Ireland",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "19 October 1745 (aged 77) Dublin, Ireland",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Resting place",
+        "seq": 2,
+        "value": "St Patrick's Cathedral, Dublin",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Pen name",
+        "seq": 3,
+        "value": "Isaac Bickerstaff, M. B. Drapier, Lemuel Gulliver, Simon Wagstaff, Esq.",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Occupation",
+        "seq": 4,
+        "value": "Satirist essayist political pamphleteer poet priest",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Language",
+        "seq": 5,
+        "value": "English",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Alma mater",
+        "seq": 6,
+        "value": "Trinity College Dublin",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Notable works",
+        "seq": 7,
+        "value": "A Tale of a Tub Drapier's Letters Gulliver's Travels A Modest Proposal",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "13901",
+    "sr": {
+      "ns": 0,
+      "title": "Jonathan Swift",
+      "pageid": 15614,
+      "size": 60256,
+      "wordcount": 6501,
+      "snippet": "<span class=\"searchmatch\">Jonathan</span> <span class=\"searchmatch\">Swift</span> (30 November <span class=\"searchmatch\">1667</span> – 19 October 1745) was an Anglo-Irish satirist, essayist, political pamphleteer (first for the Whigs, then for the Tories)",
+      "timestamp": "2022-03-03T22:54:43Z"
+    }
+  },
+  {
+    "adultbasic": "Netherlands",
+    "adultregion": "Netherlands",
+    "yob": "1692",
+    "death": "1761-09-19T00:00:00.000Z",
+    "dob": "03-14",
+    "era": "1600-1800",
+    "id": "61695032-8bbf-4041-801d-1a45c2d60d6d",
+    "inventory": "Science",
+    "knownFor": "a Dutch scientist. He was a professor in Duisburg, Utrecht, and Leiden, where he held positions in mathematics, philosophy, medicine, and astronomy",
+    "name": "Pieter van Musschenbroek",
+    "osfName": "Musschenbroek, Pieter van",
+    "portrait": {
+      "above": "Pieter van Musschenbroek",
+      "img": {
+        "alt": "P v Musschenbroek t-E.jpg",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/0/06/P_v_Musschenbroek_t-E.jpg/250px-P_v_Musschenbroek_t-E.jpg",
+        "decoding": "async",
+        "width": "250",
+        "height": "324",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/thumb/0/06/P_v_Musschenbroek_t-E.jpg/375px-P_v_Musschenbroek_t-E.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/06/P_v_Musschenbroek_t-E.jpg/500px-P_v_Musschenbroek_t-E.jpg 2x",
+        "data-file-width": "908",
+        "data-file-height": "1176"
+      },
+      "caption": "1741 portrait of Pieter van Musschenbroek"
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "14 March 1692 Leiden, Dutch Republic",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "19 September 1761 (aged 69) Leiden, Dutch Republic",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Nationality",
+        "seq": 2,
+        "value": "Dutch",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Alma mater",
+        "seq": 3,
+        "value": "Leiden University",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Known for",
+        "seq": 4,
+        "value": "Leyden jar, Tribometer, Atmometer",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Fields",
+        "seq": 5,
+        "value": "Physics, mathematics, philosophy, medicine, astronomy",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Doctoral advisor",
+        "seq": 6,
+        "value": "Wolferd Senguerd Herman Boerhaave",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Notable students",
+        "seq": 7,
+        "value": "Andreas Cunaeus",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "5892",
+    "sr": {
+      "ns": 0,
+      "title": "Pieter van Musschenbroek",
+      "pageid": 4120162,
+      "size": 12305,
+      "wordcount": 1018,
+      "snippet": "<span class=\"searchmatch\">Pieter</span> <span class=\"searchmatch\">van</span> <span class=\"searchmatch\">Musschenbroek</span> (14 March <span class=\"searchmatch\">1692</span> – 19 September 1761) was a Dutch scientist. He was a professor in Duisburg, Utrecht, and Leiden, where he held",
+      "timestamp": "2022-02-26T07:39:15Z"
+    }
+  },
+  {
+    "adultbasic": "Germany",
+    "adultregion": "G.Brand",
+    "yob": "1796",
+    "death": "1863-04-01T00:00:00.000Z",
+    "dob": "03-18",
+    "era": "1800+",
+    "id": "61bb5f94-30de-4dd0-9b2c-2ed0de8838b8",
+    "inventory": "Science",
+    "knownFor": "a Swiss mathematician who worked primarily in geometry",
+    "name": "Jakob Steiner",
+    "osfName": "Steiner, Jakob",
+    "portrait": {
+      "above": "Jakob Steiner",
+      "img": {
+        "alt": "JakobSteiner.jpg",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/5/55/JakobSteiner.jpg/150px-JakobSteiner.jpg",
+        "decoding": "async",
+        "width": "150",
+        "height": "211",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/thumb/5/55/JakobSteiner.jpg/225px-JakobSteiner.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/55/JakobSteiner.jpg/300px-JakobSteiner.jpg 2x",
+        "data-file-width": "500",
+        "data-file-height": "704"
+      }
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "18 March 1796 Utzenstorf, Canton of Bern",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "1 April 1863 (aged 67) Bern",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Citizenship",
+        "seq": 2,
+        "value": "Swiss",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Known for",
+        "seq": 3,
+        "value": "Euclidean geometry Projective geometry Synthetic geometry",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Fields",
+        "seq": 4,
+        "value": "Mathematics",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Influences",
+        "seq": 5,
+        "value": "Fritz Bützberger",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "7850",
+    "sr": {
+      "ns": 0,
+      "title": "Jakob Steiner",
+      "pageid": 567445,
+      "size": 9001,
+      "wordcount": 988,
+      "snippet": "<span class=\"searchmatch\">Jakob</span> <span class=\"searchmatch\">Steiner</span> (18 March <span class=\"searchmatch\">1796</span> – 1 April 1863) was a Swiss mathematician who worked primarily in geometry. <span class=\"searchmatch\">Steiner</span> was born in the village of Utzenstorf",
+      "timestamp": "2021-12-19T01:21:25Z"
+    }
+  },
+  {
+    "adultbasic": "Britain",
+    "adultregion": "E.North",
+    "yob": "1764",
+    "death": "1786-04-20T00:00:00.000Z",
+    "dob": "09-17",
+    "era": "1600-1800",
+    "id": "6e5950c4-c831-4e88-bb2a-dbbb06e1caa6",
+    "inventory": "Science",
+    "knownFor": "an English amateur astronomer. He is best known for his observations of the variable star Algol (Beta Persei) in 1782.",
+    "name": "John Goodricke",
+    "osfName": "Goodricke, John",
+    "portrait": {
+      "above": "John Goodricke",
+      "img": {
+        "alt": "Goodricke John.jpg",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Goodricke_John.jpg/220px-Goodricke_John.jpg",
+        "decoding": "async",
+        "width": "220",
+        "height": "263",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Goodricke_John.jpg/330px-Goodricke_John.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/d/d0/Goodricke_John.jpg 2x",
+        "data-file-width": "420",
+        "data-file-height": "502"
+      }
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "17 September 1764 Groningen",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "20 April 1786 (aged 21)",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Nationality",
+        "seq": 2,
+        "value": "British",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Known for",
+        "seq": 3,
+        "value": "Studies of variable stars",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Awards",
+        "seq": 4,
+        "value": "Copley Medal (1783)",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Fields",
+        "seq": 5,
+        "value": "Astronomy",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Influences",
+        "seq": 6,
+        "value": "Edward Pigott",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "3269",
+    "sr": {
+      "ns": 0,
+      "title": "John Goodricke",
+      "pageid": 602210,
+      "size": 9943,
+      "wordcount": 1018,
+      "snippet": "<span class=\"searchmatch\">John</span> <span class=\"searchmatch\">Goodricke</span> FRS (17 September <span class=\"searchmatch\">1764</span> – 20 April 1786) was an English amateur astronomer. He is best known for his observations of the variable star Algol",
+      "timestamp": "2021-11-11T17:31:42Z"
+    }
+  },
+  {
+    "adultbasic": "Austria",
+    "adultregion": "A.NE",
+    "yob": "1758",
+    "death": "1828-08-22T00:00:00.000Z",
+    "dob": "03-09",
+    "era": "1600-1800",
+    "id": "6fa659bb-1984-46da-8fe3-544e0c87c741",
+    "inventory": "Science",
+    "knownFor": "a German neuroanatomist, physiologist, and pioneer in the study of the localization of mental functions in the brain.",
+    "name": "Franz Joseph Gall",
+    "osfName": "Gall, Franz",
+    "portrait": {
+      "above": "Franz Gall",
+      "img": {
+        "alt": "Franz Josef Gall3.jpg",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Franz_Josef_Gall3.jpg/220px-Franz_Josef_Gall3.jpg",
+        "decoding": "async",
+        "width": "220",
+        "height": "263",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Franz_Josef_Gall3.jpg/330px-Franz_Josef_Gall3.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Franz_Josef_Gall3.jpg/440px-Franz_Josef_Gall3.jpg 2x",
+        "data-file-width": "972",
+        "data-file-height": "1161"
+      },
+      "caption": "Franz Joseph Gall"
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "9 March 1758 Tiefenbronn, Baden",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "22 August 1828 (aged 70) Paris, France",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Nationality",
+        "seq": 2,
+        "value": "Germany",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Fields",
+        "seq": 3,
+        "value": "Neuroanatomist Physiologist",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Influenced",
+        "seq": 4,
+        "value": "Cesare Lombroso Alexandre Lacassagne Johann Gaspar Spurzheim",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "3031",
+    "sr": {
+      "ns": 0,
+      "title": "Franz Joseph Gall",
+      "pageid": 310316,
+      "size": 15358,
+      "wordcount": 1926,
+      "snippet": "<span class=\"searchmatch\">Franz</span> Josef <span class=\"searchmatch\">Gall</span> (German: [gal]; 9 March <span class=\"searchmatch\">1758</span> – 22 August 1828) was a German neuroanatomist, physiologist, and pioneer in the study of the localization",
+      "timestamp": "2022-01-31T16:41:41Z"
+    }
+  },
+  {
+    "adultbasic": "Britain",
+    "adultregion": "E.SE",
+    "yob": "1903",
+    "death": "1980-02-17T00:00:00.000Z",
+    "dob": "08-24",
+    "era": "1800+",
+    "id": "703d5ba4-e7de-4a49-8a1a-4183e58737cf",
+    "inventory": "Art.West",
+    "knownFor": "a prolific English artist. Notable for his paintings of abstract landscapes and portraits of public figures, he also worked in other media, including printmaking, tapestry and glass design.",
+    "name": "Graham Sutherland",
+    "osfName": "Sutherland, Graham",
+    "portrait": {
+      "above": "Graham Sutherland",
+      "img": {}
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "24 August 1903 Streatham, London, England",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "17 February 1980 (aged 76) Kent, England",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Nationality",
+        "seq": 2,
+        "value": "British",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Education",
+        "seq": 3,
+        "value": "Goldsmiths College",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Known for",
+        "seq": 4,
+        "value": "Painter, etcher, designer",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Notable work",
+        "seq": 5,
+        "value": "Christ in Glory in the Tetramorph (tapestry at Coventry Cathedral )",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Movement",
+        "seq": 6,
+        "value": "Neo-Romanticism, abstract",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Awards",
+        "seq": 7,
+        "value": "Order of Merit",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Patron(s)",
+        "seq": 8,
+        "value": "War Artists' Advisory Committee",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "22567",
+    "sr": {
+      "ns": 0,
+      "title": "Graham Sutherland",
+      "pageid": 641159,
+      "size": 22472,
+      "wordcount": 2328,
+      "snippet": "<span class=\"searchmatch\">Graham</span> Vivian <span class=\"searchmatch\">Sutherland</span> OM (24 August <span class=\"searchmatch\">1903</span> – 17 February 1980) was an English artist known for his work in multiple media and as a painter of portraits",
+      "timestamp": "2022-03-06T22:34:38Z"
+    }
+  },
+  {
+    "adultbasic": "Italy",
+    "adultregion": "I.noinfo",
+    "yob": "1805",
+    "death": "1872-03-10T00:00:00.000Z",
+    "dob": "06-22",
+    "era": "1800+",
+    "id": "71b65552-05a8-472d-977e-5346b1421290",
+    "inventory": "Lit.West",
+    "knownFor": "an Italian politician, journalist, and activist for the unification of Italy and spearhead of the Italian revolutionary movement",
+    "name": "Giuseppe Mazzini",
+    "osfName": "Mazzini, Giuseppe",
+    "portrait": {
+      "above": "Giuseppe Mazzini",
+      "img": {
+        "alt": "Giuseppe Mazzini.jpg",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Giuseppe_Mazzini.jpg/220px-Giuseppe_Mazzini.jpg",
+        "decoding": "async",
+        "width": "220",
+        "height": "268",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Giuseppe_Mazzini.jpg/330px-Giuseppe_Mazzini.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Giuseppe_Mazzini.jpg/440px-Giuseppe_Mazzini.jpg 2x",
+        "data-file-width": "1052",
+        "data-file-height": "1280"
+      }
+    },
+    "props": [
+      {
+        "name": "Preceded by",
+        "seq": 0,
+        "value": "Aurelio Saliceti",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Succeeded by",
+        "seq": 1,
+        "value": "Aurelio Saliceti",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Born",
+        "seq": 2,
+        "value": "22 June 1805 Genoa, Gênes, French Empire",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 3,
+        "value": "10 March 1872 (aged 66) Pisa, Kingdom of Italy",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Political party",
+        "seq": 4,
+        "value": "Young Italy (1831–1848) Italian National Association (1848–1853) Action Party (1853–1867)",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Alma mater",
+        "seq": 5,
+        "value": "University of Genoa",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Profession",
+        "seq": 6,
+        "value": "Lawyer Journalist Writer",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Era",
+        "seq": 7,
+        "value": "19th-century philosophy",
+        "source": "wikimedia"
+      },
+      {
+        "name": "School",
+        "seq": 8,
+        "value": "Italian nationalism Romanticism",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Main interests",
+        "seq": 9,
+        "value": "History, theology, politics",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Notable ideas",
+        "seq": 10,
+        "value": "Pan-Europeanism, irredentism ( Italian irredentism ), popular democracy, class collaboration",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "12720",
+    "sr": {
+      "ns": 0,
+      "title": "Giuseppe Mazzini",
+      "pageid": 36948,
+      "size": 47923,
+      "wordcount": 5808,
+      "snippet": "<span class=\"searchmatch\">Giuseppe</span> <span class=\"searchmatch\">Mazzini</span> (UK: /mætˈsiːni/, US: /mɑːtˈ-, mɑːdˈziːni/, Italian: [dʒuˈzɛppe matˈtsiːni]; 22 June <span class=\"searchmatch\">1805</span> – 10 March 1872) was an Italian politician,",
+      "timestamp": "2022-02-22T19:08:08Z"
+    }
+  },
+  {
+    "adultbasic": "Britain",
+    "adultregion": "E.gx",
+    "yob": "1792",
+    "death": "1822-07-08T00:00:00.000Z",
+    "dob": "08-04",
+    "era": "1800+",
+    "id": "80f05915-55ed-46dd-a828-49f8c74a8c5c",
+    "inventory": "Lit.West",
+    "knownFor": "one of the major English Romantic poets",
+    "name": "Percy Bysshe Shelley",
+    "osfName": "Shelley, Percy",
+    "portrait": {
+      "above": "Percy Bysshe Shelley",
+      "img": {
+        "alt": "Portrait of Shelley, by Alfred Clint (1829)",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/5/57/Percy_Bysshe_Shelley_by_Alfred_Clint.jpg/220px-Percy_Bysshe_Shelley_by_Alfred_Clint.jpg",
+        "decoding": "async",
+        "width": "220",
+        "height": "270",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/thumb/5/57/Percy_Bysshe_Shelley_by_Alfred_Clint.jpg/330px-Percy_Bysshe_Shelley_by_Alfred_Clint.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/57/Percy_Bysshe_Shelley_by_Alfred_Clint.jpg/440px-Percy_Bysshe_Shelley_by_Alfred_Clint.jpg 2x",
+        "data-file-width": "2400",
+        "data-file-height": "2948"
+      },
+      "caption": "Portrait of Shelley, by Alfred Clint (1829)"
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "Percy Bysshe Shelley 4 August 1792 Horsham, Sussex, England",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "8 July 1822 (aged 29) Gulf of La Spezia, Kingdom of Sardinia (now Italy)",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Occupation",
+        "seq": 2,
+        "value": "Poet dramatist essayist novelist",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Education",
+        "seq": 3,
+        "value": "Eton College",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Alma mater",
+        "seq": 4,
+        "value": "University College, Oxford",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Literary movement",
+        "seq": 5,
+        "value": "Romanticism",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Spouse",
+        "seq": 6,
+        "value": "Harriet Westbrook ​ ​ ( m. 1811; died 1816) ​ Mary Shelley ​ ( m. 1816) ​",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Children",
+        "seq": 7,
+        "value": "4 (including Percy Florence Shelley )",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Parents",
+        "seq": 8,
+        "value": "Timothy Shelley Elizabeth Pilfold",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "13676",
+    "sr": {
+      "ns": 0,
+      "title": "Percy Bysshe Shelley",
+      "pageid": 20502020,
+      "size": 77665,
+      "wordcount": 10028,
+      "snippet": "<span class=\"searchmatch\">Percy</span> Bysshe <span class=\"searchmatch\">Shelley</span> (/bɪʃ/ (listen) BISH; 4 August <span class=\"searchmatch\">1792</span> – 8 July 1822) was one of the major English Romantic poets. A radical in his poetry as well as",
+      "timestamp": "2022-02-28T10:20:10Z"
+    }
+  },
+  {
+    "adultbasic": "Poland",
+    "adultregion": "Poland",
+    "yob": "1869",
+    "death": "1907-11-28T00:00:00.000Z",
+    "dob": "01-15",
+    "era": "1800+",
+    "id": "8d6d5c12-f05b-4122-b7b6-6070340d5af7",
+    "inventory": "Lit.West",
+    "knownFor": "a Polish playwright, painter and poet, as well as interior and furniture designer. He created a series of national dramas within the artistic philosophy of the Young Poland Movement.",
+    "name": "Stanisław Wyspiański",
+    "osfName": "Wyspianski, Stanislaw",
+    "portrait": {
+      "above": "Stanisław Wyspiański",
+      "img": {
+        "alt": "Stanisław Wyspiański3.png",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Stanis%C5%82aw_Wyspia%C5%84ski3.png/220px-Stanis%C5%82aw_Wyspia%C5%84ski3.png",
+        "decoding": "async",
+        "width": "220",
+        "height": "315",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Stanis%C5%82aw_Wyspia%C5%84ski3.png/330px-Stanis%C5%82aw_Wyspia%C5%84ski3.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Stanis%C5%82aw_Wyspia%C5%84ski3.png/440px-Stanis%C5%82aw_Wyspia%C5%84ski3.png 2x",
+        "data-file-width": "552",
+        "data-file-height": "791"
+      }
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "Stanisław Mateusz Ignacy Wyspiański 15 January 1869 Kraków, Austrian Poland",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "28 November 1907 (aged 38) Kraków, Austrian Poland",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Nationality",
+        "seq": 2,
+        "value": "Polish",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Education",
+        "seq": 3,
+        "value": "School of Fine Arts, Kraków",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Known for",
+        "seq": 4,
+        "value": "Architecture, drawing, furniture, painting",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Movement",
+        "seq": 5,
+        "value": "Art Nouveau, symbolism",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Spouse(s)",
+        "seq": 6,
+        "value": "Teodora Teofila Wyspiańska",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "14377",
+    "sr": {
+      "ns": 0,
+      "title": "Stanisław Wyspiański",
+      "pageid": 887450,
+      "size": 22687,
+      "wordcount": 2436,
+      "snippet": "<span class=\"searchmatch\">Stanisław</span> Mateusz Ignacy <span class=\"searchmatch\">Wyspiański</span> (pronounced ['staˈɲiswaf vɨˈspjaɲskʲi]; 15 January <span class=\"searchmatch\">1869</span> – 28 November 1907) was a Polish playwright, painter and poet",
+      "timestamp": "2021-11-23T08:20:46Z"
+    }
+  },
+  {
+    "adultbasic": "Spain",
+    "adultregion": "Sp.Andal",
+    "yob": "1126",
+    "death": "1198-12-11T00:00:00.000Z",
+    "dob": "04-14",
+    "era": "1200-1400",
+    "id": "8fa75aa0-9d3f-48ba-8df8-2a8ba715606e",
+    "inventory": "Science",
+    "knownFor": "a Muslim Andalusian polymath and jurist.",
+    "name": "Averroes",
+    "osfName": "Averroes (ibn Rushd)",
+    "portrait": {
+      "above": "AverroesIbn Rushd",
+      "img": {
+        "alt": "Statue of a sitting man in Arabic garb",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Statue_of_Averroes_in_C%C3%B3rdoba%2C_Spain.jpg/220px-Statue_of_Averroes_in_C%C3%B3rdoba%2C_Spain.jpg",
+        "decoding": "async",
+        "width": "220",
+        "height": "293",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Statue_of_Averroes_in_C%C3%B3rdoba%2C_Spain.jpg/330px-Statue_of_Averroes_in_C%C3%B3rdoba%2C_Spain.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Statue_of_Averroes_in_C%C3%B3rdoba%2C_Spain.jpg/440px-Statue_of_Averroes_in_C%C3%B3rdoba%2C_Spain.jpg 2x",
+        "data-file-width": "2448",
+        "data-file-height": "3264"
+      },
+      "caption": "Statue of Ibn Rushd in Córdoba, Spain"
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "14 April 1126 Córdoba, Al-Andalus, Almoravid Empire",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "11 December 1198 (aged 72) Marrakesh, Maghreb, Almohad Caliphate",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Other names",
+        "seq": 2,
+        "value": "Abū l-Walīd Muḥammad ibn ʾAḥmad ibn Rushd The Commentator",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Era",
+        "seq": 3,
+        "value": "Medieval, Islamic Golden Age",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Region",
+        "seq": 4,
+        "value": "Islamic philosophy",
+        "source": "wikimedia"
+      },
+      {
+        "name": "School",
+        "seq": 5,
+        "value": "Aristotelianism",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Main interests",
+        "seq": 6,
+        "value": "Islamic theology, philosophy, Islamic jurisprudence, medicine, astronomy, physics, linguistics",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Notable ideas",
+        "seq": 7,
+        "value": "Relation between Islam and philosophy, non-contradiction of reason and revelation, unity of the intellect",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "366",
+    "sr": {
+      "ns": 0,
+      "title": "Averroes",
+      "pageid": 47836,
+      "size": 68070,
+      "wordcount": 7740,
+      "snippet": "<span class=\"searchmatch\">Ibn</span> <span class=\"searchmatch\">Rushd</span> (Arabic: ابن رشد; full name in Arabic: أبو الوليد محمد ابن احمد ابن رشد, romanized: Abū l-Walīd Muḥammad <span class=\"searchmatch\">Ibn</span> ʾAḥmad <span class=\"searchmatch\">Ibn</span> Rušd; 14 April <span class=\"searchmatch\">1126</span> –",
+      "timestamp": "2022-03-06T04:18:49Z"
+    }
+  },
+  {
+    "adultbasic": "Switzerland",
+    "adultregion": "Switzerland",
+    "yob": "1797",
+    "death": "1854-10-22T00:00:00.000Z",
+    "dob": "10-04",
+    "era": "1800+",
+    "id": "96d75a88-c115-4017-8dfd-910e44f10431",
+    "inventory": "Lit.West",
+    "knownFor": "a Swiss novelist, author of The Black Spider",
+    "name": "Jeremias Gotthelf",
+    "osfName": "Bitzius, Albert",
+    "portrait": {
+      "above": "Albert Bitzius",
+      "img": {
+        "alt": "Portrait by Johann Friedrich Dietler",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/7/7a/JeremiasGotthelf.jpg/220px-JeremiasGotthelf.jpg",
+        "decoding": "async",
+        "width": "220",
+        "height": "272",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/thumb/7/7a/JeremiasGotthelf.jpg/330px-JeremiasGotthelf.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/7a/JeremiasGotthelf.jpg/440px-JeremiasGotthelf.jpg 2x",
+        "data-file-width": "1576",
+        "data-file-height": "1950"
+      },
+      "caption": "Portrait by Johann Friedrich Dietler"
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "Albert Bitzius 4 October 1797 Murten, Switzerland",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "22 October 1854 (aged 57) Lützelflüh, Switzerland",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Pen name",
+        "seq": 2,
+        "value": "Jeremias Gotthelf",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Occupation",
+        "seq": 3,
+        "value": "Pastor, writer",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Language",
+        "seq": 4,
+        "value": "(Swiss Standard) German",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Nationality",
+        "seq": 5,
+        "value": "Swiss",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Notable works",
+        "seq": 6,
+        "value": "The Black Spider",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Children",
+        "seq": 7,
+        "value": "1 son, 2 daughters",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "10548",
+    "sr": {
+      "ns": 0,
+      "title": "Jeremias Gotthelf",
+      "pageid": 183257,
+      "size": 7932,
+      "wordcount": 904,
+      "snippet": "<span class=\"searchmatch\">Albert</span> <span class=\"searchmatch\">Bitzius</span> (4 October <span class=\"searchmatch\">1797</span> – 22 October 1854) was a Swiss novelist, best known by his pen name of Jeremias Gotthelf. <span class=\"searchmatch\">Bitzius</span> was born at Murten, where",
+      "timestamp": "2021-09-05T19:24:30Z"
+    }
+  },
+  {
+    "adultbasic": "France",
+    "adultregion": "F.Isle",
+    "yob": "1842",
+    "death": "1905-10-03T00:00:00.000Z",
+    "dob": "11-22",
+    "era": "1800+",
+    "id": "99a559d6-ee08-41a3-85a8-6b74c3ced9da",
+    "inventory": "Lit.West",
+    "knownFor": "a Cuban-born French Parnassian poet. He was the fifteenth member elected for seat 4 of the Académie française in 1894.",
+    "name": "José-Maria de Heredia",
+    "osfName": "Heredia, Jose de",
+    "portrait": {
+      "above": "José-Maria de Heredia",
+      "img": {
+        "alt": "José-Maria de Heredia as drawn by Adolphe Lalauze",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Jos%C3%A9-Maria_de_Heredia_%28French_poet%29_by_Adolphe_Lalauze.jpg/220px-Jos%C3%A9-Maria_de_Heredia_%28French_poet%29_by_Adolphe_Lalauze.jpg",
+        "decoding": "async",
+        "width": "220",
+        "height": "282",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/e/e9/Jos%C3%A9-Maria_de_Heredia_%28French_poet%29_by_Adolphe_Lalauze.jpg 1.5x",
+        "data-file-width": "269",
+        "data-file-height": "345"
+      },
+      "caption": "José-Maria de Heredia as drawn by Adolphe Lalauze"
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "22 November 1842 Fortuna Cafeyere, Cuba",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "3 October 1905 (aged 62) Seine-et-Oise, France",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Occupation",
+        "seq": 2,
+        "value": "Poet, librarian",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Language",
+        "seq": 3,
+        "value": "French",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Alma mater",
+        "seq": 4,
+        "value": "École Nationale des Chartes",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Literary movement",
+        "seq": 5,
+        "value": "Parnassianism",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Children",
+        "seq": 6,
+        "value": "Marie de Régnier",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "11959",
+    "sr": {
+      "ns": 0,
+      "title": "José-Maria de Heredia",
+      "pageid": 245401,
+      "size": 6178,
+      "wordcount": 563,
+      "snippet": "<span class=\"searchmatch\">José</span>-Maria <span class=\"searchmatch\">de</span> <span class=\"searchmatch\">Heredia</span> (22 November <span class=\"searchmatch\">1842</span> – 3 October 1905) was a Cuban-born French Parnassian poet. He was the fifteenth member elected for seat 4 of the",
+      "timestamp": "2021-05-14T04:13:04Z"
+    }
+  },
+  {
+    "adultbasic": "Italy",
+    "adultregion": "I.Papal",
+    "yob": "1818",
+    "death": "1878-02-26T00:00:00.000Z",
+    "dob": "06-28",
+    "era": "1800+",
+    "id": "9c285ba4-f05b-41d4-9983-315e6adf05d2",
+    "inventory": "Science",
+    "knownFor": "a pioneer in astronomical spectroscopy, and was one of the first scientists to state authoritatively that the Sun is a star",
+    "name": "Angelo Secchi",
+    "osfName": "Secchi, Pietro",
+    "portrait": {
+      "above": "Angelo Secchi",
+      "img": {
+        "alt": "Angelo Secchi.jpg",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/6/68/Angelo_Secchi.jpg/220px-Angelo_Secchi.jpg",
+        "decoding": "async",
+        "width": "220",
+        "height": "302",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/thumb/6/68/Angelo_Secchi.jpg/330px-Angelo_Secchi.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/68/Angelo_Secchi.jpg/440px-Angelo_Secchi.jpg 2x",
+        "data-file-width": "835",
+        "data-file-height": "1148"
+      }
+    },
+    "props": [
+      {
+        "name": "Church",
+        "seq": 0,
+        "value": "Latin Church",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Ordination",
+        "seq": 1,
+        "value": "12 September 1847",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Rank",
+        "seq": 2,
+        "value": "Priest",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Born",
+        "seq": 3,
+        "value": "28 June 1818 Reggio Emilia, Duchy of Modena and Reggio",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 4,
+        "value": "26 February 1878 (aged 59) Rome, Kingdom of Italy",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Nationality",
+        "seq": 5,
+        "value": "Italian",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Denomination",
+        "seq": 6,
+        "value": "Catholicism",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Awards",
+        "seq": 7,
+        "value": "Légion d'honneur, France",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Fields",
+        "seq": 8,
+        "value": "Astronomy",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Institutions",
+        "seq": 9,
+        "value": "Observatory of the Roman College",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "7431",
+    "sr": {
+      "ns": 0,
+      "title": "Angelo Secchi",
+      "pageid": 793089,
+      "size": 13959,
+      "wordcount": 1386,
+      "snippet": "Angelo <span class=\"searchmatch\">Secchi</span> S.J. (Italian pronunciation: [ˈandʒelo ˈsekki]; 28 June <span class=\"searchmatch\">1818</span> – 26 February 1878) was an Italian Catholic priest, astronomer from the Italian",
+      "timestamp": "2022-02-27T21:29:41Z"
+    }
+  },
+  {
+    "adultbasic": "Netherlands",
+    "adultregion": "Netherlands",
+    "yob": "1900",
+    "death": "1988-10-31T00:00:00.000Z",
+    "dob": "12-06",
+    "era": "1800+",
+    "id": "a444529d-ce9a-4b2f-9349-116f51cd34a4",
+    "inventory": "Science",
+    "knownFor": "a Dutch-American theoretical physicist. Electron spin Ornstein–Uhlenbeck process Quantum Boltzmann equation",
+    "name": "George Uhlenbeck",
+    "osfName": "Uhlenbeck, George",
+    "portrait": {
+      "above": "George Uhlenbeck",
+      "img": {
+        "alt": "George Uhlenbeck (cropped).jpg",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/6/6d/George_Uhlenbeck_%28cropped%29.jpg/220px-George_Uhlenbeck_%28cropped%29.jpg",
+        "decoding": "async",
+        "width": "220",
+        "height": "280",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/6/6d/George_Uhlenbeck_%28cropped%29.jpg 1.5x",
+        "data-file-width": "229",
+        "data-file-height": "291"
+      },
+      "caption": "Uhlenbeck c.&#8201;1928"
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "George Eugene Uhlenbeck December 6, 1900 Batavia, Dutch East Indies (now Jakarta )",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "October 31, 1988 (aged 87) Boulder, Colorado, US",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Nationality",
+        "seq": 2,
+        "value": "American",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Alma mater",
+        "seq": 3,
+        "value": "University of Leiden",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Known for",
+        "seq": 4,
+        "value": "Electron spin Ornstein–Uhlenbeck process Quantum Boltzmann equation",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Children",
+        "seq": 5,
+        "value": "Olke C. Uhlenbeck",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Awards",
+        "seq": 6,
+        "value": "Oersted Medal (1955) Max Planck medal (1964) Lorentz Medal (1970) National Medal of Science (1977) Wolf Prize in Physics (1979)",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Fields",
+        "seq": 7,
+        "value": "Physicist",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Institutions",
+        "seq": 8,
+        "value": "Columbia University MIT University of Michigan Rockefeller Institute Princeton University",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Doctoral advisor",
+        "seq": 9,
+        "value": "Paul Ehrenfest",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Doctoral students",
+        "seq": 10,
+        "value": "Max Dresden George W. Ford Emil Konopinski Edwin Albrecht Uehling",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Influenced",
+        "seq": 11,
+        "value": "Walter S. Huxford",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "8387",
+    "sr": {
+      "ns": 0,
+      "title": "George Uhlenbeck",
+      "pageid": 734558,
+      "size": 9916,
+      "wordcount": 983,
+      "snippet": "<span class=\"searchmatch\">George</span> Eugene <span class=\"searchmatch\">Uhlenbeck</span> (December 6, <span class=\"searchmatch\">1900</span> – October 31, 1988) was a Dutch-American theoretical physicist. <span class=\"searchmatch\">George</span> <span class=\"searchmatch\">Uhlenbeck</span> was the son of Eugenius and",
+      "timestamp": "2022-02-25T21:09:21Z"
+    }
+  },
+  {
+    "adultbasic": "Italy",
+    "adultregion": "I.gx",
+    "yob": "1544",
+    "death": "1595-04-25T00:00:00.000Z",
+    "dob": "03-11",
+    "era": "1400-1600",
+    "id": "a4885fa4-ebf0-41f7-a80a-b55e438b53d4",
+    "inventory": "Lit.West",
+    "knownFor": "an Italian poet of the 16th century, known for his poem Gerusalemme liberata",
+    "name": "Torquato Tasso",
+    "osfName": "Tasso, Torquato",
+    "portrait": {
+      "above": "Torquato Tasso",
+      "img": {
+        "alt": "Portrait of Torquato Tasso, aged 22, by Jacopo Bassano.",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Torquato_Tasso%2C_aged_22%2C_by_Jacopo_da_Ponte%2C_called_Jacopo_Bassano_%28cropped%29.jpg/220px-Torquato_Tasso%2C_aged_22%2C_by_Jacopo_da_Ponte%2C_called_Jacopo_Bassano_%28cropped%29.jpg",
+        "decoding": "async",
+        "width": "220",
+        "height": "324",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Torquato_Tasso%2C_aged_22%2C_by_Jacopo_da_Ponte%2C_called_Jacopo_Bassano_%28cropped%29.jpg/330px-Torquato_Tasso%2C_aged_22%2C_by_Jacopo_da_Ponte%2C_called_Jacopo_Bassano_%28cropped%29.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Torquato_Tasso%2C_aged_22%2C_by_Jacopo_da_Ponte%2C_called_Jacopo_Bassano_%28cropped%29.jpg/440px-Torquato_Tasso%2C_aged_22%2C_by_Jacopo_da_Ponte%2C_called_Jacopo_Bassano_%28cropped%29.jpg 2x",
+        "data-file-width": "638",
+        "data-file-height": "940"
+      },
+      "caption": "Portrait of Torquato Tasso, aged 22, by Jacopo Bassano."
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "11 March 1544 Sorrento, Kingdom of Naples",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "25 April 1595 (aged 51) Rome, Papal States",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Occupation",
+        "seq": 2,
+        "value": "Poet",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Genre",
+        "seq": 3,
+        "value": "Epic poetry, lyric poetry",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "13935",
+    "sr": {
+      "ns": 0,
+      "title": "Torquato Tasso",
+      "pageid": 48227,
+      "size": 37773,
+      "wordcount": 5201,
+      "snippet": "<span class=\"searchmatch\">Torquato</span> <span class=\"searchmatch\">Tasso</span> (/ˈtæsoʊ/ TASS-oh, also US: /ˈtɑːsoʊ/ TAH-soh, Italian: [torˈkwaːto <span class=\"searchmatch\">ˈtasso</span>]; 11 March <span class=\"searchmatch\">1544</span> – 25 April 1595) was an Italian poet of the",
+      "timestamp": "2021-11-21T08:46:20Z"
+    }
+  },
+  {
+    "adultbasic": "France",
+    "adultregion": "F.Isle",
+    "yob": "1783",
+    "death": "1842-03-23T00:00:00.000Z",
+    "dob": "01-23",
+    "era": "1800+",
+    "id": "a8d15829-4bce-4eee-b8fd-2e58d80bc2a8",
+    "inventory": "Lit.West",
+    "knownFor": "a 19th-century French writer. Best known for the novels Le Rouge et le Noir (The Red and the Black, 1830) and La Chartreuse de Parme (The Charterhouse of Parma, 1839)",
+    "name": "Stendhal",
+    "osfName": "Stendhal (Beyle)",
+    "portrait": {
+      "above": "Marie-Henri Beyle",
+      "img": {
+        "alt": "Stendhal, by Olof Johan Södermark, 1840",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Stendhal.jpg/220px-Stendhal.jpg",
+        "decoding": "async",
+        "width": "220",
+        "height": "282",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Stendhal.jpg/330px-Stendhal.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Stendhal.jpg/440px-Stendhal.jpg 2x",
+        "data-file-width": "2197",
+        "data-file-height": "2817"
+      },
+      "caption": "Stendhal, by Olof Johan Södermark, 1840"
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "23 January 1783 Grenoble, Kingdom of France",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "23 March 1842 (aged 59) Paris, July Monarchy",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Resting place",
+        "seq": 2,
+        "value": "Cimetière de Montmartre",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Occupation",
+        "seq": 3,
+        "value": "Writer",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Literary movement",
+        "seq": 4,
+        "value": "Realism",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "13833",
+    "sr": {
+      "ns": 0,
+      "title": "Stendhal",
+      "pageid": 26773,
+      "size": 38736,
+      "wordcount": 4514,
+      "snippet": "Marie-Henri <span class=\"searchmatch\">Beyle</span> (French: [bɛl]; 23 January <span class=\"searchmatch\">1783</span> – 23 March 1842), better known by his pen name <span class=\"searchmatch\">Stendhal</span> (UK: /ˈstɒ̃dɑːl/, US: /stɛnˈdɑːl, stænˈ-/; French: [stɛ̃dal",
+      "timestamp": "2022-02-26T01:32:02Z"
+    }
+  },
+  {
+    "adultbasic": "France",
+    "adultregion": "F.Bourg",
+    "yob": "1790",
+    "death": "1869-02-28T00:00:00.000Z",
+    "dob": "10-21",
+    "era": "1800+",
+    "id": "a9e9542b-8ab1-42ee-a92f-f478a87111c7",
+    "inventory": "Lit.West",
+    "knownFor": "a French author, poet, and statesman who was instrumental in the foundation of the Second Republic and the continuation of the Tricolore as the flag of France",
+    "name": "Alphonse de Lamartine",
+    "osfName": "Lamartine, Alphonse de",
+    "portrait": {
+      "above": "Alphonse de Lamartine",
+      "img": {
+        "alt": "Alphonse de Lamartine.PNG",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/d/db/Alphonse_de_Lamartine.PNG/220px-Alphonse_de_Lamartine.PNG",
+        "decoding": "async",
+        "width": "220",
+        "height": "284",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/thumb/d/db/Alphonse_de_Lamartine.PNG/330px-Alphonse_de_Lamartine.PNG 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/db/Alphonse_de_Lamartine.PNG/440px-Alphonse_de_Lamartine.PNG 2x",
+        "data-file-width": "1082",
+        "data-file-height": "1396"
+      },
+      "caption": "Alphonse de Lamartine by François Gérard (1831)"
+    },
+    "props": [
+      {
+        "name": "Preceded by",
+        "seq": 0,
+        "value": "Paul Lemaire ",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Succeeded by",
+        "seq": 1,
+        "value": "Louis de Hau de Staplande ",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Constituency",
+        "seq": 2,
+        "value": "Bergues",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Prime Minister",
+        "seq": 3,
+        "value": "Jacques-Charles Dupont",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Born",
+        "seq": 4,
+        "value": "Alphonse Marie Louis de Prat de Lamartine 21 October 1790 Mâcon, Burgundy, France",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 5,
+        "value": "28 February 1869 (aged 78) Paris, French Empire",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Political party",
+        "seq": 6,
+        "value": "Social Party  (1833–1837) Third Party (1837–1848) Moderate Republican (1848–1851)",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Spouse(s)",
+        "seq": 7,
+        "value": "Elisa de Lamartine ​ ​ ( m. 1820; died 1863) ​",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Children",
+        "seq": 8,
+        "value": "Alphonse de Lamartine (1821–1822) Julia de Lamartine (1822–1832)",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Education",
+        "seq": 9,
+        "value": "Belley College",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Profession",
+        "seq": 10,
+        "value": "Writer Poet",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Period",
+        "seq": 11,
+        "value": "19th century",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Genre",
+        "seq": 12,
+        "value": "Novel Poetry History Theatre Biography",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Subject",
+        "seq": 13,
+        "value": "Nature, love, spiritualism",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Literary movement",
+        "seq": 14,
+        "value": "Romanticism",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Notable works",
+        "seq": 15,
+        "value": "Graziella (1852)",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Years active",
+        "seq": 16,
+        "value": "1811–1869",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "12411",
+    "sr": {
+      "ns": 0,
+      "title": "Alphonse de Lamartine",
+      "pageid": 170759,
+      "size": 25830,
+      "wordcount": 2573,
+      "snippet": "<span class=\"searchmatch\">Alphonse</span> Marie Louis <span class=\"searchmatch\">de</span> Prat <span class=\"searchmatch\">de</span> <span class=\"searchmatch\">Lamartine</span>, Knight of Pratz (French: [alfɔ̃s maʁi lwi dəpʁa də lamaʁtin]; 21 October <span class=\"searchmatch\">1790</span> – 28 February 1869), was a French",
+      "timestamp": "2022-02-03T05:03:12Z"
+    }
+  },
+  {
+    "adultbasic": "Netherlands",
+    "adultregion": "Netherlands",
+    "yob": "1865",
+    "death": "1943-10-09T00:00:00.000Z",
+    "dob": "05-25",
+    "era": "1800+",
+    "id": "ac545b1a-f436-4871-a2b5-2fd1f073ae2f",
+    "inventory": "Science",
+    "knownFor": "a Dutch physicist who shared the 1902 Nobel Prize in Physics with Hendrik Lorentz for his discovery of the Zeeman effect",
+    "name": "Pieter Zeeman",
+    "osfName": "Zeeman, Pieter",
+    "portrait": {
+      "above": "Pieter Zeeman",
+      "img": {
+        "alt": "Pieter Zeeman.jpg",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Pieter_Zeeman.jpg/220px-Pieter_Zeeman.jpg",
+        "decoding": "async",
+        "width": "220",
+        "height": "308",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Pieter_Zeeman.jpg/330px-Pieter_Zeeman.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Pieter_Zeeman.jpg/440px-Pieter_Zeeman.jpg 2x",
+        "data-file-width": "2123",
+        "data-file-height": "2974"
+      }
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "25 May 1865 Zonnemaire, Netherlands",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "9 October 1943 (aged 78) Amsterdam, Netherlands",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Nationality",
+        "seq": 2,
+        "value": "Dutch",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Alma mater",
+        "seq": 3,
+        "value": "University of Leiden",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Known for",
+        "seq": 4,
+        "value": "Zeeman effect",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Spouse(s)",
+        "seq": 5,
+        "value": "Johanna Elisabeth Lebret ​ ​ ( m. 1895⁠–⁠1943) ​",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Awards",
+        "seq": 6,
+        "value": "Nobel Prize for Physics (1902) Matteucci Medal (1912) Henry Draper Medal (1921) ForMemRS (1921)  Rumford Medal (1922) Franklin Medal (1925)",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Fields",
+        "seq": 7,
+        "value": "Physics",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Institutions",
+        "seq": 8,
+        "value": "University of Amsterdam",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Doctoral advisor",
+        "seq": 9,
+        "value": "Heike Kamerlingh Onnes",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "9084",
+    "sr": {
+      "ns": 0,
+      "title": "Pieter Zeeman",
+      "pageid": 209271,
+      "size": 16485,
+      "wordcount": 1551,
+      "snippet": "<span class=\"searchmatch\">Pieter</span> <span class=\"searchmatch\">Zeeman</span> (Dutch: [ˈzeːmɑn]; 25 May <span class=\"searchmatch\">1865</span> – 9 October 1943) was a Dutch physicist who shared the 1902 Nobel Prize in Physics with Hendrik Lorentz for",
+      "timestamp": "2021-12-20T17:09:54Z"
+    },
+    "nobel": {
+      "laureate": {
+        "id": "3",
+        "firstname": "Pieter",
+        "surname": "Zeeman",
+        "born": "1865-05-25",
+        "died": "1943-10-09",
+        "bornCountry": "the Netherlands",
+        "bornCountryCode": "NL",
+        "bornCity": "Zonnemaire",
+        "diedCountry": "the Netherlands",
+        "diedCountryCode": "NL",
+        "diedCity": "Amsterdam",
+        "gender": "male",
+        "prizes": [
+          {
+            "year": "1902",
+            "category": "physics",
+            "share": "2",
+            "motivation": "\"in recognition of the extraordinary service they rendered by their researches into the influence of magnetism upon radiation phenomena\"",
+            "affiliations": [
+              {
+                "name": "Amsterdam University",
+                "city": "Amsterdam",
+                "country": "the Netherlands"
+              }
+            ],
+            "url": "nobel_prizes/physics/laureates/1902/zeeman-facts.html",
+            "portrait": "tbd"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "adultbasic": "France",
+    "adultregion": "F.Isle",
+    "yob": "1769",
+    "death": "1832-05-13T00:00:00.000Z",
+    "dob": "08-23",
+    "era": "1800+",
+    "id": "acfa54be-4580-4f26-a511-83b67e03b9dc",
+    "inventory": "Science",
+    "knownFor": "a French naturalist and zoologist, sometimes referred to as the \"founding father of paleontology\".",
+    "name": "Georges Cuvier",
+    "osfName": "Cuvier, Georges",
+    "portrait": {
+      "above": "The Baron Cuvier",
+      "img": {
+        "alt": "Georges Cuvier.png",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Georges_Cuvier.png/220px-Georges_Cuvier.png",
+        "decoding": "async",
+        "width": "220",
+        "height": "275",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Georges_Cuvier.png/330px-Georges_Cuvier.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Georges_Cuvier.png/440px-Georges_Cuvier.png 2x",
+        "data-file-width": "814",
+        "data-file-height": "1018"
+      }
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "Jean Léopold Nicolas Frédéric Cuvier 23 August 1769 Montbéliard, County of Montbéliard, Duchy of Württemberg, Holy Roman Empire",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "13 May 1832 (aged 62) Paris, Kingdom of France",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Nationality",
+        "seq": 2,
+        "value": "French",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Other names",
+        "seq": 3,
+        "value": "Georges Cuvier",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Known for",
+        "seq": 4,
+        "value": "Le Règne Animal ; establishing the fields of stratigraphy and comparative anatomy, and the principle of faunal succession in the fossil record; making extinction an accepted scientific phenomenon; opposing",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Fields",
+        "seq": 5,
+        "value": "Natural history, paleontology, anatomy",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Institutions",
+        "seq": 6,
+        "value": "Muséum national d'histoire naturelle",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Author abbrev. (botany)",
+        "seq": 7,
+        "value": "Cuvier",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "2011",
+    "sr": {
+      "ns": 0,
+      "title": "Georges Cuvier",
+      "pageid": 162282,
+      "size": 78547,
+      "wordcount": 9500,
+      "snippet": "Jean Léopold Nicolas Frédéric, Baron <span class=\"searchmatch\">Cuvier</span> (French: [kyvje]; 23 August <span class=\"searchmatch\">1769</span> – 13 May 1832), known as <span class=\"searchmatch\">Georges</span> <span class=\"searchmatch\">Cuvier</span>, was a French naturalist and zoologist",
+      "timestamp": "2022-03-03T02:44:56Z"
+    }
+  },
+  {
+    "adultbasic": "Czech",
+    "adultregion": "C.Bohem",
+    "yob": "1820",
+    "death": "1862-01-21T00:00:00.000Z",
+    "dob": "02-04",
+    "era": "1800+",
+    "id": "af0152be-6812-4888-af31-54e4b2cbaddf",
+    "inventory": "Lit.West",
+    "knownFor": "a Czech writer of the final phase of the Czech National Revival movement.",
+    "name": "Božena Němcová",
+    "osfName": "Nemcova, Bozena",
+    "portrait": {
+      "above": "Božena Němcová",
+      "img": {
+        "alt": "Božena Němcová - engraving by Jan Vilímek",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Bozena_Nemcova.jpg/220px-Bozena_Nemcova.jpg",
+        "decoding": "async",
+        "width": "220",
+        "height": "280",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Bozena_Nemcova.jpg/330px-Bozena_Nemcova.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Bozena_Nemcova.jpg/440px-Bozena_Nemcova.jpg 2x",
+        "data-file-width": "1400",
+        "data-file-height": "1782"
+      },
+      "caption": "Božena Němcová - engraving by Jan Vilímek"
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "Barbora Novotná 4 February 1820 ? Vienna, Austrian Empire",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "21 January 1862 (aged 41) Prague, Austrian Empire",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Resting place",
+        "seq": 2,
+        "value": "Vyšehrad Cemetery",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Occupation",
+        "seq": 3,
+        "value": "Writer",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Nationality",
+        "seq": 4,
+        "value": "Czech",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Literary movement",
+        "seq": 5,
+        "value": "Czech National Revival",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Notable works",
+        "seq": 6,
+        "value": "Divá Bára Babička V zámku a v podzámčí Chyže pod horami",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Spouse",
+        "seq": 7,
+        "value": "Josef Němec ​ ( m. 1837) ​",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Children",
+        "seq": 8,
+        "value": "Hynek Němec Karel Němec Theodora Němcova Jaroslav Němec",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "12940",
+    "sr": {
+      "ns": 0,
+      "title": "Božena Němcová",
+      "pageid": 2637639,
+      "size": 5889,
+      "wordcount": 585,
+      "snippet": "<span class=\"searchmatch\">Božena</span> <span class=\"searchmatch\">Němcová</span> (Czech pronunciation: [ˈboʒɛna ˈɲɛmtsovaː]) (4 February <span class=\"searchmatch\">1820</span>[citation needed] in Vienna – 21 January 1862 in Prague) was a Czech writer",
+      "timestamp": "2021-11-23T14:38:41Z"
+    }
+  },
+  {
+    "adultbasic": "Britain",
+    "adultregion": "E.SE",
+    "yob": "1836",
+    "death": "1920-08-16T00:00:00.000Z",
+    "dob": "05-17",
+    "era": "1800+",
+    "id": "b02e5cb6-aa7c-4ea5-9ee6-d078b3f8da6a",
+    "inventory": "Science",
+    "knownFor": "an English scientist and astronomer, co-credited with discovering the gas helium",
+    "name": "Norman Lockyer",
+    "osfName": "Lockyer, Joseph",
+    "portrait": {
+      "above": "Joseph Norman Lockyer",
+      "img": {
+        "alt": "Picture of Norman Lockyer.jpg",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/9/91/Picture_of_Norman_Lockyer.jpg/220px-Picture_of_Norman_Lockyer.jpg",
+        "decoding": "async",
+        "width": "220",
+        "height": "284",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/thumb/9/91/Picture_of_Norman_Lockyer.jpg/330px-Picture_of_Norman_Lockyer.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/91/Picture_of_Norman_Lockyer.jpg/440px-Picture_of_Norman_Lockyer.jpg 2x",
+        "data-file-width": "1171",
+        "data-file-height": "1510"
+      },
+      "caption": "Sir Joseph Norman Lockyer, c.&#8201;1897"
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "17 May 1836 Rugby, Warwickshire, England",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "16 August 1920 (aged 84) Salcombe Regis, Devon, England",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Nationality",
+        "seq": 2,
+        "value": "British",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Known for",
+        "seq": 3,
+        "value": "Discovery of helium Founder of Journal, Nature",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Awards",
+        "seq": 4,
+        "value": "Rumford Medal (1874) Janssen Medal (1889)",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Fields",
+        "seq": 5,
+        "value": "Astronomy",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Institutions",
+        "seq": 6,
+        "value": "Imperial College London",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "5053",
+    "sr": {
+      "ns": 0,
+      "title": "Norman Lockyer",
+      "pageid": 250344,
+      "size": 19256,
+      "wordcount": 1632,
+      "snippet": "Sir <span class=\"searchmatch\">Joseph</span> Norman <span class=\"searchmatch\">Lockyer</span> KCB FRS (17 May <span class=\"searchmatch\">1836</span> – 16 August 1920) was an English scientist and astronomer. Along with the French scientist Pierre Janssen",
+      "timestamp": "2021-12-20T12:46:39Z"
+    }
+  },
+  {
+    "adultbasic": "Britain",
+    "adultregion": "E.North",
+    "yob": "1818",
+    "death": "1848-12-19T00:00:00.000Z",
+    "dob": "07-30",
+    "era": "1800+",
+    "id": "b8a654c3-29f7-4124-9e6f-4cd1d55138c3",
+    "inventory": "Lit.West",
+    "knownFor": "an English novelist and poet who is best known for her only novel, Wuthering Heights, now considered a classic of English literature.",
+    "name": "Emily Brontë",
+    "osfName": "Bronte, Emily",
+    "portrait": {
+      "above": "Emily Jane Brontë",
+      "img": {
+        "alt": "The only undisputed portrait of Brontë, from a group portrait by her brother Branwell[1]",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Emily_Bront%C3%AB_by_Patrick_Branwell_Bront%C3%AB_restored.jpg/220px-Emily_Bront%C3%AB_by_Patrick_Branwell_Bront%C3%AB_restored.jpg",
+        "decoding": "async",
+        "width": "220",
+        "height": "290",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Emily_Bront%C3%AB_by_Patrick_Branwell_Bront%C3%AB_restored.jpg/330px-Emily_Bront%C3%AB_by_Patrick_Branwell_Bront%C3%AB_restored.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Emily_Bront%C3%AB_by_Patrick_Branwell_Bront%C3%AB_restored.jpg/440px-Emily_Bront%C3%AB_by_Patrick_Branwell_Bront%C3%AB_restored.jpg 2x",
+        "data-file-width": "704",
+        "data-file-height": "928"
+      },
+      "caption": "The only undisputed portrait of Brontë, from a group portrait by her brother Branwell&#91;1&#93;"
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "30 July 1818 Thornton, Yorkshire, England",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "19 December 1848 (aged 30) Haworth, Yorkshire, England",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Resting place",
+        "seq": 2,
+        "value": "St Michael and All Angels' Church, Haworth, Yorkshire",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Pen name",
+        "seq": 3,
+        "value": "Ellis Bell",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Occupation",
+        "seq": 4,
+        "value": "Poet novelist governess",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Nationality",
+        "seq": 5,
+        "value": "English",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Citizenship",
+        "seq": 6,
+        "value": "British",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Education",
+        "seq": 7,
+        "value": "Cowan Bridge School, Lancashire",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Period",
+        "seq": 8,
+        "value": "1846–48",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Genre",
+        "seq": 9,
+        "value": "Fiction poetry",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Literary movement",
+        "seq": 10,
+        "value": "Romantic Period",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Notable works",
+        "seq": 11,
+        "value": "Wuthering Heights",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Parents",
+        "seq": 12,
+        "value": "Patrick Brontë Maria Branwell",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Relatives",
+        "seq": 13,
+        "value": "Brontë family",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "10720",
+    "sr": {
+      "ns": 0,
+      "title": "Emily Brontë",
+      "pageid": 9810,
+      "size": 38853,
+      "wordcount": 4741,
+      "snippet": "<span class=\"searchmatch\">Emily</span> Jane <span class=\"searchmatch\">Brontë</span> (/ˈbrɒnti/, commonly /-teɪ/; 30 July <span class=\"searchmatch\">1818</span> – 19 December 1848) was an English novelist and poet who is best known for her only novel",
+      "timestamp": "2022-03-02T18:08:47Z"
+    }
+  },
+  {
+    "adultbasic": "Britain",
+    "adultregion": "E.SE",
+    "yob": "1641",
+    "death": "1712-03-25T00:00:00.000Z",
+    "dob": "09-26",
+    "era": "1600-1800",
+    "id": "ba625e50-2f0f-425c-8966-4d5d5e7d6bc2",
+    "inventory": "Science",
+    "knownFor": "an English plant anatomist and physiologist, known as the \"Father of Plant Anatomy\".",
+    "name": "Nehemiah Grew",
+    "osfName": "Grew, Nehemiah",
+    "portrait": {
+      "above": "Nehemiah Grew",
+      "img": {
+        "alt": "Nehemiah Grew.png",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Nehemiah_Grew.png/220px-Nehemiah_Grew.png",
+        "decoding": "async",
+        "width": "220",
+        "height": "326",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Nehemiah_Grew.png/330px-Nehemiah_Grew.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Nehemiah_Grew.png/440px-Nehemiah_Grew.png 2x",
+        "data-file-width": "1985",
+        "data-file-height": "2941"
+      },
+      "caption": "Nehemiah Grew"
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "26 September 1641 Mancetter Parish, Warwickshire",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "25 March 1712 (aged 70) London",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Nationality",
+        "seq": 2,
+        "value": "English",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Alma mater",
+        "seq": 3,
+        "value": "Leiden University",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Fields",
+        "seq": 4,
+        "value": "Physiology",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "3368",
+    "sr": {
+      "ns": 0,
+      "title": "Nehemiah Grew",
+      "pageid": 476465,
+      "size": 7832,
+      "wordcount": 827,
+      "snippet": "<span class=\"searchmatch\">Nehemiah</span> <span class=\"searchmatch\">Grew</span> (26 September <span class=\"searchmatch\">1641</span> – 25 March 1712) was an English plant anatomist and physiologist, known as the &quot;Father of Plant Anatomy&quot;. <span class=\"searchmatch\">Grew</span> was the",
+      "timestamp": "2021-09-23T16:47:32Z"
+    }
+  },
+  {
+    "adultbasic": "France",
+    "adultregion": "F.Isle",
+    "yob": "1797",
+    "death": "1863-09-17T00:00:00.000Z",
+    "dob": "03-27",
+    "era": "1800+",
+    "id": "ba855538-dd39-406d-89c1-c17d13bffa98",
+    "inventory": "Lit.West",
+    "knownFor": "a French poet and early French Romanticist. He also produced novels, plays, and translations of Shakespeare.",
+    "name": "Alfred de Vigny",
+    "osfName": "Vigny, Alfred de",
+    "portrait": {
+      "above": "Alfred Victor, Comte de Vigny",
+      "img": {
+        "alt": "Vigny, by Félix Nadar.",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/1/1d/F%C3%A9lix_Nadar_1820-1910_Alfred_de_Vigny.jpg/220px-F%C3%A9lix_Nadar_1820-1910_Alfred_de_Vigny.jpg",
+        "decoding": "async",
+        "width": "220",
+        "height": "301",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/thumb/1/1d/F%C3%A9lix_Nadar_1820-1910_Alfred_de_Vigny.jpg/330px-F%C3%A9lix_Nadar_1820-1910_Alfred_de_Vigny.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/1d/F%C3%A9lix_Nadar_1820-1910_Alfred_de_Vigny.jpg/440px-F%C3%A9lix_Nadar_1820-1910_Alfred_de_Vigny.jpg 2x",
+        "data-file-width": "1546",
+        "data-file-height": "2115"
+      },
+      "caption": "Vigny, by Félix Nadar."
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "Alfred Victor, Comte de Vigny 27 March 1797 Loches, France",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "17 September 1863 (aged 66) Paris, France",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Occupation",
+        "seq": 2,
+        "value": "Poet, translator, novelist",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Literary movement",
+        "seq": 3,
+        "value": "Romanticism",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "14205",
+    "sr": {
+      "ns": 0,
+      "title": "Alfred de Vigny",
+      "pageid": 154943,
+      "size": 15574,
+      "wordcount": 1764,
+      "snippet": "<span class=\"searchmatch\">Alfred</span> Victor, Comte <span class=\"searchmatch\">de</span> <span class=\"searchmatch\">Vigny</span> (27 March <span class=\"searchmatch\">1797</span> – 17 September 1863) was a French poet and early French Romanticist. He also produced novels, plays, and translations",
+      "timestamp": "2022-03-05T14:56:54Z"
+    }
+  },
+  {
+    "adultbasic": "Britain",
+    "adultregion": "E.SW",
+    "yob": "1759",
+    "death": "1844-05-02T00:00:00.000Z",
+    "dob": "09-29",
+    "era": "1600-1800",
+    "id": "bb685ab0-18e6-40f0-b6b3-140cb7db9e2c",
+    "inventory": "Lit.West",
+    "knownFor": "an English novelist, art collector, patron of decorative art, critic, travel writer, plantation owner and for some time politician.",
+    "name": "William Beckford",
+    "osfName": "Beckford, William",
+    "portrait": {
+      "above": "William Beckford",
+      "img": {
+        "alt": "William (Thomas) Beckford.jpg",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/2/22/William_%28Thomas%29_Beckford.jpg/220px-William_%28Thomas%29_Beckford.jpg",
+        "decoding": "async",
+        "width": "220",
+        "height": "270",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/thumb/2/22/William_%28Thomas%29_Beckford.jpg/330px-William_%28Thomas%29_Beckford.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/22/William_%28Thomas%29_Beckford.jpg/440px-William_%28Thomas%29_Beckford.jpg 2x",
+        "data-file-width": "653",
+        "data-file-height": "800"
+      }
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "29 September 1760 Soho Square, London, England",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "2 May 1844 (aged 83) Bath, Somerset, England",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Nationality",
+        "seq": 2,
+        "value": "English",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Occupation",
+        "seq": 3,
+        "value": "Writer, art collector, politician",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Notable work",
+        "seq": 4,
+        "value": "Vathek (c. 1781); Memoirs of Extraordinary Painters (1780); Letters from Italy with Sketches of Spain and Portugal (1835)",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "10418",
+    "sr": {
+      "ns": 0,
+      "title": "William Beckford (novelist)",
+      "pageid": 229139,
+      "size": 31127,
+      "wordcount": 3578,
+      "snippet": "<span class=\"searchmatch\">William</span> Thomas <span class=\"searchmatch\">Beckford</span> (29 September 1760 – 2 May 1844) was an English novelist, art collector, patron of decorative art, critic, travel writer, plantation",
+      "timestamp": "2022-03-02T19:10:50Z"
+    }
+  },
+  {
+    "adultbasic": "Italy",
+    "adultregion": "I.Piedm",
+    "yob": "1858",
+    "death": "1932-04-20T00:00:00.000Z",
+    "dob": "08-27",
+    "era": "1800+",
+    "id": "bef85b87-5306-488b-b616-105d2603288e",
+    "inventory": "Science",
+    "knownFor": "an Italian mathematician and glottologist. The author of over 200 books and papers, he was a founder of mathematical logic and set theory, to which he contributed much notation.",
+    "name": "Giuseppe Peano",
+    "osfName": "Peano, Giuseppe",
+    "portrait": {
+      "above": "Giuseppe Peano",
+      "img": {
+        "alt": "Giuseppe Peano.jpg",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Giuseppe_Peano.jpg/220px-Giuseppe_Peano.jpg",
+        "decoding": "async",
+        "width": "220",
+        "height": "278",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Giuseppe_Peano.jpg/330px-Giuseppe_Peano.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Giuseppe_Peano.jpg/440px-Giuseppe_Peano.jpg 2x",
+        "data-file-width": "580",
+        "data-file-height": "734"
+      }
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "27 August 1858 Spinetta, Piedmont, Kingdom of Sardinia",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "20 April 1932 (aged 73) Turin, Italy",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Citizenship",
+        "seq": 2,
+        "value": "Italian",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Alma mater",
+        "seq": 3,
+        "value": "University of Turin",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Known for",
+        "seq": 4,
+        "value": "Peano axioms Peano curve Peano existence theorem Peano-Jordan measure Peano kernel theorem Peano–Russell notation Latino sine flexione Vector space Peano surface Logicism",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Awards",
+        "seq": 5,
+        "value": "Knight of the Order of Saints Maurizio and Lazzaro Knight of the Crown of Italy Commendatore of the Crown of Italy Correspondent of the Accademia dei Lincei",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Fields",
+        "seq": 6,
+        "value": "Mathematics Linguistics",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Institutions",
+        "seq": 7,
+        "value": "University of Turin, Accademia dei Lincei",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Doctoral advisor",
+        "seq": 8,
+        "value": "Enrico D'Ovidio",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Other academic advisors",
+        "seq": 9,
+        "value": "Francesco Faà di Bruno",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Influences",
+        "seq": 10,
+        "value": "Euclid, Angelo Genocchi, Gottlob Frege",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Influenced",
+        "seq": 11,
+        "value": "Bertrand Russell, Giovanni Vailati",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "6322",
+    "sr": {
+      "ns": 0,
+      "title": "Giuseppe Peano",
+      "pageid": 13043,
+      "size": 15708,
+      "wordcount": 1720,
+      "snippet": "<span class=\"searchmatch\">Giuseppe</span> <span class=\"searchmatch\">Peano</span> (/piˈɑːnoʊ/; Italian: [dʒuˈzɛppe <span class=\"searchmatch\">peˈaːno</span>]; 27 August <span class=\"searchmatch\">1858</span> – 20 April 1932) was an Italian mathematician and glottologist. The author of",
+      "timestamp": "2022-01-27T18:48:36Z"
+    }
+  },
+  {
+    "adultbasic": "France",
+    "adultregion": "F.Isle",
+    "yob": "1839",
+    "death": "1906-10-22T00:00:00.000Z",
+    "dob": "01-19",
+    "era": "1800+",
+    "id": "c11f560e-a2c0-4b11-a94e-eb3549a0192c",
+    "inventory": "Art.West",
+    "knownFor": "a French artist whose work laid the foundations of the transition from the 19th-century conception of artistic endeavor to a new and radically different world of art in the 20th century",
+    "name": "Paul Cézanne",
+    "osfName": "Cezanne, Paul",
+    "portrait": {
+      "above": "Paul Cézanne",
+      "img": {
+        "alt": "Photograph of Paul Cézanne",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Paul-Cezanne.jpg/220px-Paul-Cezanne.jpg",
+        "decoding": "async",
+        "width": "220",
+        "height": "293",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/c/c4/Paul-Cezanne.jpg 1.5x",
+        "data-file-width": "250",
+        "data-file-height": "333"
+      }
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "19 January 1839 Aix-en-Provence, France",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "22 October 1906 (aged 67) Aix-en-Provence, France",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Resting place",
+        "seq": 2,
+        "value": "Saint-Pierre Cemetery",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Nationality",
+        "seq": 3,
+        "value": "French",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Education",
+        "seq": 4,
+        "value": "Académie Suisse Aix-Marseille University",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Known for",
+        "seq": 5,
+        "value": "Painting",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Notable work",
+        "seq": 6,
+        "value": "Mont Sainte-Victoire (1885–1906) Apothéose de Delacroix (1890–1894) Rideau, Cruchon et Compotier (1893–94) The Card Players (1890–1895) The Bathers (1898–1905)",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Movement",
+        "seq": 7,
+        "value": "Impressionism, Post-Impressionism",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Awards",
+        "seq": 8,
+        "value": "Cézanne medal",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "20467",
+    "sr": {
+      "ns": 0,
+      "title": "Paul Cézanne",
+      "pageid": 24472,
+      "size": 58032,
+      "wordcount": 5708,
+      "snippet": "<span class=\"searchmatch\">Paul</span> <span class=\"searchmatch\">Cézanne</span> (/seɪˈzæn/ say-ZAN, also UK: /sɪˈzæn/ sə-ZAN, US: /seɪˈzɑːn/ say-ZAHN; French: [pɔl sezan]; 19 January <span class=\"searchmatch\">1839</span> – 22 October 1906) was a French",
+      "timestamp": "2022-02-28T12:46:11Z"
+    }
+  },
+  {
+    "adultbasic": "Britain",
+    "adultregion": "E.SE",
+    "yob": "1835",
+    "death": "1911-10-07T00:00:00.000Z",
+    "dob": "04-04",
+    "era": "1800+",
+    "id": "c80555a4-2f88-478b-8829-783b4e96da6f",
+    "inventory": "Science",
+    "knownFor": "an English neurologist. He is best known for his research on epilepsy.",
+    "name": "John Hughlings Jackson",
+    "osfName": "Jackson, John",
+    "portrait": {
+      "above": "John Hughlings Jackson",
+      "img": {
+        "alt": "John Hughlings-Jackson bust.jpg",
+        "src": "//upload.wikimedia.org/wikipedia/en/thumb/0/09/John_Hughlings-Jackson_bust.jpg/250px-John_Hughlings-Jackson_bust.jpg",
+        "decoding": "async",
+        "width": "250",
+        "height": "298",
+        "srcset": "//upload.wikimedia.org/wikipedia/en/thumb/0/09/John_Hughlings-Jackson_bust.jpg/375px-John_Hughlings-Jackson_bust.jpg 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/0/09/John_Hughlings-Jackson_bust.jpg/500px-John_Hughlings-Jackson_bust.jpg 2x",
+        "data-file-width": "957",
+        "data-file-height": "1140"
+      },
+      "caption": "Bust of John Hughlings Jackson, resident in the Institute of Neurology, London"
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "4 April 1835 Providence Green, Green Hammerton, Yorkshire, England",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "7 October 1911 (aged 76) London, England",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Nationality",
+        "seq": 2,
+        "value": "English",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Fields",
+        "seq": 3,
+        "value": "Neurology",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "4145",
+    "sr": {
+      "ns": 0,
+      "title": "John Hughlings Jackson",
+      "pageid": 850123,
+      "size": 14302,
+      "wordcount": 1613,
+      "snippet": "<span class=\"searchmatch\">John</span> Hughlings <span class=\"searchmatch\">Jackson</span>, FRS (4 April <span class=\"searchmatch\">1835</span> – 7 October 1911) was an English neurologist. He is best known for his research on epilepsy. He was born at",
+      "timestamp": "2022-03-06T22:45:43Z"
+    }
+  },
+  {
+    "adultbasic": "Italy",
+    "adultregion": "I.gx",
+    "yob": "1771",
+    "death": "1839-05-03T00:00:00.000Z",
+    "dob": "07-01",
+    "era": "1800+",
+    "id": "d05a5748-4854-4b6d-98a4-0ed433b5bda7",
+    "inventory": "Music.West",
+    "knownFor": "an Italian composer known for his operas. He was of Austrian descent and used the German spelling Pär in application for printing in Venice, and later in France the spelling Paër.",
+    "name": "Ferdinando Paer",
+    "osfName": "Paer, Ferdinando",
+    "portrait": {
+      "above": "Ferdinando Paer",
+      "img": {
+        "alt": "Ferdinando Paër by François-Séraphin Delpech after Nicolas-Eustache Maurin.jpg",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Ferdinando_Pa%C3%ABr_by_Fran%C3%A7ois-S%C3%A9raphin_Delpech_after_Nicolas-Eustache_Maurin.jpg/220px-Ferdinando_Pa%C3%ABr_by_Fran%C3%A7ois-S%C3%A9raphin_Delpech_after_Nicolas-Eustache_Maurin.jpg",
+        "decoding": "async",
+        "width": "220",
+        "height": "264",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Ferdinando_Pa%C3%ABr_by_Fran%C3%A7ois-S%C3%A9raphin_Delpech_after_Nicolas-Eustache_Maurin.jpg/330px-Ferdinando_Pa%C3%ABr_by_Fran%C3%A7ois-S%C3%A9raphin_Delpech_after_Nicolas-Eustache_Maurin.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/c/c7/Ferdinando_Pa%C3%ABr_by_Fran%C3%A7ois-S%C3%A9raphin_Delpech_after_Nicolas-Eustache_Maurin.jpg 2x",
+        "data-file-width": "408",
+        "data-file-height": "489"
+      },
+      "caption": "Lithograph by François Delpech"
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "Ferdinando Paer 1 July 1771 Parma",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "3 May 1839 (aged 67) Paris",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Occupation",
+        "seq": 2,
+        "value": "Composer",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Organization",
+        "seq": 3,
+        "value": "Kärntnertortheater Morettisches Opernhaus Opéra-Italien",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Works",
+        "seq": 4,
+        "value": "List of operas",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "42062",
+    "sr": {
+      "ns": 0,
+      "title": "Ferdinando Paer",
+      "pageid": 2333459,
+      "size": 8228,
+      "wordcount": 994,
+      "snippet": "<span class=\"searchmatch\">Ferdinando</span> <span class=\"searchmatch\">Paer</span> (1 July <span class=\"searchmatch\">1771</span> – 3 May 1839) was an Italian composer known for his operas and oratorios. He was of Austrian descent and used the German spelling",
+      "timestamp": "2021-12-21T18:51:36Z"
+    }
+  },
+  {
+    "adultbasic": "France",
+    "adultregion": "F.Isle",
+    "yob": "1827",
+    "death": "1907-03-18T00:00:00.000Z",
+    "dob": "10-25",
+    "era": "1800+",
+    "id": "d4395e51-4116-4ee7-a33f-ab097e1eff61",
+    "inventory": "Science",
+    "knownFor": "a French chemist and Republican politician noted for the Thomsen–Berthelot principle of thermochemistry.",
+    "name": "Marcellin Berthelot",
+    "osfName": "Berthelot, Pierre",
+    "portrait": {
+      "above": "Marcellin Berthelot",
+      "img": {
+        "alt": "Marcellin Berthelot.jpg",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Marcellin_Berthelot.jpg/220px-Marcellin_Berthelot.jpg",
+        "decoding": "async",
+        "width": "220",
+        "height": "276",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Marcellin_Berthelot.jpg/330px-Marcellin_Berthelot.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Marcellin_Berthelot.jpg/440px-Marcellin_Berthelot.jpg 2x",
+        "data-file-width": "2152",
+        "data-file-height": "2701"
+      }
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "Pierre Eugène Marcellin Berthelot 25 October 1827 Paris, France",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "18 March 1907 (aged 79) Paris, France",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Known for",
+        "seq": 2,
+        "value": "Thomsen–Berthelot principle Berthelot's reagent Principle of maximum work",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Spouse(s)",
+        "seq": 3,
+        "value": "Sophie Berthelot",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Children",
+        "seq": 4,
+        "value": "André Marie-Hélène Camille Daniel Philippe René",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Awards",
+        "seq": 5,
+        "value": "Davy Medal (1883) Copley Medal (1900)",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Fields",
+        "seq": 6,
+        "value": "Chemistry ( thermochemistry )",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Influences",
+        "seq": 7,
+        "value": "Antoine Jérôme Balard",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "764",
+    "sr": {
+      "ns": 0,
+      "title": "Marcellin Berthelot",
+      "pageid": 191836,
+      "size": 17223,
+      "wordcount": 1622,
+      "snippet": "<span class=\"searchmatch\">Pierre</span> Eugène Marcellin <span class=\"searchmatch\">Berthelot</span> FRS FRSE (French: [bɛʁtəlo]; <span class=\"searchmatch\">1827</span>–1907) was a French chemist and politician noted for the Thomsen–<span class=\"searchmatch\">Berthelot</span> principle",
+      "timestamp": "2022-02-14T10:49:34Z"
+    }
+  },
+  {
+    "adultbasic": "Italy",
+    "adultregion": "I.Tusca",
+    "yob": "1608",
+    "death": "1679-12-31T00:00:00.000Z",
+    "dob": "01-28",
+    "era": "1600-1800",
+    "id": "dd8a5314-f529-4557-b51f-2392e4a5a37d",
+    "inventory": "Science",
+    "knownFor": "an Italian physicist, and mathematician. He contributed to the modern principle of scientific investigation by continuing Galileo's practice of testing hypotheses against observation.",
+    "name": "Giovanni Alfonso Borelli",
+    "osfName": "Borelli, Giovanni",
+    "portrait": {
+      "above": "Giovanni Alfonso Borelli",
+      "img": {
+        "alt": "Giovanni Alfonso Borelli.jpg",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Giovanni_Alfonso_Borelli.jpg/220px-Giovanni_Alfonso_Borelli.jpg",
+        "decoding": "async",
+        "width": "220",
+        "height": "284",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Giovanni_Alfonso_Borelli.jpg/330px-Giovanni_Alfonso_Borelli.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/8/8d/Giovanni_Alfonso_Borelli.jpg 2x",
+        "data-file-width": "401",
+        "data-file-height": "517"
+      }
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "28 January 1608 Naples, Italy",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "31 December 1679 (aged 71) Rome, Italy",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Nationality",
+        "seq": 2,
+        "value": "Italian",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Fields",
+        "seq": 3,
+        "value": "Physiologist, physicist, mathematician",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Academic advisors",
+        "seq": 4,
+        "value": "Benedetto Castelli",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Notable students",
+        "seq": 5,
+        "value": "Marcello Malpighi",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "1005",
+    "sr": {
+      "ns": 0,
+      "title": "Giovanni Alfonso Borelli",
+      "pageid": 475100,
+      "size": 10106,
+      "wordcount": 1132,
+      "snippet": "<span class=\"searchmatch\">Giovanni</span> Alfonso <span class=\"searchmatch\">Borelli</span> (Italian pronunciation: [dʒoˈvanni alˈfɔnso <span class=\"searchmatch\">boˈrɛlli</span>]; 28 January <span class=\"searchmatch\">1608</span> – 31 December 1679) was a Renaissance Italian physiologist",
+      "timestamp": "2022-03-03T15:43:16Z"
+    }
+  },
+  {
+    "adultbasic": "Russia",
+    "adultregion": "R.SPete",
+    "yob": "1809",
+    "death": "1852-02-21T00:00:00.000Z",
+    "dob": "03-20",
+    "era": "1800+",
+    "id": "dddb5272-5d92-4452-9bd9-df4fc2a38b86",
+    "inventory": "Lit.West",
+    "knownFor": "a Russian novelist, short story writer and playwright of Ukrainian origin.",
+    "name": "Nikolai Gogol",
+    "osfName": "Gogol, Nikolay",
+    "portrait": {
+      "above": "Nikolai Gogol",
+      "img": {
+        "alt": "Daguerreotype of Gogol taken in 1845 by Sergei Lvovich Levitsky (1819–1898)",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/3/31/NV_Gogol.png/220px-NV_Gogol.png",
+        "decoding": "async",
+        "width": "220",
+        "height": "287",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/3/31/NV_Gogol.png 1.5x",
+        "data-file-width": "298",
+        "data-file-height": "389"
+      },
+      "caption": "Daguerreotype of Gogol taken in 1845 by Sergei Lvovich Levitsky (1819–1898)"
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "Nikolai Vasilievich Gogol-Yanovsky 20 March 1809  ( OS ) / 1 April 1809 ( NS ) Sorochyntsi, Poltava Governorate, Russian Empire",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "21 February 1852 (aged 42) Moscow, Russian Empire",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Resting place",
+        "seq": 2,
+        "value": "Novodevichy Cemetery",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Occupation",
+        "seq": 3,
+        "value": "Playwright, short story writer, novelist",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Language",
+        "seq": 4,
+        "value": "Russian",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Nationality",
+        "seq": 5,
+        "value": "Russian Empire",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Citizenship",
+        "seq": 6,
+        "value": "Russian Empire",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Period",
+        "seq": 7,
+        "value": "1840–51",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Notable works",
+        "seq": 8,
+        "value": "Evenings on a Farm Near Dikanka (1831–1832) Mirgorod (1835) The Government Inspector (1836) Petersburg Tales  (1833–1842) Dead Souls (1842)",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "11712",
+    "sr": {
+      "ns": 0,
+      "title": "Nikolai Gogol",
+      "pageid": 139177,
+      "size": 53607,
+      "wordcount": 5663,
+      "snippet": "Nikolai Vasilyevich <span class=\"searchmatch\">Gogol</span> (/ˈɡoʊɡəl, ˈɡoʊɡɔːl/; Russian: Никола́й Васи́льевич Го́голь, tr. <span class=\"searchmatch\">Nikolay</span> Vasil'yevich <span class=\"searchmatch\">Gogol</span>', IPA: [nʲɪkɐˈlaj vɐˈsʲilʲjɪvʲɪdʑ",
+      "timestamp": "2022-03-05T14:30:21Z"
+    }
+  },
+  {
+    "adultbasic": "Italy",
+    "adultregion": "I.Venet",
+    "yob": "1905",
+    "death": "1993-11-21T00:00:00.000Z",
+    "dob": "04-13",
+    "era": "1800+",
+    "id": "e3ef5524-6468-4eeb-83bc-5a683b9e9418",
+    "inventory": "Science",
+    "knownFor": "an Italian experimental physicist. He made major contributions to particle physics and the study of cosmic rays.",
+    "name": "Bruno Rossi",
+    "osfName": "Rossi, Bruno",
+    "portrait": {
+      "above": "Bruno Benedetto Rossi",
+      "img": {
+        "alt": "Bruno B Rossi.jpg",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Bruno_B_Rossi.jpg/220px-Bruno_B_Rossi.jpg",
+        "decoding": "async",
+        "width": "220",
+        "height": "244",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Bruno_B_Rossi.jpg/330px-Bruno_B_Rossi.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Bruno_B_Rossi.jpg/440px-Bruno_B_Rossi.jpg 2x",
+        "data-file-width": "1960",
+        "data-file-height": "2178"
+      }
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "13 April 1905 Venice, Italy",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "21 November 1993 (aged 88) Cambridge, Massachusetts, United States",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Nationality",
+        "seq": 2,
+        "value": "Italian",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Citizenship",
+        "seq": 3,
+        "value": "Italian, American (after 1943)",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Alma mater",
+        "seq": 4,
+        "value": "University of Bologna",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Spouse(s)",
+        "seq": 5,
+        "value": "Nora Lombroso",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Awards",
+        "seq": 6,
+        "value": "Elliott Cresson Medal (1974) National Medal of Science (1983) Wolf Prize in Physics (1987) Matteucci Medal (1991)",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Institutions",
+        "seq": 7,
+        "value": "University of Florence University of Padua University of Manchester University of Chicago Cornell University Massachusetts Institute of Technology",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Doctoral advisor",
+        "seq": 8,
+        "value": "Quirino Majorana",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Doctoral students",
+        "seq": 9,
+        "value": "Giuseppe Occhialini Kenneth Greisen Matthew Sands Bernard Gregory George W. Clark Yash Pal",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "7072",
+    "sr": {
+      "ns": 0,
+      "title": "Bruno Rossi",
+      "pageid": 520727,
+      "size": 105150,
+      "wordcount": 10714,
+      "snippet": "<span class=\"searchmatch\">Bruno</span> Benedetto <span class=\"searchmatch\">Rossi</span> (/ˈrɒsi/; Italian: [<span class=\"searchmatch\">ˈrossi</span>]; 13 April <span class=\"searchmatch\">1905</span> – 21 November 1993) was an Italian experimental physicist. He made major contributions",
+      "timestamp": "2022-02-02T06:11:58Z"
+    }
+  },
+  {
+    "adultbasic": "France",
+    "adultregion": "F.Isle",
+    "yob": "1910",
+    "death": "1976-05-31T00:00:00.000Z",
+    "dob": "02-09",
+    "era": "1800+",
+    "id": "e6bc5a5a-782b-4a9e-97be-6a0a4572350c",
+    "inventory": "Science",
+    "knownFor": "a French biochemist, discoveries concerning genetic control of enzyme and virus synthesis",
+    "name": "Jacques Monod",
+    "osfName": "Monod, Jacques",
+    "portrait": {
+      "above": "Jacques Monod",
+      "img": {
+        "alt": "Jacques Monod nobel.jpg",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/7/70/Jacques_Monod_nobel.jpg/220px-Jacques_Monod_nobel.jpg",
+        "decoding": "async",
+        "width": "220",
+        "height": "311",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/7/70/Jacques_Monod_nobel.jpg 1.5x",
+        "data-file-width": "280",
+        "data-file-height": "396"
+      }
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "Jacques Lucien Monod February 9, 1910 Paris, France",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "May 31, 1976 (aged 66) Cannes, France",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Nationality",
+        "seq": 2,
+        "value": "French",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Known for",
+        "seq": 3,
+        "value": "Lac operon Allosteric regulation",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Awards",
+        "seq": 4,
+        "value": "Nobel Prize in Physiology or Medicine (1965) Legion of Honour ForMemRS (1968) ",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Fields",
+        "seq": 5,
+        "value": "Biochemistry Genetics Molecular biology",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "5737",
+    "sr": {
+      "ns": 0,
+      "title": "Jacques Monod",
+      "pageid": 547527,
+      "size": 21665,
+      "wordcount": 2622,
+      "snippet": "<span class=\"searchmatch\">Jacques</span> Lucien <span class=\"searchmatch\">Monod</span> (February 9, <span class=\"searchmatch\">1910</span> – May 31, 1976) was a French biochemist who won the Nobel Prize in Physiology or Medicine in 1965, sharing it with",
+      "timestamp": "2022-03-02T04:22:33Z"
+    },
+    "nobel": {
+      "laureate": {
+        "id": "382",
+        "firstname": "Jacques",
+        "surname": "Monod",
+        "born": "1910-02-09",
+        "died": "1976-05-31",
+        "bornCountry": "France",
+        "bornCountryCode": "FR",
+        "bornCity": "Paris",
+        "diedCountry": "France",
+        "diedCountryCode": "FR",
+        "diedCity": "Cannes",
+        "gender": "male",
+        "prizes": [
+          {
+            "year": "1965",
+            "category": "medicine",
+            "share": "3",
+            "motivation": "\"for their discoveries concerning genetic control of enzyme and virus synthesis\"",
+            "affiliations": [
+              {
+                "name": "Institut Pasteur",
+                "city": "Paris",
+                "country": "France"
+              }
+            ],
+            "url": "nobel_prizes/medicine/laureates/1965/monod-facts.html",
+            "portrait": "tbd"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "adultbasic": "France",
+    "adultregion": "F.Isle",
+    "yob": "1803",
+    "death": "1870-09-23T00:00:00.000Z",
+    "dob": "09-28",
+    "era": "1800+",
+    "id": "e8b05a5a-8ed1-4cd7-ae11-622c5f2173c4",
+    "inventory": "Lit.West",
+    "knownFor": "a French writer in the movement of Romanticism, and one of the pioneers of the novella, a short novel or long short story",
+    "name": "Prosper Mérimée",
+    "osfName": "Merimee Prosper",
+    "portrait": {
+      "above": "Prosper Mérimée",
+      "img": {
+        "alt": "Prosper Mérimée.jpg",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/8/85/Prosper_M%C3%A9rim%C3%A9e.jpg/220px-Prosper_M%C3%A9rim%C3%A9e.jpg",
+        "decoding": "async",
+        "width": "220",
+        "height": "299",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/8/85/Prosper_M%C3%A9rim%C3%A9e.jpg 1.5x",
+        "data-file-width": "243",
+        "data-file-height": "330"
+      }
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "28 September 1803 Paris, France",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "23 September 1870 (aged 66) Cannes, France",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Literary movement",
+        "seq": 2,
+        "value": "Romanticism",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Notable works",
+        "seq": 3,
+        "value": "La Vénus d'Ille (1837) Carmen (1845)",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Parents",
+        "seq": 4,
+        "value": "Léonor Mérimée (father)",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Relatives",
+        "seq": 5,
+        "value": "Augustin-Jean Fresnel (cousin) Fulgence Fresnel (cousin) Jeanne-Marie Leprince de Beaumont (great-grandmother)",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "12759",
+    "sr": {
+      "ns": 0,
+      "title": "Prosper Mérimée",
+      "pageid": 161240,
+      "size": 65209,
+      "wordcount": 9241,
+      "snippet": "<span class=\"searchmatch\">Prosper</span> <span class=\"searchmatch\">Mérimée</span> (French: [meʁime]; 28 September <span class=\"searchmatch\">1803</span> – 23 September 1870) was a French writer in the movement of Romanticism, and one of the pioneers of",
+      "timestamp": "2022-03-03T16:21:07Z"
+    }
+  },
+  {
+    "adultbasic": "Britain",
+    "adultregion": "E.WMidl",
+    "yob": "1731",
+    "death": "1802-04-18T00:00:00.000Z",
+    "dob": "12-12",
+    "era": "1600-1800",
+    "id": "e9925f65-7a9b-405c-b837-c368c204a2b4",
+    "inventory": "Science",
+    "knownFor": "an English physician. One of the key thinkers of the Midlands Enlightenment",
+    "name": "Erasmus Darwin",
+    "osfName": "Darwin, Erasmus",
+    "portrait": {
+      "above": "Erasmus Darwin",
+      "img": {
+        "alt": "Portrait of Erasmus Darwin by Joseph Wright of Derby (1792).jpg",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/b/be/Portrait_of_Erasmus_Darwin_by_Joseph_Wright_of_Derby_%281792%29.jpg/220px-Portrait_of_Erasmus_Darwin_by_Joseph_Wright_of_Derby_%281792%29.jpg",
+        "decoding": "async",
+        "width": "220",
+        "height": "266",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/thumb/b/be/Portrait_of_Erasmus_Darwin_by_Joseph_Wright_of_Derby_%281792%29.jpg/330px-Portrait_of_Erasmus_Darwin_by_Joseph_Wright_of_Derby_%281792%29.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/be/Portrait_of_Erasmus_Darwin_by_Joseph_Wright_of_Derby_%281792%29.jpg/440px-Portrait_of_Erasmus_Darwin_by_Joseph_Wright_of_Derby_%281792%29.jpg 2x",
+        "data-file-width": "600",
+        "data-file-height": "725"
+      },
+      "caption": "Erasmus Darwin c. 1792–1793, oil painting by Joseph Wright of Derby, Derby Museum and Art Gallery"
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "Erasmus Robert Darwin 12 December 1731 Elston Hall, Elston, Nottinghamshire near Newark-on-Trent, England",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "18 April 1802 (aged 70) Breadsall, Derby, England",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Resting place",
+        "seq": 2,
+        "value": "All Saints Church, Breadsall",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Alma mater",
+        "seq": 3,
+        "value": "St John's College, Cambridge University of Edinburgh Medical School",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Children",
+        "seq": 4,
+        "value": "14",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Parent(s)",
+        "seq": 5,
+        "value": "Robert Darwin of Elston Elizabeth Hill",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Relatives",
+        "seq": 6,
+        "value": "See Darwin–Wedgwood family",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "2075",
+    "sr": {
+      "ns": 0,
+      "title": "Erasmus Darwin",
+      "pageid": 9299,
+      "size": 39203,
+      "wordcount": 4555,
+      "snippet": "<span class=\"searchmatch\">Erasmus</span> Robert <span class=\"searchmatch\">Darwin</span> FRS (12 December <span class=\"searchmatch\">1731</span> – 18 April 1802) was an English physician. One of the key thinkers of the Midlands Enlightenment, he was also",
+      "timestamp": "2022-02-07T10:04:28Z"
+    }
+  },
+  {
+    "adultbasic": "Russia",
+    "adultregion": "R.noinfo",
+    "yob": "1865",
+    "death": "1941-12-07T00:00:00.000Z",
+    "dob": "08-02",
+    "era": "1800+",
+    "id": "f0ea5995-3247-435c-9750-1d8fc0acdb7c",
+    "inventory": "Lit.West",
+    "knownFor": "a Russian novelist, poet, religious thinker, and literary critic. A seminal figure of the Silver Age of Russian Poetry, regarded as a co-founder of the Symbolist movement",
+    "name": "Dmitry Merezhkovsky",
+    "osfName": "Merezhkovski, Dmitri",
+    "portrait": {
+      "above": "Dmitry Merezhkovsky",
+      "img": {
+        "alt": "Merezhkovskiy in NNovgorod.jpg",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Merezhkovskiy_in_NNovgorod.jpg/250px-Merezhkovskiy_in_NNovgorod.jpg",
+        "decoding": "async",
+        "width": "250",
+        "height": "291",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Merezhkovskiy_in_NNovgorod.jpg/375px-Merezhkovskiy_in_NNovgorod.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Merezhkovskiy_in_NNovgorod.jpg/500px-Merezhkovskiy_in_NNovgorod.jpg 2x",
+        "data-file-width": "535",
+        "data-file-height": "622"
+      }
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "Dmitry Sergeyevich Merezhkovsky August 2, 1866 St Petersburg, Imperial Russia",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "December 7, 1941 (aged 75) Paris, Nazi-occupied France",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Occupation",
+        "seq": 2,
+        "value": "Poet writer literary critic",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Nationality",
+        "seq": 3,
+        "value": "Russian",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Alma mater",
+        "seq": 4,
+        "value": "Saint Petersburg State University",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Period",
+        "seq": 5,
+        "value": "1888–1941",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Genre",
+        "seq": 6,
+        "value": "Poetry, historical novel, philosophical essay",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Literary movement",
+        "seq": 7,
+        "value": "Russian symbolism",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Notable works",
+        "seq": 8,
+        "value": "Christ and Antichrist (trilogy)",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Spouse",
+        "seq": 9,
+        "value": "Zinaida Gippius",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Relatives",
+        "seq": 10,
+        "value": "Konstantin Mereschkowski",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "12758",
+    "sr": {
+      "ns": 0,
+      "title": "Dmitry Merezhkovsky",
+      "pageid": 2505476,
+      "size": 90092,
+      "wordcount": 11744,
+      "snippet": " Zobnin, p.40 &quot;The Biography of Dmitry Sergeevich Merezhkovsky&quot;. ww.<span class=\"searchmatch\">merezhkovski</span>.ru. Retrieved January 7, 2010. Shelokhonov, Steve. &quot;Zinaida Gippius biography&quot;",
+      "timestamp": "2022-02-26T06:52:24Z"
+    }
+  },
+  {
+    "adultbasic": "Italy",
+    "adultregion": "I.Lomba",
+    "yob": "1835",
+    "death": "1910-07-04T00:00:00.000Z",
+    "dob": "03-14",
+    "era": "1800+",
+    "id": "f17d5824-9ba7-4276-80fe-9aaa3414d353",
+    "inventory": "Science",
+    "knownFor": "an Italian astronomer and science historian.",
+    "name": "Giovanni Schiaparelli",
+    "osfName": "Schiaparelli, Giovanni",
+    "portrait": {
+      "above": "Giovanni Schiaparelli",
+      "img": {
+        "alt": "Giovanni Schiaparelli 1890s.jpg",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/0/04/Giovanni_Schiaparelli_1890s.jpg/180px-Giovanni_Schiaparelli_1890s.jpg",
+        "decoding": "async",
+        "width": "180",
+        "height": "240",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/thumb/0/04/Giovanni_Schiaparelli_1890s.jpg/270px-Giovanni_Schiaparelli_1890s.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/04/Giovanni_Schiaparelli_1890s.jpg/360px-Giovanni_Schiaparelli_1890s.jpg 2x",
+        "data-file-width": "669",
+        "data-file-height": "891"
+      },
+      "caption": "Giovanni Schiaparelli"
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "Giovanni Virginio Schiaparelli 14 March 1835 Savigliano, Kingdom of Sardinia ",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "4 July 1910 (aged 75) Milan, Italy",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Nationality",
+        "seq": 2,
+        "value": "Italian",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Fields",
+        "seq": 3,
+        "value": "Astronomy",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "7306",
+    "sr": {
+      "ns": 0,
+      "title": "Giovanni Schiaparelli",
+      "pageid": 145129,
+      "size": 13323,
+      "wordcount": 1127,
+      "snippet": "<span class=\"searchmatch\">Giovanni</span> Virginio <span class=\"searchmatch\">Schiaparelli</span> ForMemRS HFRSE (/ˌskæpəˈrɛli, ˌʃæp-/ SKAP-ə-REL-ee, SHAP-, also US: /skiˌɑːp-/ skee-AHP-, Italian: [dʒoˈvanni virˈdʒiːnjo",
+      "timestamp": "2022-01-20T16:59:37Z"
+    }
+  },
+  {
+    "adultbasic": "Germany",
+    "adultregion": "G.Saxon",
+    "yob": "1901",
+    "death": "1976-02-01T00:00:00.000Z",
+    "dob": "12-05",
+    "era": "1800+",
+    "id": "f61b5979-e5e4-42aa-a042-7bf7df5431da",
+    "inventory": "Science",
+    "knownFor": "a German theoretical physicist and one of the main pioneers of the theory of quantum mechanics. ",
+    "name": "Werner Heisenberg",
+    "osfName": "Heisenberg",
+    "portrait": {
+      "above": "Werner Heisenberg",
+      "img": {
+        "alt": "Bundesarchiv Bild183-R57262, Werner Heisenberg.jpg",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Bundesarchiv_Bild183-R57262%2C_Werner_Heisenberg.jpg/220px-Bundesarchiv_Bild183-R57262%2C_Werner_Heisenberg.jpg",
+        "decoding": "async",
+        "width": "220",
+        "height": "349",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Bundesarchiv_Bild183-R57262%2C_Werner_Heisenberg.jpg/330px-Bundesarchiv_Bild183-R57262%2C_Werner_Heisenberg.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Bundesarchiv_Bild183-R57262%2C_Werner_Heisenberg.jpg/440px-Bundesarchiv_Bild183-R57262%2C_Werner_Heisenberg.jpg 2x",
+        "data-file-width": "497",
+        "data-file-height": "789"
+      },
+      "caption": "Heisenberg in 1933"
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "Werner Karl Heisenberg 5 December 1901 Würzburg, Kingdom of Bavaria, German Empire",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "1 February 1976 (aged 74) Munich, Bavaria, West Germany",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Resting place",
+        "seq": 2,
+        "value": "Munich Waldfriedhof",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Alma mater",
+        "seq": 3,
+        "value": "University of Munich University of Göttingen",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Known for",
+        "seq": 4,
+        "value": "Uncertainty principle Copenhagen interpretation Heisenberg cut Heisenberg's entryway to matrix mechanics Heisenberg ferromagnet Heisenberg group Heisenberg limit Heisenberg's microscope Heisenberg model",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Spouse(s)",
+        "seq": 5,
+        "value": "Elisabeth Schumacher ​ ​ ( m. 1937 ) ​",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Children",
+        "seq": 6,
+        "value": "7 (incl. Jochen and Martin )",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Awards",
+        "seq": 7,
+        "value": "Matteucci Medal (1929) Barnard Medal for Meritorious Service to Science (1930) Nobel Prize in Physics (1932) Max Planck Medal (1933) Foreign Member of the Royal Society (1955)  Foreign Associate of the",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Fields",
+        "seq": 8,
+        "value": "Theoretical physics",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Institutions",
+        "seq": 9,
+        "value": "University of Göttingen University of Copenhagen University of Leipzig University of Berlin University of Munich",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Thesis",
+        "seq": 10,
+        "value": "Über Stabilität und Turbulenz von Flüssigkeitsströmen (On stability and turbulence of liquid flows) (1923)",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Doctoral advisor",
+        "seq": 11,
+        "value": "Arnold Sommerfeld",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Other academic advisors",
+        "seq": 12,
+        "value": "Niels Bohr Max Born",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Doctoral students",
+        "seq": 13,
+        "value": "Felix Bloch Edward Teller Rudolf E. Peierls Reinhard Oehme Friedwardt Winterberg Șerban Țițeica Ivan Supek Erich Bagge Hermann Arthur Jahn Hans Heinrich Euler",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Other notable students",
+        "seq": 14,
+        "value": "William Vermillion Houston Guido Beck Ugo Fano Ettore Majorana Herbert Wagner",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Influenced",
+        "seq": 15,
+        "value": "Robert Döpel Carl Friedrich von Weizsäcker",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "3695",
+    "sr": {
+      "ns": 0,
+      "title": "Werner Heisenberg",
+      "pageid": 33130,
+      "size": 118658,
+      "wordcount": 12939,
+      "snippet": "Werner Karl <span class=\"searchmatch\">Heisenberg</span> (pronounced [ˈvɛʁnɐ kaʁl ˈhaɪ̯zn̩ˌbɛʁk] (listen)) (Würzburg, Kingdom of Bavaria, German Empire; 5 December <span class=\"searchmatch\">1901</span> – Munich, Bavaria",
+      "timestamp": "2022-02-26T18:07:52Z"
+    },
+    "nobel": {
+      "laureate": {
+        "id": "38",
+        "firstname": "Werner",
+        "surname": "Heisenberg",
+        "born": "1901-12-05",
+        "died": "1976-02-01",
+        "bornCountry": "Germany",
+        "bornCountryCode": "DE",
+        "bornCity": "Würzburg",
+        "diedCountry": "West Germany (now Germany)",
+        "diedCountryCode": "DE",
+        "diedCity": "Munich",
+        "gender": "male",
+        "prizes": [
+          {
+            "year": "1932",
+            "category": "physics",
+            "share": "1",
+            "motivation": "\"for the creation of quantum mechanics, the application of which has, inter alia, led to the discovery of the allotropic forms of hydrogen\"",
+            "affiliations": [
+              {
+                "name": "Leipzig University",
+                "city": "Leipzig",
+                "country": "Germany"
+              }
+            ],
+            "url": "nobel_prizes/physics/laureates/1932/heisenberg-facts.html",
+            "portrait": "tbd"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "adultbasic": "Germany",
+    "adultregion": "G.Baden",
+    "yob": "1838",
+    "death": "1904-10-08T00:00:00.000Z",
+    "dob": "12-26",
+    "era": "1800+",
+    "id": "f6355ab5-1b70-4e4f-8c03-5705a28f6444",
+    "inventory": "Science",
+    "knownFor": "a German chemist who discovered the element germanium in 1886, solidifying Dmitri Mendeleev's theory of periodicity.",
+    "name": "Clemens Winkler",
+    "osfName": "Winkler, Clemens",
+    "portrait": {
+      "above": "Clemens Alexander Winkler",
+      "img": {
+        "alt": "Winkler Clemens.jpg",
+        "src": "//upload.wikimedia.org/wikipedia/commons/9/9d/Winkler_Clemens.jpg",
+        "decoding": "async",
+        "width": "189",
+        "height": "259",
+        "data-file-width": "189",
+        "data-file-height": "259"
+      },
+      "caption": "Clemens Alexander Winkler"
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "December 26, 1838 Freiberg, Kingdom of Saxony",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "October 8, 1904 (aged 65) Dresden, Germany",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Alma mater",
+        "seq": 2,
+        "value": "Freiberg University of Mining and Technology 1859, University of Leipzig 1864",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Institutions",
+        "seq": 3,
+        "value": "Blaufarbenwerk Niederpfannenstiel, Freiberg University of Mining and Technology",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "8913",
+    "sr": {
+      "ns": 0,
+      "title": "Clemens Winkler",
+      "pageid": 1205892,
+      "size": 8495,
+      "wordcount": 816,
+      "snippet": "<span class=\"searchmatch\">Clemens</span> Alexander <span class=\"searchmatch\">Winkler</span> (December 26, <span class=\"searchmatch\">1838</span> – October 8, 1904) was a German chemist who discovered the element germanium in 1886, solidifying Dmitri Mendeleev's",
+      "timestamp": "2021-12-26T02:07:07Z"
+    }
+  },
+  {
+    "adultbasic": "Britain",
+    "adultregion": "E.SE",
+    "yob": "1828",
+    "death": "1882-04-09T00:00:00.000Z",
+    "dob": "05-12",
+    "era": "1800+",
+    "id": "f6755970-13e0-4a8a-8b00-f3bd3d166e55",
+    "inventory": ["Art.West", "Lit.West"],
+    "knownFor": "an English poet, illustrator, painter, and translator",
+    "name": "Dante Gabriel Rossetti",
+    "osfName": "Rossetti, Dante Gabriel",
+    "portrait": {
+      "above": "Dante Gabriel Rossetti",
+      "img": {
+        "alt": "Portrait of Dante Gabriel Rossetti c. 1871, by George Frederic Watts",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/6/67/Dante_Gabriel_Rossetti_by_George_Frederic_Watts.jpg/220px-Dante_Gabriel_Rossetti_by_George_Frederic_Watts.jpg",
+        "decoding": "async",
+        "width": "220",
+        "height": "271",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/thumb/6/67/Dante_Gabriel_Rossetti_by_George_Frederic_Watts.jpg/330px-Dante_Gabriel_Rossetti_by_George_Frederic_Watts.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/67/Dante_Gabriel_Rossetti_by_George_Frederic_Watts.jpg/440px-Dante_Gabriel_Rossetti_by_George_Frederic_Watts.jpg 2x",
+        "data-file-width": "2400",
+        "data-file-height": "2957"
+      },
+      "caption": "Portrait of Dante Gabriel Rossetti c. 1871, by George Frederic Watts"
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "Gabriel Charles Dante Rossetti 12 May 1828 London, England",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "9 April 1882 (aged 53) Birchington-on-Sea, Kent, England",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Occupation",
+        "seq": 2,
+        "value": "Poet, illustrator, painter",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Education",
+        "seq": 3,
+        "value": "King's College School Royal Academy",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Spouse",
+        "seq": 4,
+        "value": "Elizabeth Siddal ​ ​ ( m. 1860; d. 1862) ​",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "13472",
+    "sr": {
+      "ns": 0,
+      "title": "Dante Gabriel Rossetti",
+      "pageid": 149882,
+      "size": 53363,
+      "wordcount": 6091,
+      "snippet": "<span class=\"searchmatch\">Gabriel</span> Charles <span class=\"searchmatch\">Dante</span> <span class=\"searchmatch\">Rossetti</span> (12 May <span class=\"searchmatch\">1828</span> – 9 April 1882), generally known as <span class=\"searchmatch\">Dante</span> <span class=\"searchmatch\">Gabriel</span> <span class=\"searchmatch\">Rossetti</span> (/rəˈzɛti/), was an English poet, illustrator, painter",
+      "timestamp": "2022-02-22T16:25:31Z"
+    }
+  },
+  {
+    "adultbasic": "France",
+    "adultregion": "F.Isle",
+    "yob": "1844",
+    "death": "1924-10-12T00:00:00.000Z",
+    "dob": "04-16",
+    "era": "1800+",
+    "id": "f930558d-9db3-4f81-af95-e9a7ef330b9c",
+    "inventory": "Lit.West",
+    "knownFor": "a French poet, journalist, and novelist with several best-sellers. Ironic and skeptical, he was considered in his day the ideal French man of letters",
+    "name": "Anatole France",
+    "osfName": "France, Anatole",
+    "portrait": {
+      "above": "Anatole France",
+      "img": {
+        "alt": "Anatole France young years.jpg",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Anatole_France_young_years.jpg/220px-Anatole_France_young_years.jpg",
+        "decoding": "async",
+        "width": "220",
+        "height": "292",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Anatole_France_young_years.jpg/330px-Anatole_France_young_years.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/c/c1/Anatole_France_young_years.jpg 2x",
+        "data-file-width": "403",
+        "data-file-height": "534"
+      }
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "François-Anatole Thibault 16 April 1844 Paris, Kingdom of France",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "12 October 1924 (aged 80) Tours, French Third Republic",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Occupation",
+        "seq": 2,
+        "value": "Novelist",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Notable awards",
+        "seq": 3,
+        "value": "Nobel Prize in Literature 1921",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "11563",
+    "sr": {
+      "ns": 0,
+      "title": "Anatole France",
+      "pageid": 1057,
+      "size": 14435,
+      "wordcount": 1484,
+      "snippet": "<span class=\"searchmatch\">Anatole</span> <span class=\"searchmatch\">France</span> (<span class=\"searchmatch\">French</span>: [anatɔl fʁɑ̃s]; born François-<span class=\"searchmatch\">Anatole</span> Thibault, [frɑ̃swa anatɔl tibo]; 16 April <span class=\"searchmatch\">1844</span> – 12 October 1924) was a <span class=\"searchmatch\">French</span> poet, journalist",
+      "timestamp": "2022-01-07T06:53:40Z"
+    },
+    "nobel": {
+      "laureate": {
+        "id": "590",
+        "firstname": "Anatole",
+        "surname": "France",
+        "born": "1844-04-16",
+        "died": "1924-10-12",
+        "bornCountry": "France",
+        "bornCountryCode": "FR",
+        "bornCity": "Paris",
+        "diedCountry": "France",
+        "diedCountryCode": "FR",
+        "diedCity": "Saint-Cyr-sur-Loire",
+        "gender": "male",
+        "prizes": [
+          {
+            "year": "1921",
+            "category": "literature",
+            "share": "1",
+            "motivation": "\"in recognition of his brilliant literary achievements, characterized as they are by a nobility of style, a profound human sympathy, grace, and a true Gallic temperament\"",
+            "affiliations": [[]],
+            "url": "nobel_prizes/literature/laureates/1921/france-facts.html",
+            "portrait": "tbd"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "adultbasic": "France",
+    "adultregion": "F.Rhone",
+    "yob": "1741",
+    "death": "1803-09-05T00:00:00.000Z",
+    "dob": "10-18",
+    "era": "1600-1800",
+    "id": "fcad5355-380b-4ebe-b690-1aa575cbcd41",
+    "inventory": "Lit.West",
+    "knownFor": "a French novelist, official, Freemason and army general, best known for writing the epistolary novel Les Liaisons dangereuses (Dangerous Liaisons) (1782)",
+    "name": "Pierre Choderlos de Laclos",
+    "osfName": "Laclos, Pierre de",
+    "portrait": {
+      "above": "Pierre Choderlos de Laclos",
+      "img": {
+        "alt": "Portrait attributed to Alexander Kucharsky",
+        "src": "//upload.wikimedia.org/wikipedia/commons/9/9a/Laclos.jpg",
+        "decoding": "async",
+        "width": "170",
+        "height": "208",
+        "data-file-width": "170",
+        "data-file-height": "208"
+      },
+      "caption": "Portrait attributed to Alexander Kucharsky"
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "Pierre Ambroise François Choderlos de Laclos 18 October 1741 Amiens, Picardy, Kingdom of France",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "5 September 1803 (aged 61) Taranto, Kingdom of the Two Sicilies",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Occupation",
+        "seq": 2,
+        "value": "Writer, official and army general",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Nationality",
+        "seq": 3,
+        "value": "French",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "12402",
+    "sr": {
+      "ns": 0,
+      "title": "Pierre Choderlos de Laclos",
+      "pageid": 263306,
+      "size": 9540,
+      "wordcount": 1129,
+      "snippet": "<span class=\"searchmatch\">Pierre</span> Ambroise François Choderlos <span class=\"searchmatch\">de</span> <span class=\"searchmatch\">Laclos</span> (French: [pjɛʁ ɑ̃bʁwaz fʁɑ̃swa ʃɔdɛʁlo də laklo]; 18 October <span class=\"searchmatch\">1741</span> – 5 September 1803) was a French novelist",
+      "timestamp": "2022-01-26T10:40:27Z"
+    }
+  },
+  {
+    "adultbasic": "Netherlands",
+    "adultregion": "Netherlands",
+    "yob": "1587",
+    "death": "1679-02-05T00:00:00.000Z",
+    "dob": "11-17",
+    "era": "1600-1800",
+    "id": "fe4f5da6-94aa-4ea9-b7a5-0bd2a69b6672",
+    "inventory": "Lit.West",
+    "knownFor": "a Dutch poet, writer and playwright. He is considered the greatest poet and playwright of the 17th century Dutch Golden Age",
+    "name": "Joost van den Vondel",
+    "osfName": "Vondel, Joost van den",
+    "portrait": {
+      "above": "Joost van den Vondel",
+      "img": {
+        "alt": "Vondel in 1665",
+        "src": "//upload.wikimedia.org/wikipedia/commons/thumb/7/72/J_vondel.jpg/220px-J_vondel.jpg",
+        "decoding": "async",
+        "width": "220",
+        "height": "257",
+        "srcset": "//upload.wikimedia.org/wikipedia/commons/thumb/7/72/J_vondel.jpg/330px-J_vondel.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/72/J_vondel.jpg/440px-J_vondel.jpg 2x",
+        "data-file-width": "806",
+        "data-file-height": "943"
+      },
+      "caption": "Vondel in 1665"
+    },
+    "props": [
+      {
+        "name": "Born",
+        "seq": 0,
+        "value": "17 November 1587 Cologne, Holy Roman Empire",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Died",
+        "seq": 1,
+        "value": "5 February 1679 (aged 91) Amsterdam, Dutch Republic",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Occupation",
+        "seq": 2,
+        "value": "Writer, playwright",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Period",
+        "seq": 3,
+        "value": "Dutch Golden Age",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Spouse",
+        "seq": 4,
+        "value": "Mayken de Wolff",
+        "source": "wikimedia"
+      },
+      {
+        "name": "Children",
+        "seq": 5,
+        "value": "4",
+        "source": "wikimedia"
+      }
+    ],
+    "serial": "14239",
+    "sr": {
+      "ns": 0,
+      "title": "Joost van den Vondel",
+      "pageid": 573710,
+      "size": 11753,
+      "wordcount": 1305,
+      "snippet": "<span class=\"searchmatch\">Joost</span> <span class=\"searchmatch\">van</span> <span class=\"searchmatch\">den</span> <span class=\"searchmatch\">Vondel</span> (Dutch: [ˈjoːst fɑn dəɱ ˈvɔndəl]; 17 November <span class=\"searchmatch\">1587</span> – 5 February 1679) was a Dutch poet, writer and playwright. He is considered the",
+      "timestamp": "2021-11-19T05:45:06Z"
+    }
+  }
+]
