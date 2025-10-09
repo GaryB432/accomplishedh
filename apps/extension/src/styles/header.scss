@@ -1,0 +1,64 @@
+section.top {
+  display: flex;
+  padding: 0.25rem;
+  height: var(--header-height);
+  gap: 0.2rem;
+  background-color: var(--primary-color);
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+  color: white;
+  .right {
+    align-items: flex-end;
+    font-size: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+.art {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: flex-start;
+}
+.art svg {
+  fill: currentColor;
+}
+#logo {
+  height: 5rem;
+  color: var(--secondary-color);
+}
+
+.art .ha {
+  display: flex;
+  gap: 0.3rem;
+  flex-direction: column;
+  align-items: center;
+  width: 8rem;
+  svg {
+    height: unset;
+  }
+}
+
+.social {
+  padding: 0.2rem 0 0 0.5rem;
+  display: flex;
+  font-size: 16px;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: transparent;
+  color: white;
+  div {
+    svg {
+      cursor: pointer;
+      fill: currentColor;
+      height: 31px;
+      g {
+        transform: scale(0.6) translate(30%, 30%);
+        fill: var(--primary-color);
+      }
+    }
+  }
+}

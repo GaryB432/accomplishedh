@@ -1,0 +1,36 @@
+{
+  "name": "@accomplishedh/extension",
+  "version": "6.0.0",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "private": true,
+  "scripts": {
+    "build": "webpack --env production",
+    "lint": "eslint .",
+    "//test": "jest",
+    "//dev": "webpack serve",
+    "//watch": "webpack --watch",
+    "zip": "node ./scripts/zip.mjs dist",
+    "xxprebuild": "npm run format",
+    "xxpretest": "npm run lint",
+    "xxwebpack-prod": "npm run pretest && npm run test-ci && webpack --env production",
+    "xxtest-ci": "jest --ci --coverage"
+  },
+  "dependencies": {
+    "@accomplishedh/shared": "workspace:^",
+    "@accomplishedh/web-ui": "workspace:^"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.27.0",
+    "@types/chrome": "^0.1.17",
+    "copy-webpack-plugin": "^13.0.1",
+    "css-loader": "^7.1.2",
+    "html-webpack-plugin": "^5.6.4",
+    "mini-css-extract-plugin": "^2.9.4",
+    "sass": "^1.93.2",
+    "sass-loader": "^16.0.5",
+    "ts-loader": "^9.5.4",
+    "webpack": "^5.102.0",
+    "webpack-cli": "^6.0.1"
+  }
+}
