@@ -1,0 +1,19 @@
+{
+  "name": "@accomplishedh/wikibase",
+  "version": "6.0.0",
+  "private": true,
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc --build",
+    "lint": "eslint .",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@accomplishedh/shared": "workspace:^",
+    "axios": "^1.9.0"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "size": 2309396,
+  "width": 3250,
+  "height": 4333,
+  "thumburl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Albert_Einstein_Head.jpg/330px-Albert_Einstein_Head.jpg",
+  "thumbwidth": 330,
+  "thumbheight": 440,
+  "responsiveUrls": {
+    "1.5": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Albert_Einstein_Head.jpg/500px-Albert_Einstein_Head.jpg",
+    "2": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Albert_Einstein_Head.jpg/960px-Albert_Einstein_Head.jpg"
+  },
+  "url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Albert_Einstein_Head.jpg",
+  "descriptionurl": "https://commons.wikimedia.org/wiki/File:Albert_Einstein_Head.jpg",
+  "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=925243",
+  "metadata": [{ "name": "MEDIAWIKI_EXIF_VERSION", "value": 1 }],
+  "extmetadata": "TBD",
+  "mime": "image/jpeg"
+}

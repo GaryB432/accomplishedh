@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": [
+    "@tsconfig/node20/tsconfig.json",
+    "@tsconfig/strictest/tsconfig.json"
+  ],
+  "compilerOptions": {
+    "composite": true,
+    "noUnusedLocals": false,
+    "lib": ["es2023"],
+    "outDir": "dist",
+    "rootDir": "src",
+    "resolveJsonModule": true,
+    "declaration": true
+  },
+  "references": [
+    {
+      "path": "../shared"
+    }
+  ],
+  "exclude": ["**/*.spec.ts", "dist", "**/vite.config.ts"],
+  "include": ["**/*.ts"]
+}

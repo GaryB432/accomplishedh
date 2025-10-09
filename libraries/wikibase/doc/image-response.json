@@ -1,0 +1,20 @@
+{
+  "continue": { "iistart": "2008-06-06T22:27:45Z", "continue": "||" },
+  "query": {
+    "normalized": [
+      {
+        "from": "File:Albert_Einstein_Head.jpg",
+        "to": "File:Albert Einstein Head.jpg"
+      }
+    ],
+    "pages": {
+      "PAGE_ID_QUOTED_NUMBER": {
+        "pageid": 925243,
+        "ns": 6,
+        "title": "File:Albert Einstein Head.jpg",
+        "imagerepository": "local",
+        "imageinfo": ["TBD"]
+      }
+    }
+  }
+}
