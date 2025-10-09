@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+env:
+  VERCEL_GIT_COMMIT_REF: TBD
+  VERCEL_GIT_COMMIT_SHA: TBD
+  VERCEL_GIT_COMMIT_MESSAGE: TBD
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: true
+      - name: Lint
+        run: pnpm --recursive --if-present lint
+      - name: Build
+        run: pnpm --recursive --if-present build
+      - name: Test
+        run: pnpm --recursive --if-present --use-stderr  test
