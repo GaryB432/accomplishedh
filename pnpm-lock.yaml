@@ -109,14 +109,8 @@ importers:
         specifier: ^9.27.0
         version: 9.37.0
       '@types/chrome':
-        specifier: ^0.1.17
-        version: 0.1.22
-      adm-zip:
-        specifier: ^0.5.16
-        version: 0.5.16
-      ajv:
-        specifier: ^8.17.1
-        version: 8.17.1
+        specifier: ^0.1.24
+        version: 0.1.24
       copy-webpack-plugin:
         specifier: ^13.0.1
         version: 13.0.1(webpack@5.102.0)
@@ -990,8 +984,8 @@ packages:
   '@types/chai@5.2.2':
     resolution: {integrity: sha512-8kB30R7Hwqf40JPiKhVzodJs2Qc1ZJ5zuT3uzw5Hq/dhNCl3G3l83jfpdI1e20BP348+fV7VIL/+FxaXkqBmWg==}
 
-  '@types/chrome@0.1.22':
-    resolution: {integrity: sha512-5uXbw/3V+Pdu9BaoTvudvutITxeIiC0CK5WhQr8lzEhAQ70lTpe5ebnoai9iQrqWjhIa3qynYhKV0NN0MKv4qA==}
+  '@types/chrome@0.1.24':
+    resolution: {integrity: sha512-9iO9HL2bMeGS4C8m6gNFWUyuPE5HEUFk+rGh+7oriUjg+ata4Fc9PoVlu8xvGm7yoo3AmS3J6fAjoFj61NL2rw==}
 
   '@types/connect-history-api-fallback@1.5.4':
     resolution: {integrity: sha512-n6Cr2xS1h4uAulPRdlw6Jl6s1oG8KrVilPN2yUITEs+K48EzMJJ3W1xy8K5eWuFvjp3R74AOIGSmp2UfBJ8HFw==}
@@ -4525,7 +4519,7 @@ snapshots:
     dependencies:
       '@types/deep-eql': 4.0.2
 
-  '@types/chrome@0.1.22':
+  '@types/chrome@0.1.24':
     dependencies:
       '@types/filesystem': 0.0.36
       '@types/har-format': 1.2.16
