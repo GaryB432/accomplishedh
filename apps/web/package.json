@@ -18,7 +18,7 @@
     "@sveltejs/adapter-vercel": "^5.10.2",
     "@sveltejs/kit": "^2.43.4",
     "@sveltejs/vite-plugin-svelte": "^6.0.0",
-    "svelte": "^5.0.0",
+    "svelte": "^5.39.12",
     "svelte-check": "^4.3.3",
     "vitest-browser-svelte": "^1.1.0"
   },
