@@ -109,8 +109,8 @@ importers:
         specifier: ^9.27.0
         version: 9.37.0
       '@types/chrome':
-        specifier: ^0.1.17
-        version: 0.1.22
+        specifier: ^0.1.24
+        version: 0.1.24
       copy-webpack-plugin:
         specifier: ^13.0.1
         version: 13.0.1(webpack@5.102.0)
@@ -927,8 +927,8 @@ packages:
   '@types/chai@5.2.2':
     resolution: {integrity: sha512-8kB30R7Hwqf40JPiKhVzodJs2Qc1ZJ5zuT3uzw5Hq/dhNCl3G3l83jfpdI1e20BP348+fV7VIL/+FxaXkqBmWg==}
 
-  '@types/chrome@0.1.22':
-    resolution: {integrity: sha512-5uXbw/3V+Pdu9BaoTvudvutITxeIiC0CK5WhQr8lzEhAQ70lTpe5ebnoai9iQrqWjhIa3qynYhKV0NN0MKv4qA==}
+  '@types/chrome@0.1.24':
+    resolution: {integrity: sha512-9iO9HL2bMeGS4C8m6gNFWUyuPE5HEUFk+rGh+7oriUjg+ata4Fc9PoVlu8xvGm7yoo3AmS3J6fAjoFj61NL2rw==}
 
   '@types/cookie@0.6.0':
     resolution: {integrity: sha512-4Kh9a6B2bQciAhf7FSuMRRkUWecJgJu9nPnx3yzpsfXX/c50REIqpHY4C82bXP90qrLtXtkDxTZosYO3UpOwlA==}
@@ -3537,7 +3537,7 @@ snapshots:
     dependencies:
       '@types/deep-eql': 4.0.2
 
-  '@types/chrome@0.1.22':
+  '@types/chrome@0.1.24':
     dependencies:
       '@types/filesystem': 0.0.36
       '@types/har-format': 1.2.16
