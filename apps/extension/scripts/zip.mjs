@@ -1,14 +1,16 @@
 import * as AdmZip from "adm-zip";
 import { existsSync, readFileSync } from "node:fs";
-import { dirname, join, normalize } from "node:path/posix";
+import { dirname, join, normalize } from "node:path";
 import { getParts, schemaValidate } from "./manifest/index.mjs";
 
-const cwd = "/home/gary/repos/human-accomplishment/apps/extension";
+const extensionRoot = normalize(join(import.meta.dirname, "../"));
+
+console.log(extensionRoot, import.meta.dirname, "asdf");
 
 let success = false;
 
 const [arg2] = process.argv.slice(2);
-const distPath = normalize(join(cwd, arg2));
+const distPath = normalize(join(extensionRoot, arg2));
 
 const context = {
   isVerbose: true,
@@ -17,7 +19,7 @@ const context = {
 
 const options = {
   outputFileName: join(
-    cwd,
+    extensionRoot,
     `zip/human-accomplishment.extension.{manifestVersion}.zip`,
   ),
 
@@ -56,7 +58,6 @@ if (sv.manifest.manifest_version === 3) {
     }
   }
 
-  const bodyLines = [];
   const zip = new AdmZip.default();
 
   zip.addLocalFolder(buildTarget.options.outputPath);
@@ -68,7 +69,6 @@ if (sv.manifest.manifest_version === 3) {
   });
 
   console.warn(`git tag -a v${sv.manifest.version} -m "${dirname(zipName)}"`);
-  console.log(bodyLines);
   success = true;
 }
 console.log(success);
