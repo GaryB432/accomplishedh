@@ -25,26 +25,24 @@ The project makes use of many open source packages
 <!-- prettier-ignore -->
 | Package | Functions |
 | --- | --- |
-| [`@google.visualization`](https:://www.npmjs.com/package/@google.visualization) | Further information about the features of @google.visualization |
-| [`@sveltejs/adapter-vercel`](https:://www.npmjs.com/package/@sveltejs/adapter-vercel) | Further information about the features of @sveltejs/adapter-vercel |
-| [`@inquirer/prompts`](https:://www.npmjs.com/package/@inquirer/prompts) | Further information about the features of @inquirer/prompts |
-| [`@sveltejs/kit`](https:://www.npmjs.com/package/@sveltejs/kit) | Further information about the features of @sveltejs/kit |
-| [`adm-zip`](https:://www.npmjs.com/package/adm-zip) | Further information about the features of adm-zip |
-| [`admzip`](https:://www.npmjs.com/package/admzip) | Further information about the features of admzip |
-| [`ajv`](https:://www.npmjs.com/package/ajv) | Further information about the features of ajv |
-| [`cac`](https:://www.npmjs.com/package/cac) | Further information about the features of cac |
-| [`cli-progress`](https:://www.npmjs.com/package/cli-progress) | Further information about the features of cli-progress |
-| [`clipboardy`](https:://www.npmjs.com/package/clipboardy) | Further information about the features of clipboardy |
-| [`cryto-js`](https:://www.npmjs.com/package/cryto-js) | Further information about the features of cryto-js |
-| [`eslint`](https:://www.npmjs.com/package/eslint) | Further information about the features of eslint |
-| [`eslint-plugin-gb`](https:://www.npmjs.com/package/eslint-plugin-gb) | Further information about the features of eslint-plugin-gb |
-| [`picocolors`](https:://www.npmjs.com/package/picocolors) | Further information about the features of picocolors |
-| [`sass`](https:://www.npmjs.com/package/sass) | Further information about the features of sass |
-| [`typescript`](https:://www.npmjs.com/package/typescript) | Further information about the features of typescript |
-| [`vite`](https:://www.npmjs.com/package/vite) | Further information about the features of vite |
-| [`vitest`](https:://www.npmjs.com/package/vitest) | Further information about the features of vitest |
-| [`webpack`](https:://www.npmjs.com/package/webpack) | Further information about the features of webpack |
-| [`xml`](https:://www.npmjs.com/package/xml) | Further information about the features of xml |
+| [`@google.visualization`](https://www.npmjs.com/package/@google.visualization) | Charts and Graphs for `web`'s administrative routes |
+| [`@sveltejs/adapter-vercel`](https://www.npmjs.com/package/@sveltejs/adapter-vercel) | Special builds of `web` for the vercel environment |
+| [`@inquirer/prompts`](https://www.npmjs.com/package/@inquirer/prompts) | Interactive prompts for `cli` |
+| [`@sveltejs/kit`](https://www.npmjs.com/package/@sveltejs/kit) | Framewrok and ops for `web` |
+| [`adm-zip`](https://www.npmjs.com/package/adm-zip) | Compresses `extension` for distribution to platform stores |
+| [`ajv`](https://www.npmjs.com/package/ajv) | JSON schema validation for `extension` |
+| [`cac`](https://www.npmjs.com/package/cac) | Command-line framework and help-generation for `cli` |
+| [`cli-progress`](https://www.npmjs.com/package/cli-progress) | A progress indicator for `cli` |
+| [`clipboardy`](https://www.npmjs.com/package/clipboardy) | Copies to the system clipboard for e.g., social-media posting |
+| [`crypto-js`](https://www.npmjs.com/package/crypto-js) | Basic cryptographic functions e.g., `SHA256` |
+| [`eslint`](https://www.npmjs.com/package/eslint) | Enforces code style and consistency throughout |
+| [`eslint-plugin-gb`](https://www.npmjs.com/package/eslint-plugin-gb) | My favorite rules for style and consistency |
+| [`picocolors`](https://www.npmjs.com/package/picocolors) | Terminal colors for `cli` |
+| [`typescript`](https://www.npmjs.com/package/typescript) | Type-safe javascript throughout |
+| [`vite`](https://www.npmjs.com/package/vite) | Bundles all packages except for `extension` |
+| [`vitest`](https://www.npmjs.com/package/vitest) | Unit testing throughout |
+| [`webpack`](https://www.npmjs.com/package/webpack) | Bundles `extension` for compression and posting |
+| [`xml`](https://www.npmjs.com/package/xml) | Handles xml aspects for content syndication for `web` |
 
 ## Gratuitous Graph
 
