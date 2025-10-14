@@ -4,6 +4,7 @@
 **/vite.config.ts.timestamp*
 **/.svelte-kit/
 **/.vercel/
+apps/extension/zip/
 apps/web/test-results/
 apps/web/playwright-report/
 node_modules/
