@@ -25,7 +25,6 @@ console.log(banner.join("\n"));
 
 export class FeDataSvc {
   private digestedHumans: Record<string, WikiHuman>;
-  private readonly logger = new Logger();
   private readonly shardPathsDone = new SvelteSet();
   private readonly top = {
     guidsBySerial: {} as Record<string, string>,
@@ -34,21 +33,23 @@ export class FeDataSvc {
 
   private constructor(
     private fetch: (
-      input: string | URL | globalThis.Request,
+      input: string | URL | globalThis.Request
     ) => Promise<globalThis.Response>,
-    private rootDir: string,
+    private logger: Partial<Logger>,
+    private rootDir: string
   ) {
     this.digestedHumans = {};
-    this.logger.log(`new for ${rootDir}`, this.constructor.name);
+    // this.logger.log(`new for ${rootDir}`, this.constructor.name);
   }
 
   public static async create(
     fetch: (
-      input: string | URL | globalThis.Request,
+      input: string | URL | globalThis.Request
     ) => Promise<globalThis.Response>,
-    rootDir = "/data",
+    logger: Partial<Logger> = new Logger(),
+    rootDir = "/data"
   ): Promise<FeDataSvc> {
-    const instance = new FeDataSvc(fetch, rootDir);
+    const instance = new FeDataSvc(fetch, logger, rootDir);
     await instance.initialize();
     return instance;
   }
@@ -62,7 +63,7 @@ export class FeDataSvc {
   }
 
   public async getFeaturedHumans(
-    iso: string[] | boolean,
+    iso: string[] | boolean
   ): Promise<FeaturedHuman[]> {
     const featuredsPath = join("featured.json");
 
@@ -118,10 +119,11 @@ export class FeDataSvc {
           const entity = { id: this.top.wbidsByGuid[poh.id] };
           this.digestedHumans[poh.id] = { ...poh, entity };
         }
-        this.logger.log(
-          `${relative_path} @ ${plain_old_hs.length} 🚀`,
-          this.digestFromGuid.name,
-        );
+        this.logger.log &&
+          this.logger.log(
+            `${relative_path} @ ${plain_old_hs.length} 🚀`,
+            this.digestFromGuid.name
+          );
         this.shardPathsDone.add(shard_fn);
       }
     }
@@ -137,7 +139,7 @@ export class FeDataSvc {
   }
 
   private async fetchStringRecord(
-    fname: string,
+    fname: string
   ): Promise<Record<string, string>> {
     const response = await this.fetch(join(this.rootDir, fname));
     if (!response.ok) {

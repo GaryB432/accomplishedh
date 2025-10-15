@@ -1,7 +1,10 @@
-import { padSerialForKey, type EuroHuman } from "@accomplishedh/shared";
+// import * as shared from "@accomplishedh/shared";
+import { Logger, padSerialForKey, type EuroHuman } from "@accomplishedh/shared";
 import { afterEach } from "node:test";
 import { beforeEach, describe, expect, test, vi } from "vitest";
 import * as FsDataSUT from "./fe-data.svelte";
+
+let instance: Logger;
 
 const OG: EuroHuman = {
   adultbasic: "",
@@ -61,13 +64,13 @@ const volume_contents: Record<string, object> = {
       a[b.serial] = b.id;
       return a;
     },
-    {},
+    {}
   ),
   "test/path/shards/1.json": individuals.filter(
-    (i) => i.id.slice(4, 5) === "1",
+    (i) => i.id.slice(4, 5) === "1"
   ),
   "test/path/shards/2.json": individuals.filter(
-    (i) => i.id.slice(4, 5) === "2",
+    (i) => i.id.slice(4, 5) === "2"
   ),
   "test/path/wb.json": { [JIM.id]: "QJIM", [BOB.id]: "QBOB", [TOM.id]: "QTOM" },
   "test/path/featured.json": featuredsArray,
@@ -76,11 +79,6 @@ const volume_contents: Record<string, object> = {
 function fetch_function(input: string | URL | Request): Promise<Response> {
   const relative_path = input.toString();
   const contents = volume_contents[relative_path];
-
-  if (!contents) {
-    console.log(Object.keys(volume_contents));
-    console.log(relative_path);
-  }
 
   const good_body = JSON.stringify(contents ?? "not found");
 
@@ -92,9 +90,14 @@ function fetch_function(input: string | URL | Request): Promise<Response> {
 
 describe("getHuman", () => {
   let data_svc: FsDataSUT.FeDataSvc;
+  instance = new Logger();
 
   beforeEach(async () => {
-    data_svc = await FsDataSUT.FeDataSvc.create(fetch_function, "test/path");
+    data_svc = await FsDataSUT.FeDataSvc.create(
+      fetch_function,
+      instance,
+      "test/path"
+    );
   });
   afterEach(() => {
     vi.clearAllMocks();
@@ -103,23 +106,27 @@ describe("getHuman", () => {
   //   const readArraySpy = vi.spyOn(utils, 'readArraySync');
 
   test("gets jim", async () => {
+    const log = vi.spyOn(instance, "log").mockReturnValue();
     const subject = await data_svc.getHuman(JIM.serial);
     expect(subject).toEqual({
       ...JIM,
       serial: padSerialForKey(JIM.serial),
       entity: { id: "QJIM" },
     });
+    expect(log).toHaveBeenCalledWith("shards/1.json @ 1 🚀", "digestFromGuid");
     // expect(readJSONSpy).toHaveBeenCalledWith('test/path/serials.json');
     // expect(readArraySpy).toHaveBeenCalledWith('test/path/shards/1.json', []);
   });
 
   test("gets bob", async () => {
+    const log = vi.spyOn(instance, "log").mockReturnValue();
     const subject = await data_svc.getHuman(BOB.serial);
     expect(subject).toEqual({
       ...BOB,
       serial: padSerialForKey(BOB.serial),
       entity: { id: "QBOB" },
     });
+    expect(log).toHaveBeenCalledWith("shards/2.json @ 1 🚀", "digestFromGuid");
     // expect(readJSONSpy).toHaveBeenCalledWith('test/path/serials.json');
     // expect(readArraySpy).toHaveBeenCalledWith('test/path/shards/2.json', []);
   });
@@ -129,7 +136,12 @@ describe("get Featured Human", () => {
   let data_svc: FsDataSUT.FeDataSvc;
 
   beforeEach(async () => {
-    data_svc = await FsDataSUT.FeDataSvc.create(fetch_function, "test/path");
+    instance = new Logger();
+    data_svc = await FsDataSUT.FeDataSvc.create(
+      fetch_function,
+      instance,
+      "test/path"
+    );
   });
   afterEach(() => {
     vi.clearAllMocks();
@@ -139,6 +151,7 @@ describe("get Featured Human", () => {
   //   const readArraySpy = vi.spyOn(utils, 'readArraySync');
 
   test("gets all featured humans", async () => {
+    const log = vi.spyOn(instance, "log").mockReturnValue();
     const subject = await data_svc.getFeaturedHumans(true);
     expect(subject).toEqual([
       {
@@ -165,17 +178,19 @@ describe("get Featured Human", () => {
         stamp: "2222-02-22",
       },
     ]);
-    // expect(readJSONSpy).toHaveBeenCalledTimes(6);
+    expect(log).toHaveBeenCalledWith("shards/2.json @ 1 🚀", "digestFromGuid");
     // expect(readJSONSpy).toHaveBeenCalledWith('test/path/serials.json');
     // expect(readArraySpy).toHaveBeenCalledWith('test/path/shards/1.json', []);
   });
 
   test("gets no featured humans", async () => {
+    const log = vi.spyOn(instance, "log").mockReturnValue();
     const subject = await data_svc.getFeaturedHumans(false);
     expect(subject).toEqual([]);
   });
 
   test("gets some featured humans", async () => {
+    const log = vi.spyOn(instance, "log").mockReturnValue();
     const fellers = await data_svc.getFeaturedHumans(["2222-02-22"]);
     expect(fellers.every((g) => g.stamp === "2222-02-22"));
     const subject = fellers.at(0);
