@@ -84,7 +84,7 @@ export async function featuredCommand({
       year: "numeric",
     }).format(new Date(runOutDate ?? "1970-01-01"))}.`,
     "Visit",
-    "https://github.com/GaryB432/human-accomplishment/blob/master/wiki/UpdatingFeatureds.md",
+    "https://github.com/GaryB432/accomplishedh/blob/master/docs/wiki/UpdatingFeatureds.md",
     "for information on refreshing.",
   ];
   console.log(
