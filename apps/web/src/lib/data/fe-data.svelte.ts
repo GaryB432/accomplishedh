@@ -35,7 +35,7 @@ export class FeDataSvc {
     private fetch: (
       input: string | URL | globalThis.Request
     ) => Promise<globalThis.Response>,
-    private logger: Partial<Logger>,
+    private logger: Logger,
     private rootDir: string
   ) {
     this.digestedHumans = {};
@@ -46,7 +46,7 @@ export class FeDataSvc {
     fetch: (
       input: string | URL | globalThis.Request
     ) => Promise<globalThis.Response>,
-    logger: Partial<Logger> = new Logger(),
+    logger: Logger = new Logger(),
     rootDir = "/data"
   ): Promise<FeDataSvc> {
     const instance = new FeDataSvc(fetch, logger, rootDir);
@@ -119,11 +119,10 @@ export class FeDataSvc {
           const entity = { id: this.top.wbidsByGuid[poh.id] };
           this.digestedHumans[poh.id] = { ...poh, entity };
         }
-        this.logger.log &&
-          this.logger.log(
-            `${relative_path} @ ${plain_old_hs.length} 🚀`,
-            this.digestFromGuid.name
-          );
+        this.logger.log(
+          `${relative_path} @ ${plain_old_hs.length} 🚀`,
+          this.digestFromGuid.name
+        );
         this.shardPathsDone.add(shard_fn);
       }
     }

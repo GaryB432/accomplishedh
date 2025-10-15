@@ -17,12 +17,11 @@ export default [
       },
     },
     rules: {
-      // TODO turn this back to error
-      "svelte/no-navigation-without-resolve": "warn",
+      "svelte/no-navigation-without-resolve": ["error", { ignoreLinks: true }],
       "no-undef": "off",
     },
   },
   {
-    ignores: ["**/.vercel", "**/.svelte-kit"],
+    ignores: ["**/.vercel", "**/.svelte-kit", "**/node_modules"],
   },
 ];
