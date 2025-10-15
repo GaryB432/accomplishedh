@@ -24,6 +24,8 @@ jobs:
         uses: pnpm/action-setup@v4
         with:
           run_install: true
+      - name: Check
+        run: pnpm --recursive --if-present check
       - name: Lint
         run: pnpm --recursive --if-present lint
       - name: Build
