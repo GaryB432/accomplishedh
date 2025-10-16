@@ -14,6 +14,12 @@
   let cod = $derived(entity.summary.claims[P.CAUSE_OF_DEATH]!);
   let mod = $derived(entity.summary.claims[P.MANNER_OF_DEATH]!);
 
+  let detailsod = $derived.by(() => {
+    return [longDate(dod), pod, cod, mod]
+      .filter((n) => n !== void 0)
+      .join(", ");
+  });
+
   function longDate(date: Date): string {
     return Intl.DateTimeFormat("en-US", {
       timeZone: "UTC",
@@ -36,10 +42,7 @@
   <h1>Died</h1>
   <div class="det">
     <div>
-      <span class="dod">{longDate(dod)}</span>,
-      <span class="pod">{pod}</span>,
-      <span class="cod">{cod}</span>,
-      <span class="mod">{mod}</span>
+      {detailsod}
     </div>
   </div>
 </div>

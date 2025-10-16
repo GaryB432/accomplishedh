@@ -52,7 +52,7 @@ test("no manner", async () => {
     .element(screen.getByText("January 29, 1957, POB"))
     .toBeInTheDocument();
   await expect
-    .element(screen.getByText("December 31, 1962, POD, CAUSE,"))
+    .element(screen.getByText("December 31, 1962, POD, CAUSE "))
     .toBeInTheDocument();
 });
 
@@ -77,6 +77,6 @@ test("no cause", async () => {
     .element(screen.getByText("January 29, 1957, POB"))
     .toBeInTheDocument();
   await expect
-    .element(screen.getByText("December 31, 1962, POD, ,"))
+    .element(screen.getByText("December 31, 1962, POD "))
     .toBeInTheDocument();
 });
