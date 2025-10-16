@@ -2,6 +2,13 @@ import { dev } from "$app/environment";
 import type { Handle } from "@sveltejs/kit";
 
 export const handle = (async ({ event, resolve }) => {
+  if (
+    dev &&
+    event.url.pathname === "/.well-known/appspecific/com.chrome.devtools.json"
+  ) {
+    return new Response(undefined, { status: 404 });
+  }
+
   let theme: string | null = null;
 
   const newTheme = event.url.searchParams.get("theme");
