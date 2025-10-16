@@ -11,7 +11,7 @@
 
   let { data }: Props = $props();
 
-  let featured = $derived(data.ro.humans ?? []);
+  let featured = $derived(data?.ro ? data.ro.humans : []);
 </script>
 
 <svelte:head>
