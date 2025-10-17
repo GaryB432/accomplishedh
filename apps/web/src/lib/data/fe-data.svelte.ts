@@ -33,10 +33,10 @@ export class FeDataSvc {
 
   private constructor(
     private fetch: (
-      input: string | URL | globalThis.Request
+      input: string | URL | globalThis.Request,
     ) => Promise<globalThis.Response>,
     private logger: Logger,
-    private rootDir: string
+    private rootDir: string,
   ) {
     this.digestedHumans = {};
     // this.logger.log(`new for ${rootDir}`, this.constructor.name);
@@ -44,10 +44,10 @@ export class FeDataSvc {
 
   public static async create(
     fetch: (
-      input: string | URL | globalThis.Request
+      input: string | URL | globalThis.Request,
     ) => Promise<globalThis.Response>,
     logger: Logger = new Logger(),
-    rootDir = "/data"
+    rootDir = "/data",
   ): Promise<FeDataSvc> {
     const instance = new FeDataSvc(fetch, logger, rootDir);
     await instance.initialize();
@@ -63,7 +63,7 @@ export class FeDataSvc {
   }
 
   public async getFeaturedHumans(
-    iso: string[] | boolean
+    iso: string[] | boolean,
   ): Promise<FeaturedHuman[]> {
     const featuredsPath = join("featured.json");
 
@@ -121,7 +121,7 @@ export class FeDataSvc {
         }
         this.logger.log(
           `${relative_path} @ ${plain_old_hs.length} 🚀`,
-          this.digestFromGuid.name
+          this.digestFromGuid.name,
         );
         this.shardPathsDone.add(shard_fn);
       }
@@ -138,7 +138,7 @@ export class FeDataSvc {
   }
 
   private async fetchStringRecord(
-    fname: string
+    fname: string,
   ): Promise<Record<string, string>> {
     const response = await this.fetch(join(this.rootDir, fname));
     if (!response.ok) {

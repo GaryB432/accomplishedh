@@ -64,13 +64,13 @@ const volume_contents: Record<string, object> = {
       a[b.serial] = b.id;
       return a;
     },
-    {}
+    {},
   ),
   "test/path/shards/1.json": individuals.filter(
-    (i) => i.id.slice(4, 5) === "1"
+    (i) => i.id.slice(4, 5) === "1",
   ),
   "test/path/shards/2.json": individuals.filter(
-    (i) => i.id.slice(4, 5) === "2"
+    (i) => i.id.slice(4, 5) === "2",
   ),
   "test/path/wb.json": { [JIM.id]: "QJIM", [BOB.id]: "QBOB", [TOM.id]: "QTOM" },
   "test/path/featured.json": featuredsArray,
@@ -96,7 +96,7 @@ describe("getHuman", () => {
     data_svc = await FsDataSUT.FeDataSvc.create(
       fetch_function,
       instance,
-      "test/path"
+      "test/path",
     );
   });
   afterEach(() => {
@@ -140,7 +140,7 @@ describe("get Featured Human", () => {
     data_svc = await FsDataSUT.FeDataSvc.create(
       fetch_function,
       instance,
-      "test/path"
+      "test/path",
     );
   });
   afterEach(() => {
