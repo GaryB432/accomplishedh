@@ -11,6 +11,9 @@
   "references": [
     {
       "path": "../../libraries/shared"
+    },
+    {
+      "path": "../../libraries/social-media"
     }
   ]
 }
