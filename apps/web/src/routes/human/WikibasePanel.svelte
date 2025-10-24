@@ -3,6 +3,7 @@
   import WikidataAnchor from '$lib/components/wikidata/Anchor.svelte';
   import Awards from '$lib/components/wikidata/Awards.svelte';
   import Lifespan from '$lib/components/wikidata/Lifespan.svelte';
+  import Works from '$lib/components/wikidata/NotableWorks.svelte';
   import {
     labelify,
     summarize,
@@ -148,6 +149,7 @@
     <HorizontalPanel>
       <Lifespan entity={summarized_entity}></Lifespan>
       <Awards entity={summarized_entity}></Awards>
+      <Works entity={summarized_entity}></Works>
     </HorizontalPanel>
 
     <Aliases entity={summarized_entity}></Aliases>
