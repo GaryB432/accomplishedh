@@ -4,8 +4,9 @@ const prog = cac("ha");
 
 prog
   .command("featured <start>", "Create json file of daily featureds")
-  .option("--days", "The number of days to create featureds", { default: 7 })
-  .option("--perday", "The number of featureds per day", { default: 6 })
+  .option("--days <number>", "The number of days to create featureds", { default: 7 })
+  .option("--perday <number>", "The number of featureds per day", { default: 6 })
+  .option("-d, --dry-run", "Do not write changes to disk")
   .action(async (start, opts) => {
     const { featuredCommand } = await import(
       "./app/commands/featured.command.js"
@@ -17,11 +18,11 @@ prog
 prog
   .command(
     "botd <today>",
-    "Lists persons born on this day for social media posting",
+    "Lists persons born on this day for social media posting"
   )
   .option(
     "-l, --listOnly",
-    "Skips posts.json and lists post bodies to console for copy/paste",
+    "Skips posts.json and lists post bodies to console for copy/paste"
   )
   .action(async (today, opts) => {
     const { botdCommand } = await import("./app/commands/botd.command.js");
