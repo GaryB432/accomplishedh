@@ -183,10 +183,10 @@ importers:
     devDependencies:
       '@sveltejs/adapter-vercel':
         specifier: ^6.0.0
-        version: 6.0.0(@sveltejs/kit@2.47.3(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.41.0)(vite@7.1.12(@types/node@24.8.1)(sass@1.93.2)(terser@5.44.0)))(svelte@5.41.0)(vite@7.1.12(@types/node@24.8.1)(sass@1.93.2)(terser@5.44.0)))(rollup@4.52.5)
+        version: 6.0.0(@sveltejs/kit@2.48.0(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.41.0)(vite@7.1.12(@types/node@24.8.1)(sass@1.93.2)(terser@5.44.0)))(svelte@5.41.0)(vite@7.1.12(@types/node@24.8.1)(sass@1.93.2)(terser@5.44.0)))(rollup@4.52.5)
       '@sveltejs/kit':
-        specifier: ^2.47.3
-        version: 2.47.3(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.41.0)(vite@7.1.12(@types/node@24.8.1)(sass@1.93.2)(terser@5.44.0)))(svelte@5.41.0)(vite@7.1.12(@types/node@24.8.1)(sass@1.93.2)(terser@5.44.0))
+        specifier: ^2.48.0
+        version: 2.48.0(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.41.0)(vite@7.1.12(@types/node@24.8.1)(sass@1.93.2)(terser@5.44.0)))(svelte@5.41.0)(vite@7.1.12(@types/node@24.8.1)(sass@1.93.2)(terser@5.44.0))
       '@sveltejs/vite-plugin-svelte':
         specifier: ^6.0.0
         version: 6.2.1(svelte@5.41.0)(vite@7.1.12(@types/node@24.8.1)(sass@1.93.2)(terser@5.44.0))
@@ -925,8 +925,8 @@ packages:
     peerDependencies:
       '@sveltejs/kit': ^2.4.0
 
-  '@sveltejs/kit@2.47.3':
-    resolution: {integrity: sha512-zN2yzBc2dIES2BSzLhNP2weYhwB77kgM/oAktICZVmmljyEmPZrlUwr14jjdK9/eDu7WdAuf6gTdYIJLTcN3Fw==}
+  '@sveltejs/kit@2.48.0':
+    resolution: {integrity: sha512-GAAbkWrbRJvysL7+HOWs5v/+TmnRcEQPeED2sUcDFTHpPvRYADEtScL6x8hWuKp0DKauJVaVJLTjQVy9e7cMiw==}
     engines: {node: '>=18.13'}
     hasBin: true
     peerDependencies:
@@ -4435,9 +4435,9 @@ snapshots:
     dependencies:
       acorn: 8.15.0
 
-  '@sveltejs/adapter-vercel@6.0.0(@sveltejs/kit@2.47.3(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.41.0)(vite@7.1.12(@types/node@24.8.1)(sass@1.93.2)(terser@5.44.0)))(svelte@5.41.0)(vite@7.1.12(@types/node@24.8.1)(sass@1.93.2)(terser@5.44.0)))(rollup@4.52.5)':
+  '@sveltejs/adapter-vercel@6.0.0(@sveltejs/kit@2.48.0(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.41.0)(vite@7.1.12(@types/node@24.8.1)(sass@1.93.2)(terser@5.44.0)))(svelte@5.41.0)(vite@7.1.12(@types/node@24.8.1)(sass@1.93.2)(terser@5.44.0)))(rollup@4.52.5)':
     dependencies:
-      '@sveltejs/kit': 2.47.3(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.41.0)(vite@7.1.12(@types/node@24.8.1)(sass@1.93.2)(terser@5.44.0)))(svelte@5.41.0)(vite@7.1.12(@types/node@24.8.1)(sass@1.93.2)(terser@5.44.0))
+      '@sveltejs/kit': 2.48.0(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.41.0)(vite@7.1.12(@types/node@24.8.1)(sass@1.93.2)(terser@5.44.0)))(svelte@5.41.0)(vite@7.1.12(@types/node@24.8.1)(sass@1.93.2)(terser@5.44.0))
       '@vercel/nft': 0.30.3(rollup@4.52.5)
       esbuild: 0.25.11
     transitivePeerDependencies:
@@ -4445,7 +4445,7 @@ snapshots:
       - rollup
       - supports-color
 
-  '@sveltejs/kit@2.47.3(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.41.0)(vite@7.1.12(@types/node@24.8.1)(sass@1.93.2)(terser@5.44.0)))(svelte@5.41.0)(vite@7.1.12(@types/node@24.8.1)(sass@1.93.2)(terser@5.44.0))':
+  '@sveltejs/kit@2.48.0(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.41.0)(vite@7.1.12(@types/node@24.8.1)(sass@1.93.2)(terser@5.44.0)))(svelte@5.41.0)(vite@7.1.12(@types/node@24.8.1)(sass@1.93.2)(terser@5.44.0))':
     dependencies:
       '@standard-schema/spec': 1.0.0
       '@sveltejs/acorn-typescript': 1.0.6(acorn@8.15.0)
