@@ -198,7 +198,7 @@
       }}
     >
       {flags.wikibaseFeatures
-        ? "Bail out of Wikidata integration until it is fully-baked"
+        ? "Bale out of Wikidata integration until it is fully-baked"
         : "Try something alpha!"}
     </button>
     {#if nobel && nobel.laureate}
