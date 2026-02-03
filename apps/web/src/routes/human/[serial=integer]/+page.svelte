@@ -61,7 +61,7 @@
     yob,
   } = $derived(data.human);
 
-  let showAdminPanel = $state(data.admin);
+  let showAdminPanel = $derived(data.admin);
 
   let wikihref = $derived(
     `//en.wikipedia.org/wiki?curid=${data.human.sr!.pageid}`
