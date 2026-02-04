@@ -14,7 +14,6 @@ prog
   .action(async (start, opts) => {
     const { featuredCommand } =
       await import("./app/commands/featured.command.js");
-    console.log(start, opts);
     void (await featuredCommand({ start, opts }));
   });
 
@@ -29,7 +28,6 @@ prog
   )
   .action(async (today, opts) => {
     const { botdCommand } = await import("./app/commands/botd.command.js");
-    console.log(today, opts);
     void (await botdCommand({ today, opts }));
   });
 
