@@ -6,7 +6,7 @@ import tseslint from "typescript-eslint";
 
 export default defineConfig([
   tseslint.configs.recommended,
-  gb.configs["flat/recommended"],
+  gb.configs.recommended,
   {
     files: ["**/*.{js,mjs,cjs,ts,mts,cts}"],
     plugins: { js, gb },
@@ -17,6 +17,7 @@ export default defineConfig([
       "no-undef": "off",
     },
   },
+
   {
     files: ["**/*.{ts,mts,cts}"],
     rules: {
