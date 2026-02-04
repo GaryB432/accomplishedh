@@ -20,7 +20,6 @@
 
 [All pages (Property namespace) - Wikidata](https://www.wikidata.org/wiki/Special:AllPages?from=&to=&namespace=120)
 
-
 [Wikibase/DataModel - MediaWiki](https://www.mediawiki.org/wiki/Wikibase/DataModel#Entities)
 
 ```mermaid
