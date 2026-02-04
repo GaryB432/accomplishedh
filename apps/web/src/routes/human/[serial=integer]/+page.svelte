@@ -617,6 +617,7 @@
   #f-name,
   #f-osfName,
   #f-serial {
+    height: 2em;
     width: unset;
   }
 
