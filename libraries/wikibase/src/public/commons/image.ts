@@ -44,7 +44,6 @@ export async function getPortraitFromClaim(
         id: claim.id,
         above,
         caption,
-        img,
       };
     }
   }
