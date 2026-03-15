@@ -28,10 +28,10 @@ jobs:
         working-directory: ./apps/web
         run: pnpm exec playwright install
       - name: Check
-        run: pnpm --recursive --if-present check
+        run: pnpm --filter=@accomplishedh/web --if-present run check
       - name: Lint
-        run: pnpm --recursive --if-present lint
+        run: pnpm --filter=@accomplishedh/web --if-present run lint
       - name: Build
-        run: pnpm --recursive --if-present build
+        run: pnpm --filter=@accomplishedh/web --if-present run build
       - name: Test
-        run: pnpm --recursive --if-present --use-stderr  test
+        run: pnpm --filter=@accomplishedh/web --if-present --use-stderr run test
