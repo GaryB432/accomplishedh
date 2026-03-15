@@ -1,22 +1,16 @@
 <script lang="ts">
-  import type { Portrait } from '@accomplishedh/shared';
+  import type { Portrait } from "@accomplishedh/shared";
   interface Props {
     portrait: Portrait;
   }
 
   let { portrait }: Props = $props();
-
-  let portraitImg = $derived(portrait.img);
 </script>
 
 <section class="portrait">
-  <div class="above">{portrait.above ?? ''}</div>
-  <div class="thumbnail">
-    {#if portraitImg}
-      <img src={portraitImg.src} alt="" />
-    {/if}
-  </div>
-  <div class="caption">{portrait.caption ?? ''}</div>
+  <div class="above">{portrait.above ?? ""}</div>
+  <img src="https://placehold.co/400x300" alt={portrait.caption} />
+  <div class="caption">{portrait.caption ?? ""}</div>
 </section>
 
 <style>

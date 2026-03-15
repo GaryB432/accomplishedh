@@ -7,9 +7,9 @@ export async function getFeatureds(): Promise<EuroHuman[]> {
   const f = 100;
   const s = { x: 2 * f, y: 3 * f };
 
-  if (fhumans[1]) {
-    fhumans[1].portrait.img["src"] = `placehold.co/${s.x}x${s.y}?text=Portrait`;
-  }
+  // if (fhumans[1]) {
+  //   fhumans[1].portrait.thumbnail["src"] = `placehold.co/${s.x}x${s.y}?text=Portrait`;
+  // }
   // return [];
   return [...fhumans];
 }
@@ -29,17 +29,6 @@ const fhumans: EuroHuman[] = [
     osfName: "Einstein, Albert",
     portrait: {
       above: "Albert Einstein",
-      img: {
-        alt: "Einstein 1921 by F Schmutzer - restoration.jpg",
-        src: "//upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Einstein_1921_by_F_Schmutzer_-_restoration.jpg/220px-Einstein_1921_by_F_Schmutzer_-_restoration.jpg",
-        decoding: "async",
-        width: "220",
-        height: "289",
-        srcset:
-          "//upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Einstein_1921_by_F_Schmutzer_-_restoration.jpg/330px-Einstein_1921_by_F_Schmutzer_-_restoration.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Einstein_1921_by_F_Schmutzer_-_restoration.jpg/440px-Einstein_1921_by_F_Schmutzer_-_restoration.jpg 2x",
-        "data-file-width": "2523",
-        "data-file-height": "3313",
-      },
       caption: "Einstein in 1921, by Ferdinand Schmutzer",
     },
     props: [],
@@ -62,17 +51,7 @@ const fhumans: EuroHuman[] = [
     osfName: "Blake, William",
     portrait: {
       above: "William Blake",
-      img: {
-        alt: "Blake in a portrait by Thomas Phillips (1807)",
-        src: "//upload.wikimedia.org/wikipedia/commons/thumb/0/00/William_Blake_by_Thomas_Phillips.jpg/220px-William_Blake_by_Thomas_Phillips.jpg",
-        decoding: "async",
-        width: "220",
-        height: "283",
-        srcset:
-          "//upload.wikimedia.org/wikipedia/commons/thumb/0/00/William_Blake_by_Thomas_Phillips.jpg/330px-William_Blake_by_Thomas_Phillips.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/00/William_Blake_by_Thomas_Phillips.jpg/440px-William_Blake_by_Thomas_Phillips.jpg 2x",
-        "data-file-width": "1196",
-        "data-file-height": "1536",
-      },
+
       caption: "Blake in a portraitby Thomas Phillips (1807)",
     },
     props: [],
@@ -94,17 +73,7 @@ const fhumans: EuroHuman[] = [
     osfName: "Descartes, Rene",
     portrait: {
       above: "René Descartes",
-      img: {
-        alt: "Frans Hals - Portret van René Descartes.jpg",
-        src: "//upload.wikimedia.org/wikipedia/commons/thumb/7/73/Frans_Hals_-_Portret_van_Ren%C3%A9_Descartes.jpg/220px-Frans_Hals_-_Portret_van_Ren%C3%A9_Descartes.jpg",
-        decoding: "async",
-        width: "220",
-        height: "269",
-        srcset:
-          "//upload.wikimedia.org/wikipedia/commons/thumb/7/73/Frans_Hals_-_Portret_van_Ren%C3%A9_Descartes.jpg/330px-Frans_Hals_-_Portret_van_Ren%C3%A9_Descartes.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/73/Frans_Hals_-_Portret_van_Ren%C3%A9_Descartes.jpg/440px-Frans_Hals_-_Portret_van_Ren%C3%A9_Descartes.jpg 2x",
-        "data-file-width": "817",
-        "data-file-height": "1000",
-      },
+
       caption: "Portrait after Frans Hals&#91;note 1&#93;",
     },
     props: [],
@@ -149,17 +118,6 @@ const fhumans: EuroHuman[] = [
     osfName: "Goethe, Johann von",
     portrait: {
       above: "Johann Wolfgang von Goethe",
-      img: {
-        alt: "Goethe in 1828, by Joseph Karl Stieler",
-        src: "//upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Goethe_%28Stieler_1828%29.jpg/220px-Goethe_%28Stieler_1828%29.jpg",
-        decoding: "async",
-        width: "220",
-        height: "271",
-        srcset:
-          "//upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Goethe_%28Stieler_1828%29.jpg/330px-Goethe_%28Stieler_1828%29.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Goethe_%28Stieler_1828%29.jpg/440px-Goethe_%28Stieler_1828%29.jpg 2x",
-        "data-file-width": "1972",
-        "data-file-height": "2432",
-      },
       caption: "Goethe in 1828, by Joseph Karl Stieler",
     },
     props: [],
@@ -203,17 +161,6 @@ const fhumans: EuroHuman[] = [
     osfName: "Agricola (Georg Bauer)",
     portrait: {
       above: "Georgius Agricola",
-      img: {
-        alt: "Georgius Agricola.jpg",
-        src: "//upload.wikimedia.org/wikipedia/commons/thumb/6/63/Georgius_Agricola.jpg/220px-Georgius_Agricola.jpg",
-        decoding: "async",
-        width: "220",
-        height: "311",
-        srcset:
-          "//upload.wikimedia.org/wikipedia/commons/6/63/Georgius_Agricola.jpg 1.5x",
-        "data-file-width": "310",
-        "data-file-height": "438",
-      },
       caption: "Georgius Agricola (fictive 1927 portrait)",
     },
     props: [],
@@ -235,17 +182,6 @@ const fhumans: EuroHuman[] = [
     osfName: "Morike, Eduard",
     portrait: {
       above: "Eduard Mörike",
-      img: {
-        alt: "Eduard Mörike.jpg",
-        src: "//upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Eduard_M%C3%B6rike.jpg/220px-Eduard_M%C3%B6rike.jpg",
-        decoding: "async",
-        width: "220",
-        height: "303",
-        srcset:
-          "//upload.wikimedia.org/wikipedia/commons/e/ea/Eduard_M%C3%B6rike.jpg 1.5x",
-        "data-file-width": "300",
-        "data-file-height": "413",
-      },
     },
     props: [],
     serial: "12864",

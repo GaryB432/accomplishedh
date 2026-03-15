@@ -13,10 +13,7 @@ import { type CommandArgs } from "./featured.types.js";
 import { normalize } from "node:path";
 
 export function portraitedOnly(all: EuroHuman[]): EuroHuman[] {
-  return all.filter(
-    (h) =>
-      h.portrait && "src" in h.portrait.img && h.portrait.img["src"] !== "",
-  );
+  return [...all];
 }
 
 export function fillout<T>(array: T[], limit: number): T[] {

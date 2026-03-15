@@ -20,7 +20,7 @@
     WIKIDATA_PERSON_PROPERTIES as P,
     type Entity,
   } from "@accomplishedh/wikibase";
-  import { imageSearchUrl, ogImage, socialMediaDescription } from "../helpers";
+  import { imageSearchUrl, socialMediaDescription } from "../helpers";
   import ReasonatorLink from "../ReasonatorLink.svelte";
   import WikibasePanel from "../WikibasePanel.svelte";
   import type { PageData } from "./$types";
@@ -38,7 +38,7 @@
         const value = h[propName];
         return { name: propName, value, seq, source: "osf" };
       })
-      .filter((f) => f.value !== void 0)
+      .filter((f) => f.value !== void 0),
   );
 
   let kfbox: HTMLInputElement | undefined = $state();
@@ -64,13 +64,13 @@
   let showAdminPanel = $derived(data.admin);
 
   let wikihref = $derived(
-    `//en.wikipedia.org/wiki?curid=${data.human.sr!.pageid}`
+    `//en.wikipedia.org/wiki?curid=${data.human.sr!.pageid}`,
   );
 
   let entity: Entity = $derived(
     data.human.entity
       ? { ...data.human.entity, type: "item" }
-      : { id: "", type: "item" }
+      : { id: "", type: "item" },
   );
 
   let cleanProps = $derived(
@@ -78,11 +78,11 @@
       let { source } = p;
       source = source ?? "wikimedia";
       return { ...p, source };
-    })
+    }),
   );
 
   let derivedProps = $derived(
-    [...cleanProps, ...osfProps].sort((a, b) => a.name.localeCompare(b.name))
+    [...cleanProps, ...osfProps].sort((a, b) => a.name.localeCompare(b.name)),
   );
 
   let title = $derived(`Human Accomplishment: ${name}`);
@@ -91,8 +91,6 @@
 
   let description = $derived(socialMediaDescription({ name, knownFor }));
   let imgSearchHref = $derived(imageSearchUrl(data.human));
-
-  let image = $derived(ogImage(portrait));
 
   let { claims } = $derived(entity);
   let imgClaims = $derived(claims ? claims[P.IMAGE] : []);
@@ -103,8 +101,8 @@
         ? imgClaims.map(async (claim) => {
             return await getPortraitFromClaim(claim, fetch);
           })
-        : []
-    )
+        : [],
+    ),
   );
 
   let dialog: HTMLDialogElement | null = $state(null);
@@ -139,7 +137,6 @@
   <meta name="og:type" content="website" />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
-  <meta property="og:image" content={image} />
 </svelte:head>
 
 <div class="wrapper">
@@ -312,9 +309,7 @@
     <div>portrait</div>
     <div class="portrait-info">
       <div>
-        [object] &hellip;{(decodeURIComponent(portrait.img.src) ?? "?").slice(
-          -20
-        )}
+        no longer even a thing
       </div>
       <div>
         <a href={imgSearchHref} target="_blank">

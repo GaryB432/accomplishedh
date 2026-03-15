@@ -52,10 +52,6 @@ export async function botdCommand({ today, opts }: CommandArgs): Promise<void> {
       const { enhancedText, raw, valid } = checkForTweet(human);
       console.log(enhancedText);
 
-      if (!("src" in human.portrait.img)) {
-        console.log(colors.yellowBright("Note: No portrait src"));
-      }
-
       if (!valid) {
         console.log(
           `${colors.bgYellowBright(

@@ -44,12 +44,6 @@ describe("Atom", () => {
                 wikibase: { entity: { id: `Q${dseq}` } },
                 portrait: {
                   above: "Rudolf Albert von Kölliker",
-                  img: {
-                    alt: "Kölliker Rudolph Albert von 1818-1902.jpg",
-                    src: `//upload.wikimedia.org/wikipedia/commons/thumb/p${seq}.jpg`,
-                    width: "250",
-                    height: "335",
-                  },
                 },
               },
               id: `dfh${seq}`,
@@ -76,9 +70,7 @@ const defh: EuroHuman = {
   knownFor: "",
   name: "",
   osfName: "",
-  portrait: {
-    img: { fun: "yep" },
-  },
+  portrait: {},
   props: [],
   serial: "-1",
   sr: undefined,

@@ -18,13 +18,3 @@ export function imageSearchUrl(human: Pick<EuroHuman, "name" | "yob">): string {
   url.searchParams.append("q", qs.join(" "));
   return url.toString();
 }
-
-export function ogImage(portrait: Portrait): string {
-  let image = "https://humanaccomplishment.com/HA%20science.2400x2400.jpeg";
-  if (portrait.img?.src) {
-    image = portrait.img.src.startsWith("//")
-      ? `https:${portrait.img.src}`
-      : portrait.img.src;
-  }
-  return image;
-}
