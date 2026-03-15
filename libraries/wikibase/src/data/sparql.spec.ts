@@ -33,7 +33,7 @@ describe("Query", () => {
         props: [],
         serial: "",
         yob: "1879",
-        sr: undefined
+        sr: undefined,
       }),
     ).toEqual(
       "SELECT DISTINCT ?item WHERE { ?item wdt:P31 wd:Q5; wdt:P569 ?date_of_birth; wdt:P101 ?field. FILTER (YEAR(?date_of_birth) = 1879) ?field wdt:P279* wd:Q336. }",
