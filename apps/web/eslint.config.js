@@ -22,6 +22,6 @@ export default [
     },
   },
   {
-    ignores: ["**/.vercel", "**/.svelte-kit", "**/node_modules", "svelte.config.js"],
+    ignores: ["**/.vercel", "**/.svelte-kit", "**/node_modules"],
   },
 ];

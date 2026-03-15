@@ -47,6 +47,17 @@ export async function feed(
             ],
           },
           {
+            link: [
+              {
+                _attr: {
+                  rel: "enclosure",
+                  type: "image/jpeg",
+                  href: "https:".concat(h.human.portrait.img["src"]),
+                },
+              },
+            ],
+          },
+          {
             content: encodedHTML(
               `<h1>${h.human.name}</h1><div>${h.human.knownFor}</div>`,
             ),

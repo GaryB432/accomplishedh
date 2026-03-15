@@ -13,6 +13,7 @@ export interface Property {
 export interface Portrait {
   above?: string | undefined;
   caption?: string | undefined;
+  img: Record<string, string>;
 }
 export interface EuroHuman {
   adultbasic: string;

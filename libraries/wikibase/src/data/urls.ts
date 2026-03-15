@@ -61,22 +61,6 @@ export function entity_searh_url(name: string): string {
   return url.href;
 }
 
-export function thumbnail_query_url(
-  entity: string | string[],
-  size = 500,
-): string {
-  const url = new URL(urlsBases.wikidata);
-  url.searchParams.append("action", "query");
-  url.searchParams.append(
-    "titles",
-    (Array.isArray(entity) ? entity : [entity]).join(","),
-  );
-  url.searchParams.append("prop", "pageimages");
-  url.searchParams.append("pithumbsize", String(size));
-  url.searchParams.append("format", "json");
-  return url.href;
-}
-
 export function image_query_url(titles: (string | Claim)[]): string {
   const url = new URL(urlsBases.commons);
   // const name_of_thing = 'x';

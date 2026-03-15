@@ -1,6 +1,6 @@
 import { describe, expect, test } from "vitest";
 
-import { entities_get_url, image_query_url, thumbnail_query_url } from "./urls";
+import { entities_get_url, image_query_url } from "./urls";
 
 describe("Urls", () => {
   test("wbgetentities", () => {
@@ -18,9 +18,6 @@ describe("Urls", () => {
       ]),
     ).toEqual(
       "https://commons.wikimedia.org/w/api.php?action=query&titles=File%3AAlbert+Einstein+Head.jpg%7CFile%3AVladimir+Korolenko+bw.jpg&prop=imageinfo&iiprop=url%7Cmetadata%7Csize%7Cmime%7Cextmetadata&iiurlwidth=330&format=json&origin=*",
-    );
-    expect(thumbnail_query_url('Q937')).toEqual(
-      "https://www.wikidata.org/w/api.php?action=query&titles=Q937&prop=pageimages&pithumbsize=500&format=json",
     );
   });
 });

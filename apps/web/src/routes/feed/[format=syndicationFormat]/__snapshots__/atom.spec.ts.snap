@@ -98,6 +98,17 @@ exports[`Atom > feed 1`] = `
           ],
         },
         {
+          "link": [
+            {
+              "_attr": {
+                "href": "https://upload.wikimedia.org/wikipedia/commons/thumb/p5.jpg",
+                "rel": "enclosure",
+                "type": "image/jpeg",
+              },
+            },
+          ],
+        },
+        {
           "content": [
             {
               "_attr": {
@@ -127,6 +138,17 @@ exports[`Atom > feed 1`] = `
                 "href": "https://projects.hoster.app/featured/dfh4",
                 "rel": "alternate",
                 "type": "text/html",
+              },
+            },
+          ],
+        },
+        {
+          "link": [
+            {
+              "_attr": {
+                "href": "https://upload.wikimedia.org/wikipedia/commons/thumb/p4.jpg",
+                "rel": "enclosure",
+                "type": "image/jpeg",
               },
             },
           ],
@@ -166,6 +188,17 @@ exports[`Atom > feed 1`] = `
           ],
         },
         {
+          "link": [
+            {
+              "_attr": {
+                "href": "https://upload.wikimedia.org/wikipedia/commons/thumb/p3.jpg",
+                "rel": "enclosure",
+                "type": "image/jpeg",
+              },
+            },
+          ],
+        },
+        {
           "content": [
             {
               "_attr": {
@@ -195,6 +228,17 @@ exports[`Atom > feed 1`] = `
                 "href": "https://projects.hoster.app/featured/dfh2",
                 "rel": "alternate",
                 "type": "text/html",
+              },
+            },
+          ],
+        },
+        {
+          "link": [
+            {
+              "_attr": {
+                "href": "https://upload.wikimedia.org/wikipedia/commons/thumb/p2.jpg",
+                "rel": "enclosure",
+                "type": "image/jpeg",
               },
             },
           ],
@@ -234,6 +278,17 @@ exports[`Atom > feed 1`] = `
           ],
         },
         {
+          "link": [
+            {
+              "_attr": {
+                "href": "https://upload.wikimedia.org/wikipedia/commons/thumb/p1.jpg",
+                "rel": "enclosure",
+                "type": "image/jpeg",
+              },
+            },
+          ],
+        },
+        {
           "content": [
             {
               "_attr": {
@@ -263,6 +318,17 @@ exports[`Atom > feed 1`] = `
                 "href": "https://projects.hoster.app/featured/dfh0",
                 "rel": "alternate",
                 "type": "text/html",
+              },
+            },
+          ],
+        },
+        {
+          "link": [
+            {
+              "_attr": {
+                "href": "https://upload.wikimedia.org/wikipedia/commons/thumb/p0.jpg",
+                "rel": "enclosure",
+                "type": "image/jpeg",
               },
             },
           ],

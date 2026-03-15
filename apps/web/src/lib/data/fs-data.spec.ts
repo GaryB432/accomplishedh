@@ -17,7 +17,9 @@ const OG: EuroHuman = {
   knownFor: "",
   name: "",
   osfName: "",
-  portrait: {},
+  portrait: {
+    img: { src: "" },
+  },
   props: [],
   serial: "",
   sr: undefined,
