@@ -58,6 +58,7 @@ export const actions: Actions = {
       };
 
       // await dataService.putHuman(formHuman);
+      console.log(formHuman);
       error(500, "not supported");
     }
     redirect(303, `/human/${serial}`);
