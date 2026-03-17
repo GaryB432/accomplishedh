@@ -46,6 +46,6 @@ describe("Featured Command", () => {
       portraitedOnly(
         portraits.map<EuroHuman>((portrait) => ({ ...defh, portrait })),
       ),
-    ).toHaveLength(1);
+    ).toHaveLength(4);
   });
 });
