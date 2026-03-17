@@ -100,7 +100,7 @@ export class FeDataSvc {
     return this.digestFromGuid(id);
   }
 
-  public async putHuman(h: FormDataHuman): Promise<WikiHuman | undefined> {
+  public async putHuman(_h: FormDataHuman): Promise<WikiHuman | undefined> {
     throw new Error("not implemented");
   }
 
