@@ -36,7 +36,7 @@ export async function getPortraitFromClaim(
         caption = extmetadata.ImageDescription.value;
       }
 
-      const img: HTMLImgAttributes = {
+      const Θimg: HTMLImgAttributes = {
         src,
       };
 
@@ -44,7 +44,7 @@ export async function getPortraitFromClaim(
         id: claim.id,
         above,
         caption,
-        img,
+        Θimg,
       };
     }
   }

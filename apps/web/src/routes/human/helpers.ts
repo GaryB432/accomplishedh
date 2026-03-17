@@ -21,10 +21,10 @@ export function imageSearchUrl(human: Pick<EuroHuman, "name" | "yob">): string {
 
 export function ogImage(portrait: Portrait): string {
   let image = "https://humanaccomplishment.com/HA%20science.2400x2400.jpeg";
-  if (portrait.img?.src) {
-    image = portrait.img.src.startsWith("//")
-      ? `https:${portrait.img.src}`
-      : portrait.img.src;
+  if (portrait.Θimg?.src) {
+    image = portrait.Θimg.src.startsWith("//")
+      ? `https:${portrait.Θimg.src}`
+      : portrait.Θimg.src;
   }
   return image;
 }

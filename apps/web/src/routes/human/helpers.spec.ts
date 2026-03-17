@@ -31,18 +31,18 @@ describe("Helpers", () => {
 
   describe("ogImage", () => {
     test("ogImage a", () => {
-      expect(ogImage({ img: {} })).toEqual(
+      expect(ogImage({ Θimg: {} })).toEqual(
         "https://humanaccomplishment.com/HA%20science.2400x2400.jpeg",
       );
     });
     test("ogImage b", () => {
-      expect(ogImage({ img: { src: "//example.com/image.jpg" } })).toEqual(
+      expect(ogImage({ Θimg: { src: "//example.com/image.jpg" } })).toEqual(
         "https://example.com/image.jpg",
       );
     });
     test("ogImage c", () => {
       expect(
-        ogImage({ img: { src: "https://example.com/image.jpg" } }),
+        ogImage({ Θimg: { src: "https://example.com/image.jpg" } }),
       ).toEqual("https://example.com/image.jpg");
     });
   });

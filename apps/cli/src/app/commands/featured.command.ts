@@ -13,10 +13,8 @@ import { type CommandArgs } from "./featured.types.js";
 import { normalize } from "node:path";
 
 export function portraitedOnly(all: EuroHuman[]): EuroHuman[] {
-  return all.filter(
-    (h) =>
-      h.portrait && "src" in h.portrait.img && h.portrait.img["src"] !== "",
-  );
+  // TODO get only people that have portraits.  tho nowadays they all should
+  return [...all];
 }
 
 export function fillout<T>(array: T[], limit: number): T[] {

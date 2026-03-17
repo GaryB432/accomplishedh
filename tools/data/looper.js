@@ -21,7 +21,7 @@ async function main() {
   console.log(everybody.length);
 
   const missingPortrait = everybody.filter(
-    (h) => h.portrait.img["src"] === void 0,
+    (h) => h.portrait.Θimg["src"] === void 0,
   );
 
   const pns = missingPortrait.map((h) => ({ h, shardKey: h.id.slice(4, 5) }));

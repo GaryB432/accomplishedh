@@ -18,7 +18,7 @@ const OG: EuroHuman = {
   name: "",
   osfName: "",
   portrait: {
-    img: { src: "" },
+    Θimg: { src: "" },
   },
   props: [],
   serial: "",

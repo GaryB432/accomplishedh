@@ -52,7 +52,7 @@ export async function feed(
                 _attr: {
                   rel: "enclosure",
                   type: "image/jpeg",
-                  href: "https:".concat(h.human.portrait.img["src"]),
+                  href: "https:".concat(h.human.portrait.Θimg["src"]),
                 },
               },
             ],

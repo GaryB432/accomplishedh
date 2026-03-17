@@ -50,7 +50,7 @@ async function drawHumans(
       setTextContent(hd, "div.kf", h.knownFor);
       const img = hd.querySelector("img");
       if (img) {
-        const src = h.portrait.img["src"] ?? "//example.com/wtf";
+        const src = h.portrait.Θimg["src"] ?? "//example.com/wtf";
         img.src = `https:${src}`;
       }
       const pieces = hd.querySelector(".pieces");

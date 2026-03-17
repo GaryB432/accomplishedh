@@ -312,7 +312,7 @@
     <div>portrait</div>
     <div class="portrait-info">
       <div>
-        [object] &hellip;{(decodeURIComponent(portrait.img.src) ?? "?").slice(
+        [object] &hellip;{(decodeURIComponent(portrait.Θimg.src) ?? "?").slice(
           -20
         )}
       </div>

@@ -6,7 +6,7 @@
 
   let { portrait }: Props = $props();
 
-  let portraitImg = $derived(portrait.img);
+  let portraitImg = $derived(portrait.Θimg);
 </script>
 
 <section class="portrait">

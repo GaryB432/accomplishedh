@@ -8,7 +8,7 @@ export async function getFeatureds(): Promise<EuroHuman[]> {
   const s = { x: 2 * f, y: 3 * f };
 
   if (fhumans[1]) {
-    fhumans[1].portrait.img["src"] = `placehold.co/${s.x}x${s.y}?text=Portrait`;
+    fhumans[1].portrait.Θimg["src"] = `placehold.co/${s.x}x${s.y}?text=Portrait`;
   }
   // return [];
   return [...fhumans];
@@ -29,7 +29,7 @@ const fhumans: EuroHuman[] = [
     osfName: "Einstein, Albert",
     portrait: {
       above: "Albert Einstein",
-      img: {
+      Θimg: {
         alt: "Einstein 1921 by F Schmutzer - restoration.jpg",
         src: "//upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Einstein_1921_by_F_Schmutzer_-_restoration.jpg/220px-Einstein_1921_by_F_Schmutzer_-_restoration.jpg",
         decoding: "async",
@@ -62,7 +62,7 @@ const fhumans: EuroHuman[] = [
     osfName: "Blake, William",
     portrait: {
       above: "William Blake",
-      img: {
+      Θimg: {
         alt: "Blake in a portrait by Thomas Phillips (1807)",
         src: "//upload.wikimedia.org/wikipedia/commons/thumb/0/00/William_Blake_by_Thomas_Phillips.jpg/220px-William_Blake_by_Thomas_Phillips.jpg",
         decoding: "async",
@@ -94,7 +94,7 @@ const fhumans: EuroHuman[] = [
     osfName: "Descartes, Rene",
     portrait: {
       above: "René Descartes",
-      img: {
+      Θimg: {
         alt: "Frans Hals - Portret van René Descartes.jpg",
         src: "//upload.wikimedia.org/wikipedia/commons/thumb/7/73/Frans_Hals_-_Portret_van_Ren%C3%A9_Descartes.jpg/220px-Frans_Hals_-_Portret_van_Ren%C3%A9_Descartes.jpg",
         decoding: "async",
@@ -149,7 +149,7 @@ const fhumans: EuroHuman[] = [
     osfName: "Goethe, Johann von",
     portrait: {
       above: "Johann Wolfgang von Goethe",
-      img: {
+      Θimg: {
         alt: "Goethe in 1828, by Joseph Karl Stieler",
         src: "//upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Goethe_%28Stieler_1828%29.jpg/220px-Goethe_%28Stieler_1828%29.jpg",
         decoding: "async",
@@ -203,7 +203,7 @@ const fhumans: EuroHuman[] = [
     osfName: "Agricola (Georg Bauer)",
     portrait: {
       above: "Georgius Agricola",
-      img: {
+      Θimg: {
         alt: "Georgius Agricola.jpg",
         src: "//upload.wikimedia.org/wikipedia/commons/thumb/6/63/Georgius_Agricola.jpg/220px-Georgius_Agricola.jpg",
         decoding: "async",
@@ -235,7 +235,7 @@ const fhumans: EuroHuman[] = [
     osfName: "Morike, Eduard",
     portrait: {
       above: "Eduard Mörike",
-      img: {
+      Θimg: {
         alt: "Eduard Mörike.jpg",
         src: "//upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Eduard_M%C3%B6rike.jpg/220px-Eduard_M%C3%B6rike.jpg",
         decoding: "async",
