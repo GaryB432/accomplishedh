@@ -4,7 +4,7 @@ import { render } from "vitest-browser-svelte";
 import Lifespan from "./Lifespan.svelte";
 
 test("date of birth is in document", async () => {
-  const screen = render(Lifespan, {
+  const screen = await render(Lifespan, {
     entity: {
       id: "",
       type: "item",

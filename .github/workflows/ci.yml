@@ -29,6 +29,6 @@ jobs:
       - name: Lint
         run: pnpm --recursive --if-present run lint
       - name: Build
-        run: pnpm --recursive --if-presenrun build
+        run: pnpm --recursive --if-present run build
       - name: Test
         run: pnpm --recursive --if-present --use-stderr run test

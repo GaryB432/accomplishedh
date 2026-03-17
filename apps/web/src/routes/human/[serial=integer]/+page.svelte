@@ -365,7 +365,7 @@
       <button
         type="button"
         aria-label="close"
-        onclick={(e) => {
+        onclick={() => {
           showAdminPanel = false;
         }}>&times;</button
       >

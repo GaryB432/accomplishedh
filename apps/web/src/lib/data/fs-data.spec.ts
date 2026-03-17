@@ -186,6 +186,7 @@ describe("get Featured Human", () => {
   test("gets no featured humans", async () => {
     const log = vi.spyOn(instance, "log").mockReturnValue();
     const subject = await data_svc.getFeaturedHumans(false);
+    expect(log).not.toHaveBeenCalled();
     expect(subject).toEqual([]);
   });
 
@@ -205,5 +206,6 @@ describe("get Featured Human", () => {
     // `);
     expect(subject?.human.id).toEqual(JIM.id);
     expect(subject?.human.entity).toEqual({ id: "QJIM" });
+    expect(log).toHaveBeenCalledTimes(2);
   });
 });
