@@ -17,6 +17,7 @@ export const load: PageServerLoad = async (ctx) => {
     error(404, "Not found");
   }
   const admin = isGary(ctx.locals);
+  human.portrait = { img: {src: "https://placehold.co/320x500"} };
   return {
     admin,
     featured,

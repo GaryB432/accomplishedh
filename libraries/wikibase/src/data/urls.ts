@@ -61,6 +61,38 @@ export function entity_searh_url(name: string): string {
   return url.href;
 }
 
+export function thumbnail_query_url(
+  titles: (string | Claim)[],
+  size = 320,
+): string {
+  const url = new URL(urlsBases.wikidata);
+  url.searchParams.append("action", "query");
+  url.searchParams.append(
+    "titles",
+    titles
+      .map<string>((m) => {
+        let file_title: string;
+        if (typeof m === "string") {
+          file_title = m;
+        } else {
+          if (m.mainsnak.datatype === "commonsMedia") {
+            file_title = m.mainsnak.datavalue.value;
+          } else {
+            throw new Error("unexpected datatype");
+          }
+        }
+
+        return file_title;
+      })
+      .join("|"),
+  );
+  url.searchParams.append("prop", "pageimages");
+  url.searchParams.append("pithumbsize", String(size));
+  url.searchParams.append("format", "json");
+
+  return url.href;
+}
+
 export function image_query_url(titles: (string | Claim)[]): string {
   const url = new URL(urlsBases.commons);
   // const name_of_thing = 'x';
