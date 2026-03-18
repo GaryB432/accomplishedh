@@ -14,7 +14,7 @@ export async function getPortraitFromClaim(
   ) => Promise<Response>,
 ): Promise<(Portrait & { id: string }) | undefined> {
   const fetched = await fetcher(thumbnail_query_url([claim]));
-  let caption = "Hang On!";
+  const caption = "Hang On!";
   const above = "Soon!";
   const nop = (await fetched.json()) as CommonsResponse;
 
