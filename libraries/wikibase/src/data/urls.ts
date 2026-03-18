@@ -62,14 +62,29 @@ export function entity_searh_url(name: string): string {
 }
 
 export function thumbnail_query_url(
-  entity: string | string[],
-  size = 500,
+  titles: (string | Claim)[],
+  size = 320,
 ): string {
   const url = new URL(urlsBases.wikidata);
   url.searchParams.append("action", "query");
   url.searchParams.append(
     "titles",
-    (Array.isArray(entity) ? entity : [entity]).join(","),
+    titles
+      .map<string>((m) => {
+        let file_title: string;
+        if (typeof m === "string") {
+          file_title = m;
+        } else {
+          if (m.mainsnak.datatype === "commonsMedia") {
+            file_title = m.mainsnak.datavalue.value;
+          } else {
+            throw new Error("unexpected datatype");
+          }
+        }
+
+        return file_title;
+      })
+      .join("|"),
   );
   url.searchParams.append("prop", "pageimages");
   url.searchParams.append("pithumbsize", String(size));
