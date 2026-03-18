@@ -1,5 +1,5 @@
 import { type Portrait } from "@accomplishedh/shared";
-import { image_query_url } from "../../data/urls.js";
+import { image_query_url, thumbnail_query_url } from "../../data/urls.js";
 import type { Claim, CommonsResponse } from "../../types.js";
 
 type HTMLImgAttributes = {
@@ -13,28 +13,30 @@ export async function getPortraitFromClaim(
     init?: RequestInit,
   ) => Promise<Response>,
 ): Promise<(Portrait & { id: string }) | undefined> {
-  const fetched = await fetcher(image_query_url([claim]));
-  let caption = "";
+  const fetched = await fetcher(thumbnail_query_url([claim]));
+  const caption = "Hang On!";
   const above = "Soon!";
   const nop = (await fetched.json()) as CommonsResponse;
 
   if (Object.keys(nop.query.pages).length === 1) {
     const page = Object.values(nop.query.pages).at(0);
     if (page?.imageinfo!.length === 1) {
-      const { url: src, extmetadata, mime } = page.imageinfo.at(0)!;
+      console.log(page)
+      const src = "//example.com/hi.jpg"
+      
 
-      if (mime !== "image/jpeg") {
-        console.log(mime, "not today");
-        return undefined;
-      }
+      // if (mime !== "image/jpeg") {
+      //   console.log(mime, "not today");
+      //   return undefined;
+      // }
 
-      if (
-        extmetadata &&
-        extmetadata.ImageDescription &&
-        typeof extmetadata.ImageDescription.value === "string"
-      ) {
-        caption = extmetadata.ImageDescription.value;
-      }
+      // if (
+      //   extmetadata &&
+      //   extmetadata.ImageDescription &&
+      //   typeof extmetadata.ImageDescription.value === "string"
+      // ) {
+      //   caption = extmetadata.ImageDescription.value;
+      // }
 
       const img: HTMLImgAttributes = {
         src,
