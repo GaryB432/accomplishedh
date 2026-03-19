@@ -90,7 +90,7 @@ interface CommonsImageInfo {
 type CommonsResponsiveUrls = Record<number, string>;
 
 type CommonsBasicResponse = {
-  batchComplete?: unknown;
+  batchcomplete?: unknown;
   continue?: unknown;
   query: CommonsQuery;
 };
