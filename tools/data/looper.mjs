@@ -5,7 +5,7 @@
  * It can be modified for similar purposes.
  */
 
-const fs = require("fs");
+import { existsSync, readFileSync } from "fs";
 
 async function main() {
   /**
@@ -14,8 +14,8 @@ async function main() {
   const everybody = Array(16)
     .fill(0)
     .map((_, i) => `apps/web/static/data/shards/${i.toString(16)}.json`)
-    .filter(fs.existsSync)
-    .map((m) => fs.readFileSync(m, "utf-8"))
+    .filter(existsSync)
+    .map((m) => readFileSync(m, "utf-8"))
     .flatMap(JSON.parse);
 
   console.log(everybody.length);
@@ -24,14 +24,13 @@ async function main() {
     (h) => h.portrait.img["src"] === void 0,
   );
 
-  const pns = missingPortrait.map((h) => ({ h, shardKey: h.id.slice(4, 5) }));
+  const pns = everybody.map((h) => ({ h, shardKey: h.id.slice(4, 5) }));
 
   pns.forEach(({ h, shardKey }) => {
     // const {timestamp} = h.sr;
     console.log(["", h.name, h.serial, h.yob, h.id, shardKey, ""].join(" | "));
   });
-  pns.forEach(({ h, shardKey }) => {
-    console.log({ shardKey });
+  pns.forEach(({ h }) => {
     console.log(`ha updatewm ${h.id} --birth ${h.yob} --name "${h.name}"`);
   });
 
