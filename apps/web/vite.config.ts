@@ -3,6 +3,9 @@ import { sveltekit } from "@sveltejs/kit/vite";
 
 export default defineConfig({
   plugins: [sveltekit()],
+  build: {
+    cssTarget: "es2022",
+  },
   test: {
     expect: { requireAssertions: true },
     projects: [
