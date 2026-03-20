@@ -6,7 +6,7 @@ type HTMLImgAttributes = {
   src: string;
 };
 
-export async function getPortraitFromClaim(
+export async function ΘgetPortraitFromClaim(
   claim: Claim,
   fetcher: (
     input: string | URL | Request,

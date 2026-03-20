@@ -65,6 +65,7 @@ export function thumbnail_query_url(
   titles: (string | Claim)[],
   size = 320,
 ): string {
+  
   const url = new URL(urlsBases.wikidata);
   url.searchParams.append("action", "query");
   url.searchParams.append(
@@ -75,6 +76,7 @@ export function thumbnail_query_url(
         if (typeof m === "string") {
           file_title = m;
         } else {
+          console.log("not a string!", JSON.stringify(m));
           if (m.mainsnak.datatype === "commonsMedia") {
             file_title = m.mainsnak.datavalue.value;
           } else {
