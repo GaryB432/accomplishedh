@@ -1,6 +1,7 @@
 import { dev } from "$app/environment";
 import { FeDataSvc } from "$lib/data/fe-data.svelte";
 import type { FeaturedHuman } from "@accomplishedh/shared";
+import { refreshPortraitThumbnails } from "@accomplishedh/wikibase";
 import { error, redirect } from "@sveltejs/kit";
 import type { Actions, PageServerLoad } from "./$types";
 
@@ -13,10 +14,13 @@ export const load: PageServerLoad = async (ctx) => {
     if (!featuredHumans) {
       error(503, "some bad things");
     }
-    return { ro: { humans: featuredHumans.map((fh) => fh.human) } };
-  } catch (e) {
-    console.log(JSON.stringify(e));
-    error(503, "nope");
+    const ro = { humans: featuredHumans.map((fh) => fh.human) };
+
+    await refreshPortraitThumbnails(ctx.fetch, ro.humans);
+
+    return { ro };
+  } catch {
+    error(503, "other bad things");
   }
 };
 

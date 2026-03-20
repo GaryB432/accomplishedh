@@ -15,11 +15,7 @@
   import Share from "$lib/components/Share.svelte";
   import { flags } from "$lib/states/flags.svelte";
   import type { Property } from "@accomplishedh/shared";
-  import {
-    getPortraitFromClaim,
-    WIKIDATA_PERSON_PROPERTIES as P,
-    type Entity,
-  } from "@accomplishedh/wikibase";
+  import { type Entity } from "@accomplishedh/wikibase";
   import { imageSearchUrl, ogImage, socialMediaDescription } from "../helpers";
   import ReasonatorLink from "../ReasonatorLink.svelte";
   import WikibasePanel from "../WikibasePanel.svelte";
@@ -38,7 +34,7 @@
         const value = h[propName];
         return { name: propName, value, seq, source: "osf" };
       })
-      .filter((f) => f.value !== void 0)
+      .filter((f) => f.value !== void 0),
   );
 
   let kfbox: HTMLInputElement | undefined = $state();
@@ -55,7 +51,7 @@
     name,
     nobel,
     osfName,
-    portrait,
+    // portrait,
     props: humanProps,
     serial,
     yob,
@@ -64,13 +60,13 @@
   let showAdminPanel = $derived(data.admin);
 
   let wikihref = $derived(
-    `//en.wikipedia.org/wiki?curid=${data.human.sr!.pageid}`
+    `//en.wikipedia.org/wiki?curid=${data.human.sr!.pageid}`,
   );
 
   let entity: Entity = $derived(
     data.human.entity
       ? { ...data.human.entity, type: "item" }
-      : { id: "", type: "item" }
+      : { id: "", type: "item" },
   );
 
   let cleanProps = $derived(
@@ -78,11 +74,11 @@
       let { source } = p;
       source = source ?? "wikimedia";
       return { ...p, source };
-    })
+    }),
   );
 
   let derivedProps = $derived(
-    [...cleanProps, ...osfProps].sort((a, b) => a.name.localeCompare(b.name))
+    [...cleanProps, ...osfProps].sort((a, b) => a.name.localeCompare(b.name)),
   );
 
   let title = $derived(`Human Accomplishment: ${name}`);
@@ -92,20 +88,20 @@
   let description = $derived(socialMediaDescription({ name, knownFor }));
   let imgSearchHref = $derived(imageSearchUrl(data.human));
 
-  let image = $derived(ogImage(portrait));
+  let image = $derived(ogImage(data.human.portrait));
 
-  let { claims } = $derived(entity);
-  let imgClaims = $derived(claims ? claims[P.IMAGE] : []);
+  // let { claims } = $derived(entity);
+  // let imgClaims = $derived(claims ? claims[P.IMAGE] : []);
 
-  let portraitsPromise = $derived(
-    Promise.all(
-      browser && imgClaims
-        ? imgClaims.map(async (claim) => {
-            return await getPortraitFromClaim(claim, fetch);
-          })
-        : []
-    )
-  );
+  // let portraitsPromise = $derived(
+  //   Promise.all(
+  //     browser && imgClaims
+  //       ? imgClaims.map(async (claim) => {
+  //           return await ΘgetPortraitFromClaim(claim, fetch);
+  //         })
+  //       : []
+  //   )
+  // );
 
   let dialog: HTMLDialogElement | null = $state(null);
 
@@ -150,16 +146,12 @@
     </div>
   </div>
   <div class="sidebar">
-    <PortraitComponent {portrait}></PortraitComponent>
-    {#if flags.wikibaseFeatures}
-      {#await portraitsPromise}
-        <span>coming up</span>
-      {:then portraits}
-        {#each portraits.filter((b) => !!b) as portrait (portrait!.id)}
-          <PortraitComponent {portrait}></PortraitComponent>
-        {/each}
-      {/await}
+    {#if data.human}
+      <PortraitComponent portrait={data.human.portrait}></PortraitComponent>
+    {:else}
+      nope!
     {/if}
+
     <Inventory {inventory}></Inventory>
     <Era {era}></Era>
     <section class="featured-vp">
@@ -312,9 +304,9 @@
     <div>portrait</div>
     <div class="portrait-info">
       <div>
-        [object] &hellip;{(decodeURIComponent(portrait.img.src) ?? "?").slice(
-          -20
-        )}
+        [object] &hellip;{(
+          decodeURIComponent(data.human.portrait.img.src) ?? "?"
+        ).slice(-20)}
       </div>
       <div>
         <a href={imgSearchHref} target="_blank">

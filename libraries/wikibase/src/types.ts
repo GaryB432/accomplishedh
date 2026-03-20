@@ -90,7 +90,7 @@ interface CommonsImageInfo {
 type CommonsResponsiveUrls = Record<number, string>;
 
 type CommonsBasicResponse = {
-  batchComplete?: unknown;
+  batchcomplete?: unknown;
   continue?: unknown;
   query: CommonsQuery;
 };
@@ -108,19 +108,21 @@ export type CommonsPages = Record<string, CommonsPage>;
 
 export interface CommonsPage {
   imageinfo?: CommonsImageInfo[];
-  imagerepository: string;
+  imagerepository?: string;
   ns: number;
   pageid: number;
+  pageimage?: string;
   title: string;
+  thumbnail?: { width: number; height: number; source: string };
 }
 
 type CommonsCompleteResponse = CommonsBasicResponse & {
-  batchComplete: unknown;
+  batchcomplete?: unknown;
   continue?: never;
 };
 
 type CommonsContinueResponse = CommonsBasicResponse & {
-  batchComplete?: never;
+  batchcomplete?: never;
   continue: {
     continue: string;
     iistart: string;

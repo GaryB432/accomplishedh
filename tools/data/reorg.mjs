@@ -5,7 +5,7 @@
  * It can be modified for similar purposes.
  */
 
-const fs = require("fs");
+import { readFileSync, writeFileSync } from "fs";
 
 const byIdMap = new Map();
 
@@ -38,9 +38,7 @@ async function main() {
     /**
      *  @type {import('../../libraries/shared/src/index').EuroHuman[]>}
      */
-    const meuros = JSON.parse(
-      fs.readFileSync(`data/euros/m${mm}.json`, "utf-8"),
-    );
+    const meuros = JSON.parse(readFileSync(`data/euros/m${mm}.json`, "utf-8"));
     for (const h of meuros) {
       byIdMap.set(h.id, h);
       const fullSerial = h.serial.padStart(6, "0");
@@ -55,19 +53,19 @@ async function main() {
   // console.log(shardMap);
   for (const [key, humans] of shardMap.entries()) {
     humans.sort((a, b) => a.id.localeCompare(b.id));
-    fs.writeFileSync(
+    writeFileSync(
       `data/shards/${key}.json`,
       JSON.stringify(humans, undefined, 2).concat("\n"),
     );
     console.log(key, humans.length);
   }
 
-  fs.writeFileSync(
+  writeFileSync(
     `data/shards/index.json`,
     JSON.stringify([...shardMap.keys()].sort(), undefined, 2).concat("\n"),
   );
 
-  fs.writeFileSync(
+  writeFileSync(
     `data/serials.json`,
     JSON.stringify(
       Object.keys(serialToId)
