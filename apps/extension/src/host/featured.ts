@@ -1,11 +1,13 @@
-import { type EuroHuman, sleep } from "@accomplishedh/shared";
+import {  sleep, type WikiHuman } from "@accomplishedh/shared";
 
-export async function getFeatureds(): Promise<EuroHuman[]> {
+export async function getFeatureds(): Promise<WikiHuman[]> {
   // throw new Error('wtf error');
-  await sleep(1100);
+  await sleep(5000);
   // https://via.placeholder.com/468x60?text=Visit+Blogging.com+Now
   const f = 100;
   const s = { x: 2 * f, y: 3 * f };
+
+  // await refreshPortraitThumbnails();
 
   if (fhumans[1]) {
     fhumans[1].portrait.img["src"] = `placehold.co/${s.x}x${s.y}?text=Portrait`;
@@ -14,7 +16,7 @@ export async function getFeatureds(): Promise<EuroHuman[]> {
   return [...fhumans];
 }
 
-const fhumans: EuroHuman[] = [
+const fhumans: WikiHuman[] = [
   {
     adultbasic: "Switzerland",
     adultregion: "Switzerland",
