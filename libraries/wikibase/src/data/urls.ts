@@ -63,13 +63,14 @@ export function entity_searh_url(name: string): string {
 
 export function thumbnail_query_url(
   titles: (string | Claim)[],
-  size = 320,
+  size: number,
 ): string {
   const url = new URL(urlsBases.wikidata);
   url.searchParams.append("action", "query");
   url.searchParams.append(
     "titles",
     titles
+      .filter((m) => !!m)
       .map<string>((m) => {
         let file_title: string;
         if (typeof m === "string") {

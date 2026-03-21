@@ -5,14 +5,20 @@ import type { CommonsPage, CommonsResponse } from "../types.js";
 export async function refreshPortraitThumbnails(
   fetchr: typeof fetch,
   humans: Pick<WikiHuman, "entity" | "portrait">[],
+  width = 220,
 ): Promise<void> {
   const thumb_response = await fetchr(
     thumbnail_query_url(
       humans.filter((h) => h.entity !== void 0).map((h) => h.entity!.id),
+      width,
     ),
   );
 
   const reso = (await thumb_response.json()) as CommonsResponse;
+
+  if (!thumb_response.ok) {
+    throw new Error("incovenient thumb response");
+  }
 
   if (!reso.continue) {
     const pageMap = Object.values(reso.query.pages).reduce<

@@ -6,52 +6,6 @@ type HTMLImgAttributes = {
   src: string;
 };
 
-export async function ΘgetPortraitFromClaim(
-  claim: Claim,
-  fetcher: (
-    input: string | URL | Request,
-    init?: RequestInit,
-  ) => Promise<Response>,
-): Promise<(Portrait & { id: string }) | undefined> {
-  const fetched = await fetcher(thumbnail_query_url([claim]));
-  const caption = "Hang On!";
-  const above = "Soon!";
-  const nop = (await fetched.json()) as CommonsResponse;
-
-  if (Object.keys(nop.query.pages).length === 1) {
-    const page = Object.values(nop.query.pages).at(0);
-    if (page?.imageinfo!.length === 1) {
-      console.log(page);
-      const src = "//example.com/hi.jpg";
-
-      // if (mime !== "image/jpeg") {
-      //   console.log(mime, "not today");
-      //   return undefined;
-      // }
-
-      // if (
-      //   extmetadata &&
-      //   extmetadata.ImageDescription &&
-      //   typeof extmetadata.ImageDescription.value === "string"
-      // ) {
-      //   caption = extmetadata.ImageDescription.value;
-      // }
-
-      const img: HTMLImgAttributes = {
-        src,
-      };
-
-      return {
-        id: claim.id,
-        above,
-        caption,
-        img,
-      };
-    }
-  }
-  throw new Error("incomplete batch of images");
-}
-
 export async function getImageFromClaim(
   claim: Claim,
   fetcher: (
