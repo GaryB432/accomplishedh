@@ -1,9 +1,11 @@
 import { FeDataSvc } from "$lib/data/fe-data.svelte";
 import { isValidISO8601 } from "@accomplishedh/shared";
+import { refreshPortraitThumbnails } from "@accomplishedh/wikibase";
 import { error } from "@sveltejs/kit";
 import type { RequestHandler } from "./$types";
 
 export const GET: RequestHandler = async (ctx) => {
+  const width = ctx.url.searchParams.get("thumbnail_width");
   const dataService = await FeDataSvc.create(ctx.fetch);
   const fullISO =
     ctx.params.iso === "today" ? ctx.locals.todayISO : ctx.params.iso;
@@ -26,6 +28,9 @@ export const GET: RequestHandler = async (ctx) => {
     ["Access-Control-Allow-Methods", "GET,OPTIONS,PATCH,DELETE,POST,PUT"],
     ["X-Powered-By", "HA"],
   ]);
+
+  const thumbWidth = width ? parseInt(width) : 220;
+  await refreshPortraitThumbnails(ctx.fetch, featureds, thumbWidth);
 
   return new Response(JSON.stringify(featureds), {
     status: 200,
