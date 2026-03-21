@@ -128,11 +128,6 @@ const dev = {
       chrome: [path.resolve(__dirname, "./src/host/browser"), "default"],
     }),
   ],
-  resolve: {
-    alias: {
-      "./featured": path.resolve(__dirname, "./src/host/featured"),
-    },
-  },
   devServer: {
     // contentBase: './dist',
     // clientLogLevel: 'info',
