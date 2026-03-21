@@ -65,7 +65,6 @@ export function thumbnail_query_url(
   titles: (string | Claim)[],
   size = 320,
 ): string {
-  
   const url = new URL(urlsBases.wikidata);
   url.searchParams.append("action", "query");
   url.searchParams.append(

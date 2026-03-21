@@ -21,9 +21,8 @@ export async function ΘgetPortraitFromClaim(
   if (Object.keys(nop.query.pages).length === 1) {
     const page = Object.values(nop.query.pages).at(0);
     if (page?.imageinfo!.length === 1) {
-      console.log(page)
-      const src = "//example.com/hi.jpg"
-      
+      console.log(page);
+      const src = "//example.com/hi.jpg";
 
       // if (mime !== "image/jpeg") {
       //   console.log(mime, "not today");

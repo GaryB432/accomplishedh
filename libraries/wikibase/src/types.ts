@@ -112,8 +112,12 @@ export interface CommonsPage {
   ns: number;
   pageid: number;
   pageimage?: string;
+  thumbnail?: {
+    height: number;
+    source: string;
+    width: number;
+  };
   title: string;
-  thumbnail?: { width: number; height: number; source: string };
 }
 
 type CommonsCompleteResponse = CommonsBasicResponse & {
