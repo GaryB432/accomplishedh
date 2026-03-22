@@ -10,6 +10,10 @@ All notable changes to this project will be documented in this file.
 
 - none
 
+## 3.2 - 2026-03-22
+
+- Use proper-sized thumbnails from Wikipedia
+
 ## 3.1 - 2025-03-19
 
 - add img size to prevent pop-in
