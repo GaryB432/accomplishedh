@@ -431,6 +431,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-height: 4rem;
   }
 
   .footer {
