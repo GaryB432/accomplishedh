@@ -35,8 +35,6 @@ const pages = couplaQids.reduce((a, id) => {
   return a;
 }, {} as CommonsPages);
 
-console.log(pages);
-
 describe("PortraitThumbnail", () => {
   test("refreshes thumbnails", async () => {
     const subjects = couplaQids.map<Pick<WikiHuman, "portrait">>((id) => {

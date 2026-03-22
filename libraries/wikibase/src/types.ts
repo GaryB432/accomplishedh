@@ -92,6 +92,7 @@ type CommonsResponsiveUrls = Record<number, string>;
 type CommonsBasicResponse = {
   batchcomplete?: unknown;
   continue?: unknown;
+  error?: unknown;
   query: CommonsQuery;
 };
 

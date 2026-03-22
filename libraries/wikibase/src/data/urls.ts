@@ -69,27 +69,10 @@ export function thumbnail_query_url(
   url.searchParams.append("action", "query");
   url.searchParams.append(
     "titles",
-    titles
-      .filter((m) => !!m)
-      .map<string>((m) => {
-        let file_title: string;
-        if (typeof m === "string") {
-          file_title = m;
-        } else {
-          console.log("not a string!", JSON.stringify(m));
-          if (m.mainsnak.datatype === "commonsMedia") {
-            file_title = m.mainsnak.datavalue.value;
-          } else {
-            throw new Error("unexpected datatype");
-          }
-        }
-
-        return file_title;
-      })
-      .join("|"),
+    titles.filter((m) => typeof m === "string").join("|"),
   );
   url.searchParams.append("prop", "pageimages");
-  url.searchParams.append("pithumbsize", String(size));
+  url.searchParams.append("pithumbsize", `${size}`);
   url.searchParams.append("format", "json");
 
   return url.href;
