@@ -5,7 +5,7 @@ import { error } from "@sveltejs/kit";
 import type { RequestHandler } from "./$types";
 
 export const GET: RequestHandler = async (ctx) => {
-  const width = ctx.url.searchParams.get("thumbnail_width");
+  const width = ctx.url.searchParams.get("thumbnail_width") ?? "220";
   const dataService = await FeDataSvc.create(ctx.fetch);
   const fullISO =
     ctx.params.iso === "today" ? ctx.locals.todayISO : ctx.params.iso;
@@ -29,8 +29,7 @@ export const GET: RequestHandler = async (ctx) => {
     ["X-Powered-By", "HA"],
   ]);
 
-  const thumbWidth = width ? parseInt(width) : 220;
-  await refreshPortraitThumbnails(ctx.fetch, featureds, thumbWidth);
+  await refreshPortraitThumbnails(ctx.fetch, featureds, parseInt(width));
 
   return new Response(JSON.stringify(featureds), {
     status: 200,
