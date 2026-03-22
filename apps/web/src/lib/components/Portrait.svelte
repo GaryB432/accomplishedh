@@ -13,7 +13,7 @@
   <div class="above">{portrait.above ?? ''}</div>
   <div class="thumbnail">
     {#if portraitImg}
-      <img src={portraitImg.src} alt="" />
+      <img {...portrait.img} alt="" />
     {/if}
   </div>
   <div class="caption">{portrait.caption ?? ''}</div>
