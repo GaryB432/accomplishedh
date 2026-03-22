@@ -74,6 +74,7 @@ export function thumbnail_query_url(
   url.searchParams.append("prop", "pageimages");
   url.searchParams.append("pithumbsize", `${size}`);
   url.searchParams.append("format", "json");
+  url.searchParams.append("origin", "*");
 
   return url.href;
 }
