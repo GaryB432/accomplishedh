@@ -29,8 +29,8 @@ export async function refreshPortraitThumbnails(
     }, {});
 
     humans.forEach((h) => {
-      const tn = pageMap[h.entity!.id];
-      h.portrait = freshNewPortrait(tn, width);
+      const subjectThumbPage = pageMap[h.entity!.id];
+      h.portrait = freshNewPortrait(subjectThumbPage, width);
     });
   }
 }
@@ -40,21 +40,21 @@ function inferScheme(source: string): string {
 }
 
 function freshNewPortrait(
-  tn: CommonsPage | undefined,
+  subjectThumnail: CommonsPage | undefined,
   width: number,
 ): Portrait {
-  const container = { pages: {}, ...tn };
+  const commonsPage = { ...subjectThumnail };
   const height = Math.ceil((width * 11) / 9);
-  container.thumbnail ??= {
+  commonsPage.thumbnail ??= {
     source: `//placehold.co/${width}x${height}?text=kthx`,
     width,
     height,
   };
 
   const img = {
-    src: inferScheme(container.thumbnail.source),
-    height: String(container.thumbnail.height),
-    width: String(container.thumbnail.width),
+    src: inferScheme(commonsPage.thumbnail.source),
+    height: String(commonsPage.thumbnail.height),
+    width: String(commonsPage.thumbnail.width),
   };
 
   return { img };
