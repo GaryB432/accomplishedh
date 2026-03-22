@@ -108,7 +108,7 @@ export function shardKeyFor(h: Pick<EuroHuman, "id">): string {
   return h.id.slice(4, 5);
 }
 
-export async function sleep(ms = 1000) {
+export async function sleep(ms = 1000): Promise<void> {
   return new Promise((cb) => setTimeout(cb, ms));
 }
 

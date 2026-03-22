@@ -308,7 +308,3 @@ const query: { pages: CommonsPages } = {
     },
   },
 };
-const response_de_deux: CommonsResponse = {
-  batchComplete: "",
-  query: query,
-};

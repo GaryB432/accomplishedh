@@ -1,6 +1,7 @@
 import { FeDataSvc } from "$lib/data/fe-data.svelte";
 import type { FormDataHuman } from "$lib/data/utils";
 import { isGary } from "$lib/utils";
+import { refreshPortraitThumbnails } from "@accomplishedh/wikibase";
 import { error, redirect } from "@sveltejs/kit";
 import type { Actions, PageServerLoad } from "./$types";
 
@@ -17,6 +18,8 @@ export const load: PageServerLoad = async (ctx) => {
     error(404, "Not found");
   }
   const admin = isGary(ctx.locals);
+  
+  await refreshPortraitThumbnails(ctx.fetch, [human], 220);
   return {
     admin,
     featured,
@@ -58,6 +61,7 @@ export const actions: Actions = {
       };
 
       // await dataService.putHuman(formHuman);
+      console.log(formHuman);
       error(500, "not supported");
     }
     redirect(303, `/human/${serial}`);
