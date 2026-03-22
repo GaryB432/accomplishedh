@@ -1,4 +1,4 @@
-import { type WikiHuman } from "@accomplishedh/shared";
+import type { Portrait, WikiHuman } from "@accomplishedh/shared";
 import { thumbnail_query_url } from "../data/urls.js";
 import type { CommonsPage, CommonsResponse } from "../types.js";
 
@@ -19,7 +19,8 @@ export async function refreshPortraitThumbnails(
     throw new Error("incovenient thumb response");
   }
 
-  if (reso.batchcomplete === "" && reso.query) {
+  if (reso.batchcomplete === "") {
+    reso.query ??= { pages: {} };
     const pageMap = Object.values(reso.query.pages).reduce<
       Record<string, CommonsPage>
     >((a, pg) => {
@@ -27,24 +28,34 @@ export async function refreshPortraitThumbnails(
       return a;
     }, {});
 
-    humans
-      .filter((h) => h.entity && h.entity.id)
-      .forEach((h) => {
-        const tn = pageMap[h.entity!.id];
-
-        if (tn?.thumbnail) {
-          h.portrait = {
-            img: {
-              src: inferScheme(tn.thumbnail.source),
-              height: String(tn.thumbnail.height),
-              width: String(tn.thumbnail.width),
-            },
-          };
-        }
-      });
+    humans.forEach((h) => {
+      const subjectThumbPage = pageMap[h.entity!.id];
+      h.portrait = freshNewPortrait(subjectThumbPage, width);
+    });
   }
 }
 
 function inferScheme(source: string): string {
   return source.startsWith("//") ? `https:${source}` : source;
+}
+
+function freshNewPortrait(
+  subjectThumnail: CommonsPage | undefined,
+  width: number,
+): Portrait {
+  const commonsPage = { ...subjectThumnail };
+  const height = Math.ceil((width * 11) / 9);
+  commonsPage.thumbnail ??= {
+    source: `//placehold.co/${width}x${height}?text=kthx`,
+    width,
+    height,
+  };
+
+  const img = {
+    src: inferScheme(commonsPage.thumbnail.source),
+    height: String(commonsPage.thumbnail.height),
+    width: String(commonsPage.thumbnail.width),
+  };
+
+  return { img };
 }
