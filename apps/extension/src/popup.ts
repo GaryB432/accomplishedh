@@ -8,9 +8,8 @@ import {
   setTextContent,
   socialUrls,
 } from "@accomplishedh/web-ui";
-import { getFeatureds } from "./featured";
-
 import { environment } from "@environments/environment";
+import { getFeatureds } from "./featured";
 import "./styles/popup.scss";
 
 const el = document.querySelector(".popup-vp");

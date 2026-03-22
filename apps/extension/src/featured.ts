@@ -9,7 +9,7 @@ export async function getFeatureds(): Promise<WikiHuman[]> {
     setTimeout(async () => {
       try {
         const response = await fetch(
-          `${environment.haUrl}/api/featured/today?thumbnail_width=120`,
+          `${environment.haUrl}/api/featured/today?thumbnail_width=100`,
         );
         resolve(response.json());
       } catch (e) {
