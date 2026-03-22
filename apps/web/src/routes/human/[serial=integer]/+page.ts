@@ -7,7 +7,7 @@ import type { PageLoad } from "./$types";
 
 export const load = (async ({ data, fetch }) => {
   // TODO make sure this is defined and remove the check
-  if (!!data.human.entity?.id) {
+  if (data.human.entity?.id) {
     const fetched = await fetch(
       entities_get_url({
         ids: [data.human.entity!.id],
