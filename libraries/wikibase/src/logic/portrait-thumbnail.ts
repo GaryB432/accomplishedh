@@ -1,4 +1,4 @@
-import { Portrait, type WikiHuman } from "@accomplishedh/shared";
+import type { Portrait, WikiHuman } from "@accomplishedh/shared";
 import { thumbnail_query_url } from "../data/urls.js";
 import type { CommonsPage, CommonsResponse } from "../types.js";
 
