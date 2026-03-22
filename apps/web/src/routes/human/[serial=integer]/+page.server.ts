@@ -18,7 +18,8 @@ export const load: PageServerLoad = async (ctx) => {
     error(404, "Not found");
   }
   const admin = isGary(ctx.locals);
-  await refreshPortraitThumbnails(ctx.fetch, [human]);
+  
+  await refreshPortraitThumbnails(ctx.fetch, [human], 220);
   return {
     admin,
     featured,

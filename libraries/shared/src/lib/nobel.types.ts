@@ -16,9 +16,13 @@ export interface Prize {
 
 export interface Laureate {
   born: string;
+  bornCity?: string;
   bornCountry: string;
   bornCountryCode: string;
   died: string;
+  diedCity?: string;
+  diedCountry?: string;
+  diedCountryCode?: string;
   firstname: string;
   gender: "male" | "female" | "org";
   id: string;

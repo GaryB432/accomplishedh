@@ -16,7 +16,7 @@ export const load: PageServerLoad = async (ctx) => {
     }
     const ro = { humans: featuredHumans.map((fh) => fh.human) };
 
-    await refreshPortraitThumbnails(ctx.fetch, ro.humans);
+    await refreshPortraitThumbnails(ctx.fetch, ro.humans, 320);
 
     return { ro };
   } catch {

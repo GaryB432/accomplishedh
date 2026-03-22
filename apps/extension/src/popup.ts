@@ -8,10 +8,10 @@ import {
   setTextContent,
   socialUrls,
 } from "@accomplishedh/web-ui";
-import { getFeatureds } from "./featured";
-
 import { environment } from "@environments/environment";
+import { getFeatureds } from "./featured";
 import "./styles/popup.scss";
+import { a } from "vitest/dist/chunks/suite.d.FvehnV49.js";
 
 const el = document.querySelector(".popup-vp");
 const art = document.querySelector(".art");
@@ -50,8 +50,9 @@ async function drawHumans(
       setTextContent(hd, "div.kf", h.knownFor);
       const img = hd.querySelector("img");
       if (img) {
-        const src = h.portrait.img["src"] ?? "//example.com/wtf";
-        img.src = `https:${src}`;
+        Object.entries(h.portrait.img).forEach(([a, b]) => {
+          img.setAttribute(a, b);
+        });
       }
       const pieces = hd.querySelector(".pieces");
       if (pieces) {
