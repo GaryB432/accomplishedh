@@ -7,7 +7,6 @@ export async function refreshPortraitThumbnails(
   humans: Pick<WikiHuman, "entity" | "portrait">[],
   width: number,
 ): Promise<void> {
-
   const turl = thumbnail_query_url(
     humans.filter((h) => h.entity && h.entity.id).map((h) => h.entity!.id),
     width,

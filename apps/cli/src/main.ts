@@ -20,11 +20,11 @@ prog
 prog
   .command(
     "botd <today>",
-    "Lists persons born on this day for social media posting"
+    "Lists persons born on this day for social media posting",
   )
   .option(
     "-l, --listOnly",
-    "Skips posts.json and lists post bodies to console for copy/paste"
+    "Skips posts.json and lists post bodies to console for copy/paste",
   )
   .action(async (today, opts) => {
     const { botdCommand } = await import("./app/commands/botd.command.js");
