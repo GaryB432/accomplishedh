@@ -1,10 +1,19 @@
 <script lang="ts">
-  import type { PageData } from "./$types";
-  let { data }: { data: PageData } = $props();
-  let subject = $derived(`${data.subject} - Generated`);
+  let { data } = $props();
+  let featureds = $derived(data.featureds);
 </script>
-
-<h1>{subject} works</h1>
+<h1>{data.entity}</h1>
+<table>
+  <tbody>
+    {#each featureds as featured (featured.serial.concat(featured.on))}
+      <tr>
+        <td>
+          {featured.entity}
+        </td>
+      </tr>
+    {/each}
+  </tbody>
+</table>
 
 <style>
   h1 {
