@@ -19,7 +19,8 @@ export const load: PageServerLoad = async (ctx) => {
     await refreshPortraitThumbnails(ctx.fetch, ro.humans, 320);
 
     return { ro };
-  } catch {
+  } catch (e) {
+    console.error(JSON.stringify(e))
     error(503, "other bad things");
   }
 };
