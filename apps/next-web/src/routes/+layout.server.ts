@@ -18,11 +18,19 @@ async function fetchDayFeatureds(
   date: string,
 ): Promise<FeaturedEntity[]> {
   console.log(`fetureds for ${date} `);
-  const f = await fetch("/data/featureds.json");
-  if (!f.ok) {
-    throw new Error(f.statusText);
-  }
-  const featureds = (await f.json()) as FeaturedEntity[];
+  // const f = await fetch("/data/featureds.json");
+  // if (!f.ok) {
+  //   throw new Error(f.statusText);
+  // }
+  // const featureds = (await f.json()) as FeaturedEntity[];
+  // console.log(featureds);
 
-  return featureds;
+  const on = date;
+  return [
+    { on, serial: "8426", entity: "Q982518" },
+    { on, serial: "5318", entity: "Q57983" },
+    { on, serial: "2522", entity: "Q55030753" },
+    { on, serial: "87", entity: "Q76579" },
+    { on, serial: "2502", entity: "Q20882" },
+  ];
 }
