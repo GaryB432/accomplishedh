@@ -2,15 +2,15 @@ import type { Snak } from "./types/snaks.js";
 export type EntityId = string;
 export type Entity = Item;
 export type Entities = Record<EntityId, Entity>;
-export type ΘLanguageDictionary = {
+export type LanguageDictionary = {
   [languageKey: string]: { language?: string; value: string };
 };
 export type Item = {
   aliases?: Record<string, { language?: string; value: string }[]>;
   claims?: Claims;
-  descriptions?: ΘLanguageDictionary;
+  descriptions?: LanguageDictionary;
   id: string;
-  labels?: ΘLanguageDictionary;
+  labels?: LanguageDictionary;
   sitelinks?: Record<
     string,
     { badges: unknown[]; site: string; title: string; url: string }
