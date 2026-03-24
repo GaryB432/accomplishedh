@@ -1,6 +1,1 @@
-export type WikibaseEntity = {
-  dob: string;
-  id: string;
-  name: string;
-  notes?: string[];
-};
+export type { Entity, WikibaseResponse } from "@accomplishedh/wikibase";
