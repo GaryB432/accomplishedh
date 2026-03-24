@@ -1,11 +1,18 @@
-import { error } from "@sveltejs/kit";
 import type { PageLoad } from "./$types";
 
+type Iso = string;
+
+type WikbaseEntity = {
+  id: string;
+  name: string;
+  dob: Iso;
+  notes?: string[];
+};
+
 export const load: PageLoad = (ctx) => {
-  if (!ctx.params.id.startsWith("Q")) {
-    error(404, "use a Q");
-  }
+  const { id } = ctx.params;
+
   return {
-    entity : ctx.params.id
+    entity: id,
   };
 };

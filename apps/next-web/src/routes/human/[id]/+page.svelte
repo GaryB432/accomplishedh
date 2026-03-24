@@ -5,10 +5,10 @@
 <h1>{data.entity}</h1>
 <table>
   <tbody>
-    {#each featureds as featured (featured.serial.concat(featured.on))}
+    {#each featureds as featured (featured.id)}
       <tr>
         <td>
-          {featured.entity}
+          {featured.id}
         </td>
       </tr>
     {/each}
