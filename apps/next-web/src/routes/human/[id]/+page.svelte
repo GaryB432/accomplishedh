@@ -1,14 +1,14 @@
 <script lang="ts">
   let { data } = $props();
-  let featureds = $derived(data.featureds);
 </script>
+
 <h1>{data.entity}</h1>
 <table>
   <tbody>
-    {#each featureds as featured (featured.id)}
+    {#each data.featureds as featured (featured.qid)}
       <tr>
         <td>
-          {featured.id}
+          {featured.name}
         </td>
       </tr>
     {/each}
