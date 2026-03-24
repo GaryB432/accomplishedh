@@ -2,7 +2,7 @@
   let { data } = $props();
 </script>
 
-<h1>{data.entity}</h1>
+<h1>{data.subject}</h1>
 
 
 

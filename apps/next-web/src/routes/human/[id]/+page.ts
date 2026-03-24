@@ -27,6 +27,6 @@ export async function load(ctx) {
   
 
   return {
-    subject: subjects[id],
+    subject: toAccomplishedH( subjects[id]),
   };
 }
