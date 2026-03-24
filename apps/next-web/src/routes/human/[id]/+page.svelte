@@ -2,7 +2,7 @@
   let { data } = $props();
 </script>
 
-<h1>{data.subject}</h1>
+<h1>{data.subject.name}</h1>
 
 
 
@@ -22,7 +22,7 @@
   h1 {
     all: unset;
     display: block;
-    font-size: 6em;
+    font-size: 2em;
     margin-block-start: 0.67em;
     margin-block-end: 0.67em;
     margin-inline-start: 0px;

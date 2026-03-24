@@ -1,17 +1,12 @@
 import { fetchEntities } from "$lib/wikibase/api";
-import type { Entity, LanguageDictionary } from "@accomplishedh/wikibase";
+import type { AccomplishedHuman } from "$lib/wikibase/types";
+import { toAccomplishedH } from "$lib/wikibase/utils";
 import type { LayoutServerLoad } from "./$types";
 
 type FlatFeaturedInfo = {
   on: string;
   serial: string;
   entity: string;
-};
-
-type AccomplishedHuman = {
-  qid: string;
-  serial: string | undefined;
-  name: string;
 };
 
 export const load = (async (ctx) => {
@@ -62,27 +57,4 @@ async function fetchDayFeatureds(
     .map((f) => ({ ...f, serial: serials[f.qid] }));
   console.log(entitiesToGo);
   return entitiesToGo;
-}
-
-function toAccomplishedH(
-  subject: Entity,
-  index: number,
-  array: Entity[],
-): AccomplishedHuman {
-  const name: string = fromDictionary(subject.labels) ?? subject.id;
-  const h: AccomplishedHuman = {
-    qid: subject.id,
-    serial: undefined,
-    name,
-  };
-  return h;
-}
-
-function fromDictionary(
-  dictionary: Readonly<LanguageDictionary> | undefined,
-  language = "en",
-): string | undefined {
-  if (dictionary && language in dictionary) {
-    return dictionary[language].value;
-  }
 }

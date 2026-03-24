@@ -1,15 +1,6 @@
 import { fetchEntities } from "$lib/wikibase/api";
-import type { PageLoad } from "./$types";
+import { toAccomplishedH } from "$lib/wikibase/utils";
 import { error } from "@sveltejs/kit";
-
-type Iso = string;
-
-type WikbaseEntity = {
-  id: string;
-  name: string;
-  dob: Iso;
-  notes?: string[];
-};
 
 export async function load(ctx) {
   const { id } = ctx.params;
@@ -24,9 +15,7 @@ export async function load(ctx) {
     error(404, "Page not found");
   }
 
-  
-
   return {
-    subject: toAccomplishedH( subjects[id]),
+    subject: toAccomplishedH(subjects[id]),
   };
 }
