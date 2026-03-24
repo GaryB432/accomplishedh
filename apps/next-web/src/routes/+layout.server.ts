@@ -56,28 +56,33 @@ async function fetchDayFeatureds(
     "labels",
   ]);
 
-  const folks = Object.values(featuredEntities)
-    .map((f) => ({ ...f, serial: serials[f.id] }))
-    .map(toAccomplishedH);
-  folks.forEach((f) => (f.serial = serials[f.qid]));
-  console.log(folks);
-  return folks;
+  const entitiesToGo = Object.values(featuredEntities)
+    // .map((f) => ({ ...f, serial: serials[f.id] }))
+    .map(toAccomplishedH)
+    .map((f) => ({ ...f, serial: serials[f.qid] }));
+  console.log(entitiesToGo);
+  return entitiesToGo;
 }
 
 function toAccomplishedH(
-  value: Entity,
+  subject: Entity,
   index: number,
   array: Entity[],
 ): AccomplishedHuman {
-  const name: string = value.labels!["en"].value;
+  const name: string = wval(subject.labels) ?? subject.id;
   const h: AccomplishedHuman = {
-    qid: value.id,
+    qid: subject.id,
     serial: undefined,
     name,
   };
   return h;
 }
 
-function label(labels: LanguageDictionary, language = "en") {}
-
-// name: entity.labels!["en"].value,
+function wval(
+  dictionary: Readonly<LanguageDictionary> | undefined,
+  language = "en",
+): string | undefined {
+  if (dictionary && language in dictionary) {
+    return dictionary[language].value;
+  }
+}
