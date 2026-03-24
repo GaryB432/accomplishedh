@@ -69,7 +69,7 @@ function toAccomplishedH(
   index: number,
   array: Entity[],
 ): AccomplishedHuman {
-  const name: string = wval(subject.labels) ?? subject.id;
+  const name: string = fromDictionary(subject.labels) ?? subject.id;
   const h: AccomplishedHuman = {
     qid: subject.id,
     serial: undefined,
@@ -78,7 +78,7 @@ function toAccomplishedH(
   return h;
 }
 
-function wval(
+function fromDictionary(
   dictionary: Readonly<LanguageDictionary> | undefined,
   language = "en",
 ): string | undefined {

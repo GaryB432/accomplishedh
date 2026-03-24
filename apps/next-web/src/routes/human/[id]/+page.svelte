@@ -3,6 +3,9 @@
 </script>
 
 <h1>{data.entity}</h1>
+
+
+
 <table>
   <tbody>
     {#each data.featureds as featured (featured.qid)}
