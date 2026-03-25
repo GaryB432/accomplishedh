@@ -16,7 +16,7 @@
     {#each featureds as featured (featured.name)}
       <tr>
         <td>
-          <a href={resolve("/human/[id]", { id: featured.qid })}>
+          <a href={resolve("/human/[id]", { id: featured.wb.id })}>
             page for {featured.name}</a
           >
         </td>

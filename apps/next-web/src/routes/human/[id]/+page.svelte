@@ -1,14 +1,17 @@
 <script lang="ts">
   let { data } = $props();
+  $inspect(data);
 </script>
 
 <h1>{data.subject.name}</h1>
 
 
 
+
+
 <table>
   <tbody>
-    {#each data.featureds as featured (featured.qid)}
+    {#each data.featureds as featured (featured.wb.id)}
       <tr>
         <td>
           {featured.name}

@@ -13,7 +13,7 @@ export const meaning: { life: number } = {
 export function toAccomplishedH(subject: Entity): AccomplishedHuman {
   const name: string = fromDictionary(subject.labels) ?? subject.id;
   const h: AccomplishedHuman = {
-    qid: subject.id,
+    wb: subject,
     serial: undefined,
     name,
   };
