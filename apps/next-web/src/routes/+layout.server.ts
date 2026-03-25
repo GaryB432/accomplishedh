@@ -54,7 +54,7 @@ async function fetchDayFeatureds(
   const entitiesToGo = Object.values(featuredEntities)
     // .map((f) => ({ ...f, serial: serials[f.id] }))
     .map(toAccomplishedH)
-    .map((f) => ({ ...f, serial: serials[f.qid] }));
+    .map((f) => ({ ...f, serial: serials[f.wb.id] }));
   console.log(entitiesToGo);
   return entitiesToGo;
 }
