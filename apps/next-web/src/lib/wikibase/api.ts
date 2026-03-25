@@ -1,11 +1,9 @@
 import type { WikibaseResponse } from "@accomplishedh/wikibase";
 import { entities_get_url, type EntityPropertyName } from "./urls";
-import type { Entities } from "@accomplishedh/wikibase/types";
-// import type { Entity } from "@accomplishedh/wikibase";
-// import { entities_get_url, type EntityPropertyName } from "./urls";
+import type { Entities } from "@accomplishedh/wikibase/types"; // TODO no subdirs
 
 export async function fetchEntities(
-  fetch: (url: string) => Promise<Response>,
+  fetch: (url: string, init?: Readonly<RequestInit>) => Promise<Response>,
   ids: string[],
   props: EntityPropertyName[],
 ): Promise<Entities> {
@@ -17,7 +15,14 @@ export async function fetchEntities(
     props,
   });
 
-  const f = await fetch(entityUrl);
+  const f = await fetch(entityUrl, {
+    headers: [
+      [
+        "User-Agent",
+        "AccomplishedH/1.0 (https://www.humanaccomplishment.com/aout#bot/; editor@humanaccomplishment.com) web/7.0",
+      ],
+    ],
+  });
 
   if (!f.ok) {
     console.error(f.statusText);
