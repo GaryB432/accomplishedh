@@ -6,8 +6,6 @@
   "type": "module",
   "packageManager": "pnpm@10.18.0",
   "devDependencies": {
-    "@eslint/js": "^9.36.0",
-    "@testing-library/svelte": "^5.2.8",
     "@tsconfig/node20": "^20.1.9",
     "@tsconfig/strictest": "^2.0.8",
     "@types/crypto-js": "^4.2.2",

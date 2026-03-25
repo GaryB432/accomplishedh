@@ -5,8 +5,8 @@
 **/.svelte-kit/
 **/.vercel/
 apps/extension/zip/
-apps/web/test-results/
-apps/web/playwright-report/
+apps/*/test-results/
+apps/*/playwright-report/
 node_modules/
 tmp/
 .env
