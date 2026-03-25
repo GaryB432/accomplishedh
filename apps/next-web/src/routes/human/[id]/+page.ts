@@ -1,5 +1,5 @@
 import { fetchEntities } from "$lib/wikibase/api";
-import { toAccomplishedH } from "$lib/wikibase/utils";
+import { fromDictionary, toAccomplishedH } from "$lib/wikibase/utils";
 import { error } from "@sveltejs/kit";
 
 export async function load(ctx) {
@@ -32,12 +32,10 @@ export async function load(ctx) {
   //   );
   // }
 
-  const pppd = Object.values(pentities);
-  console.log(pppd.map((p) => p.title));
-
-  // const mps = await getps.json();
+  const pppd = Object.values(pentities).map(p=> fromDictionary(p.labels));
+  console.log(pppd)
 
   return {
-    subject,
+    h: toAccomplishedH(subject),
   };
 }
