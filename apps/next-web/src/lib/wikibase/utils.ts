@@ -12,6 +12,10 @@ export const meaning: { life: number } = {
 };
 export function toAccomplishedH(subject: Entity): AccomplishedHuman {
   const name: string = fromDictionary(subject.labels) ?? subject.id;
+
+  // const ps = Object.keys(subject.claims ?? {}).toSorted();
+  // console.log(JSON.stringify(ps));
+
   const h: AccomplishedHuman = {
     wb: subject,
     serial: undefined,
