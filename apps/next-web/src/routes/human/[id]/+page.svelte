@@ -3,11 +3,7 @@
   $inspect(data);
 </script>
 
-<h1>{data.subject.name}</h1>
-
-
-
-
+<h1>{data.subject}</h1>
 
 <table>
   <tbody>
