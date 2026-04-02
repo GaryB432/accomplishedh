@@ -164,7 +164,6 @@ function stringify_snak_value(
       break;
     }
     case "monolingualtext":
-
     case "quantity":
     case "wikibase-form":
     case "wikibase-lexeme": {

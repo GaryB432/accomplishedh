@@ -8,16 +8,17 @@ export default defineConfig([
   tseslint.configs.recommended,
   perf.configs["recommended-natural"],
   {
-    files: ["**/*.{js,mjs,cjs,ts,mts,cts}"],
-    plugins: { js, gb: perf },
     extends: ["js/recommended"],
+    files: ["**/*.{js,mjs,cjs,ts,mts,cts}"],
     languageOptions: { globals: { ...globals.browser, ...globals.node } },
+    plugins: { js, perf },
     rules: {
-      "no-unused-vars": "off",
+      "@typescript-eslint/no-undef": "off",
+      "@typescript-eslint/no-unused-vars": "off",
       "no-undef": "off",
+      "no-unused-vars": "off",
     },
   },
-
   {
     files: ["**/*.{ts,mts,cts}"],
     rules: {
