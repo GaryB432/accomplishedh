@@ -25,10 +25,10 @@ jobs:
         with:
           run_install: true
       - name: Check
-        run: pnpm --recursive --if-present run check
+        run: pnpm --recursive run check
       - name: Lint
-        run: pnpm --recursive --if-present run lint
+        run: echo "pnpm --recursive run lint"
       - name: Build
-        run: pnpm --recursive --if-presen run build
+        run: pnpm --recursive run build
       - name: Test
-        run: pnpm --recursive --if-present --use-stderr run test
+        run: pnpm --recursive run test

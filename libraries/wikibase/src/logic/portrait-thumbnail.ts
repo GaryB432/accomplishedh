@@ -11,11 +11,19 @@ export async function refreshPortraitThumbnails(
     humans.filter((h) => h.entity && h.entity.id).map((h) => h.entity!.id),
     width,
   );
+
   const thumb_response = await fetchr(turl);
+
+  if (!thumb_response.ok) {
+    throw new Error("Unexpected response from ", {
+      cause: thumb_response.statusText,
+    });
+  }
 
   const reso = (await thumb_response.json()) as CommonsResponse;
 
-  if (!thumb_response.ok || reso.error) {
+  if (reso.error) {
+    console.error(JSON.stringify(reso));
     throw new Error("incovenient thumb response");
   }
 
