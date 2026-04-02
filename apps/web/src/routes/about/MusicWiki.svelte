@@ -1,6 +1,6 @@
 <div class="top">
   <h1>Music Wiki</h1>
-  <p>but also applicable to us</p>
+  <p>but also fun for us</p>
 </div>
 <table class="wikitable sortable jquery-tablesorter">
   <thead>
