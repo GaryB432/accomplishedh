@@ -4,11 +4,6 @@ import adapter from "@sveltejs/adapter-vercel";
 const config = {
   kit: {
     adapter: adapter(),
-    alias: {
-      "@accomplishedh/shared": "../../libraries/shared/src",
-      "@accomplishedh/web-ui": "../../libraries/web-ui/src",
-      "@accomplishedh/wikibase": "../../libraries/wikibase/src",
-    },
   },
 
   vitePlugin: {
