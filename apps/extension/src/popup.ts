@@ -11,7 +11,6 @@ import {
 import { environment } from "@environments/environment";
 import { getFeatureds } from "./featured";
 import "./styles/popup.scss";
-import { a } from "vitest/dist/chunks/suite.d.FvehnV49.js";
 
 const el = document.querySelector(".popup-vp");
 const art = document.querySelector(".art");
