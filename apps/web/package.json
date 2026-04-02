@@ -17,7 +17,7 @@
   "devDependencies": {
     "@sveltejs/adapter-vercel": "^6.0.0",
     "@sveltejs/kit": "^2.48.0",
-    "@sveltejs/vite-plugin-svelte": "^6.0.0",
+    "@sveltejs/vite-plugin-svelte": "^7.0.0",
     "svelte": "^5.0.0",
     "svelte-check": "^4.0.0",
     "vitest-browser-svelte": "^2.1.0"
