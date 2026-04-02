@@ -32,8 +32,8 @@ export async function load(ctx) {
   //   );
   // }
 
-  const pppd = Object.values(pentities).map(p=> fromDictionary(p.labels));
-  console.log(pppd)
+  const pppd = Object.values(pentities).map((p) => fromDictionary(p.labels));
+  console.log(pppd, "are the first 25 Ps");
 
   return {
     h: toAccomplishedH(subject),

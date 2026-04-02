@@ -1,5 +1,3 @@
-import { fetchDetailedEntity } from "@accomplishedh/wikibase";
-
 export type EntityPropertyName =
   | "aliases"
   | "claims"
