@@ -1,6 +1,7 @@
+import type { Entity, LanguageDictionary } from "../types.js";
+
 import { WIKIDATA_PERSON_PROPERTIES as P } from "../constants.js";
 import { isoFrom } from "../data/timevalue.js";
-import type { Entity, ΘLanguageDictionary } from "../types.js";
 
 export function entityDateOfBirthIso(
   entity: Pick<Entity, "claims">,
@@ -20,7 +21,7 @@ export function entityDateOfBirthIso(
 }
 
 export function fromDictionary(
-  stringByLanguage?: ΘLanguageDictionary,
+  stringByLanguage?: LanguageDictionary,
   lang = "en",
 ): string {
   if (stringByLanguage) {

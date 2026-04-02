@@ -1,22 +1,14 @@
 import { Sequence } from "./sequence.js";
 
-interface Vector {
-  x: number;
-  y: number;
-}
-
-type State = "open" | "closed";
-
 export interface TipperOptions {
   state: State;
 }
 
-function px(n: number): string {
-  return `${n}px`;
-}
+type State = "closed" | "open";
 
-function pc(n: number): string {
-  return `${n}%`;
+interface Vector {
+  x: number;
+  y: number;
 }
 
 export class Tipper {
@@ -67,8 +59,8 @@ export class Tipper {
       },
       {
         duration,
-        fill: "forwards",
         easing: "ease-out",
+        fill: "forwards",
       },
     );
     const snapBack = new KeyframeEffect(
@@ -77,8 +69,8 @@ export class Tipper {
       {
         delay: pause,
         duration: 100,
-        fill: "forwards",
         easing: "linear",
+        fill: "forwards",
       },
     );
 
@@ -94,4 +86,12 @@ export class Tipper {
       translate: px(x),
     };
   }
+}
+
+function pc(n: number): string {
+  return `${n}%`;
+}
+
+function px(n: number): string {
+  return `${n}px`;
 }

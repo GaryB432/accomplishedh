@@ -1,12 +1,13 @@
 import { WikiHuman } from "@accomplishedh/shared";
 import { describe, expect, test } from "vitest";
+
 import { CommonsPage, CommonsPages, CommonsResponse, ItemId } from "../types";
 import { refreshPortraitThumbnails } from "./portrait-thumbnail";
 
 const couplaQids = ["Q9847", "Q7840"];
 
 function fetch(
-  input: string | URL | Request,
+  input: Request | string | URL,
   init?: RequestInit,
 ): Promise<Response> {
   const u = URL.parse(String(input));
@@ -23,12 +24,12 @@ const pages = couplaQids.reduce((a, id) => {
   const f: CommonsPage = {
     ns: 0,
     pageid: 0,
-    title: "unused",
     thumbnail: {
-      width: 15,
       height: 20,
       source: "//soon.com/".concat(id),
+      width: 15,
     },
+    title: "unused",
   };
 
   a[id] = { ...f };
@@ -41,7 +42,7 @@ describe("PortraitThumbnail", () => {
       return {
         entity: { id, type: "item" },
         portrait: {
-          img: { src: "//up/a/old-wide.jpg", other: "gone", moar: "86" },
+          img: { moar: "86", other: "gone", src: "//up/a/old-wide.jpg" },
         },
       };
     });
@@ -86,14 +87,14 @@ function commonsPagesResponse(qids: ItemId[]): CommonsResponse {
       pages: qids
         .map<CommonsPage>((title, n) => {
           return {
-            pageid: 500 + n,
             ns: 0,
-            title,
+            pageid: 500 + n,
             thumbnail: {
+              height: 0,
               source: `https://up.wm.org/wp/commons/thumb/a/${title}.jpg`,
               width: 220,
-              height: 0,
             },
+            title,
           };
         })
         .reduce((a, b) => {

@@ -1,5 +1,7 @@
 import type { EuroHuman, Portrait } from "@accomplishedh/shared";
+
 import { describe, expect, test } from "vitest";
+
 import { featuredCommand, fillout, portraitedOnly } from "./featured.command";
 
 describe("Featured Command", () => {
@@ -18,7 +20,6 @@ describe("Featured Command", () => {
     const defh: EuroHuman = {
       adultbasic: "Britain",
       adultregion: "E.SE",
-      yob: "1903",
       death: "1975-05-20T00:00:00.000Z",
       dob: "01-10",
       era: "1800+",
@@ -33,6 +34,7 @@ describe("Featured Command", () => {
       props: [],
       serial: "-1",
       sr: undefined,
+      yob: "1903",
     };
 
     const portraits: Portrait[] = [

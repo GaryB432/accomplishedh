@@ -1,7 +1,8 @@
 import {
-  highlightDefiniteArticle,
   type EuroHuman,
+  highlightDefiniteArticle,
 } from "@accomplishedh/shared";
+
 import { coolors } from "./style-functions.js";
 
 const twitter = {
@@ -15,15 +16,11 @@ const twitter = {
 };
 
 const htags: Record<string, string> = {
-  "Music.West": "#music",
-  "Lit.West": "#literature",
   "Art.West": "#art",
+  "Lit.West": "#literature",
+  "Music.West": "#music",
   Science: "#science",
 };
-
-export function humanUrl(human: Pick<EuroHuman, "serial">): string {
-  return `https://humanaccomplishment.com/human/${human.serial}`;
-}
 
 type CheckedTweet = {
   enhancedText: string;
@@ -31,34 +28,8 @@ type CheckedTweet = {
   valid: boolean;
 };
 
-function enhanceParts(...parts: string[]) {
-  return parts
-    .map((part, i) => (i % 2 === 0 ? coolors.good(part) : coolors.warn(part)))
-    .join("");
-}
-
-function checkForFootnotes(text: string): CheckedTweet {
-  const parts: string[] = [];
-  let ctext = text;
-  let match: RegExpMatchArray | null = null;
-  do {
-    match = ctext.match(/\s*\[\d+\]/);
-    if (match) {
-      parts.push(ctext.slice(0, match.index), match[0]);
-      ctext = ctext.slice((match.index ?? 0) + match[0].length);
-    } else {
-      parts.push(ctext);
-    }
-  } while (match);
-  const enhancedText = enhanceParts(...parts);
-  const valid = parts.length === 1;
-
-  const raw = text;
-  return { enhancedText, raw, valid };
-}
-
 export function checkForTweet(
-  human: Pick<EuroHuman, "name" | "knownFor" | "inventory" | "yob" | "serial">,
+  human: Pick<EuroHuman, "inventory" | "knownFor" | "name" | "serial" | "yob">,
 ): CheckedTweet {
   const inventories = Array.isArray(human.inventory)
     ? human.inventory
@@ -109,4 +80,34 @@ export function checkForTweet(
   }
   const raw = text;
   return { enhancedText, raw, valid };
+}
+
+export function humanUrl(human: Pick<EuroHuman, "serial">): string {
+  return `https://humanaccomplishment.com/human/${human.serial}`;
+}
+
+function checkForFootnotes(text: string): CheckedTweet {
+  const parts: string[] = [];
+  let ctext = text;
+  let match: null | RegExpMatchArray = null;
+  do {
+    match = ctext.match(/\s*\[\d+\]/);
+    if (match) {
+      parts.push(ctext.slice(0, match.index), match[0]);
+      ctext = ctext.slice((match.index ?? 0) + match[0].length);
+    } else {
+      parts.push(ctext);
+    }
+  } while (match);
+  const enhancedText = enhanceParts(...parts);
+  const valid = parts.length === 1;
+
+  const raw = text;
+  return { enhancedText, raw, valid };
+}
+
+function enhanceParts(...parts: string[]) {
+  return parts
+    .map((part, i) => (i % 2 === 0 ? coolors.good(part) : coolors.warn(part)))
+    .join("");
 }

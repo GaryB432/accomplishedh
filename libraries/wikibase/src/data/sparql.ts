@@ -1,8 +1,8 @@
-export function greet(name: string): string {
-  return `sparql says: hello to ${name}`;
-}
 export function add(a: number, b: number): number {
   return a + b;
+}
+export function greet(name: string): string {
+  return `sparql says: hello to ${name}`;
 }
 export const meaning: { life: number } = {
   life: 42,
@@ -11,8 +11,8 @@ import { type EuroHuman } from "@accomplishedh/shared";
 
 const inventoryFields = new Map<string, string>([
   ["Art.West", "Q36649"],
-  ["Music.West", "Q9730"],
   ["Lit.West", "Q8242"],
+  ["Music.West", "Q9730"],
   ["Science", "Q336"],
 ]);
 

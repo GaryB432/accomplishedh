@@ -1,6 +1,7 @@
 import * as AdmZip from "adm-zip";
 import { existsSync, readFileSync } from "node:fs";
 import { dirname, join, normalize } from "node:path";
+
 import { getParts, schemaValidate } from "./manifest/index.mjs";
 
 const extensionRoot = normalize(join(import.meta.dirname, "../"));

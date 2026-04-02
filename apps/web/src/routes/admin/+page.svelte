@@ -11,7 +11,9 @@
     type FeaturedHuman,
   } from "@accomplishedh/shared";
   import { onMount } from "svelte";
+
   import type { PageData } from "./$types";
+
   import WikibasePanel from "./WikibasePanel.svelte";
 
   interface Props {
@@ -84,12 +86,12 @@
     ]);
     // selected = fwh[0].human;
 
-    const eraData: [string, string | number][] = [
+    const eraData: [string, number | string][] = [
       ["Era", "Humans"],
       ...Object.entries(fmap).sort((a, b) => a[0].localeCompare(b[0])),
     ];
 
-    const inventoryData: [string, string | number][] = [
+    const inventoryData: [string, number | string][] = [
       ["Inventory", "Humans"],
       ...Object.entries(imap).sort((a, b) => a[0].localeCompare(b[0])),
     ];
@@ -100,10 +102,10 @@
       });
       google.charts.setOnLoadCallback(() => {
         const timelineTable = new google.visualization.DataTable();
-        timelineTable.addColumn({ type: "string", id: "Inventory" });
-        timelineTable.addColumn({ type: "string", id: "Human" });
-        timelineTable.addColumn({ type: "date", id: "Born" });
-        timelineTable.addColumn({ type: "date", id: "Died" });
+        timelineTable.addColumn({ id: "Inventory", type: "string" });
+        timelineTable.addColumn({ id: "Human", type: "string" });
+        timelineTable.addColumn({ id: "Born", type: "date" });
+        timelineTable.addColumn({ id: "Died", type: "date" });
         const timelineChart = new google.visualization.Timeline(
           timelineChartHost!
         );
@@ -114,17 +116,17 @@
 
         const timelineOptions: google.visualization.TimelineOptions = {
           height: 1000,
-          width: timelineWidth - 40,
           timeline: { singleColor: "rgb(31, 186, 186)" },
+          width: timelineWidth - 40,
         };
         timelineTable.addRows(featuredTimeline);
         timelineChart.draw(timelineTable, timelineOptions);
 
         const baseChartOptions: google.visualization.PieChartOptions = {
-          width: pieWidth,
           height: pieWidth,
           legend: { position: "left" },
           pieHole: 0.5,
+          width: pieWidth,
         };
 
         const eraChart = new google.visualization.PieChart(pieChartHost!);
@@ -156,10 +158,10 @@
   });
 
   const dtf = Intl.DateTimeFormat("en-US", {
+    day: "numeric",
+    month: "long",
     timeZone: "UTC",
     weekday: "long",
-    month: "long",
-    day: "numeric",
   });
 </script>
 

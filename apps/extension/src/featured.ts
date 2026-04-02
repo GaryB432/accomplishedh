@@ -1,4 +1,5 @@
 import type { WikiHuman } from "@accomplishedh/shared";
+
 import { environment } from "@environments/environment";
 
 export async function getFeatureds(): Promise<WikiHuman[]> {

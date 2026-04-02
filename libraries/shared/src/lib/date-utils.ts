@@ -13,24 +13,6 @@ export function addDays(from: ISODate, days: number): ISODate | undefined {
   throw new Error("wtf unexpected date");
 }
 
-export function nextDate(mmdd: string, now: ISODate): ISODate {
-  const nowy = now.slice(0, 4);
-  const check = mmdd.slice(5, 10);
-  const nexty = (parseInt(nowy) + 1).toString();
-  const passed = check.localeCompare(now.slice(5, 10));
-  const sendmd = `${passed < 0 ? nexty : nowy}-${check}`;
-  return `${sendmd}T00:00:00.000Z`;
-}
-
-export function monthCheck(a: ISODate, bmd: string): boolean {
-  const md = (s: string): string => s.slice(5, 7);
-  if (a === void 0) {
-    throw new Error("cannot filter that");
-  }
-  const amd = md(a);
-  return amd.localeCompare(bmd) === 0;
-}
-
 export function dayCompare(
   a: ISODate | undefined,
   b: ISODate | undefined,
@@ -56,4 +38,22 @@ export function isValidISO8601(s: string): boolean {
 
 export function midday(subject: ISODate): ISODate {
   return subject.slice(0, 10).concat("T12:00:00.000Z");
+}
+
+export function monthCheck(a: ISODate, bmd: string): boolean {
+  const md = (s: string): string => s.slice(5, 7);
+  if (a === void 0) {
+    throw new Error("cannot filter that");
+  }
+  const amd = md(a);
+  return amd.localeCompare(bmd) === 0;
+}
+
+export function nextDate(mmdd: string, now: ISODate): ISODate {
+  const nowy = now.slice(0, 4);
+  const check = mmdd.slice(5, 10);
+  const nexty = (parseInt(nowy) + 1).toString();
+  const passed = check.localeCompare(now.slice(5, 10));
+  const sendmd = `${passed < 0 ? nexty : nowy}-${check}`;
+  return `${sendmd}T00:00:00.000Z`;
 }

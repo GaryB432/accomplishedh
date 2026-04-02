@@ -14,7 +14,7 @@ prog
   .action(async (start, opts) => {
     const { featuredCommand } =
       await import("./app/commands/featured.command.js");
-    void (await featuredCommand({ start, opts }));
+    void (await featuredCommand({ opts, start }));
   });
 
 prog
@@ -28,7 +28,7 @@ prog
   )
   .action(async (today, opts) => {
     const { botdCommand } = await import("./app/commands/botd.command.js");
-    void (await botdCommand({ today, opts }));
+    void (await botdCommand({ opts, today }));
   });
 
 // Display help message when `-h` or `--help` appears

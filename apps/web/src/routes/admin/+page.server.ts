@@ -1,7 +1,9 @@
+import type { FeaturedHuman } from "@accomplishedh/shared";
+
 import { FeDataSvc } from "$lib/data/fe-data.svelte";
 import { isGary } from "$lib/utils";
-import type { FeaturedHuman } from "@accomplishedh/shared";
-import { error, redirect, type Actions } from "@sveltejs/kit";
+import { type Actions, error, redirect } from "@sveltejs/kit";
+
 import type { PageServerLoad } from "./$types";
 
 export const load: PageServerLoad = async (ctx) => {

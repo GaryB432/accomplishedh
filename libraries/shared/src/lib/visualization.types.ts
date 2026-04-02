@@ -1,17 +1,17 @@
+export interface IDataTable {
+  cols: IDataColumn[];
+  rows: IDataRow[];
+}
 interface IDataColumn {
   id: string;
   label?: string;
-  type: "string" | "number" | "boolean" | "date" | "datetime" | "timeofday";
-}
-interface IDataRowColumn {
-  f?: string;
-  p?: unknown;
-  v: string | number | Date;
+  type: "boolean" | "date" | "datetime" | "number" | "string" | "timeofday";
 }
 interface IDataRow {
   c: IDataRowColumn[];
 }
-export interface IDataTable {
-  cols: IDataColumn[];
-  rows: IDataRow[];
+interface IDataRowColumn {
+  f?: string;
+  p?: unknown;
+  v: Date | number | string;
 }

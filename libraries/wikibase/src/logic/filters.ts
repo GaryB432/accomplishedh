@@ -1,19 +1,9 @@
 import type { EuroHuman } from "@accomplishedh/shared";
+
 import type { Entities, Entity } from "../types.js";
+
 import { WIKIDATA_PERSON_PROPERTIES as P } from "../constants.js";
 import { isoFrom } from "../data/timevalue.js";
-
-export function ΘfilterYob(
-  flens: Readonly<Entities>,
-  h: Pick<EuroHuman, "yob">,
-): Entities {
-  return Object.values(flens)
-    .filter((e) => yobPredicate(e, h))
-    .reduce((a, b) => {
-      a[b.id] = b;
-      return a;
-    }, {} as Entities);
-}
 
 /**
  * return the first value of a record type
@@ -30,6 +20,18 @@ export function firstAndOnly(e: Entities): Entity {
   throw new TypeError(`expected one element`, {
     cause: JSON.stringify(keys),
   });
+}
+
+export function ΘfilterYob(
+  flens: Readonly<Entities>,
+  h: Pick<EuroHuman, "yob">,
+): Entities {
+  return Object.values(flens)
+    .filter((e) => yobPredicate(e, h))
+    .reduce((a, b) => {
+      a[b.id] = b;
+      return a;
+    }, {} as Entities);
 }
 
 /**

@@ -10,17 +10,17 @@
   const infos: ExtensionInfo[] = [
     { browser: 'firefox' },
     {
+      brand: 'Google Chrome',
       browser: 'chrome',
       storeUrl:
         'https://chrome.google.com/webstore/detail/human-accomplishment/meaaaeangcmbemianlihbkoldlhfijfa',
-      brand: 'Google Chrome',
     },
     { browser: 'opera' },
     {
+      brand: 'Microsoft Edge',
       browser: 'edge',
       storeUrl:
         'https://microsoftedge.microsoft.com/addons/detail/human-accomplishment/hnaklphmmbjfbjlmdjnogiiclomigepl',
-      brand: 'Microsoft Edge',
     },
   ];
 

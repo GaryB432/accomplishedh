@@ -1,20 +1,5 @@
 import type { Laureate } from "./nobel.types.js";
 
-export interface Life {
-  born?: string | undefined;
-  died?: string | undefined;
-}
-export interface Property {
-  name: string;
-  seq: number;
-  source: "wikimedia" | "osf" | "ha";
-  value: string;
-}
-export interface Portrait {
-  above?: string | undefined;
-  caption?: string | undefined;
-  img: Record<string, string>;
-}
 export interface EuroHuman {
   adultbasic: string;
   adultregion: string;
@@ -26,15 +11,16 @@ export interface EuroHuman {
   knownFor: string;
   name: string;
   nobel?:
+    | undefined
     | {
         laureate: Laureate;
-      }
-    | undefined;
+      };
   osfName: string;
   portrait: Portrait;
   props: Property[];
   serial: string;
   sr:
+    | undefined
     | {
         ns: number;
         pageid: number;
@@ -43,23 +29,47 @@ export interface EuroHuman {
         timestamp: string;
         title: string;
         wordcount: number;
-      }
-    | undefined;
+      };
   yob: string;
+}
+export interface FeaturedHuman extends FeaturedSubject {
+  human: WikiHuman;
+}
+export interface FeaturedSubject {
+  human: Pick<EuroHuman, "id">;
+  id: string;
+  stamp: string;
+}
+export interface Life {
+  born?: string | undefined;
+  died?: string | undefined;
+}
+
+export interface Portrait {
+  above?: string | undefined;
+  caption?: string | undefined;
+  img: Record<string, string>;
+}
+
+export interface Property {
+  name: string;
+  seq: number;
+  source: "ha" | "osf" | "wikimedia";
+  value: string;
 }
 
 export interface WikiHuman extends EuroHuman {
   entity?: { id: string };
 }
 
-export interface FeaturedSubject {
-  human: Pick<EuroHuman, "id">;
-  id: string;
-  stamp: string;
-}
-
-export interface FeaturedHuman extends FeaturedSubject {
-  human: WikiHuman;
+// tested here. copied to apps/extension/src/scripts/sw.ts
+export function diffCount(newIds: string[], savedIds: string[]): number {
+  return newIds.reduce<number>((counter, id) => {
+    if (!savedIds.includes(id)) {
+      counter++;
+    }
+    return counter;
+  }, 0);
 }
 
 export function highlightDefiniteArticle(message: string): {
@@ -75,14 +85,11 @@ export function highlightDefiniteArticle(message: string): {
   return { marker, p };
 }
 
-// tested here. copied to apps/extension/src/scripts/sw.ts
-export function diffCount(newIds: string[], savedIds: string[]): number {
-  return newIds.reduce<number>((counter, id) => {
-    if (!savedIds.includes(id)) {
-      counter++;
-    }
-    return counter;
-  }, 0);
+export function padSerialForKey(serial: string): string {
+  return serial.padStart(6, "0").slice(0, 6);
+}
+export function shardKeyFor(h: Pick<EuroHuman, "id">): string {
+  return h.id.slice(4, 5);
 }
 
 export function shuffle<T>(array: T[]): T[] {
@@ -100,13 +107,6 @@ export function shuffle<T>(array: T[]): T[] {
   }
   return array;
 }
-export function padSerialForKey(serial: string): string {
-  return serial.padStart(6, "0").slice(0, 6);
-}
-
-export function shardKeyFor(h: Pick<EuroHuman, "id">): string {
-  return h.id.slice(4, 5);
-}
 
 export async function sleep(ms = 1000): Promise<void> {
   return new Promise((cb) => setTimeout(cb, ms));
@@ -114,13 +114,30 @@ export async function sleep(ms = 1000): Promise<void> {
 
 // TODO coverage
 const replacements: Record<string, string> = {
+  '"': "&quot;",
   "&": "&amp;",
+  "'": "&#39;",
   "<": "&lt;",
   ">": "&gt;",
-  "'": "&#39;",
-  '"': "&quot;",
 };
 const pattern = new RegExp(Object.keys(replacements).join("|"), "gi");
+
+export function batchify<T>(items: T[], batchSize = 10): T[][] {
+  if (batchSize < 1) {
+    return [items];
+  }
+  let ndx = 0;
+  return items.reduce(
+    (nested, item) => {
+      if (batchSize === nested[ndx]!.length) {
+        nested[++ndx] = [];
+      }
+      nested[ndx]!.push(item);
+      return nested;
+    },
+    [[]] as T[][],
+  );
+}
 
 export function encodeHTML(unencoded: string): string {
   return unencoded.replace(pattern, function (matched) {
@@ -165,14 +182,6 @@ async function* batchAsyncIterable<T>(
   }
 }
 
-// Example usage:
-async function* simulateDataSource(): AsyncGenerator<number> {
-  for (let i = 0; i < 15; i++) {
-    await new Promise((resolve) => setTimeout(resolve, 100)); // Simulate async operation
-    yield i;
-  }
-}
-
 async function processBatches() {
   const dataSource = simulateDataSource();
   const batchSize = 5;
@@ -187,21 +196,12 @@ async function processBatches() {
   console.log("Finished batch processing.");
 }
 
-export function batchify<T>(items: T[], batchSize = 10): T[][] {
-  if (batchSize < 1) {
-    return [items];
+// Example usage:
+async function* simulateDataSource(): AsyncGenerator<number> {
+  for (let i = 0; i < 15; i++) {
+    await new Promise((resolve) => setTimeout(resolve, 100)); // Simulate async operation
+    yield i;
   }
-  let ndx = 0;
-  return items.reduce(
-    (nested, item) => {
-      if (batchSize === nested[ndx]!.length) {
-        nested[++ndx] = [];
-      }
-      nested[ndx]!.push(item);
-      return nested;
-    },
-    [[]] as T[][],
-  );
 }
 
 // processBatches();

@@ -1,35 +1,6 @@
 import Ajv from "ajv";
+
 import * as schemaDocument from "./chrome-manifest.json" with { type: "json" };
-
-export function schemaValidate(json) {
-  const manifest = JSON.parse(json);
-
-  const ajv = new Ajv({
-    // strict: false,
-    // allErrors: true,
-    // verbose: false,
-    // $data: true,
-    formats: {
-      "content-security-policy": { type: "string", validate: () => false },
-      "mime-type": { type: "string", validate: () => false },
-      "glob-pattern": { type: "string", validate: () => false },
-      "match-pattern": { type: "string", validate: () => true },
-      permission: { type: "string", validate: () => true },
-    },
-  });
-
-  const messages = [];
-  const validate = ajv.compile(schemaDocument);
-  const success = validate(manifest);
-  if (!success && validate.errors) {
-    // console.log(JSON.stringify(validate.errors, undefined, 2));
-    for (const ef of validate.errors) {
-      messages.push(`${ef.instancePath} ${ef.message}`);
-    }
-  }
-
-  return { messages, manifest, success };
-}
 
 export function getParts(manifest) {
   if (manifest.manifest_version !== 3) {
@@ -60,4 +31,34 @@ export function getParts(manifest) {
     content.set(manifest.background.service_worker, "script");
   }
   return content;
+}
+
+export function schemaValidate(json) {
+  const manifest = JSON.parse(json);
+
+  const ajv = new Ajv({
+    // strict: false,
+    // allErrors: true,
+    // verbose: false,
+    // $data: true,
+    formats: {
+      "content-security-policy": { type: "string", validate: () => false },
+      "glob-pattern": { type: "string", validate: () => false },
+      "match-pattern": { type: "string", validate: () => true },
+      "mime-type": { type: "string", validate: () => false },
+      permission: { type: "string", validate: () => true },
+    },
+  });
+
+  const messages = [];
+  const validate = ajv.compile(schemaDocument);
+  const success = validate(manifest);
+  if (!success && validate.errors) {
+    // console.log(JSON.stringify(validate.errors, undefined, 2));
+    for (const ef of validate.errors) {
+      messages.push(`${ef.instancePath} ${ef.message}`);
+    }
+  }
+
+  return { manifest, messages, success };
 }

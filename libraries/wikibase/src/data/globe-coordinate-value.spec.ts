@@ -3,19 +3,19 @@ import { describe, expect, test } from "vitest";
 import { serialize } from "./globe-coordinate-value";
 
 const snak = {
-  snaktype: "value",
-  property: "P625",
+  datatype: "globe-coordinate",
   datavalue: {
+    type: "globecoordinate" as const,
     value: {
+      altitude: null,
+      globe: "http://www.wikidata.org/entity/Q2",
       latitude: 48.148333,
       longitude: 11.57,
-      altitude: null,
       precision: 0.000001,
-      globe: "http://www.wikidata.org/entity/Q2",
     },
-    type: "globecoordinate" as const,
   },
-  datatype: "globe-coordinate",
+  property: "P625",
+  snaktype: "value",
 };
 
 describe("GlobeCoordinateValue", () => {

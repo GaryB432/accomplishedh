@@ -3,6 +3,7 @@ import {
   entities_get_url,
   type WikibaseResponse,
 } from "@accomplishedh/wikibase";
+
 import type { PageLoad } from "./$types";
 
 export const load = (async ({ data, fetch }) => {

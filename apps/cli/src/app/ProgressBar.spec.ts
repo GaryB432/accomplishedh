@@ -1,4 +1,5 @@
-import { describe, expect, vi, test } from "vitest";
+import { describe, expect, test, vi } from "vitest";
+
 import { ProgressBar } from "./ProgressBar";
 
 vi.mock(import("picocolors"), async (importOriginal) => {
@@ -7,8 +8,8 @@ vi.mock(import("picocolors"), async (importOriginal) => {
     default: {
       ...actual.default,
       greenBright: vi.fn((s) => `G[${s}]`),
-      yellowBright: vi.fn((s) => `Y[${s}]`),
       whiteBright: vi.fn((s) => `W[${s}]`),
+      yellowBright: vi.fn((s) => `Y[${s}]`),
     },
   };
 });
@@ -45,7 +46,7 @@ describe("fancy ProgressBar", () => {
   let progressBar: ProgressBar;
   const max = 27;
   test("draws", () => {
-    progressBar = new ProgressBar({ max, width: 72, style: "fancy" });
+    progressBar = new ProgressBar({ max, style: "fancy", width: 72 });
     expect(progressBar.draw(max / 2)).toEqual(
       "████████████████████████████████████▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓0.50",
     );
@@ -53,7 +54,7 @@ describe("fancy ProgressBar", () => {
   test("draws more", () => {
     const width = 60;
     const max = 4;
-    progressBar = new ProgressBar({ max, width, style: "fancy" });
+    progressBar = new ProgressBar({ max, style: "fancy", width });
     const bars = Array<number>(max + 1)
       .fill(0)
       .map((_, step) => {

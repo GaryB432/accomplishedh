@@ -1,7 +1,9 @@
 import { type EuroHuman } from "@accomplishedh/shared";
 import axios from "axios";
+
 import type { Entities, EntityId, ItemId } from "../types.js";
 import type { WikibaseResponse } from "../types/responses.js";
+
 import {
   entities_get_url,
   entity_searh_url,

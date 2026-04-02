@@ -4,7 +4,7 @@
     wbid: string;
   }
 
-  let { wbid, text }: Props = $props();
+  let { text, wbid }: Props = $props();
 
   let href = $derived(`https://www.wikidata.org/wiki/Property:${wbid}`);
   let title = $derived(`Wikidata ${wbid}`);

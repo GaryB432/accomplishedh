@@ -1,6 +1,8 @@
 import { type Portrait } from "@accomplishedh/shared";
-import { image_query_url, thumbnail_query_url } from "../../data/urls.js";
+
 import type { Claim, CommonsResponse } from "../../types.js";
+
+import { image_query_url, thumbnail_query_url } from "../../data/urls.js";
 
 type HTMLImgAttributes = {
   src: string;
@@ -9,7 +11,7 @@ type HTMLImgAttributes = {
 export async function getImageFromClaim(
   claim: Claim,
   fetcher: (
-    input: string | URL | Request,
+    input: Request | string | URL,
     init?: RequestInit,
   ) => Promise<Response>,
 ): Promise<(Partial<HTMLImgAttributes> & { id: string }) | undefined> {
@@ -19,7 +21,7 @@ export async function getImageFromClaim(
   if (Object.keys(nop.query.pages).length === 1) {
     const page = Object.values(nop.query.pages).at(0);
     if (page?.imageinfo!.length === 1) {
-      const { url: src, mime } = page.imageinfo.at(0)!;
+      const { mime, url: src } = page.imageinfo.at(0)!;
 
       if (mime !== "image/jpeg") {
         console.log(mime, "not today");

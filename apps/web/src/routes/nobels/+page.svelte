@@ -3,6 +3,7 @@
   import type { EuroHuman } from '@accomplishedh/shared';
 
   import { resolve } from '$app/paths';
+
   import data from './laureates.json';
 
   const dlaureates = data as unknown as LaureateHuman[];

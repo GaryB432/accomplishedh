@@ -1,23 +1,17 @@
 import {
   addDays,
-  shuffle,
   type EuroHuman,
   type FeaturedSubject,
+  shuffle,
 } from "@accomplishedh/shared";
-import colors from "picocolors";
-import { createHash } from "node:crypto";
 import { existsSync, writeFileSync } from "fs";
+import { createHash } from "node:crypto";
+import { normalize } from "node:path";
 import { join } from "path/posix";
+import colors from "picocolors";
+
 import { dataPath, readAll } from "../data/fs-reader.js";
 import { type CommandArgs } from "./featured.types.js";
-import { normalize } from "node:path";
-
-export function portraitedOnly(all: EuroHuman[]): EuroHuman[] {
-  return all.filter(
-    (h) =>
-      h.portrait && "src" in h.portrait.img && h.portrait.img["src"] !== "",
-  );
-}
 
 export function fillout<T>(array: T[], limit: number): T[] {
   const darray: T[] = [];
@@ -29,13 +23,20 @@ export function fillout<T>(array: T[], limit: number): T[] {
   return darray.slice(0, limit);
 }
 
+export function portraitedOnly(all: EuroHuman[]): EuroHuman[] {
+  return all.filter(
+    (h) =>
+      h.portrait && "src" in h.portrait.img && h.portrait.img["src"] !== "",
+  );
+}
+
 const dataRoot = normalize(join(import.meta.dirname, "../../../../", dataPath));
 
 const featuredsFileName = join(dataRoot, "featured.json");
 
 export async function featuredCommand({
-  start,
   opts,
+  start,
 }: CommandArgs): Promise<void> {
   if (!start || start.length < 10) {
     throw new Error("start should be ISO");
@@ -69,7 +70,7 @@ export async function featuredCommand({
         colors.white(human.knownFor),
       );
       const id = `${stamp}@${human.serial}`;
-      return { id, stamp, human: { id: human.id } };
+      return { human: { id: human.id }, id, stamp };
     },
   );
 
@@ -78,9 +79,9 @@ export async function featuredCommand({
   const messageParts = [
     "HA featureds run out on",
     `${Intl.DateTimeFormat("en-US", {
-      timeZone: "UTC",
-      month: "2-digit",
       day: "2-digit",
+      month: "2-digit",
+      timeZone: "UTC",
       year: "numeric",
     }).format(new Date(runOutDate ?? "1970-01-01"))}.`,
     "Visit",

@@ -1,9 +1,10 @@
 <script lang="ts">
-  import { enhance } from '$app/forms';
-  import { page } from '$app/state';
   import type { SubmitFunction } from '@sveltejs/kit';
 
-  let { theme = 'light' }: { theme: 'light' | 'dark' } = $props();
+  import { enhance } from '$app/forms';
+  import { page } from '$app/state';
+
+  let { theme = 'light' }: { theme: 'dark' | 'light' } = $props();
 
   let pressed = $derived(theme !== 'light');
 

@@ -2,6 +2,7 @@ import { FeDataSvc } from "$lib/data/fe-data.svelte";
 import { isValidISO8601 } from "@accomplishedh/shared";
 import { refreshPortraitThumbnails } from "@accomplishedh/wikibase";
 import { error } from "@sveltejs/kit";
+
 import type { RequestHandler } from "./$types";
 
 export const GET: RequestHandler = async (ctx) => {
@@ -32,8 +33,8 @@ export const GET: RequestHandler = async (ctx) => {
   await refreshPortraitThumbnails(ctx.fetch, featureds, parseInt(width));
 
   return new Response(JSON.stringify(featureds), {
+    headers,
     status: 200,
     statusText: "OK",
-    headers,
   });
 };

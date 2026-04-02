@@ -1,4 +1,5 @@
 import { beforeEach, describe, expect, test } from "vitest";
+
 import { Sequence } from "./sequence";
 
 describe("Sequence", (): void => {

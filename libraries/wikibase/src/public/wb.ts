@@ -1,8 +1,10 @@
 import type { EuroHuman } from "@accomplishedh/shared";
+
+import type { Claim, Entity, EntityId } from "../types.js";
+
 import * as wbApi from "../data/api.js";
 import { isInstanceOfHuman } from "../logic/filters.js";
 import { summarize, type SummarizedEntities } from "../logic/summarizer.js";
-import type { Claim, Entity, EntityId } from "../types.js";
 
 export async function fetchDetailedEntity(
   id: EntityId,

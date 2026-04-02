@@ -1,7 +1,9 @@
 import { describe, expect, test } from "vitest";
-import { humanClaims, otherClaims, schoolClaims } from "../mocks/claims";
+
 import type { Claims, Entities, Entity } from "../types";
 import type { Snak } from "../types/snaks";
+
+import { humanClaims, otherClaims, schoolClaims } from "../mocks/claims";
 import { isInstanceOfHuman } from "./filters";
 
 function filterHumans(flens: Entities): Entities {
@@ -14,8 +16,8 @@ function filterHumans(flens: Entities): Entities {
 }
 
 const Q420: Entity = {
-  labels: { blah: { value: "no english" } },
   id: "Q420",
+  labels: { blah: { value: "no english" } },
   type: "item",
 };
 
@@ -32,10 +34,10 @@ describe("Filters", () => {
     const hs = filterHumans(
       ids.reduce((a, id) => {
         a[id] = {
-          id,
           claims: couplaPeeps.includes(id)
             ? { ...otherClaims, ...humanClaims }
             : { ...schoolClaims },
+          id,
           type: "item",
         };
         return a;
@@ -63,15 +65,15 @@ const dobclaims: Claims = {
 
 function dobSnak(time: string, precision = 11): Snak {
   return {
-    snaktype: "value" as const,
-    property: "P569",
-    datavalue: {
-      value: {
-        time,
-        precision,
-      },
-      type: "time" as const,
-    },
     datatype: "time" as const,
+    datavalue: {
+      type: "time" as const,
+      value: {
+        precision,
+        time,
+      },
+    },
+    property: "P569",
+    snaktype: "value" as const,
   };
 }

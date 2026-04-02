@@ -1,11 +1,11 @@
 <script lang="ts">
   const icons = new Map<string, string>([
     ['a', 'canvas-easel-svgrepo-com.svg'],
-    ['b', 'canvas-svgrepo-com.svg'],
     ['Art.West', 'easel-svgrepo-com.svg'],
-    ['Music.West', 'music-svgrepo-com.svg'],
-    ['Lit.West', 'open-book-svgrepo-com.svg'],
+    ['b', 'canvas-svgrepo-com.svg'],
     ['f', 'painter-with-beret-and-canvas-svgrepo-com.svg'],
+    ['Lit.West', 'open-book-svgrepo-com.svg'],
+    ['Music.West', 'music-svgrepo-com.svg'],
     ['Science', 'science-lab-svgrepo-com.svg'],
   ]);
   interface Props {

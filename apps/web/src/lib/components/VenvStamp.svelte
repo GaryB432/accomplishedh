@@ -2,8 +2,8 @@
   import { version } from '$app/environment';
 
   interface Props {
-    GIT_COMMIT_REF?: string | null;
-    GIT_COMMIT_SHA?: string | null;
+    GIT_COMMIT_REF?: null | string;
+    GIT_COMMIT_SHA?: null | string;
   }
 
   let { GIT_COMMIT_REF = null, GIT_COMMIT_SHA = null }: Props = $props();

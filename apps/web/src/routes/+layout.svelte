@@ -1,8 +1,10 @@
 <script lang="ts">
+  import type { Snippet } from "svelte";
+
   import { version } from "$app/environment";
   import { resolve } from "$app/paths";
   import Header from "$lib/components/Header.svelte";
-  import type { Snippet } from "svelte";
+
   import "../app.css";
   import type { LayoutData } from "./$types";
 
@@ -11,7 +13,7 @@
     data: LayoutData;
   }
 
-  let { data, children }: Props = $props();
+  let { children, data }: Props = $props();
 
   let { admin, theme: gr, vercelEnv } = $derived(data);
   let theme: "dark" | "light" = $derived(gr === "dark" ? "dark" : "light");
