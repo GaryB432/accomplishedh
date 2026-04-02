@@ -11,4 +11,13 @@
 
 {@render children()}
 
-<a href={resolve("/")}>home</a>
+<nav>
+  <a href={resolve("/")}>home</a>
+  <a href={resolve("/about")}>about</a>
+</nav>
+
+<style>
+  nav {
+    margin: 0.5rem 0;
+  }
+</style>
