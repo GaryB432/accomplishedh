@@ -15,6 +15,7 @@ export async function refreshPortraitThumbnails(
   const thumb_response = await fetchr(turl);
 
   if (!thumb_response.ok) {
+    console.error(thumb_response.statusText);
     throw new Error("Unexpected response from ", {
       cause: thumb_response.statusText,
     });
