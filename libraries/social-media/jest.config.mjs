@@ -5,8 +5,8 @@ const defaultPreset = createDefaultPreset();
 /** @type {import('ts-jest').JestConfigWithTsJest} */
 const config = {
   ...defaultPreset,
-  displayName: "library/social-media",
   coverageProvider: "v8",
+  displayName: "library/social-media",
   moduleNameMapper: {
     "^@accomplishedh(.*)$": "<rootDir>/../../libraries$1/src/index.ts",
   },

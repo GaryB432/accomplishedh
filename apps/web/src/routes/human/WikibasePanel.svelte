@@ -5,10 +5,11 @@
   import Lifespan from '$lib/components/wikidata/Lifespan.svelte';
   import Works from '$lib/components/wikidata/NotableWorks.svelte';
   import {
+    type Entity,
     labelify,
     summarize,
-    type Entity,
   } from '@accomplishedh/wikibase';
+
   import Aliases from './wikibase-entity/Aliases.svelte';
   import SiteLinks from './wikibase-entity/SiteLinks.svelte';
 

@@ -1,4 +1,5 @@
 import { describe, expect, test, vi } from "vitest";
+
 import { checkForTweet, humanUrl } from "./tweeter";
 
 vi.mock("./style-functions", () => {
@@ -11,11 +12,11 @@ vi.mock("./style-functions", () => {
 });
 
 const martin = {
-  serial: "631",
-  name: "Martinus Beijerinck",
-  yob: "1851",
-  knownFor: "One of the founders of virology",
   inventory: "Science",
+  knownFor: "One of the founders of virology",
+  name: "Martinus Beijerinck",
+  serial: "631",
+  yob: "1851",
 };
 
 describe("Tweeter", () => {
@@ -26,7 +27,7 @@ describe("Tweeter", () => {
   });
 
   test("checkForTweet", () => {
-    const { valid, raw, enhancedText } = checkForTweet({
+    const { enhancedText, raw, valid } = checkForTweet({
       ...martin,
       knownFor: "a fine gentleman",
     });
@@ -39,7 +40,7 @@ describe("Tweeter", () => {
     );
   });
   test("checkForTweet bad article", () => {
-    const { valid, raw, enhancedText } = checkForTweet({
+    const { enhancedText, raw, valid } = checkForTweet({
       ...martin,
       knownFor: "just BS",
     });
@@ -53,7 +54,7 @@ describe("Tweeter", () => {
   });
 
   test("checkForTweet too long", () => {
-    const { valid, raw, enhancedText } = checkForTweet({
+    const { enhancedText, raw, valid } = checkForTweet({
       ...martin,
       knownFor:
         "a Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore at repellendus nemo laborum voluptas, nesciunt veniam obcaecati suscipit inventore exercitationem tempora vitae odit alias necessitatibus. Cum voluptates autem corrupti repudiandae! Now is the time for all good men to come to the aid of their country!",
@@ -68,7 +69,7 @@ describe("Tweeter", () => {
   });
 
   test("checkForTweet 1 footnote", () => {
-    const { valid, raw, enhancedText } = checkForTweet({
+    const { enhancedText, raw, valid } = checkForTweet({
       ...martin,
       knownFor: "a figure [1] in the world",
     });
@@ -82,7 +83,7 @@ describe("Tweeter", () => {
   });
 
   test("checkForTweet 2 footnote", () => {
-    const { valid, raw, enhancedText } = checkForTweet({
+    const { enhancedText, raw, valid } = checkForTweet({
       ...martin,
       knownFor: "an important figure[1] in the world of unit testing[205]",
     });

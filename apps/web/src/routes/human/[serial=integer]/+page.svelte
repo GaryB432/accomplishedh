@@ -1,4 +1,6 @@
 <script lang="ts">
+  import type { Property } from "@accomplishedh/shared";
+
   import { browser } from "$app/environment";
   import { applyAction, enhance } from "$app/forms";
   import { invalidateAll } from "$app/navigation";
@@ -14,12 +16,13 @@
   import PropsBox from "$lib/components/PropsBox.svelte";
   import Share from "$lib/components/Share.svelte";
   import { flags } from "$lib/states/flags.svelte";
-  import type { Property } from "@accomplishedh/shared";
   import { type Entity } from "@accomplishedh/wikibase";
+
+  import type { PageData } from "./$types";
+
   import { imageSearchUrl, ogImage, socialMediaDescription } from "../helpers";
   import ReasonatorLink from "../ReasonatorLink.svelte";
   import WikibasePanel from "../WikibasePanel.svelte";
-  import type { PageData } from "./$types";
 
   interface Props {
     data: PageData;
@@ -32,7 +35,7 @@
       .map<Property>((propName, seq) => {
         const h = data.human as unknown as Record<string, string>;
         const value = h[propName];
-        return { name: propName, value, seq, source: "osf" };
+        return { name: propName, seq, source: "osf", value };
       })
       .filter((f) => f.value !== void 0),
   );
@@ -85,7 +88,7 @@
   let url = $derived(page.url.href);
   let text = $derived(knownFor);
 
-  let description = $derived(socialMediaDescription({ name, knownFor }));
+  let description = $derived(socialMediaDescription({ knownFor, name }));
   let imgSearchHref = $derived(imageSearchUrl(data.human));
 
   let image = $derived(ogImage(data.human.portrait));

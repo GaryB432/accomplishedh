@@ -5,8 +5,8 @@ const defaultPreset = createDefaultPreset();
 /** @type {import('ts-jest').JestConfigWithTsJest} */
 const config = {
   ...defaultPreset,
-  displayName: "library/wikibase",
   coverageProvider: "v8",
+  displayName: "library/wikibase",
   moduleNameMapper: {
     "^@accomplishedh(.*)$": "<rootDir>/../../libraries$1/src/index.ts",
   },

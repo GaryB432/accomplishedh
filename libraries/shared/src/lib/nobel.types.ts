@@ -4,16 +4,6 @@ export interface Affiliation {
   name: string;
 }
 
-export interface Prize {
-  affiliations: Affiliation[];
-  category: string;
-  motivation: string;
-  portrait: "tbd";
-  share: string;
-  url?: string;
-  year: string;
-}
-
 export interface Laureate {
   born: string;
   bornCity?: string;
@@ -24,8 +14,18 @@ export interface Laureate {
   diedCountry?: string;
   diedCountryCode?: string;
   firstname: string;
-  gender: "male" | "female" | "org";
+  gender: "female" | "male" | "org";
   id: string;
   prizes: Prize[];
   surname: string;
+}
+
+export interface Prize {
+  affiliations: Affiliation[];
+  category: string;
+  motivation: string;
+  portrait: "tbd";
+  share: string;
+  url?: string;
+  year: string;
 }

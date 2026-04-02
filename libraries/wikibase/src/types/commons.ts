@@ -1,4 +1,21 @@
-type ResponsiveUrls = Record<string, string>;
+export type CommonsImageInfo = ImageInfo;
+
+export type CommonsQueryResponse = CompleteResponse | ContinueResponse;
+
+type BasicResponse = {
+  query: Query;
+};
+
+type CompleteResponse = BasicResponse & {
+  batchcomplete: unknown;
+};
+
+type ContinueResponse = BasicResponse & {
+  continue: {
+    continue: string;
+    iistart: string;
+  };
+};
 
 interface ImageInfo {
   descriptionshorturl: string;
@@ -26,14 +43,10 @@ interface ImageInfo {
   width: number;
 }
 
-interface Query {
-  normalized?: NormalizedEntity[];
-  pages: Pages;
+interface NormalizedEntity {
+  from: string;
+  to: string;
 }
-
-type BasicResponse = {
-  query: Query;
-};
 
 interface Page {
   imageinfo?: ImageInfo[];
@@ -45,21 +58,8 @@ interface Page {
 
 type Pages = Record<string, Page>;
 
-interface NormalizedEntity {
-  from: string;
-  to: string;
+interface Query {
+  normalized?: NormalizedEntity[];
+  pages: Pages;
 }
-
-type CompleteResponse = BasicResponse & {
-  batchcomplete: unknown;
-};
-
-type ContinueResponse = BasicResponse & {
-  continue: {
-    continue: string;
-    iistart: string;
-  };
-};
-
-export type CommonsQueryResponse = CompleteResponse | ContinueResponse;
-export type CommonsImageInfo = ImageInfo;
+type ResponsiveUrls = Record<string, string>;

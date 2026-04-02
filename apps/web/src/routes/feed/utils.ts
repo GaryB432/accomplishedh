@@ -1,5 +1,5 @@
 export function homeOf(href: string): string {
-  const { origin, host, hostname, pathname } = URL.parse(href)!;
+  const { host, hostname, origin, pathname } = URL.parse(href)!;
   if (
     hostname === "localhost" ||
     hostname.endsWith("humanaccomplishment.com") ||
@@ -9,6 +9,6 @@ export function homeOf(href: string): string {
   }
 
   throw new Error(
-    `${JSON.stringify({ origin, host, hostname, pathname })} Unrecognized above`,
+    `${JSON.stringify({ host, hostname, origin, pathname })} Unrecognized above`,
   );
 }

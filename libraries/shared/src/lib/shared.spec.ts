@@ -1,4 +1,5 @@
 import { describe, expect, test } from "vitest";
+
 import {
   batchify,
   diffCount,
@@ -11,44 +12,44 @@ import {
 describe("highlightDefiniteArticle", () => {
   test("should highlight non article", () => {
     expect(highlightDefiniteArticle("some wtf rules")).toEqual({
-      p: ["some", " wtf rules"],
       marker: 4,
+      p: ["some", " wtf rules"],
     });
   });
   test("should highlight non article", () => {
     expect(highlightDefiniteArticle(" some wtf rules")).toEqual({
-      p: ["some", " wtf rules"],
       marker: 4,
+      p: ["some", " wtf rules"],
     });
   });
   test("should not highlight a", () => {
     expect(highlightDefiniteArticle("a wtf rules")).toEqual({
-      p: ["", "a wtf rules"],
       marker: 0,
+      p: ["", "a wtf rules"],
     });
   });
   test("should not highlight space a", () => {
     expect(highlightDefiniteArticle("  a wtf rules")).toEqual({
-      p: ["", "a wtf rules"],
       marker: 0,
+      p: ["", "a wtf rules"],
     });
   });
   test("should not highlight an", () => {
     expect(highlightDefiniteArticle("an wtf rules")).toEqual({
-      p: ["", "an wtf rules"],
       marker: 0,
+      p: ["", "an wtf rules"],
     });
   });
   test("should not highlight space an", () => {
     expect(highlightDefiniteArticle("  an wtf rules")).toEqual({
-      p: ["", "an wtf rules"],
       marker: 0,
+      p: ["", "an wtf rules"],
     });
   });
   test("should handle blank", () => {
     expect(highlightDefiniteArticle("")).toEqual({
-      p: ["░░░", ""],
       marker: 0,
+      p: ["░░░", ""],
     });
   });
 });
@@ -83,7 +84,7 @@ describe("firstAndOnly", () => {
       type: "item",
     };
 
-    expect(() => firstAndOnly({ SUT: subject, Q420 })).toThrow(
+    expect(() => firstAndOnly({ Q420, SUT: subject })).toThrow(
       "expected one element",
     );
   });

@@ -12,12 +12,6 @@ export default {
       console.log(details);
     },
   },
-  tabs: {
-    create(a: { url: string }): null {
-      alert(a.url);
-      return null;
-    },
-  },
   runtime: {
     onMessage: {
       addListener(
@@ -31,6 +25,12 @@ export default {
     sendMessage(msg: any, cb: (r: any) => void): void {
       console.log(msg);
       cb(void 0);
+    },
+  },
+  tabs: {
+    create(a: { url: string }): null {
+      alert(a.url);
+      return null;
     },
   },
 };

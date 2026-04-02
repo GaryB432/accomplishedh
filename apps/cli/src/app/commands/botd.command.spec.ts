@@ -1,4 +1,5 @@
 import { describe, expect, test } from "vitest";
+
 import { botdCommand } from "./botd.command";
 
 describe("Botd Command", () => {

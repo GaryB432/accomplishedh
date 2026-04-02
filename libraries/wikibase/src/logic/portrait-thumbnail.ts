@@ -1,6 +1,8 @@
 import type { Portrait, WikiHuman } from "@accomplishedh/shared";
-import { thumbnail_query_url } from "../data/urls.js";
+
 import type { CommonsPage, CommonsResponse } from "../types.js";
+
+import { thumbnail_query_url } from "../data/urls.js";
 
 export async function refreshPortraitThumbnails(
   fetchr: typeof fetch,
@@ -44,10 +46,6 @@ export async function refreshPortraitThumbnails(
   }
 }
 
-function inferScheme(source: string): string {
-  return source.startsWith("//") ? `https:${source}` : source;
-}
-
 function freshNewPortrait(
   subjectThumnail: CommonsPage | undefined,
   width: number,
@@ -55,16 +53,20 @@ function freshNewPortrait(
   const commonsPage = { ...subjectThumnail };
   const height = Math.ceil((width * 11) / 9);
   commonsPage.thumbnail ??= {
+    height,
     source: `//placehold.co/${width}x${height}?text=kthx`,
     width,
-    height,
   };
 
   const img = {
-    src: inferScheme(commonsPage.thumbnail.source),
     height: String(commonsPage.thumbnail.height),
+    src: inferScheme(commonsPage.thumbnail.source),
     width: String(commonsPage.thumbnail.width),
   };
 
   return { img };
+}
+
+function inferScheme(source: string): string {
+  return source.startsWith("//") ? `https:${source}` : source;
 }

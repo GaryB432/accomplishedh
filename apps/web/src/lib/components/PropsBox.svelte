@@ -4,15 +4,15 @@
   type UnsourcedProperty = Omit<Property, 'source'>;
 
   const topMap: Map<string, number> = new Map([
+    ['Alma mater', 450],
+    ['Awards', 358],
     ['Born', 1238],
     ['Died', 1238],
-    ['Nationality', 741],
-    ['Known for', 670],
     ['Fields', 476],
-    ['Alma mater', 450],
-    ['Occupation', 405],
-    ['Awards', 358],
     ['Institutions', 337],
+    ['Known for', 670],
+    ['Nationality', 741],
+    ['Occupation', 405],
     ['Spouse(s)', 201],
   ]);
 

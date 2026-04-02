@@ -3,6 +3,7 @@
   import ExtensionPromo from "$lib/components/ExtensionPromo.svelte";
   import FeaturedSplash from "$lib/components/FeaturedSplash.svelte";
   import FollowUs from "$lib/components/FollowUs.svelte";
+
   import type { PageData } from "./$types";
 
   interface Props {

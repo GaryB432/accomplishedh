@@ -1,5 +1,5 @@
 export const environment = {
-  haUrl: "http://localhost:4173",
   checkFeaturedsEveryMinutes: 2,
+  haUrl: "http://localhost:4173",
   production: false,
 };

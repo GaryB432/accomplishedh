@@ -24,15 +24,6 @@ export function getShardPathFor(
   return n;
 }
 
-export function readJSONSync<T>(fn: string, defaultValue?: T): T | undefined {
-  // console.log(existsSync.toString());
-  if (existsSync(fn)) {
-    return JSON.parse(readFileSync(fn, "utf-8"));
-  }
-  console.log(`no "${fn}" using default`, defaultValue);
-  return defaultValue;
-}
-
 export function readArraySync<T>(fn: string, defaultValue?: T[]): Array<T> {
   if (!existsSync(fn)) {
     if (defaultValue) {
@@ -41,4 +32,13 @@ export function readArraySync<T>(fn: string, defaultValue?: T[]): Array<T> {
     throw new Error(`${fn} seems to not exist`);
   }
   return JSON.parse(readFileSync(fn, "utf-8"));
+}
+
+export function readJSONSync<T>(fn: string, defaultValue?: T): T | undefined {
+  // console.log(existsSync.toString());
+  if (existsSync(fn)) {
+    return JSON.parse(readFileSync(fn, "utf-8"));
+  }
+  console.log(`no "${fn}" using default`, defaultValue);
+  return defaultValue;
 }

@@ -1,7 +1,8 @@
 <script lang="ts">
   import { browser } from "$app/environment";
   import { resolve } from "$app/paths";
-  import { shuffle, type EuroHuman } from "@accomplishedh/shared";
+  import { type EuroHuman, shuffle } from "@accomplishedh/shared";
+
   import Era from "./Era.svelte";
   import Inventory from "./Inventory.svelte";
   import NoFeaturedsToday from "./NoFeaturedsToday.svelte";
@@ -17,9 +18,9 @@
 
   function dob(h: EuroHuman): string {
     return Intl.DateTimeFormat("en-US", {
-      timeZone: "UTC",
-      month: "long",
       day: "numeric",
+      month: "long",
+      timeZone: "UTC",
       year: "numeric",
     }).format(new Date(`${h.yob}-${h.dob}`));
   }

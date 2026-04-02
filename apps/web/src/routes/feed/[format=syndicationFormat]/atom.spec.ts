@@ -1,8 +1,9 @@
 import type { EuroHuman, FeaturedHuman } from "@accomplishedh/shared";
+
 import { describe, expect, test } from "vitest";
 
-import { feed } from "./atom";
 import { homeOf } from "../utils";
+import { feed } from "./atom";
 
 // vi.mock('xml', () => {
 //   return {
@@ -37,20 +38,20 @@ describe("Atom", () => {
             return {
               human: {
                 ...defh,
-                serial: dseq,
                 id: dseq.padStart(10, "0"),
-                name,
                 knownFor: `a guy featured on ${stamp}`,
-                wikibase: { entity: { id: `Q${dseq}` } },
+                name,
                 portrait: {
                   above: "Rudolf Albert von Kölliker",
                   img: {
                     alt: "Kölliker Rudolph Albert von 1818-1902.jpg",
+                    height: "335",
                     src: `//upload.wikimedia.org/wikipedia/commons/thumb/p${seq}.jpg`,
                     width: "250",
-                    height: "335",
                   },
                 },
+                serial: dseq,
+                wikibase: { entity: { id: `Q${dseq}` } },
               },
               id: `dfh${seq}`,
               stamp,
@@ -67,7 +68,6 @@ describe("Atom", () => {
 const defh: EuroHuman = {
   adultbasic: "Britain",
   adultregion: "E.SE",
-  yob: "1903",
   death: "1975-05-20T00:00:00.000Z",
   dob: "01-10",
   era: "1800+",
@@ -82,6 +82,7 @@ const defh: EuroHuman = {
   props: [],
   serial: "-1",
   sr: undefined,
+  yob: "1903",
 };
 
 // <?xml version="1.0" encoding="utf-8"?>

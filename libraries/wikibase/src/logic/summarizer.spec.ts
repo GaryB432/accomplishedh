@@ -1,4 +1,5 @@
 import { describe, expect, type Mocked, test, vi } from "vitest";
+
 import * as wbApi from "../data/api";
 import { fieldClaims } from "../mocks/claims";
 import { summarize } from "./summarizer";
@@ -12,8 +13,8 @@ describe("Summarizer", () => {
     mockedApi.fetchEntities.mockResolvedValue({
       Q10001: {
         id: "Q10001",
-        type: "item",
         labels: { en: { value: "ENTITY 10001" } },
+        type: "item",
       },
       Q10002: {
         id: "Q10002",
@@ -21,15 +22,14 @@ describe("Summarizer", () => {
       },
     });
     const subject = await summarize({
-      id: "",
-      type: "item",
       claims: {
         ...fieldClaims,
       },
+      id: "",
+      type: "item",
     });
     expect(Object.keys(subject.claims!)).toContain("P101");
     expect(subject.summary).toEqual({
-      fun: true,
       claims: {
         P101: [
           "ENTITY 10001",
@@ -38,6 +38,7 @@ describe("Summarizer", () => {
           "wikibase-entityid?",
         ],
       },
+      fun: true,
     });
   });
 });

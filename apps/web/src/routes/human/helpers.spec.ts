@@ -1,12 +1,13 @@
 import { describe, expect, test } from "vitest";
-import { socialMediaDescription, imageSearchUrl, ogImage } from "./helpers";
+
+import { imageSearchUrl, ogImage, socialMediaDescription } from "./helpers";
 
 const martin = {
-  serial: "631",
-  name: "Martinus Beijerinck",
-  yob: "1851",
-  knownFor: "One of the founders of virology",
   inventory: "Science",
+  knownFor: "One of the founders of virology",
+  name: "Martinus Beijerinck",
+  serial: "631",
+  yob: "1851",
 };
 
 describe("Helpers", () => {

@@ -1,22 +1,5 @@
 import type { Entities } from "../types.js";
 
-type Binding = {
-  type: string;
-  value: string;
-};
-
-type BasicResponse = {
-  warnings?: Record<string, ResponseWarnings>;
-};
-
-export type SuccessResponse = BasicResponse & {
-  entities?: Entities;
-  search?: SearchResult[];
-  success: 1;
-};
-
-export type ResponseWarnings = Record<"*", string>;
-
 export type ErrorResponse = BasicResponse & {
   error?: { info: string };
   success: 0;
@@ -28,6 +11,8 @@ export type QueryBindingsResponse = {
     bindings: Array<{ item: Binding }>;
   };
 };
+
+export type ResponseWarnings = Record<"*", string>;
 
 export type SearchResult = {
   concepturi?: string;
@@ -55,4 +40,19 @@ export type SearchResult = {
   url?: string;
 };
 
-export type WikibaseResponse = SuccessResponse | ErrorResponse;
+export type SuccessResponse = BasicResponse & {
+  entities?: Entities;
+  search?: SearchResult[];
+  success: 1;
+};
+
+export type WikibaseResponse = ErrorResponse | SuccessResponse;
+
+type BasicResponse = {
+  warnings?: Record<string, ResponseWarnings>;
+};
+
+type Binding = {
+  type: string;
+  value: string;
+};

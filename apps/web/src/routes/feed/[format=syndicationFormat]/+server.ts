@@ -2,8 +2,10 @@ import { FeDataSvc } from "$lib/data/fe-data.svelte";
 import { isValidISO8601 } from "@accomplishedh/shared";
 import { error } from "@sveltejs/kit";
 import xmllib from "xml";
-import { homeOf } from "../utils";
+
 import type { RequestHandler } from "./$types";
+
+import { homeOf } from "../utils";
 import { feed as atomFeed } from "./atom";
 
 export const GET: RequestHandler = async (ctx) => {
@@ -23,12 +25,12 @@ export const GET: RequestHandler = async (ctx) => {
         ctx.locals.todayISO.slice(0, 10),
       );
       return new Response(xmllib(feedXml), {
-        status: 200,
-        statusText: "OK",
         headers: {
           "content-type": "application/atom+xml;charset=UTF-8",
           //   'Cache-Control': 'public, max-age=600',
         },
+        status: 200,
+        statusText: "OK",
       });
     }
     default: {

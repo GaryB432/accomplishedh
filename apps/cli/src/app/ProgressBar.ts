@@ -26,7 +26,7 @@ export class ProgressBar {
       .concat(space.repeat(w - doneSize))
       .concat(dw.toFixed(2));
   }
-  public show(progress: number): string | null {
+  public show(progress: number): null | string {
     if (progress < 1 || progress > this.config.max) {
       throw RangeError("Invalid progress");
     }

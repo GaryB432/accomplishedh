@@ -1,12 +1,14 @@
+import type { FeaturedHuman } from "@accomplishedh/shared";
+
 import { dev } from "$app/environment";
 import { FeDataSvc } from "$lib/data/fe-data.svelte";
-import type { FeaturedHuman } from "@accomplishedh/shared";
 import { refreshPortraitThumbnails } from "@accomplishedh/wikibase";
 import { error, redirect } from "@sveltejs/kit";
+
 import type { Actions, PageServerLoad } from "./$types";
 
 export const load: PageServerLoad = async (ctx) => {
-  const { locals, fetch } = ctx;
+  const { fetch, locals } = ctx;
   try {
     const dataService = await FeDataSvc.create(fetch);
     const featuredHumans: FeaturedHuman[] | null =
@@ -26,15 +28,15 @@ export const load: PageServerLoad = async (ctx) => {
 };
 
 export const actions: Actions = {
-  setTheme: async ({ url, cookies }) => {
+  setTheme: async ({ cookies, url }) => {
     const theme = url.searchParams.get("theme");
     const redirectTo = url.searchParams.get("redirectTo");
 
     if (theme) {
       cookies.set("colortheme", theme, {
+        maxAge: 60 * 60 * 24 * 365,
         path: "/",
         sameSite: "lax",
-        maxAge: 60 * 60 * 24 * 365,
         secure: !dev,
       });
     }

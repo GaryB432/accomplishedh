@@ -1,13 +1,14 @@
 import {
+  type FeaturedHuman,
   Logger,
   padSerialForKey,
   shardKeyFor,
-  type FeaturedHuman,
   type WikiHuman,
 } from "@accomplishedh/shared";
 import { join } from "node:path";
-import { getShardPathFor, type FormDataHuman } from "./utils";
 import { SvelteSet } from "svelte/reactivity";
+
+import { type FormDataHuman, getShardPathFor } from "./utils";
 
 const banner = [
   "",
@@ -33,7 +34,7 @@ export class FeDataSvc {
 
   private constructor(
     private fetch: (
-      input: string | URL | globalThis.Request,
+      input: globalThis.Request | string | URL,
     ) => Promise<globalThis.Response>,
     private logger: Logger,
     private rootDir: string,
@@ -44,7 +45,7 @@ export class FeDataSvc {
 
   public static async create(
     fetch: (
-      input: string | URL | globalThis.Request,
+      input: globalThis.Request | string | URL,
     ) => Promise<globalThis.Response>,
     logger: Logger = new Logger(),
     rootDir = "/data",
@@ -63,7 +64,7 @@ export class FeDataSvc {
   }
 
   public async getFeaturedHumans(
-    iso: string[] | boolean,
+    iso: boolean | string[],
   ): Promise<FeaturedHuman[]> {
     const featuredsPath = join("featured.json");
 
@@ -91,7 +92,7 @@ export class FeDataSvc {
     return fhs;
   }
 
-  public async getHuman(serial: string): Promise<WikiHuman | undefined> {
+  public async getHuman(serial: string): Promise<undefined | WikiHuman> {
     const id = this.top.guidsBySerial[padSerialForKey(serial)];
     if (!id) {
       // throw new Error(`no record ${serial}`)
@@ -100,7 +101,7 @@ export class FeDataSvc {
     return this.digestFromGuid(id);
   }
 
-  public async putHuman(_h: FormDataHuman): Promise<WikiHuman | undefined> {
+  public async putHuman(_h: FormDataHuman): Promise<undefined | WikiHuman> {
     throw new Error("not implemented");
   }
 

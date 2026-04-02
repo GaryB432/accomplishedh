@@ -1,15 +1,11 @@
 import {
   encodeHTML,
+  type FeaturedHuman,
   isValidISO8601,
   midday,
-  type FeaturedHuman,
 } from "@accomplishedh/shared";
 import * as path from "node:path";
 import { type XmlObject } from "xml";
-
-function encodedHTML(s: string): [XmlObject, string] {
-  return [{ _attr: { type: "html" } }, encodeHTML(s)];
-}
 
 export async function feed(
   hs: Readonly<FeaturedHuman>[],
@@ -36,12 +32,12 @@ export async function feed(
             link: [
               {
                 _attr: {
-                  rel: "alternate",
-                  type: "text/html",
                   href: new URL(
                     path.join("featured", h.id.slice(0, 8)),
                     baseHref,
                   ).href,
+                  rel: "alternate",
+                  type: "text/html",
                 },
               },
             ],
@@ -50,9 +46,9 @@ export async function feed(
             link: [
               {
                 _attr: {
+                  href: "https:".concat(h.human.portrait.img["src"]),
                   rel: "enclosure",
                   type: "image/jpeg",
-                  href: "https:".concat(h.human.portrait.img["src"]),
                 },
               },
             ],
@@ -85,10 +81,10 @@ export async function feed(
       link: [
         {
           _attr: {
+            href: baseHref,
+            hreflang: "en",
             rel: "alternate",
             type: "text/html",
-            hreflang: "en",
-            href: baseHref,
           },
         },
       ],
@@ -97,9 +93,9 @@ export async function feed(
       link: [
         {
           _attr: {
+            href: new URL("feed/atom", baseHref).href,
             rel: "self",
             type: "application/atom+xml",
-            href: new URL("feed/atom", baseHref).href,
           },
         },
       ],
@@ -117,4 +113,8 @@ export async function feed(
     ...featuredEntries,
   ];
   return { feed };
+}
+
+function encodedHTML(s: string): [XmlObject, string] {
+  return [{ _attr: { type: "html" } }, encodeHTML(s)];
 }

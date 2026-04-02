@@ -1,11 +1,3 @@
-function translateX(x: number): string {
-  return `translateX(${x}px)`;
-}
-
-function translateXToThenToZero(x: number): Keyframe[] {
-  return [{ transform: translateX(x) }, { transform: translateX(0) }];
-}
-
 export function playSocialMediaAnimations(container: HTMLDivElement): void {
   const cta = container.children.item(0) as HTMLDivElement;
   const facebook = container.children.item(1) as HTMLDivElement;
@@ -23,4 +15,12 @@ export function playSocialMediaAnimations(container: HTMLDivElement): void {
       { duration: 200, fill: "forwards" },
     );
   };
+}
+
+function translateX(x: number): string {
+  return `translateX(${x}px)`;
+}
+
+function translateXToThenToZero(x: number): Keyframe[] {
+  return [{ transform: translateX(x) }, { transform: translateX(0) }];
 }

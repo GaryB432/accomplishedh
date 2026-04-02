@@ -6,25 +6,21 @@ interface OpenClose {
 }
 
 const white = {
-  open: "\u001B[37m",
   close: "\u001B[0m",
+  open: "\u001B[37m",
 };
 const green = {
-  open: "\u001B[32m",
   close: "\u001B[0m",
+  open: "\u001B[32m",
 };
 const yellow = {
-  open: "\u001B[33m",
   close: "\u001B[0m",
+  open: "\u001B[33m",
 };
 const red = {
-  open: "\u001B[31m",
   close: "\u001B[0m",
+  open: "\u001B[31m",
 };
-
-function colorize(message: string, colorCodes: OpenClose): string {
-  return [colorCodes.open, message, colorCodes.close].join("");
-}
 
 export class Logger {
   public log(message: string, source?: string): void {
@@ -39,4 +35,8 @@ export class Logger {
   private stamp(now: Date): string {
     return now.toISOString();
   }
+}
+
+function colorize(message: string, colorCodes: OpenClose): string {
+  return [colorCodes.open, message, colorCodes.close].join("");
 }

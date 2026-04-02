@@ -1,25 +1,12 @@
 import { checkForTweet, humanUrl } from "@accomplishedh/social-media";
 import { confirm } from "@inquirer/prompts";
 import colors from "picocolors";
+
 import { readAll, readById } from "../data/fs-reader.js";
 import { ProgressBar } from "../ProgressBar.js";
 import { type CommandArgs } from "./botd.types.js";
 
-async function askIfPosted(): Promise<boolean> {
-  return await confirm({
-    message: "Has this been posted or intentionally skipped?",
-  });
-}
-
-async function copyToClipboard(text: string) {
-  const clipboard = await import("clipboardy");
-  clipboard.default.writeSync(text);
-  console.log(
-    `${colors.cyan("√")} ${colors.bgBlack(colors.greenBright("copied!"))}`,
-  );
-}
-
-export async function botdCommand({ today, opts }: CommandArgs): Promise<void> {
+export async function botdCommand({ opts, today }: CommandArgs): Promise<void> {
   if (!today || today.length !== 10) {
     throw new Error("now must be ISO Date");
   }
@@ -74,4 +61,18 @@ export async function botdCommand({ today, opts }: CommandArgs): Promise<void> {
     } while (!posted);
   }
   console.log(colors.cyanBright(` ${today} ${botdEuros.length} posted `));
+}
+
+async function askIfPosted(): Promise<boolean> {
+  return await confirm({
+    message: "Has this been posted or intentionally skipped?",
+  });
+}
+
+async function copyToClipboard(text: string) {
+  const clipboard = await import("clipboardy");
+  clipboard.default.writeSync(text);
+  console.log(
+    `${colors.cyan("√")} ${colors.bgBlack(colors.greenBright("copied!"))}`,
+  );
 }

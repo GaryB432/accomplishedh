@@ -1,7 +1,8 @@
 // import * as shared from "@accomplishedh/shared";
-import { Logger, padSerialForKey, type EuroHuman } from "@accomplishedh/shared";
+import { type EuroHuman, Logger, padSerialForKey } from "@accomplishedh/shared";
 import { afterEach } from "node:test";
 import { beforeEach, describe, expect, test, vi } from "vitest";
+
 import * as FsDataSUT from "./fe-data.svelte";
 
 let instance: Logger;
@@ -25,9 +26,9 @@ const OG: EuroHuman = {
   sr: undefined,
   yob: "",
 };
-const JIM: EuroHuman = { ...OG, serial: "JIM", id: "JIM-10000000999" };
-const BOB: EuroHuman = { ...OG, serial: "BOB", id: "BOB-20000000999" };
-const TOM: EuroHuman = { ...OG, serial: "TOM", id: "TOM-30000000999" };
+const JIM: EuroHuman = { ...OG, id: "JIM-10000000999", serial: "JIM" };
+const BOB: EuroHuman = { ...OG, id: "BOB-20000000999", serial: "BOB" };
+const TOM: EuroHuman = { ...OG, id: "TOM-30000000999", serial: "TOM" };
 
 const individuals = [JIM, BOB, TOM].map((h) => ({
   ...h,
@@ -36,29 +37,30 @@ const individuals = [JIM, BOB, TOM].map((h) => ({
 
 const featuredsArray = [
   {
-    id: "featured-0",
-    stamp: "2222-02-22",
     human: {
       id: JIM.id,
     },
+    id: "featured-0",
+    stamp: "2222-02-22",
   },
   {
-    id: "featured-1",
-    stamp: "3999-01-01",
     human: {
       id: "improper-guid-hmmm",
     },
+    id: "featured-1",
+    stamp: "3999-01-01",
   },
   {
-    id: "featured-2",
-    stamp: "2222-02-22",
     human: {
       id: BOB.id,
     },
+    id: "featured-2",
+    stamp: "2222-02-22",
   },
 ];
 
 const volume_contents: Record<string, object> = {
+  "test/path/featured.json": featuredsArray,
   "test/path/serials.json": individuals.reduce<Record<string, string>>(
     (a, b) => {
       a[b.serial] = b.id;
@@ -72,11 +74,10 @@ const volume_contents: Record<string, object> = {
   "test/path/shards/2.json": individuals.filter(
     (i) => i.id.slice(4, 5) === "2",
   ),
-  "test/path/wb.json": { [JIM.id]: "QJIM", [BOB.id]: "QBOB", [TOM.id]: "QTOM" },
-  "test/path/featured.json": featuredsArray,
+  "test/path/wb.json": { [BOB.id]: "QBOB", [JIM.id]: "QJIM", [TOM.id]: "QTOM" },
 };
 
-function fetch_function(input: string | URL | Request): Promise<Response> {
+function fetch_function(input: Request | string | URL): Promise<Response> {
   const relative_path = input.toString();
   const contents = volume_contents[relative_path];
 
@@ -110,8 +111,8 @@ describe("getHuman", () => {
     const subject = await data_svc.getHuman(JIM.serial);
     expect(subject).toEqual({
       ...JIM,
-      serial: padSerialForKey(JIM.serial),
       entity: { id: "QJIM" },
+      serial: padSerialForKey(JIM.serial),
     });
     expect(log).toHaveBeenCalledWith("shards/1.json @ 1 🚀", "digestFromGuid");
     // expect(readJSONSpy).toHaveBeenCalledWith('test/path/serials.json');
@@ -123,8 +124,8 @@ describe("getHuman", () => {
     const subject = await data_svc.getHuman(BOB.serial);
     expect(subject).toEqual({
       ...BOB,
-      serial: padSerialForKey(BOB.serial),
       entity: { id: "QBOB" },
+      serial: padSerialForKey(BOB.serial),
     });
     expect(log).toHaveBeenCalledWith("shards/2.json @ 1 🚀", "digestFromGuid");
     // expect(readJSONSpy).toHaveBeenCalledWith('test/path/serials.json');
@@ -157,8 +158,8 @@ describe("get Featured Human", () => {
       {
         human: {
           ...JIM,
-          serial: padSerialForKey(JIM.serial),
           entity: { id: "QJIM" },
+          serial: padSerialForKey(JIM.serial),
         },
         id: "featured-0",
         stamp: "2222-02-22",
@@ -171,8 +172,8 @@ describe("get Featured Human", () => {
       {
         human: {
           ...BOB,
-          serial: padSerialForKey(BOB.serial),
           entity: { id: "QBOB" },
+          serial: padSerialForKey(BOB.serial),
         },
         id: "featured-2",
         stamp: "2222-02-22",

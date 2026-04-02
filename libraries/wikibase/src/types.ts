@@ -1,10 +1,33 @@
 import type { Snak } from "./types/snaks.js";
-export type EntityId = string;
-export type Entity = Item;
-export type Entities = Record<EntityId, Entity>;
-export type LanguageDictionary = {
-  [languageKey: string]: { language?: string; value: string };
+export type Claim = {
+  id: string;
+  mainsnak: Snak;
+  qualifiers?: unknown;
+  "qualifiers-order"?: string[];
+  rank: string;
+  references?: unknown;
+  type: "statement";
 };
+export type Claims = Record<string, Claim[]>;
+export interface CommonsPage {
+  imageinfo?: CommonsImageInfo[];
+  imagerepository?: string;
+  ns: number;
+  pageid: number;
+  pageimage?: string;
+  thumbnail?: {
+    height: number;
+    source: string;
+    width: number;
+  };
+  title: string;
+}
+export type CommonsPages = Record<string, CommonsPage>;
+export type CommonsResponse = CommonsCompleteResponse | CommonsContinueResponse;
+export type Entities = Record<EntityId, Entity>;
+export type Entity = Item;
+
+export type EntityId = string;
 export type Item = {
   aliases?: Record<string, { language?: string; value: string }[]>;
   claims?: Claims;
@@ -18,54 +41,44 @@ export type Item = {
   title?: string;
   type: "item";
 };
+
+export type { WikibaseResponse } from "./types/responses.js";
+export type { Snak } from "./types/snaks.js";
+
+export type ItemId = string;
+
+export type LanguageDictionary = {
+  [languageKey: string]: { language?: string; value: string };
+};
+
 export type WikibaseConfig = {
   commons: string;
   sparql: string;
   wikidata: string;
 };
-export type ItemId = string;
 
-export type Claim = {
-  id: string;
-  mainsnak: Snak;
-  qualifiers?: unknown;
-  "qualifiers-order"?: string[];
-  rank: string;
-  references?: unknown;
-  type: "statement";
-};
-export type Claims = Record<string, Claim[]>;
+interface Commons {
+  from: string;
+  to: string;
+}
 
-export type { WikibaseResponse } from "./types/responses.js";
-export type { Snak } from "./types/snaks.js";
-
-type ExtMetadataProperty = {
-  hidden?: string;
-  source:
-    | "mediawiki-metadata"
-    | "commons-templates"
-    | "commons-categories"
-    | "commons-desc-page"
-    | "extension";
-  value: number | string;
+type CommonsBasicResponse = {
+  batchcomplete?: unknown;
+  continue?: unknown;
+  error?: unknown;
+  query: CommonsQuery;
 };
 
-type ExtMetadata = {
-  Artist: ExtMetadataProperty;
-  Assessments: ExtMetadataProperty;
-  AttributionRequired: ExtMetadataProperty;
-  Categories: ExtMetadataProperty;
-  CommonsMetadataExtension: ExtMetadataProperty;
-  Copyrighted: ExtMetadataProperty;
-  Credit: ExtMetadataProperty;
-  DateTime: ExtMetadataProperty;
-  DateTimeOriginal: ExtMetadataProperty;
-  ImageDescription: ExtMetadataProperty;
-  License: ExtMetadataProperty;
-  LicenseShortName: ExtMetadataProperty;
-  ObjectName: ExtMetadataProperty;
-  Restrictions: ExtMetadataProperty;
-  UsageTerms: ExtMetadataProperty;
+type CommonsCompleteResponse = CommonsBasicResponse & {
+  batchcomplete?: unknown;
+  continue?: never;
+};
+type CommonsContinueResponse = CommonsBasicResponse & {
+  batchcomplete?: never;
+  continue: {
+    continue: string;
+    iistart: string;
+  };
 };
 
 interface CommonsImageInfo {
@@ -87,51 +100,38 @@ interface CommonsImageInfo {
   width: number;
 }
 
-type CommonsResponsiveUrls = Record<number, string>;
-
-type CommonsBasicResponse = {
-  batchcomplete?: unknown;
-  continue?: unknown;
-  error?: unknown;
-  query: CommonsQuery;
-};
-
 interface CommonsQuery {
   normalized?: Commons[];
   pages: CommonsPages;
 }
-interface Commons {
-  from: string;
-  to: string;
-}
 
-export type CommonsPages = Record<string, CommonsPage>;
+type CommonsResponsiveUrls = Record<number, string>;
 
-export interface CommonsPage {
-  imageinfo?: CommonsImageInfo[];
-  imagerepository?: string;
-  ns: number;
-  pageid: number;
-  pageimage?: string;
-  thumbnail?: {
-    height: number;
-    source: string;
-    width: number;
-  };
-  title: string;
-}
-
-type CommonsCompleteResponse = CommonsBasicResponse & {
-  batchcomplete?: unknown;
-  continue?: never;
+type ExtMetadata = {
+  Artist: ExtMetadataProperty;
+  Assessments: ExtMetadataProperty;
+  AttributionRequired: ExtMetadataProperty;
+  Categories: ExtMetadataProperty;
+  CommonsMetadataExtension: ExtMetadataProperty;
+  Copyrighted: ExtMetadataProperty;
+  Credit: ExtMetadataProperty;
+  DateTime: ExtMetadataProperty;
+  DateTimeOriginal: ExtMetadataProperty;
+  ImageDescription: ExtMetadataProperty;
+  License: ExtMetadataProperty;
+  LicenseShortName: ExtMetadataProperty;
+  ObjectName: ExtMetadataProperty;
+  Restrictions: ExtMetadataProperty;
+  UsageTerms: ExtMetadataProperty;
 };
 
-type CommonsContinueResponse = CommonsBasicResponse & {
-  batchcomplete?: never;
-  continue: {
-    continue: string;
-    iistart: string;
-  };
+type ExtMetadataProperty = {
+  hidden?: string;
+  source:
+    | "commons-categories"
+    | "commons-desc-page"
+    | "commons-templates"
+    | "extension"
+    | "mediawiki-metadata";
+  value: number | string;
 };
-
-export type CommonsResponse = CommonsCompleteResponse | CommonsContinueResponse;

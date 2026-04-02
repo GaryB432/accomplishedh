@@ -1,8 +1,10 @@
-import { FeDataSvc } from "$lib/data/fe-data.svelte";
 import type { FormDataHuman } from "$lib/data/utils";
+
+import { FeDataSvc } from "$lib/data/fe-data.svelte";
 import { isGary } from "$lib/utils";
 import { refreshPortraitThumbnails } from "@accomplishedh/wikibase";
 import { error, redirect } from "@sveltejs/kit";
+
 import type { Actions, PageServerLoad } from "./$types";
 
 export const load: PageServerLoad = async (ctx) => {
@@ -29,7 +31,7 @@ export const load: PageServerLoad = async (ctx) => {
 
 export const actions: Actions = {
   default: async (ctx) => {
-    const { request, locals } = ctx;
+    const { locals, request } = ctx;
     const form = await request.formData();
     const serial = form.get("serial") as string;
     if (isGary(locals)) {
@@ -51,13 +53,13 @@ export const actions: Actions = {
         death,
         dob,
         era,
+        id,
         inventory,
         knownFor,
         name,
         osfName,
-        yob,
-        id,
         serial,
+        yob,
       };
 
       // await dataService.putHuman(formHuman);

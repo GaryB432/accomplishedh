@@ -22,9 +22,9 @@
 
   function longDate(date: Date): string {
     return Intl.DateTimeFormat("en-US", {
-      timeZone: "UTC",
-      month: "long",
       day: "numeric",
+      month: "long",
+      timeZone: "UTC",
       year: "numeric",
     }).format(date);
   }

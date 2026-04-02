@@ -1,10 +1,16 @@
 import { batchify } from "@accomplishedh/shared";
+
+import type { Entity, EntityId } from "../types.js";
+import type { Snak } from "../types/snaks.js";
+
 import * as wbApi from "../data/api.js";
 import { serialize } from "../data/globe-coordinate-value.js";
 import { isoFrom } from "../data/timevalue.js";
-import type { Entity, EntityId } from "../types.js";
-import type { Snak } from "../types/snaks.js";
 import { fromDictionary } from "./translators.js";
+
+export type SummarizedEntities = Record<EntityId, SummarizedEntity>;
+
+export type SummarizedEntity = Entity & Summary;
 
 export type Summary = {
   summary: {
@@ -12,10 +18,6 @@ export type Summary = {
     fun: boolean;
   };
 };
-
-export type SummarizedEntity = Entity & Summary;
-
-export type SummarizedEntities = Record<EntityId, SummarizedEntity>;
 
 const datatype_info_map = new Map([
   ["commonsMedia", true],
@@ -27,16 +29,6 @@ const datatype_info_map = new Map([
   ["url", true],
   ["wikibase-item", true],
 ]);
-
-function record_from(keys: string[]): Record<string, unknown> {
-  return keys.reduce(
-    (a, b) => {
-      a[b] = b.concat("_");
-      return a;
-    },
-    {} as Record<string, unknown>,
-  );
-}
 
 /**
  * Get WikiData labels for a record of identifiers
@@ -57,108 +49,6 @@ export async function labelify(
     }
   }
   return label_record;
-}
-
-function byDataType(a: Snak, b: Snak): number {
-  return a.datavalue && b.datavalue
-    ? a.datavalue!.type.localeCompare(b.datavalue!.type)
-    : 0;
-}
-
-function snakkedEntityId(snak: Snak): string | undefined {
-  if (snak.datavalue?.type === "wikibase-entityid") {
-    return snak.datavalue.value.id;
-  }
-  return undefined;
-}
-
-function hasSupportedDataType(snak: Snak): boolean {
-  return datatype_info_map.has(snak.datatype);
-}
-
-function stringify_snak_value(
-  snak: Snak,
-  labelDictionary: Record<string, string>,
-): string {
-  const { datatype, datavalue } = snak;
-  let stringed = JSON.stringify({ datavalue, datatype });
-
-  switch (datatype) {
-    case "external-id": {
-      stringed = datavalue.value;
-      break;
-    }
-    case "string": {
-      stringed = datavalue.value;
-      break;
-    }
-    case "commonsMedia": {
-      // TODO handle commonsMedia #224
-      stringed = datavalue.value;
-      break;
-    }
-    case "globe-coordinate": {
-      stringed =
-        datavalue.type === "globecoordinate" ? serialize(datavalue) : "?";
-      break;
-    }
-
-    case "url": {
-      stringed = datavalue.value;
-      break;
-    }
-    case "monolingualtext":
-    case "wikibase-form":
-    case "wikibase-lexeme":
-    case "quantity": {
-      // skip these from the get-go;
-      break;
-    }
-    case "time": {
-      stringed = datavalue.type === "time" ? isoFrom(datavalue) : "?";
-      break;
-    }
-    case "wikibase-item": {
-      if (datavalue.type === "wikibase-entityid") {
-        stringed =
-          labelDictionary[datavalue.value.id] ?? datavalue.type.concat("?");
-      } else {
-        stringed = datavalue.value;
-      }
-      break;
-    }
-    default: {
-      console.log(JSON.stringify({ UNHANDLED: snak, t: datatype }));
-      stringed = datatype.concat(" NO IDEA");
-      break;
-    }
-  }
-
-  return stringed;
-}
-
-async function fetch_label_dictionary_for_claimed_entities(
-  entity: Entity,
-): Promise<Record<string, string>> {
-  const claims = entity.claims ?? {};
-
-  const subject_snaks = Object.values(claims)
-    .map((c) => c.map((d) => d.mainsnak))
-    .flat()
-    .filter(hasSupportedDataType)
-    .filter((f) => f.snaktype === "value");
-
-  const wikibase_entity_snaks = subject_snaks.filter(
-    (s) => s.datavalue?.type === "wikibase-entityid",
-  );
-
-  const snaks_of_interest = wikibase_entity_snaks;
-
-  const claimed_entities_qids = snaks_of_interest
-    .map(snakkedEntityId)
-    .filter((qid) => qid !== void 0);
-
-  return labelify(record_from(claimed_entities_qids));
 }
 
 export async function summarize(entity: Entity): Promise<SummarizedEntity> {
@@ -197,5 +87,117 @@ export async function summarize(entity: Entity): Promise<SummarizedEntity> {
 
   const claims = property_dictionary_2b;
 
-  return { ...subject, summary: { fun: true, claims } };
+  return { ...subject, summary: { claims, fun: true } };
+}
+
+function byDataType(a: Snak, b: Snak): number {
+  return a.datavalue && b.datavalue
+    ? a.datavalue!.type.localeCompare(b.datavalue!.type)
+    : 0;
+}
+
+async function fetch_label_dictionary_for_claimed_entities(
+  entity: Entity,
+): Promise<Record<string, string>> {
+  const claims = entity.claims ?? {};
+
+  const subject_snaks = Object.values(claims)
+    .map((c) => c.map((d) => d.mainsnak))
+    .flat()
+    .filter(hasSupportedDataType)
+    .filter((f) => f.snaktype === "value");
+
+  const wikibase_entity_snaks = subject_snaks.filter(
+    (s) => s.datavalue?.type === "wikibase-entityid",
+  );
+
+  const snaks_of_interest = wikibase_entity_snaks;
+
+  const claimed_entities_qids = snaks_of_interest
+    .map(snakkedEntityId)
+    .filter((qid) => qid !== void 0);
+
+  return labelify(record_from(claimed_entities_qids));
+}
+
+function hasSupportedDataType(snak: Snak): boolean {
+  return datatype_info_map.has(snak.datatype);
+}
+
+function record_from(keys: string[]): Record<string, unknown> {
+  return keys.reduce(
+    (a, b) => {
+      a[b] = b.concat("_");
+      return a;
+    },
+    {} as Record<string, unknown>,
+  );
+}
+
+function snakkedEntityId(snak: Snak): string | undefined {
+  if (snak.datavalue?.type === "wikibase-entityid") {
+    return snak.datavalue.value.id;
+  }
+  return undefined;
+}
+
+function stringify_snak_value(
+  snak: Snak,
+  labelDictionary: Record<string, string>,
+): string {
+  const { datatype, datavalue } = snak;
+  let stringed = JSON.stringify({ datatype, datavalue });
+
+  switch (datatype) {
+    case "commonsMedia": {
+      // TODO handle commonsMedia #224
+      stringed = datavalue.value;
+      break;
+    }
+    case "external-id": {
+      stringed = datavalue.value;
+      break;
+    }
+    case "globe-coordinate": {
+      stringed =
+        datavalue.type === "globecoordinate" ? serialize(datavalue) : "?";
+      break;
+    }
+    case "monolingualtext":
+
+    case "quantity":
+    case "wikibase-form":
+    case "wikibase-lexeme": {
+      // skip these from the get-go;
+      break;
+    }
+    case "string": {
+      stringed = datavalue.value;
+      break;
+    }
+    case "time": {
+      stringed = datavalue.type === "time" ? isoFrom(datavalue) : "?";
+      break;
+    }
+    case "url": {
+      stringed = datavalue.value;
+      break;
+    }
+    case "wikibase-item": {
+      if (datavalue.type === "wikibase-entityid") {
+        stringed =
+          labelDictionary[datavalue.value.id] ?? datavalue.type.concat("?");
+      } else {
+        stringed = datavalue.value;
+      }
+      break;
+    }
+    default: {
+      console.log(JSON.stringify({ t: datatype, UNHANDLED: snak }));
+      stringed = datatype.concat(" NO IDEA");
+      break;
+    }
+  }
+
+  return stringed;
 }

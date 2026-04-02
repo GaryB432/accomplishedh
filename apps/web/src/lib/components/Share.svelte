@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { page } from '$app/state';
   import { browser } from '$app/environment';
+  import { page } from '$app/state';
 
   interface Props {
     text?: string;
@@ -9,8 +9,8 @@
   }
 
   let {
-    title = 'Human Accomplishment',
     text = 'please retweet! ✅',
+    title = 'Human Accomplishment',
     url = page.url.href,
   }: Props = $props();
 
@@ -29,7 +29,7 @@
   function doShare() {
     if (navigator.share) {
       navigator
-        .share({ title, text, url })
+        .share({ text, title, url })
         .then(() => console.log('Successful share'))
         .catch((error) => console.log('Error sharing', error));
     }

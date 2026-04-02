@@ -5,8 +5,8 @@ const defaultPreset = createDefaultPreset();
 /** @type {import('ts-jest').JestConfigWithTsJest} */
 const config = {
   ...defaultPreset,
-  displayName: "library/shared",
   coverageProvider: "v8",
+  displayName: "library/shared",
 };
 
 export default config;

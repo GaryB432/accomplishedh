@@ -1,4 +1,5 @@
 import { describe, expect, type Mocked, test, vi } from "vitest";
+
 import * as apiWrapper from "../data/api";
 import { fetchDetailedEntity } from "./wb";
 

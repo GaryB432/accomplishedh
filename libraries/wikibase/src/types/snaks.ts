@@ -1,23 +1,17 @@
-type ValueTypeSnak = {
-  property: string;
-  snaktype: "value";
-};
-type SomeValueTypeSnak = {
-  property: string;
-  snaktype: "novalue" | "somevalue";
+export type Snak =
+  | CommonsMediaSnak
+  | ExternalIdSnak
+  | GlobeCoordinateSnak
+  | MonolinqualTextSnak
+  | QuantitySnak
+  | StringSnak
+  | TimeSnak
+  | UrlSnak
+  | WikibaseItemSnak;
+type CommonsMediaSnak = StringSnak & {
+  datatype: "commonsMedia";
 };
 
-type WikibaseItemSnak = ValueTypeSnak & {
-  datatype: "wikibase-item";
-  datavalue: {
-    type: "wikibase-entityid";
-    value: {
-      "entity-type": string;
-      id: string;
-      "numeric-id"?: number;
-    };
-  };
-};
 type ExternalIdSnak = ValueTypeSnak & {
   datatype: "external-id";
   datavalue: {
@@ -25,15 +19,34 @@ type ExternalIdSnak = ValueTypeSnak & {
     value: string;
   };
 };
-type MonolinqualTextSnak = (ValueTypeSnak | SomeValueTypeSnak) & {
+type GlobeCoordinateSnak = ValueTypeSnak & {
+  datatype: "globe-coordinate";
+  datavalue: {
+    type: "globecoordinate";
+    value: {
+      latitude: number;
+      longitude: number;
+      precision: number;
+    };
+  };
+};
+type MonolinqualTextSnak = (SomeValueTypeSnak | ValueTypeSnak) & {
   datatype: "monolingualtext";
   datavalue?: {
     type: "monolingualtext";
     value: { language: string; text: string };
   };
 };
-type UrlSnak = StringSnak & {
-  datatype: "url";
+type QuantitySnak = ValueTypeSnak & {
+  datatype: "quantity";
+  datavalue: {
+    type: "quantity";
+    value: { amount: string; unit: string };
+  };
+};
+type SomeValueTypeSnak = {
+  property: string;
+  snaktype: "novalue" | "somevalue";
 };
 type StringSnak = ValueTypeSnak & {
   datatype: string;
@@ -41,9 +54,6 @@ type StringSnak = ValueTypeSnak & {
     type: "string";
     value: string;
   };
-};
-type CommonsMediaSnak = StringSnak & {
-  datatype: "commonsMedia";
 };
 type TimeSnak = ValueTypeSnak & {
   datatype: "time";
@@ -59,31 +69,21 @@ type TimeSnak = ValueTypeSnak & {
     };
   };
 };
-type QuantitySnak = ValueTypeSnak & {
-  datatype: "quantity";
-  datavalue: {
-    type: "quantity";
-    value: { amount: string; unit: string };
-  };
+type UrlSnak = StringSnak & {
+  datatype: "url";
 };
-type GlobeCoordinateSnak = ValueTypeSnak & {
-  datatype: "globe-coordinate";
+type ValueTypeSnak = {
+  property: string;
+  snaktype: "value";
+};
+type WikibaseItemSnak = ValueTypeSnak & {
+  datatype: "wikibase-item";
   datavalue: {
-    type: "globecoordinate";
+    type: "wikibase-entityid";
     value: {
-      latitude: number;
-      longitude: number;
-      precision: number;
+      "entity-type": string;
+      id: string;
+      "numeric-id"?: number;
     };
   };
 };
-export type Snak =
-  | CommonsMediaSnak
-  | ExternalIdSnak
-  | GlobeCoordinateSnak
-  | MonolinqualTextSnak
-  | QuantitySnak
-  | StringSnak
-  | TimeSnak
-  | UrlSnak
-  | WikibaseItemSnak;

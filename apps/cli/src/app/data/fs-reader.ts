@@ -1,4 +1,4 @@
-import { padSerialForKey, type EuroHuman } from "@accomplishedh/shared";
+import { type EuroHuman, padSerialForKey } from "@accomplishedh/shared";
 import { readdirSync, readFileSync } from "node:fs";
 import { join, normalize } from "node:path/posix";
 

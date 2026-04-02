@@ -1,4 +1,5 @@
 import { describe, expect, test } from "vitest";
+
 import { lifeDateClaims, schoolClaims } from "../mocks/claims";
 import { entityDateOfBirthIso, fromDictionary } from "./translators";
 
