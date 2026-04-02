@@ -4,7 +4,7 @@ import { fetchEntities } from "$lib/wikibase/api";
 import { fromDictionary, toAccomplishedH } from "$lib/wikibase/utils";
 import { error } from "@sveltejs/kit";
 
-import { type PageLoadEvent } from "./$types";
+import type { PageLoadEvent } from "./$types";
 
 export async function load(
   ctx: PageLoadEvent,
