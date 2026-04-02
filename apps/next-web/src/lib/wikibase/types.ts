@@ -1,10 +1,10 @@
 import type { Entity } from "@accomplishedh/wikibase";
 
 export type AccomplishedHuman = {
-  wb: Pick<Entity, "id">;
-  serial: string | undefined;
   name: string;
   notes?: string[];
+  serial: string | undefined;
+  wb: Pick<Entity, "id">;
 };
 
 export type { Entity, WikibaseResponse } from "@accomplishedh/wikibase";

@@ -1,6 +1,7 @@
 import type { WikibaseResponse } from "@accomplishedh/wikibase";
-import { entities_get_url, type EntityPropertyName } from "./urls";
 import type { Entities } from "@accomplishedh/wikibase/types"; // TODO no subdirs
+
+import { entities_get_url, type EntityPropertyName } from "./urls";
 
 export async function fetchEntities(
   fetch: (url: string, init?: Readonly<RequestInit>) => Promise<Response>,

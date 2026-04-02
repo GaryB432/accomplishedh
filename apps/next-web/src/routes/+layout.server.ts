@@ -1,12 +1,14 @@
-import { fetchEntities } from "$lib/wikibase/api";
 import type { AccomplishedHuman } from "$lib/wikibase/types";
+
+import { fetchEntities } from "$lib/wikibase/api";
 import { toAccomplishedH } from "$lib/wikibase/utils";
+
 import type { LayoutServerLoad } from "./$types";
 
 type FlatFeaturedInfo = {
+  entity: string;
   on: string;
   serial: string;
-  entity: string;
 };
 
 export const load = (async (ctx) => {
@@ -30,11 +32,11 @@ async function fetchDayFeatureds(
 
   const on = date;
   const featureds: FlatFeaturedInfo[] = [
-    { on, serial: "8426", entity: "Q982518" },
-    { on, serial: "5318", entity: "Q57983" },
-    { on, serial: "2522", entity: "Q55030753" },
-    { on, serial: "87", entity: "Q76579" },
-    { on, serial: "2502", entity: "Q20882" },
+    { entity: "Q982518", on, serial: "8426" },
+    { entity: "Q57983", on, serial: "5318" },
+    { entity: "Q55030753", on, serial: "2522" },
+    { entity: "Q76579", on, serial: "87" },
+    { entity: "Q20882", on, serial: "2502" },
   ];
 
   const ids = featureds.map<string>((f) => f.entity);

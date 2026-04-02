@@ -1,4 +1,5 @@
 import { describe, expect, test } from "vitest";
+
 import { entities_get_url, image_query_url, thumbnail_query_url } from "./urls";
 
 describe("Urls", () => {

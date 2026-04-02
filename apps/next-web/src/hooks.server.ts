@@ -1,8 +1,9 @@
-import { dev } from "$app/environment";
 import type { Handle } from "@sveltejs/kit";
 
+import { dev } from "$app/environment";
+
 export const handle = (async ({ event, resolve }) => {
-  let theme: string | null = null;
+  let theme: null | string = null;
 
   const newTheme = event.url.searchParams.get("theme");
   const cookieTheme = event.cookies.get("colortheme");
