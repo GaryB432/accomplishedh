@@ -1,8 +1,14 @@
+import type { AccomplishedHuman } from "$lib/wikibase/types";
+
 import { fetchEntities } from "$lib/wikibase/api";
 import { fromDictionary, toAccomplishedH } from "$lib/wikibase/utils";
 import { error } from "@sveltejs/kit";
 
-export async function load(ctx) {
+import { type PageLoadEvent } from "./$types";
+
+export async function load(
+  ctx: PageLoadEvent,
+): Promise<{ h: AccomplishedHuman }> {
   const { id } = ctx.params;
 
   const subjects = await fetchEntities(
