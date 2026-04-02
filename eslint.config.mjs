@@ -1,15 +1,15 @@
 import js from "@eslint/js";
-import gb from "eslint-plugin-gb";
+import perf from "eslint-plugin-perfectionist";
 import { defineConfig } from "eslint/config";
 import globals from "globals";
 import tseslint from "typescript-eslint";
 
 export default defineConfig([
   tseslint.configs.recommended,
-  gb.configs.recommended,
+  perf.configs["recommended-natural"],
   {
     files: ["**/*.{js,mjs,cjs,ts,mts,cts}"],
-    plugins: { js, gb },
+    plugins: { js, gb: perf },
     extends: ["js/recommended"],
     languageOptions: { globals: { ...globals.browser, ...globals.node } },
     rules: {
