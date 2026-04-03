@@ -18,9 +18,9 @@ export async function refreshPortraitThumbnails(
 
   if (!thumb_response.ok) {
     console.error(thumb_response.statusText);
-    throw new Error("Unexpected response from ", {
-      cause: thumb_response.statusText,
-    });
+    throw new Error(
+      `Unexpected response from ${turl} (${JSON.stringify(thumb_response)})`,
+    );
   }
 
   const reso = (await thumb_response.json()) as CommonsResponse;

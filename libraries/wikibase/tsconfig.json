@@ -7,7 +7,7 @@
   "compilerOptions": {
     "composite": true,
     "noUnusedLocals": false,
-    "lib": ["es2023"],
+    "lib": ["es2023", "DOM"],
     "outDir": "dist",
     "rootDir": "src",
     "tsBuildInfoFile": "dist/.tsbuildinfo",
