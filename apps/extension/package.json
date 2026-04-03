@@ -6,6 +6,7 @@
   "private": true,
   "scripts": {
     "build": "webpack --env production",
+    "check": "tsc --noEmit",
     "lint": "eslint .",
     "test": "vitest run",
     "dev": "webpack serve",

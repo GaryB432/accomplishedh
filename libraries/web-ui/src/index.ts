@@ -1,3 +1,3 @@
-export * from "./lib/animation/core.js";
-export * from "./lib/social-player.js";
-export * from "./lib/web-ui.js";
+export * from "./lib/animation/core";
+export * from "./lib/social-player";
+export * from "./lib/web-ui";
