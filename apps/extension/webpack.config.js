@@ -74,7 +74,20 @@ const base = {
   plugins: [forkCheckerPlugin, htmlPlugin],
   resolve: {
     extensions: [".ts", ".tsx", ".mjs", ".js"],
+    extensionAlias: {
+      ".js": [".ts", ".js"],
+      ".mjs": [".mts", ".mjs"],
+      ".cjs": [".cts", ".cjs"],
+    },
     alias: {
+      "@accomplishedh/shared": path.resolve(
+        __dirname,
+        "../../libraries/shared/src/index.ts",
+      ),
+      "@accomplishedh/web-ui": path.resolve(
+        __dirname,
+        "../../libraries/web-ui/src/index.ts",
+      ),
       "@environments/environment": path.resolve(
         __dirname,
         "./src/environments/environment.ts",

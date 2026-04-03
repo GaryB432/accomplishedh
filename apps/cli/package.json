@@ -10,7 +10,6 @@
   "scripts": {
     "build": "tsc --build",
     "lint": "eslint .",
-    "pretest": "pnpm -r -C ../.. --filter @accomplishedh/cli^... build",
     "test": "vitest"
   },
   "dependencies": {
