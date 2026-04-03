@@ -5,6 +5,7 @@
     "target": "ES2023",
     "lib": ["es2023", "DOM"],
     "moduleResolution": "Bundler",
+    "noUncheckedSideEffectImports": false,
     "noUnusedLocals": false,
     "types": ["chrome"],
     "paths": {

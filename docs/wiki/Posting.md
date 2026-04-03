@@ -5,8 +5,7 @@ Update the `Known For` Property
 > WHERE SUBSTRING(c.life.born, 5, 5) = "05-20"
 
 ```bash
-cd apps/cli
-pnpm run build
+pnpm -r --filter @accomplishedh/cli... build
 # create READY posts in data/posts.json
 node .\dist\apps\cli\main.js botd 2026-04-23 --listOnly
 # clean up any shown as invalid

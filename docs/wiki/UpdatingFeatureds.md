@@ -11,9 +11,7 @@ Ensure cli is up-to-date
 ```shell
 git log -n 10 --oneline --pretty=format:"%h - %cn (%cd) %s %d" | cat
 # if necessary, build the cli app
-cd apps/cli
-pnpm run build
-cd ..
+pnpm -r --filter @accomplishedh/cli... build
 ```
 
 Create, for example, _90_ days of features (6 per day) in `apps/web/static/data/featured.json` starting on _May 17, 2029_
