@@ -1,14 +1,14 @@
 import { type EuroHuman } from "@accomplishedh/shared";
 import axios from "axios";
 
-import type { Entities, EntityId, ItemId } from "../types.js";
-import type { WikibaseResponse } from "../types/responses.js";
+import type { Entities, EntityId, ItemId } from "../types";
+import type { WikibaseResponse } from "../types/responses";
 
 import {
   entities_get_url,
   entity_searh_url,
   type EntityPropertyName,
-} from "./urls.js";
+} from "./urls";
 
 export async function fetchEntities(
   ids: EntityId[],

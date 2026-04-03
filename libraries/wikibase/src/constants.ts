@@ -1,4 +1,4 @@
-import { type WikibaseConfig } from "./types.js";
+import { type WikibaseConfig } from "./types";
 
 export const WIKIDATA_PERSON_PROPERTIES = {
   AWARD_RECEIVED: "P166", // Award received

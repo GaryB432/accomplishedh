@@ -1,1 +1,1 @@
-export * from "./lib/tweeter.js";
+export * from "./lib/tweeter";

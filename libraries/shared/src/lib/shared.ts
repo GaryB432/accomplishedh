@@ -1,4 +1,4 @@
-import type { Laureate } from "./nobel.types.js";
+import type { Laureate } from "./nobel.types";
 
 export interface EuroHuman {
   adultbasic: string;

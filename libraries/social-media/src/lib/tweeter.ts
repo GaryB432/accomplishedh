@@ -3,7 +3,7 @@ import {
   highlightDefiniteArticle,
 } from "@accomplishedh/shared";
 
-import { coolors } from "./style-functions.js";
+import { coolors } from "./style-functions";
 
 const twitter = {
   parseTweet: (t: string) => {
