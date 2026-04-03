@@ -19,13 +19,16 @@
 	- `pnpm install`
 - Common workspace commands from repo root:
 	- `pnpm -r lint`
+	- `pnpm -r check`
 	- `pnpm -r test`
 	- `pnpm -r build`
 - Run package-specific commands with filter when you only change one area:
-	- `pnpm -r --filter @accomplishedh/extension... build`
+	- `pnpm --filter @accomplishedh/extension build`
 	- `pnpm --filter @accomplishedh/web test`
 	- `pnpm --filter @accomplishedh/next-web check`
-	- `pnpm --filter @accomplishedh/cli build`
+	- `pnpm --filter @accomplishedh/cli test`
+- Library-first checks for source workflow:
+	- `pnpm -r --filter @accomplishedh/shared --filter @accomplishedh/social-media --filter @accomplishedh/web-ui --filter @accomplishedh/wikibase check`
 - For SvelteKit apps (`apps/web`, `apps/next-web`), run `check` after route/type-affecting changes.
 - For extension work, use package scripts in `apps/extension/package.json` (`dev`, `build`, `watch`, `zip`).
 
@@ -33,7 +36,8 @@
 
 - Use ESM and TypeScript across the repo (`type: module` and `module: NodeNext`).
 - Follow ESLint configuration in `eslint.config.mjs` and package-level lint configs; do not introduce a parallel style system.
-- Keep public library entry points aligned with package exports (`src/index.ts` -> `dist/index.js` + declarations).
+- Default to source-first internal dependency resolution in apps/tests (for example extension webpack aliases and CLI vitest aliases point to `libraries/*/src/index.ts`).
+- Keep library `build` scripts as optional artifact verification, not a required step for local development.
 - Prefer small, focused changes that preserve package boundaries.
 
 ## Agent Workflow Expectations
