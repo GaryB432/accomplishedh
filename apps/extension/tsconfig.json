@@ -13,9 +13,5 @@
       "@environments/*": ["./src/environments/*"]
     }
   },
-  "references": [
-    { "path": "../../libraries/shared" },
-    { "path": "../../libraries/web-ui" }
-  ],
   "include": ["./src/**/*"]
 }

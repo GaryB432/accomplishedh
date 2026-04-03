@@ -8,11 +8,6 @@
     "rootDir": "src",
     "tsBuildInfoFile": "dist/.tsbuildinfo"
   },
-  "references": [
-    {
-      "path": "../shared"
-    }
-  ],
   "include": ["src"],
   "exclude": ["**/*.spec.ts", "dist", "**/vite.config.ts"]
 }

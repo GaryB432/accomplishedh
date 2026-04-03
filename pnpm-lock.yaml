@@ -103,7 +103,7 @@ importers:
         specifier: ^9.27.0
         version: 9.39.4
       '@types/chrome':
-        specifier: ^0.1.17
+        specifier: ^0.1.38
         version: 0.1.38
       adm-zip:
         specifier: ^0.5.16

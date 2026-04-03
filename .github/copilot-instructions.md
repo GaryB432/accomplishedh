@@ -4,31 +4,31 @@
 
 - This repository is a pnpm workspace monorepo with packages under `apps/*` and `libraries/*`.
 - App boundaries:
-	- `apps/cli`: TypeScript Node CLI for operations and data generation.
-	- `apps/extension`: browser extension bundled with webpack.
-	- `apps/web` and `apps/next-web`: SvelteKit sites (Vite-based).
+  - `apps/cli`: TypeScript Node CLI for operations and data generation.
+  - `apps/extension`: browser extension bundled with webpack.
+  - `apps/web` and `apps/next-web`: SvelteKit sites (Vite-based).
 - Library boundaries:
-	- `libraries/shared`: core shared utilities.
-	- `libraries/web-ui`: shared UI logic for extension and web apps.
-	- `libraries/social-media` and `libraries/wikibase`: domain libraries consumed by apps.
+  - `libraries/shared`: core shared utilities.
+  - `libraries/web-ui`: shared UI logic for extension and web apps.
+  - `libraries/social-media` and `libraries/wikibase`: domain libraries consumed by apps.
 - Keep dependency direction app -> libraries and avoid introducing circular dependencies among libraries.
 
 ## Build And Test
 
 - Install dependencies from repo root:
-	- `pnpm install`
+  - `pnpm install`
 - Common workspace commands from repo root:
-	- `pnpm -r lint`
-	- `pnpm -r check`
-	- `pnpm -r test`
-	- `pnpm -r build`
+  - `pnpm -r lint`
+  - `pnpm -r check`
+  - `pnpm -r test`
+  - `pnpm -r build`
 - Run package-specific commands with filter when you only change one area:
-	- `pnpm --filter @accomplishedh/extension build`
-	- `pnpm --filter @accomplishedh/web test`
-	- `pnpm --filter @accomplishedh/next-web check`
-	- `pnpm --filter @accomplishedh/cli test`
+  - `pnpm --filter @accomplishedh/extension build`
+  - `pnpm --filter @accomplishedh/web test`
+  - `pnpm --filter @accomplishedh/next-web check`
+  - `pnpm --filter @accomplishedh/cli test`
 - Library-first checks for source workflow:
-	- `pnpm -r --filter @accomplishedh/shared --filter @accomplishedh/social-media --filter @accomplishedh/web-ui --filter @accomplishedh/wikibase check`
+  - `pnpm -r --filter @accomplishedh/shared --filter @accomplishedh/social-media --filter @accomplishedh/web-ui --filter @accomplishedh/wikibase check`
 - For SvelteKit apps (`apps/web`, `apps/next-web`), run `check` after route/type-affecting changes.
 - For extension work, use package scripts in `apps/extension/package.json` (`dev`, `build`, `watch`, `zip`).
 

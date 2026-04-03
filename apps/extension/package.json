@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.27.0",
-    "@types/chrome": "^0.1.17",
+    "@types/chrome": "^0.1.38",
     "adm-zip": "^0.5.16",
     "ajv": "^8.17.1",
     "copy-webpack-plugin": "^14.0.0",

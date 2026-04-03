@@ -5,15 +5,20 @@
     "@tsconfig/strictest/tsconfig.json"
   ],
   "compilerOptions": {
-    "composite": true,
+    "baseUrl": ".",
     "noUnusedLocals": false,
     "outDir": "dist",
-    "rootDir": "src",
     "resolveJsonModule": true,
     "declaration": true,
     "module": "NodeNext",
     "target": "ES2022",
-    "lib": ["ES2022"]
+    "lib": ["ES2022"],
+    "paths": {
+      "@accomplishedh/shared": ["libraries/shared/src/index.ts"],
+      "@accomplishedh/social-media": ["libraries/social-media/src/index.ts"],
+      "@accomplishedh/web-ui": ["libraries/web-ui/src/index.ts"],
+      "@accomplishedh/wikibase": ["libraries/wikibase/src/index.ts"]
+    }
   },
   "exclude": ["**/*.spec.ts", "dist"],
   "include": []
