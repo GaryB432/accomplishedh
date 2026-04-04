@@ -4,5 +4,6 @@
     "module": "ES2022",
     "moduleResolution": "Bundler"
   },
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": ["**/*.spec.ts"]
 }

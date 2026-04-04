@@ -18,6 +18,24 @@ Source for my human-accomplishment project
 - [**web-ui**](/libraries/web-ui/README.md) Functions shared by the extension and web applications
 - [**wikibase**](/libraries/wikibase/README.md) Functions to search and read wikibase
 
+## TypeScript Strategy
+
+This repo is configured for source-first development in a pnpm workspace.
+
+- `pnpm -r check` is the daily quality gate.
+- Internal package imports (`@accomplishedh/*`) resolve to `src` via aliases in `tsconfig.base.json`.
+- App bundlers (`Vite`/`webpack`) still control runtime builds.
+- Library `dist` artifacts are optional for verification and release workflows, not required for day-to-day checks.
+
+### Tsconfig Rationale
+
+- `baseUrl` + `paths` in root config:
+  Required today for internal source aliases. Tradeoff: deprecated in TS 6, so the config uses `ignoreDeprecations: "6.0"` until the TS 7 replacement is finalized.
+- `moduleResolution: "Bundler"` in library/app package tsconfigs:
+  Enables extensionless internal imports and matches bundler behavior. Tradeoff: runtime Node behavior can differ, so bundlers remain source of truth for app execution.
+- Avoid `references` + `composite` for daily checks:
+  Keeps checks independent of prebuilt artifacts and avoids stale build-state coupling. Tradeoff: less leverage of TypeScript project-reference incremental builds.
+
 ## Open Source
 
 The project makes use of many open source packages

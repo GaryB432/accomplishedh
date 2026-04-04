@@ -9,6 +9,7 @@
   },
   "scripts": {
     "build": "tsc --build",
+    "check": "tsc --noEmit -p tsconfig.json",
     "lint": "eslint .",
     "test": "vitest"
   },
