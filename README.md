@@ -67,7 +67,6 @@ The project makes use of many open source packages
 ```mermaid
 flowchart TD
 D@{ shape: bow-rect, label: "JSON Data "}
-Axios@{ shape: lean-r, label: "Axios" }
 web --> shared
 web --> D
 web --> web-ui
@@ -75,7 +74,6 @@ cli --> D
 cli --> social-media
 cli --> shared
 cli --> wikibase
-wikibase --> Axios
 extension --> web-ui
 extension --> shared
 social-media --> shared
