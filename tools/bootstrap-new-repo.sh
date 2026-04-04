@@ -17,6 +17,15 @@ packages:
   - libraries/*
 EOF
 
+cat > .gitignore <<'EOF'
+node_modules/
+tmp/
+EOF
+
+cat > .prettierignore <<'EOF'
+pnpm-lock.yaml
+EOF
+
 cat > package.json <<'EOF'
 {
   "name": "@accomplishedh/repo",
@@ -37,7 +46,6 @@ EOF
 cat > tsconfig.base.json <<'EOF'
 {
   "compilerOptions": {
-    "baseUrl": ".",
     "ignoreDeprecations": "6.0",
     "target": "ES2022",
     "module": "NodeNext",
@@ -46,10 +54,10 @@ cat > tsconfig.base.json <<'EOF'
     "noUnusedLocals": false,
     "resolveJsonModule": true,
     "paths": {
-      "@accomplishedh/shared": ["libraries/shared/src/index.ts"],
-      "@accomplishedh/social-media": ["libraries/social-media/src/index.ts"],
-      "@accomplishedh/web-ui": ["libraries/web-ui/src/index.ts"],
-      "@accomplishedh/wikibase": ["libraries/wikibase/src/index.ts"]
+      "@accomplishedh/shared": ["./libraries/shared/src/index.ts"],
+      "@accomplishedh/social-media": ["./libraries/social-media/src/index.ts"],
+      "@accomplishedh/web-ui": ["./libraries/web-ui/src/index.ts"],
+      "@accomplishedh/wikibase": ["./libraries/wikibase/src/index.ts"]
     }
   }
 }
