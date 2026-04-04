@@ -8,7 +8,18 @@
     "check": "pnpm -r check"
   },
   "devDependencies": {
+    "@sveltejs/adapter-vercel": "^6.3.1",
+    "@sveltejs/kit": "^2.50.2",
+    "@sveltejs/vite-plugin-svelte": "^6.2.4",
+    "@types/crypto-js": "^4.2.2",
     "@types/node": "^24.0.0",
-    "typescript": "next"
+    "@types/xml": "^1.0.11",
+    "@vitest/browser-playwright": "^4.1.2",
+    "svelte": "^5.54.0",
+    "svelte-check": "^4.4.2",
+    "typescript": "next",
+    "vite-plugin-devtools-json": "^1.0.0",
+    "vitest": "^4.1.2",
+    "vitest-browser-svelte": "^2.0.2"
   }
 }
