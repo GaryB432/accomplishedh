@@ -1,15 +1,8 @@
 {
   "extends": ["../../tsconfig.base.json"],
   "compilerOptions": {
-    "lib": ["ES2022", "DOM", "DOM.Iterable"],
-    "outDir": "dist",
-    "rootDir": "src"
+    "module": "ES2022",
+    "moduleResolution": "Bundler"
   },
-  "references": [
-    {
-      "path": "../shared"
-    }
-  ],
-  "include": ["src"],
-  "exclude": ["**/*.spec.ts", "dist", "**/vite.config.ts"]
+  "include": ["src"]
 }

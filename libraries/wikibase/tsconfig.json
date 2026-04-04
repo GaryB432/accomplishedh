@@ -1,23 +1,8 @@
 {
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": [
-    "@tsconfig/node20/tsconfig.json",
-    "@tsconfig/strictest/tsconfig.json"
-  ],
+  "extends": ["../../tsconfig.base.json"],
   "compilerOptions": {
-    "composite": true,
-    "noUnusedLocals": false,
-    "lib": ["es2023"],
-    "outDir": "dist",
-    "rootDir": "src",
-    "resolveJsonModule": true,
-    "declaration": true
+    "module": "ES2022",
+    "moduleResolution": "Bundler"
   },
-  "references": [
-    {
-      "path": "../shared"
-    }
-  ],
-  "exclude": ["**/*.spec.ts", "dist", "**/vite.config.ts"],
-  "include": ["**/*.ts"]
+  "include": ["src"]
 }

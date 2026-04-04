@@ -1,9 +1,8 @@
 {
   "extends": ["../../tsconfig.base.json"],
   "compilerOptions": {
-    "outDir": "dist",
-    "rootDir": "src"
+    "module": "ES2022",
+    "moduleResolution": "Bundler"
   },
-  "include": ["**/*.ts"],
-  "exclude": ["**/*.spec.ts", "dist", "**/vite.config.ts"]
+  "include": ["src"]
 }
