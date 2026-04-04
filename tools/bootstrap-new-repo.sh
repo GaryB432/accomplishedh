@@ -43,7 +43,7 @@ cat > package.json <<'EOF'
 }
 EOF
 
-cat > tsconfig.base.json <<'EOF'
+cat > tsconfig.json <<'EOF'
 {
   "compilerOptions": {
     "ignoreDeprecations": "6.0",
@@ -83,19 +83,13 @@ EOF
 
   cat > "${dir}/tsconfig.json" <<'EOF'
 {
-  "extends": ["../../tsconfig.base.json"],
+  "extends": ["../../tsconfig.json"],
   "compilerOptions": {
     "module": "ES2022",
     "moduleResolution": "Bundler"
   },
   "include": ["src"]
-}
-EOF
-
-  echo "export {};" > "${dir}/src/index.ts"
-}
-
-make_library libraries/shared        "@accomplishedh/shared"
+} libraries/shared        "@accomplishedh/shared"
 make_library libraries/social-media  "@accomplishedh/social-media"
 make_library libraries/web-ui        "@accomplishedh/web-ui"
 make_library libraries/wikibase      "@accomplishedh/wikibase"
@@ -120,7 +114,7 @@ EOF
 
   cat > "${dir}/tsconfig.json" <<'EOF'
 {
-  "extends": ["../../tsconfig.base.json"],
+  "extends": ["../../tsconfig.json"],
   "compilerOptions": {
     "module": "ES2022",
     "moduleResolution": "Bundler"
@@ -154,7 +148,7 @@ EOF
 
 cat > apps/extension/tsconfig.json <<'EOF'
 {
-  "extends": ["../../tsconfig.base.json"],
+  "extends": ["../../tsconfig.json"],
   "compilerOptions": {
     "module": "ES2022",
     "moduleResolution": "Bundler",

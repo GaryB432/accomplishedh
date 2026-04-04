@@ -23,7 +23,7 @@ Source for my human-accomplishment project
 This repo is configured for source-first development in a pnpm workspace.
 
 - `pnpm -r check` is the daily quality gate.
-- Internal package imports (`@accomplishedh/*`) resolve to `src` via aliases in `tsconfig.base.json`.
+- Internal package imports (`@accomplishedh/*`) resolve to `src` via aliases in `tsconfig.json`.
 - App bundlers (`Vite`/`webpack`) still control runtime builds.
 - Library `dist` artifacts are optional for verification and release workflows, not required for day-to-day checks.
 
