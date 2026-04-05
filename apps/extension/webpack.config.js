@@ -75,6 +75,14 @@ const base = {
   resolve: {
     extensions: [".ts", ".tsx", ".mjs", ".js"],
     alias: {
+      "@accomplishedh/shared": path.resolve(
+        __dirname,
+        "../../libraries/shared/src/index.ts",
+      ),
+      "@accomplishedh/web-ui": path.resolve(
+        __dirname,
+        "../../libraries/web-ui/src/index.ts",
+      ),
       "@environments/environment": path.resolve(
         __dirname,
         "./src/environments/environment.ts",

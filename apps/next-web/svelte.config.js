@@ -6,6 +6,7 @@ const config = {
     adapter: adapter(),
     alias: {
       "@accomplishedh/shared": "../../libraries/shared/src",
+      "@accomplishedh/social-media": "../../libraries/social-media/src",
       "@accomplishedh/web-ui": "../../libraries/web-ui/src",
       "@accomplishedh/wikibase": "../../libraries/wikibase/src",
     },

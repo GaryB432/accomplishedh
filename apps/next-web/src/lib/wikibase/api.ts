@@ -1,5 +1,5 @@
 import type { WikibaseResponse } from "@accomplishedh/wikibase";
-import type { Entities } from "@accomplishedh/wikibase/types"; // TODO no subdirs
+import type { Entities } from "@accomplishedh/wikibase";
 
 import { entities_get_url, type EntityPropertyName } from "./urls";
 

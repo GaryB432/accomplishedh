@@ -1,4 +1,4 @@
-import type { Snak } from "./types/snaks.js";
+import type { Snak } from "./types/snaks";
 export type Claim = {
   id: string;
   mainsnak: Snak;
@@ -42,8 +42,8 @@ export type Item = {
   type: "item";
 };
 
-export type { WikibaseResponse } from "./types/responses.js";
-export type { Snak } from "./types/snaks.js";
+export type { WikibaseResponse } from "./types/responses";
+export type { Snak } from "./types/snaks";
 
 export type ItemId = string;
 

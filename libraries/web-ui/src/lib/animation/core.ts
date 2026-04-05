@@ -1,1 +1,1 @@
-export * from "./tipper.js";
+export * from "./tipper";

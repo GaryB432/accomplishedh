@@ -1,12 +1,12 @@
 import { batchify } from "@accomplishedh/shared";
 
-import type { Entity, EntityId } from "../types.js";
-import type { Snak } from "../types/snaks.js";
+import type { Entity, EntityId } from "../types";
+import type { Snak } from "../types/snaks";
 
-import * as wbApi from "../data/api.js";
-import { serialize } from "../data/globe-coordinate-value.js";
-import { isoFrom } from "../data/timevalue.js";
-import { fromDictionary } from "./translators.js";
+import * as wbApi from "../data/api";
+import { serialize } from "../data/globe-coordinate-value";
+import { isoFrom } from "../data/timevalue";
+import { fromDictionary } from "./translators";
 
 export type SummarizedEntities = Record<EntityId, SummarizedEntity>;
 

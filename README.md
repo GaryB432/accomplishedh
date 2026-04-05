@@ -18,6 +18,53 @@ Source for my human-accomplishment project
 - [**web-ui**](/libraries/web-ui/README.md) Functions shared by the extension and web applications
 - [**wikibase**](/libraries/wikibase/README.md) Functions to search and read wikibase
 
+## Strategy: Source-First, Artifact-Later
+
+This repo uses a source-first monorepo strategy designed for fast greenfield iteration. A good shorthand is:
+
+**Source-First, Artifact-Later (SFAL)**
+
+It is intentionally different from reference-heavy incremental artifact workflows.
+
+### Why
+
+- Day-to-day `check` and `test` should not depend on `dist` outputs.
+- Internal packages should resolve directly to `src` for faster iteration.
+- Bundlers own runtime correctness.
+- Build artifacts are for release/distribution, not the development prerequisite.
+
+### How It Manifests
+
+- Root scripts:
+  - `pnpm -r check`
+  - `pnpm -r test`
+- Root [tsconfig.json](/tsconfig.json):
+  - `baseUrl` + `paths` map `@accomplishedh/*` to `libraries/*/src/index.ts`
+  - `ignoreDeprecations: "6.0"` for TS next baseUrl deprecation noise
+  - baseline `NodeNext` settings, then per-package overrides
+- Package tsconfigs:
+  - libraries/apps override to `module: "ES2022"` and `moduleResolution: "Bundler"`
+  - this keeps extensionless imports workable in source-first flow
+  - specs are included in libraries so they are type-checked in the same resolver mode as source
+- Vitest/Vite:
+  - each library has a local `vite.config.ts` / vitest config block
+  - runtime aliases are added when a package imports another internal package at runtime
+  - CLI uses [apps/cli/vitest.config.ts](/apps/cli/vitest.config.ts) aliases so tests run against library source directly
+- Extension exception:
+  - no `check` script on extension by design
+  - extension correctness is webpack-aware (scss/assets/loaders), so bundler tooling is the source of truth there
+
+### Tradeoffs
+
+- Pros:
+  - minimal build coupling
+  - fewer stale artifact/cache failures
+  - straightforward local reasoning
+- Cons:
+  - less leverage from TS project-reference incremental builds
+  - requires explicit runtime aliases in Vitest/Vite for some cross-package imports
+  - `baseUrl` deprecation is deferred until TS 7 replacement lands
+
 ## Open Source
 
 The project makes use of many open source packages
@@ -49,7 +96,6 @@ The project makes use of many open source packages
 ```mermaid
 flowchart TD
 D@{ shape: bow-rect, label: "JSON Data "}
-Axios@{ shape: lean-r, label: "Axios" }
 web --> shared
 web --> D
 web --> web-ui
@@ -57,7 +103,6 @@ cli --> D
 cli --> social-media
 cli --> shared
 cli --> wikibase
-wikibase --> Axios
 extension --> web-ui
 extension --> shared
 social-media --> shared

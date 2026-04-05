@@ -3,15 +3,13 @@
 ## Build Production
 
 ```shell
-cd ./apps/extension
-pnpm run build
+pnpm -r --filter @accomplishedh/extension... build
 ```
 
 ## Development
 
 ```shell
-cd ./apps/extension
-pnpm run dev
+pnpm --filter @accomplishedh/extension dev
 ```
 
 ```mermaid
@@ -24,11 +22,11 @@ F[build]
 H[[Create zip and tag commit]]
 G((upload to stores))
 J[Load and Test Unpacked]
-A -->|pnpm run dev| B
+A -->|pnpm --filter @accomplishedh/extension dev| B
 B --> C
 C -->|Yes| E
 C -->|No| B
-E -->|"pnpm run build"|F
+E -->|"pnpm -r --filter @accomplishedh/extension... build"|F
 F --> J
 J -->|pnpm run zip|H
 J --> C

@@ -1,4 +1,4 @@
-import { Sequence } from "./sequence.js";
+import { Sequence } from "./sequence";
 
 export interface TipperOptions {
   state: State;

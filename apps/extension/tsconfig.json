@@ -1,19 +1,23 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": ["@tsconfig/strictest/tsconfig.json"],
+  "extends": ["../../tsconfig.json"],
   "compilerOptions": {
+    "ignoreDeprecations": "6.0",
     "target": "ES2023",
-    "lib": ["es2023", "DOM"],
+    "lib": ["ES2023", "DOM"],
+    "module": "ES2022",
     "moduleResolution": "Bundler",
+    "noUncheckedSideEffectImports": false,
     "noUnusedLocals": false,
     "types": ["chrome"],
     "paths": {
-      "@environments/*": ["./src/environments/*"]
+      "@accomplishedh/shared": ["libraries/shared/src/index.ts"],
+      "@accomplishedh/social-media": ["libraries/social-media/src/index.ts"],
+      "@accomplishedh/web-ui": ["libraries/web-ui/src/index.ts"],
+      "@accomplishedh/wikibase": ["libraries/wikibase/src/index.ts"],
+      "@environments/*": ["apps/extension/src/environments/*"]
     }
   },
-  "references": [
-    { "path": "../../libraries/shared" },
-    { "path": "../../libraries/web-ui" }
-  ],
-  "include": ["./src/**/*"]
+  "include": ["./src/**/*"],
+  "exclude": ["src/**/*.spec.ts"]
 }

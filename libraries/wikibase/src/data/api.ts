@@ -1,14 +1,13 @@
 import { type EuroHuman } from "@accomplishedh/shared";
-import axios from "axios";
 
-import type { Entities, EntityId, ItemId } from "../types.js";
-import type { WikibaseResponse } from "../types/responses.js";
+import type { Entities, EntityId, ItemId } from "../types";
+import type { WikibaseResponse } from "../types/responses";
 
 import {
   entities_get_url,
   entity_searh_url,
   type EntityPropertyName,
-} from "./urls.js";
+} from "./urls";
 
 export async function fetchEntities(
   ids: EntityId[],
@@ -21,7 +20,8 @@ export async function fetchEntities(
     ids,
     props,
   });
-  const { data: entityData } = await axios.get<WikibaseResponse>(entityUrl);
+  const response = await fetch(entityUrl);
+  const entityData: WikibaseResponse = await response.json();
 
   if (entityData.success === 1) {
     return entityData.entities!;
@@ -47,7 +47,8 @@ export async function searchEntitiesByTitle(
   const term = typeof search === "string" ? search : search.name;
   const searcher = entity_searh_url(term);
 
-  const { data } = await axios.get<WikibaseResponse>(searcher);
+  const response = await fetch(searcher);
+  const data: WikibaseResponse = await response.json();
 
   if (data.success !== 1 || data.search === void 0) {
     throw new Error(JSON.stringify(data));

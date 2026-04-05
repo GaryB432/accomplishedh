@@ -1,20 +1,18 @@
 {
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": [
-    "@tsconfig/node20/tsconfig.json",
-    "@tsconfig/strictest/tsconfig.json"
-  ],
   "compilerOptions": {
-    "composite": true,
-    "noUnusedLocals": false,
-    "outDir": "dist",
-    "rootDir": "src",
-    "resolveJsonModule": true,
-    "declaration": true,
-    "module": "NodeNext",
+    "baseUrl": ".",
+    "ignoreDeprecations": "6.0",
     "target": "ES2022",
-    "lib": ["ES2022"]
-  },
-  "exclude": ["**/*.spec.ts", "dist"],
-  "include": []
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "noUnusedLocals": false,
+    "resolveJsonModule": true,
+    "paths": {
+      "@accomplishedh/shared": ["libraries/shared/src/index.ts"],
+      "@accomplishedh/social-media": ["libraries/social-media/src/index.ts"],
+      "@accomplishedh/web-ui": ["libraries/web-ui/src/index.ts"],
+      "@accomplishedh/wikibase": ["libraries/wikibase/src/index.ts"]
+    }
+  }
 }
