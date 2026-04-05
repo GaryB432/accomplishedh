@@ -22,5 +22,11 @@
     "@types/google.visualization": "^0.0.74",
     "crypto-js": "^4.2.0",
     "xml": "^1.0.1"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-vercel": "^6.3.1",
+    "@sveltejs/kit": "^2.50.2",
+    "@sveltejs/vite-plugin-svelte": "^7.0.0",
+    "vite-plugin-devtools-json": "^1.0.0"
   }
 }
