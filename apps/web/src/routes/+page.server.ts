@@ -22,7 +22,8 @@ export const load: PageServerLoad = async (ctx) => {
 
     return { ro };
   } catch (e) {
-    console.error(JSON.stringify(e));
+    console.log("ERROR JSON FOLLOWS");
+    console.log(JSON.stringify(e));
     error(503, "other bad things");
   }
 };
