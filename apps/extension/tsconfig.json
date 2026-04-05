@@ -9,7 +9,6 @@
     "moduleResolution": "Bundler",
     "noUncheckedSideEffectImports": false,
     "noUnusedLocals": false,
-    "rootDir": "src",
     "types": ["chrome"],
     "paths": {
       "@accomplishedh/shared": ["libraries/shared/src/index.ts"],
