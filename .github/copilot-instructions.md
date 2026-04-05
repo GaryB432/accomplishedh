@@ -1,54 +1,43 @@
-# Project Guidelines
+# Copilot Instructions
 
-## Architecture
+## Monorepo Strategy
 
-- This repository is a pnpm workspace monorepo with packages under `apps/*` and `libraries/*`.
-- App boundaries:
-  - `apps/cli`: TypeScript Node CLI for operations and data generation.
-  - `apps/extension`: browser extension bundled with webpack.
-  - `apps/web` and `apps/next-web`: SvelteKit sites (Vite-based).
-- Library boundaries:
-  - `libraries/shared`: core shared utilities.
-  - `libraries/web-ui`: shared UI logic for extension and web apps.
-  - `libraries/social-media` and `libraries/wikibase`: domain libraries consumed by apps.
-- Keep dependency direction app -> libraries and avoid introducing circular dependencies among libraries.
+This repository uses **Source-First, Artifact-Later (SFAL)**.
 
-## Build And Test
+SFAL means:
 
-- Install dependencies from repo root:
-  - `pnpm install`
-- Common workspace commands from repo root:
-  - `pnpm -r lint`
-  - `pnpm -r check`
-  - `pnpm -r test`
-  - `pnpm -r build`
-- Run package-specific commands with filter when you only change one area:
-  - `pnpm --filter @accomplishedh/extension build`
-  - `pnpm --filter @accomplishedh/web test`
-  - `pnpm --filter @accomplishedh/next-web check`
-  - `pnpm --filter @accomplishedh/cli test`
-- Library-first checks for source workflow:
-  - `pnpm -r --filter @accomplishedh/shared --filter @accomplishedh/social-media --filter @accomplishedh/web-ui --filter @accomplishedh/wikibase check`
-- For SvelteKit apps (`apps/web`, `apps/next-web`), run `check` after route/type-affecting changes.
-- For extension work, use package scripts in `apps/extension/package.json` (`dev`, `build`, `watch`, `zip`).
+- Develop, type-check, and unit-test directly from `src`.
+- Do not require `dist` artifacts for daily `check`/`test` loops.
+- Reserve build artifacts for release/distribution workflows.
 
-## Code Style And Conventions
+## Configuration Rules
 
-- Use ESM and TypeScript across the repo (`type: module` and `module: NodeNext`).
-- Follow ESLint configuration in `eslint.config.mjs` and package-level lint configs; do not introduce a parallel style system.
-- Default to source-first internal dependency resolution in apps/tests (for example extension webpack aliases and CLI vitest aliases point to `libraries/*/src/index.ts`).
-- Keep library `build` scripts as optional artifact verification, not a required step for local development.
-- Prefer small, focused changes that preserve package boundaries.
+### TypeScript
 
-## Agent Workflow Expectations
+- Root config is `tsconfig.json` (single source of truth).
+- Root `compilerOptions.paths` maps `@accomplishedh/*` to each library `src/index.ts`.
+- Root keeps `moduleResolution: "NodeNext"` baseline.
+- Package-level tsconfigs override to `module: "ES2022"` and `moduleResolution: "Bundler"`.
+- Libraries include spec files in TypeScript checks to keep test imports and source imports in the same resolver mode.
+- `ignoreDeprecations: "6.0"` is present until TS 7 replacement for current baseUrl/paths workflow is available.
 
-- Before editing, identify the affected package(s) and run only relevant checks first; run broader checks when changes span packages.
-- If a command fails, report the exact failing package and script, then continue with the smallest useful validation set.
-- Do not duplicate long operational instructions already documented elsewhere; link to existing docs.
+### Vitest/Vite
 
-## Key Docs
+- Tests run package-local with `pnpm -r test`.
+- Avoid root-level `pnpx vitest --run` for workspace-wide runs.
+- Runtime aliases must be configured for internal package imports when tests execute cross-package source:
+  - CLI aliases internal packages in `apps/cli/vitest.config.ts`.
+  - Libraries that import `@accomplishedh/shared` at runtime alias it in local `vite.config.ts`.
 
-- Repository overview: `README.md`
-- Extension operations and release workflow: `docs/wiki/Extension.md`
-- Posting workflow: `docs/wiki/Posting.md`
-- Featured data refresh workflow: `docs/wiki/UpdatingFeatureds.md`
+### Scripts
+
+- Root scripts:
+  - `check`: `pnpm -r check`
+  - `test`: `pnpm -r test`
+- Libraries should expose both `check` and `test` scripts.
+- Extension intentionally has no plain `check` script; webpack-aware tooling is authoritative there.
+
+## Bootstrap Requirement
+
+- Keep `tools/bootstrap-new-repo.sh` aligned with SFAL defaults.
+- Any config strategy changes must update bootstrap in the same change.

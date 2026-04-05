@@ -1,19 +1,10 @@
 {
   "name": "@accomplishedh/web-ui",
-  "version": "6.0.0",
   "private": true,
+  "version": "0.1.0",
   "type": "module",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": "./dist/index.js"
-  },
   "scripts": {
-    "build": "tsc --build",
-    "check": "tsc --noEmit",
-    "lint": "eslint .",
-    "test": "vitest"
-  },
-  "dependencies": {
-    "@accomplishedh/shared": "workspace:^"
+    "check": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest --run"
   }
 }

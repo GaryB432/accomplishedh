@@ -1,26 +1,24 @@
-import path from "node:path";
 import { fileURLToPath } from "node:url";
-
 import { defineConfig } from "vitest/config";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 export default defineConfig({
   resolve: {
     alias: {
-      "@accomplishedh/shared": path.resolve(
-        __dirname,
-        "../../libraries/shared/src/index.ts",
+      "@accomplishedh/shared": fileURLToPath(
+        new URL("../../libraries/shared/src/index.ts", import.meta.url),
       ),
-      "@accomplishedh/social-media": path.resolve(
-        __dirname,
-        "../../libraries/social-media/src/index.ts",
+      "@accomplishedh/social-media": fileURLToPath(
+        new URL("../../libraries/social-media/src/index.ts", import.meta.url),
       ),
-      "@accomplishedh/wikibase": path.resolve(
-        __dirname,
-        "../../libraries/wikibase/src/index.ts",
+      "@accomplishedh/web-ui": fileURLToPath(
+        new URL("../../libraries/web-ui/src/index.ts", import.meta.url),
+      ),
+      "@accomplishedh/wikibase": fileURLToPath(
+        new URL("../../libraries/wikibase/src/index.ts", import.meta.url),
       ),
     },
+  },
+  test: {
+    environment: "node",
   },
 });

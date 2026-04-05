@@ -32,6 +32,15 @@ describe("Query", () => {
         portrait: { img: {} },
         props: [],
         serial: "",
+        sr: {
+          ns: 0,
+          pageid: 0,
+          size: 0,
+          snippet: "",
+          timestamp: "",
+          title: "",
+          wordcount: 0,
+        },
         yob: "1879",
       }),
     ).toEqual(
