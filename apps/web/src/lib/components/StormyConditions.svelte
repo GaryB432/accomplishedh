@@ -46,13 +46,14 @@
       }
     }
 
-    @keyframes dash {
-      from {
-        stroke-dashoffset: var(--drip);
-      }
-      to {
-        stroke-dashoffset: 0;
-      }
+  }
+
+  @keyframes dash {
+    from {
+      stroke-dashoffset: var(--drip);
+    }
+    to {
+      stroke-dashoffset: 0;
     }
   }
 </style>
