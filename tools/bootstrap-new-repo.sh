@@ -9,8 +9,7 @@ cd "$REPO_NAME"
 mkdir -p apps/{cli,extension,web,next-web}/src
 mkdir -p libraries/{shared,social-media,web-ui,wikibase}/src
 
-# ── root ─────────────────────────────────────────────────────────────────────
-
+# Root workspace files
 cat > pnpm-workspace.yaml <<'EOF'
 packages:
   - apps/*
@@ -19,6 +18,7 @@ EOF
 
 cat > .gitignore <<'EOF'
 node_modules/
+dist/
 tmp/
 EOF
 
@@ -34,11 +34,13 @@ cat > package.json <<'EOF'
   "type": "module",
   "packageManager": "pnpm@10.28.0",
   "scripts": {
-    "check": "pnpm -r check"
+    "check": "pnpm -r check",
+    "test": "pnpm -r test"
   },
   "devDependencies": {
     "@types/node": "^24.0.0",
-    "typescript": "next"
+    "typescript": "next",
+    "vitest": "^4.1.2"
   }
 }
 EOF
@@ -46,6 +48,7 @@ EOF
 cat > tsconfig.json <<'EOF'
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "ignoreDeprecations": "6.0",
     "target": "ES2022",
     "module": "NodeNext",
@@ -54,18 +57,16 @@ cat > tsconfig.json <<'EOF'
     "noUnusedLocals": false,
     "resolveJsonModule": true,
     "paths": {
-      "@accomplishedh/shared": ["./libraries/shared/src/index.ts"],
-      "@accomplishedh/social-media": ["./libraries/social-media/src/index.ts"],
-      "@accomplishedh/web-ui": ["./libraries/web-ui/src/index.ts"],
-      "@accomplishedh/wikibase": ["./libraries/wikibase/src/index.ts"]
+      "@accomplishedh/shared": ["libraries/shared/src/index.ts"],
+      "@accomplishedh/social-media": ["libraries/social-media/src/index.ts"],
+      "@accomplishedh/web-ui": ["libraries/web-ui/src/index.ts"],
+      "@accomplishedh/wikibase": ["libraries/wikibase/src/index.ts"]
     }
   }
 }
 EOF
 
-# ── library helper ────────────────────────────────────────────────────────────
-
-make_library () {
+write_library() {
   local dir="$1"
   local name="$2"
 
@@ -76,7 +77,8 @@ make_library () {
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "check": "tsc --noEmit -p tsconfig.json"
+    "check": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest --run"
   }
 }
 EOF
@@ -89,14 +91,118 @@ EOF
     "moduleResolution": "Bundler"
   },
   "include": ["src"]
-} libraries/shared        "@accomplishedh/shared"
-make_library libraries/social-media  "@accomplishedh/social-media"
-make_library libraries/web-ui        "@accomplishedh/web-ui"
-make_library libraries/wikibase      "@accomplishedh/wikibase"
+}
+EOF
 
-# ── app helper ────────────────────────────────────────────────────────────────
+  cat > "${dir}/vite.config.ts" <<'EOF'
+import { fileURLToPath } from "node:url";
 
-make_app () {
+import { defineConfig } from "vitest/config";
+
+export default defineConfig({
+  resolve: {
+    alias: {
+      "@accomplishedh/shared": fileURLToPath(
+        new URL("../shared/src/index.ts", import.meta.url),
+      ),
+      "@accomplishedh/social-media": fileURLToPath(
+        new URL("../social-media/src/index.ts", import.meta.url),
+      ),
+      "@accomplishedh/web-ui": fileURLToPath(
+        new URL("../web-ui/src/index.ts", import.meta.url),
+      ),
+      "@accomplishedh/wikibase": fileURLToPath(
+        new URL("../wikibase/src/index.ts", import.meta.url),
+      ),
+    },
+  },
+  test: {
+    expect: { requireAssertions: true },
+    projects: [
+      {
+        extends: "./vite.config.ts",
+        test: {
+          environment: "node",
+          exclude: ["src/**/*.svelte.{test,spec}.{js,ts}"],
+          include: ["src/**/*.{test,spec}.{js,ts}"],
+          name: "server",
+        },
+      },
+    ],
+  },
+});
+EOF
+
+  echo "export {};" > "${dir}/src/index.ts"
+}
+
+write_library libraries/shared "@accomplishedh/shared"
+write_library libraries/social-media "@accomplishedh/social-media"
+write_library libraries/web-ui "@accomplishedh/web-ui"
+write_library libraries/wikibase "@accomplishedh/wikibase"
+
+cat > apps/cli/package.json <<'EOF'
+{
+  "name": "@accomplishedh/cli",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "check": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest --run"
+  },
+  "dependencies": {
+    "@accomplishedh/shared": "workspace:^",
+    "@accomplishedh/social-media": "workspace:^",
+    "@accomplishedh/wikibase": "workspace:^"
+  }
+}
+EOF
+
+cat > apps/cli/tsconfig.json <<'EOF'
+{
+  "extends": ["../../tsconfig.json"],
+  "compilerOptions": {
+    "module": "ES2022",
+    "moduleResolution": "Bundler",
+    "rootDir": "../..",
+    "types": ["node"]
+  },
+  "include": ["src"]
+}
+EOF
+
+cat > apps/cli/vitest.config.ts <<'EOF'
+import { fileURLToPath } from "node:url";
+
+import { defineConfig } from "vitest/config";
+
+export default defineConfig({
+  resolve: {
+    alias: {
+      "@accomplishedh/shared": fileURLToPath(
+        new URL("../../libraries/shared/src/index.ts", import.meta.url),
+      ),
+      "@accomplishedh/social-media": fileURLToPath(
+        new URL("../../libraries/social-media/src/index.ts", import.meta.url),
+      ),
+      "@accomplishedh/web-ui": fileURLToPath(
+        new URL("../../libraries/web-ui/src/index.ts", import.meta.url),
+      ),
+      "@accomplishedh/wikibase": fileURLToPath(
+        new URL("../../libraries/wikibase/src/index.ts", import.meta.url),
+      ),
+    },
+  },
+  test: {
+    environment: "node",
+  },
+});
+EOF
+
+echo "export {};" > apps/cli/src/index.ts
+
+write_vite_app() {
   local dir="$1"
   local name="$2"
 
@@ -107,7 +213,9 @@ make_app () {
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "check": "tsc --noEmit -p tsconfig.json"
+    "check": "tsc --noEmit -p tsconfig.json",
+    "test:unit": "vitest",
+    "test": "vitest --run"
   }
 }
 EOF
@@ -126,11 +234,11 @@ EOF
   echo "export {};" > "${dir}/src/index.ts"
 }
 
-make_app apps/cli      "@accomplishedh/cli"
-make_app apps/web      "@accomplishedh/web"
-make_app apps/next-web "@accomplishedh/next-web"
+write_vite_app apps/web "@accomplishedh/web"
+write_vite_app apps/next-web "@accomplishedh/next-web"
 
-# extension gets its own tsconfig (chrome types, DOM lib)
+# Extension intentionally omits a plain `check` script.
+# Webpack (assets/scss/loaders) is its runtime truth for correctness.
 cat > apps/extension/package.json <<'EOF'
 {
   "name": "@accomplishedh/extension",
@@ -138,7 +246,7 @@ cat > apps/extension/package.json <<'EOF'
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "check": "tsc --noEmit -p tsconfig.json"
+    "test": "vitest --run"
   },
   "devDependencies": {
     "@types/chrome": "^0.1.39"
@@ -148,23 +256,32 @@ EOF
 
 cat > apps/extension/tsconfig.json <<'EOF'
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
   "extends": ["../../tsconfig.json"],
   "compilerOptions": {
+    "target": "ES2023",
+    "lib": ["ES2023", "DOM"],
     "module": "ES2022",
     "moduleResolution": "Bundler",
-    "lib": ["ES2023", "DOM"],
-    "types": ["chrome"]
+    "types": ["chrome"],
+    "paths": {
+      "@accomplishedh/shared": ["libraries/shared/src/index.ts"],
+      "@accomplishedh/social-media": ["libraries/social-media/src/index.ts"],
+      "@accomplishedh/web-ui": ["libraries/web-ui/src/index.ts"],
+      "@accomplishedh/wikibase": ["libraries/wikibase/src/index.ts"],
+      "@environments/*": ["apps/extension/src/environments/*"]
+    }
   },
-  "include": ["src"]
+  "include": ["./src/**/*"],
+  "exclude": ["src/**/*.spec.ts"]
 }
 EOF
 
 echo "export {};" > apps/extension/src/index.ts
 
-# ── bootstrap ─────────────────────────────────────────────────────────────────
-
 pnpm install
 pnpm -r check
+pnpm -r test
 
 echo
-echo "Done: $REPO_NAME is ready. pnpm -r check passed."
+echo "Done: ${REPO_NAME} is ready with Source-First, Artifact-Later defaults."

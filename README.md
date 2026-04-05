@@ -18,23 +18,52 @@ Source for my human-accomplishment project
 - [**web-ui**](/libraries/web-ui/README.md) Functions shared by the extension and web applications
 - [**wikibase**](/libraries/wikibase/README.md) Functions to search and read wikibase
 
-## TypeScript Strategy
+## Strategy: Source-First, Artifact-Later
 
-This repo is configured for source-first development in a pnpm workspace.
+This repo uses a source-first monorepo strategy designed for fast greenfield iteration. A good shorthand is:
 
-- `pnpm -r --filter=!@accomplishedh/extension check` is the daily quality gate for packages that can be checked with plain `tsc`.
-- Internal package imports (`@accomplishedh/*`) resolve to `src` via aliases in `tsconfig.json`.
-- App bundlers (`Vite`/`webpack`) still control runtime builds.
-- Library `dist` artifacts are optional for verification and release workflows, not required for day-to-day checks.
+**Source-First, Artifact-Later (SFAL)**
 
-### Tsconfig Rationale
+It is intentionally different from reference-heavy incremental artifact workflows.
 
-- `baseUrl` + `paths` in root config:
-  Required today for internal source aliases. Tradeoff: deprecated in TS 6, so the config uses `ignoreDeprecations: "6.0"` until the TS 7 replacement is finalized.
-- `moduleResolution: "Bundler"` in library/app package tsconfigs:
-  Enables extensionless internal imports and matches bundler behavior. Tradeoff: runtime Node behavior can differ, so bundlers remain source of truth for app execution.
-- Avoid `references` + `composite` for daily checks:
-  Keeps checks independent of prebuilt artifacts and avoids stale build-state coupling. Tradeoff: less leverage of TypeScript project-reference incremental builds.
+### Why
+
+- Day-to-day `check` and `test` should not depend on `dist` outputs.
+- Internal packages should resolve directly to `src` for faster iteration.
+- Bundlers own runtime correctness.
+- Build artifacts are for release/distribution, not the development prerequisite.
+
+### How It Manifests
+
+- Root scripts:
+  - `pnpm -r check`
+  - `pnpm -r test`
+- Root [tsconfig.json](/tsconfig.json):
+  - `baseUrl` + `paths` map `@accomplishedh/*` to `libraries/*/src/index.ts`
+  - `ignoreDeprecations: "6.0"` for TS next baseUrl deprecation noise
+  - baseline `NodeNext` settings, then per-package overrides
+- Package tsconfigs:
+  - libraries/apps override to `module: "ES2022"` and `moduleResolution: "Bundler"`
+  - this keeps extensionless imports workable in source-first flow
+  - specs are included in libraries so they are type-checked in the same resolver mode as source
+- Vitest/Vite:
+  - each library has a local `vite.config.ts` / vitest config block
+  - runtime aliases are added when a package imports another internal package at runtime
+  - CLI uses [apps/cli/vitest.config.ts](/apps/cli/vitest.config.ts) aliases so tests run against library source directly
+- Extension exception:
+  - no `check` script on extension by design
+  - extension correctness is webpack-aware (scss/assets/loaders), so bundler tooling is the source of truth there
+
+### Tradeoffs
+
+- Pros:
+  - minimal build coupling
+  - fewer stale artifact/cache failures
+  - straightforward local reasoning
+- Cons:
+  - less leverage from TS project-reference incremental builds
+  - requires explicit runtime aliases in Vitest/Vite for some cross-package imports
+  - `baseUrl` deprecation is deferred until TS 7 replacement lands
 
 ## Open Source
 
