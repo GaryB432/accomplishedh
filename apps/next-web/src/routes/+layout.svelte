@@ -1,6 +1,9 @@
 <script lang="ts">
-  import { resolve } from "$app/paths";
   import favicon from "$lib/assets/favicon.svg";
+  import Footer from "$lib/components/Footer.svelte";
+  import Header from "$lib/components/Header.svelte";
+
+  import "../styles/app.css";
 
   let { children } = $props();
 </script>
@@ -9,15 +12,8 @@
   <link rel="icon" href={favicon} />
 </svelte:head>
 
+<Header></Header>
+
 {@render children()}
 
-<nav>
-  <a href={resolve("/")}>home</a>
-  <a href={resolve("/about")}>about</a>
-</nav>
-
-<style>
-  nav {
-    margin: 0.5rem 0;
-  }
-</style>
+<Footer></Footer>

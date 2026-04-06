@@ -1,27 +1,50 @@
 <script lang="ts">
-  import { resolve } from "$app/paths";
+  import FeaturedToday from "./human/FeaturedToday.svelte";
 
   let { data } = $props();
   let featureds = $derived(data.featureds);
 </script>
 
-<h1>Welcome to SvelteKit</h1>
-<p>
-  Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the
-  documentation!
-</p>
+<main>
+  <div class="container">
+    <h1>Responsive Controls</h1>
+    <p style="margin-bottom: 2rem">
+      This middle section scrolls vertically. The header and footer stay pinned.
+    </p>
 
-<table>
-  <tbody>
-    {#each featureds as featured (featured.name)}
-      <tr>
-        <td>
-          <a href={resolve("/human/[id]", { id: featured.wb.id })}>
-            page for {featured.name}</a
-          >
-        </td>
-        <td>moar</td>
-      </tr>
-    {/each}
-  </tbody>
-</table>
+    <div class="card" style="background: var(--secondary)">
+      <h3>Form Example</h3>
+      <p>Inputs and buttons are sized for thumbs.</p>
+      <input type="text" placeholder="Enter your name..." />
+      <button class="btn">Submit Action</button>
+    </div>
+
+    <div class="grid-cols">
+      <div class="card">
+        <FeaturedToday {featureds}></FeaturedToday>
+      </div>
+      <div class="card">
+        <h3>Feature A</h3>
+        <p>This stacks on mobile and grids on desktop.</p>
+      </div>
+    </div>
+
+    <!-- Spacer to demonstrate scrolling -->
+    <div
+      style="
+            height: 50vh;
+            background: linear-gradient(
+              to bottom,
+              var(--tertiary),
+              transparent
+            );
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          "
+    >
+      <p>Scroll down for more...</p>
+    </div>
+  </div>
+</main>
