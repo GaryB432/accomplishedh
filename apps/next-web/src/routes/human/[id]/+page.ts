@@ -1,14 +1,9 @@
-import type { AccomplishedHuman } from "$lib/wikibase/types";
-
 import { fetchEntities } from "$lib/wikibase/api";
-import { fromDictionary, toAccomplishedH } from "$lib/wikibase/utils";
 import { error } from "@sveltejs/kit";
 
-import type { PageLoadEvent } from "./$types";
+import type { PageLoad, PageLoadEvent } from "./$types";
 
-export async function load(
-  ctx: PageLoadEvent,
-): Promise<{ h: AccomplishedHuman }> {
+export const load: PageLoad = async (ctx: PageLoadEvent) => {
   const { id } = ctx.params;
 
   const subjects = await fetchEntities(
@@ -17,31 +12,24 @@ export async function load(
     ["claims", "labels", "aliases"],
   );
 
-  // console.log(fetchEntities(ctx.fetch, .));
-
   if (!subjects) {
     error(404, "Page not found");
   }
 
   const subject = subjects[id];
 
+  subject.claims ??= {};
+
   const pentities = await fetchEntities(
     ctx.fetch,
-    Object.keys(subject.claims ?? {}).slice(0, 25), // TODO need rate limit windows
+    Object.keys(subject.claims).slice(0, 25), // TODO need rate limit windows
     ["labels"],
   );
-  // if (!pentities.ok) {
-  //   console.log(pentities);
-  //   error(
-  //     503,
-  //     new Error("can't get entities", { cause: pentities.statusText }),
-  //   );
-  // }
 
-  const pppd = Object.values(pentities).map((p) => fromDictionary(p.labels));
-  console.log(pppd, "are the first 25 Ps");
+  const wikibaseProperties = Object.values(pentities);
 
   return {
-    h: toAccomplishedH(subject),
+    subject,
+    wikibaseProperties,
   };
-}
+};
