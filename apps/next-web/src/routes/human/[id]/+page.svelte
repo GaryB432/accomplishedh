@@ -7,15 +7,16 @@
 
   let { data } = $props();
 
-  let { featureds, subject } = $derived(data);
+  let { featureds, subject, wikibaseProperties } = $derived(data);
 
   let subjectLabel = $derived(fromDictionary(subject.labels));
+
+  // console.log(wikibaseProperties);
 </script>
 
 <main>
   <div class="container">
     <h1>{subjectLabel}</h1>
-
     <Headshot></Headshot>
     <LifeSpan></LifeSpan>
     <FeaturedToday {featureds}></FeaturedToday>
