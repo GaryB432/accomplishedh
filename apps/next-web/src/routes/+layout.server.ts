@@ -12,7 +12,7 @@ type FlatFeaturedInfo = {
 };
 
 export const load = (async (ctx) => {
-  console.log(JSON.stringify(ctx));
+  console.log(ctx.locals.todayISO);
   const featureds = await fetchDayFeatureds(ctx.fetch, ctx.locals.todayISO);
   const admin = false;
   return { admin, featureds };
@@ -40,10 +40,7 @@ async function fetchDayFeatureds(
     {} as Record<string, string>,
   );
 
-  const featuredEntities = await fetchEntities(fetch, ids, [
-    "claims",
-    "labels",
-  ]);
+  const featuredEntities = await fetchEntities(fetch, ids, ["labels"]);
 
   const humans: AccomplishedHuman[] = Object.values(featuredEntities)
     .map(toAccomplishedH)

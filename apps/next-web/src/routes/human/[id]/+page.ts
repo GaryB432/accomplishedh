@@ -10,7 +10,7 @@ export const load: PageLoad = async (ctx: PageLoadEvent) => {
   const subjects = await fetchEntities(
     ctx.fetch,
     [id],
-    ["claims", "labels", "aliases"],
+    ["claims", "labels", "descriptions"],
   );
 
   if (!subjects) {
