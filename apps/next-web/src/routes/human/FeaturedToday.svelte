@@ -1,6 +1,11 @@
 <script lang="ts">
   import { resolve } from "$app/paths";
-  let { featureds } = $props();
+  import type { AccomplishedHuman } from "$lib/wikibase/types";
+  let {
+    featureds,
+  }: {
+    featureds: AccomplishedHuman[];
+  } = $props();
 </script>
 
 <h3>Featured Today</h3>
@@ -10,8 +15,8 @@
       <tr>
         <td>
           <a href={resolve("/human/[id]", { id: featured.wb.id })}>
-            {featured.name}</a
-          >
+            {featured.name}
+          </a>
         </td>
         <td>moar</td>
       </tr>

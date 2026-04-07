@@ -12,7 +12,7 @@ type FlatFeaturedInfo = {
 };
 
 export const load = (async (ctx) => {
-  console.log(ctx.locals.todayISO);
+  console.log(JSON.stringify(ctx));
   const featureds = await fetchDayFeatureds(ctx.fetch, ctx.locals.todayISO);
   const admin = false;
   return { admin, featureds };
@@ -22,14 +22,6 @@ async function fetchDayFeatureds(
   fetch: (s: string) => Promise<Response>,
   date: string,
 ): Promise<AccomplishedHuman[]> {
-  // console.log(`fetureds for ${date} `);
-  // const f = await fetch("/data/featureds.json");
-  // if (!f.ok) {
-  //   throw new Error(f.statusText);
-  // }
-  // const featureds = (await f.json()) as FeaturedEntity[];
-  // console.log(featureds);
-
   const on = date;
   const featureds: FlatFeaturedInfo[] = [
     { entity: "Q982518", on, serial: "8426" },

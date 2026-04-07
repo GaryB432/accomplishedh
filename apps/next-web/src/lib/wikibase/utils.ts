@@ -25,9 +25,14 @@ export function toAccomplishedH(subject: Entity): AccomplishedHuman {
   // const ps = Object.keys(subject.claims ?? {}).toSorted();
   // console.log(JSON.stringify(ps));
   const claims = subject.claims ?? {};
+  // const valuesok = Object.keys(claims);
+  // console.log(valuesok.slice(0, 2), "is my lengthsd");
 
   const newLocal = Object.values(claims);
-  console.log(newLocal.length, "yay");
+  const bb = newLocal.map((c) => c);
+  console.log(JSON.stringify(newLocal.at(0), undefined, 2));
+  console.log("\n");
+  // console.log(newLocal.length, "claims", subject.id);
 
   const h: AccomplishedHuman = {
     images: [],

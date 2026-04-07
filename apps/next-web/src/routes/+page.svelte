@@ -2,6 +2,7 @@
   import FeaturedToday from "./human/FeaturedToday.svelte";
 
   let { data } = $props();
+  // console.log(JSON.stringify(data.featureds));
   let featureds = $derived(data.featureds);
 </script>
 
@@ -21,6 +22,7 @@
 
     <div class="grid-cols">
       <div class="card">
+      <h2>this component does not belong on the home page</h2>
         <FeaturedToday {featureds}></FeaturedToday>
       </div>
       <div class="card">
