@@ -2,7 +2,7 @@
   import { resolve } from "$app/paths";
 </script>
 
-<header style="font-weight: 800; color: var(--primary); font-size: 1.2rem">
+<header>
   <div class="left">
     <div>
       <a href={resolve("/")} aria-label="home">
@@ -30,6 +30,10 @@
 
 <style>
   header {
+    font-weight: 800;
+    color: var(--primary);
+    font-size: 1.2rem;
+
     background: var(--bg);
     border-bottom: 1px solid var(--tertiary);
     display: flex;
@@ -38,8 +42,8 @@
     padding-inline: var(--space);
     z-index: 10;
     gap: 0.6em;
-    border: thin solid lime;
   }
+
   div {
     display: flex;
     align-items: center;

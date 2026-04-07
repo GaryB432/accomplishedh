@@ -1,7 +1,3 @@
-<script>
-  import { resolve } from "$app/paths";
-</script>
-
 <footer>
   <span>humanaccomplishment.com &copy; 2026</span>
   <div class="links"></div>
