@@ -4,10 +4,7 @@
 
 <footer>
   <span>humanaccomplishment.com &copy; 2026</span>
-  <div class="links">
-    <a href={resolve("/")}>home</a>
-    <a href={resolve("/about")}>about</a>
-  </div>
+  <div class="links"></div>
 </footer>
 
 <style>
@@ -27,8 +24,5 @@
   .links {
     display: flex;
     gap: 0.5em;
-  }
-  a {
-    display: block;
   }
 </style>
