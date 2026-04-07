@@ -1,6 +1,7 @@
 <script lang="ts">
-  import { resolve } from "$app/paths";
   import type { AccomplishedHuman } from "$lib/wikibase/types";
+
+  import { resolve } from "$app/paths";
   let {
     featureds,
   }: {

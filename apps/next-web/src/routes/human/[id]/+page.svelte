@@ -2,6 +2,7 @@
   import { fromDictionary } from "$lib/wikibase/utils.js";
 
   import FeaturedToday from "../FeaturedToday.svelte";
+  import Headshot from "../Headshot.svelte";
   import LifeSpan from "../LifeSpan.svelte";
 
   let { data } = $props();
@@ -16,6 +17,7 @@
 <main>
   <div class="container">
     <h1>{subjectLabel}</h1>
+    <Headshot {subject}></Headshot>
     <LifeSpan></LifeSpan>
     <FeaturedToday {featureds}></FeaturedToday>
   </div>

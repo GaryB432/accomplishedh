@@ -32,8 +32,8 @@ export const load: PageLoad = async (ctx: PageLoadEvent) => {
   const featureds = (await ctx.parent()).featureds;
 
   return {
+    featureds,
     subject,
     wikibaseProperties,
-    featureds,
   };
 };
