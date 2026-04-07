@@ -10,8 +10,6 @@
   let { featureds, subject } = $derived(data);
 
   let subjectLabel = $derived(fromDictionary(subject.labels));
-
-  // console.log(wikibaseProperties);
 </script>
 
 <main>
