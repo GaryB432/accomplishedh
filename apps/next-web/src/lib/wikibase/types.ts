@@ -1,4 +1,4 @@
-import type { Entity } from "@accomplishedh/wikibase";
+import type {  Entity } from "@accomplishedh/wikibase";
 
 // not using the old excessive type but kept these names
 export type AccomplishedHuman = {
@@ -10,6 +10,7 @@ export type AccomplishedHuman = {
 };
 
 export {
+  type Claim,
   type Entity,
   type WikibaseResponse,
   WIKIDATA_PERSON_PROPERTIES,

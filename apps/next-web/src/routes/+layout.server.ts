@@ -40,9 +40,16 @@ async function fetchDayFeatureds(
     {} as Record<string, string>,
   );
 
-  const featuredEntities = await fetchEntities(fetch, ids, ["labels"]);
+  const featuredEntities = await fetchEntities(fetch, ids, [
+    "labels",
+    "claims",
+  ]);
 
   const humans: AccomplishedHuman[] = Object.values(featuredEntities)
+    .map((a) => {
+      console.log(a.claims);
+      return a;
+    })
     .map(toAccomplishedH)
     .map((f) => ({ ...f, serial: serials[f.wb.id] }));
 

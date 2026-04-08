@@ -1,7 +1,7 @@
 <script lang="ts">
   import { fromDictionary } from "$lib/wikibase/utils.js";
-  import EntityDescription from "../EntityDescription.svelte";
 
+  import EntityDescription from "../EntityDescription.svelte";
   import FeaturedToday from "../FeaturedToday.svelte";
   import Headshot from "../Headshot.svelte";
   import LifeSpan from "../LifeSpan.svelte";

@@ -1,12 +1,18 @@
 <script lang="ts">
+  import { WIKIDATA_PERSON_PROPERTIES as p } from "@accomplishedh/wikibase";
+
   import type { AccomplishedHuman } from "$lib/wikibase/types";
 
   import { resolve } from "$app/paths";
+  import FieldOfWorkIcon from "./FieldOfWorkIcon.svelte";
+
   let {
     featureds,
   }: {
     featureds: AccomplishedHuman[];
   } = $props();
+
+  $inspect(featureds);
 </script>
 
 <h3>Featured Today</h3>
@@ -15,11 +21,17 @@
     {#each featureds as featured (featured.name)}
       <tr>
         <td>
-          <a href={resolve("/human/[id]", { id: featured.wb.id })}>
+          <a
+            data-sveltekit-reload
+            href={resolve("/human/[id]", { id: featured.wb.id })}
+          >
             {featured.name}
           </a>
         </td>
-        <td>moar</td>
+        <td>
+          <FieldOfWorkIcon subject={{ ...featured.wb, type: "item" }}
+          ></FieldOfWorkIcon>
+        </td>
       </tr>
     {/each}
   </tbody>
