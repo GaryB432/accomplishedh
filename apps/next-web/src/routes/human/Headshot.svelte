@@ -1,9 +1,9 @@
 <script lang="ts">
   import type { CommonsResponse, Item } from "@accomplishedh/wikibase/types";
 
+  import { sleepyFetch } from "$lib";
   import { thumbnail_query_url } from "$lib/wikibase/urls";
   import { firstAndOnly } from "@accomplishedh/shared";
-  import {sleepyFetch} from "$lib"
   import { onMount } from "svelte";
 
   type Props = {
@@ -14,8 +14,7 @@
 
   let { subject }: Props = $props();
 
-  let fetchThumbnails: Promise<CommonsResponse> | null = $state(null);
-
+  let fetchThumbnails: null | Promise<CommonsResponse> = $state(null);
 
   const thumbnailUrl = $derived(thumbnail_query_url([subject.id], width));
 

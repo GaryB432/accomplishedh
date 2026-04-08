@@ -2,6 +2,7 @@
   import type { AccomplishedHuman } from "$lib/wikibase/types";
 
   import { resolve } from "$app/paths";
+
   import FieldOfWorkIcon from "./FieldOfWorkIcon.svelte";
 
   let {
@@ -10,7 +11,6 @@
     featureds: AccomplishedHuman[];
   } = $props();
 
-  $inspect(featureds);
 </script>
 
 <h3>Featured Today</h3>

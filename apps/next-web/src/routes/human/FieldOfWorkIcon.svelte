@@ -1,9 +1,10 @@
 <script lang="ts">
+  import { fetchEntities } from "$lib/wikibase/api";
   import {
-    WIKIDATA_PERSON_PROPERTIES as p,
     type Entity,
+    WIKIDATA_PERSON_PROPERTIES as p,
   } from "$lib/wikibase/types";
-  import { entities_get_url } from "$lib/wikibase/urls";
+  import { fromDictionary } from "$lib/wikibase/utils";
 
   let { subject }: { subject: Entity } = $props();
 
@@ -15,35 +16,28 @@
       .filter((v) => v?.type === "wikibase-entityid"),
   );
 
-  const labels: Promise<Response> = $derived(
-    fetch(
-      entities_get_url({
-        ids: fowValues.map((v) => v.value.id),
-        props: ["labels"],
-      }),
+  const labels = $derived(
+    fetchEntities(
+      globalThis.fetch,
+      fowValues.map((v) => v.value.id),
+      ["labels"],
     ),
   );
-
-  
 </script>
 
 <article>
-  {#each fowValues as snakvv}
-    <p>
-      {snakvv.value.id}
-    </p>
-  {/each}
-</article>
-
-{#await labels}
-  hi
-{:then pls}
-  {#await pls.json()}
-    almost
-  {:then j}
-    {JSON.stringify(j)}
+  {#await labels}
+    hang on more
+  {:then pls}
+    <ul>
+      {#each Object.values(pls) as fow (fow.id)}
+        <li>
+          {fromDictionary(fow.labels)}
+        </li>
+      {/each}
+    </ul>
   {/await}
-{/await}
+</article>
 
 <style>
   article {

@@ -5,8 +5,8 @@ export * from "./logic/summarizer";
 export * from "./public/commons/image";
 export * from "./public/wb";
 export type {
-  Claims,
   Claim,
+  Claims,
   Entities,
   Entity,
   LanguageDictionary,
