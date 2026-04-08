@@ -2,8 +2,8 @@
   import type { CommonsResponse, Item } from "@accomplishedh/wikibase/types";
 
   import { thumbnail_query_url } from "$lib/wikibase/urls";
-  import { firstAndOnly, sleep } from "@accomplishedh/shared";
-  import { error } from "@sveltejs/kit";
+  import { firstAndOnly } from "@accomplishedh/shared";
+  import {sleepyFetch} from "$lib"
   import { onMount } from "svelte";
 
   type Props = {
@@ -16,17 +16,6 @@
 
   let fetchThumbnails: Promise<CommonsResponse> | null = $state(null);
 
-  async function sleepyFetch<T>(
-    input: Request | string | URL,
-    init?: RequestInit,
-  ): Promise<T> {
-    await sleep(2000);
-    const r = await globalThis.fetch(input, init);
-    if (r.ok) {
-      return r.json() as Promise<T>;
-    }
-    error(503, "cannot d8a9sdf59s");
-  }
 
   const thumbnailUrl = $derived(thumbnail_query_url([subject.id], width));
 

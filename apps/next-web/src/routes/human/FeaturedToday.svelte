@@ -1,6 +1,4 @@
 <script lang="ts">
-  import { WIKIDATA_PERSON_PROPERTIES as p } from "@accomplishedh/wikibase";
-
   import type { AccomplishedHuman } from "$lib/wikibase/types";
 
   import { resolve } from "$app/paths";

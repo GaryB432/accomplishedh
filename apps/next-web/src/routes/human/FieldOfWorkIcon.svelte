@@ -1,33 +1,49 @@
 <script lang="ts">
   import {
     WIKIDATA_PERSON_PROPERTIES as p,
-    type Claim,
     type Entity,
   } from "$lib/wikibase/types";
+  import { entities_get_url } from "$lib/wikibase/urls";
 
   let { subject }: { subject: Entity } = $props();
 
-  let wikibaseEntityClaimsNotEncyclopedium = $derived(
-    Object.values(subject.claims![p.FIELD_OF_WORK])
-      .filter((c) => {
-        return (
-          c.mainsnak.datavalue?.type === "wikibase-entityid" &&
-          c.mainsnak.datavalue.value["entity-type"] === "item"
-        );
-      })
-      .map((c) => c.mainsnak),
+  let subjectClaims = $derived(subject.claims ?? {});
+
+  const fowValues = $derived(
+    subjectClaims[p.FIELD_OF_WORK]
+      .map((s) => s.mainsnak.datavalue)
+      .filter((v) => v?.type === "wikibase-entityid"),
   );
+
+  const labels: Promise<Response> = $derived(
+    fetch(
+      entities_get_url({
+        ids: fowValues.map((v) => v.value.id),
+        props: ["labels"],
+      }),
+    ),
+  );
+
+  
 </script>
 
-{#if subject.claims}
-  <article>
-    {#each wikibaseEntityClaimsNotEncyclopedium as snak}
-      <p>
-        {JSON.stringify(snak.datavalue?.value)}
-      </p>
-    {/each}
-  </article>
-{/if}
+<article>
+  {#each fowValues as snakvv}
+    <p>
+      {snakvv.value.id}
+    </p>
+  {/each}
+</article>
+
+{#await labels}
+  hi
+{:then pls}
+  {#await pls.json()}
+    almost
+  {:then j}
+    {JSON.stringify(j)}
+  {/await}
+{/await}
 
 <style>
   article {
