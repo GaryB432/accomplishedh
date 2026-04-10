@@ -51,6 +51,7 @@ export class FeDataSvc {
     rootDir = "/data",
   ): Promise<FeDataSvc> {
     const instance = new FeDataSvc(fetch, logger, rootDir);
+    console.warn("boutta initiailize");
     await instance.initialize();
     return instance;
   }
@@ -67,6 +68,8 @@ export class FeDataSvc {
     iso: boolean | string[],
   ): Promise<FeaturedHuman[]> {
     const featuredsPath = join("featured.json");
+
+    console.warn(featuredsPath);
 
     const allFeatured = await this.fetchArray<FeaturedHuman>(featuredsPath);
 
@@ -133,7 +136,7 @@ export class FeDataSvc {
   private async fetchArray<T>(fname: string): Promise<T[]> {
     const response = await this.fetch(join(this.rootDir, fname));
     if (!response.ok) {
-      throw new Error(`${fname} does not exist`);
+      throw new Error(response.statusText);
     }
     return response.json() as Promise<T[]>;
   }
