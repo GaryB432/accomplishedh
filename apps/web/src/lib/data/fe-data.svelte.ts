@@ -143,7 +143,7 @@ export class FeDataSvc {
   ): Promise<Record<string, string>> {
     const response = await this.fetch(join(this.rootDir, fname));
     if (!response.ok) {
-      throw new Error(`${fname} does not exist`);
+      throw new Error(response.statusText);
     }
     return response.json() as Promise<Record<string, string>>;
   }
