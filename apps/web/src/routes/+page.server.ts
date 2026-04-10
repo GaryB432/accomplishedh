@@ -22,9 +22,12 @@ export const load: PageServerLoad = async (ctx) => {
 
     return { ro };
   } catch (e) {
-    console.log("ERROR JSON FOLLOWS");
+    console.log("ERROR JSON+ FOLLOWS");
     console.log(JSON.stringify(e));
-    error(503, "other bad things");
+    const r = e as NodeJS.ErrnoException;
+    console.error(e);
+    console.error(r);
+    error(503, "other bad things in the log");
   }
 };
 
