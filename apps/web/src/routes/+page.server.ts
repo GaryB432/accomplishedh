@@ -10,7 +10,7 @@ import type { Actions, PageServerLoad } from "./$types";
 export const load: PageServerLoad = async (ctx) => {
   const { fetch, locals } = ctx;
   try {
-    console.log("🚒");
+    console.log("🔥🚒");
     const dataService = await FeDataSvc.create(fetch);
     const featuredHumans: FeaturedHuman[] | null =
       await dataService.getFeaturedHumans([locals.todayISO]);
