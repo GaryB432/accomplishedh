@@ -1,9 +1,17 @@
 import type { AccomplishedHuman } from "$lib/wikibase/types";
+import type { ItemId } from "@accomplishedh/wikibase/types";
 
 import { fetchEntities } from "$lib/wikibase/api";
 import { toAccomplishedH } from "$lib/wikibase/utils";
+import { readFileSync } from "fs";
 
 import type { LayoutServerLoad } from "./$types";
+
+type FeaturedDTO = {
+  dob: string;
+  name: string;
+  wb: ItemId;
+};
 
 type FlatFeaturedInfo = {
   entity: string;
@@ -13,23 +21,23 @@ type FlatFeaturedInfo = {
 
 export const load = (async (ctx) => {
   console.log(ctx.locals.todayISO);
-  const featureds = await fetchDayFeatureds(ctx.fetch, ctx.locals.todayISO);
+  const featureds = await fetchDayFeatureds(ctx.locals.todayISO);
   const admin = false;
   return { admin, featureds };
 }) satisfies LayoutServerLoad;
 
-async function fetchDayFeatureds(
-  fetch: (s: string) => Promise<Response>,
-  date: string,
-): Promise<AccomplishedHuman[]> {
+async function fetchDayFeatureds(date: string): Promise<AccomplishedHuman[]> {
+  const f = readFileSync("static/data/identifiers.json", "utf-8");
   const on = date;
-  const featureds: FlatFeaturedInfo[] = [
-    { entity: "Q982518", on, serial: "8426" },
-    { entity: "Q57983", on, serial: "5318" },
-    { entity: "Q55030753", on, serial: "2522" },
-    { entity: "Q76579", on, serial: "87" },
-    { entity: "Q20882", on, serial: "2502" },
-  ];
+  const g = JSON.parse(f) as FeaturedDTO[];
+
+  const j = g.map<FlatFeaturedInfo>((k) => {
+    const entity = k.wb;
+    const dob = k.dob;
+    return { dob, entity, on, serial: "8426" };
+  });
+
+  const featureds: FlatFeaturedInfo[] = j.slice(94, 97);
 
   const ids = featureds.map<string>((f) => f.entity);
   const serials = featureds.reduce(
@@ -47,7 +55,7 @@ async function fetchDayFeatureds(
 
   const humans: AccomplishedHuman[] = Object.values(featuredEntities)
     .map((a) => {
-      console.log(a.claims);
+      // console.log(a.claims);
       return a;
     })
     .map(toAccomplishedH)
