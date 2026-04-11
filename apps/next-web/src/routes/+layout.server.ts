@@ -4,8 +4,9 @@ import type { ItemId } from "@accomplishedh/wikibase/types";
 import { fetchEntities } from "$lib/wikibase/api";
 import { toAccomplishedH } from "$lib/wikibase/utils";
 
-import { error } from "@sveltejs/kit";
 import type { LayoutServerLoad } from "./$types";
+
+import featuredJsonData from "../../static/data/featured.json";
 
 type FeaturedDTO = [ItemId, ISODate];
 
@@ -18,18 +19,13 @@ type ISODate = string;
 
 export const load = (async (ctx) => {
   console.log(ctx.locals.todayISO);
-  const data = await ctx.fetch("/data/featured.json");
-  if (!data.ok) {
-    console.error(data);
-    error(503, 'splines');
-  }
-  const dto: FeaturedDTO[] = await data.json();
-  const featureds = await fetchDayFeatureds(dto, ctx.locals.todayISO);
+  const dtos = featuredJsonData as FeaturedDTO[];
+  const featureds = await grabDayFeatureds(dtos, ctx.locals.todayISO);
   const admin = false;
   return { admin, featureds };
 }) satisfies LayoutServerLoad;
 
-async function fetchDayFeatureds(
+async function grabDayFeatureds(
   featuredJson: FeaturedDTO[],
   date: string,
 ): Promise<AccomplishedHuman[]> {
