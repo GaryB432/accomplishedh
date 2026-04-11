@@ -1,41 +1,50 @@
 <script lang="ts">
+  import type { Entities } from "@accomplishedh/wikibase";
+
   import { fetchEntities } from "$lib/wikibase/api";
   import {
     type Entity,
     WIKIDATA_PERSON_PROPERTIES as p,
   } from "$lib/wikibase/types";
   import { fromDictionary } from "$lib/wikibase/utils";
+  import { onMount } from "svelte";
 
   let { subject }: { subject: Entity } = $props();
 
   let subjectClaims = $derived(subject.claims ?? {});
 
+  let fieldClaims = $derived(subjectClaims[p.FIELD_OF_WORK] ?? []);
+
   const fowValues = $derived(
-    subjectClaims[p.FIELD_OF_WORK]
+    fieldClaims
       .map((s) => s.mainsnak.datavalue)
       .filter((v) => v?.type === "wikibase-entityid"),
   );
 
-  const labels = $derived(
-    fetchEntities(
+  let labels = $state<Promise<Entities>>();
+
+  onMount(() => {
+    labels = fetchEntities(
       globalThis.fetch,
       fowValues.map((v) => v.value.id),
       ["labels"],
-    ),
-  );
+    );
+  });
 </script>
 
 <article>
   {#await labels}
     hang on more
   {:then pls}
-    <ul>
-      {#each Object.values(pls) as fow (fow.id)}
-        <li>
-          {fromDictionary(fow.labels)}
-        </li>
-      {/each}
-    </ul>
+    {#if pls}
+      <ul>
+        {#each Object.values(pls) as fow (fow.id)}
+          <li>
+            {fromDictionary(fow.labels)}
+          </li>
+        {/each}
+      </ul>
+    {/if}
   {/await}
 </article>
 
