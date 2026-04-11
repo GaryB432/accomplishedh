@@ -13,7 +13,7 @@
 
 <nav>
   <a href={resolve("/")}>home</a>
-  <a href={resolve("/about")}>about</a>
+  <a href={resolve("/about")}>about!</a>
 </nav>
 
 <style>
