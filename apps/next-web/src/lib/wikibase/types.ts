@@ -6,7 +6,7 @@ export type AccomplishedHuman = {
   name: string;
   notes?: string[];
   serial: string | undefined;
-  wb: Pick<Entity, "id">;
+  wb: Pick<Entity, "id" | "type">;
 };
 
 export {

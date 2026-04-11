@@ -27,18 +27,16 @@
   {#await fetchThumbnails}
     hang on
   {:then headshotResponse}
-    {#if headshotResponse}
-      {@const { pages } = headshotResponse.query}
-      {@const me = firstAndOnly(pages)}
-      {#if me && me.thumbnail}
-        {@const { thumbnail } = me}
-        <img
-          src={thumbnail.source}
-          height={thumbnail.height}
-          width={thumbnail.width}
-          alt=""
-        />
-      {/if}
+    {@const { pages } = headshotResponse.query}
+    {@const me = firstAndOnly(pages)}
+    {#if me && me.thumbnail}
+      {@const { thumbnail } = me}
+      <img
+        src={thumbnail.source}
+        height={thumbnail.height}
+        width={thumbnail.width}
+        alt=""
+      />
     {/if}
   {/await}
 {/if}

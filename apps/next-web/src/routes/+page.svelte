@@ -1,8 +1,10 @@
 <script lang="ts">
-  import FeaturedToday from "./human/FeaturedToday.svelte";
+  import { resolve } from "$app/paths";
 
-  let { data } = $props();
-  // console.log(JSON.stringify(data.featureds));
+  import { type PageProps } from "./$types.js";
+  import FieldOfWorkIcon from "./human/FieldOfWorkIcon.svelte";
+
+  let { data }: PageProps = $props();
   let featureds = $derived(data.featureds);
 </script>
 
@@ -22,8 +24,24 @@
 
     <div class="grid-cols">
       <div class="card">
-      <h2>this component does not belong on the home page</h2>
-        <FeaturedToday {featureds}></FeaturedToday>
+        <h2>Welcome here are today's</h2>
+
+        <table>
+          <tbody>
+            {#each featureds as featured (featured.name)}
+              <tr>
+                <td>
+                  <a href={resolve("/human/[id]", { id: featured.wb.id })}>
+                    page for {featured.name}</a
+                  >
+                </td>
+                <td
+                  ><FieldOfWorkIcon subject={featured.wb}></FieldOfWorkIcon>
+                </td>
+              </tr>
+            {/each}
+          </tbody>
+        </table>
       </div>
       <div class="card">
         <h3>Feature A</h3>
