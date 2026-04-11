@@ -7,16 +7,18 @@ import { readFileSync } from "fs";
 
 import type { LayoutServerLoad } from "./$types";
 
-type FeaturedDTO = {
-  dob: string;
-  name: string;
-  wb: ItemId;
-};
+type FeaturedDTO = [ItemId, ISODate];
 
 type FlatFeaturedInfo = {
   entity: string;
   on: string;
   serial: string;
+};
+
+type ISODate = string;
+
+type OtherI = {
+  name: string;
 };
 
 export const load = (async (ctx) => {
@@ -27,17 +29,20 @@ export const load = (async (ctx) => {
 }) satisfies LayoutServerLoad;
 
 async function fetchDayFeatureds(date: string): Promise<AccomplishedHuman[]> {
-  const f = readFileSync("static/data/identifiers.json", "utf-8");
-  const on = date;
-  const g = JSON.parse(f) as FeaturedDTO[];
+  const on = date.slice(0, 10);
 
-  const j = g.map<FlatFeaturedInfo>((k) => {
-    const entity = k.wb;
-    const dob = k.dob;
-    return { dob, entity, on, serial: "8426" };
-  });
+  const featuredJson = JSON.parse(
+    readFileSync("static/data/featured.json", "utf-8"),
+  ) as FeaturedDTO[];
 
-  const featureds: FlatFeaturedInfo[] = j.slice(94, 97);
+  const j = featuredJson
+    .filter(([b, k]) => b && k === on)
+    .map<FlatFeaturedInfo>(([entity, on]) => {
+      return { entity, on, serial: "dunno" };
+    });
+
+  console.log(j);
+  const featureds: FlatFeaturedInfo[] = j;
 
   const ids = featureds.map<string>((f) => f.entity);
   const serials = featureds.reduce(
