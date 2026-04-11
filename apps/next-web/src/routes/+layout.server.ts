@@ -4,7 +4,7 @@ import type { ItemId } from "@accomplishedh/wikibase/types";
 import { fetchEntities } from "$lib/wikibase/api";
 import { toAccomplishedH } from "$lib/wikibase/utils";
 
-import { error } from "$app/state";
+import { error } from "@sveltejs/kit";
 import type { LayoutServerLoad } from "./$types";
 
 type FeaturedDTO = [ItemId, ISODate];
