@@ -51,7 +51,6 @@ export class FeDataSvc {
     rootDir = "/data",
   ): Promise<FeDataSvc> {
     const instance = new FeDataSvc(fetch, logger, rootDir);
-    console.warn("boutta initiailize");
     await instance.initialize();
     return instance;
   }
@@ -68,8 +67,6 @@ export class FeDataSvc {
     iso: boolean | string[],
   ): Promise<FeaturedHuman[]> {
     const featuredsPath = join("featured.json");
-
-    console.warn(featuredsPath);
 
     const allFeatured = await this.fetchArray<FeaturedHuman>(featuredsPath);
 

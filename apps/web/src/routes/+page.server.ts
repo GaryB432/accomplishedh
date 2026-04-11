@@ -10,7 +10,6 @@ import type { Actions, PageServerLoad } from "./$types";
 export const load: PageServerLoad = async (ctx) => {
   const { fetch, locals } = ctx;
   try {
-    console.log("🔥🚒");
     const dataService = await FeDataSvc.create(fetch);
     const featuredHumans: FeaturedHuman[] | null =
       await dataService.getFeaturedHumans([locals.todayISO]);
@@ -23,9 +22,8 @@ export const load: PageServerLoad = async (ctx) => {
 
     return { ro };
   } catch (e) {
-    console.log("ERROR JSON FOLLOWS");
     console.error(e);
-    error(503, "other bad things in the log");
+    error(503, "other bad things");
   }
 };
 
