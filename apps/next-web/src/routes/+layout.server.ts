@@ -20,7 +20,7 @@ export const load = (async (ctx) => {
   console.log(ctx.locals.todayISO);
   const data = await ctx.fetch("/data/featured.json");
   if (!data.ok) {
-    console.error(JSON.stringify(data));
+    console.error(data);
     error(503, 'splines');
   }
   const dto: FeaturedDTO[] = await data.json();
