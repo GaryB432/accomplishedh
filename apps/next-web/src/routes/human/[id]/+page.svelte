@@ -1,20 +1,22 @@
 <script lang="ts">
+  import { fromDictionary } from "$lib/wikibase/utils.js";
+
+  import FeaturedToday from "../FeaturedToday.svelte";
+  import Headshot from "../Headshot.svelte";
+  import LifeSpan from "../LifeSpan.svelte";
+
   let { data } = $props();
+
+  let { featureds, subject } = $derived(data);
+
+  let subjectLabel = $derived(fromDictionary(subject.labels));
 </script>
 
-<h1>{data.h.name}</h1>
+<h1>{subjectLabel}</h1>
 
-<table>
-  <tbody>
-    {#each data.featureds as featured (featured.wb.id)}
-      <tr>
-        <td>
-          {featured.name}
-        </td>
-      </tr>
-    {/each}
-  </tbody>
-</table>
+<FeaturedToday {featureds}></FeaturedToday>
+<Headshot></Headshot>
+<LifeSpan></LifeSpan>
 
 <style>
   h1 {

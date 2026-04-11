@@ -1,5 +1,6 @@
 import type { Entity } from "@accomplishedh/wikibase";
 
+// not using the old excessive type but kept these names
 export type AccomplishedHuman = {
   name: string;
   notes?: string[];
@@ -7,4 +8,8 @@ export type AccomplishedHuman = {
   wb: Pick<Entity, "id">;
 };
 
-export type { Entity, WikibaseResponse } from "@accomplishedh/wikibase";
+export {
+  type Entity,
+  type WikibaseResponse,
+  WIKIDATA_PERSON_PROPERTIES,
+} from "@accomplishedh/wikibase";
