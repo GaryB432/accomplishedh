@@ -12,17 +12,13 @@ type FeaturedDTO = [ItemId, ISODate];
 type FlatFeaturedInfo = {
   entity: string;
   on: string;
-  serial: string;
 };
 
 type ISODate = string;
 
-type OtherI = {
-  name: string;
-};
-
 export const load = (async (ctx) => {
   console.log(ctx.locals.todayISO);
+  console.log(process.cwd(), "where am i ❓❓");
   const featureds = await fetchDayFeatureds(ctx.locals.todayISO);
   const admin = false;
   return { admin, featureds };
@@ -35,28 +31,17 @@ async function fetchDayFeatureds(date: string): Promise<AccomplishedHuman[]> {
     readFileSync("static/data/featured.json", "utf-8"),
   ) as FeaturedDTO[];
 
-  const j = featuredJson
-    .filter(([b, k]) => b && k === on)
+  const featureds: FlatFeaturedInfo[] = featuredJson
+    .filter(([entity, stamp]) => entity && stamp === on)
     .map<FlatFeaturedInfo>(([entity, on]) => {
-      return { entity, on, serial: "dunno" };
+      return { entity, on };
     });
 
-  console.log(j);
-  const featureds: FlatFeaturedInfo[] = j;
-
-  const ids = featureds.map<string>((f) => f.entity);
-  const serials = featureds.reduce(
-    (a, b) => {
-      a[b.entity] = b.serial;
-      return a;
-    },
-    {} as Record<string, string>,
+  const featuredEntities = await fetchEntities(
+    fetch,
+    featureds.map<string>((f) => f.entity),
+    ["labels", "claims"],
   );
-
-  const featuredEntities = await fetchEntities(fetch, ids, [
-    "labels",
-    "claims",
-  ]);
 
   const humans: AccomplishedHuman[] = Object.values(featuredEntities)
     .map((a) => {
@@ -64,7 +49,7 @@ async function fetchDayFeatureds(date: string): Promise<AccomplishedHuman[]> {
       return a;
     })
     .map(toAccomplishedH)
-    .map((f) => ({ ...f, serial: serials[f.wb.id] }));
+    .map((f) => ({ ...f }));
 
   return humans;
 }
