@@ -14,11 +14,7 @@
   { "name": "Albert Claude", "dob": "1898-08-24", "wb": "Q233943" },
   { "name": "Albert Einstein", "dob": "1879-03-14", "wb": "Q937" },
   { "name": "Albert Hofmann", "dob": "1906-01-11", "wb": "Q122338" },
-  {
-    "name": "Albert Ludwig Sigesmund Neisser",
-    "dob": "1855-01-22",
-    "wb": "Q76713"
-  },
+  { "name": "Albert Ludwig Sigesmund Neisser", "dob": "1855-01-22", "wb": "Q76713" },
   { "name": "Albert Szent-Györgyi", "dob": "1893-09-16", "wb": "Q180468" },
   { "name": "Albert von Kölliker", "dob": "1817-07-06", "wb": "Q123528" },
   { "name": "Alberto Giacometti", "dob": "1901-10-10", "wb": "Q157194" },
@@ -27,26 +23,14 @@
   { "name": "Albrecht Kossel", "dob": "1853-09-16", "wb": "Q57128" },
   { "name": "Albrecht Penck", "dob": "1858-09-25", "wb": "Q76756" },
   { "name": "Aldous Huxley", "dob": "1894-07-26", "wb": "Q81447" },
-  {
-    "name": "Aleksey Konstantinovich Tolstoy",
-    "dob": "1817-09-05",
-    "wb": "Q212575"
-  },
-  {
-    "name": "Aleksey Nikolayevich Tolstoy",
-    "dob": "1882-01-10",
-    "wb": "Q192279"
-  },
+  { "name": "Aleksey Konstantinovich Tolstoy", "dob": "1817-09-05", "wb": "Q212575" },
+  { "name": "Aleksey Nikolayevich Tolstoy", "dob": "1882-01-10", "wb": "Q192279" },
   { "name": "Alessandro Magnasco", "dob": "1667-02-04", "wb": "Q516941" },
   { "name": "Alessandro Manzoni", "dob": "1785-03-07", "wb": "Q1064" },
   { "name": "Alessandro Scarlatti", "dob": "1660-05-02", "wb": "Q183087" },
   { "name": "Alessandro Volta", "dob": "1745-02-18", "wb": "Q680" },
   { "name": "Alexander Butlerov", "dob": "1828-09-15", "wb": "Q315160" },
-  {
-    "name": "Alexander Fleck, 1st Baron Fleck",
-    "dob": "1889-11-11",
-    "wb": "Q4718858"
-  },
+  { "name": "Alexander Fleck, 1st Baron Fleck", "dob": "1889-11-11", "wb": "Q4718858" },
   { "name": "Alexander Fleming", "dob": "1881-08-06", "wb": "Q37064" },
   { "name": "Alexander Friedmann", "dob": "1888-06-16", "wb": "Q205981" },
   { "name": "Alexander Griboyedov", "dob": "1795-01-04", "wb": "Q15001" },
@@ -75,18 +59,10 @@
   { "name": "Alfred Sisley", "dob": "1839-10-30", "wb": "Q175130" },
   { "name": "Alfred Wegener", "dob": "1880-11-01", "wb": "Q76323" },
   { "name": "Alfredo Casella", "dob": "1883-07-25", "wb": "Q337343" },
-  {
-    "name": "Algernon Charles Swinburne",
-    "dob": "1837-04-05",
-    "wb": "Q315511"
-  },
+  { "name": "Algernon Charles Swinburne", "dob": "1837-04-05", "wb": "Q315511" },
   { "name": "Almroth Wright", "dob": "1861-08-10", "wb": "Q977408" },
   { "name": "Alphonse de Lamartine", "dob": "1790-10-21", "wb": "Q188697" },
-  {
-    "name": "Amantine Lucile Aurore Dupin",
-    "dob": "1804-07-01",
-    "wb": "Q3816"
-  },
+  { "name": "Amantine Lucile Aurore Dupin", "dob": "1804-07-01", "wb": "Q3816" },
   { "name": "Amedeo Avogadro", "dob": "1776-08-09", "wb": "Q43476" },
   { "name": "Amedeo Modigliani", "dob": "1884-07-12", "wb": "Q120993" },
   { "name": "Anatole France", "dob": "1844-04-16", "wb": "Q42443" },
@@ -112,37 +88,17 @@
   { "name": "Angelo Secchi", "dob": "1818-06-28", "wb": "Q312416" },
   { "name": "Ann Radcliffe", "dob": "1764-07-09", "wb": "Q231944" },
   { "name": "Anna Seghers", "dob": "1900-11-19", "wb": "Q57393" },
-  {
-    "name": "Anne-Louis Girodet de Roussy-Trioson",
-    "dob": "1767-01-29",
-    "wb": "Q433434"
-  },
-  {
-    "name": "Annette von Droste-Hülshoff",
-    "dob": "1797-01-10",
-    "wb": "Q57307"
-  },
-  {
-    "name": "Anthony Ashley-Cooper, 3rd Earl of Shaftesbury",
-    "dob": "1671-02-26",
-    "wb": "Q335112"
-  },
+  { "name": "Anne-Louis Girodet de Roussy-Trioson", "dob": "1767-01-29", "wb": "Q433434" },
+  { "name": "Annette von Droste-Hülshoff", "dob": "1797-01-10", "wb": "Q57307" },
+  { "name": "Anthony Ashley-Cooper, 3rd Earl of Shaftesbury", "dob": "1671-02-26", "wb": "Q335112" },
   { "name": "Anthony Carlisle", "dob": "1768-02-15", "wb": "Q572978" },
   { "name": "Anthony Trollope", "dob": "1815-04-24", "wb": "Q318399" },
   { "name": "Antoine de Saint-Exupéry", "dob": "1900-06-29", "wb": "Q2908" },
   { "name": "Antoine Jérôme Balard", "dob": "1802-09-30", "wb": "Q314306" },
-  {
-    "name": "Antoine Laurent de Jussieu",
-    "dob": "1748-04-12",
-    "wb": "Q223963"
-  },
+  { "name": "Antoine Laurent de Jussieu", "dob": "1748-04-12", "wb": "Q223963" },
   { "name": "Antoine Lavoisier", "dob": "1743-08-26", "wb": "Q39607" },
   { "name": "Antoine Watteau", "dob": "1684-10-10", "wb": "Q183221" },
-  {
-    "name": "Antoine-François de Fourcroy",
-    "dob": "1755-06-15",
-    "wb": "Q446875"
-  },
+  { "name": "Antoine-François de Fourcroy", "dob": "1755-06-15", "wb": "Q446875" },
   { "name": "Antoine-Jean Gros", "dob": "1771-03-16", "wb": "Q216999" },
   { "name": "Antonie van Leeuwenhoek", "dob": "1632-10-24", "wb": "Q43522" },
   { "name": "António Egas Moniz", "dob": "1874-11-29", "wb": "Q273219" },
@@ -172,41 +128,21 @@
   { "name": "August Kekulé", "dob": "1829-09-07", "wb": "Q76784" },
   { "name": "August Strindberg", "dob": "1849-01-22", "wb": "Q7724" },
   { "name": "August von Kotzebue", "dob": "1761-05-03", "wb": "Q57242" },
-  {
-    "name": "August von Platen-Hallermünde",
-    "dob": "1796-10-24",
-    "wb": "Q62432"
-  },
+  { "name": "August von Platen-Hallermünde", "dob": "1796-10-24", "wb": "Q62432" },
   { "name": "August von Wassermann", "dob": "1866-02-21", "wb": "Q77360" },
   { "name": "August Weismann", "dob": "1834-01-17", "wb": "Q76465" },
   { "name": "Auguste Piccard", "dob": "1884-01-28", "wb": "Q210719" },
   { "name": "Auguste Rodin", "dob": "1840-11-12", "wb": "Q30755" },
-  {
-    "name": "Auguste Villiers de l'Isle-Adam",
-    "dob": "1838-11-07",
-    "wb": "Q366285"
-  },
-  {
-    "name": "Augustin Pyramus de Candolle",
-    "dob": "1778-02-04",
-    "wb": "Q123057"
-  },
+  { "name": "Auguste Villiers de l'Isle-Adam", "dob": "1838-11-07", "wb": "Q366285" },
+  { "name": "Augustin Pyramus de Candolle", "dob": "1778-02-04", "wb": "Q123057" },
   { "name": "Augustin-Jean Fresnel", "dob": "1788-05-10", "wb": "Q187241" },
   { "name": "Augustin-Louis Cauchy", "dob": "1789-08-21", "wb": "Q8814" },
   { "name": "Augustus De Morgan", "dob": "1806-06-27", "wb": "Q208448" },
-  {
-    "name": "Augustus Edward Hough Love",
-    "dob": "1863-04-17",
-    "wb": "Q770329"
-  },
+  { "name": "Augustus Edward Hough Love", "dob": "1863-04-17", "wb": "Q770329" },
   { "name": "Averroes", "dob": "1126-04-14", "wb": "Q39837" },
   { "name": "Axel Fredrik Cronstedt", "dob": "1722-12-23", "wb": "Q468351" },
   { "name": "Barbara Hepworth", "dob": "1903-01-10", "wb": "Q234109" },
-  {
-    "name": "Bartel Leendert van der Waerden",
-    "dob": "1903-02-02",
-    "wb": "Q287097"
-  },
+  { "name": "Bartel Leendert van der Waerden", "dob": "1903-02-02", "wb": "Q287097" },
   { "name": "Bartolomé Esteban Murillo", "dob": "1617-01-01", "wb": "Q192062" },
   { "name": "Ben Nicholson", "dob": "1894-04-10", "wb": "Q281637" },
   { "name": "Benito Pérez Galdós", "dob": "1843-05-10", "wb": "Q189869" },
@@ -218,11 +154,7 @@
   { "name": "Bernard Bolzano", "dob": "1781-10-05", "wb": "Q184735" },
   { "name": "Bernard Courtois", "dob": "1777-02-08", "wb": "Q468330" },
   { "name": "Bernard de Jussieu", "dob": "1699-08-17", "wb": "Q432734" },
-  {
-    "name": "Bernard Le Bovier de Fontenelle",
-    "dob": "1657-02-11",
-    "wb": "Q310309"
-  },
+  { "name": "Bernard Le Bovier de Fontenelle", "dob": "1657-02-11", "wb": "Q310309" },
   { "name": "Bernard Lyot", "dob": "1897-02-27", "wb": "Q433773" },
   { "name": "Bernard Mandeville", "dob": "1670-11-15", "wb": "Q379912" },
   { "name": "Bernardino Ramazzini", "dob": "1633-10-04", "wb": "Q442783" },
@@ -271,25 +203,13 @@
   { "name": "Charles De Coster", "dob": "1827-08-20", "wb": "Q315176" },
   { "name": "Charles Fabry", "dob": "1867-06-11", "wb": "Q319289" },
   { "name": "Charles Ferdinand Ramuz", "dob": "1878-09-24", "wb": "Q123635" },
-  {
-    "name": "Charles François de Cisternay du Fay",
-    "dob": "1698-09-14",
-    "wb": "Q345455"
-  },
+  { "name": "Charles François de Cisternay du Fay", "dob": "1698-09-14", "wb": "Q345455" },
   { "name": "Charles Glover Barkla", "dob": "1877-06-07", "wb": "Q160522" },
   { "name": "Charles Hatchett", "dob": "1765-01-02", "wb": "Q378065" },
   { "name": "Charles Hermite", "dob": "1822-12-24", "wb": "Q168401" },
-  {
-    "name": "Charles Jean de la Vallée Poussin",
-    "dob": "1866-08-14",
-    "wb": "Q982518"
-  },
+  { "name": "Charles Jean de la Vallée Poussin", "dob": "1866-08-14", "wb": "Q982518" },
   { "name": "Charles Le Brun", "dob": "1619-02-24", "wb": "Q271676" },
-  {
-    "name": "Charles Louis Alphonse Laveran",
-    "dob": "1845-06-18",
-    "wb": "Q189006"
-  },
+  { "name": "Charles Louis Alphonse Laveran", "dob": "1845-06-18", "wb": "Q189006" },
   { "name": "Charles Lyell", "dob": "1797-11-14", "wb": "Q5333" },
   { "name": "Charles Messier", "dob": "1730-06-26", "wb": "Q14524" },
   { "name": "Charles Nicolle", "dob": "1866-09-21", "wb": "Q233965" },
@@ -297,38 +217,18 @@
   { "name": "Charles Perrault", "dob": "1628-01-12", "wb": "Q128460" },
   { "name": "Charles Richet", "dob": "1850-08-25", "wb": "Q214851" },
   { "name": "Charles Scott Sherrington", "dob": "1857-11-27", "wb": "Q213504" },
-  {
-    "name": "Charles Thomson Rees Wilson",
-    "dob": "1869-02-14",
-    "wb": "Q162900"
-  },
+  { "name": "Charles Thomson Rees Wilson", "dob": "1869-02-14", "wb": "Q162900" },
   { "name": "Charles Wheatstone", "dob": "1802-02-06", "wb": "Q156942" },
   { "name": "Charles Wyville Thomson", "dob": "1830-03-05", "wb": "Q945539" },
-  {
-    "name": "Charles-Augustin de Coulomb",
-    "dob": "1736-06-14",
-    "wb": "Q81716"
-  },
+  { "name": "Charles-Augustin de Coulomb", "dob": "1736-06-14", "wb": "Q81716" },
   { "name": "Charles-François Daubigny", "dob": "1817-02-15", "wb": "Q252357" },
   { "name": "Charlotte Brontë", "dob": "1816-04-21", "wb": "Q127332" },
   { "name": "Christiaan Eijkman", "dob": "1858-08-11", "wb": "Q107609" },
   { "name": "Christiaan Huygens", "dob": "1629-04-14", "wb": "Q39599" },
   { "name": "Christian Doppler", "dob": "1803-11-29", "wb": "Q84284" },
-  {
-    "name": "Christian Friedrich Schönbein",
-    "dob": "1799-10-18",
-    "wb": "Q61319"
-  },
-  {
-    "name": "Christian Fürchtegott Gellert",
-    "dob": "1715-07-04",
-    "wb": "Q60584"
-  },
-  {
-    "name": "Christian Leopold von Buch",
-    "dob": "1774-04-26",
-    "wb": "Q55021352"
-  },
+  { "name": "Christian Friedrich Schönbein", "dob": "1799-10-18", "wb": "Q61319" },
+  { "name": "Christian Fürchtegott Gellert", "dob": "1715-07-04", "wb": "Q60584" },
+  { "name": "Christian Leopold von Buch", "dob": "1774-04-26", "wb": "Q55021352" },
   { "name": "Christian Morgenstern", "dob": "1871-05-06", "wb": "Q44652" },
   { "name": "Christoph Bernhard", "dob": "1628-01-01", "wb": "Q524156" },
   { "name": "Christopher Fry", "dob": "1907-12-18", "wb": "Q543468" },
@@ -382,11 +282,7 @@
   { "name": "Eduard Suess", "dob": "1831-08-20", "wb": "Q156941" },
   { "name": "Edvard Grieg", "dob": "1843-06-15", "wb": "Q80621" },
   { "name": "Edvard Munch", "dob": "1863-12-12", "wb": "Q41406" },
-  {
-    "name": "Edward Albert Sharpey-Schafer",
-    "dob": "1850-06-02",
-    "wb": "Q1117138"
-  },
+  { "name": "Edward Albert Sharpey-Schafer", "dob": "1850-06-02", "wb": "Q1117138" },
   { "name": "Edward Bullard", "dob": "1907-09-21", "wb": "Q261269" },
   { "name": "Edward Bulwer-Lytton", "dob": "1803-05-25", "wb": "Q318462" },
   { "name": "Edward Burne-Jones", "dob": "1833-08-28", "wb": "Q216406" },
@@ -396,21 +292,13 @@
   { "name": "Edward Sabine", "dob": "1788-10-14", "wb": "Q311223" },
   { "name": "Egon Schiele", "dob": "1890-06-12", "wb": "Q44032" },
   { "name": "Egon Wellesz", "dob": "1885-10-21", "wb": "Q213680" },
-  {
-    "name": "Ehrenfried Walther von Tschirnhaus",
-    "dob": "1651-04-10",
-    "wb": "Q77288"
-  },
+  { "name": "Ehrenfried Walther von Tschirnhaus", "dob": "1651-04-10", "wb": "Q77288" },
   { "name": "Eilhard Mitscherlich", "dob": "1794-01-07", "wb": "Q62518" },
   { "name": "Ejnar Hertzsprung", "dob": "1873-10-08", "wb": "Q295099" },
   { "name": "Elias Lönnrot", "dob": "1802-04-09", "wb": "Q153159" },
   { "name": "Elio Vittorini", "dob": "1908-07-23", "wb": "Q468658" },
   { "name": "Élisabeth Vigée Le Brun", "dob": "1755-04-16", "wb": "Q213163" },
-  {
-    "name": "Elizabeth Barrett Browning",
-    "dob": "1806-03-06",
-    "wb": "Q228494"
-  },
+  { "name": "Elizabeth Barrett Browning", "dob": "1806-03-06", "wb": "Q228494" },
   { "name": "Elizabeth Gaskell", "dob": "1810-09-29", "wb": "Q229226" },
   { "name": "Emanuel Swedenborg", "dob": "1688-02-08", "wb": "Q185832" },
   { "name": "Emil du Bois-Reymond", "dob": "1818-11-07", "wb": "Q76571" },
@@ -477,11 +365,7 @@
   { "name": "Ford Madox Ford", "dob": "1873-12-17", "wb": "Q537112" },
   { "name": "Francesco Guardi", "dob": "1712-10-05", "wb": "Q318769" },
   { "name": "Francesco Redi", "dob": "1626-02-18", "wb": "Q311187" },
-  {
-    "name": "Francesco Scipione, marchese di Maffei",
-    "dob": "1675-06-01",
-    "wb": "Q1587432"
-  },
+  { "name": "Francesco Scipione, marchese di Maffei", "dob": "1675-06-01", "wb": "Q1587432" },
   { "name": "Francesco Solimena", "dob": "1657-10-04", "wb": "Q736065" },
   { "name": "Francis Bacon", "dob": "1561-01-22", "wb": "Q37388" },
   { "name": "Francis Baily", "dob": "1774-04-28", "wb": "Q358244" },
@@ -522,21 +406,9 @@
   { "name": "Friedrich Bergius", "dob": "1884-10-11", "wb": "Q76614" },
   { "name": "Friedrich Bessel", "dob": "1784-07-22", "wb": "Q75845" },
   { "name": "Friedrich Ernst Dorn", "dob": "1848-07-27", "wb": "Q65191" },
-  {
-    "name": "Friedrich Georg Wilhelm von Struve",
-    "dob": "1793-04-15",
-    "wb": "Q57164"
-  },
-  {
-    "name": "Friedrich Gottlieb Klopstock",
-    "dob": "1724-07-02",
-    "wb": "Q154367"
-  },
-  {
-    "name": "Friedrich Gustav Jakob Henle",
-    "dob": "1809-07-09",
-    "wb": "Q77130"
-  },
+  { "name": "Friedrich Georg Wilhelm von Struve", "dob": "1793-04-15", "wb": "Q57164" },
+  { "name": "Friedrich Gottlieb Klopstock", "dob": "1724-07-02", "wb": "Q154367" },
+  { "name": "Friedrich Gustav Jakob Henle", "dob": "1809-07-09", "wb": "Q77130" },
   { "name": "Friedrich Hölderlin", "dob": "1770-03-20", "wb": "Q75889" },
   { "name": "Friedrich Miescher", "dob": "1844-08-13", "wb": "Q116072" },
   { "name": "Friedrich Paneth", "dob": "1887-08-31", "wb": "Q72631" },
@@ -544,11 +416,7 @@
   { "name": "Friedrich Schiller", "dob": "1759-11-10", "wb": "Q22670" },
   { "name": "Friedrich Spielhagen", "dob": "1829-02-24", "wb": "Q106603" },
   { "name": "Friedrich Stromeyer", "dob": "1776-08-02", "wb": "Q77309" },
-  {
-    "name": "Friedrich Wilhelm Argelander",
-    "dob": "1799-03-22",
-    "wb": "Q58685"
-  },
+  { "name": "Friedrich Wilhelm Argelander", "dob": "1799-03-22", "wb": "Q58685" },
   { "name": "Friedrich Wilhelm Zachow", "dob": "1663-11-14", "wb": "Q77368" },
   { "name": "Friedrich Wöhler", "dob": "1800-07-31", "wb": "Q58575" },
   { "name": "Frits Zernike", "dob": "1888-07-16", "wb": "Q188293" },
@@ -563,11 +431,7 @@
   { "name": "Galileo Galilei", "dob": "1564-02-15", "wb": "Q307" },
   { "name": "Gaspard de Prony", "dob": "1755-07-22", "wb": "Q451608" },
   { "name": "Gaspard Monge", "dob": "1746-05-09", "wb": "Q206832" },
-  {
-    "name": "Gaspard-Gustave de Coriolis",
-    "dob": "1792-05-21",
-    "wb": "Q202827"
-  },
+  { "name": "Gaspard-Gustave de Coriolis", "dob": "1792-05-21", "wb": "Q202827" },
   { "name": "Gavrila Derzhavin", "dob": "1743-07-14", "wb": "Q270275" },
   { "name": "Georg Brandt", "dob": "1694-06-26", "wb": "Q473225" },
   { "name": "Georg Büchner", "dob": "1813-10-17", "wb": "Q154014" },
@@ -621,11 +485,7 @@
   { "name": "Giovanni Alfonso Borelli", "dob": "1608-01-28", "wb": "Q311814" },
   { "name": "Giovanni Battista Amici", "dob": "1786-03-25", "wb": "Q178412" },
   { "name": "Giovanni Battista Gaulli", "dob": "1639-05-08", "wb": "Q520573" },
-  {
-    "name": "Giovanni Battista Morgagni",
-    "dob": "1682-02-25",
-    "wb": "Q511841"
-  },
+  { "name": "Giovanni Battista Morgagni", "dob": "1682-02-25", "wb": "Q511841" },
   { "name": "Giovanni Battista Tiepolo", "dob": "1696-03-05", "wb": "Q186202" },
   { "name": "Giovanni Domenico Cassini", "dob": "1625-06-08", "wb": "Q14279" },
   { "name": "Giovanni Fattori", "dob": "1825-09-06", "wb": "Q710089" },
@@ -674,16 +534,8 @@
   { "name": "Heinrich Hertz", "dob": "1857-02-22", "wb": "Q41257" },
   { "name": "Heinrich Mann", "dob": "1871-03-27", "wb": "Q76480" },
   { "name": "Heinrich Schwabe", "dob": "1789-10-25", "wb": "Q77209" },
-  {
-    "name": "Heinrich Wilhelm Gottfried von Waldeyer-Hartz",
-    "dob": "1836-10-06",
-    "wb": "Q76772"
-  },
-  {
-    "name": "Heinrich Wilhelm Matthias Olbers",
-    "dob": "1758-10-11",
-    "wb": "Q75828"
-  },
+  { "name": "Heinrich Wilhelm Gottfried von Waldeyer-Hartz", "dob": "1836-10-06", "wb": "Q76772" },
+  { "name": "Heinrich Wilhelm Matthias Olbers", "dob": "1758-10-11", "wb": "Q75828" },
   { "name": "Heinz London", "dob": "1907-11-07", "wb": "Q71116" },
   { "name": "Hendrik Conscience", "dob": "1812-12-03", "wb": "Q378133" },
   { "name": "Hendrik Lorentz", "dob": "1853-07-18", "wb": "Q41688" },
@@ -691,11 +543,7 @@
   { "name": "Henri Becquerel", "dob": "1852-12-15", "wb": "Q41269" },
   { "name": "Henri de Saint-Simon", "dob": "1760-10-17", "wb": "Q82934" },
   { "name": "Henri de Toulouse-Lautrec", "dob": "1864-11-24", "wb": "Q82445" },
-  {
-    "name": "Henri Étienne Sainte-Claire Deville",
-    "dob": "1818-03-11",
-    "wb": "Q905534"
-  },
+  { "name": "Henri Étienne Sainte-Claire Deville", "dob": "1818-03-11", "wb": "Q905534" },
   { "name": "Henri Fantin-Latour", "dob": "1836-01-14", "wb": "Q310715" },
   { "name": "Henri Giffard", "dob": "1825-02-08", "wb": "Q370960" },
   { "name": "Henri Lebesgue", "dob": "1875-06-28", "wb": "Q206005" },
@@ -703,16 +551,8 @@
   { "name": "Henri Moissan", "dob": "1852-09-28", "wb": "Q102804" },
   { "name": "Henri Poincaré", "dob": "1854-04-29", "wb": "Q81082" },
   { "name": "Henri Rousseau", "dob": "1844-05-21", "wb": "Q156386" },
-  {
-    "name": "Henri-Alexandre Deslandres",
-    "dob": "1853-07-24",
-    "wb": "Q520771"
-  },
-  {
-    "name": "Henri-Louis Duhamel du Monceau",
-    "dob": "1700-07-20",
-    "wb": "Q525949"
-  },
+  { "name": "Henri-Alexandre Deslandres", "dob": "1853-07-24", "wb": "Q520771" },
+  { "name": "Henri-Louis Duhamel du Monceau", "dob": "1700-07-20", "wb": "Q525949" },
   { "name": "Henrik Dam", "dob": "1895-02-21", "wb": "Q190501" },
   { "name": "Henrik Ibsen", "dob": "1828-03-20", "wb": "Q36661" },
   { "name": "Henrik Pontoppidan", "dob": "1857-07-24", "wb": "Q225554" },
@@ -772,11 +612,7 @@
   { "name": "Jacinto Benavente", "dob": "1866-08-12", "wb": "Q83184" },
   { "name": "Jacob Jordaens", "dob": "1593-05-19", "wb": "Q270658" },
   { "name": "Jacobus Clemens", "dob": "1510-04-15", "wb": "Q438090" },
-  {
-    "name": "Jacobus Henricus van 't Hoff",
-    "dob": "1852-08-30",
-    "wb": "Q102822"
-  },
+  { "name": "Jacobus Henricus van 't Hoff", "dob": "1852-08-30", "wb": "Q102822" },
   { "name": "Jacobus Kapteyn", "dob": "1851-01-19", "wb": "Q156892" },
   { "name": "Jacopo Corsi", "dob": "1561-07-17", "wb": "Q2551943" },
   { "name": "Jacques Charles", "dob": "1746-11-12", "wb": "Q332105" },
@@ -786,16 +622,8 @@
   { "name": "Jacques Prévert", "dob": "1900-02-04", "wb": "Q165274" },
   { "name": "Jacques Tréfouël", "dob": "1897-11-09", "wb": "Q3160106" },
   { "name": "Jacques-Bénigne Bossuet", "dob": "1627-09-27", "wb": "Q294100" },
-  {
-    "name": "Jacques-Henri Bernardin de Saint-Pierre",
-    "dob": "1737-01-19",
-    "wb": "Q361976"
-  },
-  {
-    "name": "Jakob Michael Reinhold Lenz",
-    "dob": "1751-01-23",
-    "wb": "Q76417"
-  },
+  { "name": "Jacques-Henri Bernardin de Saint-Pierre", "dob": "1737-01-19", "wb": "Q361976" },
+  { "name": "Jakob Michael Reinhold Lenz", "dob": "1751-01-23", "wb": "Q76417" },
   { "name": "Jakob Steiner", "dob": "1796-03-18", "wb": "Q123514" },
   { "name": "Jakob Wassermann", "dob": "1873-03-10", "wb": "Q60369" },
   { "name": "James Chadwick", "dob": "1891-10-20", "wb": "Q80884" },
@@ -845,31 +673,15 @@
   { "name": "Jean Stas", "dob": "1813-08-21", "wb": "Q560706" },
   { "name": "Jean-Antoine Houdon", "dob": "1741-03-25", "wb": "Q318741" },
   { "name": "Jean-Antoine Nollet", "dob": "1700-11-19", "wb": "Q994738" },
-  {
-    "name": "Jean-Auguste-Dominique Ingres",
-    "dob": "1780-08-29",
-    "wb": "Q23380"
-  },
+  { "name": "Jean-Auguste-Dominique Ingres", "dob": "1780-08-29", "wb": "Q23380" },
   { "name": "Jean-Baptiste Biot", "dob": "1774-04-21", "wb": "Q58328" },
   { "name": "Jean-Baptiste Carpeaux", "dob": "1827-05-11", "wb": "Q182791" },
   { "name": "Jean-Baptiste Dumas", "dob": "1800-07-14", "wb": "Q164824" },
-  {
-    "name": "Jean-Baptiste Élie de Beaumont",
-    "dob": "1798-09-25",
-    "wb": "Q55030753"
-  },
+  { "name": "Jean-Baptiste Élie de Beaumont", "dob": "1798-09-25", "wb": "Q55030753" },
   { "name": "Jean-Baptiste Greuze", "dob": "1725-08-21", "wb": "Q347139" },
   { "name": "Jean-Baptiste Lamarck", "dob": "1744-08-01", "wb": "Q82122" },
-  {
-    "name": "Jean-Baptiste-Camille Corot",
-    "dob": "1796-07-16",
-    "wb": "Q148475"
-  },
-  {
-    "name": "Jean-Baptiste-Siméon Chardin",
-    "dob": "1699-11-02",
-    "wb": "Q207447"
-  },
+  { "name": "Jean-Baptiste-Camille Corot", "dob": "1796-07-16", "wb": "Q148475" },
+  { "name": "Jean-Baptiste-Siméon Chardin", "dob": "1699-11-02", "wb": "Q207447" },
   { "name": "Jean-François Le Sueur", "dob": "1760-02-15", "wb": "Q559659" },
   { "name": "Jean-François Millet", "dob": "1814-10-04", "wb": "Q148458" },
   { "name": "Jean-Honoré Fragonard", "dob": "1732-04-05", "wb": "Q127171" },
@@ -890,11 +702,7 @@
   { "name": "Johann Bernoulli", "dob": "1667-08-06", "wb": "Q227897" },
   { "name": "Johann Daniel Titius", "dob": "1729-01-02", "wb": "Q375195" },
   { "name": "Johann Franz Encke", "dob": "1791-09-23", "wb": "Q57294" },
-  {
-    "name": "Johann Friedrich Blumenbach",
-    "dob": "1752-05-11",
-    "wb": "Q58588"
-  },
+  { "name": "Johann Friedrich Blumenbach", "dob": "1752-05-11", "wb": "Q58588" },
   { "name": "Johann Friedrich Overbeck", "dob": "1789-07-03", "wb": "Q169311" },
   { "name": "Johann Gottfried Galle", "dob": "1812-06-09", "wb": "Q76431" },
   { "name": "Johann Joachim Winckelmann", "dob": "1717-12-09", "wb": "Q57280" },
@@ -904,19 +712,11 @@
   { "name": "Johann Wilhelm Ritter", "dob": "1776-12-16", "wb": "Q58868" },
   { "name": "Johann Wolfgang Döbereiner", "dob": "1780-12-13", "wb": "Q63690" },
   { "name": "Johann Wolfgang von Goethe", "dob": "1749-08-28", "wb": "Q5879" },
-  {
-    "name": "Johannes Diderik van der Waals",
-    "dob": "1837-11-23",
-    "wb": "Q131721"
-  },
+  { "name": "Johannes Diderik van der Waals", "dob": "1837-11-23", "wb": "Q131721" },
   { "name": "Johannes Fibiger", "dob": "1867-04-23", "wb": "Q216324" },
   { "name": "Johannes Hevelius", "dob": "1611-01-28", "wb": "Q57963" },
   { "name": "Johannes Kepler", "dob": "1571-12-27", "wb": "Q8963" },
-  {
-    "name": "Johannes Nicolaus Brønsted",
-    "dob": "1879-02-22",
-    "wb": "Q180142"
-  },
+  { "name": "Johannes Nicolaus Brønsted", "dob": "1879-02-22", "wb": "Q180142" },
   { "name": "Johannes Stark", "dob": "1874-04-15", "wb": "Q57092" },
   { "name": "John Bunyan", "dob": "1628-11-30", "wb": "Q108206" },
   { "name": "John Canton", "dob": "1718-07-31", "wb": "Q550798" },
@@ -962,11 +762,7 @@
   { "name": "Joseph Black", "dob": "1728-04-16", "wb": "Q272512" },
   { "name": "Joseph Conrad", "dob": "1857-12-03", "wb": "Q82925" },
   { "name": "Joseph Fourier", "dob": "1768-03-21", "wb": "Q8772" },
-  {
-    "name": "Joseph Freiherr von Eichendorff",
-    "dob": "1788-03-10",
-    "wb": "Q77204"
-  },
+  { "name": "Joseph Freiherr von Eichendorff", "dob": "1788-03-10", "wb": "Q77204" },
   { "name": "Joseph Gergonne", "dob": "1771-06-19", "wb": "Q1707098" },
   { "name": "Joseph Görres", "dob": "1776-01-25", "wb": "Q215730" },
   { "name": "Joseph Liouville", "dob": "1809-03-24", "wb": "Q214549" },
@@ -1045,11 +841,7 @@
   { "name": "Louis Nicolas Vauquelin", "dob": "1763-05-16", "wb": "Q333438" },
   { "name": "Louis Pasteur", "dob": "1822-12-27", "wb": "Q529" },
   { "name": "Louis Paul Cailletet", "dob": "1832-09-21", "wb": "Q438769" },
-  {
-    "name": "Louis-Bernard Guyton de Morveau",
-    "dob": "1737-01-04",
-    "wb": "Q540617"
-  },
+  { "name": "Louis-Bernard Guyton de Morveau", "dob": "1737-01-04", "wb": "Q540617" },
   { "name": "Louis-Ferdinand Céline", "dob": "1894-05-27", "wb": "Q151820" },
   { "name": "Louis-Nicolas Clérambault", "dob": "1676-12-19", "wb": "Q470149" },
   { "name": "Ludovic Halévy", "dob": "1834-01-01", "wb": "Q723585" },
@@ -1114,11 +906,7 @@
   { "name": "Nicolas Boileau-Despréaux", "dob": "1636-11-01", "wb": "Q188857" },
   { "name": "Nicolas Dalayrac", "dob": "1753-06-08", "wb": "Q952520" },
   { "name": "Nicolas Leblanc", "dob": "1742-12-06", "wb": "Q14307" },
-  {
-    "name": "Nicolas Léonard Sadi Carnot",
-    "dob": "1796-06-01",
-    "wb": "Q181685"
-  },
+  { "name": "Nicolas Léonard Sadi Carnot", "dob": "1796-06-01", "wb": "Q181685" },
   { "name": "Nicolas Steno", "dob": "1638-01-01", "wb": "Q151722" },
   { "name": "Nicolas-Louis de Lacaille", "dob": "1713-03-15", "wb": "Q202703" },
   { "name": "Nicolaus Otto", "dob": "1832-06-10", "wb": "Q75782" },
@@ -1177,42 +965,22 @@
   { "name": "Paul Ulrich Villard", "dob": "1860-09-28", "wb": "Q531898" },
   { "name": "Paul Valéry", "dob": "1871-10-30", "wb": "Q200639" },
   { "name": "Paul Verlaine", "dob": "1844-03-30", "wb": "Q755" },
-  {
-    "name": "Paul-Émile Lecoq de Boisbaudran",
-    "dob": "1838-04-18",
-    "wb": "Q366827"
-  },
+  { "name": "Paul-Émile Lecoq de Boisbaudran", "dob": "1838-04-18", "wb": "Q366827" },
   { "name": "Paula Modersohn-Becker", "dob": "1876-02-08", "wb": "Q234370" },
   { "name": "Pavel Cherenkov", "dob": "1904-07-28", "wb": "Q76970" },
-  {
-    "name": "Pedro Calderón de la Barca",
-    "dob": "1600-01-17",
-    "wb": "Q170800"
-  },
-  {
-    "name": "Per Daniel Amadeus Atterbom",
-    "dob": "1790-01-19",
-    "wb": "Q444538"
-  },
+  { "name": "Pedro Calderón de la Barca", "dob": "1600-01-17", "wb": "Q170800" },
+  { "name": "Per Daniel Amadeus Atterbom", "dob": "1790-01-19", "wb": "Q444538" },
   { "name": "Percy Bysshe Shelley", "dob": "1792-08-04", "wb": "Q93343" },
   { "name": "Peter Benoit", "dob": "1834-08-17", "wb": "Q733063" },
   { "name": "Peter Debye", "dob": "1884-03-24", "wb": "Q103835" },
-  {
-    "name": "Peter Gustav Lejeune Dirichlet",
-    "dob": "1805-02-13",
-    "wb": "Q29193"
-  },
+  { "name": "Peter Gustav Lejeune Dirichlet", "dob": "1805-02-13", "wb": "Q29193" },
   { "name": "Peter Lely", "dob": "1618-09-14", "wb": "Q161336" },
   { "name": "Peter Waage", "dob": "1833-06-29", "wb": "Q540113" },
   { "name": "Petrarch", "dob": "1304-07-20", "wb": "Q1401" },
   { "name": "Philipp Lenard", "dob": "1862-06-07", "wb": "Q57063" },
   { "name": "Philippe Pinel", "dob": "1745-04-20", "wb": "Q311594" },
   { "name": "Pierre Bonnard", "dob": "1867-10-03", "wb": "Q26408" },
-  {
-    "name": "Pierre Choderlos de Laclos",
-    "dob": "1741-10-18",
-    "wb": "Q212476"
-  },
+  { "name": "Pierre Choderlos de Laclos", "dob": "1741-10-18", "wb": "Q212476" },
   { "name": "Pierre Curie", "dob": "1859-05-15", "wb": "Q37463" },
   { "name": "Pierre de Marivaux", "dob": "1688-02-04", "wb": "Q49478" },
   { "name": "Pierre Gassendi", "dob": "1592-01-22", "wb": "Q192315" },
@@ -1254,11 +1022,7 @@
   { "name": "Richard Adolf Zsigmondy", "dob": "1865-04-01", "wb": "Q78481" },
   { "name": "Richard Arkwright", "dob": "1732-12-23", "wb": "Q294153" },
   { "name": "Richard Brinsley Sheridan", "dob": "1751-10-30", "wb": "Q352725" },
-  {
-    "name": "Richard Christopher Carrington",
-    "dob": "1826-05-26",
-    "wb": "Q453690"
-  },
+  { "name": "Richard Christopher Carrington", "dob": "1826-05-26", "wb": "Q453690" },
   { "name": "Richard Dedekind", "dob": "1831-10-06", "wb": "Q76556" },
   { "name": "Richard Kuhn", "dob": "1900-12-03", "wb": "Q78483" },
   { "name": "Richard Owen", "dob": "1804-07-20", "wb": "Q151556" },
@@ -1276,11 +1040,7 @@
   { "name": "Robert Musil", "dob": "1880-11-06", "wb": "Q78487" },
   { "name": "Robert Schumann", "dob": "1810-06-08", "wb": "Q7351" },
   { "name": "Robert Southey", "dob": "1774-08-12", "wb": "Q216838" },
-  {
-    "name": "Robert Strutt, 4th Baron Rayleigh",
-    "dob": "1875-08-28",
-    "wb": "Q922383"
-  },
+  { "name": "Robert Strutt, 4th Baron Rayleigh", "dob": "1875-08-28", "wb": "Q922383" },
   { "name": "Robert Watson-Watt", "dob": "1892-04-13", "wb": "Q342591" },
   { "name": "Roderick Murchison", "dob": "1792-02-19", "wb": "Q361900" },
   { "name": "Roger Cotes", "dob": "1682-07-10", "wb": "Q451667" },
@@ -1425,11 +1185,7 @@
   { "name": "William Huggins", "dob": "1824-02-07", "wb": "Q160681" },
   { "name": "William Hyde Wollaston", "dob": "1766-08-06", "wb": "Q312975" },
   { "name": "William Lassell", "dob": "1799-06-18", "wb": "Q110869" },
-  {
-    "name": "William Makepeace Thackeray",
-    "dob": "1811-07-18",
-    "wb": "Q167768"
-  },
+  { "name": "William Makepeace Thackeray", "dob": "1811-07-18", "wb": "Q167768" },
   { "name": "William Prout", "dob": "1785-01-15", "wb": "Q775400" },
   { "name": "William Ramsay", "dob": "1852-10-02", "wb": "Q950726" },
   { "name": "William Rankine", "dob": "1820-07-05", "wb": "Q232149" },
