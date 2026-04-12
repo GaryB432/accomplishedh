@@ -102,3 +102,12 @@ function addGeneralParameters(url: URL): void {
   url.searchParams.append("format", "json");
   url.searchParams.append("origin", "*");
 }
+
+export const apiRequestConfig: RequestInit = {
+  headers: [
+    [
+      "User-Agent",
+      "AccomplishedH/1.0 (https://www.humanaccomplishment.com/about#bot/; editor@humanaccomplishment.com) web/7.0",
+    ],
+  ],
+};

@@ -1,38 +1,43 @@
-import type { WikibaseResponse } from "@accomplishedh/wikibase";
-import type { Entities } from "@accomplishedh/wikibase";
+import type { Entities, WikibaseResponse } from "@accomplishedh/wikibase";
 
-import { entities_get_url, type EntityPropertyName } from "./urls";
+import { split } from "@accomplishedh/shared";
+
+import {
+  apiRequestConfig,
+  entities_get_url,
+  type EntityPropertyName,
+} from "./urls";
 
 export async function fetchEntities(
-  fetch: (url: string, init?: Readonly<RequestInit>) => Promise<Response>,
+  svelteFetch: (url: string, init?: Readonly<RequestInit>) => Promise<Response>,
   ids: string[],
   props: EntityPropertyName[],
 ): Promise<Entities> {
   if (ids.length === 0 || props.length === 0) {
     throw new Error("do not get empty arrays");
   }
-  const entityUrl = entities_get_url({
-    ids,
-    props,
-  });
+  const batches = split(ids, 20).map((qs) =>
+    entities_get_url({ ids: qs, props }),
+  );
+  const fetches = await Promise.all(
+    batches.map((u) => svelteFetch(u, apiRequestConfig)),
+  );
 
-  const f = await fetch(entityUrl, {
-    headers: [
-      [
-        "User-Agent",
-        "AccomplishedH/1.0 (https://www.humanaccomplishment.com/aout#bot/; editor@humanaccomplishment.com) web/7.0",
-      ],
-    ],
-  });
+  const wikibaseResponses = await Promise.all(
+    fetches.map<Promise<WikibaseResponse>>((r) => r.json()),
+  );
 
-  if (!f.ok) {
-    console.error(f.statusText);
+  const ok = wikibaseResponses.every((r) => r.success === 1);
+
+  if (!ok) {
+    console.warn("86 on wb");
   }
 
-  const g = (await f.json()) as WikibaseResponse;
-  if (g.success !== 1) {
-    console.error(JSON.stringify(g));
-    return {};
-  }
-  return g.entities ?? {};
+  return wikibaseResponses
+    .filter((j) => j.success === 1)
+    .map((a) => a.entities ?? {})
+    .reduce((a, b) => {
+      const f = { ...b, ...a };
+      return f;
+    }, {} as Entities);
 }
