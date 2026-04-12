@@ -6,7 +6,7 @@ import { toAccomplishedH } from "$lib/wikibase/utils";
 
 import type { LayoutServerLoad } from "./$types";
 
-import featuredJsonData from "../../static/data/featured.json";
+import featuredJsonData from "../data/featured.json";
 
 type FeaturedDTO = [ItemId, ISODate];
 
