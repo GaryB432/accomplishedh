@@ -1,6 +1,6 @@
 import type { EuroHuman } from "@accomplishedh/shared";
 
-import type { Claim, Entity, EntityId } from "../types.js";
+import type { Claim, Entity, EntityId } from "../types.js"; // TODO weird extensions
 
 import * as wbApi from "../data/api.js";
 import { isInstanceOfHuman } from "../logic/filters.js";
