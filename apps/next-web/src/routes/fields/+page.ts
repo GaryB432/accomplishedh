@@ -22,19 +22,21 @@ export const load = (async (ctx) => {
 
 async function grabAllFeatureds(
   featuredJson: FeaturedDTO[],
-  xfetch: (
-    input: string | URL | Request,
+  svelteFetch: (
+    input: Request | string | URL,
     init?: RequestInit,
   ) => Promise<Response>,
 ): Promise<AccomplishedHuman[]> {
   const featureds: ItemId[] = featuredJson
     .filter(([entity]) => entity)
-    .map<ItemId>(([gh]) => {
-      return gh;
+    .map<ItemId>(([entity]) => {
+      return entity;
     });
 
-  console.log(featureds);
-  const featuredEntities = await fetchEntities(xfetch, featureds, ["claims"]);
+  const featuredEntities =
+    featureds.length > 0
+      ? await fetchEntities(svelteFetch, featureds, ["claims"])
+      : {};
 
   const humans: AccomplishedHuman[] =
     Object.values(featuredEntities).map(toAccomplishedH);
