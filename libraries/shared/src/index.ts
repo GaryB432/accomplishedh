@@ -1,3 +1,4 @@
+export * from "./lib/array.js";
 export * from "./lib/date-utils.js";
 export * from "./lib/Logger.js";
 export * from "./lib/nobel.types.js";
