@@ -32,7 +32,7 @@ export const load = (async (ctx) => {
   const resolvedFetches = await Promise.all(humanFetches);
 
   const resolvedHumanFetches = resolvedFetches.map(
-    (r) => { return r.json() as Promise<WikibaseResponse>}
+    (resp) => resp.json() as Promise<WikibaseResponse>,
   );
 
   const resolvedHumanJsons = await Promise.all(resolvedHumanFetches);
