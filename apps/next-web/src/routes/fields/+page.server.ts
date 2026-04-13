@@ -10,7 +10,7 @@ import {
   WIKIDATA_PERSON_PROPERTIES as p,
 } from "@accomplishedh/wikibase";
 
-import type { PageLoad } from "./$types";
+import type { PageServerLoad } from "./$types";
 
 import everybodyJson from "../../data/identifiers.json";
 
@@ -32,7 +32,7 @@ export const load = (async (ctx) => {
   const resolvedFetches = await Promise.all(humanFetches);
 
   const resolvedHumanFetches = resolvedFetches.map(
-    (r) => r.json() as Promise<WikibaseResponse>,
+    (r) => { return r.json() as Promise<WikibaseResponse>}
   );
 
   const resolvedHumanJsons = await Promise.all(resolvedHumanFetches);
@@ -61,15 +61,11 @@ export const load = (async (ctx) => {
         a.set(b, c + 1);
         return a;
       }, fieldsOfWork);
-
-      // const fieldOfWorkClaims =
-      //   ent.claims![WIKIDATA_PERSON_PROPERTIES.FIELD_OF_WORK];
-      // console.log(fieldOfWorkClaims);
     }
   }
 
   return { fieldsOfWork };
-}) satisfies PageLoad;
+}) satisfies PageServerLoad;
 
 async function grabAllFeatureds(
   featuredJson: FeaturedDTO[],
