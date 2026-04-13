@@ -1,23 +1,74 @@
 import type { AccomplishedHuman } from "$lib/wikibase/types";
-import type { ItemId } from "@accomplishedh/wikibase/types";
+import type { ItemId, WikibaseResponse } from "@accomplishedh/wikibase/types";
 
 import { fetchEntities } from "$lib/wikibase/api";
+import { apiRequestConfig } from "$lib/wikibase/urls";
 import { toAccomplishedH } from "$lib/wikibase/utils";
+import { split } from "@accomplishedh/shared";
+import {
+  entities_get_url,
+  WIKIDATA_PERSON_PROPERTIES as p,
+} from "@accomplishedh/wikibase";
 
 import type { PageLoad } from "./$types";
 
-import featuredJsonData from "../../data/featured.json";
+import everybodyJson from "../../data/identifiers.json";
 
 type FeaturedDTO = [ItemId, ISODate];
 
 type ISODate = string;
 
 export const load = (async (ctx) => {
-  const allFeatureds = await grabAllFeatureds(
-    featuredJsonData as FeaturedDTO[],
-    ctx.fetch,
+  const fieldsOfWork = new Map<string, number>();
+
+  const batches = split(everybodyJson as { wb: string }[], 10);
+
+  const humanFetches = batches
+    .map((wbs) =>
+      entities_get_url({ ids: wbs.map((a) => a.wb), props: ["claims"] }),
+    )
+    .map((u) => ctx.fetch(u, apiRequestConfig));
+
+  const resolvedFetches = await Promise.all(humanFetches);
+
+  const resolvedHumanFetches = resolvedFetches.map(
+    (r) => r.json() as Promise<WikibaseResponse>,
   );
-  return { featureds: allFeatureds };
+
+  const resolvedHumanJsons = await Promise.all(resolvedHumanFetches);
+
+  if (resolvedHumanJsons.some((r) => r.success !== 1)) {
+    throw new Error("unsuccessful fetch");
+  }
+
+  const personResponses = resolvedHumanJsons.filter((r) => r.success === 1);
+
+  for (const personResp of personResponses) {
+    const { entities = {} } = personResp;
+    for (const ent of Object.values(entities)) {
+      const { claims = {} } = ent;
+      const fows = (claims[p.FIELD_OF_WORK] ?? [])
+        .map((c) => c.mainsnak)
+        .map((q) => {
+          return q.datavalue && q.datavalue.type === "wikibase-entityid"
+            ? q.datavalue.value.id
+            : undefined;
+        })
+        .filter((fow) => fow !== undefined);
+
+      fows.reduce((a, b) => {
+        const c = a.get(b) ?? 0;
+        a.set(b, c + 1);
+        return a;
+      }, fieldsOfWork);
+
+      // const fieldOfWorkClaims =
+      //   ent.claims![WIKIDATA_PERSON_PROPERTIES.FIELD_OF_WORK];
+      // console.log(fieldOfWorkClaims);
+    }
+  }
+
+  return { fieldsOfWork };
 }) satisfies PageLoad;
 
 async function grabAllFeatureds(
