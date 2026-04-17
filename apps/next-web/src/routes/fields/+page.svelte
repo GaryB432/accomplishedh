@@ -1,5 +1,6 @@
 <script lang="ts">
   import { apiRequestConfig } from "$lib/wikibase/urls";
+  import { fromDictionary } from "$lib/wikibase/utils";
   import {
     entities_get_url,
     type WikibaseResponse,
@@ -7,7 +8,6 @@
   import { onMount } from "svelte";
 
   import type { PageProps } from "./$types";
-  import { fromDictionary } from "$lib/wikibase/utils";
 
   let { data }: PageProps = $props();
 
@@ -44,7 +44,7 @@
           : []}
 
       <section>
-        {#each Object.values(fows) as fow}
+        {#each Object.values(fows) as fow (fow.id)}
           <div>
             {fow.id}
           </div>
