@@ -1,0 +1,86 @@
+:root {
+  --primary: rgb(31, 186, 186);
+  --secondary: hsla(11, 50%, 87%, 1);
+  --tertiary: #edf0f8;
+  --text: black;
+  --bg: #fff;
+
+  --header-h: 80px;
+  --footer-h: 80px;
+  --space: clamp(1rem, 5vw, 2rem);
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  /* Use svh to prevent mobile browser UI overlap */
+  height: 100svh;
+  display: grid;
+  grid-template-rows: var(--header-h) 1fr var(--footer-h);
+  overflow: hidden; /* Prevents the whole body from bouncing */
+}
+
+main {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; /* Smooth scroll for iOS */
+  padding: var(--space);
+}
+
+.container {
+  max-width: 800px;
+  margin-inline: auto;
+}
+
+/* 3. MOBILE-FIRST CONTROLS */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+.card {
+  background: var(--tertiary);
+  padding: 1.5rem;
+  border-radius: 16px;
+  margin-bottom: var(--space);
+}
+
+/* 48px touch targets for mobile */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding-inline: 1.5rem;
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  width: 100%; /* Full width on mobile */
+  cursor: pointer;
+}
+
+input {
+  width: 100%;
+  min-height: 48px;
+  padding: 0.75rem;
+  border: 2px solid var(--tertiary);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-family: inherit;
+}
+
+@media (min-width: 640px) {
+  .btn {
+    width: auto;
+  } /* Natural width on desktop */
+
+  .grid-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+}
