@@ -1,10 +1,8 @@
 {
-  "extends": ["../../tsconfig.json"],
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "ignoreDeprecations": "6.0",
     "module": "ES2022",
-    "moduleResolution": "Bundler",
-    "rootDirs": ["src", "../shared/src"]
+    "moduleResolution": "Bundler"
   },
-  "include": ["src", "../shared/src"]
+  "include": ["src/**/*.ts"]
 }

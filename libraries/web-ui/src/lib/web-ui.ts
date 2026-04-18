@@ -1,4 +1,7 @@
-import { type EuroHuman } from "@accomplishedh/shared";
+// import { type EuroHuman } from "@accomplishedh/shared";
+
+// eslint-disable-next-line
+type EuroHuman = any;
 
 const icons = new Map<string, string>([
   ["a", "canvas-easel-svgrepo-com.svg"],

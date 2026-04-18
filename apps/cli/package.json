@@ -8,10 +8,13 @@
     ".": "./dist/index.js"
   },
   "scripts": {
-    "build": "tsc --build",
+    "build": "tsup",
     "check": "tsc --noEmit -p tsconfig.json",
     "lint": "eslint .",
     "test": "vitest"
+  },
+  "devDependencies": {
+    "tsup": "^8.4.0"
   },
   "dependencies": {
     "@accomplishedh/shared": "workspace:^",

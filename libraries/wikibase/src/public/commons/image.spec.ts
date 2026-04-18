@@ -41,7 +41,7 @@ function hetch(
 
 describe("GetImageFromClaim", () => {
   test("getImageFromClaim", async () => {
-    const img = await getImageFromClaim(imageClaims["P18"][0], hetch);
+    const img = await getImageFromClaim(imageClaims["P18"]![0]!, hetch);
     expect(img).toEqual({
       id: "q937$B471B8E0-E688-4793-8E30-24C8389A8061",
       src: info.url,
