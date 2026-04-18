@@ -5,6 +5,11 @@ export default defineConfig({
   dts: false,
   entry: ["src/main.ts"],
   format: ["esm"],
+  noExternal: [
+    "@accomplishedh/shared",
+    "@accomplishedh/social-media",
+    "@accomplishedh/wikibase",
+  ],
   outDir: "dist",
   sourcemap: true,
   target: "node22",
