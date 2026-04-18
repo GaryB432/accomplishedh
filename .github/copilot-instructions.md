@@ -9,6 +9,7 @@ SFAL means:
 - Develop, type-check, and unit-test directly from `src`.
 - Do not require `dist` artifacts for daily `check`/`test` loops.
 - Reserve build artifacts for release/distribution workflows.
+- The apps will be built into `dist` folders for deployment and will have any necessary dependencies bundled
 
 ## Configuration Rules
 
@@ -32,9 +33,11 @@ SFAL means:
 ### Scripts
 
 - Root scripts:
+  - `build`: `pnpm -r build`
   - `check`: `pnpm -r check`
   - `test`: `pnpm -r test`
 - Libraries should expose both `check` and `test` scripts.
+- Applications should expose a `build` script along with `check` and `test`
 - Extension intentionally has no plain `check` script; webpack-aware tooling is authoritative there.
 
 ## Bootstrap Requirement
