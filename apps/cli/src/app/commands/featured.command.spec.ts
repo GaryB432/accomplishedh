@@ -2,7 +2,11 @@ import type { EuroHuman, Portrait } from "@accomplishedh/shared";
 
 import { describe, expect, test } from "vitest";
 
-import { featuredCommand, fillout, portraitedOnly } from "./featured.command";
+import {
+  featuredCommand,
+  fillout,
+  portraitedOnly,
+} from "./featured.command.js";
 
 describe("Featured Command", () => {
   test("should create an instance", () => {

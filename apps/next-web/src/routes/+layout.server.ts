@@ -1,62 +1,50 @@
 import type { AccomplishedHuman } from "$lib/wikibase/types";
+import type { ItemId } from "@accomplishedh/wikibase/types";
 
 import { fetchEntities } from "$lib/wikibase/api";
 import { toAccomplishedH } from "$lib/wikibase/utils";
 
 import type { LayoutServerLoad } from "./$types";
 
+import featuredJsonData from "../data/featured.json";
+
+type FeaturedDTO = [ItemId, ISODate];
+
 type FlatFeaturedInfo = {
   entity: string;
   on: string;
-  serial: string;
 };
+
+type ISODate = string;
 
 export const load = (async (ctx) => {
   console.log(ctx.locals.todayISO);
-  const featureds = await fetchDayFeatureds(ctx.fetch, ctx.locals.todayISO);
+  const dtos = featuredJsonData as FeaturedDTO[];
+  const featureds = await grabDayFeatureds(dtos, ctx.locals.todayISO);
   const admin = false;
   return { admin, featureds };
 }) satisfies LayoutServerLoad;
 
-async function fetchDayFeatureds(
-  fetch: (s: string) => Promise<Response>,
+async function grabDayFeatureds(
+  featuredJson: FeaturedDTO[],
   date: string,
 ): Promise<AccomplishedHuman[]> {
-  // console.log(`fetureds for ${date} `);
-  // const f = await fetch("/data/featureds.json");
-  // if (!f.ok) {
-  //   throw new Error(f.statusText);
-  // }
-  // const featureds = (await f.json()) as FeaturedEntity[];
-  // console.log(featureds);
+  const on = date.slice(0, 10);
 
-  const on = date;
-  const featureds: FlatFeaturedInfo[] = [
-    { entity: "Q982518", on, serial: "8426" },
-    { entity: "Q57983", on, serial: "5318" },
-    { entity: "Q55030753", on, serial: "2522" },
-    { entity: "Q76579", on, serial: "87" },
-    { entity: "Q20882", on, serial: "2502" },
-  ];
+  const featureds: FlatFeaturedInfo[] = featuredJson
+    .filter(([entity, stamp]) => entity && stamp === on)
+    .map<FlatFeaturedInfo>(([entity, on]) => {
+      return { entity, on };
+    });
 
-  const ids = featureds.map<string>((f) => f.entity);
-  const serials = featureds.reduce(
-    (a, b) => {
-      a[b.entity] = b.serial;
-      return a;
-    },
-    {} as Record<string, string>,
+  const featuredEntities = await fetchEntities(
+    fetch,
+    featureds.map<string>((f) => f.entity),
+    ["labels", "claims"],
   );
 
-  const featuredEntities = await fetchEntities(fetch, ids, [
-    "claims",
-    "labels",
-  ]);
+  const humans: AccomplishedHuman[] =
+    Object.values(featuredEntities).map(toAccomplishedH);
 
-  const entitiesToGo = Object.values(featuredEntities)
-    // .map((f) => ({ ...f, serial: serials[f.id] }))
-    .map(toAccomplishedH)
-    .map((f) => ({ ...f, serial: serials[f.wb.id] }));
-  // console.log(entitiesToGo);
-  return entitiesToGo;
+  return humans;
 }
