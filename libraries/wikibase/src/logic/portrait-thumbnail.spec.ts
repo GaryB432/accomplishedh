@@ -1,7 +1,13 @@
-import { WikiHuman } from "@accomplishedh/shared";
+import { type WikiHuman } from "@accomplishedh/shared";
 import { describe, expect, test } from "vitest";
 
-import { CommonsPage, CommonsPages, CommonsResponse, ItemId } from "../types";
+import type {
+  CommonsPage,
+  CommonsPages,
+  CommonsResponse,
+  ItemId,
+} from "../types";
+
 import { refreshPortraitThumbnails } from "./portrait-thumbnail";
 
 const couplaQids = ["Q9847", "Q7840"];
