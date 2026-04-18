@@ -1,6 +1,6 @@
 import { describe, expect, test, vi } from "vitest";
 
-import { ProgressBar } from "./ProgressBar";
+import { ProgressBar } from "./ProgressBar.js";
 
 vi.mock(import("picocolors"), async (importOriginal) => {
   const actual = await importOriginal();
