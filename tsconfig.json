@@ -1,18 +1,41 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
-    "baseUrl": ".",
-    "ignoreDeprecations": "6.0",
     "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
+    "moduleDetection": "force",
+    "baseUrl": ".",
+
     "strict": true,
-    "noUnusedLocals": false,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
     "resolveJsonModule": true,
+    "verbatimModuleSyntax": true,
+    "skipLibCheck": true,
+    "ignoreDeprecations": "6.0",
+
     "paths": {
       "@accomplishedh/shared": ["libraries/shared/src/index.ts"],
+      "@accomplishedh/shared/*": ["libraries/shared/src/*"],
       "@accomplishedh/social-media": ["libraries/social-media/src/index.ts"],
+      "@accomplishedh/social-media/*": ["libraries/social-media/src/*"],
       "@accomplishedh/web-ui": ["libraries/web-ui/src/index.ts"],
-      "@accomplishedh/wikibase": ["libraries/wikibase/src/index.ts"]
+      "@accomplishedh/web-ui/*": ["libraries/web-ui/src/*"],
+      "@accomplishedh/wikibase": ["libraries/wikibase/src/index.ts"],
+      "@accomplishedh/wikibase/*": ["libraries/wikibase/src/*"]
     }
-  }
+  },
+  "exclude": [
+    "**/dist/**",
+    "**/.svelte-kit/**",
+    "**/.vercel/**",
+    "**/coverage/**",
+    "node_modules"
+  ]
 }

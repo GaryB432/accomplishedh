@@ -1,23 +1,18 @@
 {
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": ["../../tsconfig.json"],
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "ignoreDeprecations": "6.0",
-    "target": "ES2023",
-    "lib": ["ES2023", "DOM"],
     "module": "ES2022",
     "moduleResolution": "Bundler",
-    "noUncheckedSideEffectImports": false,
-    "noUnusedLocals": false,
-    "types": ["chrome"],
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "allowArbitraryExtensions": true,
     "paths": {
       "@accomplishedh/shared": ["libraries/shared/src/index.ts"],
-      "@accomplishedh/social-media": ["libraries/social-media/src/index.ts"],
       "@accomplishedh/web-ui": ["libraries/web-ui/src/index.ts"],
-      "@accomplishedh/wikibase": ["libraries/wikibase/src/index.ts"],
-      "@environments/*": ["apps/extension/src/environments/*"]
-    }
+      "@environments/environment": [
+        "apps/extension/src/environments/environment.ts"
+      ]
+    },
+    "types": ["chrome"]
   },
-  "include": ["./src/**/*"],
-  "exclude": ["src/**/*.spec.ts"]
+  "include": ["src/**/*.ts", "src/**/*.d.ts"]
 }
