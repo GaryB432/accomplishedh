@@ -4,6 +4,6 @@ import { dataPath } from "./fs-reader";
 
 describe("FsReader", () => {
   test("dataPath", () => {
-    expect(dataPath).toEqual("web/static/data");
+    expect(dataPath).toEqual("apps/next-web/src/data");
   });
 });

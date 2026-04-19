@@ -1,38 +1,57 @@
-import { type EuroHuman, padSerialForKey } from "@accomplishedh/shared";
-import { readdirSync, readFileSync } from "node:fs";
-import { join, normalize } from "node:path/posix";
+import { readFileSync } from "node:fs";
+import { join, normalize } from "node:path";
 
-export const dataPath = "next-web/src/data";
+export const dataPath = "apps/next-web/src/data";
 
-const dataRoot = normalize(join(import.meta.dirname, "../../../../", dataPath));
+type EsteemedIndividual = {
+  field?: string | undefined;
+  id: string;
+};
 
-let everybody: EuroHuman[] | undefined;
+const dataRoot = normalize(
+  join(import.meta.dirname, "..", "..", "..", dataPath),
+);
+
+let everybody: EsteemedIndividual[] | undefined;
 let idBySerial: Record<string, string> | undefined;
 
-export function readAll(): EuroHuman[] {
+const localeCompareEsteemedIndividuals = (
+  a: EsteemedIndividual,
+  b: EsteemedIndividual,
+): number => {
+  const normalizeEntityId = (entityId: string) => {
+    if (!entityId.startsWith("Q")) throw new Error("do not");
+
+    return "Q" + entityId.slice(1).padStart(9, "0");
+  };
+  return normalizeEntityId(a.id).localeCompare(normalizeEntityId(b.id));
+};
+
+export function readAll(): EsteemedIndividual[] {
   if (!everybody) {
-    everybody = [];
-    const shardsDir = join(dataRoot, "shards");
-    const fn = readdirSync(shardsDir).map((a) => join(shardsDir, a));
-    for (const shardPath of fn) {
-      const humans: EuroHuman[] = JSON.parse(readFileSync(shardPath, "utf-8"));
-      everybody.push(...humans);
-    }
-    everybody.sort((a, b) => a.id.localeCompare(b.id));
+    const dto = JSON.parse(
+      readFileSync(join(dataRoot, "identifiers.json"), "utf-8"),
+    ) as Array<{ wb: string }>;
+    everybody = dto
+      .map((s) => s.wb)
+      .map<EsteemedIndividual>((id) => {
+        return { field: undefined, id };
+      })
+      .toSorted(localeCompareEsteemedIndividuals);
   }
   return everybody;
 }
 
-export function readById(id: string): EuroHuman | undefined {
+export function readById(id: string): EsteemedIndividual | undefined {
   const all = readAll();
-  return all.filter((h) => h.id === id)[0];
+  return all[0];
 }
 
-export function serialToId(serial: string): string | undefined {
-  if (!idBySerial) {
-    idBySerial = JSON.parse(
-      readFileSync(join(dataRoot, "serials.json"), "utf-8"),
-    );
-  }
-  return idBySerial![padSerialForKey(serial)];
-}
+// export function serialToId(serial: string): string | undefined {
+//   if (!idBySerial) {
+//     idBySerial = JSON.parse(
+//       readFileSync(join(dataRoot, "serials.json"), "utf-8"),
+//     );
+//   }
+//   return idBySerial![padSerialForKey(serial)];
+// }
