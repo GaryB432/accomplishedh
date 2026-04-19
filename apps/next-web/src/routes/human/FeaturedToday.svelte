@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { AccomplishedHuman } from "$lib/wikibase/types";
+  import type { AccomplishedHuman } from "@accomplishedh/shared";
 
   import { resolve } from "$app/paths";
 
@@ -10,7 +10,6 @@
   }: {
     featureds: AccomplishedHuman[];
   } = $props();
-
 </script>
 
 <h3>Featured Today</h3>

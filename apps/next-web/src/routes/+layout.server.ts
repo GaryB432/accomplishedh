@@ -1,4 +1,4 @@
-import type { AccomplishedHuman } from "$lib/wikibase/types";
+import type { AccomplishedHuman } from "@accomplishedh/shared";
 import type { ItemId } from "@accomplishedh/wikibase/types";
 
 import { fetchEntities } from "$lib/wikibase/api";
