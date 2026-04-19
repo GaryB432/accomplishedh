@@ -2,10 +2,9 @@
   import { resolve } from "$app/paths";
 
   import { type PageProps } from "./$types.js";
-  import FieldOfWorkIcon from "./human/FieldOfWorkIcon.svelte";
 
   let { data }: PageProps = $props();
-  let featureds = $derived(data.featureds);
+  let featureds = $derived(data.featureds.map((f) => ({ type: "item", ...f })));
 </script>
 
 <main>
@@ -35,9 +34,7 @@
                     page for {featured.name}</a
                   >
                 </td>
-                <td
-                  ><FieldOfWorkIcon subject={featured.wb}></FieldOfWorkIcon>
-                </td>
+                <td>⭐</td>
               </tr>
             {/each}
           </tbody>
