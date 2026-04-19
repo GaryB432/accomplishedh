@@ -1,0 +1,12 @@
+[
+  { "name": "Albert Einstein", "dob": "1879-03-14", "wb": "Q937" },
+  { "name": "Franz Kafka", "dob": "1883-07-03", "wb": "Q905" },
+  { "name": "Marie Curie", "dob": "1867-11-07", "wb": "Q7186" },
+  { "name": "Pierre Curie", "dob": "1859-05-15", "wb": "Q37463" },
+  { "name": "Rembrandt", "dob": "1606-07-15", "wb": "Q5598" },
+  { "name": "René Descartes", "dob": "1596-03-31", "wb": "Q9191" },
+  { "name": "Rudolf Diesel", "dob": "1858-03-18", "wb": "Q12674" },
+  { "name": "Samuel Beckett", "dob": "1906-04-13", "wb": "Q37327" },
+  { "name": "Samuel Taylor Coleridge", "dob": "1772-10-21", "wb": "Q82409" },
+  { "name": "Sigmund Freud", "dob": "1856-05-06", "wb": "Q9215" }
+]
