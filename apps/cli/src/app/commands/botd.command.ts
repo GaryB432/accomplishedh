@@ -30,8 +30,7 @@ export async function botdCommand({ opts, today }: CommandArgs): Promise<void> {
   let i = 0;
 
   for (const botdh of botdEuros) {
-    let posted = false;
-    do {
+    while (true) {
       const human = readById(botdh.id)!;
       console.log(colors.cyan(`${human.name} ${human.yob}`));
       console.log(bar.show(i + 1) + "\n");
@@ -53,12 +52,13 @@ export async function botdCommand({ opts, today }: CommandArgs): Promise<void> {
 
       await copyToClipboard(raw);
       console.log();
-      posted = await askIfPosted();
+      const posted = await askIfPosted();
       console.log();
       if (posted) {
         i++;
+        break;
       }
-    } while (!posted);
+    }
   }
   console.log(colors.cyanBright(` ${today} ${botdEuros.length} posted `));
 }
