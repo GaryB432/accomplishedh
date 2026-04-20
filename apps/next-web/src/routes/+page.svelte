@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { Item } from "@accomplishedh/wikibase";
+  import type { Entity } from "$lib/wikibase/types.js";
 
   import { resolve } from "$app/paths";
   import { fromDictionary } from "$lib/wikibase/utils";
@@ -7,7 +7,7 @@
   import { type PageProps } from "./$types.js";
   import Headshot from "./human/Headshot.svelte";
 
-  type DailyFeatured = PageProps["data"]["featureds"][number] & { wb: Item };
+  type DailyFeatured = PageProps["data"]["featureds"][number] & { wb: Entity };
 
   let { data }: PageProps = $props();
 
@@ -139,8 +139,11 @@
 
   .portrait {
     aspect-ratio: 1;
-    background:
-      linear-gradient(135deg, rgba(31, 186, 186, 0.15), transparent 58%),
+    background: linear-gradient(
+        135deg,
+        rgba(31, 186, 186, 0.15),
+        transparent 58%
+      ),
       var(--tertiary);
     border: 1px solid var(--line);
     border-radius: 8px;
@@ -175,6 +178,7 @@
     overflow: hidden;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
   }
 
   .empty-state {
