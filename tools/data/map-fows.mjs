@@ -73,8 +73,8 @@ async function runFowMapping() {
 
       const response = await fetch(url, {
         headers: {
-          "User-Agent": USER_AGENT,
           Accept: "application/sparql-results+json",
+          "User-Agent": USER_AGENT,
         },
       });
 
@@ -103,9 +103,9 @@ async function runFowMapping() {
         }
 
         fowMap[humanQid].fows.push({
+          category: categoryName,
           id: fowQid,
           label: fowLabel,
-          category: categoryName,
         });
       });
 
@@ -122,7 +122,7 @@ async function runFowMapping() {
       `\n🎉 Success! Mapped FOWs saved to apps/next-web/src/data/fow-summary.json`,
     );
   } catch (err) {
-    // @ts-ignore
+    // @ts-expect-error and i do not care why
     console.error("Critical Script Error:", err.message);
   }
 }
