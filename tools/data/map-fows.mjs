@@ -1,12 +1,31 @@
+// @ts-check
 import fs from "fs";
 
 /**
- * CONFIGURATION
+ * @typedef {Object} HumanIdentifier
+ * @property {string} name
+ * @property {string} dob
+ * @property {string} wb - The Wikidata ID (QID)
+ *
+ * @typedef {Object} FowEntry
+ * @property {string} id - The Wikidata ID of the field
+ * @property {string} label - The English label of the field
+ * @property {string} category - One of 'Art', 'Lit', 'Music', 'Science'
+ *
+ * @typedef {Object} PersonSummary
+ * @property {FowEntry[]} fows
+ *
+ * @typedef {Record<string, PersonSummary>} FowSummaryMap
  */
-const WIKIDATA_SPARQL_URL = "https://query.wikidata.org/sparql";
-const USER_AGENT = "AccomplishedHBot/1.0 (editor@humanaccomplishment.com)";
-const BATCH_SIZE = 200; // Batching human IDs in the SPARQL query
 
+/** @type {string} */
+const WIKIDATA_SPARQL_URL = "https://query.wikidata.org/sparql";
+/** @type {string} */
+const USER_AGENT = "AccomplishedHBot/1.0 (editor@humanaccomplishment.com)";
+/** @type {number} */
+const BATCH_SIZE = 200;
+
+/** @type {Record<string, string>} */
 const ROOTS = {
   Art: "Q36649",
   Lit: "Q8242",
@@ -16,13 +35,16 @@ const ROOTS = {
 
 async function runFowMapping() {
   try {
+    /** @type {string} */
     const rawIds = fs.readFileSync(
       "apps/next-web/src/data/identifiers.json",
       "utf8",
     );
+    /** @type {HumanIdentifier[]} */
     const allHumans = JSON.parse(rawIds);
     const allIds = allHumans.map((h) => h.wb);
 
+    /** @type {FowSummaryMap} */
     const fowMap = {};
 
     console.log(`🚀 Mapping FOWs for ${allIds.length} humans...`);
@@ -32,7 +54,7 @@ async function runFowMapping() {
       const humansValues = currentBatch.map((id) => `wd:${id}`).join(" ");
 
       const rootValues = Object.entries(ROOTS)
-        .map(([name, qid]) => `wd:${qid}`)
+        .map(([, qid]) => `wd:${qid}`)
         .join(" ");
 
       const query = `
@@ -51,8 +73,8 @@ async function runFowMapping() {
 
       const response = await fetch(url, {
         headers: {
-          Accept: "application/sparql-results+json",
           "User-Agent": USER_AGENT,
+          Accept: "application/sparql-results+json",
         },
       });
 
@@ -60,7 +82,9 @@ async function runFowMapping() {
         throw new Error(`SPARQL query failed: ${response.statusText}`);
       }
 
+      /** @type {any} */
       const data = await response.json();
+      /** @type {any[]} */
       const results = data.results.bindings;
 
       results.forEach((row) => {
@@ -72,19 +96,21 @@ async function runFowMapping() {
           (k) => ROOTS[k] === rootQid,
         );
 
+        if (!humanQid || !categoryName) return;
+
         if (!fowMap[humanQid]) {
           fowMap[humanQid] = { fows: [] };
         }
 
         fowMap[humanQid].fows.push({
-          category: categoryName,
           id: fowQid,
           label: fowLabel,
+          category: categoryName,
         });
       });
 
       console.log(`✅ Processed batch ${Math.floor(i / BATCH_SIZE) + 1}.`);
-      await new Promise((res) => setTimeout(res, 500)); // Respectful pause
+      await new Promise((res) => setTimeout(res, 500));
     }
 
     fs.writeFileSync(
@@ -96,6 +122,7 @@ async function runFowMapping() {
       `\n🎉 Success! Mapped FOWs saved to apps/next-web/src/data/fow-summary.json`,
     );
   } catch (err) {
+    // @ts-ignore
     console.error("Critical Script Error:", err.message);
   }
 }
