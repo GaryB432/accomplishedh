@@ -31,6 +31,17 @@ prog
     void (await botdCommand({ opts, today }));
   });
 
+prog
+  .command(
+    "refresh <today>",
+    "Refreshes Wikibase caches using online resources",
+  )
+  .action(async (today, opts) => {
+    const { refreshCommand } =
+      await import("./app/commands/refresh.command.js");
+    void (await refreshCommand({ opts, today }));
+  });
+
 // Display help message when `-h` or `--help` appears
 prog.help();
 // Display version number when `-v` or `--version` appears

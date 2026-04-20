@@ -1,6 +1,6 @@
 import type { Entity, LanguageDictionary } from "@accomplishedh/wikibase";
 
-import { type AccomplishedHuman } from "./types";
+import { type AccomplishedHuman } from "@accomplishedh/shared";
 
 export function add(a: number, b: number): number {
   return a + b;
