@@ -1,4 +1,4 @@
-import type { AccomplishedHuman } from "$lib/wikibase/types";
+import type { AccomplishedHuman } from "@accomplishedh/shared";
 import type { ItemId } from "@accomplishedh/wikibase/types";
 
 import { fetchEntities } from "$lib/wikibase/api";
@@ -40,7 +40,7 @@ async function grabDayFeatureds(
   const featuredEntities = await fetchEntities(
     fetch,
     featureds.map<string>((f) => f.entity),
-    ["labels", "claims"],
+    ["labels", "descriptions", "claims"],
   );
 
   const humans: AccomplishedHuman[] =

@@ -1,29 +1,34 @@
 :root {
   --primary: rgb(31, 186, 186);
+  --accent: #c84630;
   --secondary: hsla(11, 50%, 87%, 1);
   --tertiary: #edf0f8;
-  --text: black;
-  --bg: #fff;
+  --text: #132025;
+  --muted: #58666d;
+  --line: #d9e0e5;
+  --surface: #ffffff;
+  --bg: #f7fafb;
 
-  --header-h: 80px;
-  --footer-h: 80px;
+  --header-h: 68px;
+  --footer-h: 64px;
   --space: clamp(1rem, 5vw, 2rem);
 }
 
 body {
+  margin: 0;
+  padding: 0;
   font-family: "Montserrat", sans-serif;
   color: var(--text);
   background: var(--bg);
-  /* Use svh to prevent mobile browser UI overlap */
   height: 100svh;
   display: grid;
   grid-template-rows: var(--header-h) 1fr var(--footer-h);
-  overflow: hidden; /* Prevents the whole body from bouncing */
+  overflow: hidden;
 }
 
 main {
   overflow-y: auto;
-  -webkit-overflow-scrolling: touch; /* Smooth scroll for iOS */
+  -webkit-overflow-scrolling: touch;
   padding: var(--space);
 }
 
@@ -32,21 +37,19 @@ main {
   margin-inline: auto;
 }
 
-/* 3. MOBILE-FIRST CONTROLS */
 h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 2.6rem;
+  margin: 0;
   line-height: 1.1;
 }
 
 .card {
   background: var(--tertiary);
   padding: 1.5rem;
-  border-radius: 16px;
+  border-radius: 8px;
   margin-bottom: var(--space);
 }
 
-/* 48px touch targets for mobile */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -73,14 +76,8 @@ input {
   font-family: inherit;
 }
 
-@media (min-width: 640px) {
-  .btn {
-    width: auto;
-  } /* Natural width on desktop */
-
-  .grid-cols {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+@media (min-width: 720px) {
+  h1 {
+    font-size: 4.8rem;
   }
 }

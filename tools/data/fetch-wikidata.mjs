@@ -3,7 +3,7 @@ import fs from "fs";
 // 1. CONFIGURATION
 const BASE_URL = "https://en.wikipedia.org/w/api.php";
 const BATCH_SIZE = 50; // Hard limit for standard users
-const USER_AGENT = "MyProjectBot/1.0 (contact@example.com)"; // REQUIRED: Change to your email
+const USER_AGENT = "AccomplishedHBot/1.0 (editor@humanaccomplishment.com)";
 
 async function runWikipediaPipeline() {
   try {

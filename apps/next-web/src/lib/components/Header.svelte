@@ -3,9 +3,8 @@
 </script>
 
 <header>
-  <div class="left">
-    <div>
-      <a href={resolve("/")} aria-label="home">
+  <div class="brand">
+    <a class="logo-link" href={resolve("/")} aria-label="home">
         <svg
           id="logo"
           width="31"
@@ -19,13 +18,12 @@
             />
           </g>
         </svg>
-      </a>
-      <div>Human Accomplishment</div>
-    </div>
+    </a>
+    <a class="wordmark" href={resolve("/")}>Human Accomplishment</a>
   </div>
-  <div>
-    <a href={resolve("/about")}>about</a>
-  </div>
+  <nav aria-label="Primary">
+    <a href={resolve("/about")}>About</a>
+  </nav>
 </header>
 
 <style>
@@ -40,17 +38,52 @@
     align-items: center;
     justify-content: space-between;
     padding-inline: var(--space);
+    height: 100%;
     z-index: 10;
     gap: 0.6em;
   }
 
-  div {
+  .brand,
+  nav {
     display: flex;
     align-items: center;
   }
+
+  .brand {
+    gap: 0.65rem;
+    min-width: 0;
+  }
+
+  .logo-link {
+    display: grid;
+    flex: 0 0 auto;
+    place-items: center;
+  }
+
+  .wordmark {
+    color: var(--text);
+    font-size: 0.95rem;
+    line-height: 1;
+    text-decoration: none;
+  }
+
+  nav a {
+    color: var(--primary);
+    font-size: 0.85rem;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
   svg {
     background-color: var(--secondary);
     fill: var(--primary);
-    padding: 8px;
+    border-radius: 8px;
+    padding: 6px;
+  }
+
+  @media (max-width: 380px) {
+    .wordmark {
+      max-width: 9rem;
+    }
   }
 </style>

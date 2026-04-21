@@ -37,59 +37,53 @@
     hang on more
   {:then pls}
     {#if pls}
-      <ul>
-        {#each Object.values(pls) as fow (fow.id)}
-          <li>
-            {fromDictionary(fow.labels)}
-          </li>
-        {/each}
-      </ul>
+      {#each Object.values(pls) as fow (fow.id)}
+        <div title={fromDictionary(fow.labels)}>
+          <svg
+            width="2rem"
+            height="2rem"
+            viewBox="0 0 100 100"
+            xmlns="http://w3.org"
+          >
+            <!-- Solid Background for better visibility -->
+            <circle
+              cx="50"
+              cy="50"
+              r="48"
+              fill="#f0f0f0"
+              stroke="#000"
+              stroke-width="4"
+            />
+
+            <!-- Bold, Centered Text -->
+            <text
+              x="50"
+              y="52"
+              text-anchor="middle"
+              dominant-baseline="middle"
+              font-family="system-ui, sans-serif"
+              font-size="32"
+              font-weight="800"
+              fill="#000"
+            >
+              TBD
+            </text>
+          </svg>
+        </div>
+      {/each}
     {/if}
   {/await}
 </article>
 
 <style>
   article {
-    --some-color: rgba(0, 0, 0, 0.2);
-    box-shadow:
-      0 2px 2px 0 var(--some-color),
-      0 12px 22px 0 var(--some-color);
-    max-width: 30ch;
-    outline: 1px solid var(--some-color);
+    outline: 1px solid var(--text);
+    max-width: 8rem;
     overflow: hidden;
-    padding: 0.5em;
-    text-align: center;
+    display: flex;
   }
 
-  article:hover {
-    animation: tada 1s;
-  }
-
-  @keyframes tada {
-    from {
-      transform: scale3d(1, 1, 1);
-    }
-
-    10%,
-    20% {
-      transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
-    }
-
-    30%,
-    50%,
-    70%,
-    90% {
-      transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
-    }
-
-    40%,
-    60%,
-    80% {
-      transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
-    }
-
-    to {
-      transform: scale3d(1, 1, 1);
-    }
+  svg {
+    vertical-align: middle;
   }
 </style>
