@@ -1,5 +1,3 @@
-/* eslint-disable perfectionist/sort-modules, perfectionist/sort-object-types, perfectionist/sort-union-types */
-
 // --- Wikibase cache DTOs (generated artifacts) --------------------------------
 // Conventions:
 // - Cache files are script-generated and disposable.
@@ -85,4 +83,7 @@ export type FieldsOfWorkDatasetV1 = {
  * tools/data/map-fows.mjs currently writes a raw map (no generatedAt/schemaVersion)
  * to apps/next-web/src/data/fow-summary.json.
  */
-export type FieldsOfWorkPrototypeMapV0 = Record<PersonQid, FieldsOfWorkSummaryV1>;
+export type FieldsOfWorkPrototypeMapV0 = Record<
+  PersonQid,
+  FieldsOfWorkSummaryV1
+>;

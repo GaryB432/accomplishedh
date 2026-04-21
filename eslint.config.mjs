@@ -5,8 +5,18 @@ import globals from "globals";
 import tseslint from "typescript-eslint";
 
 export default defineConfig([
+  {
+    ignores: [
+      "**/node_modules/**",
+      "**/dist/**",
+      "**/build/**",
+      "**/.svelte-kit/**",
+      "**/.vercel/**",
+      "**/coverage/**",
+      "**/tmp/**",
+    ],
+  },
   tseslint.configs.recommended,
-  perf.configs["recommended-natural"],
   {
     extends: ["js/recommended"],
     files: ["**/*.{js,mjs,cjs,ts,mts,cts}"],
@@ -30,8 +40,5 @@ export default defineConfig([
     rules: {
       "@typescript-eslint/explicit-module-boundary-types": "off",
     },
-  },
-  {
-    ignores: ["**/dist", "**/coverage"],
   },
 ]);
