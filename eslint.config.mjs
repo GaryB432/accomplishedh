@@ -1,5 +1,4 @@
 import js from "@eslint/js";
-import perf from "eslint-plugin-perfectionist";
 import { defineConfig } from "eslint/config";
 import globals from "globals";
 import tseslint from "typescript-eslint";
@@ -21,7 +20,7 @@ export default defineConfig([
     extends: ["js/recommended"],
     files: ["**/*.{js,mjs,cjs,ts,mts,cts}"],
     languageOptions: { globals: { ...globals.browser, ...globals.node } },
-    plugins: { js, perf },
+    plugins: { js },
     rules: {
       "@typescript-eslint/no-undef": "off",
       "@typescript-eslint/no-unused-vars": "off",
