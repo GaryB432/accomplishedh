@@ -6,6 +6,8 @@
 
 [wikidata.org/w/api.php?action=wbgetentities&ids=Q33725&format=json&languages=en&props=info%7Clabels](https://www.wikidata.org/w/api.php?action=wbgetentities&ids=Q33725&format=json&languages=en&props=info%7Clabels)
 
+[Wikibase caching strategy (project doc)](/docs/wiki/WikibaseCaching.md)
+
 ## Wikidata and the Semantic Web
 
 [Wikidata:List of properties/all in one table - Wikidata](https://www.wikidata.org/wiki/Wikidata:List_of_properties/all_in_one_table)
