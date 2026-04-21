@@ -1,4 +1,4 @@
-import { type EuroHuman, padSerialForKey } from "@accomplishedh/shared";
+import { type EuroHuman, ΘpadSerialForKey } from "@accomplishedh/shared";
 import { readdirSync, readFileSync } from "node:fs";
 import { join, normalize } from "node:path/posix";
 
@@ -34,5 +34,5 @@ export function serialToId(serial: string): string | undefined {
       readFileSync(join(dataRoot, "serials.json"), "utf-8"),
     );
   }
-  return idBySerial![padSerialForKey(serial)];
+  return idBySerial![ΘpadSerialForKey(serial)];
 }

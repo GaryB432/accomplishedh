@@ -85,13 +85,6 @@ export function highlightDefiniteArticle(message: string): {
   return { marker, p };
 }
 
-export function padSerialForKey(serial: string): string {
-  return serial.padStart(6, "0").slice(0, 6);
-}
-export function shardKeyFor(h: Pick<EuroHuman, "id">): string {
-  return h.id.slice(4, 5);
-}
-
 export function shuffle<T>(array: T[]): T[] {
   let currentIndex = array.length,
     randomIndex: number;
@@ -107,9 +100,18 @@ export function shuffle<T>(array: T[]): T[] {
   }
   return array;
 }
-
 export async function sleep(ms = 1000): Promise<void> {
   return new Promise((cb) => setTimeout(cb, ms));
+}
+
+/** @deprecated */
+export function ΘpadSerialForKey(serial: string): string {
+  return serial.padStart(6, "0").slice(0, 6);
+}
+
+/** @deprecated */
+export function ΘshardKeyFor(h: Pick<EuroHuman, "id">): string {
+  return h.id.slice(4, 5);
 }
 
 // TODO coverage
