@@ -28,6 +28,8 @@ jobs:
         run: pnpm --recursive run check
       - name: Map Fields of Work
         run: pnpm run update:fows
+      - name: Map Fields of Work
+        run: pnpm --filter=@accomplishedh/cli run e2e:smoke
       - name: Lint
         run: echo "pnpm --recursive run lint"
       - name: Build

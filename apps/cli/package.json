@@ -10,6 +10,7 @@
   "scripts": {
     "build": "tsup",
     "check": "tsc --noEmit -p tsconfig.json",
+    "e2e:smoke": "node ./scripts/e2e-smoke.mjs",
     "lint": "eslint .",
     "test": "vitest"
   },
