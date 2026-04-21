@@ -16,6 +16,7 @@ Keep long-lived product data separate from generated Wikibase cache artifacts, w
    - `apps/next-web/src/data/wikibase-cache/manifest.json` (metadata: generatedAt/source/schemaVersion)
 
 This keeps ownership and lifecycle clear:
+
 - canonical files: hand-curated/product-owned
 - cache files: script-generated/refreshable/disposable
 
