@@ -12,7 +12,8 @@ export async function botdCommand({ opts, today }: CommandArgs): Promise<void> {
   }
 
   if (!opts.listOnly) {
-    throw new Error("only listOnly is supprted in this version");
+    console.error("only listOnly is supported in this version");
+    return;
   }
   console.log(
     colors.bgBlue(
