@@ -26,10 +26,12 @@ jobs:
           run_install: true
       - name: Check
         run: pnpm --recursive run check
-      - name: Smoke test cli
+      - name: Map Fields of Work
+        run: pnpm run update:fows
+      - name: CLI Smoke Test
         run: pnpm --filter=@accomplishedh/cli run e2e:smoke
       - name: Lint
-        run: echo "pnpm --recursive run lint"
+        run: pnpm --recursive run lint
       - name: Build
         run: pnpm --recursive run build
       - name: Test

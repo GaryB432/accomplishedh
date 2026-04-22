@@ -2,9 +2,9 @@ import { type EuroHuman } from "@accomplishedh/shared";
 import { readdirSync, readFileSync } from "node:fs";
 import { join, normalize } from "node:path/posix";
 
-export const dataPath = "web/static/data";
+export const dataPath = "apps/web/static/data";
 
-const dataRoot = normalize(join(import.meta.dirname, "../../../../", dataPath));
+const dataRoot = normalize(join(import.meta.dirname, "../../../", dataPath));
 
 let everybody: EuroHuman[] | undefined;
 let idBySerial: Record<string, string> | undefined;
