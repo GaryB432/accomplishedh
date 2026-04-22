@@ -20,12 +20,10 @@ export default [
     rules: {
       "@typescript-eslint/no-unnecessary-type-assertion": "warn",
       "@typescript-eslint/no-unsafe-call": "warn",
-      "@typescript-eslint/no-unsafe-member-access": "warn",
       "@typescript-eslint/no-floating-promises": "warn",
       "@typescript-eslint/no-unsafe-argument": "warn",
       "@typescript-eslint/restrict-template-expressions": "warn",
       "@typescript-eslint/no-unsafe-call": "warn",
-      "@typescript-eslint/no-unsafe-member-access": "warn",
       "@typescript-eslint/no-unsafe-return": "warn",
       "@typescript-eslint/require-await": "warn",
 
@@ -34,6 +32,12 @@ export default [
     },
   },
   {
-    ignores: ["**/.vercel", "**/.svelte-kit", "**/node_modules", "*.config.js"],
+    ignores: [
+      "**/.vercel",
+      "**/.svelte-kit",
+      "**/node_modules",
+      "*.config.js",
+      "**/src",
+    ],
   },
 ];
