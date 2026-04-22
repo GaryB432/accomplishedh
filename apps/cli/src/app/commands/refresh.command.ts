@@ -1,8 +1,8 @@
-import { checkForTweet, humanUrl } from "@accomplishedh/social-media";
 import { confirm } from "@inquirer/prompts";
 import colors from "picocolors";
 
-import { readAll, readById } from "../data/wb/fs-reader.js";
+import { sleep } from "@accomplishedh/shared";
+import { readAll } from "../data/wb/fs-reader.js";
 import { type CommandArgs } from "./refresh.types.js";
 
 export async function refreshCommand({
@@ -62,7 +62,10 @@ export async function refreshCommand({
   //     }
   //   }
   // }
-  console.log(colors.cyanBright(` ${today} ${subjects.length} posted `));
+  console.log(
+    colors.cyanBright(` ${today} ${subjects.length} refreshed i guess `),
+  );
+  return await sleep(500);
 }
 
 async function askIfPosted(): Promise<boolean> {

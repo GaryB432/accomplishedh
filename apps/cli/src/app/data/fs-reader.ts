@@ -15,7 +15,9 @@ export function readAll(): EuroHuman[] {
     const shardsDir = join(dataRoot, "shards");
     const fn = readdirSync(shardsDir).map((a) => join(shardsDir, a));
     for (const shardPath of fn) {
-      const humans: EuroHuman[] = JSON.parse(readFileSync(shardPath, "utf-8"));
+      const humans = JSON.parse(
+        readFileSync(shardPath, "utf-8"),
+      ) as EuroHuman[];
       everybody.push(...humans);
     }
     everybody.sort((a, b) => a.id.localeCompare(b.id));
@@ -32,9 +34,9 @@ export function serialToId(serial: string): string | undefined {
   if (!idBySerial) {
     idBySerial = JSON.parse(
       readFileSync(join(dataRoot, "serials.json"), "utf-8"),
-    );
+    ) as Record<string, string>;
   }
-  return idBySerial![ΘpadSerialForKey(serial)];
+  return idBySerial[ΘpadSerialForKey(serial)];
 }
 
 function ΘpadSerialForKey(serial: string): string {

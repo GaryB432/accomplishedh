@@ -15,7 +15,7 @@ export const load = (async ({ data, fetch }) => {
         props: ["labels", "aliases", "claims", "sitelinks/urls"],
       }),
     );
-    const wb_response: WikibaseResponse = await fetched.json();
+    const wb_response = (await fetched.json()) as WikibaseResponse;
 
     if (wb_response.success) {
       data.human.entity = firstAndOnly(wb_response.entities);
