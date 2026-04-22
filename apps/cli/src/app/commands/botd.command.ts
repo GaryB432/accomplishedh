@@ -51,11 +51,16 @@ export async function botdCommand({ opts, today }: CommandArgs): Promise<void> {
         );
       }
 
-      await copyToClipboard(raw);
-      console.log();
-      const posted = await askIfPosted();
-      console.log();
-      if (posted) {
+      if (!opts.listOnly) {
+        await copyToClipboard(raw);
+        console.log();
+        const posted = await askIfPosted();
+        console.log();
+        if (posted) {
+          i++;
+          break;
+        }
+      } else {
         i++;
         break;
       }

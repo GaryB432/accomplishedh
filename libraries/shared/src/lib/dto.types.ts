@@ -1,8 +1,3 @@
-// --- Wikibase cache DTOs (generated artifacts) --------------------------------
-// Conventions:
-// - Cache files are script-generated and disposable.
-// - Prefer per-file metadata: `generatedAt` + `schemaVersion` live in the cache file.
-
 export type PersonQid = `Q${number}`;
 export type EntityQid = `Q${number}`;
 
