@@ -16,12 +16,14 @@ function fetch(
   input: Request | string | URL,
   init?: RequestInit,
 ): Promise<Response> {
-  const u = URL.parse(String(input));
-  const v = u?.searchParams.get("titles");
-  if (v == couplaQids.join("|")) {
-    return Promise.resolve(
-      new Response(JSON.stringify(commonsPagesResponse(couplaQids))),
-    );
+  if (typeof input === "string") {
+    const u = URL.parse(input);
+    const v = u?.searchParams.get("titles");
+    if (v == couplaQids.join("|")) {
+      return Promise.resolve(
+        new Response(JSON.stringify(commonsPagesResponse(couplaQids))),
+      );
+    }
   }
   return Promise.reject("404 on the 86");
 }

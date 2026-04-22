@@ -32,7 +32,6 @@ export default defineConfig([
       "@typescript-eslint/no-unused-vars": "off",
       "no-undef": "off",
       "no-unused-vars": "off",
-      "@typescript-eslint/no-base-to-string": "warn",
       "@typescript-eslint/no-floating-promises": "warn",
       "@typescript-eslint/no-misused-promises": "warn",
       "@typescript-eslint/no-unnecessary-type-assertion": "warn",
