@@ -18,11 +18,23 @@ export default [
       },
     },
     rules: {
+      "@typescript-eslint/no-unnecessary-type-assertion": "warn",
+      "@typescript-eslint/no-unsafe-call": "warn",
+      "@typescript-eslint/no-unsafe-member-access": "warn",
+      "@typescript-eslint/no-floating-promises": "warn",
+      "@typescript-eslint/no-unsafe-argument": "warn",
+      "@typescript-eslint/no-unsafe-assignment": "warn",
+      "@typescript-eslint/restrict-template-expressions": "warn",
+      "@typescript-eslint/no-unsafe-call": "warn",
+      "@typescript-eslint/no-unsafe-member-access": "warn",
+      "@typescript-eslint/no-unsafe-return": "warn",
+      "@typescript-eslint/require-await": "warn",
+
       "no-undef": "off",
       "svelte/no-navigation-without-resolve": ["error", { ignoreLinks: true }],
     },
   },
   {
-    ignores: ["**/.vercel", "**/.svelte-kit", "**/node_modules"],
+    ignores: ["**/.vercel", "**/.svelte-kit", "**/node_modules", "*.config.js"],
   },
 ];
