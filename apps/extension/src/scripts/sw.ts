@@ -9,11 +9,12 @@ function diffCount(newIds: string[], savedIds: string[]): number {
   }, 0);
 }
 
-chrome.runtime.onInstalled.addListener(async () => {
-  chrome.alarms.create({
-    periodInMinutes: environment.checkFeaturedsEveryMinutes,
-  });
-});
+chrome.runtime.onInstalled.addListener(
+  async (): Promise<void> =>
+    chrome.alarms.create({
+      periodInMinutes: environment.checkFeaturedsEveryMinutes,
+    }),
+);
 
 chrome.alarms.onAlarm.addListener(async () => {
   try {
