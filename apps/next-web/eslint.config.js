@@ -21,7 +21,6 @@ export default [
       ...baseConfig.rules,
       "@typescript-eslint/no-floating-promises": "warn",
       "@typescript-eslint/no-unsafe-argument": "warn",
-      "@typescript-eslint/restrict-template-expressions": "warn",
       "no-undef": "off",
       "svelte/no-navigation-without-resolve": ["error", { ignoreLinks: true }],
     },

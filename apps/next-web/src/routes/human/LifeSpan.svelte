@@ -1,6 +1,7 @@
 <script>
-  let name = $state(`LifeSpan`);
-  let message = $derived(`${name} works`);
+  let name = $state("Lifespan");
+
+  let message = $derived(`${name ?? "dunt"} works`);
 </script>
 
 <article>
