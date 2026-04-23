@@ -23,7 +23,8 @@ chrome.alarms.onAlarm.addListener(async () => {
       const featureds = (await fresponse.json()) as Array<{ id: string }>;
       const ids = featureds.map((h) => h.id);
       console.log(new Date().toString(), JSON.stringify(ids));
-      const saved = (await chrome.storage.local.get("ids")) as {
+      const retrievedIds = await chrome.storage.local.get("ids");
+      const saved = retrievedIds as {
         ids?: string[];
       };
       if (saved.ids) {
