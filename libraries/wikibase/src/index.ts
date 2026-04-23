@@ -11,5 +11,6 @@ export type {
   Entity,
   LanguageDictionary,
   Snak,
+  QueryBindingsResponse as SparqlResponse,
   WikibaseResponse,
 } from "./types";

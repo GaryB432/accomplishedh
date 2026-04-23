@@ -42,7 +42,7 @@ export type Item = {
   type: "item";
 };
 
-export type { WikibaseResponse } from "./types/responses";
+export type { WikibaseResponse, QueryBindingsResponse } from "./types/responses";
 export type { Snak } from "./types/snaks";
 
 export type ItemId = string;
