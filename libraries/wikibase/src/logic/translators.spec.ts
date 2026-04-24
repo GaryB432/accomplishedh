@@ -1,7 +1,11 @@
 import { describe, expect, test } from "vitest";
 
 import { lifeDateClaims, schoolClaims } from "../mocks/claims";
-import { entityDateOfBirthIso, fromDictionary } from "./translators";
+import {
+  entityDateOfBirthIso,
+  fromDictionary,
+  mapFieldOfWorkEntry,
+} from "./translators";
 
 type LanguageDictionary = Record<string, { value: string }>;
 
@@ -32,5 +36,14 @@ describe("Translators", () => {
 
   test("entityDateOfBirthIso no claims", () => {
     expect(entityDateOfBirthIso({})).toBeUndefined();
+  });
+
+  test("mapFieldOfWorkEntry", () => {
+    expect(
+      mapFieldOfWorkEntry({
+        type: "uri",
+        value: "dunno",
+      }),
+    ).toEqual("");
   });
 });
