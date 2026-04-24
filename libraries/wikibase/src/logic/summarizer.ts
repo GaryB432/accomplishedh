@@ -7,6 +7,10 @@ import * as wbApi from "../data/api";
 import { serialize } from "../data/globe-coordinate-value";
 import { isoFrom } from "../data/timevalue";
 import { fromDictionary } from "./translators";
+import type {
+  EntityQid,
+  FieldOfWorkEntryV1,
+} from "@accomplishedh/shared/lib/dto.types";
 
 export type SummarizedEntities = Record<EntityId, SummarizedEntity>;
 
@@ -200,3 +204,46 @@ function stringify_snak_value(
 
   return stringed;
 }
+
+export function asQid(value: string): `Q${number}` {
+  if (!/^Q\d+$/.test(value)) {
+    throw new Error(`Invalid field-of-work id: ${value}`);
+  }
+
+  return value as `Q${number}`;
+}
+
+export function extractValue(typedValue: { value: string }): string {
+  const popped = typedValue.value.split("/").pop();
+  if (!popped) {
+    throw new Error("no pop");
+  }
+  return popped;
+}
+
+type QueryResponseRow = {
+  human: {
+    value: string;
+  };
+  fow: {
+    value: string;
+  };
+  fowLabel: {
+    value: string;
+  };
+  root: {
+    value: string;
+  };
+};
+
+export const mapFieldOfWorkEntry = (binding: {
+  value: string;
+}): FieldOfWorkEntryV1 & { hum: EntityQid } => {
+  const row = binding as unknown as QueryResponseRow;
+  return {
+    hum: asQid(extractValue(row.human)),
+    id: asQid(extractValue(row.fow)),
+    category: "Art",
+    label: row.fowLabel.value,
+  };
+};

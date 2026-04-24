@@ -1,8 +1,14 @@
 import { DTO } from "@accomplishedh/shared";
-
-import { type SparqlResponse } from "@accomplishedh/wikibase";
-
-import { readAll } from "../data/wb/fs-reader.js";
+import type {
+  EntityQid,
+  FieldsOfWorkDatasetV1 as FieldsComprehension,
+} from "@accomplishedh/shared/lib/dto.types.js";
+import {
+  mapFieldOfWorkEntry,
+  type SparqlResponse,
+} from "@accomplishedh/wikibase";
+import { writeFileSync } from "fs";
+import { dataRoot, readAll } from "../data/wb/fs-reader.js";
 import { type CommandArgs } from "./refresh.types.js";
 
 const WIKIDATA_SPARQL_URL = "https://query.wikidata.org/sparql";
@@ -16,22 +22,7 @@ const ROOTS = {
   Science: "Q336",
 };
 
-type HJ =
-  | Record<string, { value: string }>
-  | {
-      human: {
-        value: string;
-      };
-      fow: {
-        value: string;
-      };
-      fowLabel: {
-        value: string;
-      };
-      root: {
-        value: string;
-      };
-    };
+const schemaVersion = 1;
 
 export async function refreshCommand({
   opts,
@@ -44,22 +35,14 @@ export async function refreshCommand({
     console.log(today, 'is here');
     throw new Error("now must be ISO Date");
   }
-
-  // if (!opts.listOnly) {
-  //   throw new Error("only listOnly is supprted in this version");
-  // }
-  // console.log(
-  //   colors.bgBlue(
-  //     colors.white(
-  //       "https://business.facebook.com/latest/home?asset_id=100786702612447",
-  //     ),
-  //   ),
-  // );
-  // console.log(colors.gray("https://www.facebook.com/AccomplishedH"));
+  const fowDataset: FieldsComprehension = {
+    schemaVersion,
+    generatedAt: today,
+    people: {},
+  };
 
   const everybody = readAll();
-  const subjects = everybody.slice(50, 55).filter((h) => h);
-  // console.log(subjects);
+  const subjects = everybody.slice(200, 500).filter((h) => h);
   const allIds = subjects.map((s) => s.id);
 
   console.log(`🚀 Mapping FOWs for ${allIds.length} humans...`);
@@ -86,8 +69,6 @@ export async function refreshCommand({
 
     const url = `${WIKIDATA_SPARQL_URL}?query=${encodeURIComponent(query)}`;
 
-    // console.log(url);
-
     const response = await fetch(url, {
       headers: {
         Accept: "application/sparql-results+json",
@@ -99,52 +80,28 @@ export async function refreshCommand({
       throw new Error(`SPARQL query failed: ${response.statusText}`);
     }
 
-    const data = (await response.json()) as Dataaa;
+    const data = (await response.json()) as SparqlResponse;
 
-    console.log(JSON.stringify(data.results.bindings, undefined, 1), "wtf");
+    const fowRecords = data.results.bindings.map<
+      DTO.FieldOfWorkEntryV1 & { hum: EntityQid }
+    >(mapFieldOfWorkEntry);
 
-    // console.log(JSON.stringify({ data }, undefined, 8));
+    for (const row of fowRecords) {
+      let summary = fowDataset.people[row.hum];
 
-    // data.result.binding/fowLabel
-
-    type Dataaa = {
-      head: unknown;
-      results: {
-        bindings: Array<HJ>;
-      };
-    };
-
-    const results = data.results;
-
-    const mfd = results.bindings.map<DTO.FieldOfWorkEntryV1>(
-      (fowRootHumanFowLabel) => {
-        return {
-          id: asQid(extractValue(fowRootHumanFowLabel.fow)),
-          category: "Art",
-          label: fowRootHumanFowLabel.fowLabel.value,
-        };
-      },
-    );
-
-    console.log(JSON.stringify(mfd, undefined, 2));
+      if (!summary) {
+        summary = fowDataset.people[row.hum] = { fows: [] };
+      }
+      summary.fows.push(row);
+    }
 
     console.log(`✅ Processed batch ${Math.floor(i / BATCH_SIZE) + 1}.`);
     await new Promise((res) => setTimeout(res, 500));
   }
-}
 
-function asQid(value: string): `Q${number}` {
-  if (!/^Q\d+$/.test(value)) {
-    throw new Error(`Invalid field-of-work id: ${value}`);
-  }
-
-  return value as `Q${number}`;
-}
-
-function extractValue(typedValue: { value: string }): string {
-  const popped = typedValue.value.split("/").pop();
-  if (!popped) {
-    throw new Error("no pop");
-  }
-  return popped;
+  writeFileSync(
+    `${dataRoot}/wikibase-cache/fields-of-work.json`,
+    JSON.stringify(fowDataset, undefined, 2),
+    "utf-8",
+  );
 }
