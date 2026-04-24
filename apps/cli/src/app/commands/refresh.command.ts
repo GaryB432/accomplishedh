@@ -1,4 +1,7 @@
 import { DTO } from "@accomplishedh/shared";
+
+import { type SparqlResponse } from "@accomplishedh/wikibase";
+
 import { readAll } from "../data/wb/fs-reader.js";
 import { type CommandArgs } from "./refresh.types.js";
 
@@ -12,6 +15,23 @@ const ROOTS = {
   Music: "Q9730",
   Science: "Q336",
 };
+
+type HJ =
+  | Record<string, { value: string }>
+  | {
+      human: {
+        value: string;
+      };
+      fow: {
+        value: string;
+      };
+      fowLabel: {
+        value: string;
+      };
+      root: {
+        value: string;
+      };
+    };
 
 export async function refreshCommand({
   opts,
@@ -35,7 +55,7 @@ export async function refreshCommand({
   // console.log(colors.gray("https://www.facebook.com/AccomplishedH"));
 
   const everybody = readAll();
-  const subjects = everybody.slice(50, 70).filter((h) => h);
+  const subjects = everybody.slice(50, 55).filter((h) => h);
   // console.log(subjects);
   const allIds = subjects.map((s) => s.id);
 
@@ -76,50 +96,34 @@ export async function refreshCommand({
       throw new Error(`SPARQL query failed: ${response.statusText}`);
     }
 
-    const data = (await response.json()) as {
-      head: { vars: string[] };
+    const data = (await response.json()) as Dataaa;
+
+    console.log(JSON.stringify(data.results.bindings, undefined, 1), "wtf");
+
+    // console.log(JSON.stringify({ data }, undefined, 8));
+
+    // data.result.binding/fowLabel
+
+    type Dataaa = {
+      head: unknown;
       results: {
-        bindings: Array<{
-          human: { value: string };
-          fow: { value: string };
-          fowLabel: { value: string };
-          root: { value: string };
-        }>;
+        bindings: Array<HJ>;
       };
     };
 
-    const results = data.results.bindings;
+    const results = data.results;
 
-    const mfd = results.map<DTO.FieldOfWorkEntryV1>((r) => {
-      return {
-        id: asQid(extractValue(r.fow)),
-        category: "Art",
-        label: r.fowLabel.value,
-      };
-    });
+    const mfd = results.bindings.map<DTO.FieldOfWorkEntryV1>(
+      (fowRootHumanFowLabel) => {
+        return {
+          id: asQid(extractValue(fowRootHumanFowLabel.fow)),
+          category: "Art",
+          label: fowRootHumanFowLabel.fowLabel.value,
+        };
+      },
+    );
 
     console.log(JSON.stringify(mfd, undefined, 2));
-
-    results.forEach((row) => {
-      // console.log(row.human);
-      // const {bindings } = row;
-      // const fdf = row["itemf"].value = "sdf";
-      // const humanQid = row.human.value.split("/").pop();
-      // const fowQid = row.fow.value.split("/").pop();
-      // const fowLabel = row.fowLabel.value;
-      // const rootQid = row.root.value.split("/").pop();
-      // console.log(JSON.stringify({ row, humanQid, fowQid, fowLabel, rootQid }));
-      // const categoryName = Object.keys(ROOTS).find((k) => ROOTS[k] === rootQid);
-      // if (!humanQid || !categoryName) return;
-      // if (!fowMap[humanQid]) {
-      //   fowMap[humanQid] = { fows: [] };
-      // }
-      // fowMap[humanQid].fows.push({
-      //   category: categoryName,
-      //   id: fowQid,
-      //   label: fowLabel,
-      // });
-    });
 
     console.log(`✅ Processed batch ${Math.floor(i / BATCH_SIZE) + 1}.`);
     await new Promise((res) => setTimeout(res, 500));
