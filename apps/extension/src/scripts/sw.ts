@@ -1,21 +1,6 @@
 import { environment } from "@environments/environment";
 
-function diffCount(newIds: string[], savedIds: string[]): number {
-  return newIds.reduce<number>((counter, id) => {
-    if (!savedIds.includes(id)) {
-      counter++;
-    }
-    return counter;
-  }, 0);
-}
-
-chrome.runtime.onInstalled.addListener(async () => {
-  chrome.alarms.create({
-    periodInMinutes: environment.checkFeaturedsEveryMinutes,
-  });
-});
-
-chrome.alarms.onAlarm.addListener(async () => {
+async function checkFeatureds(): Promise<void> {
   try {
     const fresponse = await fetch(`${environment.haUrl}/api/featured/today`);
     if (fresponse.ok) {
@@ -34,7 +19,26 @@ chrome.alarms.onAlarm.addListener(async () => {
       await chrome.storage.local.set({ ids });
     }
   } catch (ev) {
-    const err = ev as Error;
+    const err = ev instanceof Error ? ev : new Error(String(ev));
     console.log(new Date().toString(), err.message);
   }
+}
+
+function diffCount(newIds: string[], savedIds: string[]): number {
+  return newIds.reduce<number>((counter, id) => {
+    if (!savedIds.includes(id)) {
+      counter++;
+    }
+    return counter;
+  }, 0);
+}
+
+chrome.runtime.onInstalled.addListener(() => {
+  void chrome.alarms.create({
+    periodInMinutes: environment.checkFeaturedsEveryMinutes,
+  });
+});
+
+chrome.alarms.onAlarm.addListener(() => {
+  void checkFeatureds();
 });
