@@ -4,6 +4,7 @@
 **/vite.config.ts.timestamp*
 **/.svelte-kit/
 **/.vercel/
+apps/next-web/src/data/wikibase-cache/
 apps/extension/zip/
 apps/*/test-results/
 apps/*/playwright-report/
