@@ -3,7 +3,10 @@ import type {
   EntityQid,
   FieldsOfWorkDatasetV1 as FieldsComprehension,
 } from "@accomplishedh/shared/lib/dto.types.js";
-import { type SparqlResponse } from "@accomplishedh/wikibase";
+import {
+  mapFieldOfWorkEntry,
+  type SparqlResponse,
+} from "@accomplishedh/wikibase";
 import { writeFileSync } from "fs";
 import { dataRoot, readAll } from "../data/wb/fs-reader.js";
 import { type CommandArgs } from "./refresh.types.js";
@@ -21,21 +24,6 @@ const ROOTS = {
 
 const schemaVersion = 1;
 
-type QueryResponseRow = {
-  human: {
-    value: string;
-  };
-  fow: {
-    value: string;
-  };
-  fowLabel: {
-    value: string;
-  };
-  root: {
-    value: string;
-  };
-};
-
 export async function refreshCommand({
   opts,
   today,
@@ -50,7 +38,7 @@ export async function refreshCommand({
   };
 
   const everybody = readAll();
-  const subjects = everybody.slice(0, 4).filter((h) => h);
+  const subjects = everybody.slice(200, 500).filter((h) => h);
   const allIds = subjects.map((s) => s.id);
 
   console.log(`🚀 Mapping FOWs for ${allIds.length} humans...`);
@@ -92,15 +80,8 @@ export async function refreshCommand({
 
     const fowRecords = data.results.bindings.map<
       DTO.FieldOfWorkEntryV1 & { hum: EntityQid }
-    >((b) => {
-      const row = b as unknown as QueryResponseRow;
-      return {
-        hum: asQid(extractValue(row.human)),
-        id: asQid(extractValue(row.fow)),
-        category: "Art",
-        label: row.fowLabel.value,
-      };
-    });
+    >(mapFieldOfWorkEntry);
+
     for (const row of fowRecords) {
       let summary = fowDataset.people[row.hum];
 
@@ -119,20 +100,4 @@ export async function refreshCommand({
     JSON.stringify(fowDataset, undefined, 2),
     "utf-8",
   );
-}
-
-function asQid(value: string): `Q${number}` {
-  if (!/^Q\d+$/.test(value)) {
-    throw new Error(`Invalid field-of-work id: ${value}`);
-  }
-
-  return value as `Q${number}`;
-}
-
-function extractValue(typedValue: { value: string }): string {
-  const popped = typedValue.value.split("/").pop();
-  if (!popped) {
-    throw new Error("no pop");
-  }
-  return popped;
 }
