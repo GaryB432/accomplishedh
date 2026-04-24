@@ -1,14 +1,14 @@
 import { readFileSync } from "node:fs";
 import { join, normalize } from "node:path";
 
-export const dataPath = "apps/next-web/src/data";
+const dataPath = "apps/next-web/src/data";
 
 type EsteemedIndividual = {
   field?: string | undefined;
   id: string;
 };
 
-const dataRoot = normalize(
+export const dataRoot = normalize(
   join(import.meta.dirname, "..", "..", "..", dataPath),
 );
 
