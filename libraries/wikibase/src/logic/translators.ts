@@ -1,12 +1,10 @@
 import type { Entity, LanguageDictionary } from "../types.js";
-
 import { WIKIDATA_PERSON_PROPERTIES as P } from "../constants.js";
 import { isoFrom } from "../data/timevalue.js";
 import type {
   FieldOfWorkEntryV1,
   EntityQid,
-} from "@accomplishedh/shared/lib/dto.types.js";
-import { asQid, extractValue } from "./summarizer.js";
+} from "@accomplishedh/shared/lib/dto.types.js"; // TODO why deep link?
 
 export function entityDateOfBirthIso(
   entity: Pick<Entity, "claims">,
@@ -68,3 +66,19 @@ export const mapFieldOfWorkEntry = (
     label: row.fowLabel.value,
   };
 };
+
+export function asQid(value: string): `Q${number}` {
+  if (!/^Q\d+$/.test(value)) {
+    throw new Error(`Invalid field-of-work id: ${value}`);
+  }
+
+  return value as `Q${number}`;
+}
+
+export function extractValue(typedValue: { value: string }): string {
+  const popped = typedValue.value.split("/").pop();
+  if (!popped) {
+    throw new Error("no pop");
+  }
+  return popped;
+}

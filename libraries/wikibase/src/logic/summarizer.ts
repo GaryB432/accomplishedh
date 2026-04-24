@@ -198,19 +198,3 @@ function stringify_snak_value(
 
   return stringed;
 }
-
-export function asQid(value: string): `Q${number}` {
-  if (!/^Q\d+$/.test(value)) {
-    throw new Error(`Invalid field-of-work id: ${value}`);
-  }
-
-  return value as `Q${number}`;
-}
-
-export function extractValue(typedValue: { value: string }): string {
-  const popped = typedValue.value.split("/").pop();
-  if (!popped) {
-    throw new Error("no pop");
-  }
-  return popped;
-}
