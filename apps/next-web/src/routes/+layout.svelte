@@ -14,6 +14,7 @@
 
 <Header></Header>
 
+<!-- eslint-disable @typescript-eslint/no-unsafe-call -->
 {@render children()}
 
 <Footer></Footer>

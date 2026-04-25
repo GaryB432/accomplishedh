@@ -1,22 +1,41 @@
 import js from "@eslint/js";
-import perf from "eslint-plugin-perfectionist";
 import { defineConfig } from "eslint/config";
 import globals from "globals";
 import tseslint from "typescript-eslint";
 
 export default defineConfig([
-  tseslint.configs.recommended,
-  perf.configs["recommended-natural"],
+  {
+    ignores: [
+      "**/node_modules/**",
+      "**/dist/**",
+      "**/build/**",
+      "**/.svelte-kit/**",
+      "**/.vercel/**",
+      "**/coverage/**",
+      "**/tmp/**",
+    ],
+  },
+  tseslint.configs.recommendedTypeChecked,
   {
     extends: ["js/recommended"],
     files: ["**/*.{js,mjs,cjs,ts,mts,cts}"],
-    languageOptions: { globals: { ...globals.browser, ...globals.node } },
-    plugins: { js, perf },
+    languageOptions: {
+      globals: { ...globals.browser, ...globals.node },
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname,
+      },
+    },
+    plugins: { js },
     rules: {
       "@typescript-eslint/no-undef": "off",
       "@typescript-eslint/no-unused-vars": "off",
       "no-undef": "off",
       "no-unused-vars": "off",
+      "@typescript-eslint/no-floating-promises": "warn",
+      "@typescript-eslint/no-misused-promises": "warn",
+      "@typescript-eslint/prefer-promise-reject-errors": "warn",
+      "@typescript-eslint/unbound-method": "warn",
     },
   },
   {
@@ -27,6 +46,7 @@ export default defineConfig([
   },
   {
     files: ["**/*.{cjs,mjs}"],
+    extends: [tseslint.configs.disableTypeChecked],
     rules: {
       "@typescript-eslint/explicit-module-boundary-types": "off",
     },

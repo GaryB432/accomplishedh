@@ -34,10 +34,7 @@ const dataRoot = normalize(join(import.meta.dirname, "../../../../", dataPath));
 
 const featuredsFileName = join(dataRoot, "featured.json");
 
-export async function featuredCommand({
-  opts,
-  start,
-}: CommandArgs): Promise<void> {
+export function featuredCommand({ opts, start }: CommandArgs): void {
   if (!start || start.length < 10) {
     throw new Error("start should be ISO");
   }

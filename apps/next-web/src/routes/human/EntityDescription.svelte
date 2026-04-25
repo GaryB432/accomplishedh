@@ -1,7 +1,8 @@
 <script lang="ts">
   import { fromDictionary } from "$lib/wikibase/utils";
+  import type { Item } from "@accomplishedh/wikibase/types";
 
-  let { subject } = $props();
+  let { subject }: { subject: Item } = $props();
   let description = $derived(fromDictionary(subject.descriptions));
 </script>
 
