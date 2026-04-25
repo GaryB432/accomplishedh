@@ -1,6 +1,7 @@
 export * from "./lib/app.types.js";
 export * from "./lib/array.js";
 export * from "./lib/date-utils.js";
+export * as DTO from "./lib/dto.types.js";
 export * from "./lib/Logger.js";
 export * from "./lib/nobel.types.js";
 export * from "./lib/osf.types.js";

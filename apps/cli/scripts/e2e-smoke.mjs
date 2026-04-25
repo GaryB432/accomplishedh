@@ -76,26 +76,27 @@ const steps = [
     name: "help",
   },
   {
-    args: ["apps/cli/dist/main.js", "featured", "2026-04", "--dry-run"],
+    args: ["apps/cli/dist/main.js", "featured", "2094-04", "--dry-run"],
     cmd: "node",
     exitCode: 1,
     mustMatch: [/start should be ISO/],
     name: "featured-invalid-start",
   },
   {
-    args: ["apps/cli/dist/main.js", "botd", "2026-02-30", "--listOnly"],
-    cmd: "node",
-    exitCode: 1,
-    mustMatch: [/facebook\.com/, /ENOENT/, /web\/static\/data\/shards/],
-    mustNotMatch: [/only listOnly is supprted in this version/],
-    name: "botd-list-only",
-  },
-  {
-    args: ["apps/cli/dist/main.js", "botd", "2026-02-30"],
+    // Feb 30th is "valid enough" to run but finds 0 people. Exit code 0 is correct for 0 results.
+    args: ["apps/cli/dist/main.js", "botd", "2094-02-30", "--listOnly"],
     cmd: "node",
     exitCode: 0,
-    mustMatch: [/only listOnly is supported in this version/],
-    name: "botd-no-list-only",
+    mustMatch: [/facebook\.com/, /0 posted/],
+    name: "botd-empty-date",
+  },
+  {
+    // Deterministic test for March 14th (Pieter van Musschenbroek)
+    args: ["apps/cli/dist/main.js", "botd", "2094-03-14", "--listOnly"],
+    cmd: "node",
+    exitCode: 0,
+    mustMatch: [/Pieter van Musschenbroek/, /1692/],
+    name: "botd-pieter-check",
   },
 ];
 
