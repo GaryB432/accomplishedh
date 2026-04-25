@@ -61,6 +61,7 @@ describe("Translators", () => {
     ).toMatchInlineSnapshot(`
       {
         "category": "Art",
+        "human": "Q49898",
         "id": "Q742333",
         "label": "history painting",
       }
