@@ -9,8 +9,11 @@ export async function refreshCommand({
   opts,
   today,
 }: CommandArgs): Promise<void> {
-  console.log(opts);
-  if (!today || today.length !== 10) {
+  console.log(opts, today);
+  const systemDate = new Date().toISOString();
+  today ??= systemDate;
+  if (today.length !== systemDate.length) {
+    console.log(today, 'is here');
     throw new Error("now must be ISO Date");
   }
 
