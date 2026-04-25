@@ -9,9 +9,10 @@ import type { Binding, Entity, LanguageDictionary } from "../types.js";
 
 const categories: Map<EntityQid, FowRootCategoryV1> = new Map([
   ["Q36649", "Art"],
-  ["Q8242", "Art"],
-  ["Q336", "Art"],
-]);
+  ["Q8242", "Lit"],
+  ["Q9730", "Music"],
+  ["Q336", "Science"],
+]); // TODO compute by reverse ROOTS
 
 export function entityDateOfBirthIso(
   entity: Pick<Entity, "claims">,
@@ -46,13 +47,14 @@ export function toFowEntry(
   row: Record<string, Binding>,
   index?: number,
   array?: Record<string, Binding>[],
-): FieldOfWorkEntryV1 {
+): FieldOfWorkEntryV1 & { human: EntityQid } {
+  const human = asQid(extractValue(row["human"]!));
   const id = asQid(extractValue(row["fow"]!));
   const label = row["fowLabel"]!.value;
 
   const category = getFowRootCategory(row["root"]!);
 
-  return { id, category, label };
+  return { id, category, human, label };
 }
 
 export function asQid(value: string): `Q${number}` {
@@ -74,15 +76,7 @@ export function extractValue(typedValue: { value: string }): string {
 const missing: EntityQid[] = [];
 
 function getFowRootCategory(arg0: Binding): FowRootCategoryV1 {
-  const q = asQid(extractValue(arg0));
+  const df = categories.get(asQid(extractValue(arg0)));
 
-  if (!categories.has(q)) {
-    if (!missing.includes(q)) {
-      missing.push(q);
-    }
-  }
-
-  console.log(missing);
-
-  return "Art";
+  return df!;
 }
