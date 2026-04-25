@@ -1,26 +1,6 @@
 import { environment } from "@environments/environment";
 
-<<<<<<< HEAD
-function diffCount(newIds: string[], savedIds: string[]): number {
-  return newIds.reduce<number>((counter, id) => {
-    if (!savedIds.includes(id)) {
-      counter++;
-    }
-    return counter;
-  }, 0);
-}
-
-chrome.runtime.onInstalled.addListener(
-  async (): Promise<void> =>
-    chrome.alarms.create({
-      periodInMinutes: environment.checkFeaturedsEveryMinutes,
-    }),
-);
-
-chrome.alarms.onAlarm.addListener(async () => {
-=======
 async function checkFeatureds(): Promise<void> {
->>>>>>> origin/master
   try {
     const fresponse = await fetch(`${environment.haUrl}/api/featured/today`);
     if (fresponse.ok) {
