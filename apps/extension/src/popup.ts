@@ -34,11 +34,11 @@ function addChromeTab(h: EuroHuman): EventListener {
   };
 }
 
-async function drawHumans(
+function drawHumans(
   humans: EuroHuman[],
   container: Node,
   template: HTMLTemplateElement,
-): Promise<void> {
+): void {
   container.textContent = "";
   let hn = 0;
   for (const h of humans) {
@@ -121,7 +121,7 @@ chrome.runtime.onMessage.addListener(
   (msg: { humans?: EuroHuman[] }, sender?: { tab?: unknown }) => {
     if (msg.humans) {
       if (sender && !sender.tab) {
-        void drawHumans(msg.humans, el, humanTemplate);
+        drawHumans(msg.humans, el, humanTemplate);
       }
     }
   },

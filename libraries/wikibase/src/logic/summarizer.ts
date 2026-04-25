@@ -90,7 +90,7 @@ export async function summarize(entity: Entity): Promise<SummarizedEntity> {
 
 function byDataType(a: Snak, b: Snak): number {
   return a.datavalue && b.datavalue
-    ? a.datavalue!.type.localeCompare(b.datavalue!.type)
+    ? a.datavalue.type.localeCompare(b.datavalue.type)
     : 0;
 }
 

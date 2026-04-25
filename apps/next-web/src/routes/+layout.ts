@@ -1,6 +1,6 @@
-import type { LayoutLoad } from "./$types";
+import type { LayoutLoad, LayoutLoadEvent } from "./$types";
 
-export const load = (async (ctx) => {
+export const load = (async (ctx: LayoutLoadEvent) => {
   const { featureds } = ctx.data;
-  return { featureds };
+  return Promise.resolve({ featureds });
 }) satisfies LayoutLoad;

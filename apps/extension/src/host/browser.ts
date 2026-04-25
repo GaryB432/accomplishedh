@@ -10,6 +10,7 @@ export default {
       text: string;
     }): Promise<void> {
       console.log(details);
+      return await Promise.resolve();
     },
   },
   runtime: {

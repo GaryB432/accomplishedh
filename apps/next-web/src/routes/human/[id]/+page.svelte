@@ -5,8 +5,9 @@
   import FeaturedToday from "../FeaturedToday.svelte";
   import Headshot from "../Headshot.svelte";
   import LifeSpan from "../LifeSpan.svelte";
+  import type { PageProps } from "./$types";
 
-  let { data } = $props();
+  let { data }: PageProps = $props();
 
   let { featureds, subject } = $derived(data);
 

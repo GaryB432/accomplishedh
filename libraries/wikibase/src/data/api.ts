@@ -21,7 +21,7 @@ export async function fetchEntities(
     props,
   });
   const response = await fetch(entityUrl);
-  const entityData: WikibaseResponse = await response.json();
+  const entityData = (await response.json()) as WikibaseResponse;
 
   if (entityData.success === 1) {
     return entityData.entities!;
@@ -48,7 +48,7 @@ export async function searchEntitiesByTitle(
   const searcher = entity_searh_url(term);
 
   const response = await fetch(searcher);
-  const data: WikibaseResponse = await response.json();
+  const data = (await response.json()) as WikibaseResponse;
 
   if (data.success !== 1 || data.search === void 0) {
     throw new Error(JSON.stringify(data));
