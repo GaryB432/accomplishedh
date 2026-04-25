@@ -1,12 +1,8 @@
-import { DTO } from "@accomplishedh/shared";
 import type {
-  EntityQid,
+  FieldOfWorkEntryV1,
   FieldsOfWorkDatasetV1 as FieldsComprehension,
 } from "@accomplishedh/shared/lib/dto.types.js";
-import {
-  mapFieldOfWorkEntry,
-  type SparqlResponse,
-} from "@accomplishedh/wikibase";
+import { toFowEntry, type SparqlResponse } from "@accomplishedh/wikibase";
 import { writeFileSync } from "fs";
 import { dataRoot, readAll } from "../data/wb/fs-reader.js";
 import { type CommandArgs } from "./refresh.types.js";
@@ -42,7 +38,7 @@ export async function refreshCommand({
   };
 
   const everybody = readAll();
-  const subjects = everybody.slice(200, 500).filter((h) => h);
+  const subjects = everybody.slice(200, 210).filter((h) => h);
   const allIds = subjects.map((s) => s.id);
 
   console.log(`🚀 Mapping FOWs for ${allIds.length} humans...`);
@@ -76,25 +72,32 @@ export async function refreshCommand({
       },
     });
 
+    // console.log(url);
+
     if (!response.ok) {
       throw new Error(`SPARQL query failed: ${response.statusText}`);
     }
 
     const data = (await response.json()) as SparqlResponse;
 
-    const fowRecords = data.results.bindings.map<
-      DTO.FieldOfWorkEntryV1 & { hum: EntityQid }
-    >(mapFieldOfWorkEntry);
+    const fowPlusHumanRecords =
+      data.results.bindings.map<FieldOfWorkEntryV1>(toFowEntry);
 
-    for (const row of fowRecords) {
-      let summary = fowDataset.people[row.hum];
+    const qst = fowPlusHumanRecords.reduce(
+      (a, fow) => {
+        // console.log(b.id, "ok here");
+        a[fow.id] = fow.category;
+        
+        return a;
+      },
+      {} as Record<string, unknown>,
+    );
 
-      if (!summary) {
-        summary = fowDataset.people[row.hum] = { fows: [] };
-      }
-      summary.fows.push(row);
-    }
+    console.log(fowPlusHumanRecords, qst);
 
+    // console.log(data.results.bindings, "ok all");
+
+    // const rows = data.re
     console.log(`✅ Processed batch ${Math.floor(i / BATCH_SIZE) + 1}.`);
     await new Promise((res) => setTimeout(res, 500));
   }
