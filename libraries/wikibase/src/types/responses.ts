@@ -16,12 +16,12 @@ type BindingLiteral = {
   value: string;
 };
 
-type Binding = BindingLiteral | BindingUri;
+export type Binding = BindingLiteral | BindingUri;
 
 export type QueryBindingsResponse = {
   head: { vars: string[] };
   results: {
-    bindings: Binding[];
+    bindings: Record<string, Binding>[];
   };
 };
 
