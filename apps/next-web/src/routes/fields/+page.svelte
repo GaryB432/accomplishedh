@@ -2,19 +2,56 @@
   import type { PageProps } from "./$types";
 
   let { data }: PageProps = $props();
-
-  let asdf = $derived(
-    Object.entries(data.fieldsOfWork.people)
-      .map(([human, j]) => {
-        return j.fows.map((fow) => ({ ...fow, human }));
-      })
-      .flat(),
-  );
-//   $inspect(asdf);
+  let { graph } = $derived(data);
 </script>
 
-{JSON.stringify(
-  asdf.map((g) => g.category),
-  undefined,
-  1,
-)}
+<div class="graph">
+  <div class="points">
+    {#each graph.nodes as point (point.id)}
+      <div
+        class={[
+          "point",
+          { fow: point.type === "field", human: point.type === "person" },
+        ]}
+      >
+        {point.id}
+      </div>
+    {/each}
+  </div>
+  <div class="edges">
+    {#each graph.edges as edge (edge[0].id.concat("!").concat(edge[1].id))}
+      <div class={["edge"]}>
+        <div>
+          {edge[0].id}
+        </div>
+        <div>
+          {edge[1].id}
+        </div>
+      </div>
+    {/each}
+  </div>
+</div>
+
+<style>
+  div {
+    display: inline-block;
+    margin: 2px;
+    padding: 2px;
+  }
+  .point {
+    border: thin solid lime;
+  }
+  .edges {
+    display: flex;
+  }
+  .edge {
+    background-color: red;
+  }
+
+  .human {
+    border: 2px solid blue;
+  }
+  .fow {
+    border: thin solid orange;
+  }
+</style>
