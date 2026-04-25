@@ -1,0 +1,9543 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-04-20",
+  "people": {
+    "Q9106": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q1069",
+          "category": "Science",
+          "label": "geology"
+        },
+        {
+          "id": "Q394",
+          "category": "Science",
+          "label": "metrology"
+        },
+        {
+          "id": "Q394",
+          "category": "Science",
+          "label": "metrology"
+        },
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        },
+        {
+          "id": "Q8134",
+          "category": "Science",
+          "label": "economics"
+        }
+      ]
+    },
+    "Q9021": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q3194786",
+          "category": "Science",
+          "label": "quantum theory"
+        },
+        {
+          "id": "Q11473",
+          "category": "Science",
+          "label": "thermodynamics"
+        },
+        {
+          "id": "Q18362",
+          "category": "Science",
+          "label": "theoretical physics"
+        }
+      ]
+    },
+    "Q8962": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q8753": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q18334",
+          "category": "Science",
+          "label": "particle physics"
+        },
+        {
+          "id": "Q18362",
+          "category": "Science",
+          "label": "theoretical physics"
+        }
+      ]
+    },
+    "Q1589": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        }
+      ]
+    },
+    "Q1585": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q44483": {
+      "fows": [
+        {
+          "id": "Q420",
+          "category": "Science",
+          "label": "biology"
+        },
+        {
+          "id": "Q420",
+          "category": "Science",
+          "label": "biology"
+        },
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        },
+        {
+          "id": "Q7094",
+          "category": "Science",
+          "label": "biochemistry"
+        }
+      ]
+    },
+    "Q5333": {
+      "fows": [
+        {
+          "id": "Q1069",
+          "category": "Science",
+          "label": "geology"
+        },
+        {
+          "id": "Q23498",
+          "category": "Science",
+          "label": "archaeology"
+        }
+      ]
+    },
+    "Q7351": {
+      "fows": [
+        {
+          "id": "Q1344",
+          "category": "Music",
+          "label": "opera"
+        },
+        {
+          "id": "Q189201",
+          "category": "Music",
+          "label": "chamber music"
+        },
+        {
+          "id": "Q9730",
+          "category": "Music",
+          "label": "classical music"
+        }
+      ]
+    },
+    "Q38337": {
+      "fows": [
+        {
+          "id": "Q6689",
+          "category": "Lit",
+          "label": "French literature"
+        }
+      ]
+    },
+    "Q9711": {
+      "fows": [
+        {
+          "id": "Q6689",
+          "category": "Lit",
+          "label": "French literature"
+        }
+      ]
+    },
+    "Q35610": {
+      "fows": [
+        {
+          "id": "Q208505",
+          "category": "Lit",
+          "label": "crime novel"
+        },
+        {
+          "id": "Q20665028",
+          "category": "Lit",
+          "label": "detective literature"
+        },
+        {
+          "id": "Q186579",
+          "category": "Lit",
+          "label": "English-language literature"
+        }
+      ]
+    },
+    "Q7504": {
+      "fows": [
+        {
+          "id": "Q690200",
+          "category": "Science",
+          "label": "radiobiology"
+        },
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q5396": {
+      "fows": [
+        {
+          "id": "Q3798668",
+          "category": "Science",
+          "label": "aerospace engineering"
+        }
+      ]
+    },
+    "Q20882": {
+      "fows": [
+        {
+          "id": "Q20050859",
+          "category": "Science",
+          "label": "aerodynamics engineering"
+        }
+      ]
+    },
+    "Q42985": {
+      "fows": [
+        {
+          "id": "Q521",
+          "category": "Science",
+          "label": "physiology"
+        },
+        {
+          "id": "Q521",
+          "category": "Science",
+          "label": "physiology"
+        }
+      ]
+    },
+    "Q762": {
+      "fows": [
+        {
+          "id": "Q521",
+          "category": "Science",
+          "label": "physiology"
+        },
+        {
+          "id": "Q521",
+          "category": "Science",
+          "label": "physiology"
+        },
+        {
+          "id": "Q11023",
+          "category": "Science",
+          "label": "engineering"
+        },
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q680": {
+      "fows": [
+        {
+          "id": "Q521",
+          "category": "Science",
+          "label": "physiology"
+        },
+        {
+          "id": "Q521",
+          "category": "Science",
+          "label": "physiology"
+        }
+      ]
+    },
+    "Q21186": {
+      "fows": [
+        {
+          "id": "Q182468",
+          "category": "Science",
+          "label": "hydrography"
+        }
+      ]
+    },
+    "Q30769": {
+      "fows": [
+        {
+          "id": "Q874429",
+          "category": "Science",
+          "label": "group theory"
+        },
+        {
+          "id": "Q28575007",
+          "category": "Science",
+          "label": "theory of differential equations"
+        },
+        {
+          "id": "Q8087",
+          "category": "Science",
+          "label": "geometry"
+        }
+      ]
+    },
+    "Q6682": {
+      "fows": [
+        {
+          "id": "Q1027879",
+          "category": "Art",
+          "label": "graphics"
+        },
+        {
+          "id": "Q1233720",
+          "category": "Lit",
+          "label": "young adult literature"
+        },
+        {
+          "id": "Q2921001",
+          "category": "Art",
+          "label": "art of drawing"
+        },
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        },
+        {
+          "id": "Q36649",
+          "category": "Art",
+          "label": "visual arts"
+        }
+      ]
+    },
+    "Q7200": {
+      "fows": [
+        {
+          "id": "Q1066186",
+          "category": "Science",
+          "label": "study of history"
+        }
+      ]
+    },
+    "Q20710": {
+      "fows": [
+        {
+          "id": "Q83042",
+          "category": "Science",
+          "label": "neurology"
+        },
+        {
+          "id": "Q7867",
+          "category": "Science",
+          "label": "psychiatry"
+        },
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        }
+      ]
+    },
+    "Q9215": {
+      "fows": [
+        {
+          "id": "Q83042",
+          "category": "Science",
+          "label": "neurology"
+        },
+        {
+          "id": "Q41630",
+          "category": "Science",
+          "label": "psychoanalysis"
+        }
+      ]
+    },
+    "Q9041": {
+      "fows": [
+        {
+          "id": "Q101333",
+          "category": "Science",
+          "label": "mechanical engineering"
+        }
+      ]
+    },
+    "Q37064": {
+      "fows": [
+        {
+          "id": "Q101929",
+          "category": "Science",
+          "label": "immunology"
+        },
+        {
+          "id": "Q243748",
+          "category": "Science",
+          "label": "bacteriology"
+        }
+      ]
+    },
+    "Q5673": {
+      "fows": [
+        {
+          "id": "Q131539",
+          "category": "Lit",
+          "label": "children's literature"
+        },
+        {
+          "id": "Q699",
+          "category": "Lit",
+          "label": "fairy tale"
+        },
+        {
+          "id": "Q699",
+          "category": "Lit",
+          "label": "fairy tale"
+        }
+      ]
+    },
+    "Q7487": {
+      "fows": [
+        {
+          "id": "Q160398",
+          "category": "Science",
+          "label": "crystallography"
+        },
+        {
+          "id": "Q826582",
+          "category": "Science",
+          "label": "X-ray crystallography"
+        },
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        },
+        {
+          "id": "Q7094",
+          "category": "Science",
+          "label": "biochemistry"
+        }
+      ]
+    },
+    "Q5593": {
+      "fows": [
+        {
+          "id": "Q161439",
+          "category": "Art",
+          "label": "jewelry"
+        },
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q5577": {
+      "fows": [
+        {
+          "id": "Q161439",
+          "category": "Art",
+          "label": "jewelry"
+        },
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        },
+        {
+          "id": "Q11634",
+          "category": "Art",
+          "label": "art of sculpture"
+        }
+      ]
+    },
+    "Q42831": {
+      "fows": [
+        {
+          "id": "Q179161",
+          "category": "Lit",
+          "label": "Russian literature"
+        }
+      ]
+    },
+    "Q5432": {
+      "fows": [
+        {
+          "id": "Q139106",
+          "category": "Art",
+          "label": "engraving process"
+        },
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q41532": {
+      "fows": [
+        {
+          "id": "Q245179",
+          "category": "Science",
+          "label": "analytical psychology"
+        },
+        {
+          "id": "Q640280",
+          "category": "Science",
+          "label": "comparative mythology"
+        },
+        {
+          "id": "Q7867",
+          "category": "Science",
+          "label": "psychiatry"
+        },
+        {
+          "id": "Q9418",
+          "category": "Science",
+          "label": "psychology"
+        },
+        {
+          "id": "Q23404",
+          "category": "Science",
+          "label": "anthropology"
+        }
+      ]
+    },
+    "Q7197": {
+      "fows": [
+        {
+          "id": "Q4184",
+          "category": "Lit",
+          "label": "autobiography"
+        }
+      ]
+    },
+    "Q43522": {
+      "fows": [
+        {
+          "id": "Q7193",
+          "category": "Science",
+          "label": "microbiology"
+        }
+      ]
+    },
+    "Q37193": {
+      "fows": [
+        {
+          "id": "Q7193",
+          "category": "Science",
+          "label": "microbiology"
+        }
+      ]
+    },
+    "Q529": {
+      "fows": [
+        {
+          "id": "Q7193",
+          "category": "Science",
+          "label": "microbiology"
+        },
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q43917": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        },
+        {
+          "id": "Q7094",
+          "category": "Science",
+          "label": "biochemistry"
+        }
+      ]
+    },
+    "Q39607": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q23810": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        },
+        {
+          "id": "Q11023",
+          "category": "Science",
+          "label": "engineering"
+        }
+      ]
+    },
+    "Q18425": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        },
+        {
+          "id": "Q11351",
+          "category": "Science",
+          "label": "organic chemistry"
+        },
+        {
+          "id": "Q11372",
+          "category": "Science",
+          "label": "physical chemistry"
+        }
+      ]
+    },
+    "Q5327": {
+      "fows": [
+        {
+          "id": "Q7094",
+          "category": "Science",
+          "label": "biochemistry"
+        },
+        {
+          "id": "Q11351",
+          "category": "Science",
+          "label": "organic chemistry"
+        }
+      ]
+    },
+    "Q37970": {
+      "fows": [
+        {
+          "id": "Q7162",
+          "category": "Science",
+          "label": "genetics"
+        }
+      ]
+    },
+    "Q42596": {
+      "fows": [
+        {
+          "id": "Q8242",
+          "category": "Lit",
+          "label": "literature"
+        }
+      ]
+    },
+    "Q36322": {
+      "fows": [
+        {
+          "id": "Q8242",
+          "category": "Lit",
+          "label": "literature"
+        }
+      ]
+    },
+    "Q22670": {
+      "fows": [
+        {
+          "id": "Q8242",
+          "category": "Lit",
+          "label": "literature"
+        }
+      ]
+    },
+    "Q9327": {
+      "fows": [
+        {
+          "id": "Q8242",
+          "category": "Lit",
+          "label": "literature"
+        }
+      ]
+    },
+    "Q7724": {
+      "fows": [
+        {
+          "id": "Q8242",
+          "category": "Lit",
+          "label": "literature"
+        }
+      ]
+    },
+    "Q2754": {
+      "fows": [
+        {
+          "id": "Q8242",
+          "category": "Lit",
+          "label": "literature"
+        }
+      ]
+    },
+    "Q905": {
+      "fows": [
+        {
+          "id": "Q8242",
+          "category": "Lit",
+          "label": "literature"
+        }
+      ]
+    },
+    "Q504": {
+      "fows": [
+        {
+          "id": "Q8242",
+          "category": "Lit",
+          "label": "literature"
+        },
+        {
+          "id": "Q49084",
+          "category": "Lit",
+          "label": "short story"
+        }
+      ]
+    },
+    "Q44331": {
+      "fows": [
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        }
+      ]
+    },
+    "Q40852": {
+      "fows": [
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        }
+      ]
+    },
+    "Q20733": {
+      "fows": [
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        }
+      ]
+    },
+    "Q46373": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q44054": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        },
+        {
+          "id": "Q36649",
+          "category": "Art",
+          "label": "visual arts"
+        }
+      ]
+    },
+    "Q44032": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q41406": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q40599": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q37693": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        },
+        {
+          "id": "Q36649",
+          "category": "Art",
+          "label": "visual arts"
+        }
+      ]
+    },
+    "Q35548": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q34661": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q34618": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q34013": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q33477": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q26408": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q23380": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q9348": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q7836": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q5912": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        },
+        {
+          "id": "Q11634",
+          "category": "Art",
+          "label": "art of sculpture"
+        }
+      ]
+    },
+    "Q5811": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q5598": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q5582": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q5580": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q296": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q41688": {
+      "fows": [
+        {
+          "id": "Q18362",
+          "category": "Science",
+          "label": "theoretical physics"
+        }
+      ]
+    },
+    "Q9130": {
+      "fows": [
+        {
+          "id": "Q18362",
+          "category": "Science",
+          "label": "theoretical physics"
+        }
+      ]
+    },
+    "Q7085": {
+      "fows": [
+        {
+          "id": "Q18362",
+          "category": "Science",
+          "label": "theoretical physics"
+        }
+      ]
+    },
+    "Q937": {
+      "fows": [
+        {
+          "id": "Q18362",
+          "category": "Science",
+          "label": "theoretical physics"
+        }
+      ]
+    },
+    "Q46602": {
+      "fows": [
+        {
+          "id": "Q49084",
+          "category": "Lit",
+          "label": "short story"
+        }
+      ]
+    },
+    "Q77209": {
+      "fows": [
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        }
+      ]
+    },
+    "Q76948": {
+      "fows": [
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        }
+      ]
+    },
+    "Q76712": {
+      "fows": [
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        }
+      ]
+    },
+    "Q76431": {
+      "fows": [
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        }
+      ]
+    },
+    "Q75845": {
+      "fows": [
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        },
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q131089",
+          "category": "Science",
+          "label": "geodesy"
+        }
+      ]
+    },
+    "Q75828": {
+      "fows": [
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        }
+      ]
+    },
+    "Q58720": {
+      "fows": [
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q484591",
+          "category": "Science",
+          "label": "natural history"
+        },
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        },
+        {
+          "id": "Q11467",
+          "category": "Science",
+          "label": "metallurgy"
+        },
+        {
+          "id": "Q83353",
+          "category": "Science",
+          "label": "mineralogy"
+        },
+        {
+          "id": "Q40634",
+          "category": "Science",
+          "label": "philology"
+        },
+        {
+          "id": "Q11467",
+          "category": "Science",
+          "label": "metallurgy"
+        }
+      ]
+    },
+    "Q58685": {
+      "fows": [
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        },
+        {
+          "id": "Q1129343",
+          "category": "Science",
+          "label": "spherical astronomy"
+        },
+        {
+          "id": "Q625648",
+          "category": "Science",
+          "label": "photometry"
+        },
+        {
+          "id": "Q131089",
+          "category": "Science",
+          "label": "geodesy"
+        }
+      ]
+    },
+    "Q57963": {
+      "fows": [
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        },
+        {
+          "id": "Q4932206",
+          "category": "Science",
+          "label": "jurisprudence"
+        }
+      ]
+    },
+    "Q57335": {
+      "fows": [
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        },
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q8087",
+          "category": "Science",
+          "label": "geometry"
+        },
+        {
+          "id": "Q12479",
+          "category": "Science",
+          "label": "number theory"
+        },
+        {
+          "id": "Q41217",
+          "category": "Science",
+          "label": "mechanics"
+        }
+      ]
+    },
+    "Q57294": {
+      "fows": [
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        },
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        }
+      ]
+    },
+    "Q57164": {
+      "fows": [
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        }
+      ]
+    },
+    "Q77219": {
+      "fows": [
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q8162",
+          "category": "Science",
+          "label": "linguistics"
+        },
+        {
+          "id": "Q40634",
+          "category": "Science",
+          "label": "philology"
+        }
+      ]
+    },
+    "Q77203": {
+      "fows": [
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q233858",
+          "category": "Science",
+          "label": "non-Euclidean geometry"
+        },
+        {
+          "id": "Q12479",
+          "category": "Science",
+          "label": "number theory"
+        }
+      ]
+    },
+    "Q76641": {
+      "fows": [
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q874429",
+          "category": "Science",
+          "label": "group theory"
+        },
+        {
+          "id": "Q8087",
+          "category": "Science",
+          "label": "geometry"
+        },
+        {
+          "id": "Q188444",
+          "category": "Science",
+          "label": "differential geometry"
+        }
+      ]
+    },
+    "Q76556": {
+      "fows": [
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q12479",
+          "category": "Science",
+          "label": "number theory"
+        }
+      ]
+    },
+    "Q76420": {
+      "fows": [
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        }
+      ]
+    },
+    "Q76410": {
+      "fows": [
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q12479",
+          "category": "Science",
+          "label": "number theory"
+        }
+      ]
+    },
+    "Q71029": {
+      "fows": [
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q874429",
+          "category": "Science",
+          "label": "group theory"
+        },
+        {
+          "id": "Q944",
+          "category": "Science",
+          "label": "quantum mechanics"
+        },
+        {
+          "id": "Q188444",
+          "category": "Science",
+          "label": "differential geometry"
+        },
+        {
+          "id": "Q12479",
+          "category": "Science",
+          "label": "number theory"
+        },
+        {
+          "id": "Q18362",
+          "category": "Science",
+          "label": "theoretical physics"
+        }
+      ]
+    },
+    "Q61038": {
+      "fows": [
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q7754",
+          "category": "Science",
+          "label": "mathematical analysis"
+        },
+        {
+          "id": "Q190549",
+          "category": "Science",
+          "label": "functional analysis"
+        },
+        {
+          "id": "Q12479",
+          "category": "Science",
+          "label": "number theory"
+        }
+      ]
+    },
+    "Q57561": {
+      "fows": [
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q57246": {
+      "fows": [
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q8087",
+          "category": "Science",
+          "label": "geometry"
+        },
+        {
+          "id": "Q156495",
+          "category": "Science",
+          "label": "mathematical physics"
+        },
+        {
+          "id": "Q12479",
+          "category": "Science",
+          "label": "number theory"
+        }
+      ]
+    },
+    "Q57245": {
+      "fows": [
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q12479",
+          "category": "Science",
+          "label": "number theory"
+        },
+        {
+          "id": "Q33521",
+          "category": "Science",
+          "label": "applied mathematics"
+        }
+      ]
+    },
+    "Q57103": {
+      "fows": [
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q7754",
+          "category": "Science",
+          "label": "mathematical analysis"
+        },
+        {
+          "id": "Q193756",
+          "category": "Science",
+          "label": "complex analysis"
+        }
+      ]
+    },
+    "Q78520": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q76683": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q8424",
+          "category": "Science",
+          "label": "aerodynamics"
+        }
+      ]
+    },
+    "Q76474": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q62897": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q62891": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q908692",
+          "category": "Science",
+          "label": "cryophysics"
+        },
+        {
+          "id": "Q201486",
+          "category": "Science",
+          "label": "history of science"
+        },
+        {
+          "id": "Q18366",
+          "category": "Science",
+          "label": "experimental physics"
+        }
+      ]
+    },
+    "Q61314": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q60992": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q41217",
+          "category": "Science",
+          "label": "mechanics"
+        }
+      ]
+    },
+    "Q60287": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q944",
+          "category": "Science",
+          "label": "quantum mechanics"
+        },
+        {
+          "id": "Q316752",
+          "category": "Science",
+          "label": "relationship between religion and science"
+        },
+        {
+          "id": "Q54505",
+          "category": "Science",
+          "label": "quantum field theory"
+        }
+      ]
+    },
+    "Q60052": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q41217",
+          "category": "Science",
+          "label": "mechanics"
+        }
+      ]
+    },
+    "Q60024": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q521",
+          "category": "Science",
+          "label": "physiology"
+        },
+        {
+          "id": "Q9418",
+          "category": "Science",
+          "label": "psychology"
+        },
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        },
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        }
+      ]
+    },
+    "Q58978": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q944",
+          "category": "Science",
+          "label": "quantum mechanics"
+        },
+        {
+          "id": "Q18362",
+          "category": "Science",
+          "label": "theoretical physics"
+        }
+      ]
+    },
+    "Q58328": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q57189": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q57077": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q57072": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q1144457",
+          "category": "Science",
+          "label": "quantum physics"
+        },
+        {
+          "id": "Q11372",
+          "category": "Science",
+          "label": "physical chemistry"
+        },
+        {
+          "id": "Q11372",
+          "category": "Science",
+          "label": "physical chemistry"
+        }
+      ]
+    },
+    "Q57068": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q57067": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q160398",
+          "category": "Science",
+          "label": "crystallography"
+        }
+      ]
+    },
+    "Q57066": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q57063": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q54945": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q76747": {
+      "fows": [
+        {
+          "id": "Q420",
+          "category": "Science",
+          "label": "biology"
+        }
+      ]
+    },
+    "Q76465": {
+      "fows": [
+        {
+          "id": "Q420",
+          "category": "Science",
+          "label": "biology"
+        },
+        {
+          "id": "Q431",
+          "category": "Science",
+          "label": "zoology"
+        },
+        {
+          "id": "Q7162",
+          "category": "Science",
+          "label": "genetics"
+        },
+        {
+          "id": "Q7162",
+          "category": "Science",
+          "label": "genetics"
+        },
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        },
+        {
+          "id": "Q840400",
+          "category": "Science",
+          "label": "evolutionary biology"
+        },
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        }
+      ]
+    },
+    "Q62096": {
+      "fows": [
+        {
+          "id": "Q420",
+          "category": "Science",
+          "label": "biology"
+        },
+        {
+          "id": "Q441",
+          "category": "Science",
+          "label": "botany"
+        },
+        {
+          "id": "Q7162",
+          "category": "Science",
+          "label": "genetics"
+        },
+        {
+          "id": "Q7162",
+          "category": "Science",
+          "label": "genetics"
+        }
+      ]
+    },
+    "Q76756": {
+      "fows": [
+        {
+          "id": "Q1069",
+          "category": "Science",
+          "label": "geology"
+        }
+      ]
+    },
+    "Q76738": {
+      "fows": [
+        {
+          "id": "Q1069",
+          "category": "Science",
+          "label": "geology"
+        },
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        },
+        {
+          "id": "Q8162",
+          "category": "Science",
+          "label": "linguistics"
+        },
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        },
+        {
+          "id": "Q34178",
+          "category": "Science",
+          "label": "theology"
+        }
+      ]
+    },
+    "Q76579": {
+      "fows": [
+        {
+          "id": "Q1069",
+          "category": "Science",
+          "label": "geology"
+        },
+        {
+          "id": "Q83353",
+          "category": "Science",
+          "label": "mineralogy"
+        }
+      ]
+    },
+    "Q76323": {
+      "fows": [
+        {
+          "id": "Q1069",
+          "category": "Science",
+          "label": "geology"
+        }
+      ]
+    },
+    "Q77360": {
+      "fows": [
+        {
+          "id": "Q7193",
+          "category": "Science",
+          "label": "microbiology"
+        },
+        {
+          "id": "Q7193",
+          "category": "Science",
+          "label": "microbiology"
+        },
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        },
+        {
+          "id": "Q101929",
+          "category": "Science",
+          "label": "immunology"
+        },
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        }
+      ]
+    },
+    "Q76632": {
+      "fows": [
+        {
+          "id": "Q8242",
+          "category": "Lit",
+          "label": "literature"
+        }
+      ]
+    },
+    "Q76483": {
+      "fows": [
+        {
+          "id": "Q8242",
+          "category": "Lit",
+          "label": "literature"
+        }
+      ]
+    },
+    "Q60584": {
+      "fows": [
+        {
+          "id": "Q8242",
+          "category": "Lit",
+          "label": "literature"
+        },
+        {
+          "id": "Q7922",
+          "category": "Science",
+          "label": "pedagogy"
+        }
+      ]
+    },
+    "Q47561": {
+      "fows": [
+        {
+          "id": "Q8242",
+          "category": "Lit",
+          "label": "literature"
+        }
+      ]
+    },
+    "Q75814": {
+      "fows": [
+        {
+          "id": "Q475042",
+          "category": "Science",
+          "label": "experimental psychology"
+        },
+        {
+          "id": "Q521",
+          "category": "Science",
+          "label": "physiology"
+        },
+        {
+          "id": "Q1754430",
+          "category": "Science",
+          "label": "volkerpsychologie"
+        }
+      ]
+    },
+    "Q49898": {
+      "fows": [
+        {
+          "id": "Q742333",
+          "category": "Art",
+          "label": "history painting"
+        }
+      ]
+    },
+    "Q57228": {
+      "fows": [
+        {
+          "id": "Q874429",
+          "category": "Science",
+          "label": "group theory"
+        },
+        {
+          "id": "Q42989",
+          "category": "Science",
+          "label": "topology"
+        }
+      ]
+    },
+    "Q71022": {
+      "fows": [
+        {
+          "id": "Q905233",
+          "category": "Science",
+          "label": "electron optics"
+        }
+      ]
+    },
+    "Q49496": {
+      "fows": [
+        {
+          "id": "Q8253972",
+          "category": "Lit",
+          "label": "fiction"
+        }
+      ]
+    },
+    "Q47484": {
+      "fows": [
+        {
+          "id": "Q8253972",
+          "category": "Lit",
+          "label": "fiction"
+        }
+      ]
+    },
+    "Q78479": {
+      "fows": [
+        {
+          "id": "Q83042",
+          "category": "Science",
+          "label": "neurology"
+        },
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        },
+        {
+          "id": "Q7867",
+          "category": "Science",
+          "label": "psychiatry"
+        },
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        }
+      ]
+    },
+    "Q78487": {
+      "fows": [
+        {
+          "id": "Q181287",
+          "category": "Lit",
+          "label": "German-language literature"
+        }
+      ]
+    },
+    "Q59736": {
+      "fows": [
+        {
+          "id": "Q20862341",
+          "category": "Science",
+          "label": "midwifery"
+        },
+        {
+          "id": "Q1221899",
+          "category": "Science",
+          "label": "gynaecology"
+        },
+        {
+          "id": "Q40821",
+          "category": "Science",
+          "label": "surgery"
+        }
+      ]
+    },
+    "Q76745": {
+      "fows": [
+        {
+          "id": "Q431",
+          "category": "Science",
+          "label": "zoology"
+        }
+      ]
+    },
+    "Q57568": {
+      "fows": [
+        {
+          "id": "Q431",
+          "category": "Science",
+          "label": "zoology"
+        },
+        {
+          "id": "Q131683",
+          "category": "Science",
+          "label": "embryology"
+        }
+      ]
+    },
+    "Q60756": {
+      "fows": [
+        {
+          "id": "Q441",
+          "category": "Science",
+          "label": "botany"
+        }
+      ]
+    },
+    "Q77130": {
+      "fows": [
+        {
+          "id": "Q514",
+          "category": "Science",
+          "label": "anatomy"
+        },
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        },
+        {
+          "id": "Q7208",
+          "category": "Science",
+          "label": "pathology"
+        },
+        {
+          "id": "Q7208",
+          "category": "Science",
+          "label": "pathology"
+        },
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        }
+      ]
+    },
+    "Q76772": {
+      "fows": [
+        {
+          "id": "Q514",
+          "category": "Science",
+          "label": "anatomy"
+        },
+        {
+          "id": "Q7168",
+          "category": "Science",
+          "label": "histology"
+        },
+        {
+          "id": "Q7168",
+          "category": "Science",
+          "label": "histology"
+        },
+        {
+          "id": "Q131683",
+          "category": "Science",
+          "label": "embryology"
+        }
+      ]
+    },
+    "Q76571": {
+      "fows": [
+        {
+          "id": "Q521",
+          "category": "Science",
+          "label": "physiology"
+        },
+        {
+          "id": "Q1154774",
+          "category": "Science",
+          "label": "electrophysiology"
+        }
+      ]
+    },
+    "Q76464": {
+      "fows": [
+        {
+          "id": "Q521",
+          "category": "Science",
+          "label": "physiology"
+        },
+        {
+          "id": "Q7094",
+          "category": "Science",
+          "label": "biochemistry"
+        },
+        {
+          "id": "Q7094",
+          "category": "Science",
+          "label": "biochemistry"
+        }
+      ]
+    },
+    "Q57128": {
+      "fows": [
+        {
+          "id": "Q521",
+          "category": "Science",
+          "label": "physiology"
+        },
+        {
+          "id": "Q7094",
+          "category": "Science",
+          "label": "biochemistry"
+        },
+        {
+          "id": "Q7094",
+          "category": "Science",
+          "label": "biochemistry"
+        }
+      ]
+    },
+    "Q78483": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        },
+        {
+          "id": "Q7094",
+          "category": "Science",
+          "label": "biochemistry"
+        },
+        {
+          "id": "Q7094",
+          "category": "Science",
+          "label": "biochemistry"
+        }
+      ]
+    },
+    "Q78482": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        },
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        },
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        }
+      ]
+    },
+    "Q77309": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q77073": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q76951": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q76784": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        },
+        {
+          "id": "Q11351",
+          "category": "Science",
+          "label": "organic chemistry"
+        },
+        {
+          "id": "Q11351",
+          "category": "Science",
+          "label": "organic chemistry"
+        }
+      ]
+    },
+    "Q76616": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q76614": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q76606": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q76595": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q73523": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q70554": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q70538": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q63690": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q62714": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q62518": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        },
+        {
+          "id": "Q83353",
+          "category": "Science",
+          "label": "mineralogy"
+        }
+      ]
+    },
+    "Q61147": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q58868": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q58575": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q57983": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q57127": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        },
+        {
+          "id": "Q11351",
+          "category": "Science",
+          "label": "organic chemistry"
+        },
+        {
+          "id": "Q11351",
+          "category": "Science",
+          "label": "organic chemistry"
+        }
+      ]
+    },
+    "Q57089": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        },
+        {
+          "id": "Q243748",
+          "category": "Science",
+          "label": "bacteriology"
+        },
+        {
+          "id": "Q101929",
+          "category": "Science",
+          "label": "immunology"
+        }
+      ]
+    },
+    "Q57075": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        },
+        {
+          "id": "Q11372",
+          "category": "Science",
+          "label": "physical chemistry"
+        },
+        {
+          "id": "Q11372",
+          "category": "Science",
+          "label": "physical chemistry"
+        }
+      ]
+    },
+    "Q76604": {
+      "fows": [
+        {
+          "id": "Q7094",
+          "category": "Science",
+          "label": "biochemistry"
+        },
+        {
+          "id": "Q7094",
+          "category": "Science",
+          "label": "biochemistry"
+        },
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        },
+        {
+          "id": "Q11180",
+          "category": "Science",
+          "label": "internal medicine"
+        },
+        {
+          "id": "Q11351",
+          "category": "Science",
+          "label": "organic chemistry"
+        },
+        {
+          "id": "Q849994",
+          "category": "Science",
+          "label": "clinical chemistry"
+        },
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        },
+        {
+          "id": "Q11180",
+          "category": "Science",
+          "label": "internal medicine"
+        },
+        {
+          "id": "Q11351",
+          "category": "Science",
+          "label": "organic chemistry"
+        }
+      ]
+    },
+    "Q58054": {
+      "fows": [
+        {
+          "id": "Q7094",
+          "category": "Science",
+          "label": "biochemistry"
+        },
+        {
+          "id": "Q7094",
+          "category": "Science",
+          "label": "biochemistry"
+        }
+      ]
+    },
+    "Q57191": {
+      "fows": [
+        {
+          "id": "Q7094",
+          "category": "Science",
+          "label": "biochemistry"
+        },
+        {
+          "id": "Q7094",
+          "category": "Science",
+          "label": "biochemistry"
+        }
+      ]
+    },
+    "Q57132": {
+      "fows": [
+        {
+          "id": "Q7094",
+          "category": "Science",
+          "label": "biochemistry"
+        },
+        {
+          "id": "Q7094",
+          "category": "Science",
+          "label": "biochemistry"
+        }
+      ]
+    },
+    "Q48977": {
+      "fows": [
+        {
+          "id": "Q7094",
+          "category": "Science",
+          "label": "biochemistry"
+        },
+        {
+          "id": "Q7094",
+          "category": "Science",
+          "label": "biochemistry"
+        }
+      ]
+    },
+    "Q76432": {
+      "fows": [
+        {
+          "id": "Q7141",
+          "category": "Science",
+          "label": "cell biology"
+        },
+        {
+          "id": "Q7141",
+          "category": "Science",
+          "label": "cell biology"
+        },
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        },
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        }
+      ]
+    },
+    "Q77242": {
+      "fows": [
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        },
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        },
+        {
+          "id": "Q40821",
+          "category": "Science",
+          "label": "surgery"
+        }
+      ]
+    },
+    "Q76425": {
+      "fows": [
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        },
+        {
+          "id": "Q243748",
+          "category": "Science",
+          "label": "bacteriology"
+        },
+        {
+          "id": "Q101929",
+          "category": "Science",
+          "label": "immunology"
+        },
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        }
+      ]
+    },
+    "Q78496": {
+      "fows": [
+        {
+          "id": "Q7155",
+          "category": "Science",
+          "label": "ethology"
+        },
+        {
+          "id": "Q7155",
+          "category": "Science",
+          "label": "ethology"
+        }
+      ]
+    },
+    "Q60060": {
+      "fows": [
+        {
+          "id": "Q7155",
+          "category": "Science",
+          "label": "ethology"
+        },
+        {
+          "id": "Q7155",
+          "category": "Science",
+          "label": "ethology"
+        }
+      ]
+    },
+    "Q77152": {
+      "fows": [
+        {
+          "id": "Q10379",
+          "category": "Science",
+          "label": "cardiology"
+        }
+      ]
+    },
+    "Q76621": {
+      "fows": [
+        {
+          "id": "Q11351",
+          "category": "Science",
+          "label": "organic chemistry"
+        },
+        {
+          "id": "Q11351",
+          "category": "Science",
+          "label": "organic chemistry"
+        }
+      ]
+    },
+    "Q73093": {
+      "fows": [
+        {
+          "id": "Q11351",
+          "category": "Science",
+          "label": "organic chemistry"
+        },
+        {
+          "id": "Q11351",
+          "category": "Science",
+          "label": "organic chemistry"
+        }
+      ]
+    },
+    "Q57078": {
+      "fows": [
+        {
+          "id": "Q11351",
+          "category": "Science",
+          "label": "organic chemistry"
+        },
+        {
+          "id": "Q11351",
+          "category": "Science",
+          "label": "organic chemistry"
+        }
+      ]
+    },
+    "Q57125": {
+      "fows": [
+        {
+          "id": "Q11372",
+          "category": "Science",
+          "label": "physical chemistry"
+        },
+        {
+          "id": "Q11372",
+          "category": "Science",
+          "label": "physical chemistry"
+        }
+      ]
+    },
+    "Q48956": {
+      "fows": [
+        {
+          "id": "Q11372",
+          "category": "Science",
+          "label": "physical chemistry"
+        },
+        {
+          "id": "Q11372",
+          "category": "Science",
+          "label": "physical chemistry"
+        }
+      ]
+    },
+    "Q76713": {
+      "fows": [
+        {
+          "id": "Q243748",
+          "category": "Science",
+          "label": "bacteriology"
+        }
+      ]
+    },
+    "Q66600": {
+      "fows": [
+        {
+          "id": "Q243748",
+          "category": "Science",
+          "label": "bacteriology"
+        },
+        {
+          "id": "Q7208",
+          "category": "Science",
+          "label": "pathology"
+        },
+        {
+          "id": "Q7208",
+          "category": "Science",
+          "label": "pathology"
+        }
+      ]
+    },
+    "Q76970": {
+      "fows": [
+        {
+          "id": "Q350265",
+          "category": "Science",
+          "label": "high energy physics"
+        },
+        {
+          "id": "Q14620",
+          "category": "Science",
+          "label": "optics"
+        }
+      ]
+    },
+    "Q76881": {
+      "fows": [
+        {
+          "id": "Q500096",
+          "category": "Science",
+          "label": "psychophysics"
+        }
+      ]
+    },
+    "Q57330": {
+      "fows": [
+        {
+          "id": "Q614304",
+          "category": "Science",
+          "label": "pharmacy"
+        }
+      ]
+    },
+    "Q78481": {
+      "fows": [
+        {
+          "id": "Q909495",
+          "category": "Science",
+          "label": "interface and colloid science"
+        }
+      ]
+    },
+    "Q57162": {
+      "fows": [
+        {
+          "id": "Q3798668",
+          "category": "Science",
+          "label": "aerospace engineering"
+        }
+      ]
+    },
+    "Q65989": {
+      "fows": [
+        {
+          "id": "Q944",
+          "category": "Science",
+          "label": "quantum mechanics"
+        },
+        {
+          "id": "Q18334",
+          "category": "Science",
+          "label": "particle physics"
+        }
+      ]
+    },
+    "Q75782": {
+      "fows": [
+        {
+          "id": "Q101333",
+          "category": "Science",
+          "label": "mechanical engineering"
+        }
+      ]
+    },
+    "Q77173": {
+      "fows": [
+        {
+          "id": "Q128406",
+          "category": "Science",
+          "label": "pharmacology"
+        }
+      ]
+    },
+    "Q60095": {
+      "fows": [
+        {
+          "id": "Q156495",
+          "category": "Science",
+          "label": "mathematical physics"
+        }
+      ]
+    },
+    "Q57192": {
+      "fows": [
+        {
+          "id": "Q7208",
+          "category": "Science",
+          "label": "pathology"
+        },
+        {
+          "id": "Q7208",
+          "category": "Science",
+          "label": "pathology"
+        }
+      ]
+    },
+    "Q57065": {
+      "fows": [
+        {
+          "id": "Q243545",
+          "category": "Science",
+          "label": "nuclear chemistry"
+        },
+        {
+          "id": "Q750955",
+          "category": "Science",
+          "label": "radiochemistry"
+        }
+      ]
+    },
+    "Q77078": {
+      "fows": [
+        {
+          "id": "Q483666",
+          "category": "Science",
+          "label": "spectroscopy"
+        }
+      ]
+    },
+    "Q57092": {
+      "fows": [
+        {
+          "id": "Q483666",
+          "category": "Science",
+          "label": "spectroscopy"
+        }
+      ]
+    },
+    "Q76770": {
+      "fows": [
+        {
+          "id": "Q83371",
+          "category": "Science",
+          "label": "seismology"
+        },
+        {
+          "id": "Q46255",
+          "category": "Science",
+          "label": "geophysics"
+        }
+      ]
+    },
+    "Q61650": {
+      "fows": [
+        {
+          "id": "Q185973",
+          "category": "Science",
+          "label": "plant physiology"
+        }
+      ]
+    },
+    "Q57938": {
+      "fows": [
+        {
+          "id": "Q18362",
+          "category": "Science",
+          "label": "theoretical physics"
+        }
+      ]
+    },
+    "Q58588": {
+      "fows": [
+        {
+          "id": "Q23404",
+          "category": "Science",
+          "label": "anthropology"
+        }
+      ]
+    },
+    "Q75856": {
+      "fows": [
+        {
+          "id": "Q42989",
+          "category": "Science",
+          "label": "topology"
+        }
+      ]
+    },
+    "Q57280": {
+      "fows": [
+        {
+          "id": "Q23498",
+          "category": "Science",
+          "label": "archaeology"
+        },
+        {
+          "id": "Q50637",
+          "category": "Science",
+          "label": "art history"
+        },
+        {
+          "id": "Q50641",
+          "category": "Science",
+          "label": "history of art"
+        }
+      ]
+    },
+    "Q121180": {
+      "fows": [
+        {
+          "id": "Q8253972",
+          "category": "Lit",
+          "label": "fiction"
+        },
+        {
+          "id": "Q49084",
+          "category": "Lit",
+          "label": "short story"
+        }
+      ]
+    },
+    "Q82925": {
+      "fows": [
+        {
+          "id": "Q8253972",
+          "category": "Lit",
+          "label": "fiction"
+        }
+      ]
+    },
+    "Q79822": {
+      "fows": [
+        {
+          "id": "Q8253972",
+          "category": "Lit",
+          "label": "fiction"
+        }
+      ]
+    },
+    "Q79759": {
+      "fows": [
+        {
+          "id": "Q8253972",
+          "category": "Lit",
+          "label": "fiction"
+        }
+      ]
+    },
+    "Q108206": {
+      "fows": [
+        {
+          "id": "Q12617225",
+          "category": "Lit",
+          "label": "religious literature"
+        },
+        {
+          "id": "Q1381199",
+          "category": "Science",
+          "label": "Protestant theology"
+        }
+      ]
+    },
+    "Q134085": {
+      "fows": [
+        {
+          "id": "Q14632398",
+          "category": "Science",
+          "label": "physical science"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q128027": {
+      "fows": [
+        {
+          "id": "Q15885248",
+          "category": "Art",
+          "label": "Renaissance painting"
+        }
+      ]
+    },
+    "Q160187": {
+      "fows": [
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        },
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        }
+      ]
+    },
+    "Q156892": {
+      "fows": [
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        },
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        }
+      ]
+    },
+    "Q154353": {
+      "fows": [
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q110869": {
+      "fows": [
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        },
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        }
+      ]
+    },
+    "Q104154": {
+      "fows": [
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        },
+        {
+          "id": "Q184274",
+          "category": "Science",
+          "label": "celestial mechanics"
+        },
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        }
+      ]
+    },
+    "Q84284": {
+      "fows": [
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        },
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        },
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q81130": {
+      "fows": [
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        },
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        }
+      ]
+    },
+    "Q81082": {
+      "fows": [
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        },
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q184274",
+          "category": "Science",
+          "label": "celestial mechanics"
+        },
+        {
+          "id": "Q156495",
+          "category": "Science",
+          "label": "mathematical physics"
+        },
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        },
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q8087",
+          "category": "Science",
+          "label": "geometry"
+        },
+        {
+          "id": "Q18362",
+          "category": "Science",
+          "label": "theoretical physics"
+        },
+        {
+          "id": "Q7754",
+          "category": "Science",
+          "label": "mathematical analysis"
+        },
+        {
+          "id": "Q41217",
+          "category": "Science",
+          "label": "mechanics"
+        },
+        {
+          "id": "Q42989",
+          "category": "Science",
+          "label": "topology"
+        }
+      ]
+    },
+    "Q80222": {
+      "fows": [
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        },
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q184274",
+          "category": "Science",
+          "label": "celestial mechanics"
+        },
+        {
+          "id": "Q21653530",
+          "category": "Science",
+          "label": "analytical mechanics"
+        },
+        {
+          "id": "Q149972",
+          "category": "Science",
+          "label": "calculus"
+        },
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        },
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q12479",
+          "category": "Science",
+          "label": "number theory"
+        },
+        {
+          "id": "Q7754",
+          "category": "Science",
+          "label": "mathematical analysis"
+        }
+      ]
+    },
+    "Q150630": {
+      "fows": [
+        {
+          "id": "Q336",
+          "category": "Science",
+          "label": "science"
+        },
+        {
+          "id": "Q514",
+          "category": "Science",
+          "label": "anatomy"
+        },
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        },
+        {
+          "id": "Q514",
+          "category": "Science",
+          "label": "anatomy"
+        },
+        {
+          "id": "Q7168",
+          "category": "Science",
+          "label": "histology"
+        },
+        {
+          "id": "Q7208",
+          "category": "Science",
+          "label": "pathology"
+        }
+      ]
+    },
+    "Q159430": {
+      "fows": [
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q131476",
+          "category": "Science",
+          "label": "graph theory"
+        },
+        {
+          "id": "Q874429",
+          "category": "Science",
+          "label": "group theory"
+        },
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        }
+      ]
+    },
+    "Q154356": {
+      "fows": [
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q5862903",
+          "category": "Science",
+          "label": "probability theory"
+        },
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q44455",
+          "category": "Science",
+          "label": "game theory"
+        }
+      ]
+    },
+    "Q153232": {
+      "fows": [
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q41217",
+          "category": "Science",
+          "label": "mechanics"
+        }
+      ]
+    },
+    "Q153224": {
+      "fows": [
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q149999",
+          "category": "Science",
+          "label": "differential calculus"
+        },
+        {
+          "id": "Q5862903",
+          "category": "Science",
+          "label": "probability theory"
+        },
+        {
+          "id": "Q182557",
+          "category": "Science",
+          "label": "computational linguistics"
+        },
+        {
+          "id": "Q190549",
+          "category": "Science",
+          "label": "functional analysis"
+        },
+        {
+          "id": "Q205084",
+          "category": "Science",
+          "label": "computational complexity theory"
+        },
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q8087",
+          "category": "Science",
+          "label": "geometry"
+        },
+        {
+          "id": "Q41217",
+          "category": "Science",
+          "label": "mechanics"
+        },
+        {
+          "id": "Q42989",
+          "category": "Science",
+          "label": "topology"
+        }
+      ]
+    },
+    "Q133747": {
+      "fows": [
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q160398",
+          "category": "Science",
+          "label": "crystallography"
+        },
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q124115": {
+      "fows": [
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q874429",
+          "category": "Science",
+          "label": "group theory"
+        },
+        {
+          "id": "Q149972",
+          "category": "Science",
+          "label": "calculus"
+        },
+        {
+          "id": "Q190549",
+          "category": "Science",
+          "label": "functional analysis"
+        },
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        }
+      ]
+    },
+    "Q123514": {
+      "fows": [
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q8087",
+          "category": "Science",
+          "label": "geometry"
+        }
+      ]
+    },
+    "Q156942": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q155786": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q154325": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q43035",
+          "category": "Science",
+          "label": "electrical engineering"
+        }
+      ]
+    },
+    "Q153185": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q150989": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q690200",
+          "category": "Science",
+          "label": "radiobiology"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q7991",
+          "category": "Science",
+          "label": "natural science"
+        },
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q133846": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q131761": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q1069",
+          "category": "Science",
+          "label": "geology"
+        },
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q131721": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q124128": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q106208": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q103835": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q321150",
+          "category": "Science",
+          "label": "theoretical chemistry"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q11372",
+          "category": "Science",
+          "label": "physical chemistry"
+        }
+      ]
+    },
+    "Q102490": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q102291": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q83297": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q80956": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q80884": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q79000": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q123565": {
+      "fows": [
+        {
+          "id": "Q420",
+          "category": "Science",
+          "label": "biology"
+        },
+        {
+          "id": "Q420",
+          "category": "Science",
+          "label": "biology"
+        }
+      ]
+    },
+    "Q82122": {
+      "fows": [
+        {
+          "id": "Q420",
+          "category": "Science",
+          "label": "biology"
+        },
+        {
+          "id": "Q431",
+          "category": "Science",
+          "label": "zoology"
+        },
+        {
+          "id": "Q441",
+          "category": "Science",
+          "label": "botany"
+        },
+        {
+          "id": "Q840400",
+          "category": "Science",
+          "label": "evolutionary biology"
+        },
+        {
+          "id": "Q420",
+          "category": "Science",
+          "label": "biology"
+        },
+        {
+          "id": "Q1069",
+          "category": "Science",
+          "label": "geology"
+        },
+        {
+          "id": "Q431",
+          "category": "Science",
+          "label": "zoology"
+        },
+        {
+          "id": "Q441",
+          "category": "Science",
+          "label": "botany"
+        },
+        {
+          "id": "Q25261",
+          "category": "Science",
+          "label": "meteorology"
+        }
+      ]
+    },
+    "Q104884": {
+      "fows": [
+        {
+          "id": "Q191163",
+          "category": "Art",
+          "label": "landscape painting"
+        },
+        {
+          "id": "Q2921001",
+          "category": "Art",
+          "label": "art of drawing"
+        },
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q123528": {
+      "fows": [
+        {
+          "id": "Q207011",
+          "category": "Science",
+          "label": "neuroscience"
+        },
+        {
+          "id": "Q514",
+          "category": "Science",
+          "label": "anatomy"
+        },
+        {
+          "id": "Q514",
+          "category": "Science",
+          "label": "anatomy"
+        },
+        {
+          "id": "Q7168",
+          "category": "Science",
+          "label": "histology"
+        }
+      ]
+    },
+    "Q80889": {
+      "fows": [
+        {
+          "id": "Q208628",
+          "category": "Lit",
+          "label": "hagiography"
+        }
+      ]
+    },
+    "Q154349": {
+      "fows": [
+        {
+          "id": "Q1027879",
+          "category": "Art",
+          "label": "graphics"
+        },
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q153793": {
+      "fows": [
+        {
+          "id": "Q1027879",
+          "category": "Art",
+          "label": "graphics"
+        },
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        },
+        {
+          "id": "Q11634",
+          "category": "Art",
+          "label": "art of sculpture"
+        },
+        {
+          "id": "Q36649",
+          "category": "Art",
+          "label": "visual arts"
+        }
+      ]
+    },
+    "Q155855": {
+      "fows": [
+        {
+          "id": "Q1233720",
+          "category": "Lit",
+          "label": "young adult literature"
+        },
+        {
+          "id": "Q131539",
+          "category": "Lit",
+          "label": "children's literature"
+        }
+      ]
+    },
+    "Q107002": {
+      "fows": [
+        {
+          "id": "Q5977103",
+          "category": "Lit",
+          "label": "humorous literature"
+        },
+        {
+          "id": "Q4184",
+          "category": "Lit",
+          "label": "autobiography"
+        },
+        {
+          "id": "Q115160293",
+          "category": "Lit",
+          "label": "satirical literature"
+        }
+      ]
+    },
+    "Q154842": {
+      "fows": [
+        {
+          "id": "Q170593",
+          "category": "Art",
+          "label": "collaging"
+        },
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        },
+        {
+          "id": "Q11634",
+          "category": "Art",
+          "label": "art of sculpture"
+        }
+      ]
+    },
+    "Q154345": {
+      "fows": [
+        {
+          "id": "Q7917816",
+          "category": "Science",
+          "label": "vector algebra"
+        }
+      ]
+    },
+    "Q154782": {
+      "fows": [
+        {
+          "id": "Q431",
+          "category": "Science",
+          "label": "zoology"
+        },
+        {
+          "id": "Q441",
+          "category": "Science",
+          "label": "botany"
+        },
+        {
+          "id": "Q431",
+          "category": "Science",
+          "label": "zoology"
+        },
+        {
+          "id": "Q441",
+          "category": "Science",
+          "label": "botany"
+        }
+      ]
+    },
+    "Q151556": {
+      "fows": [
+        {
+          "id": "Q431",
+          "category": "Science",
+          "label": "zoology"
+        },
+        {
+          "id": "Q431",
+          "category": "Science",
+          "label": "zoology"
+        }
+      ]
+    },
+    "Q160192": {
+      "fows": [
+        {
+          "id": "Q441",
+          "category": "Science",
+          "label": "botany"
+        },
+        {
+          "id": "Q441",
+          "category": "Science",
+          "label": "botany"
+        }
+      ]
+    },
+    "Q153159": {
+      "fows": [
+        {
+          "id": "Q441",
+          "category": "Science",
+          "label": "botany"
+        },
+        {
+          "id": "Q132151",
+          "category": "Science",
+          "label": "ethnography"
+        },
+        {
+          "id": "Q441",
+          "category": "Science",
+          "label": "botany"
+        },
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        },
+        {
+          "id": "Q8162",
+          "category": "Science",
+          "label": "linguistics"
+        },
+        {
+          "id": "Q8242",
+          "category": "Lit",
+          "label": "literature"
+        },
+        {
+          "id": "Q40634",
+          "category": "Science",
+          "label": "philology"
+        }
+      ]
+    },
+    "Q123057": {
+      "fows": [
+        {
+          "id": "Q441",
+          "category": "Science",
+          "label": "botany"
+        },
+        {
+          "id": "Q173113",
+          "category": "Science",
+          "label": "agronomy"
+        },
+        {
+          "id": "Q506874",
+          "category": "Science",
+          "label": "chronobiology"
+        },
+        {
+          "id": "Q3643038",
+          "category": "Science",
+          "label": "economic botany"
+        },
+        {
+          "id": "Q771220",
+          "category": "Science",
+          "label": "phytogeography"
+        },
+        {
+          "id": "Q7991",
+          "category": "Science",
+          "label": "natural science"
+        },
+        {
+          "id": "Q441",
+          "category": "Science",
+          "label": "botany"
+        }
+      ]
+    },
+    "Q151722": {
+      "fows": [
+        {
+          "id": "Q514",
+          "category": "Science",
+          "label": "anatomy"
+        },
+        {
+          "id": "Q514",
+          "category": "Science",
+          "label": "anatomy"
+        }
+      ]
+    },
+    "Q159542": {
+      "fows": [
+        {
+          "id": "Q521",
+          "category": "Science",
+          "label": "physiology"
+        },
+        {
+          "id": "Q521",
+          "category": "Science",
+          "label": "physiology"
+        }
+      ]
+    },
+    "Q107609": {
+      "fows": [
+        {
+          "id": "Q521",
+          "category": "Science",
+          "label": "physiology"
+        },
+        {
+          "id": "Q521",
+          "category": "Science",
+          "label": "physiology"
+        },
+        {
+          "id": "Q7208",
+          "category": "Science",
+          "label": "pathology"
+        }
+      ]
+    },
+    "Q133614": {
+      "fows": [
+        {
+          "id": "Q77590",
+          "category": "Science",
+          "label": "civil engineering"
+        },
+        {
+          "id": "Q101333",
+          "category": "Science",
+          "label": "mechanical engineering"
+        }
+      ]
+    },
+    "Q115669": {
+      "fows": [
+        {
+          "id": "Q83353",
+          "category": "Science",
+          "label": "mineralogy"
+        },
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q78562": {
+      "fows": [
+        {
+          "id": "Q101929",
+          "category": "Science",
+          "label": "immunology"
+        },
+        {
+          "id": "Q243748",
+          "category": "Science",
+          "label": "bacteriology"
+        }
+      ]
+    },
+    "Q127332": {
+      "fows": [
+        {
+          "id": "Q192782",
+          "category": "Lit",
+          "label": "Gothic novel"
+        }
+      ]
+    },
+    "Q123920": {
+      "fows": [
+        {
+          "id": "Q243748",
+          "category": "Science",
+          "label": "bacteriology"
+        }
+      ]
+    },
+    "Q157970": {
+      "fows": [
+        {
+          "id": "Q282445",
+          "category": "Lit",
+          "label": "Czech literature"
+        },
+        {
+          "id": "Q113547767",
+          "category": "Lit",
+          "label": "Czech prose"
+        },
+        {
+          "id": "Q130553631",
+          "category": "Lit",
+          "label": "Czech fairy tale"
+        }
+      ]
+    },
+    "Q156321": {
+      "fows": [
+        {
+          "id": "Q282445",
+          "category": "Lit",
+          "label": "Czech literature"
+        },
+        {
+          "id": "Q8242",
+          "category": "Lit",
+          "label": "literature"
+        }
+      ]
+    },
+    "Q123867": {
+      "fows": [
+        {
+          "id": "Q747483",
+          "category": "Lit",
+          "label": "erotic literature"
+        }
+      ]
+    },
+    "Q157155": {
+      "fows": [
+        {
+          "id": "Q2142577",
+          "category": "Science",
+          "label": "Semitic studies"
+        },
+        {
+          "id": "Q34187",
+          "category": "Science",
+          "label": "religious studies"
+        }
+      ]
+    },
+    "Q81716": {
+      "fows": [
+        {
+          "id": "Q471872",
+          "category": "Science",
+          "label": "soil mechanics"
+        }
+      ]
+    },
+    "Q160196": {
+      "fows": [
+        {
+          "id": "Q614304",
+          "category": "Science",
+          "label": "pharmacy"
+        },
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        },
+        {
+          "id": "Q2346",
+          "category": "Science",
+          "label": "analytical chemistry"
+        }
+      ]
+    },
+    "Q155887": {
+      "fows": [
+        {
+          "id": "Q193756",
+          "category": "Science",
+          "label": "complex analysis"
+        },
+        {
+          "id": "Q7754",
+          "category": "Science",
+          "label": "mathematical analysis"
+        },
+        {
+          "id": "Q42989",
+          "category": "Science",
+          "label": "topology"
+        }
+      ]
+    },
+    "Q102830": {
+      "fows": [
+        {
+          "id": "Q750955",
+          "category": "Science",
+          "label": "radiochemistry"
+        }
+      ]
+    },
+    "Q156941": {
+      "fows": [
+        {
+          "id": "Q1069",
+          "category": "Science",
+          "label": "geology"
+        }
+      ]
+    },
+    "Q128460": {
+      "fows": [
+        {
+          "id": "Q6689",
+          "category": "Lit",
+          "label": "French literature"
+        }
+      ]
+    },
+    "Q151820": {
+      "fows": [
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        }
+      ]
+    },
+    "Q134942": {
+      "fows": [
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        },
+        {
+          "id": "Q8242",
+          "category": "Lit",
+          "label": "literature"
+        }
+      ]
+    },
+    "Q83163": {
+      "fows": [
+        {
+          "id": "Q12479",
+          "category": "Science",
+          "label": "number theory"
+        }
+      ]
+    },
+    "Q160422": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q160333": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        },
+        {
+          "id": "Q23404",
+          "category": "Science",
+          "label": "anthropology"
+        },
+        {
+          "id": "Q23498",
+          "category": "Science",
+          "label": "archaeology"
+        }
+      ]
+    },
+    "Q160141": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q159606": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q158840": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q158255": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q157321": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q156622": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q156386": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q155158": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        },
+        {
+          "id": "Q11634",
+          "category": "Art",
+          "label": "art of sculpture"
+        }
+      ]
+    },
+    "Q153920": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        },
+        {
+          "id": "Q11634",
+          "category": "Art",
+          "label": "art of sculpture"
+        }
+      ]
+    },
+    "Q153104": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        },
+        {
+          "id": "Q36649",
+          "category": "Art",
+          "label": "visual arts"
+        }
+      ]
+    },
+    "Q152788": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        },
+        {
+          "id": "Q50030",
+          "category": "Art",
+          "label": "watercolor"
+        }
+      ]
+    },
+    "Q152384": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        },
+        {
+          "id": "Q11634",
+          "category": "Art",
+          "label": "art of sculpture"
+        }
+      ]
+    },
+    "Q151803": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q151573": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q151152": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        },
+        {
+          "id": "Q11634",
+          "category": "Art",
+          "label": "art of sculpture"
+        },
+        {
+          "id": "Q36649",
+          "category": "Art",
+          "label": "visual arts"
+        }
+      ]
+    },
+    "Q150471": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q148475": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q127171": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q123098": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        },
+        {
+          "id": "Q36649",
+          "category": "Art",
+          "label": "visual arts"
+        }
+      ]
+    },
+    "Q123071": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q120993": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q107194": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q105320": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q157194": {
+      "fows": [
+        {
+          "id": "Q11634",
+          "category": "Art",
+          "label": "art of sculpture"
+        }
+      ]
+    },
+    "Q157183": {
+      "fows": [
+        {
+          "id": "Q11634",
+          "category": "Art",
+          "label": "art of sculpture"
+        }
+      ]
+    },
+    "Q153048": {
+      "fows": [
+        {
+          "id": "Q11634",
+          "category": "Art",
+          "label": "art of sculpture"
+        }
+      ]
+    },
+    "Q142472": {
+      "fows": [
+        {
+          "id": "Q11634",
+          "category": "Art",
+          "label": "art of sculpture"
+        }
+      ]
+    },
+    "Q155759": {
+      "fows": [
+        {
+          "id": "Q18362",
+          "category": "Science",
+          "label": "theoretical physics"
+        }
+      ]
+    },
+    "Q84296": {
+      "fows": [
+        {
+          "id": "Q18362",
+          "category": "Science",
+          "label": "theoretical physics"
+        }
+      ]
+    },
+    "Q83331": {
+      "fows": [
+        {
+          "id": "Q18362",
+          "category": "Science",
+          "label": "theoretical physics"
+        }
+      ]
+    },
+    "Q157701": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        },
+        {
+          "id": "Q11372",
+          "category": "Science",
+          "label": "physical chemistry"
+        }
+      ]
+    },
+    "Q151911": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q128759": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q122338": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q121926": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q102804": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q89390": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q84405": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q122996": {
+      "fows": [
+        {
+          "id": "Q7094",
+          "category": "Science",
+          "label": "biochemistry"
+        },
+        {
+          "id": "Q11351",
+          "category": "Science",
+          "label": "organic chemistry"
+        }
+      ]
+    },
+    "Q117474": {
+      "fows": [
+        {
+          "id": "Q7094",
+          "category": "Science",
+          "label": "biochemistry"
+        }
+      ]
+    },
+    "Q156214": {
+      "fows": [
+        {
+          "id": "Q8242",
+          "category": "Lit",
+          "label": "literature"
+        },
+        {
+          "id": "Q36649",
+          "category": "Art",
+          "label": "visual arts"
+        }
+      ]
+    },
+    "Q148886": {
+      "fows": [
+        {
+          "id": "Q8242",
+          "category": "Lit",
+          "label": "literature"
+        }
+      ]
+    },
+    "Q93137": {
+      "fows": [
+        {
+          "id": "Q8242",
+          "category": "Lit",
+          "label": "literature"
+        }
+      ]
+    },
+    "Q102822": {
+      "fows": [
+        {
+          "id": "Q11351",
+          "category": "Science",
+          "label": "organic chemistry"
+        },
+        {
+          "id": "Q11372",
+          "category": "Science",
+          "label": "physical chemistry"
+        }
+      ]
+    },
+    "Q151164": {
+      "fows": [
+        {
+          "id": "Q23498",
+          "category": "Science",
+          "label": "archaeology"
+        }
+      ]
+    },
+    "Q81685": {
+      "fows": [
+        {
+          "id": "Q36279",
+          "category": "Lit",
+          "label": "biography"
+        }
+      ]
+    },
+    "Q156272": {
+      "fows": [
+        {
+          "id": "Q36649",
+          "category": "Art",
+          "label": "visual arts"
+        }
+      ]
+    },
+    "Q130777": {
+      "fows": [
+        {
+          "id": "Q36649",
+          "category": "Art",
+          "label": "visual arts"
+        },
+        {
+          "id": "Q50637",
+          "category": "Science",
+          "label": "art history"
+        }
+      ]
+    },
+    "Q156205": {
+      "fows": [
+        {
+          "id": "Q39286",
+          "category": "Science",
+          "label": "entomology"
+        }
+      ]
+    },
+    "Q165274": {
+      "fows": [
+        {
+          "id": "Q11163999",
+          "category": "Lit",
+          "label": "children's and young adult literature"
+        }
+      ]
+    },
+    "Q214549": {
+      "fows": [
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        },
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q7754",
+          "category": "Science",
+          "label": "mathematical analysis"
+        },
+        {
+          "id": "Q149999",
+          "category": "Science",
+          "label": "differential calculus"
+        },
+        {
+          "id": "Q150008",
+          "category": "Science",
+          "label": "integral calculus"
+        },
+        {
+          "id": "Q12479",
+          "category": "Science",
+          "label": "number theory"
+        },
+        {
+          "id": "Q41217",
+          "category": "Science",
+          "label": "mechanics"
+        }
+      ]
+    },
+    "Q202703": {
+      "fows": [
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        }
+      ]
+    },
+    "Q200397": {
+      "fows": [
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        },
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q5862903",
+          "category": "Science",
+          "label": "probability theory"
+        },
+        {
+          "id": "Q12483",
+          "category": "Science",
+          "label": "statistics"
+        }
+      ]
+    },
+    "Q187258": {
+      "fows": [
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        }
+      ]
+    },
+    "Q164374": {
+      "fows": [
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        },
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q420",
+          "category": "Science",
+          "label": "biology"
+        },
+        {
+          "id": "Q131089",
+          "category": "Science",
+          "label": "geodesy"
+        },
+        {
+          "id": "Q41217",
+          "category": "Science",
+          "label": "mechanics"
+        }
+      ]
+    },
+    "Q160681": {
+      "fows": [
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        },
+        {
+          "id": "Q483666",
+          "category": "Science",
+          "label": "spectroscopy"
+        },
+        {
+          "id": "Q37547",
+          "category": "Science",
+          "label": "astrophysics"
+        }
+      ]
+    },
+    "Q205981": {
+      "fows": [
+        {
+          "id": "Q338",
+          "category": "Science",
+          "label": "cosmology"
+        },
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q837863",
+          "category": "Science",
+          "label": "pure mathematics"
+        },
+        {
+          "id": "Q2419207",
+          "category": "Science",
+          "label": "theoretical meteorology"
+        },
+        {
+          "id": "Q31191973",
+          "category": "Science",
+          "label": "hydromechanics"
+        },
+        {
+          "id": "Q8424",
+          "category": "Science",
+          "label": "aerodynamics"
+        },
+        {
+          "id": "Q18362",
+          "category": "Science",
+          "label": "theoretical physics"
+        },
+        {
+          "id": "Q46255",
+          "category": "Science",
+          "label": "geophysics"
+        },
+        {
+          "id": "Q130217834",
+          "category": "Science",
+          "label": "dynamic meteorology"
+        }
+      ]
+    },
+    "Q185832": {
+      "fows": [
+        {
+          "id": "Q336",
+          "category": "Science",
+          "label": "science"
+        },
+        {
+          "id": "Q7991",
+          "category": "Science",
+          "label": "natural science"
+        },
+        {
+          "id": "Q8242",
+          "category": "Lit",
+          "label": "literature"
+        }
+      ]
+    },
+    "Q227897": {
+      "fows": [
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q7754",
+          "category": "Science",
+          "label": "mathematical analysis"
+        },
+        {
+          "id": "Q149972",
+          "category": "Science",
+          "label": "calculus"
+        },
+        {
+          "id": "Q149999",
+          "category": "Science",
+          "label": "differential calculus"
+        },
+        {
+          "id": "Q41217",
+          "category": "Science",
+          "label": "mechanics"
+        }
+      ]
+    },
+    "Q208448": {
+      "fows": [
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q5862903",
+          "category": "Science",
+          "label": "probability theory"
+        }
+      ]
+    },
+    "Q206012": {
+      "fows": [
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q5862903",
+          "category": "Science",
+          "label": "probability theory"
+        },
+        {
+          "id": "Q7754",
+          "category": "Science",
+          "label": "mathematical analysis"
+        },
+        {
+          "id": "Q1257115",
+          "category": "Science",
+          "label": "applied mechanics"
+        },
+        {
+          "id": "Q134787",
+          "category": "Science",
+          "label": "analytic geometry"
+        },
+        {
+          "id": "Q12479",
+          "category": "Science",
+          "label": "number theory"
+        },
+        {
+          "id": "Q12483",
+          "category": "Science",
+          "label": "statistics"
+        },
+        {
+          "id": "Q33521",
+          "category": "Science",
+          "label": "applied mathematics"
+        },
+        {
+          "id": "Q41217",
+          "category": "Science",
+          "label": "mechanics"
+        }
+      ]
+    },
+    "Q206005": {
+      "fows": [
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q7754",
+          "category": "Science",
+          "label": "mathematical analysis"
+        },
+        {
+          "id": "Q190549",
+          "category": "Science",
+          "label": "functional analysis"
+        },
+        {
+          "id": "Q149972",
+          "category": "Science",
+          "label": "calculus"
+        },
+        {
+          "id": "Q42989",
+          "category": "Science",
+          "label": "topology"
+        }
+      ]
+    },
+    "Q202827": {
+      "fows": [
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q41217",
+          "category": "Science",
+          "label": "mechanics"
+        }
+      ]
+    },
+    "Q191029": {
+      "fows": [
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q8162",
+          "category": "Science",
+          "label": "linguistics"
+        },
+        {
+          "id": "Q856574",
+          "category": "Science",
+          "label": "interlinguistics"
+        }
+      ]
+    },
+    "Q190772": {
+      "fows": [
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q5862903",
+          "category": "Science",
+          "label": "probability theory"
+        },
+        {
+          "id": "Q8087",
+          "category": "Science",
+          "label": "geometry"
+        },
+        {
+          "id": "Q7754",
+          "category": "Science",
+          "label": "mathematical analysis"
+        },
+        {
+          "id": "Q833065",
+          "category": "Science",
+          "label": "theoretical mechanics"
+        },
+        {
+          "id": "Q18362",
+          "category": "Science",
+          "label": "theoretical physics"
+        },
+        {
+          "id": "Q41217",
+          "category": "Science",
+          "label": "mechanics"
+        }
+      ]
+    },
+    "Q184735": {
+      "fows": [
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q7754",
+          "category": "Science",
+          "label": "mathematical analysis"
+        },
+        {
+          "id": "Q34178",
+          "category": "Science",
+          "label": "theology"
+        }
+      ]
+    },
+    "Q184535": {
+      "fows": [
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q8242",
+          "category": "Lit",
+          "label": "literature"
+        },
+        {
+          "id": "Q7754",
+          "category": "Science",
+          "label": "mathematical analysis"
+        },
+        {
+          "id": "Q149999",
+          "category": "Science",
+          "label": "differential calculus"
+        },
+        {
+          "id": "Q41217",
+          "category": "Science",
+          "label": "mechanics"
+        }
+      ]
+    },
+    "Q184530": {
+      "fows": [
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        }
+      ]
+    },
+    "Q184337": {
+      "fows": [
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q837863",
+          "category": "Science",
+          "label": "pure mathematics"
+        },
+        {
+          "id": "Q7754",
+          "category": "Science",
+          "label": "mathematical analysis"
+        },
+        {
+          "id": "Q149972",
+          "category": "Science",
+          "label": "calculus"
+        },
+        {
+          "id": "Q12479",
+          "category": "Science",
+          "label": "number theory"
+        }
+      ]
+    },
+    "Q183372": {
+      "fows": [
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        }
+      ]
+    },
+    "Q180217": {
+      "fows": [
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q190549",
+          "category": "Science",
+          "label": "functional analysis"
+        },
+        {
+          "id": "Q42989",
+          "category": "Science",
+          "label": "topology"
+        }
+      ]
+    },
+    "Q168452": {
+      "fows": [
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q41217",
+          "category": "Science",
+          "label": "mechanics"
+        }
+      ]
+    },
+    "Q168401": {
+      "fows": [
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q7754",
+          "category": "Science",
+          "label": "mathematical analysis"
+        },
+        {
+          "id": "Q12479",
+          "category": "Science",
+          "label": "number theory"
+        }
+      ]
+    },
+    "Q164425": {
+      "fows": [
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q190549",
+          "category": "Science",
+          "label": "functional analysis"
+        },
+        {
+          "id": "Q833065",
+          "category": "Science",
+          "label": "theoretical mechanics"
+        },
+        {
+          "id": "Q12479",
+          "category": "Science",
+          "label": "number theory"
+        },
+        {
+          "id": "Q41217",
+          "category": "Science",
+          "label": "mechanics"
+        }
+      ]
+    },
+    "Q213579": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q210719": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q43518",
+          "category": "Science",
+          "label": "oceanography"
+        }
+      ]
+    },
+    "Q192703": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q189552": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        },
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        },
+        {
+          "id": "Q483666",
+          "category": "Science",
+          "label": "spectroscopy"
+        }
+      ]
+    },
+    "Q188293": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q183631": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q18334",
+          "category": "Science",
+          "label": "particle physics"
+        }
+      ]
+    },
+    "Q182546": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q1446961",
+          "category": "Science",
+          "label": "rocket science"
+        },
+        {
+          "id": "Q22719",
+          "category": "Science",
+          "label": "astronautics"
+        }
+      ]
+    },
+    "Q178103": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q176206": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q172844": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q168362": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q7991",
+          "category": "Science",
+          "label": "natural science"
+        },
+        {
+          "id": "Q7100",
+          "category": "Science",
+          "label": "biophysics"
+        }
+      ]
+    },
+    "Q164389": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q25261",
+          "category": "Science",
+          "label": "meteorology"
+        }
+      ]
+    },
+    "Q162900": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q25261",
+          "category": "Science",
+          "label": "meteorology"
+        }
+      ]
+    },
+    "Q231402": {
+      "fows": [
+        {
+          "id": "Q420",
+          "category": "Science",
+          "label": "biology"
+        }
+      ]
+    },
+    "Q213351": {
+      "fows": [
+        {
+          "id": "Q420",
+          "category": "Science",
+          "label": "biology"
+        }
+      ]
+    },
+    "Q160627": {
+      "fows": [
+        {
+          "id": "Q420",
+          "category": "Science",
+          "label": "biology"
+        },
+        {
+          "id": "Q1071",
+          "category": "Science",
+          "label": "geography"
+        },
+        {
+          "id": "Q52106",
+          "category": "Science",
+          "label": "biogeography"
+        }
+      ]
+    },
+    "Q213668": {
+      "fows": [
+        {
+          "id": "Q1069",
+          "category": "Science",
+          "label": "geology"
+        },
+        {
+          "id": "Q83353",
+          "category": "Science",
+          "label": "mineralogy"
+        },
+        {
+          "id": "Q161764",
+          "category": "Science",
+          "label": "geochemistry"
+        },
+        {
+          "id": "Q163082",
+          "category": "Science",
+          "label": "petrology"
+        }
+      ]
+    },
+    "Q170509": {
+      "fows": [
+        {
+          "id": "Q186579",
+          "category": "Lit",
+          "label": "English-language literature"
+        }
+      ]
+    },
+    "Q171344": {
+      "fows": [
+        {
+          "id": "Q1027879",
+          "category": "Art",
+          "label": "graphics"
+        },
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        },
+        {
+          "id": "Q36649",
+          "category": "Art",
+          "label": "visual arts"
+        }
+      ]
+    },
+    "Q213504": {
+      "fows": [
+        {
+          "id": "Q2728012",
+          "category": "Science",
+          "label": "neurobiology"
+        },
+        {
+          "id": "Q521",
+          "category": "Science",
+          "label": "physiology"
+        },
+        {
+          "id": "Q243748",
+          "category": "Science",
+          "label": "bacteriology"
+        },
+        {
+          "id": "Q7168",
+          "category": "Science",
+          "label": "histology"
+        },
+        {
+          "id": "Q7208",
+          "category": "Science",
+          "label": "pathology"
+        }
+      ]
+    },
+    "Q192279": {
+      "fows": [
+        {
+          "id": "Q3238422",
+          "category": "Lit",
+          "label": "science fiction literature"
+        },
+        {
+          "id": "Q131539",
+          "category": "Lit",
+          "label": "children's literature"
+        }
+      ]
+    },
+    "Q190116": {
+      "fows": [
+        {
+          "id": "Q4184",
+          "category": "Lit",
+          "label": "autobiography"
+        },
+        {
+          "id": "Q8242",
+          "category": "Lit",
+          "label": "literature"
+        },
+        {
+          "id": "Q11634",
+          "category": "Art",
+          "label": "art of sculpture"
+        }
+      ]
+    },
+    "Q223309": {
+      "fows": [
+        {
+          "id": "Q7193",
+          "category": "Science",
+          "label": "microbiology"
+        }
+      ]
+    },
+    "Q216324": {
+      "fows": [
+        {
+          "id": "Q7193",
+          "category": "Science",
+          "label": "microbiology"
+        },
+        {
+          "id": "Q683455",
+          "category": "Science",
+          "label": "anatomical pathology"
+        }
+      ]
+    },
+    "Q211787": {
+      "fows": [
+        {
+          "id": "Q7193",
+          "category": "Science",
+          "label": "microbiology"
+        },
+        {
+          "id": "Q243748",
+          "category": "Science",
+          "label": "bacteriology"
+        },
+        {
+          "id": "Q101929",
+          "category": "Science",
+          "label": "immunology"
+        },
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        }
+      ]
+    },
+    "Q171969": {
+      "fows": [
+        {
+          "id": "Q7991",
+          "category": "Science",
+          "label": "natural science"
+        },
+        {
+          "id": "Q431",
+          "category": "Science",
+          "label": "zoology"
+        },
+        {
+          "id": "Q843900",
+          "category": "Science",
+          "label": "comparative anatomy"
+        }
+      ]
+    },
+    "Q217470": {
+      "fows": [
+        {
+          "id": "Q8242",
+          "category": "Lit",
+          "label": "literature"
+        }
+      ]
+    },
+    "Q212575": {
+      "fows": [
+        {
+          "id": "Q8242",
+          "category": "Lit",
+          "label": "literature"
+        }
+      ]
+    },
+    "Q201221": {
+      "fows": [
+        {
+          "id": "Q8242",
+          "category": "Lit",
+          "label": "literature"
+        }
+      ]
+    },
+    "Q200639": {
+      "fows": [
+        {
+          "id": "Q8242",
+          "category": "Lit",
+          "label": "literature"
+        }
+      ]
+    },
+    "Q192331": {
+      "fows": [
+        {
+          "id": "Q8242",
+          "category": "Lit",
+          "label": "literature"
+        }
+      ]
+    },
+    "Q177411": {
+      "fows": [
+        {
+          "id": "Q8242",
+          "category": "Lit",
+          "label": "literature"
+        }
+      ]
+    },
+    "Q168962": {
+      "fows": [
+        {
+          "id": "Q8242",
+          "category": "Lit",
+          "label": "literature"
+        }
+      ]
+    },
+    "Q168431": {
+      "fows": [
+        {
+          "id": "Q8242",
+          "category": "Lit",
+          "label": "literature"
+        }
+      ]
+    },
+    "Q168356": {
+      "fows": [
+        {
+          "id": "Q8242",
+          "category": "Lit",
+          "label": "literature"
+        }
+      ]
+    },
+    "Q165534": {
+      "fows": [
+        {
+          "id": "Q8242",
+          "category": "Lit",
+          "label": "literature"
+        }
+      ]
+    },
+    "Q183087": {
+      "fows": [
+        {
+          "id": "Q8361",
+          "category": "Music",
+          "label": "Baroque music"
+        }
+      ]
+    },
+    "Q191026": {
+      "fows": [
+        {
+          "id": "Q5862903",
+          "category": "Science",
+          "label": "probability theory"
+        },
+        {
+          "id": "Q23404",
+          "category": "Science",
+          "label": "anthropology"
+        }
+      ]
+    },
+    "Q184366": {
+      "fows": [
+        {
+          "id": "Q431",
+          "category": "Science",
+          "label": "zoology"
+        }
+      ]
+    },
+    "Q223963": {
+      "fows": [
+        {
+          "id": "Q441",
+          "category": "Science",
+          "label": "botany"
+        }
+      ]
+    },
+    "Q215645": {
+      "fows": [
+        {
+          "id": "Q514",
+          "category": "Science",
+          "label": "anatomy"
+        }
+      ]
+    },
+    "Q214851": {
+      "fows": [
+        {
+          "id": "Q521",
+          "category": "Science",
+          "label": "physiology"
+        },
+        {
+          "id": "Q9418",
+          "category": "Science",
+          "label": "psychology"
+        },
+        {
+          "id": "Q2892439",
+          "category": "Science",
+          "label": "human physiology"
+        },
+        {
+          "id": "Q9418",
+          "category": "Science",
+          "label": "psychology"
+        },
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        }
+      ]
+    },
+    "Q208230": {
+      "fows": [
+        {
+          "id": "Q521",
+          "category": "Science",
+          "label": "physiology"
+        },
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        }
+      ]
+    },
+    "Q190501": {
+      "fows": [
+        {
+          "id": "Q521",
+          "category": "Science",
+          "label": "physiology"
+        },
+        {
+          "id": "Q7094",
+          "category": "Science",
+          "label": "biochemistry"
+        }
+      ]
+    },
+    "Q189488": {
+      "fows": [
+        {
+          "id": "Q521",
+          "category": "Science",
+          "label": "physiology"
+        }
+      ]
+    },
+    "Q180468": {
+      "fows": [
+        {
+          "id": "Q521",
+          "category": "Science",
+          "label": "physiology"
+        },
+        {
+          "id": "Q7094",
+          "category": "Science",
+          "label": "biochemistry"
+        }
+      ]
+    },
+    "Q204600": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        },
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q180142": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        },
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q164824": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        },
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q231944": {
+      "fows": [
+        {
+          "id": "Q192782",
+          "category": "Lit",
+          "label": "Gothic novel"
+        }
+      ]
+    },
+    "Q185647": {
+      "fows": [
+        {
+          "id": "Q131269",
+          "category": "Music",
+          "label": "sonata"
+        },
+        {
+          "id": "Q9730",
+          "category": "Music",
+          "label": "classical music"
+        }
+      ]
+    },
+    "Q189803": {
+      "fows": [
+        {
+          "id": "Q7094",
+          "category": "Science",
+          "label": "biochemistry"
+        }
+      ]
+    },
+    "Q186391": {
+      "fows": [
+        {
+          "id": "Q7094",
+          "category": "Science",
+          "label": "biochemistry"
+        }
+      ]
+    },
+    "Q216723": {
+      "fows": [
+        {
+          "id": "Q7162",
+          "category": "Science",
+          "label": "genetics"
+        },
+        {
+          "id": "Q12483",
+          "category": "Science",
+          "label": "statistics"
+        }
+      ]
+    },
+    "Q207478": {
+      "fows": [
+        {
+          "id": "Q9418",
+          "category": "Science",
+          "label": "psychology"
+        },
+        {
+          "id": "Q506132",
+          "category": "Science",
+          "label": "psychometrics"
+        },
+        {
+          "id": "Q9418",
+          "category": "Science",
+          "label": "psychology"
+        }
+      ]
+    },
+    "Q201347": {
+      "fows": [
+        {
+          "id": "Q2346",
+          "category": "Science",
+          "label": "analytical chemistry"
+        },
+        {
+          "id": "Q2346",
+          "category": "Science",
+          "label": "analytical chemistry"
+        }
+      ]
+    },
+    "Q216812": {
+      "fows": [
+        {
+          "id": "Q7754",
+          "category": "Science",
+          "label": "mathematical analysis"
+        },
+        {
+          "id": "Q190549",
+          "category": "Science",
+          "label": "functional analysis"
+        }
+      ]
+    },
+    "Q206832": {
+      "fows": [
+        {
+          "id": "Q188444",
+          "category": "Science",
+          "label": "differential geometry"
+        }
+      ]
+    },
+    "Q183167": {
+      "fows": [
+        {
+          "id": "Q1377898",
+          "category": "Science",
+          "label": "Christian apologetics"
+        },
+        {
+          "id": "Q34178",
+          "category": "Science",
+          "label": "theology"
+        }
+      ]
+    },
+    "Q232149": {
+      "fows": [
+        {
+          "id": "Q11023",
+          "category": "Science",
+          "label": "engineering"
+        }
+      ]
+    },
+    "Q229272": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        },
+        {
+          "id": "Q36649",
+          "category": "Art",
+          "label": "visual arts"
+        }
+      ]
+    },
+    "Q216873": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q216406": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q214564": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        },
+        {
+          "id": "Q131199330",
+          "category": "Art",
+          "label": "Art nouveau painting"
+        }
+      ]
+    },
+    "Q214062": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q213163": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q211763": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q209615": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q203371": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q192488": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q192062": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q186202": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q184212": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        },
+        {
+          "id": "Q11634",
+          "category": "Art",
+          "label": "art of sculpture"
+        }
+      ]
+    },
+    "Q183221": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q182664": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q180932": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q170076": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        },
+        {
+          "id": "Q11634",
+          "category": "Art",
+          "label": "art of sculpture"
+        },
+        {
+          "id": "Q36649",
+          "category": "Art",
+          "label": "visual arts"
+        }
+      ]
+    },
+    "Q167414": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q164720": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q164683": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q187241": {
+      "fows": [
+        {
+          "id": "Q14620",
+          "category": "Science",
+          "label": "optics"
+        }
+      ]
+    },
+    "Q219621": {
+      "fows": [
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        }
+      ]
+    },
+    "Q189006": {
+      "fows": [
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        }
+      ]
+    },
+    "Q165749": {
+      "fows": [
+        {
+          "id": "Q11351",
+          "category": "Science",
+          "label": "organic chemistry"
+        }
+      ]
+    },
+    "Q213667": {
+      "fows": [
+        {
+          "id": "Q11372",
+          "category": "Science",
+          "label": "physical chemistry"
+        }
+      ]
+    },
+    "Q181685": {
+      "fows": [
+        {
+          "id": "Q11473",
+          "category": "Science",
+          "label": "thermodynamics"
+        }
+      ]
+    },
+    "Q191021": {
+      "fows": [
+        {
+          "id": "Q12479",
+          "category": "Science",
+          "label": "number theory"
+        }
+      ]
+    },
+    "Q188663": {
+      "fows": [
+        {
+          "id": "Q12479",
+          "category": "Science",
+          "label": "number theory"
+        }
+      ]
+    },
+    "Q208125": {
+      "fows": [
+        {
+          "id": "Q11634",
+          "category": "Art",
+          "label": "art of sculpture"
+        }
+      ]
+    },
+    "Q215022": {
+      "fows": [
+        {
+          "id": "Q37547",
+          "category": "Science",
+          "label": "astrophysics"
+        }
+      ]
+    },
+    "Q207447": {
+      "fows": [
+        {
+          "id": "Q36649",
+          "category": "Art",
+          "label": "visual arts"
+        }
+      ]
+    },
+    "Q175130": {
+      "fows": [
+        {
+          "id": "Q36649",
+          "category": "Art",
+          "label": "visual arts"
+        }
+      ]
+    },
+    "Q178916": {
+      "fows": [
+        {
+          "id": "Q43518",
+          "category": "Science",
+          "label": "oceanography"
+        }
+      ]
+    },
+    "Q210740": {
+      "fows": [
+        {
+          "id": "Q49084",
+          "category": "Lit",
+          "label": "short story"
+        }
+      ]
+    },
+    "Q217157": {
+      "fows": [
+        {
+          "id": "Q107642407",
+          "category": "Science",
+          "label": "mine engineering"
+        }
+      ]
+    },
+    "Q347139": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        },
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q334262": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        },
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q326434": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        },
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q320118": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        },
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q319843": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        },
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q318769": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        },
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q317920": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        },
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        },
+        {
+          "id": "Q1400853",
+          "category": "Art",
+          "label": "portrait painting"
+        }
+      ]
+    },
+    "Q315996": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        },
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q314889": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        },
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q312627": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        },
+        {
+          "id": "Q2921001",
+          "category": "Art",
+          "label": "art of drawing"
+        },
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q312529": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        },
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q309618": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        },
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q296265": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        },
+        {
+          "id": "Q15885248",
+          "category": "Art",
+          "label": "Renaissance painting"
+        },
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        },
+        {
+          "id": "Q134194",
+          "category": "Art",
+          "label": "fresco painting"
+        }
+      ]
+    },
+    "Q281637": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        },
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q271676": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        },
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q252357": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        },
+        {
+          "id": "Q36649",
+          "category": "Art",
+          "label": "visual arts"
+        },
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q241098": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        },
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q239394": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        },
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q299565": {
+      "fows": [
+        {
+          "id": "Q18366",
+          "category": "Science",
+          "label": "experimental physics"
+        },
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q476294",
+          "category": "Science",
+          "label": "oriental studies"
+        },
+        {
+          "id": "Q145903",
+          "category": "Science",
+          "label": "Egyptology"
+        }
+      ]
+    },
+    "Q295099": {
+      "fows": [
+        {
+          "id": "Q37547",
+          "category": "Science",
+          "label": "astrophysics"
+        },
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        }
+      ]
+    },
+    "Q312631": {
+      "fows": [
+        {
+          "id": "Q36649",
+          "category": "Art",
+          "label": "visual arts"
+        },
+        {
+          "id": "Q1027879",
+          "category": "Art",
+          "label": "graphics"
+        }
+      ]
+    },
+    "Q310025": {
+      "fows": [
+        {
+          "id": "Q36649",
+          "category": "Art",
+          "label": "visual arts"
+        }
+      ]
+    },
+    "Q309974": {
+      "fows": [
+        {
+          "id": "Q113854122",
+          "category": "Lit",
+          "label": "French fiction"
+        },
+        {
+          "id": "Q115135883",
+          "category": "Lit",
+          "label": "French drama"
+        },
+        {
+          "id": "Q6689",
+          "category": "Lit",
+          "label": "French literature"
+        }
+      ]
+    },
+    "Q275175": {
+      "fows": [
+        {
+          "id": "Q8253972",
+          "category": "Lit",
+          "label": "fiction"
+        }
+      ]
+    },
+    "Q243267": {
+      "fows": [
+        {
+          "id": "Q8253972",
+          "category": "Lit",
+          "label": "fiction"
+        }
+      ]
+    },
+    "Q315545": {
+      "fows": [
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        },
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q314854": {
+      "fows": [
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        }
+      ]
+    },
+    "Q313059": {
+      "fows": [
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        }
+      ]
+    },
+    "Q312416": {
+      "fows": [
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        }
+      ]
+    },
+    "Q311022": {
+      "fows": [
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        },
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q131089",
+          "category": "Science",
+          "label": "geodesy"
+        }
+      ]
+    },
+    "Q310309": {
+      "fows": [
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        },
+        {
+          "id": "Q6689",
+          "category": "Lit",
+          "label": "French literature"
+        },
+        {
+          "id": "Q8242",
+          "category": "Lit",
+          "label": "literature"
+        },
+        {
+          "id": "Q34187",
+          "category": "Science",
+          "label": "religious studies"
+        }
+      ]
+    },
+    "Q309861": {
+      "fows": [
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        },
+        {
+          "id": "Q4306",
+          "category": "Science",
+          "label": "radio astronomy"
+        }
+      ]
+    },
+    "Q298581": {
+      "fows": [
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q1069",
+          "category": "Science",
+          "label": "geology"
+        }
+      ]
+    },
+    "Q274223": {
+      "fows": [
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        }
+      ]
+    },
+    "Q242388": {
+      "fows": [
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        }
+      ]
+    },
+    "Q332105": {
+      "fows": [
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q311814": {
+      "fows": [
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q521",
+          "category": "Science",
+          "label": "physiology"
+        }
+      ]
+    },
+    "Q311223": {
+      "fows": [
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q310781": {
+      "fows": [
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q12479",
+          "category": "Science",
+          "label": "number theory"
+        }
+      ]
+    },
+    "Q310767": {
+      "fows": [
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q77590",
+          "category": "Science",
+          "label": "civil engineering"
+        }
+      ]
+    },
+    "Q310755": {
+      "fows": [
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q874429",
+          "category": "Science",
+          "label": "group theory"
+        }
+      ]
+    },
+    "Q287097": {
+      "fows": [
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q185264",
+          "category": "Science",
+          "label": "history of mathematics"
+        }
+      ]
+    },
+    "Q342591": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q327185": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q315439": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q18362",
+          "category": "Science",
+          "label": "theoretical physics"
+        }
+      ]
+    },
+    "Q315422": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        },
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q315048": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q310759": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q277579": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        },
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q272512": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        },
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        }
+      ]
+    },
+    "Q241822": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q311187": {
+      "fows": [
+        {
+          "id": "Q420",
+          "category": "Science",
+          "label": "biology"
+        }
+      ]
+    },
+    "Q310794": {
+      "fows": [
+        {
+          "id": "Q420",
+          "category": "Science",
+          "label": "biology"
+        },
+        {
+          "id": "Q12483",
+          "category": "Science",
+          "label": "statistics"
+        }
+      ]
+    },
+    "Q234050": {
+      "fows": [
+        {
+          "id": "Q420",
+          "category": "Science",
+          "label": "biology"
+        },
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        },
+        {
+          "id": "Q441",
+          "category": "Science",
+          "label": "botany"
+        },
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        }
+      ]
+    },
+    "Q232583": {
+      "fows": [
+        {
+          "id": "Q420",
+          "category": "Science",
+          "label": "biology"
+        },
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        },
+        {
+          "id": "Q514",
+          "category": "Science",
+          "label": "anatomy"
+        },
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        }
+      ]
+    },
+    "Q350891": {
+      "fows": [
+        {
+          "id": "Q1069",
+          "category": "Science",
+          "label": "geology"
+        }
+      ]
+    },
+    "Q336489": {
+      "fows": [
+        {
+          "id": "Q1069",
+          "category": "Science",
+          "label": "geology"
+        },
+        {
+          "id": "Q40821",
+          "category": "Science",
+          "label": "surgery"
+        }
+      ]
+    },
+    "Q312389": {
+      "fows": [
+        {
+          "id": "Q1069",
+          "category": "Science",
+          "label": "geology"
+        },
+        {
+          "id": "Q34178",
+          "category": "Science",
+          "label": "theology"
+        }
+      ]
+    },
+    "Q336977": {
+      "fows": [
+        {
+          "id": "Q8242",
+          "category": "Lit",
+          "label": "literature"
+        }
+      ]
+    },
+    "Q334965": {
+      "fows": [
+        {
+          "id": "Q8242",
+          "category": "Lit",
+          "label": "literature"
+        }
+      ]
+    },
+    "Q334188": {
+      "fows": [
+        {
+          "id": "Q8242",
+          "category": "Lit",
+          "label": "literature"
+        },
+        {
+          "id": "Q34178",
+          "category": "Science",
+          "label": "theology"
+        }
+      ]
+    },
+    "Q315072": {
+      "fows": [
+        {
+          "id": "Q8242",
+          "category": "Lit",
+          "label": "literature"
+        }
+      ]
+    },
+    "Q314158": {
+      "fows": [
+        {
+          "id": "Q8242",
+          "category": "Lit",
+          "label": "literature"
+        }
+      ]
+    },
+    "Q311480": {
+      "fows": [
+        {
+          "id": "Q8242",
+          "category": "Lit",
+          "label": "literature"
+        }
+      ]
+    },
+    "Q245355": {
+      "fows": [
+        {
+          "id": "Q8242",
+          "category": "Lit",
+          "label": "literature"
+        }
+      ]
+    },
+    "Q251818": {
+      "fows": [
+        {
+          "id": "Q9730",
+          "category": "Music",
+          "label": "classical music"
+        }
+      ]
+    },
+    "Q311802": {
+      "fows": [
+        {
+          "id": "Q74217",
+          "category": "Lit",
+          "label": "Italian literature"
+        }
+      ]
+    },
+    "Q271814": {
+      "fows": [
+        {
+          "id": "Q74217",
+          "category": "Lit",
+          "label": "Italian literature"
+        },
+        {
+          "id": "Q137351842",
+          "category": "Lit",
+          "label": "Italian prose literature"
+        }
+      ]
+    },
+    "Q311276": {
+      "fows": [
+        {
+          "id": "Q83042",
+          "category": "Science",
+          "label": "neurology"
+        },
+        {
+          "id": "Q23404",
+          "category": "Science",
+          "label": "anthropology"
+        },
+        {
+          "id": "Q514",
+          "category": "Science",
+          "label": "anatomy"
+        },
+        {
+          "id": "Q40821",
+          "category": "Science",
+          "label": "surgery"
+        }
+      ]
+    },
+    "Q312547": {
+      "fows": [
+        {
+          "id": "Q101333",
+          "category": "Science",
+          "label": "mechanical engineering"
+        }
+      ]
+    },
+    "Q286440": {
+      "fows": [
+        {
+          "id": "Q101929",
+          "category": "Science",
+          "label": "immunology"
+        },
+        {
+          "id": "Q243748",
+          "category": "Science",
+          "label": "bacteriology"
+        },
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        },
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        }
+      ]
+    },
+    "Q323267": {
+      "fows": [
+        {
+          "id": "Q177784",
+          "category": "Science",
+          "label": "hydraulics"
+        },
+        {
+          "id": "Q41217",
+          "category": "Science",
+          "label": "mechanics"
+        },
+        {
+          "id": "Q12016129",
+          "category": "Science",
+          "label": "hydrodynamics"
+        }
+      ]
+    },
+    "Q233965": {
+      "fows": [
+        {
+          "id": "Q243748",
+          "category": "Science",
+          "label": "bacteriology"
+        }
+      ]
+    },
+    "Q316949": {
+      "fows": [
+        {
+          "id": "Q484591",
+          "category": "Science",
+          "label": "natural history"
+        }
+      ]
+    },
+    "Q313498": {
+      "fows": [
+        {
+          "id": "Q742333",
+          "category": "Art",
+          "label": "history painting"
+        }
+      ]
+    },
+    "Q312096": {
+      "fows": [
+        {
+          "id": "Q1400853",
+          "category": "Art",
+          "label": "portrait painting"
+        }
+      ]
+    },
+    "Q333489": {
+      "fows": [
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        },
+        {
+          "id": "Q7168",
+          "category": "Science",
+          "label": "histology"
+        },
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        },
+        {
+          "id": "Q683455",
+          "category": "Science",
+          "label": "anatomical pathology"
+        }
+      ]
+    },
+    "Q313093": {
+      "fows": [
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        },
+        {
+          "id": "Q441",
+          "category": "Science",
+          "label": "botany"
+        },
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        },
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        },
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        }
+      ]
+    },
+    "Q312587": {
+      "fows": [
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        },
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        },
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        },
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        }
+      ]
+    },
+    "Q236236": {
+      "fows": [
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        },
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        }
+      ]
+    },
+    "Q310201": {
+      "fows": [
+        {
+          "id": "Q11467",
+          "category": "Science",
+          "label": "metallurgy"
+        },
+        {
+          "id": "Q11467",
+          "category": "Science",
+          "label": "metallurgy"
+        }
+      ]
+    },
+    "Q309482": {
+      "fows": [
+        {
+          "id": "Q11634",
+          "category": "Art",
+          "label": "art of sculpture"
+        },
+        {
+          "id": "Q11634",
+          "category": "Art",
+          "label": "art of sculpture"
+        }
+      ]
+    },
+    "Q234109": {
+      "fows": [
+        {
+          "id": "Q11634",
+          "category": "Art",
+          "label": "art of sculpture"
+        },
+        {
+          "id": "Q11634",
+          "category": "Art",
+          "label": "art of sculpture"
+        }
+      ]
+    },
+    "Q274251": {
+      "fows": [
+        {
+          "id": "Q43035",
+          "category": "Science",
+          "label": "electrical engineering"
+        }
+      ]
+    },
+    "Q247603": {
+      "fows": [
+        {
+          "id": "Q43035",
+          "category": "Science",
+          "label": "electrical engineering"
+        }
+      ]
+    },
+    "Q261269": {
+      "fows": [
+        {
+          "id": "Q46255",
+          "category": "Science",
+          "label": "geophysics"
+        }
+      ]
+    },
+    "Q315160": {
+      "fows": [
+        {
+          "id": "Q11351",
+          "category": "Science",
+          "label": "organic chemistry"
+        },
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        },
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        },
+        {
+          "id": "Q11351",
+          "category": "Science",
+          "label": "organic chemistry"
+        },
+        {
+          "id": "Q176353",
+          "category": "Science",
+          "label": "beekeeping"
+        },
+        {
+          "id": "Q2442870",
+          "category": "Science",
+          "label": "lepidopterology"
+        }
+      ]
+    },
+    "Q234145": {
+      "fows": [
+        {
+          "id": "Q11351",
+          "category": "Science",
+          "label": "organic chemistry"
+        },
+        {
+          "id": "Q11351",
+          "category": "Science",
+          "label": "organic chemistry"
+        }
+      ]
+    },
+    "Q348455": {
+      "fows": [
+        {
+          "id": "Q441",
+          "category": "Science",
+          "label": "botany"
+        }
+      ]
+    },
+    "Q313067": {
+      "fows": [
+        {
+          "id": "Q441",
+          "category": "Science",
+          "label": "botany"
+        }
+      ]
+    },
+    "Q312017": {
+      "fows": [
+        {
+          "id": "Q521",
+          "category": "Science",
+          "label": "physiology"
+        }
+      ]
+    },
+    "Q333438": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        },
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        },
+        {
+          "id": "Q614304",
+          "category": "Science",
+          "label": "pharmacy"
+        }
+      ]
+    },
+    "Q318214": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        },
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        },
+        {
+          "id": "Q2346",
+          "category": "Science",
+          "label": "analytical chemistry"
+        }
+      ]
+    },
+    "Q314306": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        },
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q313568": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        },
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q312975": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        },
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q312571": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        },
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q311665": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        },
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q319325": {
+      "fows": [
+        {
+          "id": "Q7094",
+          "category": "Science",
+          "label": "biochemistry"
+        }
+      ]
+    },
+    "Q233976": {
+      "fows": [
+        {
+          "id": "Q7094",
+          "category": "Science",
+          "label": "biochemistry"
+        }
+      ]
+    },
+    "Q233943": {
+      "fows": [
+        {
+          "id": "Q7094",
+          "category": "Science",
+          "label": "biochemistry"
+        }
+      ]
+    },
+    "Q233026": {
+      "fows": [
+        {
+          "id": "Q7094",
+          "category": "Science",
+          "label": "biochemistry"
+        }
+      ]
+    },
+    "Q347272": {
+      "fows": [
+        {
+          "id": "Q7162",
+          "category": "Science",
+          "label": "genetics"
+        }
+      ]
+    },
+    "Q323234": {
+      "fows": [
+        {
+          "id": "Q8087",
+          "category": "Science",
+          "label": "geometry"
+        }
+      ]
+    },
+    "Q318067": {
+      "fows": [
+        {
+          "id": "Q8087",
+          "category": "Science",
+          "label": "geometry"
+        }
+      ]
+    },
+    "Q336794": {
+      "fows": [
+        {
+          "id": "Q39286",
+          "category": "Science",
+          "label": "entomology"
+        }
+      ]
+    },
+    "Q311594": {
+      "fows": [
+        {
+          "id": "Q7867",
+          "category": "Science",
+          "label": "psychiatry"
+        }
+      ]
+    },
+    "Q296272": {
+      "fows": [
+        {
+          "id": "Q115160293",
+          "category": "Lit",
+          "label": "satirical literature"
+        }
+      ]
+    },
+    "Q736065": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q552440": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        },
+        {
+          "id": "Q11634",
+          "category": "Art",
+          "label": "art of sculpture"
+        }
+      ]
+    },
+    "Q516941": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q458816": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        },
+        {
+          "id": "Q11634",
+          "category": "Art",
+          "label": "art of sculpture"
+        }
+      ]
+    },
+    "Q440369": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q433434": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q380553": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q371280": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q368254": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        }
+      ]
+    },
+    "Q353746": {
+      "fows": [
+        {
+          "id": "Q11629",
+          "category": "Art",
+          "label": "painting"
+        },
+        {
+          "id": "Q8242",
+          "category": "Lit",
+          "label": "literature"
+        }
+      ]
+    },
+    "Q505186": {
+      "fows": [
+        {
+          "id": "Q14620",
+          "category": "Science",
+          "label": "optics"
+        }
+      ]
+    },
+    "Q366066": {
+      "fows": [
+        {
+          "id": "Q36649",
+          "category": "Art",
+          "label": "visual arts"
+        },
+        {
+          "id": "Q631931",
+          "category": "Art",
+          "label": "decorative art"
+        },
+        {
+          "id": "Q11634",
+          "category": "Art",
+          "label": "art of sculpture"
+        }
+      ]
+    },
+    "Q372017": {
+      "fows": [
+        {
+          "id": "Q42515",
+          "category": "Science",
+          "label": "cartography"
+        },
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q131089",
+          "category": "Science",
+          "label": "geodesy"
+        }
+      ]
+    },
+    "Q360808": {
+      "fows": [
+        {
+          "id": "Q52120",
+          "category": "Science",
+          "label": "glaciology"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q18366",
+          "category": "Science",
+          "label": "experimental physics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q453723": {
+      "fows": [
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        },
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        }
+      ]
+    },
+    "Q453690": {
+      "fows": [
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        },
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        }
+      ]
+    },
+    "Q433773": {
+      "fows": [
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        },
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        }
+      ]
+    },
+    "Q379999": {
+      "fows": [
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        },
+        {
+          "id": "Q12483",
+          "category": "Science",
+          "label": "statistics"
+        },
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        },
+        {
+          "id": "Q46255",
+          "category": "Science",
+          "label": "geophysics"
+        }
+      ]
+    },
+    "Q375172": {
+      "fows": [
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        },
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        }
+      ]
+    },
+    "Q364505": {
+      "fows": [
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        },
+        {
+          "id": "Q333",
+          "category": "Science",
+          "label": "astronomy"
+        }
+      ]
+    },
+    "Q982518": {
+      "fows": [
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q12479",
+          "category": "Science",
+          "label": "number theory"
+        },
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q7754",
+          "category": "Science",
+          "label": "mathematical analysis"
+        },
+        {
+          "id": "Q774123",
+          "category": "Science",
+          "label": "approximation theory"
+        }
+      ]
+    },
+    "Q451608": {
+      "fows": [
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q445128": {
+      "fows": [
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        }
+      ]
+    },
+    "Q371918": {
+      "fows": [
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q131089",
+          "category": "Science",
+          "label": "geodesy"
+        },
+        {
+          "id": "Q188444",
+          "category": "Science",
+          "label": "differential geometry"
+        }
+      ]
+    },
+    "Q993725": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q983393": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q922383": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q18366",
+          "category": "Science",
+          "label": "experimental physics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q734412": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q711256": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q551882": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q531898": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q471369": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q451305": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q438769": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q11467",
+          "category": "Science",
+          "label": "metallurgy"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q368121": {
+      "fows": [
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        }
+      ]
+    },
+    "Q1174949": {
+      "fows": [
+        {
+          "id": "Q420",
+          "category": "Science",
+          "label": "biology"
+        },
+        {
+          "id": "Q420",
+          "category": "Science",
+          "label": "biology"
+        },
+        {
+          "id": "Q7094",
+          "category": "Science",
+          "label": "biochemistry"
+        },
+        {
+          "id": "Q180502",
+          "category": "Science",
+          "label": "parasitology"
+        },
+        {
+          "id": "Q39286",
+          "category": "Science",
+          "label": "entomology"
+        }
+      ]
+    },
+    "Q945539": {
+      "fows": [
+        {
+          "id": "Q420",
+          "category": "Science",
+          "label": "biology"
+        },
+        {
+          "id": "Q1069",
+          "category": "Science",
+          "label": "geology"
+        },
+        {
+          "id": "Q420",
+          "category": "Science",
+          "label": "biology"
+        },
+        {
+          "id": "Q43518",
+          "category": "Science",
+          "label": "oceanography"
+        },
+        {
+          "id": "Q83353",
+          "category": "Science",
+          "label": "mineralogy"
+        }
+      ]
+    },
+    "Q606039": {
+      "fows": [
+        {
+          "id": "Q1069",
+          "category": "Science",
+          "label": "geology"
+        }
+      ]
+    },
+    "Q373097": {
+      "fows": [
+        {
+          "id": "Q1069",
+          "category": "Science",
+          "label": "geology"
+        }
+      ]
+    },
+    "Q361900": {
+      "fows": [
+        {
+          "id": "Q1069",
+          "category": "Science",
+          "label": "geology"
+        }
+      ]
+    },
+    "Q723585": {
+      "fows": [
+        {
+          "id": "Q6689",
+          "category": "Lit",
+          "label": "French literature"
+        }
+      ]
+    },
+    "Q461104": {
+      "fows": [
+        {
+          "id": "Q8242",
+          "category": "Lit",
+          "label": "literature"
+        }
+      ]
+    },
+    "Q380937": {
+      "fows": [
+        {
+          "id": "Q8242",
+          "category": "Lit",
+          "label": "literature"
+        }
+      ]
+    },
+    "Q352725": {
+      "fows": [
+        {
+          "id": "Q8242",
+          "category": "Lit",
+          "label": "literature"
+        }
+      ]
+    },
+    "Q559213": {
+      "fows": [
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        },
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        }
+      ]
+    },
+    "Q366051": {
+      "fows": [
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        },
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        },
+        {
+          "id": "Q11190",
+          "category": "Science",
+          "label": "medicine"
+        }
+      ]
+    },
+    "Q3435328": {
+      "fows": [
+        {
+          "id": "Q11467",
+          "category": "Science",
+          "label": "metallurgy"
+        }
+      ]
+    },
+    "Q560839": {
+      "fows": [
+        {
+          "id": "Q18362",
+          "category": "Science",
+          "label": "theoretical physics"
+        }
+      ]
+    },
+    "Q2706353": {
+      "fows": [
+        {
+          "id": "Q83042",
+          "category": "Science",
+          "label": "neurology"
+        },
+        {
+          "id": "Q2728012",
+          "category": "Science",
+          "label": "neurobiology"
+        },
+        {
+          "id": "Q7867",
+          "category": "Science",
+          "label": "psychiatry"
+        },
+        {
+          "id": "Q11081",
+          "category": "Science",
+          "label": "Alzheimer's disease"
+        },
+        {
+          "id": "Q11081",
+          "category": "Science",
+          "label": "Alzheimer's disease"
+        }
+      ]
+    },
+    "Q611821": {
+      "fows": [
+        {
+          "id": "Q83042",
+          "category": "Science",
+          "label": "neurology"
+        }
+      ]
+    },
+    "Q533022": {
+      "fows": [
+        {
+          "id": "Q164204",
+          "category": "Science",
+          "label": "musicology"
+        },
+        {
+          "id": "Q105107008",
+          "category": "Science",
+          "label": "music composition"
+        }
+      ]
+    },
+    "Q921405": {
+      "fows": [
+        {
+          "id": "Q8253972",
+          "category": "Lit",
+          "label": "fiction"
+        }
+      ]
+    },
+    "Q366040": {
+      "fows": [
+        {
+          "id": "Q8253972",
+          "category": "Lit",
+          "label": "fiction"
+        }
+      ]
+    },
+    "Q366827": {
+      "fows": [
+        {
+          "id": "Q11165",
+          "category": "Science",
+          "label": "inorganic chemistry"
+        },
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        },
+        {
+          "id": "Q11165",
+          "category": "Science",
+          "label": "inorganic chemistry"
+        },
+        {
+          "id": "Q483666",
+          "category": "Science",
+          "label": "spectroscopy"
+        }
+      ]
+    },
+    "Q540113": {
+      "fows": [
+        {
+          "id": "Q11372",
+          "category": "Science",
+          "label": "physical chemistry"
+        },
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        },
+        {
+          "id": "Q11372",
+          "category": "Science",
+          "label": "physical chemistry"
+        }
+      ]
+    },
+    "Q960381": {
+      "fows": [
+        {
+          "id": "Q11634",
+          "category": "Art",
+          "label": "art of sculpture"
+        }
+      ]
+    },
+    "Q380426": {
+      "fows": [
+        {
+          "id": "Q11634",
+          "category": "Art",
+          "label": "art of sculpture"
+        }
+      ]
+    },
+    "Q1151055": {
+      "fows": [
+        {
+          "id": "Q18334",
+          "category": "Science",
+          "label": "particle physics"
+        }
+      ]
+    },
+    "Q983172": {
+      "fows": [
+        {
+          "id": "Q46255",
+          "category": "Science",
+          "label": "geophysics"
+        }
+      ]
+    },
+    "Q900478": {
+      "fows": [
+        {
+          "id": "Q441",
+          "category": "Science",
+          "label": "botany"
+        },
+        {
+          "id": "Q441",
+          "category": "Science",
+          "label": "botany"
+        }
+      ]
+    },
+    "Q525949": {
+      "fows": [
+        {
+          "id": "Q441",
+          "category": "Science",
+          "label": "botany"
+        },
+        {
+          "id": "Q441",
+          "category": "Science",
+          "label": "botany"
+        }
+      ]
+    },
+    "Q432734": {
+      "fows": [
+        {
+          "id": "Q441",
+          "category": "Science",
+          "label": "botany"
+        },
+        {
+          "id": "Q441",
+          "category": "Science",
+          "label": "botany"
+        }
+      ]
+    },
+    "Q370246": {
+      "fows": [
+        {
+          "id": "Q441",
+          "category": "Science",
+          "label": "botany"
+        },
+        {
+          "id": "Q441",
+          "category": "Science",
+          "label": "botany"
+        }
+      ]
+    },
+    "Q361976": {
+      "fows": [
+        {
+          "id": "Q441",
+          "category": "Science",
+          "label": "botany"
+        },
+        {
+          "id": "Q441",
+          "category": "Science",
+          "label": "botany"
+        }
+      ]
+    },
+    "Q451727": {
+      "fows": [
+        {
+          "id": "Q514",
+          "category": "Science",
+          "label": "anatomy"
+        },
+        {
+          "id": "Q521",
+          "category": "Science",
+          "label": "physiology"
+        },
+        {
+          "id": "Q514",
+          "category": "Science",
+          "label": "anatomy"
+        },
+        {
+          "id": "Q521",
+          "category": "Science",
+          "label": "physiology"
+        },
+        {
+          "id": "Q1129353",
+          "category": "Science",
+          "label": "natural theology"
+        }
+      ]
+    },
+    "Q739275": {
+      "fows": [
+        {
+          "id": "Q521",
+          "category": "Science",
+          "label": "physiology"
+        },
+        {
+          "id": "Q521",
+          "category": "Science",
+          "label": "physiology"
+        }
+      ]
+    },
+    "Q358935": {
+      "fows": [
+        {
+          "id": "Q521",
+          "category": "Science",
+          "label": "physiology"
+        },
+        {
+          "id": "Q7215",
+          "category": "Science",
+          "label": "virology"
+        },
+        {
+          "id": "Q521",
+          "category": "Science",
+          "label": "physiology"
+        }
+      ]
+    },
+    "Q950726": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q901897": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q901049": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q775400": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q633479": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q560404": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q473225": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q468371": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q468351": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        },
+        {
+          "id": "Q83353",
+          "category": "Science",
+          "label": "mineralogy"
+        }
+      ]
+    },
+    "Q468330": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        },
+        {
+          "id": "Q614304",
+          "category": "Science",
+          "label": "pharmacy"
+        }
+      ]
+    },
+    "Q468316": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q467705": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q447875": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q442937": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q361386": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q353490": {
+      "fows": [
+        {
+          "id": "Q2329",
+          "category": "Science",
+          "label": "chemistry"
+        }
+      ]
+    },
+    "Q2761784": {
+      "fows": [
+        {
+          "id": "Q7193",
+          "category": "Science",
+          "label": "microbiology"
+        },
+        {
+          "id": "Q7215",
+          "category": "Science",
+          "label": "virology"
+        }
+      ]
+    },
+    "Q1707098": {
+      "fows": [
+        {
+          "id": "Q8087",
+          "category": "Science",
+          "label": "geometry"
+        }
+      ]
+    },
+    "Q470140": {
+      "fows": [
+        {
+          "id": "Q23498",
+          "category": "Science",
+          "label": "archaeology"
+        },
+        {
+          "id": "Q5284418",
+          "category": "Science",
+          "label": "obstetrics"
+        }
+      ]
+    },
+    "Q469269": {
+      "fows": [
+        {
+          "id": "Q101333",
+          "category": "Science",
+          "label": "mechanical engineering"
+        }
+      ]
+    },
+    "Q3160106": {
+      "fows": [
+        {
+          "id": "Q128406",
+          "category": "Science",
+          "label": "pharmacology"
+        },
+        {
+          "id": "Q243455",
+          "category": "Science",
+          "label": "medicinal chemistry"
+        }
+      ]
+    },
+    "Q2057791": {
+      "fows": [
+        {
+          "id": "Q180502",
+          "category": "Science",
+          "label": "parasitology"
+        }
+      ]
+    },
+    "Q353438": {
+      "fows": [
+        {
+          "id": "Q188444",
+          "category": "Science",
+          "label": "differential geometry"
+        },
+        {
+          "id": "Q607699",
+          "category": "Science",
+          "label": "three-body problem"
+        },
+        {
+          "id": "Q833065",
+          "category": "Science",
+          "label": "theoretical mechanics"
+        },
+        {
+          "id": "Q12016129",
+          "category": "Science",
+          "label": "hydrodynamics"
+        }
+      ]
+    },
+    "Q560746": {
+      "fows": [
+        {
+          "id": "Q105107008",
+          "category": "Science",
+          "label": "music composition"
+        }
+      ]
+    },
+    "Q1394690": {
+      "fows": [
+        {
+          "id": "Q7754",
+          "category": "Science",
+          "label": "mathematical analysis"
+        }
+      ]
+    },
+    "Q451667": {
+      "fows": [
+        {
+          "id": "Q7754",
+          "category": "Science",
+          "label": "mathematical analysis"
+        }
+      ]
+    },
+    "Q461381": {
+      "fows": [
+        {
+          "id": "Q39286",
+          "category": "Science",
+          "label": "entomology"
+        }
+      ]
+    },
+    "Q537112": {
+      "fows": [
+        {
+          "id": "Q3972943",
+          "category": "Science",
+          "label": "publishing"
+        }
+      ]
+    },
+    "Q25539274": {
+      "fows": [
+        {
+          "id": "Q441",
+          "category": "Science",
+          "label": "botany"
+        },
+        {
+          "id": "Q7193",
+          "category": "Science",
+          "label": "microbiology"
+        },
+        {
+          "id": "Q7215",
+          "category": "Science",
+          "label": "virology"
+        }
+      ]
+    },
+    "Q55030753": {
+      "fows": [
+        {
+          "id": "Q1069",
+          "category": "Science",
+          "label": "geology"
+        }
+      ]
+    },
+    "Q55021352": {
+      "fows": [
+        {
+          "id": "Q1069",
+          "category": "Science",
+          "label": "geology"
+        }
+      ]
+    }
+  }
+}
