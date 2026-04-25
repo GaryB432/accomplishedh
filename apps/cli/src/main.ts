@@ -40,6 +40,7 @@ prog
     "refresh <today>",
     "Refreshes Wikibase caches using online resources",
   )
+  .option("-a, --all", "Refresh all Wikibase Caches")
   .action(async (today: string, opts: SharedOptions) => {
     const { refreshCommand } =
       await import("./app/commands/refresh.command.js");

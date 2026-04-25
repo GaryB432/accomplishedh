@@ -26,9 +26,7 @@ jobs:
           run_install: true
       - name: Check
         run: pnpm --recursive run check
-      - name: Map Fields of Work
-        run: pnpm run update:fows
-      - name: Map Fields of Work
+      - name: Smoke test cli
         run: pnpm --filter=@accomplishedh/cli run e2e:smoke
       - name: Lint
         run: echo "pnpm --recursive run lint"
@@ -36,3 +34,5 @@ jobs:
         run: pnpm --recursive run build
       - name: Test
         run: pnpm --recursive run test
+      - name: Refresh SSR Wikibase Data
+        run: pnpm run update:fows

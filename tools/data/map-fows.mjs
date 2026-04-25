@@ -1,130 +1,52 @@
-// @ts-check
-import fs from "fs";
+#!/usr/bin/env node
 
-/**
- * @typedef {Object} HumanIdentifier
- * @property {string} name
- * @property {string} dob
- * @property {string} wb - The Wikidata ID (QID)
- *
- * @typedef {Object} FowEntry
- * @property {string} id - The Wikidata ID of the field
- * @property {string} label - The English label of the field
- * @property {string} category - One of 'Art', 'Lit', 'Music', 'Science'
- *
- * @typedef {Object} PersonSummary
- * @property {FowEntry[]} fows
- *
- * @typedef {Record<string, PersonSummary>} FowSummaryMap
- */
+import { spawnSync } from "node:child_process";
+import { mkdirSync, writeFileSync } from "node:fs";
+import { join, resolve } from "node:path";
 
-/** @type {string} */
-const WIKIDATA_SPARQL_URL = "https://query.wikidata.org/sparql";
-/** @type {string} */
-const USER_AGENT = "AccomplishedHBot/1.0 (editor@humanaccomplishment.com)";
-/** @type {number} */
-const BATCH_SIZE = 200;
+const repoRoot = resolve(import.meta.dirname, "../..");
 
-/** @type {Record<string, string>} */
-const ROOTS = {
-  Art: "Q36649",
-  Lit: "Q8242",
-  Music: "Q9730",
-  Science: "Q336",
-};
+const cacheDir = join(repoRoot, "apps/next-web/src/data/wikibase-cache");
+mkdirSync(cacheDir, {
+  recursive: true,
+});
 
-async function runFowMapping() {
-  try {
-    /** @type {string} */
-    const rawIds = fs.readFileSync(
-      "apps/next-web/src/data/identifiers.json",
-      "utf8",
-    );
-    /** @type {HumanIdentifier[]} */
-    const allHumans = JSON.parse(rawIds);
-    const allIds = allHumans.map((h) => h.wb);
+function runStep(step, index) {
+  const proc = spawnSync(step.cmd, step.args, {
+    cwd: join(repoRoot, "apps", "cli"),
+    encoding: "utf8",
+  });
 
-    /** @type {FowSummaryMap} */
-    const fowMap = {};
+  const stdout = proc.stdout ?? "";
+  const stderr = proc.stderr ?? "";
+  const output = `${stdout}${stderr}`;
+  const clean = stripAnsi(output);
+  const code = proc.status ?? 1;
 
-    console.log(`🚀 Mapping FOWs for ${allIds.length} humans...`);
-
-    for (let i = 0; i < allIds.length; i += BATCH_SIZE) {
-      const currentBatch = allIds.slice(i, i + BATCH_SIZE);
-      const humansValues = currentBatch.map((id) => `wd:${id}`).join(" ");
-
-      const rootValues = Object.entries(ROOTS)
-        .map(([, qid]) => `wd:${qid}`)
-        .join(" ");
-
-      const query = `
-        SELECT ?human ?fow ?fowLabel ?root WHERE {
-          VALUES ?human { ${humansValues} }
-          VALUES ?root { ${rootValues} }
-          
-          ?human wdt:P101 ?fow .
-          ?fow wdt:P279* ?root .
-          
-          SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
-        }
-      `;
-
-      const url = `${WIKIDATA_SPARQL_URL}?query=${encodeURIComponent(query)}`;
-
-      const response = await fetch(url, {
-        headers: {
-          Accept: "application/sparql-results+json",
-          "User-Agent": USER_AGENT,
-        },
-      });
-
-      if (!response.ok) {
-        throw new Error(`SPARQL query failed: ${response.statusText}`);
-      }
-
-      /** @type {any} */
-      const data = await response.json();
-      /** @type {any[]} */
-      const results = data.results.bindings;
-
-      results.forEach((row) => {
-        const humanQid = row.human.value.split("/").pop();
-        const fowQid = row.fow.value.split("/").pop();
-        const fowLabel = row.fowLabel.value;
-        const rootQid = row.root.value.split("/").pop();
-        const categoryName = Object.keys(ROOTS).find(
-          (k) => ROOTS[k] === rootQid,
-        );
-
-        if (!humanQid || !categoryName) return;
-
-        if (!fowMap[humanQid]) {
-          fowMap[humanQid] = { fows: [] };
-        }
-
-        fowMap[humanQid].fows.push({
-          category: categoryName,
-          id: fowQid,
-          label: fowLabel,
-        });
-      });
-
-      console.log(`✅ Processed batch ${Math.floor(i / BATCH_SIZE) + 1}.`);
-      await new Promise((res) => setTimeout(res, 500));
-    }
-
-    fs.writeFileSync(
-      "apps/next-web/src/data/fow-summary.json",
-      JSON.stringify(fowMap, null, 2),
-    );
-
-    console.log(
-      `\n🎉 Success! Mapped FOWs saved to apps/next-web/src/data/fow-summary.json`,
-    );
-  } catch (err) {
-    // @ts-expect-error and i do not care why
-    console.error("Critical Script Error:", err.message);
-  }
+  console.log(output);
 }
 
-runFowMapping();
+function stripAnsi(text) {
+  // eslint-disable-next-line no-control-regex
+  return text.replace(/\u001B\[[0-9;]*m/g, "");
+}
+
+const steps = [
+  {
+    name: "Refresh Wikibase Caches",
+    args: ["dist/main.js", "refresh", new Date().toISOString(), "--all"],
+    cmd: "node",
+  },
+];
+
+try {
+  for (const [i, step] of steps.entries()) {
+    process.stdout.write(`Running ${step.name}...\n`);
+    runStep(step, i);
+  }
+  process.stdout.write(`refreshed: ${cacheDir}\n`);
+} catch (error) {
+  const msg = error instanceof Error ? error.message : String(error);
+  process.stderr.write(`FAIL refresh command: ${msg}\n`);
+  process.exit(1);
+}
