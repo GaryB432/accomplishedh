@@ -43,6 +43,7 @@ export type Item = {
 };
 
 export type {
+  Binding,
   WikibaseResponse,
   QueryBindingsResponse,
 } from "./types/responses";
