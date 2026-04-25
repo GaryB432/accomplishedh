@@ -1,10 +1,17 @@
-import type { Entity, LanguageDictionary } from "../types.js";
+import type {
+  EntityQid,
+  FieldOfWorkEntryV1,
+  FowRootCategoryV1,
+} from "@accomplishedh/shared/lib/dto.types.js";
 import { WIKIDATA_PERSON_PROPERTIES as P } from "../constants.js";
 import { isoFrom } from "../data/timevalue.js";
-import type {
-  FieldOfWorkEntryV1,
-  EntityQid,
-} from "@accomplishedh/shared/lib/dto.types.js"; // TODO why deep link?
+import type { Binding, Entity, LanguageDictionary } from "../types.js";
+
+const categories: Map<EntityQid, FowRootCategoryV1> = new Map([
+  ["Q36649", "Art"],
+  ["Q8242", "Art"],
+  ["Q336", "Art"],
+]);
 
 export function entityDateOfBirthIso(
   entity: Pick<Entity, "claims">,
@@ -35,37 +42,18 @@ export function fromDictionary(
   }
   return "dunno af";
 }
-type QueryResponseRow = {
-  human: {
-    value: string;
-  };
-  fow: {
-    value: string;
-  };
-  fowLabel: {
-    value: string;
-  };
-  root: {
-    value: string;
-  };
-};
+export function toFowEntry(
+  row: Record<string, Binding>,
+  index?: number,
+  array?: Record<string, Binding>[],
+): FieldOfWorkEntryV1 {
+  const id = asQid(extractValue(row["fow"]!));
+  const label = row["fowLabel"]!.value;
 
-type BindingBBB = {
-  type: "uri" | "literal";
-  value: string;
-};
+  const category = getFowRootCategory(row["root"]!);
 
-export const mapFieldOfWorkEntry = (
-  binding: BindingBBB,
-): FieldOfWorkEntryV1 & { hum: EntityQid } => {
-  const row = binding as unknown as QueryResponseRow;
-  return {
-    hum: asQid(extractValue(row.human)),
-    id: asQid(extractValue(row.fow)),
-    category: "Art",
-    label: row.fowLabel.value,
-  };
-};
+  return { id, category, label };
+}
 
 export function asQid(value: string): `Q${number}` {
   if (!/^Q\d+$/.test(value)) {
@@ -81,4 +69,20 @@ export function extractValue(typedValue: { value: string }): string {
     throw new Error("no pop");
   }
   return popped;
+}
+
+const missing: EntityQid[] = [];
+
+function getFowRootCategory(arg0: Binding): FowRootCategoryV1 {
+  const q = asQid(extractValue(arg0));
+
+  if (!categories.has(q)) {
+    if (!missing.includes(q)) {
+      missing.push(q);
+    }
+  }
+
+  console.log(missing);
+
+  return "Art";
 }
