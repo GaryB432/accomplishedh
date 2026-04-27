@@ -34,3 +34,5 @@ jobs:
         run: pnpm --recursive run build
       - name: Test
         run: pnpm --recursive run test
+      - name: Refresh SSR Wikibase Data
+        run: pnpm run update:fows

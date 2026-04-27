@@ -4,5 +4,5 @@ export type CommandArgs = {
   today: string;
 };
 interface Options extends SharedOptions {
-  listOnly: boolean;
+  all: boolean;
 }

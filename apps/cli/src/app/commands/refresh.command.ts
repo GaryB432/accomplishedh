@@ -18,7 +18,9 @@ export async function refreshCommand({
   opts,
   today,
 }: CommandArgs): Promise<void> {
-  if (!today || today.length !== 10) {
+  const systemDate = new Date().toISOString();
+  today ??= systemDate;
+  if (today.length !== systemDate.length) {
     throw new Error("now must be ISO Date");
   }
   const fowDataset: FowDataSet = {
