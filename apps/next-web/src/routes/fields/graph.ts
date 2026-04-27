@@ -1,3 +1,7 @@
+export type Graph = {
+  edges: Edge[];
+  nodes: Node[];
+};
 type Connection = {
   category: string;
   human: string;
@@ -5,11 +9,52 @@ type Connection = {
   label: string;
 };
 
+type Edge = [Node, Node];
+
 type El = {
   data?: unknown;
   id: string;
   type: string;
 };
+
+type Fow = {
+  id: string;
+};
+
+type Node = {
+  data: unknown;
+  id: string;
+  type: "field" | "person";
+};
+
+export function grabGraphParts(r: Record<string, { fows: Fow[] }>): Graph {
+  const edges: Edge[] = [];
+
+  const nodes: Node[] = [];
+
+  const fmap = new Set();
+
+  Object.entries(r).forEach(([a, b]) => {
+    nodes.push({
+      data: {},
+      id: a,
+      type: "person",
+    });
+
+    b.fows.forEach((f) => {
+      if (!fmap.has(f.id)) {
+        fmap.add(f.id);
+        nodes.push({
+          data: f,
+          id: f.id,
+          type: "field",
+        });
+      }
+    });
+  });
+
+  return { edges, nodes };
+}
 
 export function graph(conns: Connection[]): {
   edges: Set<[El, El]>;
