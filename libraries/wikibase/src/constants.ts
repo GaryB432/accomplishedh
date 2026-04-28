@@ -42,3 +42,13 @@ export const WIKIDATA_PERSON_PROPERTIES = {
   SPOUSE: "P26", // Spouse
   TWITTER_USERNAME: "P2002", // Twitter username
 };
+
+export const ROOTS = {
+  Art: "Q36649",
+  Lit: "Q8242",
+  Music: "Q9730",
+  Science: "Q336",
+};
+
+export const USER_AGENT =
+  "AccomplishedHBot/1.0 (editor@humanaccomplishment.com)";

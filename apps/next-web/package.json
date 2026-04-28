@@ -20,6 +20,7 @@
     "@accomplishedh/wikibase": "workspace:^",
     "@fontsource/montserrat": "^5.2.8",
     "crypto-js": "^4.2.0",
+    "cytoscape": "^3.33.2",
     "xml": "^1.0.1"
   },
   "devDependencies": {

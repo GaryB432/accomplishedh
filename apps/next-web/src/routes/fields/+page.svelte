@@ -1,68 +1,57 @@
 <script lang="ts">
-  import { apiRequestConfig } from "$lib/wikibase/urls";
-  import { fromDictionary } from "$lib/wikibase/utils";
-  import {
-    entities_get_url,
-    type WikibaseResponse,
-  } from "@accomplishedh/wikibase";
-  import { onMount } from "svelte";
-
   import type { PageProps } from "./$types";
 
   let { data }: PageProps = $props();
-
-  let fowqs = $derived(
-    [...data.fieldsOfWork.keys()].toSorted(
-      (a, b) => data.fieldsOfWork.get(b)! - data.fieldsOfWork.get(a)!,
-    ),
-  );
-
-  let u = $derived(
-    entities_get_url({ ids: fowqs.slice(0, 50), props: ["labels"] }), // TODO stop silently skipping!
-  );
-
-  let wikibaseResponsePromise = $state<Promise<WikibaseResponse>>();
-
-  onMount(() => {
-    console.log(u);
-    wikibaseResponsePromise = fetch(u, apiRequestConfig).then(
-      (r) => r.json() as Promise<WikibaseResponse>,
-    );
-  });
+  let { graph } = $derived(data);
 </script>
 
-<main>
-  <div class="container">
-    <h1>Some Fields Of Work Remarks</h1>
-
-    {#await wikibaseResponsePromise}
-      hold on tight for fows
-    {:then possiblySuccessful}
-      {@const fows =
-        possiblySuccessful && possiblySuccessful.success === 1
-          ? Object.values(possiblySuccessful.entities ?? {})
-          : []}
-
-      <section>
-        {#each Object.values(fows) as fow (fow.id)}
-          <div>
-            {fow.id}
-          </div>
-          <div>
-            {fromDictionary(fow.labels)}
-          </div>
-          <div>
-            {data.fieldsOfWork.get(fow.id)}
-          </div>
-        {/each}
-      </section>
-    {/await}
+<div class="graph">
+  <div class="points">
+    {#each graph.nodes as point (point.id)}
+      <div
+        class={[
+          "point",
+          { fow: point.type === "field", human: point.type === "person" },
+        ]}
+      >
+        {point.id}
+      </div>
+    {/each}
   </div>
-</main>
+  <div class="edges">
+    {#each graph.edges as edge (edge[0].id.concat("!").concat(edge[1].id))}
+      <div class={["edge"]}>
+        <div>
+          {edge[0].id}
+        </div>
+        <div>
+          {edge[1].id}
+        </div>
+      </div>
+    {/each}
+  </div>
+</div>
 
 <style>
-  section {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+  div {
+    display: inline-block;
+    margin: 2px;
+    padding: 2px;
+  }
+  .point {
+    border: thin solid lime;
+  }
+  .edges {
+    display: flex;
+  }
+  .edge {
+    background-color: red;
+  }
+
+  .human {
+    border: 2px solid blue;
+  }
+  .fow {
+    border: thin solid orange;
   }
 </style>

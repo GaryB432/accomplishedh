@@ -51,7 +51,4 @@ export default defineConfig([
       "@typescript-eslint/explicit-module-boundary-types": "off",
     },
   },
-  {
-    ignores: ["**/dist", "**/coverage"],
-  },
 ]);

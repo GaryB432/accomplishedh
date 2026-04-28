@@ -1,110 +1,101 @@
-import { confirm } from "@inquirer/prompts";
-import colors from "picocolors";
-
-import { sleep } from "@accomplishedh/shared";
-import { readAll } from "../data/wb/fs-reader.js";
+import type { FieldsOfWorkDatasetV1 as FowDataSet } from "@accomplishedh/shared/lib/dto.types.js";
+import {
+  ROOTS,
+  toFowEntry,
+  USER_AGENT,
+  type SparqlResponse,
+} from "@accomplishedh/wikibase";
+import { writeFileSync } from "fs";
+import { dataRoot, readAll } from "../data/wb/fs-reader.js";
 import { type CommandArgs } from "./refresh.types.js";
+
+const WIKIDATA_SPARQL_URL = "https://query.wikidata.org/sparql";
+const BATCH_SIZE = 200;
+
+const schemaVersion = 1;
 
 export async function refreshCommand({
   opts,
   today,
 }: CommandArgs): Promise<void> {
-  console.log(opts, today);
-  const systemDate = new Date().toISOString();
-  today ??= systemDate;
-  if (today.length !== systemDate.length) {
-    console.log(today, 'is here');
-    throw new Error("now must be ISO Date");
-  }
-
-  // if (!opts.listOnly) {
-  //   throw new Error("only listOnly is supprted in this version");
-  // }
-  console.log(
-    colors.bgBlue(
-      colors.white(
-        "https://business.facebook.com/latest/home?asset_id=100786702612447",
-      ),
-    ),
-  );
-  console.log(colors.gray("https://www.facebook.com/AccomplishedH"));
-
-  const everybody = readAll();
-  const subjects = everybody.filter((h) => h);
-  console.log(subjects);
-
-  // let i = 0;
-
-  // for (const botdh of botdEuros) {
-  //   while (true) {
-  //     const human = readById(botdh.id)!;
-  //     console.log(colors.cyan(`${human.name} ${human.yob}`));
-
-  //     const { enhancedText, raw, valid } = checkForTweet(human);
-  //     console.log(enhancedText);
-
-  //     if (!("src" in human.portrait.img)) {
-  //       console.log(colors.yellowBright("Note: No portrait src"));
-  //     }
-
-  //     if (!valid) {
-  //       console.log(
-  //         `${colors.bgYellowBright(
-  //           colors.black("Fix and answer N to retry:"),
-  //         )} ${colors.yellowBright(humanUrl(human))}`,
-  //       );
-  //     }
-
-  //     await copyToClipboard(raw);
-  //     console.log();
-  //     const posted = await askIfPosted();
-  //     console.log();
-  //     if (posted) {
-  //       i++;
-  //       break;
-  //     }
-  //   }
-  // }
-  console.log(
-    colors.cyanBright(` ${today} ${subjects.length} refreshed i guess `),
-  );
-  return await sleep(500);
-}
-
-async function askIfPosted(): Promise<boolean> {
-  return await confirm({
-    message: "Has this been posted or intentionally skipped?",
+  return new Promise((success) => {
+    console.log("just use the make-connection script");
+    success(void 0);
   });
 }
 
-async function copyToClipboard(text: string) {
-  const clipboard = await import("clipboardy");
-  clipboard.default.writeSync(text);
-  console.log(
-    `${colors.cyan("√")} ${colors.bgBlack(colors.greenBright("copied!"))}`,
+export async function ΘrefreshCommand({
+  opts,
+  today,
+}: CommandArgs): Promise<void> {
+  const systemDate = new Date().toISOString();
+  today ??= systemDate;
+  if (today.length !== systemDate.length) {
+    console.log(today, "is here");
+    throw new Error("now must be ISO Date");
+  }
+  const fowDataset: FowDataSet = {
+    schemaVersion,
+    generatedAt: today,
+    people: {},
+  };
+
+  const everybody = readAll();
+  const allIds = everybody.map((s) => s.id);
+
+  console.log(`🚀 Mapping FOWs for ${allIds.length} humans...`);
+
+  for (let i = 0; i < allIds.length; i += BATCH_SIZE) {
+    const currentBatch = allIds.slice(i, i + BATCH_SIZE);
+    const humansValues = currentBatch.map((id) => `wd:${id}`).join(" ");
+
+    const rootValues = Object.entries(ROOTS)
+      .map(([, qid]) => `wd:${qid}`)
+      .join(" ");
+
+    const query = `
+        SELECT ?human ?fow ?fowLabel ?root WHERE {
+          VALUES ?human { ${humansValues} }
+          VALUES ?root { ${rootValues} }
+          
+          ?human wdt:P101 ?fow .
+          ?fow wdt:P279* ?root .
+          
+          SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+        }
+      `;
+
+    const url = `${WIKIDATA_SPARQL_URL}?query=${encodeURIComponent(query)}`;
+
+    const response = await fetch(url, {
+      headers: {
+        Accept: "application/sparql-results+json",
+        "User-Agent": USER_AGENT,
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error(`SPARQL query failed: ${response.statusText}`);
+    }
+
+    const data = (await response.json()) as SparqlResponse;
+
+    void data.results.bindings.map(toFowEntry).reduce((a, fow) => {
+      const { id, category, label, human } = fow;
+
+      a[human] ??= { fows: [] };
+      a[human].fows.push({ id, category, label });
+
+      return a;
+    }, fowDataset.people);
+
+    console.log(`✅ Processed batch ${Math.floor(i / BATCH_SIZE) + 1}.`);
+    await new Promise((res) => setTimeout(res, 500));
+  }
+
+  writeFileSync(
+    `${dataRoot}/wikibase-cache/fields-of-work.json`,
+    JSON.stringify(fowDataset, undefined, 2),
+    "utf-8",
   );
 }
-// function readAll(): EuroHuman[] {
-//   return [];
-// }
-
-// function readById(id: string) {
-//   const e: EuroHuman = {
-//     adultbasic: "",
-//     adultregion: "",
-//     death: "",
-//     dob: "",
-//     era: "",
-//     id,
-//     inventory: "",
-//     knownFor: "",
-//     name: "",
-//     osfName: "",
-//     portrait: { img: { src: "" } },
-//     props: [],
-//     serial: "",
-//     sr: undefined,
-//     yob: "",
-//   };
-//   return e;
-// }

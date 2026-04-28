@@ -1,31 +1,32 @@
 export interface Ieurope {
+  serial: string;
+  name: string;
+  birth: string;
+  death: string;
+  era: string;
+  inventory: string;
   adultbasic: string;
   adultregion: string;
   adultsubregion: string;
-  birth: string;
   childbasic: string;
   childregion: string;
   childsubregion: string;
-  death: string;
-  era: string;
   fl: string;
-  inventory: string;
-  name: string;
-  serial: string;
 }
+
 export interface Iha {
+  serial: string;
+  index: string;
+  name: string;
   birth: string;
   birthCountry: string;
   death: string;
-  duplicate: string;
-  ethnicity: string;
-  fl: string;
-  index: string;
+  workCountry: string;
   inventory: string;
-  name: string;
   noOfInventories: string;
   scienceField: string;
-  serial: string;
+  ethnicity: string;
   woman: string;
-  workCountry: string;
+  duplicate: string;
+  fl: string;
 }
