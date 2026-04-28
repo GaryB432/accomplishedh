@@ -24,6 +24,8 @@ jobs:
         uses: pnpm/action-setup@v4
         with:
           run_install: true
+      - name: Refresh SSR Wikibase Data
+        run: pnpm run update:wb
       - name: Check
         run: pnpm --recursive run check
       - name: CLI Smoke Test
@@ -34,5 +36,3 @@ jobs:
         run: pnpm --recursive run build
       - name: Test
         run: pnpm --recursive run test
-      - name: Refresh SSR Wikibase Data
-        run: pnpm run update:fows

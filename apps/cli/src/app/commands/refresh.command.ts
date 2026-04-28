@@ -18,7 +18,16 @@ export async function refreshCommand({
   opts,
   today,
 }: CommandArgs): Promise<void> {
-  console.log(opts, today);
+  return new Promise((success) => {
+    console.log("just use the make-connection script");
+    success(void 0);
+  });
+}
+
+export async function ΘrefreshCommand({
+  opts,
+  today,
+}: CommandArgs): Promise<void> {
   const systemDate = new Date().toISOString();
   today ??= systemDate;
   if (today.length !== systemDate.length) {
