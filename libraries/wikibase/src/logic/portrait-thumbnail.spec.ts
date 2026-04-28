@@ -25,7 +25,7 @@ function fetch(
       );
     }
   }
-  return Promise.reject("404 on the 86");
+  return Promise.reject(new Error("404 on the 86"));
 }
 
 const pages = couplaQids.reduce((a, id) => {

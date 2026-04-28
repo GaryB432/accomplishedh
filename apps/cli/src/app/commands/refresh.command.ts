@@ -22,7 +22,7 @@ export async function refreshCommand({
   const systemDate = new Date().toISOString();
   today ??= systemDate;
   if (today.length !== systemDate.length) {
-    console.log(today, 'is here');
+    console.log(today, "is here");
     throw new Error("now must be ISO Date");
   }
   const fowDataset: FowDataSet = {
