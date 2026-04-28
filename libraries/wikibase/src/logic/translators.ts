@@ -7,6 +7,7 @@ import { WIKIDATA_PERSON_PROPERTIES as P } from "../constants.js";
 import { isoFrom } from "../data/timevalue.js";
 import type { Binding, Entity, LanguageDictionary } from "../types.js";
 
+/** @deprecated */
 const categories: Map<EntityQid, FowRootCategoryV1> = new Map([
   ["Q36649", "Art"],
   ["Q8242", "Lit"],
@@ -43,6 +44,8 @@ export function fromDictionary(
   }
   return "dunno af";
 }
+
+/** @deprecated */
 export function toFowEntry(
   row: Record<string, Binding>,
   index?: number,
@@ -65,6 +68,7 @@ export function asQid(value: string): `Q${number}` {
   return value as `Q${number}`;
 }
 
+/** @deprecated */
 export function extractValue(typedValue: { value: string }): string {
   const popped = typedValue.value.split("/").pop();
   if (!popped) {
@@ -75,6 +79,7 @@ export function extractValue(typedValue: { value: string }): string {
 
 const missing: EntityQid[] = [];
 
+/** @deprecated */
 function getFowRootCategory(arg0: Binding): FowRootCategoryV1 {
   const df = categories.get(asQid(extractValue(arg0)));
 
