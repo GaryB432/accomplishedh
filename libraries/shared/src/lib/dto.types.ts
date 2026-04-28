@@ -1,8 +1,3 @@
-// --- Wikibase cache DTOs (generated artifacts) --------------------------------
-// Conventions:
-// - Cache files are script-generated and disposable.
-// - Prefer per-file metadata: `generatedAt` + `schemaVersion` live in the cache file.
-
 export type PersonQid = `Q${number}`;
 export type EntityQid = `Q${number}`;
 
@@ -56,10 +51,10 @@ export type FowRootCategoryV1 = "Art" | "Lit" | "Music" | "Science";
  * `label` is currently always present in the script output; keep it required.
  */
 export type FieldOfWorkEntryV1 = {
-  /** Root category bucket (derived by subclass-of root). */
-  category: FowRootCategoryV1;
   /** Field-of-work QID (P101 value). */
   id: EntityQid;
+  /** Root category bucket (derived by subclass-of root). */
+  category: FowRootCategoryV1;
   /** English label returned by the label service. */
   label: string;
 };

@@ -1,0 +1,123 @@
+{
+  "head": {
+    "vars": ["human", "fow", "fowLabel", "root"]
+  },
+  "results": {
+    "bindings": [
+      {
+        "fow": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q742333"
+        },
+        "root": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q36649"
+        },
+        "human": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q49898"
+        },
+        "fowLabel": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "history painting"
+        }
+      },
+      {
+        "fow": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q8253972"
+        },
+        "root": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q8242"
+        },
+        "human": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q49496"
+        },
+        "fowLabel": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "fiction"
+        }
+      },
+      {
+        "fow": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q8253972"
+        },
+        "root": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q8242"
+        },
+        "human": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q47484"
+        },
+        "fowLabel": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "fiction"
+        }
+      },
+      {
+        "fow": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q7094"
+        },
+        "root": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q336"
+        },
+        "human": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q48977"
+        },
+        "fowLabel": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "biochemistry"
+        }
+      },
+      {
+        "fow": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q8242"
+        },
+        "root": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q8242"
+        },
+        "human": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q47561"
+        },
+        "fowLabel": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "literature"
+        }
+      },
+      {
+        "fow": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q11372"
+        },
+        "root": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q336"
+        },
+        "human": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q48956"
+        },
+        "fowLabel": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "physical chemistry"
+        }
+      }
+    ]
+  }
+}

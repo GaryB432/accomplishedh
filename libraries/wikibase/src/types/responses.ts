@@ -5,10 +5,23 @@ export type ErrorResponse = BasicResponse & {
   success: 0;
 };
 
+type BindingUri = {
+  type: "uri";
+  value: string;
+};
+
+type BindingLiteral = {
+  "xml:lang"?: string | undefined;
+  type: "literal";
+  value: string;
+};
+
+export type Binding = BindingLiteral | BindingUri;
+
 export type QueryBindingsResponse = {
   head: { vars: string[] };
   results: {
-    bindings: Array<{ item: Binding }>;
+    bindings: Record<string, Binding>[];
   };
 };
 
@@ -50,9 +63,4 @@ export type WikibaseResponse = ErrorResponse | SuccessResponse;
 
 type BasicResponse = {
   warnings?: Record<string, ResponseWarnings>;
-};
-
-type Binding = {
-  type: string;
-  value: string;
 };

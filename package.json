@@ -9,7 +9,7 @@
     "check": "pnpm -r check",
     "lint": "pnpm -r lint",
     "test": "pnpm -r test",
-    "update:fows": "node tools/data/map-fows.mjs"
+    "update:wb": "node tools/make-connections.mjs"
   },
   "pnpm": {
     "peerDependencyRules": {
