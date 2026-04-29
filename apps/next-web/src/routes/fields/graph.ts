@@ -19,25 +19,57 @@ export function grabGraphParts(r: Record<string, { fows: Fow[] }>): Graph {
 
   const nodes: Node[] = [];
 
-  const fmap = new Set();
+  const fmap = new Set<string>();
+  const emap = new Set<string>();
+  let dupliatedConnectionCount = 0;
 
-  Object.entries(r).forEach(([a, b]) => {
-    nodes.push({
+  Object.entries(r).forEach(([personq, personRow]) => {
+    const personNode = {
       data: {},
-      id: a,
-      type: "person",
-    });
+      id: personq,
+      type: "person" as const,
+    };
+    nodes.push(personNode);
 
-    b.fows.forEach((f) => {
-      if (!fmap.has(f.id)) {
-        fmap.add(f.id);
-        nodes.push({
-          data: f,
-          id: f.id,
-          type: "field",
-        });
-      }
-    });
+    personRow.fows
+      .map((fieldNode) => ({
+        data: fieldNode,
+        type: "field" as const,
+        id: fieldNode.id,
+      }))
+      .forEach((fieldNode) => {
+        if (!fmap.has(fieldNode.id)) {
+          fmap.add(fieldNode.id);
+          nodes.push(fieldNode);
+        }
+        const hedgeRow = [fieldNode, personNode] as Edge;
+        const edgeId = fieldNode.id.concat("|".concat(personNode.id));
+        if (emap.has(edgeId)) {
+          dupliatedConnectionCount++;
+        } else {
+          emap.add(edgeId);
+          edges.push(hedgeRow);
+        }
+      });
+
+    // b.fows.forEach((f) => {
+    //   let fieldNode: Node = {
+    //     data: f,
+    //     id: f.id,
+    //     type: "field" as const,
+    //   };
+    //   // if (!fmap.has(f.id)) {
+    //   //   fieldNode = {
+    //   //     data: f,
+    //   //     id: f.id,
+    //   //     type: "field" as const,
+    //   //   };
+
+    //   //   fmap.add(f.id);
+    //   //   nodes.push(fieldNode);
+    //   // }
+    //   edges.push([fieldNode, personNode]);
+    // });
   });
 
   return { edges, nodes };

@@ -34,6 +34,7 @@
 
 <style>
   div {
+    font-size: 6px;
     display: inline-block;
     margin: 2px;
     padding: 2px;
@@ -42,10 +43,12 @@
     border: thin solid lime;
   }
   .edges {
+    padding: 1em;
     display: flex;
   }
   .edge {
     background-color: red;
+    border: 3px solid yellow;
   }
 
   .human {
