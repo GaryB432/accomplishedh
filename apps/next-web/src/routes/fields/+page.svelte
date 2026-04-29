@@ -1,5 +1,6 @@
 <script lang="ts">
   import cytoscape, {
+    
     type ElementDefinition,
     type StylesheetJson,
   } from "cytoscape";
@@ -10,6 +11,8 @@
   let { graph } = $derived(data);
 
   let cydiv = $state<HTMLDivElement>();
+
+    // let layout = $state(cytoscape.La)
 
   let { nodes, edges } = $derived(graph);
 
@@ -42,8 +45,10 @@
       container: cydiv,
       elements,
       style,
+      layout: { name: "random" },
     });
-    cy.layout({name: 'breadthfirst'}).run()
+    // const layout = cy.layout({ name: "cose" });
+    // layout.run();
   });
 </script>
 
