@@ -1,9 +1,7 @@
 <script lang="ts">
-  import type { Entity } from "$lib/wikibase/types.js";
-
   import { resolve } from "$app/paths";
+  import type { Entity } from "$lib/wikibase/types.js";
   import { fromDictionary } from "$lib/wikibase/utils";
-
   import { type PageProps } from "./$types.js";
   import Headshot from "./human/Headshot.svelte";
 
@@ -60,6 +58,7 @@
           <p>The next daily six is being assembled.</p>
         </div>
       {/if}
+      <a href={resolve("/fields")}>fields</a>
     </section>
   </div>
 </main>
