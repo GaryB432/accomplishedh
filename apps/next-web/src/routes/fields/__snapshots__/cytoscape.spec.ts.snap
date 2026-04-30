@@ -1,0 +1,151 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Cytoscape > createElements 1`] = `
+[
+  {
+    "classes": [
+      "field",
+    ],
+    "data": {
+      "category": "Science",
+      "id": "Q333",
+      "label": "astronomy",
+    },
+  },
+  {
+    "classes": [
+      "field",
+    ],
+    "data": {
+      "category": "Science",
+      "id": "Q12483",
+      "label": "statistics",
+    },
+  },
+  {
+    "classes": [
+      "field",
+    ],
+    "data": {
+      "category": "Lit",
+      "id": "Q8242",
+      "label": "literature",
+    },
+  },
+  {
+    "classes": [
+      "field",
+    ],
+    "data": {
+      "category": "Science",
+      "id": "Q4",
+      "label": "engineering",
+    },
+  },
+  {
+    "classes": [
+      "person",
+    ],
+    "data": {
+      "id": "Q433773",
+    },
+  },
+  {
+    "classes": [
+      "person",
+    ],
+    "data": {
+      "id": "Q364505",
+    },
+  },
+  {
+    "classes": [
+      "person",
+    ],
+    "data": {
+      "id": "Q200397",
+    },
+  },
+  {
+    "classes": [
+      "person",
+    ],
+    "data": {
+      "id": "Q187258",
+    },
+  },
+  {
+    "classes": [
+      "person",
+    ],
+    "data": {
+      "id": "Q81130",
+    },
+  },
+  {
+    "classes": [
+      "person",
+    ],
+    "data": {
+      "id": "Q245355",
+    },
+  },
+  {
+    "classes": [
+      "person",
+    ],
+    "data": {
+      "id": "Q247603",
+    },
+  },
+  {
+    "data": {
+      "id": "",
+      "source": "Q333",
+      "target": "Q433773",
+    },
+  },
+  {
+    "data": {
+      "id": "",
+      "source": "Q333",
+      "target": "Q364505",
+    },
+  },
+  {
+    "data": {
+      "id": "",
+      "source": "Q12483",
+      "target": "Q200397",
+    },
+  },
+  {
+    "data": {
+      "id": "",
+      "source": "Q333",
+      "target": "Q187258",
+    },
+  },
+  {
+    "data": {
+      "id": "",
+      "source": "Q333",
+      "target": "Q81130",
+    },
+  },
+  {
+    "data": {
+      "id": "",
+      "source": "Q8242",
+      "target": "Q245355",
+    },
+  },
+  {
+    "data": {
+      "id": "",
+      "source": "Q4",
+      "target": "Q247603",
+    },
+  },
+]
+`;
