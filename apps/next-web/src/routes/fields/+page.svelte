@@ -1,6 +1,5 @@
 <script lang="ts">
   import cytoscape, {
-    
     type ElementDefinition,
     type StylesheetJson,
   } from "cytoscape";
@@ -12,7 +11,7 @@
 
   let cydiv = $state<HTMLDivElement>();
 
-    // let layout = $state(cytoscape.La)
+  // let layout = $state(cytoscape.La)
 
   let { nodes, edges } = $derived(graph);
 
@@ -41,7 +40,7 @@
   // let cy = $state<cytoscape.Core>();
 
   onMount(() => {
-    const cy = cytoscape({
+    cytoscape({
       container: cydiv,
       elements,
       style,
