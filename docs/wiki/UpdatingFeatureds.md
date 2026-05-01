@@ -17,6 +17,7 @@ pnpm -r --filter @accomplishedh/cli... build
 Create, for example, _90_ days of features (6 per day) in `apps/web/static/data/featured.json` starting on _May 17, 2029_
 
 ```shell
+rm apps/web/static/data/featured.json
 ha featured 2029-05-17 --days 90
 ```
 
