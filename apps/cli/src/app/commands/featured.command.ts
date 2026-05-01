@@ -30,7 +30,7 @@ export function portraitedOnly(all: EuroHuman[]): EuroHuman[] {
   );
 }
 
-const dataRoot = normalize(join(import.meta.dirname, "../../../../", dataPath));
+const dataRoot = normalize(join(import.meta.dirname, "../../../", dataPath));
 
 const featuredsFileName = join(dataRoot, "featured.json");
 

@@ -14,7 +14,8 @@ export async function fetchEntities(
   props: EntityPropertyName[],
 ): Promise<Entities> {
   if (ids.length === 0 || props.length === 0) {
-    throw new Error("do not get empty arrays");
+    console.log("do not get empty arrays");
+    return {};
   }
   const entityUrl = entities_get_url({
     ids,
