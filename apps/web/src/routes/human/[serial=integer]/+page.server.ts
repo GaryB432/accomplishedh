@@ -7,25 +7,34 @@ import { error, redirect } from "@sveltejs/kit";
 import type { Actions, PageServerLoad } from "./$types";
 
 export const load: PageServerLoad = async (ctx) => {
-  const dataService = await FeDataSvc.create(ctx.fetch);
-  const fhs = await dataService.getFeaturedHumans([ctx.locals.todayISO]);
-  if (!fhs) {
-    error(500, "No Featureds");
-  }
-  const featured = fhs ? fhs.map((fh) => fh.human) : [];
-  const human = await dataService.getHuman(ctx.params.serial);
+  try {
+    const dataService = await FeDataSvc.create(ctx.fetch);
+    const fhs = await dataService.getFeaturedHumans([ctx.locals.todayISO]);
+    if (!fhs) {
+      console.error("No featured humans found");
+    }
+    const featured = fhs ? fhs.map((fh) => fh.human) : [];
+    const human = await dataService.getHuman(ctx.params.serial);
 
-  if (!human) {
-    error(404, "Not found");
-  }
-  const admin = isGary(ctx.locals);
+    if (!human) {
+      error(404, "Not found");
+    }
+    const admin = isGary(ctx.locals);
 
-  // await refreshPortraitThumbnails(ctx.fetch, [human], 220);
-  return {
-    admin,
-    featured,
-    human,
-  };
+    // await refreshPortraitThumbnails(ctx.fetch, [human], 220);
+    return {
+      admin,
+      featured,
+      human,
+    };
+  } catch (e) {
+    console.error(`Error loading human ${ctx.params.serial}:`, e);
+    // If it's already a SvelteKit error (like the 404 above), rethrow it
+    if (e && typeof e === "object" && "status" in e) {
+      throw e;
+    }
+    error(500, "Internal Server Error");
+  }
 };
 
 export const actions: Actions = {
