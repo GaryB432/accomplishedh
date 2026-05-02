@@ -1,7 +1,7 @@
 import { FeDataSvc } from "$lib/data/fe-data.svelte";
-import { isValidISO8601 } from "@accomplishedh/shared";
+import { isValidISO8601, type WikiHuman } from "@accomplishedh/shared";
+import { refreshPortraitThumbnails } from "@accomplishedh/wikibase";
 import { error } from "@sveltejs/kit";
-
 import type { RequestHandler } from "./$types";
 
 export const GET: RequestHandler = async (ctx) => {
@@ -15,9 +15,8 @@ export const GET: RequestHandler = async (ctx) => {
     error(400, "Bad Request");
   }
 
-  type SomeType = {};
+  let featureds: WikiHuman[] = [];
 
-  let featureds: SomeType[] = [];
   try {
     const rawFeatureds = await dataService.getFeaturedHumans([iso]);
     if (rawFeatureds) {
@@ -28,6 +27,8 @@ export const GET: RequestHandler = async (ctx) => {
   } catch (e) {
     console.error(`Failed to fetch featured humans for ${iso}:`, e);
   }
+
+  await refreshPortraitThumbnails(ctx.fetch, featureds, 200, true);
 
   const headers = new Headers([
     ["content-type", "application/json;charset=UTF-8"],
