@@ -1,5 +1,5 @@
 import type { AccomplishedHuman } from "@accomplishedh/shared";
-import type { ItemId } from "@accomplishedh/wikibase/types";
+import type { Entities, ItemId } from "@accomplishedh/wikibase/types";
 
 import { fetchEntities } from "$lib/wikibase/api";
 import { toAccomplishedH } from "$lib/wikibase/utils";
@@ -37,11 +37,18 @@ async function grabDayFeatureds(
       return { entity, on };
     });
 
-  const featuredEntities = await fetchEntities(
-    fetch,
-    featureds.map<string>((f) => f.entity),
-    ["labels", "descriptions", "claims"],
-  );
+  let featuredEntities: Entities = {};
+  if (featureds.length > 0) {
+    try {
+      featuredEntities = await fetchEntities(
+        fetch,
+        featureds.map<string>((f) => f.entity),
+        ["labels", "descriptions", "claims"],
+      );
+    } catch (e) {
+      console.error("Failed to fetch featured entities in layout:", e);
+    }
+  }
 
   const humans: AccomplishedHuman[] =
     Object.values(featuredEntities).map(toAccomplishedH);

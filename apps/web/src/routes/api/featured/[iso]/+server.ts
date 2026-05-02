@@ -14,9 +14,21 @@ export const GET: RequestHandler = async (ctx) => {
   if (!isValidISO8601(iso)) {
     error(400, "Bad Request");
   }
-  const featureds = (await dataService.getFeaturedHumans([iso])).map(
-    (fh) => fh.human,
-  );
+
+  type SomeType = {};
+
+  let featureds: SomeType[] = [];
+  try {
+    const rawFeatureds = await dataService.getFeaturedHumans([iso]);
+    if (rawFeatureds) {
+      featureds = rawFeatureds.map((fh) => fh.human);
+    } else {
+      console.error(`No featured humans found for ISO: ${iso}`);
+    }
+  } catch (e) {
+    console.error(`Failed to fetch featured humans for ${iso}:`, e);
+  }
+
   const headers = new Headers([
     ["content-type", "application/json;charset=UTF-8"],
     ["Access-Control-Allow-Credentials", "true"],
