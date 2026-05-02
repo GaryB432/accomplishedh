@@ -5,8 +5,8 @@ import {
   diffCount,
   firstAndOnly,
   highlightDefiniteArticle,
-  ΘpadSerialForKey,
-  ΘshardKeyFor,
+  padSerialForKey,
+  shardKeyFor,
 } from "./shared";
 
 describe("highlightDefiniteArticle", () => {
@@ -56,10 +56,10 @@ describe("highlightDefiniteArticle", () => {
 
 describe("data keys", () => {
   test("padSerialForKey", () => {
-    expect(ΘpadSerialForKey("42")).toEqual("000042");
+    expect(padSerialForKey("42")).toEqual("000042");
   });
   test("shardKeyFor", () => {
-    expect(ΘshardKeyFor({ id: "00001-00000000000" })).toEqual("1");
+    expect(shardKeyFor({ id: "00001-00000000000" })).toEqual("1");
   });
 });
 
