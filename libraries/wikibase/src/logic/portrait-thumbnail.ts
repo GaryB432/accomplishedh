@@ -1,8 +1,6 @@
-import type { Portrait, WikiHuman } from "@accomplishedh/shared";
-
-import type { CommonsPage, CommonsResponse } from "../types.js";
-
+import { sleep, type Portrait, type WikiHuman } from "@accomplishedh/shared";
 import { thumbnail_query_url } from "../data/urls.js";
+import type { CommonsPage, CommonsResponse } from "../types.js";
 
 export async function refreshPortraitThumbnails(
   fetchr: typeof fetch,
@@ -13,6 +11,8 @@ export async function refreshPortraitThumbnails(
     humans.filter((h) => h.entity && h.entity.id).map((h) => h.entity!.id),
     width,
   );
+
+  await sleep(100);
 
   const thumb_response = await fetchr(turl);
 
@@ -54,7 +54,7 @@ function freshNewPortrait(
   const height = Math.ceil((width * 11) / 9);
   commonsPage.thumbnail ??= {
     height,
-    source: `//placehold.co/${width}x${height}?text=kthx`,
+    source: `//placehold.co/${width}x${height}?text=soon`,
     width,
   };
 
