@@ -2,8 +2,8 @@ import {
   type FeaturedHuman,
   Logger,
   type WikiHuman,
-  ΘpadSerialForKey,
-  ΘshardKeyFor,
+  padSerialForKey,
+  shardKeyFor,
 } from "@accomplishedh/shared";
 import { join } from "node:path";
 import { SvelteSet } from "svelte/reactivity";
@@ -93,7 +93,7 @@ export class FeDataSvc {
   }
 
   public async getHuman(serial: string): Promise<undefined | WikiHuman> {
-    const id = this.top.guidsBySerial[ΘpadSerialForKey(serial)];
+    const id = this.top.guidsBySerial[padSerialForKey(serial)];
     if (!id) {
       // throw new Error(`no record ${serial}`)
       return undefined;
@@ -107,7 +107,7 @@ export class FeDataSvc {
 
   private async digestFromGuid(humanId: string): Promise<WikiHuman> {
     if (!this.digestedHumans[humanId]) {
-      const sk = ΘshardKeyFor({ id: humanId });
+      const sk = shardKeyFor({ id: humanId });
 
       const relative_path = getShardPathFor(sk, join("shards", "*.json"));
 

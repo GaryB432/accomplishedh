@@ -1,32 +1,43 @@
-import type { Portrait, WikiHuman } from "@accomplishedh/shared";
-
-import type { CommonsPage, CommonsResponse } from "../types.js";
-
+import { sleep, type Portrait, type WikiHuman } from "@accomplishedh/shared";
 import { thumbnail_query_url } from "../data/urls.js";
+import type { CommonsPage, CommonsPages, CommonsResponse } from "../types.js";
 
 export async function refreshPortraitThumbnails(
   fetchr: typeof fetch,
   humans: Pick<WikiHuman, "entity" | "portrait">[],
   width: number,
+  online: boolean,
 ): Promise<void> {
+  let reso: CommonsResponse = {
+    batchcomplete: "",
+    query: {
+      pages: humans.reduce((a, b) => {
+        a[b.entity!.id] = { ns: 0, title: b.entity!.id, pageid: 0 };
+        return a;
+      }, {} as CommonsPages),
+    },
+  };
+  // console.log(workingResponseToWorkWith);
   const turl = thumbnail_query_url(
     humans.filter((h) => h.entity && h.entity.id).map((h) => h.entity!.id),
     width,
   );
 
-  const thumb_response = await fetchr(turl);
+  if (online) {
+    const thumb_response = await fetchr(turl);
+    if (!thumb_response.ok) {
+      console.error(thumb_response.statusText);
+      if (!thumb_response.statusText.startsWith("Too many requests")) {
+        throw new Error(
+          `Unexpected response from ${turl} ${thumb_response.status} ${thumb_response.statusText}`,
+        );
+      }
+    }
 
-  if (!thumb_response.ok) {
-    console.error(thumb_response.statusText);
-    throw new Error(
-      `Unexpected response from ${turl} (${JSON.stringify(thumb_response)})`,
-    );
+    reso = (await thumb_response.json()) as CommonsResponse;
   }
 
-  const reso = (await thumb_response.json()) as CommonsResponse;
-
   if (reso.error) {
-    console.error(JSON.stringify(reso));
     throw new Error("incovenient thumb response");
   }
 
@@ -54,7 +65,7 @@ function freshNewPortrait(
   const height = Math.ceil((width * 11) / 9);
   commonsPage.thumbnail ??= {
     height,
-    source: `//placehold.co/${width}x${height}?text=kthx`,
+    source: `//placehold.co/${width}x${height}?text=soon`,
     width,
   };
 

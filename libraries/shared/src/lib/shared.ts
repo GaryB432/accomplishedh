@@ -104,13 +104,11 @@ export async function sleep(ms = 1000): Promise<void> {
   return new Promise((cb) => setTimeout(cb, ms));
 }
 
-/** @deprecated */
-export function ΘpadSerialForKey(serial: string): string {
+export function padSerialForKey(serial: string): string {
   return serial.padStart(6, "0").slice(0, 6);
 }
 
-/** @deprecated */
-export function ΘshardKeyFor(h: Pick<EuroHuman, "id">): string {
+export function shardKeyFor(h: Pick<EuroHuman, "id">): string {
   return h.id.slice(4, 5);
 }
 

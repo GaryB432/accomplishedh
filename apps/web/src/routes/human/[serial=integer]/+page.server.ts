@@ -1,9 +1,8 @@
-import type { FormDataHuman } from "$lib/data/utils";
-
 import { FeDataSvc } from "$lib/data/fe-data.svelte";
+import type { FormDataHuman } from "$lib/data/utils";
 import { isGary } from "$lib/utils";
+import { refreshPortraitThumbnails } from "@accomplishedh/wikibase";
 import { error, redirect } from "@sveltejs/kit";
-
 import type { Actions, PageServerLoad } from "./$types";
 
 export const load: PageServerLoad = async (ctx) => {
@@ -20,7 +19,8 @@ export const load: PageServerLoad = async (ctx) => {
   }
   const admin = isGary(ctx.locals);
 
-  // await refreshPortraitThumbnails(ctx.fetch, [human], 220);
+  await refreshPortraitThumbnails(ctx.fetch, [human], 220, true);
+
   return {
     admin,
     featured,

@@ -41,13 +41,13 @@
     <div class="gr">
       <div class="th">GIT_COMMIT_MESSAGE</div>
       <div class="td">{vercelEnv.GIT_COMMIT_MESSAGE}</div>
-      <div class="th">GIT_COMMIT_REF†</div>
+      <div class="th">GIT_COMMIT_REF</div>
       <div class="td">{vercelEnv.GIT_COMMIT_REF}</div>
       <div class="th">GIT_COMMIT_SHA</div>
       <div class="td">
         <a
           target="_blank"
-          href={'https://github.com/GaryB432/human-accomplishment/commit/'.concat(
+          href={'https://github.com/GaryB432/accomplishedh/commit/'.concat(
             vercelEnv.GIT_COMMIT_SHA,
           )}
         >

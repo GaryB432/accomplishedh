@@ -54,7 +54,7 @@ describe("PortraitThumbnail", () => {
         },
       };
     });
-    await refreshPortraitThumbnails(fetch, subjects, 220);
+    await refreshPortraitThumbnails(fetch, subjects, 220, true);
     expect(subjects).toMatchInlineSnapshot(`
       [
         {
