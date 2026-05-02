@@ -19,7 +19,7 @@ export const load: PageServerLoad = async (ctx) => {
   }
   const admin = isGary(ctx.locals);
 
-  await refreshPortraitThumbnails(ctx.fetch, [human], 220);
+  await refreshPortraitThumbnails(ctx.fetch, [human], 220, true);
 
   return {
     admin,

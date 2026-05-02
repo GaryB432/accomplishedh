@@ -6,13 +6,20 @@ export async function refreshPortraitThumbnails(
   fetchr: typeof fetch,
   humans: Pick<WikiHuman, "entity" | "portrait">[],
   width: number,
+  online: boolean,
 ): Promise<void> {
   const turl = thumbnail_query_url(
     humans.filter((h) => h.entity && h.entity.id).map((h) => h.entity!.id),
     width,
   );
 
-  await sleep(100);
+  if (!online) {
+    Object.values(humans).forEach(
+      (h) => (h.portrait = freshNewPortrait(undefined, width)),
+    );
+
+    return;
+  }
 
   const thumb_response = await fetchr(turl);
 
