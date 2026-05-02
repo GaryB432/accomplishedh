@@ -13,7 +13,8 @@ export const load: PageServerLoad = async (ctx) => {
     const featuredHumans: FeaturedHuman[] | null =
       await dataService.getFeaturedHumans([locals.todayISO]);
     if (!featuredHumans) {
-      error(503, "the first bad things");
+      console.error("No featured humans found for today");
+      return { ro: { humans: [] } };
     }
     const ro = { humans: featuredHumans.map((fh) => fh.human) };
 
@@ -21,9 +22,8 @@ export const load: PageServerLoad = async (ctx) => {
 
     return { ro };
   } catch (e) {
-    const msg = error instanceof Error ? error.message : String(error);
-    console.error(msg);
-    error(503, msg);
+    console.error("Error loading home page data:", e);
+    return { ro: { humans: [] } };
   }
 };
 
