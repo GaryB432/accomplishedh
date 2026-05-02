@@ -13,7 +13,7 @@ export const load: PageServerLoad = async (ctx) => {
     const featuredHumans: FeaturedHuman[] | null =
       await dataService.getFeaturedHumans([locals.todayISO]);
     if (!featuredHumans) {
-      error(503, "some bad things");
+      error(503, "the first bad things");
     }
     const ro = { humans: featuredHumans.map((fh) => fh.human) };
 
@@ -21,8 +21,9 @@ export const load: PageServerLoad = async (ctx) => {
 
     return { ro };
   } catch (e) {
-    console.error(e);
-    error(503, "other bad things");
+    const msg = error instanceof Error ? error.message : String(error);
+    console.error(msg);
+    error(503, msg);
   }
 };
 
