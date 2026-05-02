@@ -37,11 +37,14 @@ async function grabDayFeatureds(
       return { entity, on };
     });
 
-  const featuredEntities = await fetchEntities(
-    fetch,
-    featureds.map<string>((f) => f.entity),
-    ["labels", "descriptions", "claims"],
-  );
+  const featuredEntities =
+    featureds.length > 0
+      ? await fetchEntities(
+          fetch,
+          featureds.map<string>((f) => f.entity),
+          ["labels", "descriptions", "claims"],
+        )
+      : {};
 
   const humans: AccomplishedHuman[] =
     Object.values(featuredEntities).map(toAccomplishedH);

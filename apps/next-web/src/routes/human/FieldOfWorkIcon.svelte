@@ -24,11 +24,14 @@
   let labels = $state<Promise<Entities>>();
 
   onMount(() => {
-    labels = fetchEntities(
-      globalThis.fetch,
-      fowValues.map((v) => v.value.id),
-      ["labels"],
-    );
+    labels =
+      fowValues.length > 0
+        ? fetchEntities(
+            globalThis.fetch,
+            fowValues.map((v) => v.value.id),
+            ["labels"],
+          )
+        : Promise.resolve({});
   });
 </script>
 
