@@ -86,6 +86,8 @@ export class FeDataSvc {
       const wh = this.digestedHumans[fh.human.id];
 
       fh.human = wh ? wh : await this.digestFromGuid(fh.human.id);
+      
+      console.log(fh.human.portrait);
     }
 
     // this.logger.log(`featureds: ${fhs.length}`, this.getFeaturedHumans.name);
