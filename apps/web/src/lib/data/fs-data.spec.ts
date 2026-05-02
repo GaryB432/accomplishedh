@@ -1,9 +1,5 @@
 // import * as shared from "@accomplishedh/shared";
-import {
-  type EuroHuman,
-  Logger,
-  ΘpadSerialForKey,
-} from "@accomplishedh/shared";
+import { type EuroHuman, Logger, padSerialForKey } from "@accomplishedh/shared";
 import { afterEach } from "node:test";
 import { beforeEach, describe, expect, test, vi } from "vitest";
 
@@ -36,7 +32,7 @@ const TOM: EuroHuman = { ...OG, id: "TOM-30000000999", serial: "TOM" };
 
 const individuals = [JIM, BOB, TOM].map((h) => ({
   ...h,
-  serial: ΘpadSerialForKey(h.serial),
+  serial: padSerialForKey(h.serial),
 }));
 
 const featuredsArray = [
@@ -116,7 +112,7 @@ describe("getHuman", () => {
     expect(subject).toEqual({
       ...JIM,
       entity: { id: "QJIM" },
-      serial: ΘpadSerialForKey(JIM.serial),
+      serial: padSerialForKey(JIM.serial),
     });
     expect(log).toHaveBeenCalledWith("shards/1.json @ 1 🚀", "digestFromGuid");
     // expect(readJSONSpy).toHaveBeenCalledWith('test/path/serials.json');
@@ -129,7 +125,7 @@ describe("getHuman", () => {
     expect(subject).toEqual({
       ...BOB,
       entity: { id: "QBOB" },
-      serial: ΘpadSerialForKey(BOB.serial),
+      serial: padSerialForKey(BOB.serial),
     });
     expect(log).toHaveBeenCalledWith("shards/2.json @ 1 🚀", "digestFromGuid");
     // expect(readJSONSpy).toHaveBeenCalledWith('test/path/serials.json');
@@ -163,7 +159,7 @@ describe("get Featured Human", () => {
         human: {
           ...JIM,
           entity: { id: "QJIM" },
-          serial: ΘpadSerialForKey(JIM.serial),
+          serial: padSerialForKey(JIM.serial),
         },
         id: "featured-0",
         stamp: "2222-02-22",
@@ -177,7 +173,7 @@ describe("get Featured Human", () => {
         human: {
           ...BOB,
           entity: { id: "QBOB" },
-          serial: ΘpadSerialForKey(BOB.serial),
+          serial: padSerialForKey(BOB.serial),
         },
         id: "featured-2",
         stamp: "2222-02-22",
