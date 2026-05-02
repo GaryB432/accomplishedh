@@ -21,20 +21,12 @@ export const load: PageServerLoad = async (ctx) => {
     }
     const admin = isGary(ctx.locals);
 
-    // await refreshPortraitThumbnails(ctx.fetch, [human], 220);
-    return {
-      admin,
-      featured,
-      human,
-    };
-  } catch (e) {
-    console.error(`Error loading human ${ctx.params.serial}:`, e);
-    // If it's already a SvelteKit error (like the 404 above), rethrow it
-    if (e && typeof e === "object" && "status" in e) {
-      throw e;
-    }
-    error(500, "Internal Server Error");
-  }
+  // await refreshPortraitThumbnails(ctx.fetch, [human], 220);
+  return {
+    admin,
+    featured,
+    human,
+  };
 };
 
 export const actions: Actions = {
