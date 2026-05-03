@@ -4,50 +4,20 @@ exports[`Cytoscape > createElements 1`] = `
 [
   {
     "classes": [
+      "person",
+    ],
+    "data": {
+      "id": "Q433773",
+    },
+  },
+  {
+    "classes": [
       "field",
     ],
     "data": {
       "category": "Science",
       "id": "Q333",
       "label": "astronomy",
-    },
-  },
-  {
-    "classes": [
-      "field",
-    ],
-    "data": {
-      "category": "Science",
-      "id": "Q12483",
-      "label": "statistics",
-    },
-  },
-  {
-    "classes": [
-      "field",
-    ],
-    "data": {
-      "category": "Lit",
-      "id": "Q8242",
-      "label": "literature",
-    },
-  },
-  {
-    "classes": [
-      "field",
-    ],
-    "data": {
-      "category": "Science",
-      "id": "Q4",
-      "label": "engineering",
-    },
-  },
-  {
-    "classes": [
-      "person",
-    ],
-    "data": {
-      "id": "Q433773",
     },
   },
   {
@@ -64,6 +34,16 @@ exports[`Cytoscape > createElements 1`] = `
     ],
     "data": {
       "id": "Q200397",
+    },
+  },
+  {
+    "classes": [
+      "field",
+    ],
+    "data": {
+      "category": "Science",
+      "id": "Q12483",
+      "label": "statistics",
     },
   },
   {
@@ -92,6 +72,16 @@ exports[`Cytoscape > createElements 1`] = `
   },
   {
     "classes": [
+      "field",
+    ],
+    "data": {
+      "category": "Lit",
+      "id": "Q8242",
+      "label": "literature",
+    },
+  },
+  {
+    "classes": [
       "person",
     ],
     "data": {
@@ -99,52 +89,13 @@ exports[`Cytoscape > createElements 1`] = `
     },
   },
   {
+    "classes": [
+      "field",
+    ],
     "data": {
-      "id": "",
-      "source": "Q333",
-      "target": "Q433773",
-    },
-  },
-  {
-    "data": {
-      "id": "",
-      "source": "Q333",
-      "target": "Q364505",
-    },
-  },
-  {
-    "data": {
-      "id": "",
-      "source": "Q12483",
-      "target": "Q200397",
-    },
-  },
-  {
-    "data": {
-      "id": "",
-      "source": "Q333",
-      "target": "Q187258",
-    },
-  },
-  {
-    "data": {
-      "id": "",
-      "source": "Q333",
-      "target": "Q81130",
-    },
-  },
-  {
-    "data": {
-      "id": "",
-      "source": "Q8242",
-      "target": "Q245355",
-    },
-  },
-  {
-    "data": {
-      "id": "",
-      "source": "Q4",
-      "target": "Q247603",
+      "category": "Science",
+      "id": "Q4",
+      "label": "electrical engineering",
     },
   },
 ]

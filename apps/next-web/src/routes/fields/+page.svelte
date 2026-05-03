@@ -1,30 +1,12 @@
 <script lang="ts">
-  import cytoscape, {
-    type ElementDefinition,
-    type StylesheetJson,
-  } from "cytoscape";
+  import cytoscape, { type StylesheetJson } from "cytoscape";
   import { onMount } from "svelte";
   import type { PageProps } from "./$types";
 
   let { data }: PageProps = $props();
-  let { graph } = $derived(data);
+  let { elements } = $derived(data);
 
   let cydiv = $state<HTMLDivElement>();
-
-  // let layout = $state(cytoscape.La)
-
-  let { nodes, edges } = $derived(graph);
-
-  let elements: ElementDefinition[] = $derived([
-    ...nodes.map((node) => ({ data: { ...node } })),
-    ...edges.map(([from, to]) => ({
-      data: {
-        id: from.id.concat("|").concat(to.id),
-        source: from.id,
-        target: to.id,
-      },
-    })),
-  ]);
 
   const style: StylesheetJson = [
     {
@@ -60,6 +42,6 @@
     /* position: absolute; */
     top: calc(var(--header-h) + 1em);
     left: 0;
-    border: thin solid red;
+    border: thin solid silver;
   }
 </style>
