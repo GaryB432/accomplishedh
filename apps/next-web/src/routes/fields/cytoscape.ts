@@ -76,5 +76,5 @@ export function createElements(
   // }, {});
   // console.log(fakes);
   // console.log(nodes.length)
-  return [...nodes];
+  return [...fakes];
 }
