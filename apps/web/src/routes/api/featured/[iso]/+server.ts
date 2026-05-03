@@ -5,7 +5,7 @@ import { error } from "@sveltejs/kit";
 import type { RequestHandler } from "./$types";
 
 export const GET: RequestHandler = async (ctx) => {
-  const width = ctx.url.searchParams.get("thumbnail_width") ?? "220";
+  const width = Number(ctx.url.searchParams.get("thumbnail_width") ?? "110");
   const dataService = await FeDataSvc.create(ctx.fetch);
   const fullISO =
     ctx.params.iso === "today" ? ctx.locals.todayISO : ctx.params.iso;
@@ -28,7 +28,7 @@ export const GET: RequestHandler = async (ctx) => {
     console.error(`Failed to fetch featured humans for ${iso}:`, e);
   }
 
-  await refreshPortraitThumbnails(ctx.fetch, featureds, 200, true);
+  await refreshPortraitThumbnails(ctx.fetch, featureds, width, true);
 
   const headers = new Headers([
     ["content-type", "application/json;charset=UTF-8"],
