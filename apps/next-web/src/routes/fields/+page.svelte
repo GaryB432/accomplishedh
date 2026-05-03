@@ -1,6 +1,5 @@
 <script lang="ts">
   import cytoscape, {
-    type AnimatedLayoutOptions,
     type LayoutOptions,
     type StylesheetJson,
   } from "cytoscape";
@@ -60,17 +59,19 @@
         label: "data(id)",
       },
     },
+    {
+      selector: "node.cat",
+      style: {
+        backgroundColor: "orange",
+        label: "data(label)",
+      },
+    },
   ];
 
   let cy = $state<cytoscape.Core>();
 
   onMount(() => {
-    const anoth = Object.keys(layouts).map((s) => {
-      return layouts[s];
-    });
-
-    const rr = {...layouts}
-    const newLocal = rr[selectedLayoutName];
+    const newLocal = layouts[selectedLayoutName];
     cy = cytoscape({
       container: cydiv,
       elements,
@@ -87,11 +88,11 @@
       <select
         name="lsel"
         bind:value={selectedLayoutName}
-        onchange={(e) => {
+        onchange={() => {
           cy?.layout(layouts[selectedLayoutName]).run();
         }}
       >
-        {#each Object.keys(layouts) as lopts}
+        {#each Object.keys(layouts) as lopts (lopts)}
           <option value={lopts}>{lopts}</option>
         {/each}
       </select>
