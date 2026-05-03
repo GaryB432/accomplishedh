@@ -1,4 +1,5 @@
 import { type Portrait, type WikiHuman } from "@accomplishedh/shared";
+import { USER_AGENT } from "../constants.js";
 import { thumbnail_query_url } from "../data/urls.js";
 import type { CommonsPage, CommonsPages, CommonsResponse } from "../types.js";
 
@@ -17,21 +18,23 @@ export async function refreshPortraitThumbnails(
       }, {} as CommonsPages),
     },
   };
-  // console.log(workingResponseToWorkWith);
+
   const turl = thumbnail_query_url(
     humans.filter((h) => h.entity && h.entity.id).map((h) => h.entity!.id),
     width,
   );
 
   if (online) {
-    const thumb_response = await fetchr(turl);
+    const thumb_response = await fetchr(turl, {
+      headers: {
+        Accept: "application/json",
+        "User-Agent": USER_AGENT,
+      },
+    });
     if (!thumb_response.ok) {
-      console.error(thumb_response.statusText);
-      if (!thumb_response.statusText.startsWith("Too many requests")) {
-        throw new Error(
-          `Unexpected response from ${turl} ${thumb_response.status} ${thumb_response.statusText}`,
-        );
-      }
+      throw new Error(
+        `Unexpected response from ${turl} ${thumb_response.status} ${thumb_response.statusText}`,
+      );
     }
 
     reso = (await thumb_response.json()) as CommonsResponse;
