@@ -19,10 +19,10 @@
     },
   ];
 
-  // let cy = $state<cytoscape.Core>();
+  let cy = $state<cytoscape.Core>();
 
   onMount(() => {
-    cytoscape({
+    cy = cytoscape({
       container: cydiv,
       elements,
       style,
@@ -33,15 +33,29 @@
   });
 </script>
 
-<div id="cy" class="graph" bind:this={cydiv}></div>
+<section class="main">
+  <div id="cy" class="graph" bind:this={cydiv}></div>
+  <div>
+    <div class="buttons">
+      <button
+        onclick={() => {
+          cy?.layout({ name: "breadthfirst" }).run();
+        }}>Draw</button
+      >
+    </div>
+  </div>
+</section>
 
 <style>
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 20vw;
+    border: thin solid lime;
+  }
+
   #cy {
     width: 90vw;
     height: 60vh;
-    /* position: absolute; */
-    top: calc(var(--header-h) + 1em);
-    left: 0;
     border: thin solid silver;
   }
 </style>
