@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Cytoscape > createElements 1`] = `
+exports[`Cytoscape > large 1`] = `
 [
   {
     "classes": [
@@ -21,11 +21,48 @@ exports[`Cytoscape > createElements 1`] = `
     },
   },
   {
+    "data": {
+      "id": "Q433773→Q333",
+      "source": "Q433773",
+      "target": "Q333",
+    },
+  },
+  {
+    "classes": [
+      "cat",
+    ],
+    "data": {
+      "id": "SCIENCE",
+      "label": "Science",
+    },
+  },
+  {
+    "data": {
+      "id": "Q333→SCIENCE",
+      "source": "Q333",
+      "target": "SCIENCE",
+    },
+  },
+  {
     "classes": [
       "person",
     ],
     "data": {
       "id": "Q364505",
+    },
+  },
+  {
+    "data": {
+      "id": "Q364505→Q333",
+      "source": "Q364505",
+      "target": "Q333",
+    },
+  },
+  {
+    "data": {
+      "id": "Q333→SCIENCE",
+      "source": "Q333",
+      "target": "SCIENCE",
     },
   },
   {
@@ -47,6 +84,20 @@ exports[`Cytoscape > createElements 1`] = `
     },
   },
   {
+    "data": {
+      "id": "Q200397→Q12483",
+      "source": "Q200397",
+      "target": "Q12483",
+    },
+  },
+  {
+    "data": {
+      "id": "Q12483→SCIENCE",
+      "source": "Q12483",
+      "target": "SCIENCE",
+    },
+  },
+  {
     "classes": [
       "person",
     ],
@@ -55,11 +106,39 @@ exports[`Cytoscape > createElements 1`] = `
     },
   },
   {
+    "data": {
+      "id": "Q187258→Q333",
+      "source": "Q187258",
+      "target": "Q333",
+    },
+  },
+  {
+    "data": {
+      "id": "Q333→SCIENCE",
+      "source": "Q333",
+      "target": "SCIENCE",
+    },
+  },
+  {
     "classes": [
       "person",
     ],
     "data": {
       "id": "Q81130",
+    },
+  },
+  {
+    "data": {
+      "id": "Q81130→Q333",
+      "source": "Q81130",
+      "target": "Q333",
+    },
+  },
+  {
+    "data": {
+      "id": "Q333→SCIENCE",
+      "source": "Q333",
+      "target": "SCIENCE",
     },
   },
   {
@@ -81,6 +160,29 @@ exports[`Cytoscape > createElements 1`] = `
     },
   },
   {
+    "data": {
+      "id": "Q245355→Q8242",
+      "source": "Q245355",
+      "target": "Q8242",
+    },
+  },
+  {
+    "classes": [
+      "cat",
+    ],
+    "data": {
+      "id": "LIT",
+      "label": "Lit",
+    },
+  },
+  {
+    "data": {
+      "id": "Q8242→LIT",
+      "source": "Q8242",
+      "target": "LIT",
+    },
+  },
+  {
     "classes": [
       "person",
     ],
@@ -96,6 +198,20 @@ exports[`Cytoscape > createElements 1`] = `
       "category": "Science",
       "id": "Q4",
       "label": "electrical engineering",
+    },
+  },
+  {
+    "data": {
+      "id": "Q247603→Q4",
+      "source": "Q247603",
+      "target": "Q4",
+    },
+  },
+  {
+    "data": {
+      "id": "Q4→SCIENCE",
+      "source": "Q4",
+      "target": "SCIENCE",
     },
   },
 ]
