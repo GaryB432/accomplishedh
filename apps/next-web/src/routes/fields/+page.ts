@@ -1,14 +1,15 @@
 import type { PageLoad } from "./$types";
 
+import type {
+  FieldsOfWorkSummaryV1,
+  PersonQid,
+} from "@accomplishedh/shared/lib/dto.types";
 import fieldsOfWork from "../../data/wikibase-cache/fields-of-work.json";
-import { grabGraphParts } from "./graph";
+import { createElements } from "./cytoscape";
 
 export const load = (() => {
-  Object.values(fieldsOfWork.people as Record<string, { fows: object[] }>)
-    .map((g) => g.fows.map((f) => ({ ...f, data: {} })))
-    .flat();
-
-  const graph = grabGraphParts(fieldsOfWork.people);
-
-  return { graph };
+  const elements = createElements(
+    fieldsOfWork.people as Record<PersonQid, FieldsOfWorkSummaryV1>,
+  );
+  return { elements };
 }) satisfies PageLoad;

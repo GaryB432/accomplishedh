@@ -18,7 +18,6 @@ type FlatFeaturedInfo = {
 type ISODate = string;
 
 export const load = (async (ctx) => {
-  console.log(ctx.locals.todayISO);
   const dtos = featuredJsonData as FeaturedDTO[];
   const featureds = await grabDayFeatureds(dtos, ctx.locals.todayISO);
   const admin = false;
