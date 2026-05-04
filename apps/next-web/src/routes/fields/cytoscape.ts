@@ -1,4 +1,5 @@
 import type {
+  EntityQid,
   FieldsOfWorkSummaryV1,
   PersonQid,
 } from "@accomplishedh/shared/lib/dto.types";
