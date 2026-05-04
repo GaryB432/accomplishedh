@@ -11,6 +11,11 @@ declare global {
     // interface PageState {}
     // interface Platform {}
   }
+  interface CSSStyleDeclaration {
+    anchorName?: string;
+    positionAnchor?: string;
+    positionArea?: string;
+  }
 }
 
 export {};

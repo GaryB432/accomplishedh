@@ -38,6 +38,9 @@
   // Object.values(layouts).forEach((l: AnimatedLayoutOptions)=> ({...l, anim }))
 
   let entityPopover = $state<HTMLDivElement>();
+  let hoverAnchor = $state<HTMLDivElement>();
+  let hoveredPersonId = $state<string>();
+  let draggingPersonId = $state<string>();
 
   let selectedLayoutName = $state<string>("none");
 
@@ -79,7 +82,13 @@
 
   let cy = $state<cytoscape.Core>();
 
-  let dialog = $state<HTMLDialogElement>();
+  const placeAnchorAtNode = (node: NodeSingular) => {
+    if (!hoverAnchor || !cydiv) return;
+    const pos = node.renderedPosition();
+    const rect = cydiv.getBoundingClientRect();
+    hoverAnchor.style.left = `${rect.left + pos.x}px`;
+    hoverAnchor.style.top = `${rect.top + pos.y}px`;
+  };
 
   onMount(() => {
     cy = cytoscape({
@@ -90,17 +99,42 @@
     });
     cy.on("mouseover", "node.person", (evt) => {
       const node = evt.target as NodeSingular;
+      hoveredPersonId = node.id();
       selectedQid = node.id();
-      entityPopover?.showPopover();
+      if (entityPopover && draggingPersonId !== node.id()) {
+        placeAnchorAtNode(node);
+        entityPopover.showPopover();
+      }
     });
-    cy.on("mouseout", "node.person", () => {
+    cy.on("mouseout", "node.person", (evt) => {
+      const node = evt.target as NodeSingular;
+      if (hoveredPersonId === node.id()) hoveredPersonId = undefined;
       entityPopover?.hidePopover();
+    });
+
+    cy.on("grab", "node.person", (evt) => {
+      const node = evt.target as NodeSingular;
+      draggingPersonId = node.id();
+      entityPopover?.hidePopover();
+    });
+
+    cy.on("free", "node.person", (evt) => {
+      const node = evt.target as NodeSingular;
+      const nodeId = node.id();
+      draggingPersonId = undefined;
+
+      if (hoveredPersonId === nodeId && entityPopover) {
+        selectedQid = nodeId;
+        placeAnchorAtNode(node);
+        entityPopover.showPopover();
+      }
     });
   });
 </script>
 
 <section class="main">
   <div id="cy" class="graph" bind:this={cydiv}></div>
+  <div bind:this={hoverAnchor} class="hover-anchor" aria-hidden="true"></div>
   <div>
     <div class="buttons">
       <select
@@ -117,7 +151,12 @@
     </div>
   </div>
 </section>
-<div bind:this={entityPopover} id="my-tooltip" popover="hint">
+<div
+  bind:this={entityPopover}
+  id="my-tooltip"
+  popover="hint"
+  style="position-anchor: --current-anchor;"
+>
   <p>
     This is a <strong>rich tooltip</strong> with a
     <a href={selectedWikidataUrl}>link</a>.
@@ -135,5 +174,23 @@
     width: 90vw;
     height: 60vh;
     border: thin solid silver;
+  }
+
+  .hover-anchor {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 1px;
+    height: 1px;
+    pointer-events: none;
+    anchor-name: --current-anchor;
+    opacity: 0;
+  }
+
+  #my-tooltip {
+    inset: 0;
+    position-area: top;
+    user-select: none;
+    -webkit-user-select: none;
   }
 </style>
