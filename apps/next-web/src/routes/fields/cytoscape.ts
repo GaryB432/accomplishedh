@@ -66,7 +66,7 @@ export function createElements(
         nodes.push({ classes: ["field"], data: fow });
       }
 
-      nodes.push({ data: { source: hq, target: fow.id } });
+      nodes.push(toEdge(hq, fow.id));
 
       const capitalizedCat = fow.category.toLocaleUpperCase();
       if (!ckeys.has(capitalizedCat)) {
@@ -76,20 +76,24 @@ export function createElements(
           data: { id: capitalizedCat, label: fow.category },
         });
       }
-      nodes.push({ data: { source: fow.id, target: capitalizedCat } });
+      nodes.push(toEdge(fow.id, capitalizedCat));
     }
   }
 
   return [
-    ...nodes
-  //   .toSorted((a, b) => {
-  //     const aid = a.data.id ?? "";
-  //     const bid = b.data.id ?? "";
-  //     return aid.localeCompare(bid);
-  //   }
-  
-  // ),
+    ...nodes,
+    //   .toSorted((a, b) => {
+    //     const aid = a.data.id ?? "";
+    //     const bid = b.data.id ?? "";
+    //     return aid.localeCompare(bid);
+    //   }
+
+    // ),
   ];
+}
+
+export function toEdge(source: string, target: string): EdgeDefinition {
+  return { data: { source, target, id: source.concat("→").concat(target) } };
 }
 
 const smoll = [

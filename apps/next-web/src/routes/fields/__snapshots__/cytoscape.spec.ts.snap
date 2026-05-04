@@ -22,6 +22,7 @@ exports[`Cytoscape > large 1`] = `
   },
   {
     "data": {
+      "id": "Q433773→Q333",
       "source": "Q433773",
       "target": "Q333",
     },
@@ -37,6 +38,7 @@ exports[`Cytoscape > large 1`] = `
   },
   {
     "data": {
+      "id": "Q333→SCIENCE",
       "source": "Q333",
       "target": "SCIENCE",
     },
@@ -51,12 +53,14 @@ exports[`Cytoscape > large 1`] = `
   },
   {
     "data": {
+      "id": "Q364505→Q333",
       "source": "Q364505",
       "target": "Q333",
     },
   },
   {
     "data": {
+      "id": "Q333→SCIENCE",
       "source": "Q333",
       "target": "SCIENCE",
     },
@@ -81,12 +85,14 @@ exports[`Cytoscape > large 1`] = `
   },
   {
     "data": {
+      "id": "Q200397→Q12483",
       "source": "Q200397",
       "target": "Q12483",
     },
   },
   {
     "data": {
+      "id": "Q12483→SCIENCE",
       "source": "Q12483",
       "target": "SCIENCE",
     },
@@ -101,12 +107,14 @@ exports[`Cytoscape > large 1`] = `
   },
   {
     "data": {
+      "id": "Q187258→Q333",
       "source": "Q187258",
       "target": "Q333",
     },
   },
   {
     "data": {
+      "id": "Q333→SCIENCE",
       "source": "Q333",
       "target": "SCIENCE",
     },
@@ -121,12 +129,14 @@ exports[`Cytoscape > large 1`] = `
   },
   {
     "data": {
+      "id": "Q81130→Q333",
       "source": "Q81130",
       "target": "Q333",
     },
   },
   {
     "data": {
+      "id": "Q333→SCIENCE",
       "source": "Q333",
       "target": "SCIENCE",
     },
@@ -151,6 +161,7 @@ exports[`Cytoscape > large 1`] = `
   },
   {
     "data": {
+      "id": "Q245355→Q8242",
       "source": "Q245355",
       "target": "Q8242",
     },
@@ -166,6 +177,7 @@ exports[`Cytoscape > large 1`] = `
   },
   {
     "data": {
+      "id": "Q8242→LIT",
       "source": "Q8242",
       "target": "LIT",
     },
@@ -190,167 +202,14 @@ exports[`Cytoscape > large 1`] = `
   },
   {
     "data": {
+      "id": "Q247603→Q4",
       "source": "Q247603",
       "target": "Q4",
     },
   },
   {
     "data": {
-      "source": "Q4",
-      "target": "SCIENCE",
-    },
-  },
-]
-`;
-
-exports[`Cytoscape > small 1`] = `
-[
-  {
-    "classes": [
-      "person",
-    ],
-    "data": {
-      "id": "Q364505",
-    },
-  },
-  {
-    "classes": [
-      "field",
-    ],
-    "data": {
-      "category": "Science",
-      "id": "Q333",
-      "label": "astronomy",
-    },
-  },
-  {
-    "data": {
-      "source": "Q364505",
-      "target": "Q333",
-    },
-  },
-  {
-    "classes": [
-      "cat",
-    ],
-    "data": {
-      "id": "SCIENCE",
-      "label": "Science",
-    },
-  },
-  {
-    "data": {
-      "source": "Q333",
-      "target": "SCIENCE",
-    },
-  },
-  {
-    "classes": [
-      "person",
-    ],
-    "data": {
-      "id": "Q200397",
-    },
-  },
-  {
-    "classes": [
-      "field",
-    ],
-    "data": {
-      "category": "Science",
-      "id": "Q12483",
-      "label": "statistics",
-    },
-  },
-  {
-    "data": {
-      "source": "Q200397",
-      "target": "Q12483",
-    },
-  },
-  {
-    "data": {
-      "source": "Q12483",
-      "target": "SCIENCE",
-    },
-  },
-  {
-    "classes": [
-      "field",
-    ],
-    "data": {
-      "category": "Science",
-      "id": "Q4",
-      "label": "electrical engineering",
-    },
-  },
-  {
-    "data": {
-      "source": "Q200397",
-      "target": "Q4",
-    },
-  },
-  {
-    "data": {
-      "source": "Q4",
-      "target": "SCIENCE",
-    },
-  },
-  {
-    "classes": [
-      "person",
-    ],
-    "data": {
-      "id": "Q245355",
-    },
-  },
-  {
-    "classes": [
-      "field",
-    ],
-    "data": {
-      "category": "Lit",
-      "id": "Q8242",
-      "label": "literature",
-    },
-  },
-  {
-    "data": {
-      "source": "Q245355",
-      "target": "Q8242",
-    },
-  },
-  {
-    "classes": [
-      "cat",
-    ],
-    "data": {
-      "id": "LIT",
-      "label": "Lit",
-    },
-  },
-  {
-    "data": {
-      "source": "Q8242",
-      "target": "LIT",
-    },
-  },
-  {
-    "classes": [
-      "person",
-    ],
-    "data": {
-      "id": "Q247603",
-    },
-  },
-  {
-    "data": {
-      "source": "Q247603",
-      "target": "Q4",
-    },
-  },
-  {
-    "data": {
+      "id": "Q4→SCIENCE",
       "source": "Q4",
       "target": "SCIENCE",
     },

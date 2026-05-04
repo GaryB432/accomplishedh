@@ -10,7 +10,21 @@ describe("Cytoscape", () => {
     expect(createElements(subject)).toMatchSnapshot();
   });
   test("small", () => {
-    expect(createElements(jussie)).toMatchSnapshot();
+    const g = createElements(smaller);
+    expect(g.map((h) => h.data.id)).toEqual([
+      "Q364505",
+      "Q333",
+      "Q364505→Q333",
+      "SCIENCE",
+      "Q333→SCIENCE",
+      "Q200397",
+      "Q12483",
+      "Q200397→Q12483",
+      "Q12483→SCIENCE",
+      "Q4",
+      "Q200397→Q4",
+      "Q4→SCIENCE",
+    ]);
   });
 });
 
@@ -80,7 +94,7 @@ const subject: Record<PersonQid, FieldsOfWorkSummaryV1> = {
   },
 };
 
-const jussie: Record<PersonQid, FieldsOfWorkSummaryV1> = {
+const smaller: Record<PersonQid, FieldsOfWorkSummaryV1> = {
   Q364505: {
     fows: [
       {
@@ -97,24 +111,6 @@ const jussie: Record<PersonQid, FieldsOfWorkSummaryV1> = {
         category: "Science",
         label: "statistics",
       },
-      {
-        id: "Q4",
-        category: "Science",
-        label: "electrical engineering",
-      },
-    ],
-  },
-  Q245355: {
-    fows: [
-      {
-        id: "Q8242",
-        category: "Lit",
-        label: "literature",
-      },
-    ],
-  },
-  Q247603: {
-    fows: [
       {
         id: "Q4",
         category: "Science",
