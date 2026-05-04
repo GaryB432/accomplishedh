@@ -37,7 +37,15 @@
 
   // Object.values(layouts).forEach((l: AnimatedLayoutOptions)=> ({...l, anim }))
 
+  let entityPopover = $state<HTMLDivElement>();
+
   let selectedLayoutName = $state<string>("none");
+
+  let selectedQid = $state<string>();
+
+  let selectedWikidataUrl = $derived<string>(
+    `https://www.wikidata.org/wiki/${selectedQid}`,
+  );
 
   const style: StylesheetJson = [
     {
@@ -74,16 +82,19 @@
   let dialog = $state<HTMLDialogElement>();
 
   onMount(() => {
-    const newLocal = layouts[selectedLayoutName];
     cy = cytoscape({
       container: cydiv,
       elements,
       style,
-      layout: newLocal,
+      layout: layouts[selectedLayoutName],
     });
-    cy.on("tap", "node.person", (evt) => {
+    cy.on("mouseover", "node.person", (evt) => {
       const node = evt.target as NodeSingular;
-      console.log(node.id());
+      selectedQid = node.id();
+      entityPopover?.showPopover();
+    });
+    cy.on("mouseout", "node.person", () => {
+      entityPopover?.hidePopover();
     });
   });
 </script>
@@ -106,20 +117,12 @@
     </div>
   </div>
 </section>
-
-<button
-  id="openModal"
-  onclick={() => {
-    dialog?.showModal();
-  }}>Open Modal</button
->
-
-<dialog id="myDialog" bind:this={dialog}>
-  <h2>Hello!</h2>
-  <p>This is a native HTML modal dialog.</p>
-  <p>Related to <a href="https://wikibase.asdf">moar</a></p>
-  <button id="closeModal" onclick={() => dialog?.close()}>Close</button>
-</dialog>
+<div bind:this={entityPopover} id="my-tooltip" popover="hint">
+  <p>
+    This is a <strong>rich tooltip</strong> with a
+    <a href={selectedWikidataUrl}>link</a>.
+  </p>
+</div>
 
 <style>
   .main {
