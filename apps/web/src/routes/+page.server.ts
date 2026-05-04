@@ -2,7 +2,7 @@ import type { FeaturedHuman } from "@accomplishedh/shared";
 
 import { dev } from "$app/environment";
 import { FeDataSvc } from "$lib/data/fe-data.svelte";
-import { error, redirect } from "@sveltejs/kit";
+import { redirect } from "@sveltejs/kit";
 
 import type { Actions, PageServerLoad } from "./$types";
 
@@ -17,8 +17,6 @@ export const load: PageServerLoad = async (ctx) => {
       return { ro: { humans: [] } };
     }
     const ro = { humans: featuredHumans.map((fh) => fh.human) };
-
-    // await refreshPortraitThumbnails(ctx.fetch, ro.humans, 320);
 
     return { ro };
   } catch (e) {

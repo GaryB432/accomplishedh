@@ -38,4 +38,3 @@ Keep `next-web` featureds in sync with `web` ground truth while both exist.
 ```shell
 node ./tools/data/port-featureds > ./apps/next-web/src/data/featureds.json
 ```
-
