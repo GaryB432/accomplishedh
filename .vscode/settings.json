@@ -8,8 +8,8 @@
     "**/*-lock.json": true
   },
   "editor.inlayHints.enabled": "offUnlessPressed",
-  "typescript.inlayHints.parameterNames.enabled": "all",
-  "typescript.tsdk": "node_modules/typescript/lib/",
+  "js/ts.inlayHints.parameterNames.enabled": "all",
+  "js/ts.tsdk.path": "node_modules/typescript/lib/",
   "git.branchProtection": ["master", "next"],
   "git.branchRandomName.enable": true,
   "git.branchRandomName.dictionary": ["adjectives", "animals"]
