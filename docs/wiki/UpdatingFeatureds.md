@@ -30,3 +30,12 @@ node apps/cli/dist/main.js featured 2029-05-17 --days 90
 Observe the console shows a line for each feature, note the date on the **last one** and verify that it is `limit` days from your `start`.
 
 Mark your calendar to refresh these again before they run out on the date of that **last** observed feature. Make reference to this wiki page for instructions.
+
+### Note Well
+
+Keep `next-web` featureds in sync with `web` ground truth while both exist.
+
+```shell
+node ./tools/data/port-featureds > ./apps/next-web/src/data/featureds.json
+```
+
