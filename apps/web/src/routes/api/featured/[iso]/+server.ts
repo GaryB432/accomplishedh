@@ -1,8 +1,5 @@
 import { FeDataSvc } from "$lib/data/fe-data.svelte";
-import {
-  isValidISO8601,
-  type WikiHuman,
-} from "@accomplishedh/shared";
+import { isValidISO8601, type WikiHuman } from "@accomplishedh/shared";
 import { refreshPortraitThumbnails } from "@accomplishedh/wikibase";
 import { error } from "@sveltejs/kit";
 import type { RequestHandler } from "./$types";
