@@ -2,7 +2,7 @@ import type {
   FieldsOfWorkSummaryV1,
   PersonQid,
 } from "@accomplishedh/shared/lib/dto.types";
-import type { EdgeDefinition, NodeDefinition } from "cytoscape";
+import type { EdgeDefinition, NodeDefinition, StylesheetJson } from "cytoscape";
 
 export function createElements(
   recordByPerson: Record<PersonQid, FieldsOfWorkSummaryV1>,
@@ -42,3 +42,33 @@ export function createElements(
 export function toEdge(source: string, target: string): EdgeDefinition {
   return { data: { source, target, id: source.concat("→").concat(target) } };
 }
+
+export const style: StylesheetJson = [
+  {
+    selector: "node",
+    style: {
+      shape: "hexagon",
+    },
+  },
+
+  {
+    selector: "node.field",
+    style: {
+      backgroundColor: "red",
+      label: "data(label)",
+    },
+  },
+  {
+    selector: "node.person",
+    style: {
+      label: "data(id)",
+    },
+  },
+  {
+    selector: "node.cat",
+    style: {
+      backgroundColor: "orange",
+      label: "data(label)",
+    },
+  },
+];

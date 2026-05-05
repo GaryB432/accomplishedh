@@ -1,11 +1,9 @@
 <script lang="ts">
-  import cytoscape, {
-    type LayoutOptions,
-    type NodeSingular,
-    type StylesheetJson,
-  } from "cytoscape";
+  import cytoscape, { type LayoutOptions, type NodeSingular } from "cytoscape";
+  import dagre from "cytoscape-dagre"
   import { onMount } from "svelte";
   import type { PageProps } from "./$types";
+  import { style } from "./cytoscape";
 
   let { data }: PageProps = $props();
   let { elements } = $derived(data);
@@ -17,6 +15,7 @@
     circle: { name: "circle" },
     concentric: { name: "concentric" },
     cose: { name: "cose" },
+    dagre: { name: "dagre" },
     grid: { name: "grid" },
     none: { name: "null" },
     preset: { name: "preset" },
@@ -50,36 +49,6 @@
     `https://www.wikidata.org/wiki/${selectedQid}`,
   );
 
-  const style: StylesheetJson = [
-    {
-      selector: "node",
-      style: {
-        shape: "hexagon",
-      },
-    },
-
-    {
-      selector: "node.field",
-      style: {
-        backgroundColor: "red",
-        label: "data(label)",
-      },
-    },
-    {
-      selector: "node.person",
-      style: {
-        label: "data(id)",
-      },
-    },
-    {
-      selector: "node.cat",
-      style: {
-        backgroundColor: "orange",
-        label: "data(label)",
-      },
-    },
-  ];
-
   let cy = $state<cytoscape.Core>();
 
   const placeAnchorAtNode = (node: NodeSingular) => {
@@ -91,6 +60,7 @@
   };
 
   onMount(() => {
+    cytoscape.use(dagre)
     cy = cytoscape({
       container: cydiv,
       elements,
