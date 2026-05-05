@@ -27,8 +27,7 @@ describe("Cytoscape", () => {
     ]);
   });
   test("toEdge", () => {
-    const g = toEdge("source", "target");
-    expect(g).toEqual({
+    expect(toEdge("source", "target")).toEqual({
       data: {
         id: "source→target",
         source: "source",
