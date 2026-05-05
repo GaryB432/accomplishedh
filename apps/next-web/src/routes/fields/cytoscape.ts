@@ -22,7 +22,7 @@ export function createElements(
         nodes.push({ classes: ["field"], data: fow });
       }
 
-      nodes.push(toEdge(hq, fow.id));
+      nodes.push(toEdge(fow.id, hq));
 
       const capitalizedCat = fow.category.toLocaleUpperCase();
       if (!ckeys.has(capitalizedCat)) {
@@ -32,7 +32,7 @@ export function createElements(
           data: { id: capitalizedCat, label: fow.category },
         });
       }
-      nodes.push(toEdge(fow.id, capitalizedCat));
+      nodes.push(toEdge(capitalizedCat, fow.id));
     }
   }
 
