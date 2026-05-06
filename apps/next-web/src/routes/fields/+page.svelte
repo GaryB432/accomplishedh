@@ -1,9 +1,10 @@
 <script lang="ts">
   import cytoscape, { type LayoutOptions, type NodeSingular } from "cytoscape";
-  import dagre from "cytoscape-dagre"
+  import dagre from "cytoscape-dagre";
   import { onMount } from "svelte";
   import type { PageProps } from "./$types";
   import { style } from "./cytoscape";
+  import PersonSidebar from "./PersonSidebar.svelte";
 
   let { data }: PageProps = $props();
   let { elements } = $derived(data);
@@ -60,27 +61,62 @@
   };
 
   onMount(() => {
-    cytoscape.use(dagre)
+    cytoscape.use(dagre);
     cy = cytoscape({
       container: cydiv,
       elements,
       style,
       layout: layouts[selectedLayoutName],
     });
-    cy.on("mouseover", "node.person", (evt) => {
-      const node = evt.target as NodeSingular;
-      hoveredPersonId = node.id();
-      selectedQid = node.id();
-      if (entityPopover && draggingPersonId !== node.id()) {
-        placeAnchorAtNode(node);
-        entityPopover.showPopover();
-      }
+
+    cy.on("mouseover", "node", (e) => {
+      if (e.target === null) return;
+      if (e.target === cy) return;
+      e.cy.startBatch();
+      const sel = e.target;
+      /*
+                e.cy.elements()
+                    .difference(sel.outgoers()
+                        .union(sel.incomers()))
+                    .not(sel)
+                    .addClass('semitransp');
+                */
+      sel
+        .addClass("highlight")
+        .outgoers()
+        .union(sel.incomers())
+        .addClass("highlight");
+      e.cy.endBatch();
+      console.log(sel);
     });
-    cy.on("mouseout", "node.person", (evt) => {
-      const node = evt.target as NodeSingular;
-      if (hoveredPersonId === node.id()) hoveredPersonId = undefined;
-      entityPopover?.hidePopover();
+
+    cy.on("mouseout", "node", (e) => {
+      if (e.target === null) return;
+      if (e.target === cy) return;
+      e.cy.startBatch();
+      const sel = e.target as NodeSingular;
+      sel
+        .removeClass("highlight")
+        .outgoers()
+        .union(sel.incomers())
+        .removeClass("highlight");
+      e.cy.endBatch();
     });
+
+    // cy.on("mouseover", "node.person", (evt) => {
+    //   const node = evt.target as NodeSingular;
+    //   hoveredPersonId = node.id();
+    //   selectedQid = node.id();
+    //   if (entityPopover && draggingPersonId !== node.id()) {
+    //     placeAnchorAtNode(node);
+    //     entityPopover.showPopover();
+    //   }
+    // });
+    // cy.on("mouseout", "node.person", (evt) => {
+    //   const node = evt.target as NodeSingular;
+    //   if (hoveredPersonId === node.id()) hoveredPersonId = undefined;
+    //   entityPopover?.hidePopover();
+    // });
 
     cy.on("grab", "node.person", (evt) => {
       const node = evt.target as NodeSingular;
@@ -102,22 +138,26 @@
   });
 </script>
 
+<div bind:this={hoverAnchor} class="hover-anchor" aria-hidden="true"></div>
 <section class="main">
   <div id="cy" class="graph" bind:this={cydiv}></div>
-  <div bind:this={hoverAnchor} class="hover-anchor" aria-hidden="true"></div>
+
   <div>
-    <div class="buttons">
-      <select
-        name="lsel"
-        bind:value={selectedLayoutName}
-        onchange={() => {
-          cy?.layout(layouts[selectedLayoutName]).run();
-        }}
-      >
-        {#each Object.keys(layouts) as lopts (lopts)}
-          <option value={lopts}>{lopts}</option>
-        {/each}
-      </select>
+    <PersonSidebar></PersonSidebar>
+    <div>
+      <div class="buttons">
+        <select
+          name="lsel"
+          bind:value={selectedLayoutName}
+          onchange={() => {
+            cy?.layout(layouts[selectedLayoutName]).run();
+          }}
+        >
+          {#each Object.keys(layouts) as lopts (lopts)}
+            <option value={lopts}>{lopts}</option>
+          {/each}
+        </select>
+      </div>
     </div>
   </div>
 </section>
@@ -135,14 +175,16 @@
 
 <style>
   .main {
+    width: 80vw;
+    margin: auto;
     display: grid;
-    grid-template-columns: 1fr 20vw;
+    grid-template-columns: 2fr 1fr;
     border: thin solid lime;
   }
 
   #cy {
-    width: 90vw;
-    height: 60vh;
+    /* width: 60vw; */
+    aspect-ratio: 9 / 6;
     border: thin solid silver;
   }
 

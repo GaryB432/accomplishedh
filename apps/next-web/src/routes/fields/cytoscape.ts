@@ -50,7 +50,10 @@ export const style: StylesheetJson = [
       shape: "hexagon",
     },
   },
-
+  {
+    selector: ".highlight",
+    style: { backgroundColor: "lime" },
+  },
   {
     selector: "node.field",
     style: {
