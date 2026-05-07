@@ -1,6 +1,10 @@
 <script lang="ts">
-  import cytoscape, { type LayoutOptions, type NodeSingular } from "cytoscape";
-  import dagre from "cytoscape-dagre";
+  import cytoscape, {
+    type AnimatedLayoutOptions,
+    type LayoutOptions,
+    type NodeSingular,
+  } from "cytoscape";
+  import dagre, { type DagreLayoutOptions } from "cytoscape-dagre";
   import { onMount } from "svelte";
   import type { PageProps } from "./$types";
   import { style } from "./cytoscape";
@@ -11,7 +15,7 @@
 
   let cydiv = $state<HTMLDivElement>();
 
-  const layouts: Record<string, LayoutOptions> = {
+  const layouts: Record<string, LayoutOptions | DagreLayoutOptions> = {
     breadthfirst: { name: "breadthfirst" },
     circle: { name: "circle" },
     concentric: { name: "concentric" },
@@ -39,15 +43,13 @@
 
   let entityPopover = $state<HTMLDivElement>();
   let hoverAnchor = $state<HTMLDivElement>();
-  let hoveredPersonId = $state<string>();
-  let draggingPersonId = $state<string>();
+  // let hoveredPersonId = $state<string>();
+  let selectedPersonId = $state<string>();
 
-  let selectedLayoutName = $state<string>("none");
-
-  let selectedQid = $state<string>();
+  let selectedLayoutName = $state<string>("dagre");
 
   let selectedWikidataUrl = $derived<string>(
-    `https://www.wikidata.org/wiki/${selectedQid}`,
+    `https://www.wikidata.org/wiki/${selectedPersonId}`,
   );
 
   let cy = $state<cytoscape.Core>();
@@ -69,72 +71,43 @@
       layout: layouts[selectedLayoutName],
     });
 
-    cy.on("mouseover", "node", (e) => {
-      if (e.target === null) return;
-      if (e.target === cy) return;
-      e.cy.startBatch();
-      const sel = e.target;
-      /*
-                e.cy.elements()
-                    .difference(sel.outgoers()
-                        .union(sel.incomers()))
-                    .not(sel)
-                    .addClass('semitransp');
-                */
-      sel
-        .addClass("highlight")
-        .outgoers()
-        .union(sel.incomers())
-        .addClass("highlight");
-      e.cy.endBatch();
-      console.log(sel);
+    const lo: DagreLayoutOptions = {
+      name: "dagre",
+      animate: false,
+      fit: false,
+    };
+
+    cy.nodes(".person").style("display", "none");
+
+    cy.layout(lo).run();
+
+    cy.on("tap", "node.field", (evt) => {
+      const node = evt.target as NodeSingular;
+      const weHidden = node.outgoers().hidden();
+      node
+        .outgoers(".person")
+        .nodes()
+        .style("display", weHidden ? "element" : "none");
+      const m = node.scratch("dagre");
+      console.log(m);
+
+      cy?.layout(lo).run();
+
+      // .forEach((n) => console.log(n.visible()));
+      // console.log(node);
     });
 
-    cy.on("mouseout", "node", (e) => {
-      if (e.target === null) return;
-      if (e.target === cy) return;
-      e.cy.startBatch();
-      const sel = e.target as NodeSingular;
-      sel
-        .removeClass("highlight")
-        .outgoers()
-        .union(sel.incomers())
-        .removeClass("highlight");
-      e.cy.endBatch();
-    });
-
-    // cy.on("mouseover", "node.person", (evt) => {
+    // cy.on("free", "node.person", (evt) => {
     //   const node = evt.target as NodeSingular;
-    //   hoveredPersonId = node.id();
-    //   selectedQid = node.id();
-    //   if (entityPopover && draggingPersonId !== node.id()) {
+    //   const nodeId = node.id();
+    //   // draggingPersonId = undefined;
+
+    //   if (hoveredPersonId === nodeId && entityPopover) {
+    //     selectedPersonId = nodeId;
     //     placeAnchorAtNode(node);
     //     entityPopover.showPopover();
     //   }
     // });
-    // cy.on("mouseout", "node.person", (evt) => {
-    //   const node = evt.target as NodeSingular;
-    //   if (hoveredPersonId === node.id()) hoveredPersonId = undefined;
-    //   entityPopover?.hidePopover();
-    // });
-
-    cy.on("grab", "node.person", (evt) => {
-      const node = evt.target as NodeSingular;
-      draggingPersonId = node.id();
-      entityPopover?.hidePopover();
-    });
-
-    cy.on("free", "node.person", (evt) => {
-      const node = evt.target as NodeSingular;
-      const nodeId = node.id();
-      draggingPersonId = undefined;
-
-      if (hoveredPersonId === nodeId && entityPopover) {
-        selectedQid = nodeId;
-        placeAnchorAtNode(node);
-        entityPopover.showPopover();
-      }
-    });
   });
 </script>
 
@@ -150,7 +123,11 @@
           name="lsel"
           bind:value={selectedLayoutName}
           onchange={() => {
-            cy?.layout(layouts[selectedLayoutName]).run();
+            const ll: LayoutOptions & AnimatedLayoutOptions = {
+              ...layouts[selectedLayoutName],
+              animate: true,
+            };
+            cy?.layout(ll).run();
           }}
         >
           {#each Object.keys(layouts) as lopts (lopts)}

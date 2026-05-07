@@ -19,7 +19,11 @@ export function createElements(
     for (const fow of summary.fows) {
       if (!fkeys.has(fow.id)) {
         fkeys.add(fow.id);
-        nodes.push({ classes: ["field"], data: fow });
+        nodes.push({
+          // style: { visible: false },
+          classes: ["field"],
+          data: fow,
+        });
       }
 
       nodes.push(toEdge(fow.id, hq));
