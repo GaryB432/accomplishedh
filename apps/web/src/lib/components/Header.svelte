@@ -105,9 +105,9 @@
     <PreviewPanel {vercelEnv}></PreviewPanel>
   </section>
 
-  <TryNextWeb />
-
+  
   <section class="links">
+    <TryNextWeb />
     {#if browser}
       <ThemeSwitch {theme} />
     {/if}
