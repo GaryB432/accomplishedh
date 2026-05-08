@@ -54,8 +54,6 @@
   .try-next-web {
     --edge: #f4e38b;
     --ink: #2e1a00;
-    --edge: color-mix(in srgb, var(--secondary-color) 72%, white);
-    --ink: color-mix(in srgb, var(--primary-color) 58%, black);
     position: relative;
     display: flex;
     align-items: center;
@@ -69,10 +67,6 @@
       radial-gradient(circle at 8% 50%, rgb(251 239 136 / 72%), transparent 28%),
       linear-gradient(110deg, rgb(255 255 255 / 24%), rgb(255 255 255 / 6%)),
       #2a0a3d;
-    background:
-      radial-gradient(circle at 8% 50%, rgb(251 239 136 / 72%), transparent 28%),
-      linear-gradient(110deg, rgb(255 255 255 / 24%), rgb(255 255 255 / 6%)),
-      color-mix(in srgb, var(--primary-color) 82%, #190020);
     border: 1px solid rgb(255 255 255 / 24%);
     box-shadow:
       0 0 0 1px rgb(255 255 255 / 14%) inset,
@@ -81,6 +75,21 @@
     white-space: nowrap;
     isolation: isolate;
     transform: translateZ(0);
+  }
+
+  @supports (color: color-mix(in srgb, black, white)) {
+    .try-next-web {
+      --edge: color-mix(in srgb, var(--secondary-color) 72%, white);
+      --ink: color-mix(in srgb, var(--primary-color) 58%, black);
+      background:
+        radial-gradient(
+          circle at 8% 50%,
+          rgb(251 239 136 / 72%),
+          transparent 28%
+        ),
+        linear-gradient(110deg, rgb(255 255 255 / 24%), rgb(255 255 255 / 6%)),
+        color-mix(in srgb, var(--primary-color) 82%, #190020);
+    }
   }
 
   .signal {
