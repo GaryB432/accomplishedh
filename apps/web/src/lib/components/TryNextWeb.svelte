@@ -151,4 +151,14 @@
       padding-inline: 0.5rem;
     }
   }
+
+  @media (prefers-reduced-motion: reduce) {
+    .signal {
+      display: none;
+    }
+
+    .beta {
+      animation: none;
+    }
+  }
 </style>
