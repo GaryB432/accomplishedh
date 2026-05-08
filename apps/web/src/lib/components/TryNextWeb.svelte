@@ -52,6 +52,8 @@
 
 <style>
   .try-next-web {
+    --edge: #f4e38b;
+    --ink: #2e1a00;
     --edge: color-mix(in srgb, var(--secondary-color) 72%, white);
     --ink: color-mix(in srgb, var(--primary-color) 58%, black);
     position: relative;
@@ -61,8 +63,12 @@
     min-height: 2.25rem;
     padding: 0.32rem 0.82rem 0.36rem 0.58rem;
     border-radius: 999px;
-    overflow: clip;
+    overflow: hidden;
     text-decoration: none;
+    background:
+      radial-gradient(circle at 8% 50%, rgb(251 239 136 / 72%), transparent 28%),
+      linear-gradient(110deg, rgb(255 255 255 / 24%), rgb(255 255 255 / 6%)),
+      #2a0a3d;
     background:
       radial-gradient(circle at 8% 50%, rgb(251 239 136 / 72%), transparent 28%),
       linear-gradient(110deg, rgb(255 255 255 / 24%), rgb(255 255 255 / 6%)),
