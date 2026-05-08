@@ -3,6 +3,7 @@
   import { resolve } from "$app/paths";
   import PreviewPanel from "$lib/components/PreviewPanel.svelte";
   import ThemeSwitch from "$lib/components/ThemeSwitch.svelte";
+  import TryNextWeb from "$lib/components/TryNextWeb.svelte";
 
   interface Props {
     admin: boolean;
@@ -103,6 +104,8 @@
     </section>
     <PreviewPanel {vercelEnv}></PreviewPanel>
   </section>
+
+  <TryNextWeb />
 
   <section class="links">
     {#if browser}
