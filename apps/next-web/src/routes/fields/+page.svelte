@@ -1,10 +1,6 @@
 <script lang="ts">
-  import cytoscape, {
-    type AnimatedLayoutOptions,
-    type LayoutOptions,
-    type NodeSingular,
-  } from "cytoscape";
-  import dagre, { type DagreLayoutOptions } from "cytoscape-dagre";
+  import cytoscape, { type NodeSingular } from "cytoscape";
+  import dagre from "cytoscape-dagre";
   import { onMount } from "svelte";
   import type { PageProps } from "./$types";
   import { style } from "./cytoscape";
@@ -15,17 +11,17 @@
 
   let cydiv = $state<HTMLDivElement>();
 
-  const layouts: Record<string, LayoutOptions | DagreLayoutOptions> = {
-    breadthfirst: { name: "breadthfirst" },
-    circle: { name: "circle" },
-    concentric: { name: "concentric" },
-    cose: { name: "cose" },
-    dagre: { name: "dagre" },
-    grid: { name: "grid" },
-    none: { name: "null" },
-    preset: { name: "preset" },
-    random: { name: "random" },
-  };
+  // const layouts: Record<string, LayoutOptions | DagreLayoutOptions> = {
+  //   breadthfirst: { name: "breadthfirst" },
+  //   circle: { name: "circle" },
+  //   concentric: { name: "concentric" },
+  //   cose: { name: "cose" },
+  //   dagre: { name: "dagre" },
+  //   grid: { name: "grid" },
+  //   none: { name: "null" },
+  //   preset: { name: "preset" },
+  //   random: { name: "random" },
+  // };
 
   //       animate?: boolean;
   //       // duration of animation in ms if enabled
@@ -46,7 +42,7 @@
   // let hoveredPersonId = $state<string>();
   let selectedPersonId = $state<string>();
 
-  let selectedLayoutName = $state<string>("dagre");
+  // let selectedLayoutName = $state<string>("dagre");
 
   let selectedWikidataUrl = $derived<string>(
     `https://www.wikidata.org/wiki/${selectedPersonId}`,
@@ -54,13 +50,13 @@
 
   let cy = $state<cytoscape.Core>();
 
-  const placeAnchorAtNode = (node: NodeSingular) => {
-    if (!hoverAnchor || !cydiv) return;
-    const pos = node.renderedPosition();
-    const rect = cydiv.getBoundingClientRect();
-    hoverAnchor.style.left = `${rect.left + pos.x}px`;
-    hoverAnchor.style.top = `${rect.top + pos.y}px`;
-  };
+  // const placeAnchorAtNode = (node: NodeSingular) => {
+  //   if (!hoverAnchor || !cydiv) return;
+  //   const pos = node.renderedPosition();
+  //   const rect = cydiv.getBoundingClientRect();
+  //   hoverAnchor.style.left = `${rect.left + pos.x}px`;
+  //   hoverAnchor.style.top = `${rect.top + pos.y}px`;
+  // };
 
   onMount(() => {
     cytoscape.use(dagre);
@@ -68,18 +64,12 @@
       container: cydiv,
       elements,
       style,
-      layout: layouts[selectedLayoutName],
+      layout: { name: "breadthfirst", directed: true },
     });
-
-    const lo: DagreLayoutOptions = {
-      name: "dagre",
-      animate: false,
-      fit: false,
-    };
 
     cy.nodes(".person").style("display", "none");
 
-    cy.layout(lo).run();
+    // cy.layout(lo).run();
 
     cy.on("tap", "node.field", (evt) => {
       const node = evt.target as NodeSingular;
@@ -88,10 +78,22 @@
         .outgoers(".person")
         .nodes()
         .style("display", weHidden ? "element" : "none");
-      const m = node.scratch("dagre");
-      console.log(m);
+      // const m = node.scratch("dagre");
+      // console.log(m);
 
-      cy?.layout(lo).run();
+      // cy?.layout(lo).run();
+
+      // .forEach((n) => console.log(n.visible()));
+      // console.log(node);
+    });
+
+    cy.on("select", "node.person", (evt) => {
+      console.log(evt);
+      cy?.nodes(":selected").forEach((n, i) => console.log(n, i));
+      // const m = node.scratch("dagre");
+      // console.log(m);
+
+      // cy?.layout(lo).run();
 
       // .forEach((n) => console.log(n.visible()));
       // console.log(node);
@@ -119,7 +121,7 @@
     <PersonSidebar></PersonSidebar>
     <div>
       <div class="buttons">
-        <select
+        <!-- <select
           name="lsel"
           bind:value={selectedLayoutName}
           onchange={() => {
@@ -133,7 +135,7 @@
           {#each Object.keys(layouts) as lopts (lopts)}
             <option value={lopts}>{lopts}</option>
           {/each}
-        </select>
+        </select> -->
       </div>
     </div>
   </div>
