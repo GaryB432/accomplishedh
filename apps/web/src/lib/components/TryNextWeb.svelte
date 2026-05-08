@@ -18,7 +18,7 @@
         <stop offset="0%" stop-color="rgba(255,255,255,0.6)" />
         <stop offset="100%" stop-color="rgba(255,255,255,0)" />
       </radialGradient>
-      <filter id="glow" x="-35%" y="-35%" width="170%" height="170%">
+      <filter id="glow" x="-25%" y="-25%" width="150%" height="150%">
         <feGaussianBlur stdDeviation="2.8" result="soft" />
         <feMerge>
           <feMergeNode in="soft" />
@@ -164,6 +164,8 @@
 
   @media (max-width: 640px) {
     .try-next-web {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
       padding-inline: 0.5rem;
     }
   }
