@@ -10,6 +10,9 @@ describe("TryNextWeb", () => {
     expect(body).toContain("Try the next version of Human Accomplishment");
     expect(body).toContain(">BETA<");
     expect(body).toContain('href="https://accomplishedh-next-web.vercel.app/"');
+    expect(body).toContain(
+      'aria-label="Try the next version of Human Accomplishment (BETA)"',
+    );
     expect(body).toContain('target="_blank"');
     expect(body).toContain('rel="noopener noreferrer"');
   });

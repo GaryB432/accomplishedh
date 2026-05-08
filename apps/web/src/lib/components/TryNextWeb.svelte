@@ -1,6 +1,7 @@
 <a
   class="try-next-web"
   href="https://accomplishedh-next-web.vercel.app/"
+  aria-label="Try the next version of Human Accomplishment (BETA)"
   target="_blank"
   rel="noopener noreferrer"
 >
@@ -104,7 +105,6 @@
   .copy {
     font-size: 0.67rem;
     letter-spacing: 0.01em;
-    text-wrap: nowrap;
   }
 
   .beta {
