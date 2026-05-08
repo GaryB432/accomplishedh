@@ -1,6 +1,6 @@
 <script>
 	let name = $state(`PersonSidebar`);
-	let message = $derived(`${name} works`);
+	let message = $derived(`${name ?? "does not"} works`);
 </script>
 
 <article>
