@@ -23,24 +23,9 @@
     random: { name: "random" },
   };
 
-  //       animate?: boolean;
-  //       // duration of animation in ms if enabled
-  //       animationDuration?: number;
-  //       // easing of animation if enabled
-  //       animationEasing?: Css.TransitionTimingFunction;
-  //       /**
-  //        * a function that determines whether the node should be animated.
-  //        * All nodes animated by default on animate enabled.
-  //        * Non-animated nodes are positioned immediately when the layout starts
-  //        */
-  //       animateFilter?(node: NodeSingular, index: number): boolean;
-
-  // Object.values(layouts).forEach((l: AnimatedLayoutOptions)=> ({...l, anim }))
-
   let entityPopover = $state<HTMLDivElement>();
   let hoverAnchor = $state<HTMLDivElement>();
-  let hoveredPersonId = $state<string>();
-  let draggingPersonId = $state<string>();
+  let selectedPersonId = $state<string>();
 
   let selectedLayoutName = $state<string>("none");
 
@@ -82,14 +67,6 @@
 
   let cy = $state<cytoscape.Core>();
 
-  const placeAnchorAtNode = (node: NodeSingular) => {
-    if (!hoverAnchor || !cydiv) return;
-    const pos = node.renderedPosition();
-    const rect = cydiv.getBoundingClientRect();
-    hoverAnchor.style.left = `${rect.left + pos.x}px`;
-    hoverAnchor.style.top = `${rect.top + pos.y}px`;
-  };
-
   onMount(() => {
     cy = cytoscape({
       container: cydiv,
@@ -99,35 +76,12 @@
     });
     cy.on("mouseover", "node.person", (evt) => {
       const node = evt.target as NodeSingular;
-      hoveredPersonId = node.id();
       selectedQid = node.id();
-      if (entityPopover && draggingPersonId !== node.id()) {
-        placeAnchorAtNode(node);
-        entityPopover.showPopover();
-      }
-    });
-    cy.on("mouseout", "node.person", (evt) => {
-      const node = evt.target as NodeSingular;
-      if (hoveredPersonId === node.id()) hoveredPersonId = undefined;
-      entityPopover?.hidePopover();
     });
 
-    cy.on("grab", "node.person", (evt) => {
+    cy.on("tap", "node.person", (evt) => {
       const node = evt.target as NodeSingular;
-      draggingPersonId = node.id();
-      entityPopover?.hidePopover();
-    });
-
-    cy.on("free", "node.person", (evt) => {
-      const node = evt.target as NodeSingular;
-      const nodeId = node.id();
-      draggingPersonId = undefined;
-
-      if (hoveredPersonId === nodeId && entityPopover) {
-        selectedQid = nodeId;
-        placeAnchorAtNode(node);
-        entityPopover.showPopover();
-      }
+      selectedPersonId = node.id();
     });
   });
 </script>
@@ -136,18 +90,8 @@
   <div id="cy" class="graph" bind:this={cydiv}></div>
   <div bind:this={hoverAnchor} class="hover-anchor" aria-hidden="true"></div>
   <div>
-    <div class="buttons">
-      <select
-        name="lsel"
-        bind:value={selectedLayoutName}
-        onchange={() => {
-          cy?.layout(layouts[selectedLayoutName]).run();
-        }}
-      >
-        {#each Object.keys(layouts) as lopts (lopts)}
-          <option value={lopts}>{lopts}</option>
-        {/each}
-      </select>
+    <div>
+      <div class="buttons"></div>
     </div>
   </div>
 </section>
@@ -171,8 +115,8 @@
   }
 
   #cy {
-    width: 90vw;
-    height: 60vh;
+    width: 60vw;
+    aspect-ratio: 9 / 6;
     border: thin solid silver;
   }
 
