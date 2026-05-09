@@ -6,6 +6,7 @@
   } from "cytoscape";
   import { onMount } from "svelte";
   import type { PageProps } from "./$types";
+  import PersonSidebar from "./PersonSidebar.svelte";
 
   let { data }: PageProps = $props();
   let { elements } = $derived(data);
@@ -90,6 +91,7 @@
   <div id="cy" class="graph" bind:this={cydiv}></div>
   <div bind:this={hoverAnchor} class="hover-anchor" aria-hidden="true"></div>
   <div>
+    <PersonSidebar qid={selectedPersonId} />
     <div>
       <div class="buttons"></div>
     </div>
