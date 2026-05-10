@@ -2,7 +2,7 @@ import type {
   FieldsOfWorkSummaryV1,
   PersonQid,
 } from "@accomplishedh/shared/lib/dto.types";
-import type { EdgeDefinition, NodeDefinition } from "cytoscape";
+import type { EdgeDefinition, NodeDefinition, StylesheetJson } from "cytoscape";
 
 export function createElements(
   recordByPerson: Record<PersonQid, FieldsOfWorkSummaryV1>,
@@ -14,22 +14,29 @@ export function createElements(
 
   for (const [hq, summary] of Object.entries(recordByPerson)) {
     hkeys.add(hq);
-    nodes.push({ classes: ["person"], data: { id: hq } });
+
+    const person = {
+      id: hq,
+      type: "person",
+      more: "stuff",
+    };
+    nodes.push({ data: person });
 
     for (const fow of summary.fows) {
+      const capitalizedCat = fow.category.toLocaleUpperCase();
       if (!fkeys.has(fow.id)) {
         fkeys.add(fow.id);
-        nodes.push({ classes: ["field"], data: fow });
+        nodes.push({
+          data: { ...fow, type: "field" },
+        });
       }
 
       nodes.push(toEdge(hq, fow.id));
 
-      const capitalizedCat = fow.category.toLocaleUpperCase();
       if (!ckeys.has(capitalizedCat)) {
         ckeys.add(capitalizedCat);
         nodes.push({
-          classes: ["cat"],
-          data: { id: capitalizedCat, label: fow.category },
+          data: { id: capitalizedCat, label: fow.category, type: "cat" },
         });
       }
       nodes.push(toEdge(fow.id, capitalizedCat));
@@ -42,3 +49,32 @@ export function createElements(
 export function toEdge(source: string, target: string): EdgeDefinition {
   return { data: { source, target, id: source.concat("→").concat(target) } };
 }
+
+export const style: StylesheetJson = [
+  {
+    selector: "node",
+    style: {
+      shape: "hexagon",
+    },
+  },
+  {
+    selector: 'node[type="field"]',
+    style: {
+      backgroundColor: "red",
+      label: "data(label)",
+    },
+  },
+  {
+    selector: 'node[type="person"]',
+    style: {
+      label: "data(id)",
+    },
+  },
+  {
+    selector: 'node[type="cat"]',
+    style: {
+      backgroundColor: "orange",
+      label: "data(label)",
+    },
+  },
+];
