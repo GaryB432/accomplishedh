@@ -22,7 +22,7 @@
       container: cydiv,
       elements,
       style,
-      layout: { name: "breadthfirst" },
+      layout: { name: "grid" },
     });
 
     cy.style()

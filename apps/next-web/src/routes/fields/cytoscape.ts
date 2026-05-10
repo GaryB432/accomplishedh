@@ -31,7 +31,7 @@ export function createElements(
         });
       }
 
-      nodes.push(toEdge(fow.id, hq));
+      nodes.push(toEdge(hq, fow.id));
 
       if (!ckeys.has(capitalizedCat)) {
         ckeys.add(capitalizedCat);
@@ -39,7 +39,7 @@ export function createElements(
           data: { id: capitalizedCat, label: fow.category, type: "cat" },
         });
       }
-      nodes.push(toEdge(capitalizedCat, fow.id));
+      nodes.push(toEdge(fow.id, capitalizedCat));
     }
   }
 
