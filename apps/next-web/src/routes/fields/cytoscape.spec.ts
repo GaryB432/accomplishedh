@@ -3,7 +3,7 @@ import type {
   PersonQid,
 } from "@accomplishedh/shared/lib/dto.types";
 import { describe, expect, test } from "vitest";
-import { createElements } from "./cytoscape";
+import { createElements, toEdge } from "./cytoscape";
 
 describe("Cytoscape", () => {
   test("large", () => {
@@ -14,17 +14,26 @@ describe("Cytoscape", () => {
     expect(g.map((h) => h.data.id)).toEqual([
       "Q364505",
       "Q333",
-      "Q364505→Q333",
+      "Q333→Q364505",
       "SCIENCE",
-      "Q333→SCIENCE",
+      "SCIENCE→Q333",
       "Q200397",
       "Q12483",
-      "Q200397→Q12483",
-      "Q12483→SCIENCE",
+      "Q12483→Q200397",
+      "SCIENCE→Q12483",
       "Q4",
-      "Q200397→Q4",
-      "Q4→SCIENCE",
+      "Q4→Q200397",
+      "SCIENCE→Q4",
     ]);
+  });
+  test("toEdge", () => {
+    expect(toEdge("source", "target")).toEqual({
+      data: {
+        id: "source→target",
+        source: "source",
+        target: "target",
+      },
+    });
   });
 });
 

@@ -1,6 +1,7 @@
 import { FILE } from "node:dns";
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
+import { setTimeout } from "node:timers/promises";
 import { fileURLToPath } from "node:url";
 
 const WIKIDATA_SPARQL_URL = "https://query.wikidata.org/sparql";
@@ -29,6 +30,15 @@ const WB_CACHE_NAME = join(HA_DATA, "wikibase-cache");
 const FIELDS_FILE_NAME = join(WB_CACHE_NAME, "fields-of-work.json");
 
 const USER_AGENT = "AccomplishedHBot/1.0 (editor@humanaccomplishment.com)";
+
+async function waitFetch(input, init) {
+  return fetch(input, init);
+  // return new Promise((resolve) => {
+  //   setTimeout(() => {
+  //     resolve(globalThis.fetch(input, init));
+  //   }, 500);
+  // });
+}
 
 async function main(today) {
   today ??= new Date().toISOString();
@@ -69,7 +79,7 @@ async function main(today) {
 
     const url = `${WIKIDATA_SPARQL_URL}?query=${encodeURIComponent(query)}`;
 
-    const response = await fetch(url, {
+    const response = await waitFetch(url, {
       headers: {
         Accept: "application/sparql-results+json",
         "User-Agent": USER_AGENT,
@@ -93,7 +103,6 @@ async function main(today) {
     }, fowDataset.people);
 
     console.log(`✅ Processed batch ${Math.floor(i / BATCH_SIZE) + 1}.`);
-    await new Promise((res) => setTimeout(res, 500));
   }
 
   mkdirSync(WB_CACHE_NAME, { recursive: true });

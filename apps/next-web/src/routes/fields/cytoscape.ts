@@ -2,7 +2,7 @@ import type {
   FieldsOfWorkSummaryV1,
   PersonQid,
 } from "@accomplishedh/shared/lib/dto.types";
-import type { EdgeDefinition, NodeDefinition } from "cytoscape";
+import type { EdgeDefinition, NodeDefinition, StylesheetJson } from "cytoscape";
 
 export function createElements(
   recordByPerson: Record<PersonQid, FieldsOfWorkSummaryV1>,
@@ -19,10 +19,14 @@ export function createElements(
     for (const fow of summary.fows) {
       if (!fkeys.has(fow.id)) {
         fkeys.add(fow.id);
-        nodes.push({ classes: ["field"], data: fow });
+        nodes.push({
+          // style: { visible: false },
+          classes: ["field"],
+          data: fow,
+        });
       }
 
-      nodes.push(toEdge(hq, fow.id));
+      nodes.push(toEdge(fow.id, hq));
 
       const capitalizedCat = fow.category.toLocaleUpperCase();
       if (!ckeys.has(capitalizedCat)) {
@@ -32,7 +36,7 @@ export function createElements(
           data: { id: capitalizedCat, label: fow.category },
         });
       }
-      nodes.push(toEdge(fow.id, capitalizedCat));
+      nodes.push(toEdge(capitalizedCat, fow.id));
     }
   }
 
@@ -42,3 +46,36 @@ export function createElements(
 export function toEdge(source: string, target: string): EdgeDefinition {
   return { data: { source, target, id: source.concat("→").concat(target) } };
 }
+
+export const style: StylesheetJson = [
+  {
+    selector: "node",
+    style: {
+      shape: "hexagon",
+    },
+  },
+  {
+    selector: ".highlight",
+    style: { backgroundColor: "lime" },
+  },
+  {
+    selector: "node.field",
+    style: {
+      backgroundColor: "red",
+      label: "data(label)",
+    },
+  },
+  {
+    selector: "node.person",
+    style: {
+      label: "data(id)",
+    },
+  },
+  {
+    selector: "node.cat",
+    style: {
+      backgroundColor: "orange",
+      label: "data(label)",
+    },
+  },
+];

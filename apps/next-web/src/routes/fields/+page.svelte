@@ -1,27 +1,27 @@
 <script lang="ts">
-  import cytoscape, {
-    type LayoutOptions,
-    type NodeSingular,
-    type StylesheetJson,
-  } from "cytoscape";
+  import cytoscape, { type NodeSingular } from "cytoscape";
+  import dagre from "cytoscape-dagre";
   import { onMount } from "svelte";
   import type { PageProps } from "./$types";
+  import { style } from "./cytoscape";
+  import PersonSidebar from "./PersonSidebar.svelte";
 
   let { data }: PageProps = $props();
   let { elements } = $derived(data);
 
   let cydiv = $state<HTMLDivElement>();
 
-  const layouts: Record<string, LayoutOptions> = {
-    breadthfirst: { name: "breadthfirst" },
-    circle: { name: "circle" },
-    concentric: { name: "concentric" },
-    cose: { name: "cose" },
-    grid: { name: "grid" },
-    none: { name: "null" },
-    preset: { name: "preset" },
-    random: { name: "random" },
-  };
+  // const layouts: Record<string, LayoutOptions | DagreLayoutOptions> = {
+  //   breadthfirst: { name: "breadthfirst" },
+  //   circle: { name: "circle" },
+  //   concentric: { name: "concentric" },
+  //   cose: { name: "cose" },
+  //   dagre: { name: "dagre" },
+  //   grid: { name: "grid" },
+  //   none: { name: "null" },
+  //   preset: { name: "preset" },
+  //   random: { name: "random" },
+  // };
 
   //       animate?: boolean;
   //       // duration of animation in ms if enabled
@@ -39,115 +39,104 @@
 
   let entityPopover = $state<HTMLDivElement>();
   let hoverAnchor = $state<HTMLDivElement>();
-  let hoveredPersonId = $state<string>();
-  let draggingPersonId = $state<string>();
+  // let hoveredPersonId = $state<string>();
+  let selectedPersonId = $state<string>();
 
-  let selectedLayoutName = $state<string>("none");
-
-  let selectedQid = $state<string>();
+  // let selectedLayoutName = $state<string>("dagre");
 
   let selectedWikidataUrl = $derived<string>(
-    `https://www.wikidata.org/wiki/${selectedQid}`,
+    `https://www.wikidata.org/wiki/${selectedPersonId}`,
   );
-
-  const style: StylesheetJson = [
-    {
-      selector: "node",
-      style: {
-        shape: "hexagon",
-      },
-    },
-
-    {
-      selector: "node.field",
-      style: {
-        backgroundColor: "red",
-        label: "data(label)",
-      },
-    },
-    {
-      selector: "node.person",
-      style: {
-        label: "data(id)",
-      },
-    },
-    {
-      selector: "node.cat",
-      style: {
-        backgroundColor: "orange",
-        label: "data(label)",
-      },
-    },
-  ];
 
   let cy = $state<cytoscape.Core>();
 
-  const placeAnchorAtNode = (node: NodeSingular) => {
-    if (!hoverAnchor || !cydiv) return;
-    const pos = node.renderedPosition();
-    const rect = cydiv.getBoundingClientRect();
-    hoverAnchor.style.left = `${rect.left + pos.x}px`;
-    hoverAnchor.style.top = `${rect.top + pos.y}px`;
-  };
+  // const placeAnchorAtNode = (node: NodeSingular) => {
+  //   if (!hoverAnchor || !cydiv) return;
+  //   const pos = node.renderedPosition();
+  //   const rect = cydiv.getBoundingClientRect();
+  //   hoverAnchor.style.left = `${rect.left + pos.x}px`;
+  //   hoverAnchor.style.top = `${rect.top + pos.y}px`;
+  // };
 
   onMount(() => {
+    cytoscape.use(dagre);
     cy = cytoscape({
       container: cydiv,
       elements,
       style,
-      layout: layouts[selectedLayoutName],
-    });
-    cy.on("mouseover", "node.person", (evt) => {
-      const node = evt.target as NodeSingular;
-      hoveredPersonId = node.id();
-      selectedQid = node.id();
-      if (entityPopover && draggingPersonId !== node.id()) {
-        placeAnchorAtNode(node);
-        entityPopover.showPopover();
-      }
-    });
-    cy.on("mouseout", "node.person", (evt) => {
-      const node = evt.target as NodeSingular;
-      if (hoveredPersonId === node.id()) hoveredPersonId = undefined;
-      entityPopover?.hidePopover();
+      layout: { name: "breadthfirst", directed: true },
     });
 
-    cy.on("grab", "node.person", (evt) => {
+    cy.nodes(".person").style("display", "none");
+
+    // cy.layout(lo).run();
+
+    cy.on("tap", "node.field", (evt) => {
       const node = evt.target as NodeSingular;
-      draggingPersonId = node.id();
-      entityPopover?.hidePopover();
+      const weHidden = node.outgoers().hidden();
+      node
+        .outgoers(".person")
+        .nodes()
+        .style("display", weHidden ? "element" : "none");
+      // const m = node.scratch("dagre");
+      // console.log(m);
+
+      // cy?.layout(lo).run();
+
+      // .forEach((n) => console.log(n.visible()));
+      // console.log(node);
     });
 
-    cy.on("free", "node.person", (evt) => {
-      const node = evt.target as NodeSingular;
-      const nodeId = node.id();
-      draggingPersonId = undefined;
+    cy.on("select", "node.person", (evt) => {
+      console.log(evt);
+      cy?.nodes(":selected").forEach((n, i) => console.log(n, i));
+      // const m = node.scratch("dagre");
+      // console.log(m);
 
-      if (hoveredPersonId === nodeId && entityPopover) {
-        selectedQid = nodeId;
-        placeAnchorAtNode(node);
-        entityPopover.showPopover();
-      }
+      // cy?.layout(lo).run();
+
+      // .forEach((n) => console.log(n.visible()));
+      // console.log(node);
     });
+
+    // cy.on("free", "node.person", (evt) => {
+    //   const node = evt.target as NodeSingular;
+    //   const nodeId = node.id();
+    //   // draggingPersonId = undefined;
+
+    //   if (hoveredPersonId === nodeId && entityPopover) {
+    //     selectedPersonId = nodeId;
+    //     placeAnchorAtNode(node);
+    //     entityPopover.showPopover();
+    //   }
+    // });
   });
 </script>
 
+<div bind:this={hoverAnchor} class="hover-anchor" aria-hidden="true"></div>
 <section class="main">
   <div id="cy" class="graph" bind:this={cydiv}></div>
-  <div bind:this={hoverAnchor} class="hover-anchor" aria-hidden="true"></div>
+
   <div>
-    <div class="buttons">
-      <select
-        name="lsel"
-        bind:value={selectedLayoutName}
-        onchange={() => {
-          cy?.layout(layouts[selectedLayoutName]).run();
-        }}
-      >
-        {#each Object.keys(layouts) as lopts (lopts)}
-          <option value={lopts}>{lopts}</option>
-        {/each}
-      </select>
+    <PersonSidebar></PersonSidebar>
+    <div>
+      <div class="buttons">
+        <!-- <select
+          name="lsel"
+          bind:value={selectedLayoutName}
+          onchange={() => {
+            const ll: LayoutOptions & AnimatedLayoutOptions = {
+              ...layouts[selectedLayoutName],
+              animate: true,
+            };
+            cy?.layout(ll).run();
+          }}
+        >
+          {#each Object.keys(layouts) as lopts (lopts)}
+            <option value={lopts}>{lopts}</option>
+          {/each}
+        </select> -->
+      </div>
     </div>
   </div>
 </section>
@@ -165,14 +154,16 @@
 
 <style>
   .main {
+    width: 80vw;
+    margin: auto;
     display: grid;
-    grid-template-columns: 1fr 20vw;
+    grid-template-columns: 2fr 1fr;
     border: thin solid lime;
   }
 
   #cy {
-    width: 90vw;
-    height: 60vh;
+    /* width: 60vw; */
+    aspect-ratio: 9 / 6;
     border: thin solid silver;
   }
 
