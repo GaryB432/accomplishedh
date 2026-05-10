@@ -18,11 +18,12 @@
   let cy = $state<cytoscape.Core>();
 
   onMount(() => {
+    cytoscape.use(dagre);
     cy = cytoscape({
       container: cydiv,
       elements,
       style,
-      // layout: { name: "breadthfirst" },
+      layout: { name: "breadthfirst" },
     });
 
     cy.style()
@@ -32,16 +33,6 @@
       .style("display", "element")
       .update();
 
-    // cy.on("mouseover", "node.person", (evt) => {
-    //   const node = evt.target as NodeSingular;
-    //   selectedQid = node.id();
-    // });
-
-    // cy.on("tap", "node.cat", (evt) => {
-    //   const node = evt.target as NodeSingular;
-    //   console.log(node.outdegree());
-    //   // node.incomers().style({ display: "element" });
-    // });
     cy.on("tap", "node", (evt) => {
       const node = evt.target as NodeSingular;
       console.log(node.data());
@@ -60,6 +51,18 @@
       const node = evt.target as NodeSingular;
       selectedPersonId = node.id();
     });
+
+    // cy.on("free", "node.person", (evt) => {
+    //   const node = evt.target as NodeSingular;
+    //   const nodeId = node.id();
+    //   // draggingPersonId = undefined;
+
+    //   if (hoveredPersonId === nodeId && entityPopover) {
+    //     selectedPersonId = nodeId;
+    //     placeAnchorAtNode(node);
+    //     entityPopover.showPopover();
+    //   }
+    // });
   });
 </script>
 

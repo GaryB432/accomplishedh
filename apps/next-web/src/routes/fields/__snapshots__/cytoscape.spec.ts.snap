@@ -19,9 +19,9 @@ exports[`Cytoscape > large 1`] = `
   },
   {
     "data": {
-      "id": "Q433773→Q333",
-      "source": "Q433773",
-      "target": "Q333",
+      "id": "Q333→Q433773",
+      "source": "Q333",
+      "target": "Q433773",
     },
   },
   {
@@ -33,9 +33,9 @@ exports[`Cytoscape > large 1`] = `
   },
   {
     "data": {
-      "id": "Q333→SCIENCE",
-      "source": "Q333",
-      "target": "SCIENCE",
+      "id": "SCIENCE→Q333",
+      "source": "SCIENCE",
+      "target": "Q333",
     },
   },
   {
@@ -47,16 +47,16 @@ exports[`Cytoscape > large 1`] = `
   },
   {
     "data": {
-      "id": "Q364505→Q333",
-      "source": "Q364505",
-      "target": "Q333",
+      "id": "Q333→Q364505",
+      "source": "Q333",
+      "target": "Q364505",
     },
   },
   {
     "data": {
-      "id": "Q333→SCIENCE",
-      "source": "Q333",
-      "target": "SCIENCE",
+      "id": "SCIENCE→Q333",
+      "source": "SCIENCE",
+      "target": "Q333",
     },
   },
   {
@@ -76,16 +76,16 @@ exports[`Cytoscape > large 1`] = `
   },
   {
     "data": {
-      "id": "Q200397→Q12483",
-      "source": "Q200397",
-      "target": "Q12483",
+      "id": "Q12483→Q200397",
+      "source": "Q12483",
+      "target": "Q200397",
     },
   },
   {
     "data": {
-      "id": "Q12483→SCIENCE",
-      "source": "Q12483",
-      "target": "SCIENCE",
+      "id": "SCIENCE→Q12483",
+      "source": "SCIENCE",
+      "target": "Q12483",
     },
   },
   {
@@ -97,16 +97,16 @@ exports[`Cytoscape > large 1`] = `
   },
   {
     "data": {
-      "id": "Q187258→Q333",
-      "source": "Q187258",
-      "target": "Q333",
+      "id": "Q333→Q187258",
+      "source": "Q333",
+      "target": "Q187258",
     },
   },
   {
     "data": {
-      "id": "Q333→SCIENCE",
-      "source": "Q333",
-      "target": "SCIENCE",
+      "id": "SCIENCE→Q333",
+      "source": "SCIENCE",
+      "target": "Q333",
     },
   },
   {
@@ -118,16 +118,16 @@ exports[`Cytoscape > large 1`] = `
   },
   {
     "data": {
-      "id": "Q81130→Q333",
-      "source": "Q81130",
-      "target": "Q333",
+      "id": "Q333→Q81130",
+      "source": "Q333",
+      "target": "Q81130",
     },
   },
   {
     "data": {
-      "id": "Q333→SCIENCE",
-      "source": "Q333",
-      "target": "SCIENCE",
+      "id": "SCIENCE→Q333",
+      "source": "SCIENCE",
+      "target": "Q333",
     },
   },
   {
@@ -147,9 +147,9 @@ exports[`Cytoscape > large 1`] = `
   },
   {
     "data": {
-      "id": "Q245355→Q8242",
-      "source": "Q245355",
-      "target": "Q8242",
+      "id": "Q8242→Q245355",
+      "source": "Q8242",
+      "target": "Q245355",
     },
   },
   {
@@ -161,9 +161,9 @@ exports[`Cytoscape > large 1`] = `
   },
   {
     "data": {
-      "id": "Q8242→LIT",
-      "source": "Q8242",
-      "target": "LIT",
+      "id": "LIT→Q8242",
+      "source": "LIT",
+      "target": "Q8242",
     },
   },
   {
@@ -183,16 +183,16 @@ exports[`Cytoscape > large 1`] = `
   },
   {
     "data": {
-      "id": "Q247603→Q4",
-      "source": "Q247603",
-      "target": "Q4",
+      "id": "Q4→Q247603",
+      "source": "Q4",
+      "target": "Q247603",
     },
   },
   {
     "data": {
-      "id": "Q4→SCIENCE",
-      "source": "Q4",
-      "target": "SCIENCE",
+      "id": "SCIENCE→Q4",
+      "source": "SCIENCE",
+      "target": "Q4",
     },
   },
 ]

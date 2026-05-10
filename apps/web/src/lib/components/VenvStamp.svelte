@@ -18,7 +18,7 @@
   <div>{parseBuildId(version)}</div>
   <div>GIT_COMMIT_REF</div>
   <div>{GIT_COMMIT_REF}</div>
-  <div>GIT_COMMIT_SHA</div>
+  <div>GIT_COMMIT_SHA:</div>
   <div>{GIT_COMMIT_SHA}</div>
 </div>
 
