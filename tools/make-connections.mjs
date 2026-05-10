@@ -93,7 +93,7 @@ async function main(today) {
     }, fowDataset.people);
 
     console.log(`✅ Processed batch ${Math.floor(i / BATCH_SIZE) + 1}.`);
-    await new Promise((res) => setTimeout(res, 500));
+    await new Promise((res) => setTimeout(res, 510));
   }
 
   mkdirSync(WB_CACHE_NAME, { recursive: true });
