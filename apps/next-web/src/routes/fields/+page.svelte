@@ -22,7 +22,7 @@
       container: cydiv,
       elements,
       style,
-      layout: { name: "breadthfirst" },
+      layout: { name: "grid" },
     });
 
     cy.style()
@@ -39,6 +39,7 @@
     cy.on("tap", "node[type='cat']", (evt) => {
       const node = evt.target as NodeSingular;
       const isClosed = node.incomers("node").every((n) => n.is(":hidden"));
+      console.log(isClosed, node.outgoers().length, node.data())
       node.incomers().style({ display: isClosed ? "element" : "none" });
     });
     cy.on("tap", "node[type='field']", (evt) => {

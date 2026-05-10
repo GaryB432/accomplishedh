@@ -14,16 +14,16 @@ describe("Cytoscape", () => {
     expect(g.map((h) => h.data.id)).toEqual([
       "Q364505",
       "Q333",
-      "Q333→Q364505",
+      "Q364505→Q333",
       "SCIENCE",
-      "SCIENCE→Q333",
+      "Q333→SCIENCE",
       "Q200397",
       "Q12483",
-      "Q12483→Q200397",
-      "SCIENCE→Q12483",
+      "Q200397→Q12483",
+      "Q12483→SCIENCE",
       "Q4",
-      "Q4→Q200397",
-      "SCIENCE→Q4",
+      "Q200397→Q4",
+      "Q4→SCIENCE",
     ]);
   });
   test("toEdge", () => {
