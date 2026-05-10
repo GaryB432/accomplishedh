@@ -18,7 +18,6 @@
   let cy = $state<cytoscape.Core>();
 
   onMount(() => {
-    cytoscape.use(dagre);
     cy = cytoscape({
       container: cydiv,
       elements,
