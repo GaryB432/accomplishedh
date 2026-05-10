@@ -11,9 +11,9 @@ Keep long-lived product data separate from generated Wikibase cache artifacts, w
    - `apps/next-web/src/data/identifiers.json`
    - `apps/next-web/src/data/featured.json`
 3. Keep generated Wikibase cache files in a dedicated cache namespace under `src/data`, for example:
-   - `apps/next-web/src/data/wikibase-cache/fields-of-work.json`
-   - `apps/next-web/src/data/wikibase-cache/lifespan.json`
-   - `apps/next-web/src/data/wikibase-cache/manifest.json` (metadata: generatedAt/source/schemaVersion)
+   - `apps/next-web/src/data/wikibase/fields-of-work.json`
+   - `apps/next-web/src/data/wikibase/lifespan.json`
+   - `apps/next-web/src/data/wikibase/manifest.json` (metadata: generatedAt/source/schemaVersion)
 
 This keeps ownership and lifecycle clear:
 

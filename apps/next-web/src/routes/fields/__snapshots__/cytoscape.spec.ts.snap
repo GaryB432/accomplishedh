@@ -3,21 +3,18 @@
 exports[`Cytoscape > large 1`] = `
 [
   {
-    "classes": [
-      "person",
-    ],
     "data": {
       "id": "Q433773",
+      "more": "stuff",
+      "type": "person",
     },
   },
   {
-    "classes": [
-      "field",
-    ],
     "data": {
       "category": "Science",
       "id": "Q333",
       "label": "astronomy",
+      "type": "field",
     },
   },
   {
@@ -28,12 +25,10 @@ exports[`Cytoscape > large 1`] = `
     },
   },
   {
-    "classes": [
-      "cat",
-    ],
     "data": {
       "id": "SCIENCE",
       "label": "Science",
+      "type": "cat",
     },
   },
   {
@@ -44,11 +39,10 @@ exports[`Cytoscape > large 1`] = `
     },
   },
   {
-    "classes": [
-      "person",
-    ],
     "data": {
       "id": "Q364505",
+      "more": "stuff",
+      "type": "person",
     },
   },
   {
@@ -66,21 +60,18 @@ exports[`Cytoscape > large 1`] = `
     },
   },
   {
-    "classes": [
-      "person",
-    ],
     "data": {
       "id": "Q200397",
+      "more": "stuff",
+      "type": "person",
     },
   },
   {
-    "classes": [
-      "field",
-    ],
     "data": {
       "category": "Science",
       "id": "Q12483",
       "label": "statistics",
+      "type": "field",
     },
   },
   {
@@ -98,11 +89,10 @@ exports[`Cytoscape > large 1`] = `
     },
   },
   {
-    "classes": [
-      "person",
-    ],
     "data": {
       "id": "Q187258",
+      "more": "stuff",
+      "type": "person",
     },
   },
   {
@@ -120,11 +110,10 @@ exports[`Cytoscape > large 1`] = `
     },
   },
   {
-    "classes": [
-      "person",
-    ],
     "data": {
       "id": "Q81130",
+      "more": "stuff",
+      "type": "person",
     },
   },
   {
@@ -142,21 +131,18 @@ exports[`Cytoscape > large 1`] = `
     },
   },
   {
-    "classes": [
-      "person",
-    ],
     "data": {
       "id": "Q245355",
+      "more": "stuff",
+      "type": "person",
     },
   },
   {
-    "classes": [
-      "field",
-    ],
     "data": {
       "category": "Lit",
       "id": "Q8242",
       "label": "literature",
+      "type": "field",
     },
   },
   {
@@ -167,12 +153,10 @@ exports[`Cytoscape > large 1`] = `
     },
   },
   {
-    "classes": [
-      "cat",
-    ],
     "data": {
       "id": "LIT",
       "label": "Lit",
+      "type": "cat",
     },
   },
   {
@@ -183,21 +167,18 @@ exports[`Cytoscape > large 1`] = `
     },
   },
   {
-    "classes": [
-      "person",
-    ],
     "data": {
       "id": "Q247603",
+      "more": "stuff",
+      "type": "person",
     },
   },
   {
-    "classes": [
-      "field",
-    ],
     "data": {
       "category": "Science",
       "id": "Q4",
       "label": "electrical engineering",
+      "type": "field",
     },
   },
   {

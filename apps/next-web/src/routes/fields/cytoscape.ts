@@ -14,26 +14,29 @@ export function createElements(
 
   for (const [hq, summary] of Object.entries(recordByPerson)) {
     hkeys.add(hq);
-    nodes.push({ classes: ["person"], data: { id: hq } });
+
+    const person = {
+      id: hq,
+      type: "person",
+      more: "stuff",
+    };
+    nodes.push({ data: person });
 
     for (const fow of summary.fows) {
+      const capitalizedCat = fow.category.toLocaleUpperCase();
       if (!fkeys.has(fow.id)) {
         fkeys.add(fow.id);
         nodes.push({
-          // style: { visible: false },
-          classes: ["field"],
-          data: fow,
+          data: { ...fow, type: "field" },
         });
       }
 
       nodes.push(toEdge(fow.id, hq));
 
-      const capitalizedCat = fow.category.toLocaleUpperCase();
       if (!ckeys.has(capitalizedCat)) {
         ckeys.add(capitalizedCat);
         nodes.push({
-          classes: ["cat"],
-          data: { id: capitalizedCat, label: fow.category },
+          data: { id: capitalizedCat, label: fow.category, type: "cat" },
         });
       }
       nodes.push(toEdge(capitalizedCat, fow.id));
@@ -55,24 +58,20 @@ export const style: StylesheetJson = [
     },
   },
   {
-    selector: ".highlight",
-    style: { backgroundColor: "lime" },
-  },
-  {
-    selector: "node.field",
+    selector: 'node[type="field"]',
     style: {
       backgroundColor: "red",
       label: "data(label)",
     },
   },
   {
-    selector: "node.person",
+    selector: 'node[type="person"]',
     style: {
       label: "data(id)",
     },
   },
   {
-    selector: "node.cat",
+    selector: 'node[type="cat"]',
     style: {
       backgroundColor: "orange",
       label: "data(label)",

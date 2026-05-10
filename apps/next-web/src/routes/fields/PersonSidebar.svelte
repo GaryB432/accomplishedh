@@ -1,53 +1,79 @@
-<script>
-	let name = $state(`PersonSidebar`);
-	let message = $derived(`${name ?? "does not"} works`);
+<script lang="ts">
+  import { fetchEntities } from "$lib/wikibase/api";
+  import { firstAndOnly } from "@accomplishedh/shared";
+  import { summarize, type SummarizedEntity } from "@accomplishedh/wikibase";
+
+  let { qid }: { qid?: string } = $props();
+
+  const summary = $derived(summarizeQid());
+
+  async function summarizeQid(): Promise<SummarizedEntity> {
+    const sub = await fetchEntities(globalThis.fetch, [qid ?? ""], ["claims", "labels"]);
+    return summarize(firstAndOnly(sub)!);
+  }
 </script>
 
-<article>
-	{message}
+<article class="sidebar">
+  {#if qid}
+    {#await summary}
+      <p class="status">Retrieving {qid}</p>
+    {:then summ}
+      {#if summ}
+        <div class="claims">
+          {#each Object.entries(summ.summary.claims) as [pkey, strs] (pkey)}
+            <div class="claim-row">
+              <p class="claim-key">{pkey}</p>
+              <p class="claim-value">{strs.join(" and ")}</p>
+            </div>
+          {/each}
+        </div>
+      {/if}
+    {/await}
+  {:else}
+    <p class="status">Select a person node to view details.</p>
+  {/if}
 </article>
 
 <style>
-  article {
-    --some-color: rgba(0, 0, 0, 0.2);
-    box-shadow:
-      0 2px 2px 0 var(--some-color),
-      0 12px 22px 0 var(--some-color);
-    outline: 1px solid var(--some-color);
-
-    padding: 0.5em;
-    text-align: center;
+  .sidebar {
+    height: 100%;
+    min-height: 0;
+    margin: 0;
+    padding: 0.75rem;
+    overflow-y: auto;
+    display: block;
   }
 
-  article:hover {
-    animation: tada 1s;
+  .status {
+    margin: 0;
+    color: color-mix(in srgb, var(--text), transparent 35%);
+    font-size: 0.95rem;
   }
 
-  @keyframes tada {
-    from {
-      transform: scale3d(1, 1, 1);
-    }
+  .claims {
+    display: grid;
+    gap: 0.6rem;
+  }
 
-    10%,
-    20% {
-      transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
-    }
+  .claim-row {
+    border: 1px solid color-mix(in srgb, var(--text), transparent 80%);
+    border-radius: 0.45rem;
+    padding: 0.45rem 0.55rem;
+    background: color-mix(in srgb, var(--bg), var(--text) 2%);
+  }
 
-    30%,
-    50%,
-    70%,
-    90% {
-      transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
-    }
+  .claim-key,
+  .claim-value {
+    margin: 0;
+  }
 
-    40%,
-    60%,
-    80% {
-      transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
-    }
+  .claim-key {
+    font-weight: 700;
+    font-size: 0.82rem;
+    letter-spacing: 0.02em;
+  }
 
-    to {
-      transform: scale3d(1, 1, 1);
-    }
+  .claim-value {
+    margin-top: 0.15rem;
   }
 </style>

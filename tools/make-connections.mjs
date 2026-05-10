@@ -26,8 +26,8 @@ const categories = new Map([
 const HA_DIRECTORY = join(fileURLToPath(import.meta.url), "../..");
 const HA_DATA = join(HA_DIRECTORY, "apps/next-web/src/data");
 
-const WB_CACHE_NAME = join(HA_DATA, "wikibase-cache");
-const FIELDS_FILE_NAME = join(WB_CACHE_NAME, "fields-of-work.json");
+const WIKIBASE_DIRECTORY = join(HA_DATA, "wikibase");
+const FIELDS_FILE_NAME = join(WIKIBASE_DIRECTORY, "fields-of-work.json");
 
 const USER_AGENT = "AccomplishedHBot/1.0 (editor@humanaccomplishment.com)";
 
@@ -103,9 +103,10 @@ async function main(today) {
     }, fowDataset.people);
 
     console.log(`✅ Processed batch ${Math.floor(i / BATCH_SIZE) + 1}.`);
+    await new Promise((res) => setTimeout(res, 250));
   }
 
-  mkdirSync(WB_CACHE_NAME, { recursive: true });
+  mkdirSync(WIKIBASE_DIRECTORY, { recursive: true });
 
   writeFileSync(
     FIELDS_FILE_NAME,

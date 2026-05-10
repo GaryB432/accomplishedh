@@ -1,10 +1,9 @@
-import type { PageLoad } from "./$types";
-
 import type {
   FieldsOfWorkSummaryV1,
   PersonQid,
 } from "@accomplishedh/shared/lib/dto.types";
-import fieldsOfWork from "../../data/wikibase-cache/fields-of-work.json";
+import fieldsOfWork from "../../data/wikibase/fields-of-work.json";
+import type { PageLoad } from "./$types";
 import { createElements } from "./cytoscape";
 
 export const load = (() => {

@@ -1,102 +1,54 @@
 <script lang="ts">
   import cytoscape, { type NodeSingular } from "cytoscape";
-  import dagre from "cytoscape-dagre";
   import { onMount } from "svelte";
   import type { PageProps } from "./$types";
-  import { style } from "./cytoscape";
   import PersonSidebar from "./PersonSidebar.svelte";
+  import { style } from "./cytoscape";
+  import ToggleButton from "$lib/components/ToggleButton.svelte";
+
+  let devmode = $state(false);
 
   let { data }: PageProps = $props();
-  let { elements } = $derived(data);
+  let elements = $derived(devmode ? data.elements.slice(0, 30) : data.elements);
 
   let cydiv = $state<HTMLDivElement>();
 
-  // const layouts: Record<string, LayoutOptions | DagreLayoutOptions> = {
-  //   breadthfirst: { name: "breadthfirst" },
-  //   circle: { name: "circle" },
-  //   concentric: { name: "concentric" },
-  //   cose: { name: "cose" },
-  //   dagre: { name: "dagre" },
-  //   grid: { name: "grid" },
-  //   none: { name: "null" },
-  //   preset: { name: "preset" },
-  //   random: { name: "random" },
-  // };
-
-  //       animate?: boolean;
-  //       // duration of animation in ms if enabled
-  //       animationDuration?: number;
-  //       // easing of animation if enabled
-  //       animationEasing?: Css.TransitionTimingFunction;
-  //       /**
-  //        * a function that determines whether the node should be animated.
-  //        * All nodes animated by default on animate enabled.
-  //        * Non-animated nodes are positioned immediately when the layout starts
-  //        */
-  //       animateFilter?(node: NodeSingular, index: number): boolean;
-
-  // Object.values(layouts).forEach((l: AnimatedLayoutOptions)=> ({...l, anim }))
-
-  let entityPopover = $state<HTMLDivElement>();
-  let hoverAnchor = $state<HTMLDivElement>();
-  // let hoveredPersonId = $state<string>();
   let selectedPersonId = $state<string>();
-
-  // let selectedLayoutName = $state<string>("dagre");
-
-  let selectedWikidataUrl = $derived<string>(
-    `https://www.wikidata.org/wiki/${selectedPersonId}`,
-  );
 
   let cy = $state<cytoscape.Core>();
 
-  // const placeAnchorAtNode = (node: NodeSingular) => {
-  //   if (!hoverAnchor || !cydiv) return;
-  //   const pos = node.renderedPosition();
-  //   const rect = cydiv.getBoundingClientRect();
-  //   hoverAnchor.style.left = `${rect.left + pos.x}px`;
-  //   hoverAnchor.style.top = `${rect.top + pos.y}px`;
-  // };
-
   onMount(() => {
-    cytoscape.use(dagre);
     cy = cytoscape({
       container: cydiv,
       elements,
       style,
-      layout: { name: "breadthfirst", directed: true },
+      layout: { name: "breadthfirst" },
     });
 
-    cy.nodes(".person").style("display", "none");
+    cy.style()
+      .selector("node")
+      .style("display", "none")
+      .selector("node[type='cat']")
+      .style("display", "element")
+      .update();
 
-    // cy.layout(lo).run();
-
-    cy.on("tap", "node.field", (evt) => {
+    cy.on("tap", "node", (evt) => {
       const node = evt.target as NodeSingular;
-      const weHidden = node.outgoers().hidden();
-      node
-        .outgoers(".person")
-        .nodes()
-        .style("display", weHidden ? "element" : "none");
-      // const m = node.scratch("dagre");
-      // console.log(m);
-
-      // cy?.layout(lo).run();
-
-      // .forEach((n) => console.log(n.visible()));
-      // console.log(node);
+      console.log(node.data());
     });
-
-    cy.on("select", "node.person", (evt) => {
-      console.log(evt);
-      cy?.nodes(":selected").forEach((n, i) => console.log(n, i));
-      // const m = node.scratch("dagre");
-      // console.log(m);
-
-      // cy?.layout(lo).run();
-
-      // .forEach((n) => console.log(n.visible()));
-      // console.log(node);
+    cy.on("tap", "node[type='cat']", (evt) => {
+      const node = evt.target as NodeSingular;
+      const isClosed = node.incomers("node").every((n) => n.is(":hidden"));
+      node.incomers().style({ display: isClosed ? "element" : "none" });
+    });
+    cy.on("tap", "node[type='field']", (evt) => {
+      const node = evt.target as NodeSingular;
+      const isClosed = node.incomers("node").every((n) => n.is(":hidden"));
+      node.incomers().style({ display: isClosed ? "element" : "none" });
+    });
+    cy.on("tap", "node[type='person']", (evt) => {
+      const node = evt.target as NodeSingular;
+      selectedPersonId = node.id();
     });
 
     // cy.on("free", "node.person", (evt) => {
@@ -113,75 +65,84 @@
   });
 </script>
 
-<div bind:this={hoverAnchor} class="hover-anchor" aria-hidden="true"></div>
-<section class="main">
+<section class="fields-shell">
   <div id="cy" class="graph" bind:this={cydiv}></div>
-
-  <div>
-    <PersonSidebar></PersonSidebar>
-    <div>
+  <aside class="panel" aria-label="Selected person details">
+    <div class="panel-content">
+      <PersonSidebar qid={selectedPersonId} />
+    </div>
+    <div class="panel-controls">
       <div class="buttons">
-        <!-- <select
-          name="lsel"
-          bind:value={selectedLayoutName}
-          onchange={() => {
-            const ll: LayoutOptions & AnimatedLayoutOptions = {
-              ...layouts[selectedLayoutName],
-              animate: true,
-            };
-            cy?.layout(ll).run();
-          }}
+        <ToggleButton bind:checked={devmode} />
+        <button
+          class="btn"
+          onclick={() =>
+            cy?.layout({ name: "breadthfirst", animate: true }).run()}
         >
-          {#each Object.keys(layouts) as lopts (lopts)}
-            <option value={lopts}>{lopts}</option>
-          {/each}
-        </select> -->
+          redraw
+        </button>
       </div>
     </div>
-  </div>
+  </aside>
 </section>
-<div
-  bind:this={entityPopover}
-  id="my-tooltip"
-  popover="hint"
-  style="position-anchor: --current-anchor;"
->
-  <p>
-    This is a <strong>rich tooltip</strong> with a
-    <a href={selectedWikidataUrl}>link</a>.
-  </p>
-</div>
 
 <style>
-  .main {
-    width: 80vw;
-    margin: auto;
+  .fields-shell {
+    --pane-border: rgba(0, 0, 0, 0.22);
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    border: thin solid lime;
+    grid-template-columns: minmax(0, 1fr) clamp(22rem, 28vw, 28rem);
+    width: 100%;
+    height: min(86dvh, 62rem);
+    min-height: 34rem;
+    overflow: hidden;
+    border: 1px solid var(--pane-border);
+    border-radius: 0.6rem;
   }
-
+  
   #cy {
-    /* width: 60vw; */
-    aspect-ratio: 9 / 6;
-    border: thin solid silver;
+    min-width: 0;
+    min-height: 0;
+    width: 100%;
+    height: 100%;
+    border-right: 1px solid var(--pane-border);
   }
 
-  .hover-anchor {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 1px;
-    height: 1px;
-    pointer-events: none;
-    anchor-name: --current-anchor;
-    opacity: 0;
+  .panel {
+    min-width: 0;
+    min-height: 0;
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) auto;
+    background: var(--bg);
   }
 
-  #my-tooltip {
-    inset: 0;
-    position-area: top;
-    user-select: none;
-    -webkit-user-select: none;
+  .panel-content {
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .panel-controls {
+    border-top: 1px solid var(--pane-border);
+    padding: 0.6rem 0.75rem;
+  }
+
+  .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 980px) {
+    .fields-shell {
+      grid-template-columns: 1fr;
+      grid-template-rows: minmax(20rem, 52dvh) minmax(14rem, 1fr);
+      height: min(92dvh, 68rem);
+    }
+
+    #cy {
+      border-right: none;
+      border-bottom: 1px solid var(--pane-border);
+    }
   }
 </style>

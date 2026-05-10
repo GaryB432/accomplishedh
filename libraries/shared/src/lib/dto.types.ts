@@ -65,7 +65,7 @@ export type FieldsOfWorkSummaryV1 = {
 
 /**
  * Canonical cache wrapper (recommended going forward).
- * Suggested file: apps/next-web/src/data/wikibase-cache/fields-of-work.json
+ * Suggested file: apps/next-web/src/data/wikibase/fields-of-work.json
  */
 export type FieldsOfWorkDatasetV1 = {
   schemaVersion: 1;
