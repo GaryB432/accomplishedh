@@ -1,15 +1,73 @@
 <script lang="ts">
   import { fetchEntities } from "$lib/wikibase/api";
   import { firstAndOnly } from "@accomplishedh/shared";
-  import { summarize, type SummarizedEntity } from "@accomplishedh/wikibase";
+  import {
+    WIKIDATA_PERSON_PROPERTIES as p,
+    summarize,
+    type SummarizedEntity,
+  } from "@accomplishedh/wikibase";
 
   let { qid }: { qid?: string } = $props();
 
   const summary = $derived(summarizeQid());
 
+  const propsOfInterest = new Set([
+    p.AWARD_RECEIVED,
+    p.BIBLIOGRAPHY,
+    p.CAUSE_OF_DEATH,
+    p.CHILD,
+    p.COUNTRY_OF_CITIZENSHIP,
+    p.DATE_OF_BIRTH,
+    p.DATE_OF_DEATH,
+    p.DOCTORAL_ADVISOR,
+    p.DOCTORAL_STUDENT,
+    p.EDUCATED_AT,
+    p.EMPLOYER,
+    p.FAMILY_NAME,
+    p.FATHER,
+    p.FIELD_OF_WORK,
+    p.GENDER,
+    p.GIVEN_NAME,
+    p.HEIGHT,
+    p.IMAGE,
+    p.LANGUAGE_SPOKEN,
+    p.MANNER_OF_DEATH,
+    p.MEMBER_OF,
+    p.MOTHER,
+    p.NATIVE_LANGUAGE,
+    p.NOTABLE_WORK,
+    p.OCCUPATION,
+    p.OFFICIAL_WEBSITE,
+    p.PLACE_OF_BIRTH,
+    p.PLACE_OF_DEATH,
+    p.POLITICAL_PARTY,
+    p.POSITION_HELD,
+    p.RELIGION,
+    p.RESIDENCE,
+    p.SPOUSE,
+  ]);
+
   async function summarizeQid(): Promise<SummarizedEntity> {
-    const sub = await fetchEntities(globalThis.fetch, [qid ?? ""], ["claims", "labels"]);
-    return summarize(firstAndOnly(sub)!);
+    const sub = await fetchEntities(
+      globalThis.fetch,
+      [qid ?? ""],
+      ["claims", "labels"],
+    );
+
+    const the_subject = firstAndOnly(sub)!;
+    the_subject.claims = Object.keys(the_subject.claims ?? {})
+      .filter((k) => propsOfInterest.has(k))
+      .reduce(
+        (a, b) => {
+          a[b] = the_subject.claims![b];
+          return a;
+        },
+        { ...the_subject.claims },
+      );
+
+    const that_summary = await summarize(the_subject);
+    console.log(that_summary);
+    return that_summary;
   }
 </script>
 
@@ -23,7 +81,7 @@
           {#each Object.entries(summ.summary.claims) as [pkey, strs] (pkey)}
             <div class="claim-row">
               <p class="claim-key">{pkey}</p>
-              <p class="claim-value">{strs.join(" and ")}</p>
+              <p class="claim-value">{strs.join(", ")}</p>
             </div>
           {/each}
         </div>
