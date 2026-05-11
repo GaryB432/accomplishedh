@@ -1,4 +1,5 @@
 import { batchify } from "@accomplishedh/shared";
+import { WIKIDATA_PERSON_PROPERTIES as p } from "../constants";
 import * as wbApi from "../data/api";
 import { serialize } from "../data/globe-coordinate-value";
 import { isoFrom } from "../data/timevalue";
@@ -16,6 +17,43 @@ export type Summary = {
     fun: boolean;
   };
 };
+
+const propsOfInterest = new Set([
+  p.AWARD_RECEIVED,
+  p.BIBLIOGRAPHY,
+  p.CAUSE_OF_DEATH,
+  p.CHILD,
+  p.COUNTRY_OF_CITIZENSHIP,
+  p.DATE_OF_BIRTH,
+  p.DATE_OF_DEATH,
+  p.DOCTORAL_ADVISOR,
+  p.DOCTORAL_STUDENT,
+  p.EDUCATED_AT,
+  p.EMPLOYER,
+  p.FAMILY_NAME,
+  p.FATHER,
+  p.FIELD_OF_WORK,
+  p.GENDER,
+  p.GIVEN_NAME,
+  p.HEIGHT,
+  p.IMAGE,
+  p.LANGUAGE_SPOKEN,
+  p.MANNER_OF_DEATH,
+  p.MEMBER_OF,
+  p.MOTHER,
+  p.NATIVE_LANGUAGE,
+  p.NOTABLE_WORK,
+  p.OCCUPATION,
+  p.OFFICIAL_WEBSITE,
+  p.ORCID_ID,
+  p.PLACE_OF_BIRTH,
+  p.PLACE_OF_DEATH,
+  p.POLITICAL_PARTY,
+  p.POSITION_HELD,
+  p.RELIGION,
+  p.RESIDENCE,
+  p.SPOUSE,
+]);
 
 const datatype_info_map = new Map([
   ["commonsMedia", true],
@@ -64,7 +102,10 @@ export async function summarize(entity: Entity): Promise<SummarizedEntity> {
 
   const subject_snaks = Object.values(subject.claims ?? {})
     .map((c) =>
-      c.filter((q) => q.mainsnak.snaktype === "value").map((d) => d.mainsnak),
+      c
+        .filter((q) => q.mainsnak.snaktype === "value")
+        .map((d) => d.mainsnak)
+        .filter((c) => propsOfInterest.has(c.property)),
     )
     .flat()
     .sort(byDataType);
