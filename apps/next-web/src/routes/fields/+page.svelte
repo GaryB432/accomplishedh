@@ -117,6 +117,7 @@
 
   .panel-content {
     min-height: 0;
+    display: flex;
     overflow: hidden;
   }
 
