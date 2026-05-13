@@ -75,20 +75,6 @@ export async function labelify(
   id_record: Record<string, unknown>,
 ): Promise<Record<string, string>> {
   const label_record: Record<string, string> = {};
-  // console.log("gotta", id_record, Object.keys(id_record).length)
-  const batches = batchify(Object.keys(id_record));
-  batches.forEach(async (batch) => {
-    const labeled_entities = await wbApi.fetchEntities(batch, ["labels"]);
-    console.log(labeled_entities);
-  });
-
-  return label_record;
-}
-
-export async function xlabelify(
-  id_record: Record<string, unknown>,
-): Promise<Record<string, string>> {
-  const label_record: Record<string, string> = {};
   const batches = batchify(Object.keys(id_record));
   // console.log(batches)
   for (const batch of batches) {
@@ -259,8 +245,12 @@ function stringify_snak_value(
     }
     case "wikibase-item": {
       if (datavalue.type === "wikibase-entityid") {
-        stringed =
-          labelDictionary[datavalue.value.id] ?? datavalue.type.concat("?");
+        const pid = datavalue.value.id;
+        if (labelDictionary[pid]) {
+          stringed = labelDictionary[pid];
+        } else {
+          console.warn(`${pid} not in labels`);
+        }
       } else {
         stringed = datavalue.value;
       }
