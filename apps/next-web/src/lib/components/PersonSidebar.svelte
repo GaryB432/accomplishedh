@@ -66,7 +66,6 @@
       );
 
     const that_summary = await summarize(the_subject);
-    console.log(that_summary);
     return that_summary;
   }
 </script>
