@@ -36,7 +36,6 @@ const propsOfInterest = new Set([
   p.GENDER,
   p.GIVEN_NAME,
   p.HEIGHT,
-  p.IMAGE,
   p.LANGUAGE_SPOKEN,
   p.MANNER_OF_DEATH,
   p.MEMBER_OF,
@@ -76,14 +75,50 @@ export async function labelify(
   id_record: Record<string, unknown>,
 ): Promise<Record<string, string>> {
   const label_record: Record<string, string> = {};
+  // console.log("gotta", id_record, Object.keys(id_record).length)
   const batches = batchify(Object.keys(id_record));
-  for (const batch of batches) {
-    const labeled_people = await wbApi.fetchEntities(batch, ["labels"]);
+  batches.forEach(async (batch) => {
+    const labeled_entities = await wbApi.fetchEntities(batch, ["labels"]);
+    console.log(labeled_entities);
+  });
 
-    for (const ent of Object.values(labeled_people)) {
-      label_record[ent.id] = fromDictionary(ent.labels); // .concat('@@');
+  return label_record;
+}
+
+export async function xlabelify(
+  id_record: Record<string, unknown>,
+): Promise<Record<string, string>> {
+  const label_record: Record<string, string> = {};
+  const batches = batchify(Object.keys(id_record));
+  // console.log(batches)
+  for (const batch of batches) {
+    const labeled_entities = await wbApi.fetchEntities(batch, ["labels"]);
+
+    // console.log(labeled_entities);
+
+    const ones_with_labels = Object.values(labeled_entities);
+    const for_real = ones_with_labels.filter(
+      (j) => !!j.labels && !!j.labels["en"] && !!j.labels["en"].value,
+    );
+    console.log(for_real, "readl");
+
+    for (const ent of Object.values(for_real)) {
+      // label_record[ent.id] = ent.id + " please!";
+      const t = ent.labels?.["en"] ?? { value: "undefined" };
+      label_record[ent.id] = t.value;
     }
+
+    //   for (const ent of Object.values(labeled_people).filter((l, w) => {
+    //     console.log(l, w, l.labels);
+    //     const ff = !!l.labels && !!l.labels["en"] && !!l.labels["en"].value;
+    //     // const gg = ff && l.labels!["en"]?.value === "4";
+    //     return ff;
+    //   })) {
+    //     console.log("grabbing", ent.labels);
+    //     label_record[ent.id] = fromDictionary(ent.labels); // .concat('@@');
+    //   }
   }
+  // console.log(id_record, label_record);
   return label_record;
 }
 
@@ -156,6 +191,7 @@ async function fetch_label_dictionary_for_claimed_entities(
     .map(snakkedEntityId)
     .filter((qid) => qid !== void 0);
 
+  console.log("bouta", claimed_entities_qids);
   return labelify(record_from(claimed_entities_qids));
 }
 
