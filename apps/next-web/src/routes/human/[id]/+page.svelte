@@ -24,6 +24,7 @@
     </div>
     <div>
       <LifeSpan {subject}></LifeSpan>
+      <PersonSidebar qid={subject.id}></PersonSidebar>
     </div>
   </div>
 </section>
