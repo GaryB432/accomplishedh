@@ -9,6 +9,7 @@ import {
   type EntityPropertyName,
 } from "./urls";
 
+/** @deprecated */
 export async function fetchEntities(
   ids: EntityId[],
   props: EntityPropertyName[],
@@ -42,6 +43,7 @@ export async function fetchEntities(
   return {};
 }
 
+/** @deprecated */
 export async function searchEntitiesByTitle(
   search: EuroHuman | string,
 ): Promise<Entities> {

@@ -1,6 +1,5 @@
 <script lang="ts">
   import { fromDictionary } from "$lib/wikibase/utils.js";
-
   import EntityDescription from "../EntityDescription.svelte";
   import FeaturedToday from "../FeaturedToday.svelte";
   import Headshot from "../Headshot.svelte";
@@ -14,12 +13,25 @@
   let subjectLabel = $derived(fromDictionary(subject.labels));
 </script>
 
-<main>
-  <div class="container">
-    <h1>{subjectLabel}</h1>
-    <EntityDescription {subject}></EntityDescription>
-    <Headshot {subject}></Headshot>
-    <LifeSpan></LifeSpan>
-    <FeaturedToday {featureds}></FeaturedToday>
+<section>
+  <h1>{subjectLabel}</h1>
+  <EntityDescription {subject}></EntityDescription>
+  <div class="mid">
+    <div>
+      <Headshot {subject}></Headshot>
+      <FeaturedToday {featureds}></FeaturedToday>
+    </div>
+    <div>
+      <LifeSpan {subject}></LifeSpan>
+    </div>
   </div>
-</main>
+</section>
+
+<style>
+  section {
+    padding: 0 3rem;
+  }
+  .mid {
+    display: flex;
+  }
+</style>

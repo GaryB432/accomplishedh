@@ -19,6 +19,16 @@ export default [
     },
     rules: {
       ...baseConfig.rules,
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        {
+          vars: "all",
+          args: "after-used",
+          varsIgnorePattern: "^_",
+          argsIgnorePattern: "^_",
+        },
+      ],
+      "@typescript-eslint/no-deprecated": "error",
       "@typescript-eslint/no-floating-promises": "warn",
       "@typescript-eslint/no-unsafe-argument": "warn",
       "no-undef": "off",

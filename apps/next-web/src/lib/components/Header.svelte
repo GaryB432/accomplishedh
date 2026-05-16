@@ -38,7 +38,6 @@
     align-items: center;
     justify-content: space-between;
     padding-inline: var(--space);
-    height: 100%;
     z-index: 10;
     gap: 0.6em;
   }
