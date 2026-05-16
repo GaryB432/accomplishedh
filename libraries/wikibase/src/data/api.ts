@@ -24,6 +24,7 @@ export async function fetchEntities(
   });
   const response = await fetch(entityUrl);
   const entityData = (await response.json()) as WikibaseResponse;
+  console.log(entityData)
 
   if (entityData.success === 1) {
     return entityData.entities!;

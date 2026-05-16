@@ -42,7 +42,8 @@ export function fromDictionary(
       return term.value ?? "no language value";
     }
   }
-  return "dunno af";
+
+  return "no label dictionary";
 }
 
 /** @deprecated */

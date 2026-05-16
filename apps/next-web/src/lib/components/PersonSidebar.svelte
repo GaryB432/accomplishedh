@@ -7,8 +7,22 @@
   const summary = $derived(summarizeQid());
 
   type SummarizedEntity = { summary: { claims: Record<string, string[]> } };
-  function summarize(_entity: Item): PromiseLike<SummarizedEntity> {
-    return Promise.resolve({ summary: { claims: {} } });
+
+  async function summarize(_entity: Item): Promise<SummarizedEntity> {
+    return new Promise((resolve) =>
+      setTimeout(() => {
+        const claimStrings = Object.keys(_entity.claims ?? {}).reduce<
+          Record<string, string[]>
+        >((a, b) => {
+          a[b] = [`Property "${b}"`, "coming soon"];
+          return a;
+        }, {});
+
+        resolve({
+          summary: { claims: claimStrings },
+        });
+      }, 2000),
+    );
   }
 
   async function summarizeQid(): Promise<SummarizedEntity> {
@@ -33,7 +47,7 @@
           {#each Object.entries(summ.summary.claims) as [pkey, strs] (pkey)}
             <div class="claim-row">
               <p class="claim-key">{pkey}</p>
-              <p class="claim-value">{strs.join(" and ")}</p>
+              <p class="claim-value">{strs.join(", ")}</p>
             </div>
           {/each}
         </div>

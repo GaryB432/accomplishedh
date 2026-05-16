@@ -16,7 +16,7 @@ const dict: LanguageDictionary = {
 
 describe("Translators", () => {
   test("fromDictionary", () => {
-    expect(fromDictionary(dict, "cn")).toEqual("dunno af");
+    expect(fromDictionary(dict, "cn")).toEqual("no label dictionary");
     expect(fromDictionary(dict, "fr")).toEqual("vraiment");
     expect(fromDictionary(dict)).toEqual("correct");
   });

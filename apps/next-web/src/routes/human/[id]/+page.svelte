@@ -1,4 +1,5 @@
 <script lang="ts">
+  import PersonSidebar from "$lib/components/PersonSidebar.svelte";
   import { fromDictionary } from "$lib/wikibase/utils.js";
   import EntityDescription from "../EntityDescription.svelte";
   import FeaturedToday from "../FeaturedToday.svelte";
@@ -23,6 +24,7 @@
     </div>
     <div>
       <LifeSpan {subject}></LifeSpan>
+      <PersonSidebar qid={subject.id}></PersonSidebar>
     </div>
   </div>
 </section>
