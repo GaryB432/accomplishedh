@@ -5,18 +5,18 @@
   import type { AccomplishedHuman } from "@accomplishedh/shared";
   import Headshot from "./human/Headshot.svelte";
 
-  type DailyFeatured = AccomplishedHuman & { wb: Entity };
+  type WikiHumanLike = AccomplishedHuman & { wb: Entity };
 
   type Props = {
-    featureds: DailyFeatured[];
+    fellas: WikiHumanLike[];
   };
 
-  let { featureds }: Props = $props();
+  let { fellas }: Props = $props();
 
-  let dailySix = $derived(featureds.slice(0, 6));
+  let topSix = $derived(fellas.slice(0, 6));
 </script>
 
-{#each dailySix as df, index (df.wb.id)}
+{#each topSix as df, index (df.wb.id)}
   <a class="person-card" href={resolve("/human/[id]", { id: df.wb.id })}>
     <span class="rank" aria-hidden="true"
       >{String(index + 1).padStart(2, "0")}</span

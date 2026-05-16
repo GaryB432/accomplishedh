@@ -4,7 +4,7 @@
 
   let { data } = $props();
   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
-  let featureds = $derived(data.featureds);
+  let { featureds } = $derived(data);
 
   const today = new Intl.DateTimeFormat("en", {
     day: "numeric",
@@ -26,7 +26,7 @@
   <section class="daily-six" aria-label="Today's six featured people">
     <!-- eslint-disable-next-line @typescript-eslint/no-unsafe-member-access -->
     {#if featureds.length}
-      <CardSplash {featureds}></CardSplash>
+      <CardSplash fellas={featureds}></CardSplash>
     {:else}
       <div class="empty-state">
         <h2>Check back soon</h2>
