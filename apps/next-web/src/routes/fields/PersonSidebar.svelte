@@ -1,16 +1,26 @@
 <script lang="ts">
   import { fetchEntities } from "$lib/wikibase/api";
   import { firstAndOnly } from "@accomplishedh/shared";
-  import { summarize, type SummarizedEntity } from "@accomplishedh/wikibase";
 
   let { qid }: { qid?: string } = $props();
 
   const summary = $derived(summarizeQid());
 
+  type SummarizedEntity = { summary: { claims: Record<string, string[]> } };
+  function summarize(_entity: Item): PromiseLike<SummarizedEntity> {
+    return Promise.resolve({ summary: { claims: {} } });
+  }
+
   async function summarizeQid(): Promise<SummarizedEntity> {
-    const sub = await fetchEntities(globalThis.fetch, [qid ?? ""], ["claims", "labels"]);
+    const sub = await fetchEntities(
+      globalThis.fetch,
+      [qid ?? ""],
+      ["claims", "labels"],
+    );
     return summarize(firstAndOnly(sub)!);
   }
+
+  import type { Item } from "@accomplishedh/wikibase/types";
 </script>
 
 <article class="sidebar">
