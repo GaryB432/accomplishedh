@@ -6,8 +6,10 @@ import type { Entity, EntityId } from "../types";
 import type { Snak } from "../types/snaks";
 import { fromDictionary } from "./translators";
 
+/** @deprecated */
 export type SummarizedEntities = Record<EntityId, SummarizedEntity>;
 
+/** @deprecated */
 export type SummarizedEntity = Entity & Summary;
 
 export type Summary = {
@@ -33,6 +35,7 @@ const datatype_info_map = new Map([
  *
  * @param id_record an object whose keys are the wikidata IDs to apply
  * @returns an object whose entries are the english labels for the wikidata items
+ * @deprecated
  */
 export async function labelify(
   id_record: Record<string, unknown>,
@@ -49,6 +52,7 @@ export async function labelify(
   return label_record;
 }
 
+/** @deprecated */
 export async function summarize(entity: Entity): Promise<SummarizedEntity> {
   const subject = { ...entity };
   // const summary = { fun: false, claims: { coming: 'soon' } };
