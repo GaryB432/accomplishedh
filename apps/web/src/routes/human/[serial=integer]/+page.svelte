@@ -1,11 +1,10 @@
 <script lang="ts">
-  import type { Property } from "@accomplishedh/shared";
-
   import { browser } from "$app/environment";
   import { applyAction, enhance } from "$app/forms";
   import { invalidateAll } from "$app/navigation";
   import { resolve } from "$app/paths";
   import { page } from "$app/state";
+
   import Era from "$lib/components/Era.svelte";
   import ExtensionPromo from "$lib/components/ExtensionPromo.svelte";
   import FollowUs from "$lib/components/FollowUs.svelte";
@@ -16,13 +15,14 @@
   import PropsBox from "$lib/components/PropsBox.svelte";
   import Share from "$lib/components/Share.svelte";
   import { flags } from "$lib/states/flags.svelte";
-  import { type Entity } from "@accomplishedh/wikibase";
 
-  import type { PageData } from "./$types";
+  import type { Property } from "@accomplishedh/shared";
+  import { type Entity } from "@accomplishedh/wikibase";
 
   import { imageSearchUrl, ogImage, socialMediaDescription } from "../helpers";
   import ReasonatorLink from "../ReasonatorLink.svelte";
   import WikibasePanel from "../WikibasePanel.svelte";
+  import type { PageData } from "./$types";
 
   interface Props {
     data: PageData;
@@ -115,6 +115,12 @@
     const footnoteRegex = /\s*\[\d+\]/g;
     return text.replaceAll(footnoteRegex, "").trim();
   }
+  let entityOnNextWeb = $derived(
+    new URL(
+      ["human", entity.id].join("/"),
+      "https://accomplishedh-next-web.vercel.app/",
+    ),
+  );
 </script>
 
 <svelte:window
@@ -145,6 +151,11 @@
   <div class="header">
     <div class="hn">{name}</div>
     <div class="re">
+      <a
+        rel="external nofollow noopener noreferrer"
+        target="_blank"
+        href={entityOnNextWeb.href}>Preview Next Web</a
+      >
       <ReasonatorLink {entity}></ReasonatorLink>
     </div>
   </div>
@@ -550,6 +561,20 @@
     border: thin solid var(--primary-color);
     padding: 0.5em;
     font-size: 1.2em;
+  }
+
+  .re {
+    display: flex;
+    align-items: center;
+    font-size: 11px;
+    & > a {
+      border: 0.2em solid var(--primary-color);
+      font-weight: bold;
+      padding: 0.5em;
+      text-decoration: none;
+      color: var(--primary-color);
+      border-radius: 1em;
+    }
   }
 
   .see-also {

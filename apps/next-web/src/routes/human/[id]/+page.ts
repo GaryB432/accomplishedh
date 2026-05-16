@@ -4,7 +4,7 @@ import { error } from "@sveltejs/kit";
 import type { PageLoad, PageLoadEvent } from "./$types";
 
 export const load: PageLoad = async (ctx: PageLoadEvent) => {
-  const f = await ctx.parent();
+  // const f = await ctx.parent();
   const { id } = ctx.params;
 
   const subjects = await fetchEntities(

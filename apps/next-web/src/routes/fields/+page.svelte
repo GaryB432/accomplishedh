@@ -11,6 +11,7 @@
   let { data }: PageProps = $props();
   let elements = $derived(devmode ? data.elements.slice(0, 30) : data.elements);
 
+  let shell = $state<HTMLElement>();
   let cydiv = $state<HTMLDivElement>();
 
   let selectedPersonId = $state<string>();
@@ -18,6 +19,35 @@
   let cy = $state<cytoscape.Core>();
 
   onMount(() => {
+    const main = shell?.closest("main");
+    const appShell = main?.closest(".app-shell");
+    const header = appShell?.querySelector(".top-nav") as HTMLElement | null;
+    const footer = appShell?.querySelector("footer") as HTMLElement | null;
+
+    const updateShellHeight = () => {
+      if (!shell || !main) return;
+
+      const viewportHeight = window.visualViewport?.height ?? window.innerHeight;
+      const headerHeight = header?.getBoundingClientRect().height ?? 0;
+      const footerHeight = footer?.getBoundingClientRect().height ?? 0;
+      const mainStyles = getComputedStyle(main);
+      const mainPaddingTop = Number.parseFloat(mainStyles.paddingTop) || 0;
+      const mainPaddingBottom = Number.parseFloat(mainStyles.paddingBottom) || 0;
+      const availableHeight = Math.max(
+        0,
+        Math.floor(
+          viewportHeight -
+            headerHeight -
+            footerHeight -
+            mainPaddingTop -
+            mainPaddingBottom,
+        ),
+      );
+
+      shell.style.height = `${availableHeight}px`;
+      cy?.resize();
+    };
+
     cy = cytoscape({
       container: cydiv,
       elements,
@@ -62,10 +92,26 @@
     //     entityPopover.showPopover();
     //   }
     // });
+
+    updateShellHeight();
+
+    const resizeObserver = new ResizeObserver(updateShellHeight);
+    if (header) resizeObserver.observe(header);
+    if (footer) resizeObserver.observe(footer);
+
+    window.addEventListener("resize", updateShellHeight);
+    window.visualViewport?.addEventListener("resize", updateShellHeight);
+
+    return () => {
+      resizeObserver.disconnect();
+      window.removeEventListener("resize", updateShellHeight);
+      window.visualViewport?.removeEventListener("resize", updateShellHeight);
+      cy?.destroy();
+    };
   });
 </script>
 
-<section class="fields-shell">
+<section class="fields-shell" bind:this={shell}>
   <div id="cy" class="graph" bind:this={cydiv}></div>
   <aside class="panel" aria-label="Selected person details">
     <div class="panel-content">
@@ -89,17 +135,22 @@
 <style>
   .fields-shell {
     --pane-border: rgba(0, 0, 0, 0.22);
+    --shell-offset: 10rem;
     display: grid;
     grid-template-columns: minmax(0, 1fr) clamp(22rem, 28vw, 28rem);
+    grid-template-rows: minmax(0, 1fr);
     width: 100%;
-    height: min(86dvh, 62rem);
-    min-height: 34rem;
+    height: calc(100dvh - var(--shell-offset));
     overflow: hidden;
     border: 1px solid var(--pane-border);
     border-radius: 0.6rem;
   }
 
   #cy {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: stretch;
+    justify-self: stretch;
     min-width: 0;
     min-height: 0;
     width: 100%;
@@ -108,6 +159,8 @@
   }
 
   .panel {
+    grid-column: 2;
+    grid-row: 1;
     min-width: 0;
     min-height: 0;
     display: grid;
@@ -136,14 +189,22 @@
 
   @media (max-width: 980px) {
     .fields-shell {
+      --shell-offset: 8.5rem;
       grid-template-columns: 1fr;
       grid-template-rows: minmax(20rem, 52dvh) minmax(14rem, 1fr);
-      height: min(92dvh, 68rem);
+      height: calc(100dvh - var(--shell-offset));
     }
 
     #cy {
+      grid-column: 1;
+      grid-row: 1;
       border-right: none;
       border-bottom: 1px solid var(--pane-border);
+    }
+
+    .panel {
+      grid-column: 1;
+      grid-row: 2;
     }
   }
 </style>

@@ -1,7 +1,6 @@
 <script lang="ts">
   import PersonSidebar from "$lib/components/PersonSidebar.svelte";
   import { fromDictionary } from "$lib/wikibase/utils.js";
-
   import EntityDescription from "../EntityDescription.svelte";
   import FeaturedToday from "../FeaturedToday.svelte";
   import Headshot from "../Headshot.svelte";
@@ -15,34 +14,25 @@
   let subjectLabel = $derived(fromDictionary(subject.labels));
 </script>
 
-<main>
-  <div class="container">
-    <h1>{subjectLabel}</h1>
-    <EntityDescription {subject} />
-    <div class="mid">
-      <div class="left">
-        <PersonSidebar qid={subject.id} />
-      </div>
-
-      <Headshot {subject} />
+<section>
+  <h1>{subjectLabel}</h1>
+  <EntityDescription {subject}></EntityDescription>
+  <div class="mid">
+    <div>
+      <Headshot {subject}></Headshot>
+      <FeaturedToday {featureds}></FeaturedToday>
     </div>
-    <LifeSpan />
-    <FeaturedToday {featureds} />
+    <div>
+      <LifeSpan {subject}></LifeSpan>
+    </div>
   </div>
-</main>
+</section>
 
 <style>
-  .container {
-    display: flex;
-    flex-direction: column;
+  section {
+    padding: 0 3rem;
   }
   .mid {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-  }
-
-  .mid .left {
     display: flex;
   }
 </style>
