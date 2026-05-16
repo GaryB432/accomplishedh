@@ -33,4 +33,4 @@ jobs:
       - name: Build
         run: pnpm --recursive run build
       - name: Test
-        run: pnpm exec playwright install && pnpm --recursive run test
+        run: pnpx playwright install --with-deps && pnpm --recursive run test
