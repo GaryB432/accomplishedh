@@ -25,6 +25,7 @@
     "xml": "^1.0.1"
   },
   "devDependencies": {
+    "@playwright/test": "^1.60.0",
     "@sveltejs/adapter-vercel": "^6.3.1",
     "@sveltejs/kit": "^2.59.0",
     "@sveltejs/vite-plugin-svelte": "^7.0.0",
