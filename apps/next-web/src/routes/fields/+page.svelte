@@ -1,10 +1,10 @@
 <script lang="ts">
+  import PersonSidebar from "$lib/components/PersonSidebar.svelte";
+  import ToggleButton from "$lib/components/ToggleButton.svelte";
   import cytoscape, { type NodeSingular } from "cytoscape";
   import { onMount } from "svelte";
   import type { PageProps } from "./$types";
-  import PersonSidebar from "../../lib/components/PersonSidebar.svelte";
   import { style } from "./cytoscape";
-  import ToggleButton from "$lib/components/ToggleButton.svelte";
 
   let devmode = $state(false);
 
