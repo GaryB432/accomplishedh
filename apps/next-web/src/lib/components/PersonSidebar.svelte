@@ -8,7 +8,9 @@
 
   type SummarizedEntity = { summary: { claims: Record<string, string[]> } };
   function summarize(_entity: Item): PromiseLike<SummarizedEntity> {
-    return Promise.resolve({ summary: { claims: {} } });
+    return Promise.resolve({
+      summary: { claims: { P101: ["P101", "so soon"] } },
+    });
   }
 
   async function summarizeQid(): Promise<SummarizedEntity> {
