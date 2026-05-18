@@ -1,9 +1,8 @@
 <script lang="ts">
-  import type { CommonsResponse, Item } from "@accomplishedh/wikibase/types";
-
   import { sleepyFetch } from "$lib";
   import { thumbnail_query_url } from "$lib/wikibase/urls";
   import { firstAndOnly } from "@accomplishedh/shared";
+  import type { CommonsResponse, Item } from "@accomplishedh/wikibase/types";
   import { onMount } from "svelte";
 
   type Props = {
