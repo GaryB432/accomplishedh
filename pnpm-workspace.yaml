@@ -1,9 +1,13 @@
 packages:
   - apps/*
   - libraries/*
+
 allowBuilds:
   '@parcel/watcher': true
   esbuild: true
+
 peerDependencyRules:
   allowedVersions:
     vite: "*"
+
+trustPolicy: no-downgrade
