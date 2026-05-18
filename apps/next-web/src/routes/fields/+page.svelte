@@ -32,14 +32,16 @@
       const visibleElements = graph.elements(":visible");
 
       if (visibleElements.nonempty()) {
-        visibleElements.layout({
-          name: "grid",
-          fit: true,
-          animate,
-          padding: 36,
-          avoidOverlap: true,
-          condense: true,
-        }).run();
+        visibleElements
+          .layout({
+            name: "grid",
+            fit: true,
+            animate,
+            padding: 36,
+            avoidOverlap: true,
+            condense: true,
+          })
+          .run();
       }
     };
 
@@ -109,7 +111,6 @@
       cy?.fit(cy.elements(":visible"), 36);
     };
 
-
     cy = cytoscape({
       container: cydiv,
       elements,
@@ -174,7 +175,8 @@
       <button
         class="btn"
         onclick={() =>
-          cy?.elements(":visible")
+          cy
+            ?.elements(":visible")
             .layout({
               name: "grid",
               fit: true,
