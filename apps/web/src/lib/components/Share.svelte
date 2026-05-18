@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { browser } from '$app/environment';
-  import { page } from '$app/state';
+  import { browser } from "$app/environment";
+  import { page } from "$app/state";
 
   interface Props {
     text?: string;
@@ -9,18 +9,18 @@
   }
 
   let {
-    text = 'please retweet! ✅',
-    title = 'Human Accomplishment',
+    text = "please retweet! ✅",
+    title = "Human Accomplishment",
     url = page.url.href,
   }: Props = $props();
 
   const messages = [
-    'Share with that person who loves humans',
-    'Share with that person who is grateful to humans',
-    'Share with that person who is grateful for #science',
-    'Share with that person who is inspired by #art',
-    'Share with that person who is grateful for #music',
-    'Share with that person who is moved by #literature',
+    "Share with that person who loves humans",
+    "Share with that person who is grateful to humans",
+    "Share with that person who is grateful for #science",
+    "Share with that person who is inspired by #art",
+    "Share with that person who is grateful for #music",
+    "Share with that person who is moved by #literature",
     // motivated by ?
     // hungry for ?
     // driven by for from ?
@@ -30,8 +30,8 @@
     if (navigator.share) {
       navigator
         .share({ text, title, url })
-        .then(() => console.log('Successful share'))
-        .catch((error) => console.log('Error sharing', error));
+        .then(() => console.log("Successful share"))
+        .catch((error) => console.log("Error sharing", error));
     }
   }
   let messageIndex = $state(Math.floor(Math.random() * messages.length));

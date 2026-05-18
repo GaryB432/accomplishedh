@@ -5,7 +5,7 @@
 
   let { era }: Props = $props();
 
-  const eras = ['1200-1400', '1400-1600', '1600-1800', '1800+'];
+  const eras = ["1200-1400", "1400-1600", "1600-1800", "1800+"];
 </script>
 
 <div class="era-viewport">

@@ -45,7 +45,6 @@
         animation-delay: 0.3s;
       }
     }
-
   }
 
   @keyframes dash {

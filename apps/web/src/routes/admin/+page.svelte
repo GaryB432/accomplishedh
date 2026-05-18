@@ -42,7 +42,7 @@
         a[b.stamp] = [b];
       }
       return a;
-    }, {})
+    }, {}),
   );
 
   let fmap = $derived(
@@ -51,7 +51,7 @@
         a[b.human.era] = (a[b.human.era] ?? 0) + 1;
       }
       return a;
-    }, {})
+    }, {}),
   );
 
   let imap = $derived(
@@ -64,7 +64,7 @@
         }
       }
       return a;
-    }, {})
+    }, {}),
   );
 
   function daysFromNowLabel(day: string) {
@@ -74,7 +74,7 @@
 
   onMount(async () => {
     const fwh = featured.filter(
-      (e) => e.human.death && e.human.death !== "" && e.human.yob != ""
+      (e) => e.human.death && e.human.death !== "" && e.human.yob != "",
     );
     const featuredTimeline: [string, string, Date, Date][] = fwh.map((e) => [
       Array.isArray(e.human.inventory)
@@ -107,7 +107,7 @@
         timelineTable.addColumn({ id: "Born", type: "date" });
         timelineTable.addColumn({ id: "Died", type: "date" });
         const timelineChart = new google.visualization.Timeline(
-          timelineChartHost!
+          timelineChartHost!,
         );
         google.visualization.events.addListener(timelineChart, "select", () => {
           const row = timelineChart.getSelection()[0].row;
@@ -132,25 +132,25 @@
         const eraChart = new google.visualization.PieChart(pieChartHost!);
         eraChart.draw(
           new google.visualization.DataView(
-            google.visualization.arrayToDataTable(eraData)
+            google.visualization.arrayToDataTable(eraData),
           ),
           {
             ...baseChartOptions,
             title: "Featureds by Era",
-          }
+          },
         );
 
         const inventoryChart = new google.visualization.PieChart(
-          inventoryChartHost!
+          inventoryChartHost!,
         );
         inventoryChart.draw(
           new google.visualization.DataView(
-            google.visualization.arrayToDataTable(inventoryData)
+            google.visualization.arrayToDataTable(inventoryData),
           ),
           {
             ...baseChartOptions,
             title: "Featureds by Inventory",
-          }
+          },
         );
       });
     };
@@ -192,8 +192,7 @@
             </a>
           </div>
           <div class="inventory">
-            <Inventory
-              inventory={featuredOne.human.inventory ?? "none"}
+            <Inventory inventory={featuredOne.human.inventory ?? "none"}
             ></Inventory>
           </div>
           <div class="era">

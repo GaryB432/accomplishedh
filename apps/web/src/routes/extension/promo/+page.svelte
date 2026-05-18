@@ -1,10 +1,10 @@
 <script lang="ts">
-  import { page } from '$app/state';
-  import ExtensionPromo from '$lib/components/ExtensionPromo.svelte';
-  const image = 'https://pbs.twimg.com/media/FjQPuXoXEAARryR?format=png';
+  import { page } from "$app/state";
+  import ExtensionPromo from "$lib/components/ExtensionPromo.svelte";
+  const image = "https://pbs.twimg.com/media/FjQPuXoXEAARryR?format=png";
   const description =
-    'Featuring inspiring people every day from  Science, Literature, Art and Music. The free browser extension brings them front and center wherever you are with just a click.';
-  const title = 'Human Accomplishment Browser Extension';
+    "Featuring inspiring people every day from  Science, Literature, Art and Music. The free browser extension brings them front and center wherever you are with just a click.";
+  const title = "Human Accomplishment Browser Extension";
 </script>
 
 <svelte:head>

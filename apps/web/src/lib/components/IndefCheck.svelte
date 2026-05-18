@@ -1,10 +1,10 @@
 <script lang="ts">
-  import { highlightDefiniteArticle } from '@accomplishedh/shared';
+  import { highlightDefiniteArticle } from "@accomplishedh/shared";
   interface Props {
     message?: string;
   }
 
-  let { message = '' }: Props = $props();
+  let { message = "" }: Props = $props();
 
   let partInfo = $derived(highlightDefiniteArticle(message));
   let [p0, p1] = $derived(partInfo.p);
