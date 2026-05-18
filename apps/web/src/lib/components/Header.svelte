@@ -105,7 +105,6 @@
     <PreviewPanel {vercelEnv}></PreviewPanel>
   </section>
 
-  
   <section class="links">
     <TryNextWeb />
     {#if browser}

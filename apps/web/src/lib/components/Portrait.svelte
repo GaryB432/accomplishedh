@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { Portrait } from '@accomplishedh/shared';
+  import type { Portrait } from "@accomplishedh/shared";
   interface Props {
     portrait: Portrait;
   }
@@ -10,13 +10,13 @@
 </script>
 
 <section class="portrait">
-  <div class="above">{portrait.above ?? ''}</div>
+  <div class="above">{portrait.above ?? ""}</div>
   <div class="thumbnail">
     {#if portraitImg}
       <img {...portrait.img} alt="" />
     {/if}
   </div>
-  <div class="caption">{portrait.caption ?? ''}</div>
+  <div class="caption">{portrait.caption ?? ""}</div>
 </section>
 
 <style>

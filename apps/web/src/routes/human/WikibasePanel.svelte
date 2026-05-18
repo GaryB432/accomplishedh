@@ -1,17 +1,13 @@
 <script lang="ts">
-  import HorizontalPanel from '$lib/components/bases/HorizontalPanel.svelte';
-  import WikidataAnchor from '$lib/components/wikidata/Anchor.svelte';
-  import Awards from '$lib/components/wikidata/Awards.svelte';
-  import Lifespan from '$lib/components/wikidata/Lifespan.svelte';
-  import Works from '$lib/components/wikidata/NotableWorks.svelte';
-  import {
-    type Entity,
-    labelify,
-    summarize,
-  } from '@accomplishedh/wikibase';
+  import HorizontalPanel from "$lib/components/bases/HorizontalPanel.svelte";
+  import WikidataAnchor from "$lib/components/wikidata/Anchor.svelte";
+  import Awards from "$lib/components/wikidata/Awards.svelte";
+  import Lifespan from "$lib/components/wikidata/Lifespan.svelte";
+  import Works from "$lib/components/wikidata/NotableWorks.svelte";
+  import { type Entity, labelify, summarize } from "@accomplishedh/wikibase";
 
-  import Aliases from './wikibase-entity/Aliases.svelte';
-  import SiteLinks from './wikibase-entity/SiteLinks.svelte';
+  import Aliases from "./wikibase-entity/Aliases.svelte";
+  import SiteLinks from "./wikibase-entity/SiteLinks.svelte";
 
   type Props = { entity: Entity };
 

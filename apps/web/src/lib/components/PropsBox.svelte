@@ -1,19 +1,19 @@
 <script lang="ts">
-  import type { Property } from '@accomplishedh/shared';
+  import type { Property } from "@accomplishedh/shared";
 
-  type UnsourcedProperty = Omit<Property, 'source'>;
+  type UnsourcedProperty = Omit<Property, "source">;
 
   const topMap: Map<string, number> = new Map([
-    ['Alma mater', 450],
-    ['Awards', 358],
-    ['Born', 1238],
-    ['Died', 1238],
-    ['Fields', 476],
-    ['Institutions', 337],
-    ['Known for', 670],
-    ['Nationality', 741],
-    ['Occupation', 405],
-    ['Spouse(s)', 201],
+    ["Alma mater", 450],
+    ["Awards", 358],
+    ["Born", 1238],
+    ["Died", 1238],
+    ["Fields", 476],
+    ["Institutions", 337],
+    ["Known for", 670],
+    ["Nationality", 741],
+    ["Occupation", 405],
+    ["Spouse(s)", 201],
   ]);
 
   interface RankedProp extends Property {
@@ -27,14 +27,14 @@
   let sourcedProps = $derived(
     propz
       .map<RankedProp>((p: UnsourcedProperty) => ({
-        source: 'wikimedia',
+        source: "wikimedia",
         ...p,
         rank: topMap.get(p.name) ?? -1,
       }))
       .sort((a, b) => {
         if (a.rank === b.rank) {
           return a.name.localeCompare(b.name, undefined, {
-            sensitivity: 'accent',
+            sensitivity: "accent",
           });
         }
         return b.rank - a.rank;
@@ -45,7 +45,7 @@
 <section class="box">
   {#each sourcedProps as prop (prop.name)}
     <div class="name" class:top-ten={prop.rank > 0}>
-      {#if prop.source === 'wikimedia'}
+      {#if prop.source === "wikimedia"}
         <svg width="20" height="20" viewBox="0 0 20 20">
           <title>From: Wikipedia</title>
           <path
@@ -53,7 +53,7 @@
           />
         </svg>
       {/if}
-      {#if prop.source === 'osf'}
+      {#if prop.source === "osf"}
         <svg width="20" height="20" viewBox="0 0 42 20">
           <title>From: Open Science Framework</title>
           <text
@@ -65,7 +65,7 @@
           </text>
         </svg>
       {/if}
-      {#if prop.source === 'ha'}
+      {#if prop.source === "ha"}
         <svg width="20" height="20" viewBox="0 0 42 20">
           <title>From: Human Accomplishment</title>
           <text
@@ -77,7 +77,7 @@
           </text>
         </svg>
       {/if}
-      <div class="a" title={prop.rank > 0 ? 'Top 10 Property' : ''}>
+      <div class="a" title={prop.rank > 0 ? "Top 10 Property" : ""}>
         {prop.name}
       </div>
     </div>

@@ -7,7 +7,7 @@
     };
   }
 
-  const MASTER = 'master';
+  const MASTER = "master";
 
   let { vercelEnv }: Props = $props();
   let isPreview = $derived(vercelEnv.GIT_COMMIT_REF !== MASTER);
@@ -47,7 +47,7 @@
       <div class="td">
         <a
           target="_blank"
-          href={'https://github.com/GaryB432/accomplishedh/commit/'.concat(
+          href={"https://github.com/GaryB432/accomplishedh/commit/".concat(
             vercelEnv.GIT_COMMIT_SHA,
           )}
         >

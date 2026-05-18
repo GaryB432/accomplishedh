@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
+  import { onMount } from "svelte";
 
   interface ExtensionInfo {
     brand?: string;
@@ -8,19 +8,19 @@
   }
 
   const infos: ExtensionInfo[] = [
-    { browser: 'firefox' },
+    { browser: "firefox" },
     {
-      brand: 'Google Chrome',
-      browser: 'chrome',
+      brand: "Google Chrome",
+      browser: "chrome",
       storeUrl:
-        'https://chrome.google.com/webstore/detail/human-accomplishment/meaaaeangcmbemianlihbkoldlhfijfa',
+        "https://chrome.google.com/webstore/detail/human-accomplishment/meaaaeangcmbemianlihbkoldlhfijfa",
     },
-    { browser: 'opera' },
+    { browser: "opera" },
     {
-      brand: 'Microsoft Edge',
-      browser: 'edge',
+      brand: "Microsoft Edge",
+      browser: "edge",
       storeUrl:
-        'https://microsoftedge.microsoft.com/addons/detail/human-accomplishment/hnaklphmmbjfbjlmdjnogiiclomigepl',
+        "https://microsoftedge.microsoft.com/addons/detail/human-accomplishment/hnaklphmmbjfbjlmdjnogiiclomigepl",
     },
   ];
 
@@ -60,12 +60,12 @@
       <ul>
         {#each infos.filter((info) => info.storeUrl) as info (info.browser)}
           <li>
-            <a class="install-icon" href={info.storeUrl ?? '#'}>
+            <a class="install-icon" href={info.storeUrl ?? "#"}>
               <img
                 alt="Install"
                 class:available={info.storeUrl}
                 src={`/extension/browser/${info.browser}_64x64.png`}
-                title={info.storeUrl ? 'Store Listing' : 'Coming Soon'}
+                title={info.storeUrl ? "Store Listing" : "Coming Soon"}
               />
             </a>
           </li>

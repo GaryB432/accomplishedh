@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { SummarizedEntity } from '@accomplishedh/wikibase';
+  import type { SummarizedEntity } from "@accomplishedh/wikibase";
   type Props = { entity: SummarizedEntity };
   let { entity }: Props = $props();
 </script>

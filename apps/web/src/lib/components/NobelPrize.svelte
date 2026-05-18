@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { Prize } from '$lib/types/nobel.types';
+  import type { Prize } from "$lib/types/nobel.types";
 
   interface Props {
     prize: Prize;
@@ -17,7 +17,7 @@
   <a href={url} rel="external nofollow noopener noreferrer" target="_blank">
     <section class="info">
       The Nobel Prize in {prize.category}
-      {#if prize.share && prize.share !== '1'}
+      {#if prize.share && prize.share !== "1"}
         (<span>shared</span>
         <!-- credit-report-svgrepo-com.svg -->
         <svg

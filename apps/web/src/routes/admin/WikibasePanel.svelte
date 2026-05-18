@@ -1,7 +1,7 @@
 <script lang="ts">
-  import type { Entity } from '@accomplishedh/wikibase';
+  import type { Entity } from "@accomplishedh/wikibase";
 
-  type WithId = Pick<Entity, 'id'>;
+  type WithId = Pick<Entity, "id">;
 
   interface Props {
     entity?: WithId;
@@ -11,10 +11,10 @@
     return pattern.replaceAll(/\{id\}/g, entity.id);
   }
   function qidAnchorName(entity: WithId) {
-    return qidName(entity, 'w-qa-{id}');
+    return qidName(entity, "w-qa-{id}");
   }
   function qidPopoverName(entity: WithId) {
-    return qidName(entity, 'w-qp-{id}');
+    return qidName(entity, "w-qp-{id}");
   }
 
   let { entity }: Props = $props();

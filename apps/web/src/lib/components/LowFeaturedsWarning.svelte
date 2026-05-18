@@ -5,11 +5,11 @@
 
   let { dayCount = 0 }: Props = $props();
   let level = $derived(
-    dayCount < 5 ? 'very-low' : dayCount < 10 ? 'low' : 'normal',
+    dayCount < 5 ? "very-low" : dayCount < 10 ? "low" : "normal",
   );
   let message = $derived(
-    `${dayCount} ${dayCount === 1 ? 'day' : 'days'} of featured humans ${
-      dayCount === 1 ? 'remains' : 'remain'
+    `${dayCount} ${dayCount === 1 ? "day" : "days"} of featured humans ${
+      dayCount === 1 ? "remains" : "remain"
     }.`,
   );
 </script>

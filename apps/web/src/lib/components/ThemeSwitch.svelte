@@ -1,18 +1,18 @@
 <script lang="ts">
-  import type { SubmitFunction } from '@sveltejs/kit';
+  import type { SubmitFunction } from "@sveltejs/kit";
 
-  import { enhance } from '$app/forms';
-  import { page } from '$app/state';
+  import { enhance } from "$app/forms";
+  import { page } from "$app/state";
 
-  let { theme = 'light' }: { theme: 'dark' | 'light' } = $props();
+  let { theme = "light" }: { theme: "dark" | "light" } = $props();
 
-  let pressed = $derived(theme !== 'light');
+  let pressed = $derived(theme !== "light");
 
   const submitUpdateTheme: SubmitFunction = (ctx) => {
-    const theme = ctx.action.searchParams.get('theme');
+    const theme = ctx.action.searchParams.get("theme");
 
     if (theme) {
-      document.documentElement.setAttribute('data-theme', theme);
+      document.documentElement.setAttribute("data-theme", theme);
     }
   };
 </script>

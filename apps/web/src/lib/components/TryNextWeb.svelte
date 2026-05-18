@@ -24,10 +24,20 @@
     </defs>
     <rect x="1" y="1" width="318" height="88" rx="44" class="frame" />
     <circle cx="35" cy="45" r="8" class="core" filter="url(#glow)">
-      <animate attributeName="opacity" values="0.65;1;0.65" dur="3.5s" repeatCount="indefinite" />
+      <animate
+        attributeName="opacity"
+        values="0.65;1;0.65"
+        dur="3.5s"
+        repeatCount="indefinite"
+      />
     </circle>
     <rect x="-150" y="0" width="120" height="90" fill="url(#sweep)">
-      <animate attributeName="x" values="-150;390" dur="4.8s" repeatCount="indefinite" />
+      <animate
+        attributeName="x"
+        values="-150;390"
+        dur="4.8s"
+        repeatCount="indefinite"
+      />
     </rect>
   </svg>
   <span class="copy">Try the next version of Human Accomplishment</span>
@@ -48,7 +58,11 @@
     overflow: hidden;
     text-decoration: none;
     background:
-      radial-gradient(circle at 8% 50%, rgb(251 239 136 / 38%), transparent 24%),
+      radial-gradient(
+        circle at 8% 50%,
+        rgb(251 239 136 / 38%),
+        transparent 24%
+      ),
       linear-gradient(110deg, rgb(255 255 255 / 24%), rgb(255 255 255 / 6%)),
       #271335;
     border: 1px solid rgb(255 255 255 / 24%);

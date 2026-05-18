@@ -2,7 +2,7 @@
   import {
     WIKIDATA_PERSON_PROPERTIES as P,
     type SummarizedEntity,
-  } from '@accomplishedh/wikibase';
+  } from "@accomplishedh/wikibase";
 
   type Props = { entity: SummarizedEntity };
   let { entity }: Props = $props();

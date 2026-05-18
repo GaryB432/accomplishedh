@@ -33,9 +33,8 @@
     </li>
     <li>
       <p>
-        <strong>Company</strong> (referred to as either &quot;the Company&quot;,
-        &quot;We&quot;, &quot;Us&quot; or &quot;Our&quot; in this Agreement) refers
-        to Human Accomplishment.
+        <strong>Company</strong> (referred to as either &quot;the Company&quot;, &quot;We&quot;,
+        &quot;Us&quot; or &quot;Our&quot; in this Agreement) refers to Human Accomplishment.
       </p>
     </li>
     <li>
@@ -66,10 +65,10 @@
     <li>
       <p>
         <strong>Service Provider</strong> means any natural or legal person who processes
-        the data on behalf of the Company. It refers to third-party companies or
-        individuals employed by the Company to facilitate the Service, to provide
-        the Service on behalf of the Company, to perform services related to the
-        Service or to assist the Company in analyzing how the Service is used.
+        the data on behalf of the Company. It refers to third-party companies or individuals
+        employed by the Company to facilitate the Service, to provide the Service
+        on behalf of the Company, to perform services related to the Service or to
+        assist the Company in analyzing how the Service is used.
       </p>
     </li>
     <li>
@@ -92,8 +91,8 @@
     <li>
       <p>
         <strong>You</strong> means the individual accessing or using the Service,
-        or the company, or other legal entity on behalf of which such individual
-        is accessing or using the Service, as applicable.
+        or the company, or other legal entity on behalf of which such individual is
+        accessing or using the Service, as applicable.
       </p>
     </li>
   </ul>
@@ -263,9 +262,8 @@
         <strong>For business transfers:</strong> We may use Your information to evaluate
         or conduct a merger, divestiture, restructuring, reorganization, dissolution,
         or other sale or transfer of some or all of Our assets, whether as a going
-        concern or as part of bankruptcy, liquidation, or similar proceeding, in
-        which Personal Data held by Us about our Service users is among the assets
-        transferred.
+        concern or as part of bankruptcy, liquidation, or similar proceeding, in which
+        Personal Data held by Us about our Service users is among the assets transferred.
       </p>
     </li>
     <li>

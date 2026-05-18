@@ -1,10 +1,10 @@
 <script lang="ts">
-  import type { Laureate } from '$lib/types/nobel.types';
-  import type { EuroHuman } from '@accomplishedh/shared';
+  import type { Laureate } from "$lib/types/nobel.types";
+  import type { EuroHuman } from "@accomplishedh/shared";
 
-  import { resolve } from '$app/paths';
+  import { resolve } from "$app/paths";
 
-  import data from './laureates.json';
+  import data from "./laureates.json";
 
   const dlaureates = data as unknown as LaureateHuman[];
 
@@ -13,8 +13,8 @@
   );
 
   interface LaureateHuman extends Laureate {
-    human?: Pick<EuroHuman, 'id' | 'serial'>;
-    reason?: 'NOTEUROPE' | 'NOTHUMAN' | 'PEACE' | 'YOUNG';
+    human?: Pick<EuroHuman, "id" | "serial">;
+    reason?: "NOTEUROPE" | "NOTHUMAN" | "PEACE" | "YOUNG";
   }
 </script>
 

@@ -1,12 +1,12 @@
 <script lang="ts">
-  import DataSources from '$lib/components/DataSources.svelte';
-  import ExtensionPromo from '$lib/components/ExtensionPromo.svelte';
-  import JsonDataLogo from '$lib/components/JsonDataLogo.svelte';
-  import VenvStamp from '$lib/components/VenvStamp.svelte';
+  import DataSources from "$lib/components/DataSources.svelte";
+  import ExtensionPromo from "$lib/components/ExtensionPromo.svelte";
+  import JsonDataLogo from "$lib/components/JsonDataLogo.svelte";
+  import VenvStamp from "$lib/components/VenvStamp.svelte";
 
-  import type { PageData } from '../$types';
+  import type { PageData } from "../$types";
 
-  import MusicWiki from './MusicWiki.svelte';
+  import MusicWiki from "./MusicWiki.svelte";
 
   interface Props {
     data: PageData;
