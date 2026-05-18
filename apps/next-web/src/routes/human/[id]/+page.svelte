@@ -1,8 +1,8 @@
 <script lang="ts">
+  import Headshot from "$lib/components/Headshot.svelte";
   import { fromDictionary } from "$lib/wikibase/utils.js";
   import EntityDescription from "../EntityDescription.svelte";
   import FeaturedToday from "../FeaturedToday.svelte";
-  import Headshot from "../Headshot.svelte";
   import LifeSpan from "../LifeSpan.svelte";
   import type { PageProps } from "./$types";
 
@@ -18,7 +18,7 @@
   <EntityDescription {subject} />
   <div class="mid">
     <div>
-      <Headshot {subject} />
+      <Headshot {subject} width={300} />
       <FeaturedToday {featureds} />
     </div>
     <div>

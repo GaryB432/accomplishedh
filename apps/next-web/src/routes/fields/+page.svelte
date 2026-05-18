@@ -1,6 +1,8 @@
 <script lang="ts">
-  import PersonSidebar from "$lib/components/PersonSidebar.svelte";
+  import Headshot from "$lib/components/Headshot.svelte";
+  import SimpleClaimsPanel from "$lib/components/PersonSimpleClaims.svelte";
   import ToggleButton from "$lib/components/ToggleButton.svelte";
+  import type { Item } from "@accomplishedh/wikibase/types";
   import cytoscape, { type NodeSingular } from "cytoscape";
   import { onMount } from "svelte";
   import type { PageProps } from "./$types";
@@ -15,6 +17,10 @@
   let cydiv = $state<HTMLDivElement>();
 
   let selectedPersonId = $state<string>();
+
+  let selectedMore = $derived<Item | undefined>(
+    selectedPersonId ? { id: selectedPersonId, type: "item" } : void 0,
+  );
 
   let cy = $state<cytoscape.Core>();
 
@@ -169,7 +175,11 @@
   <div id="cy" class="graph" bind:this={cydiv}></div>
   <aside class="panel" aria-label="Selected person details">
     <div class="panel-content">
-      <PersonSidebar qid={selectedPersonId} />
+      {#if selectedMore}
+        <Headshot subject={selectedMore} width={90}></Headshot>
+      {/if}
+
+      <SimpleClaimsPanel qid={selectedPersonId} />
     </div>
     <div class="panel-controls">
       <button
