@@ -1,9 +1,9 @@
 <script lang="ts">
   import { resolve } from "$app/paths";
+  import Headshot from "$lib/components/Headshot.svelte";
   import type { Entity } from "$lib/wikibase/types.js";
   import { fromDictionary } from "$lib/wikibase/utils";
   import type { AccomplishedHuman } from "@accomplishedh/shared";
-  import Headshot from "./human/Headshot.svelte";
 
   type WikiHumanLike = AccomplishedHuman & { wb: Entity };
 
@@ -75,8 +75,11 @@
 
   .portrait {
     aspect-ratio: 1;
-    background:
-      linear-gradient(135deg, rgba(31, 186, 186, 0.15), transparent 58%),
+    background: linear-gradient(
+        135deg,
+        rgba(31, 186, 186, 0.15),
+        transparent 58%
+      ),
       var(--tertiary);
     border: 1px solid var(--line);
     border-radius: 8px;
