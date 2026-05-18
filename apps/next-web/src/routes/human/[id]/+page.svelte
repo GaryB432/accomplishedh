@@ -18,7 +18,7 @@
   <EntityDescription {subject} />
   <div class="mid">
     <div>
-      <Headshot {subject} />
+      <Headshot {subject} width={300} />
       <FeaturedToday {featureds} />
     </div>
     <div>
