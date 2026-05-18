@@ -75,11 +75,8 @@
 
   .portrait {
     aspect-ratio: 1;
-    background: linear-gradient(
-        135deg,
-        rgba(31, 186, 186, 0.15),
-        transparent 58%
-      ),
+    background:
+      linear-gradient(135deg, rgba(31, 186, 186, 0.15), transparent 58%),
       var(--tertiary);
     border: 1px solid var(--line);
     border-radius: 8px;

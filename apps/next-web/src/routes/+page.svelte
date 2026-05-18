@@ -3,7 +3,7 @@
   import CardSplash from "./CardSplash.svelte";
 
   let { data } = $props();
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   let { featureds } = $derived(data);
 
   const today = new Intl.DateTimeFormat("en", {
@@ -26,7 +26,7 @@
   <section class="daily-six" aria-label="Today's six featured people">
     <!-- eslint-disable-next-line @typescript-eslint/no-unsafe-member-access -->
     {#if featureds.length}
-      <CardSplash fellas={featureds}></CardSplash>
+      <CardSplash fellas={featureds} />
     {:else}
       <div class="empty-state">
         <h2>Check back soon</h2>

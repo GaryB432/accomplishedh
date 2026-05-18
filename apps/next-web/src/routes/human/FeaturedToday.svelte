@@ -26,8 +26,7 @@
           </a>
         </td>
         <td>
-          <FieldOfWorkIcon subject={{ ...featured.wb, type: "item" }}
-          ></FieldOfWorkIcon>
+          <FieldOfWorkIcon subject={{ ...featured.wb, type: "item" }} />
         </td>
       </tr>
     {/each}

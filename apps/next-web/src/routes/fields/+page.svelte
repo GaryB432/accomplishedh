@@ -1,10 +1,10 @@
 <script lang="ts">
+  import PersonSidebar from "$lib/components/PersonSidebar.svelte";
+  import ToggleButton from "$lib/components/ToggleButton.svelte";
   import cytoscape, { type NodeSingular } from "cytoscape";
   import { onMount } from "svelte";
   import type { PageProps } from "./$types";
-  import PersonSidebar from "./PersonSidebar.svelte";
   import { style } from "./cytoscape";
-  import ToggleButton from "$lib/components/ToggleButton.svelte";
 
   let devmode = $state(false);
 
@@ -24,15 +24,77 @@
     const header = appShell?.querySelector(".top-nav") as HTMLElement | null;
     const footer = appShell?.querySelector("footer") as HTMLElement | null;
 
+    const runVisibleLayout = (animate = false) => {
+      const graph = cy;
+
+      if (!graph) return;
+
+      const visibleElements = graph.elements(":visible");
+
+      if (visibleElements.nonempty()) {
+        visibleElements
+          .layout({
+            name: "grid",
+            fit: true,
+            animate,
+            padding: 36,
+            avoidOverlap: true,
+            condense: true,
+          })
+          .run();
+      }
+    };
+
+    const showOnlyCategories = () => {
+      const graph = cy;
+
+      if (!graph) return;
+
+      graph.batch(() => {
+        graph.elements().style("display", "none");
+        graph.nodes("[type = 'cat']").style("display", "element");
+      });
+
+      runVisibleLayout();
+    };
+
+    const toggleIncomingBranch = (node: NodeSingular) => {
+      const graph = cy;
+
+      if (!graph) return;
+
+      const directBranch = node.incomers();
+      const directNodes = directBranch.nodes();
+
+      if (directNodes.empty()) return;
+
+      const shouldOpen = directNodes.every((incomingNode) =>
+        incomingNode.is(":hidden"),
+      );
+      const branchToHide = node.predecessors().union(directBranch);
+
+      graph.batch(() => {
+        if (shouldOpen) {
+          directBranch.style("display", "element");
+        } else {
+          branchToHide.style("display", "none");
+        }
+      });
+
+      runVisibleLayout(true);
+    };
+
     const updateShellHeight = () => {
       if (!shell || !main) return;
 
-      const viewportHeight = window.visualViewport?.height ?? window.innerHeight;
+      const viewportHeight =
+        window.visualViewport?.height ?? window.innerHeight;
       const headerHeight = header?.getBoundingClientRect().height ?? 0;
       const footerHeight = footer?.getBoundingClientRect().height ?? 0;
       const mainStyles = getComputedStyle(main);
       const mainPaddingTop = Number.parseFloat(mainStyles.paddingTop) || 0;
-      const mainPaddingBottom = Number.parseFloat(mainStyles.paddingBottom) || 0;
+      const mainPaddingBottom =
+        Number.parseFloat(mainStyles.paddingBottom) || 0;
       const availableHeight = Math.max(
         0,
         Math.floor(
@@ -46,6 +108,7 @@
 
       shell.style.height = `${availableHeight}px`;
       cy?.resize();
+      cy?.fit(cy.elements(":visible"), 36);
     };
 
     cy = cytoscape({
@@ -55,26 +118,17 @@
       layout: { name: "grid" },
     });
 
-    cy.style()
-      .selector("node")
-      .style("display", "none")
-      .selector("node[type='cat']")
-      .style("display", "element")
-      .update();
+    showOnlyCategories();
 
     cy.on("tap", "node", (evt) => {
       const node = evt.target as NodeSingular;
       console.log(node.data());
     });
     cy.on("tap", "node[type='cat']", (evt) => {
-      const node = evt.target as NodeSingular;
-      const isClosed = node.incomers("node").every((n) => n.is(":hidden"));
-      node.incomers().style({ display: isClosed ? "element" : "none" });
+      toggleIncomingBranch(evt.target as NodeSingular);
     });
     cy.on("tap", "node[type='field']", (evt) => {
-      const node = evt.target as NodeSingular;
-      const isClosed = node.incomers("node").every((n) => n.is(":hidden"));
-      node.incomers().style({ display: isClosed ? "element" : "none" });
+      toggleIncomingBranch(evt.target as NodeSingular);
     });
     cy.on("tap", "node[type='person']", (evt) => {
       const node = evt.target as NodeSingular;
@@ -118,16 +172,24 @@
       <PersonSidebar qid={selectedPersonId} />
     </div>
     <div class="panel-controls">
-      <div class="buttons">
-        <ToggleButton bind:checked={devmode} />
-        <button
-          class="btn"
-          onclick={() =>
-            cy?.layout({ name: "breadthfirst", animate: true }).run()}
-        >
-          redraw
-        </button>
-      </div>
+      <button
+        class="btn"
+        onclick={() =>
+          cy
+            ?.elements(":visible")
+            .layout({
+              name: "grid",
+              fit: true,
+              animate: true,
+              padding: 36,
+              avoidOverlap: true,
+              condense: true,
+            })
+            .run()}
+      >
+        redraw
+      </button>
+      <ToggleButton bind:checked={devmode} />
     </div>
   </aside>
 </section>
@@ -145,7 +207,7 @@
     border: 1px solid var(--pane-border);
     border-radius: 0.6rem;
   }
-  
+
   #cy {
     grid-column: 1;
     grid-row: 1;
@@ -174,16 +236,11 @@
   }
 
   .panel-controls {
+    display: flex;
     border-top: 1px solid var(--pane-border);
     padding: 0.6rem 0.75rem;
-  }
-
-  .buttons {
-    display: flex;
     align-items: center;
-    justify-content: flex-end;
-    gap: 0.5rem;
-    flex-wrap: wrap;
+    gap: 1rem;
   }
 
   @media (max-width: 980px) {

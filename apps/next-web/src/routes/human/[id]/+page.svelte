@@ -15,14 +15,14 @@
 
 <section>
   <h1>{subjectLabel}</h1>
-  <EntityDescription {subject}></EntityDescription>
+  <EntityDescription {subject} />
   <div class="mid">
     <div>
-      <Headshot {subject}></Headshot>
-      <FeaturedToday {featureds}></FeaturedToday>
+      <Headshot {subject} />
+      <FeaturedToday {featureds} />
     </div>
     <div>
-      <LifeSpan {subject}></LifeSpan>
+      <LifeSpan {subject} />
     </div>
   </div>
 </section>
