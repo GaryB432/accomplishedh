@@ -48,9 +48,11 @@
   </a>
 {/each}
 <button
+  type="button"
+  aria-pressed={wayout}
   onclick={() => {
     wayout = !wayout;
-  }}>@</button
+  }}>🎉</button
 >
 
 <style>
@@ -150,5 +152,20 @@
     transition:
       opacity 0s,
       transform 0s;
+  }
+
+  button[aria-pressed="true"] {
+    background-color: #ddd;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transform: translateY(2px);
+  }
+
+  button {
+    grid-column: 2;
+    max-width: fit-content;
+    justify-self: center;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
   }
 </style>
