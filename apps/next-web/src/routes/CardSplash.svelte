@@ -4,6 +4,7 @@
   import type { Entity } from "$lib/wikibase/types.js";
   import { fromDictionary } from "$lib/wikibase/utils";
   import type { AccomplishedHuman } from "@accomplishedh/shared";
+  import { onMount } from "svelte";
 
   type WikiHumanLike = AccomplishedHuman & { wb: Entity };
 
@@ -13,11 +14,23 @@
 
   let { fellas }: Props = $props();
 
+  let wayout = $state(true);
+
+  onMount(() => {
+    setTimeout(() => {
+      wayout = false;
+    }, 100);
+  });
+
   let topSix = $derived(fellas.slice(0, 6));
 </script>
 
 {#each topSix as df, index (df.wb.id)}
-  <a class="person-card" href={resolve("/human/[id]", { id: df.wb.id })}>
+  <a
+    class={{ wayout, "person-card": true, flier: true }}
+    style="--animate-order: {index};"
+    href={resolve("/human/[id]", { id: df.wb.id })}
+  >
     <span class="rank" aria-hidden="true"
       >{String(index + 1).padStart(2, "0")}</span
     >
@@ -34,6 +47,11 @@
     </span>
   </a>
 {/each}
+<button
+  onclick={() => {
+    wayout = !wayout;
+  }}>@</button
+>
 
 <style>
   .person-card {
@@ -115,5 +133,22 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     line-clamp: 2;
+  }
+
+  .flier {
+    transition:
+      opacity 0.3s ease-in 0s,
+      transform 0.5s ease-out calc(var(--animate-order) * 0.1s);
+
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .flier.wayout {
+    opacity: 0;
+    transform: translateX(-4000px);
+    transition:
+      opacity 0s,
+      transform 0s;
   }
 </style>
