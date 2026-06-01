@@ -1,5 +1,5 @@
-import { fetchEntities } from "$lib/wikibase/api";
 import { error } from "@sveltejs/kit";
+import { fetchEntities } from "$lib/wikibase/api";
 
 import type { PageLoad, PageLoadEvent } from "./$types";
 

@@ -14,7 +14,7 @@ export async function getImageFromClaim(
     input: Request | string | URL,
     init?: RequestInit,
   ) => Promise<Response>,
-): Promise<(Partial<HTMLImgAttributes> & { id: string }) | undefined> {
+): Promise<({ id: string } & Partial<HTMLImgAttributes>) | undefined> {
   const fetched = await fetcher(image_query_url([claim]));
   const nop = (await fetched.json()) as CommonsResponse;
 

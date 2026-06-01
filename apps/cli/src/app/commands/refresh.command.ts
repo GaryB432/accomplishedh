@@ -1,11 +1,13 @@
 import type { FieldsOfWorkDatasetV1 as FowDataSet } from "@accomplishedh/shared/lib/dto.types.js";
+
 import {
   ROOTS,
+  type SparqlResponse,
   toFowEntry,
   USER_AGENT,
-  type SparqlResponse,
 } from "@accomplishedh/wikibase";
 import { writeFileSync } from "fs";
+
 import { dataRoot, readAll } from "../data/wb/fs-reader.js";
 import { type CommandArgs } from "./refresh.types.js";
 
@@ -35,9 +37,9 @@ export async function ΘrefreshCommand({
     throw new Error("now must be ISO Date");
   }
   const fowDataset: FowDataSet = {
-    schemaVersion,
     generatedAt: today,
     people: {},
+    schemaVersion,
   };
 
   const everybody = readAll();
@@ -81,10 +83,10 @@ export async function ΘrefreshCommand({
     const data = (await response.json()) as SparqlResponse;
 
     void data.results.bindings.map(toFowEntry).reduce((a, fow) => {
-      const { id, category, label, human } = fow;
+      const { category, human, id, label } = fow;
 
       a[human] ??= { fows: [] };
-      a[human].fows.push({ id, category, label });
+      a[human].fows.push({ category, id, label });
 
       return a;
     }, fowDataset.people);

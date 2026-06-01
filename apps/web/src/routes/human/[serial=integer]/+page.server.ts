@@ -1,8 +1,10 @@
-import { FeDataSvc } from "$lib/data/fe-data.svelte";
 import type { FormDataHuman } from "$lib/data/utils";
-import { isGary } from "$lib/utils";
+
 import { refreshPortraitThumbnails } from "@accomplishedh/wikibase";
 import { error, redirect } from "@sveltejs/kit";
+import { FeDataSvc } from "$lib/data/fe-data.svelte";
+import { isGary } from "$lib/utils";
+
 import type { Actions, PageServerLoad } from "./$types";
 
 export const load: PageServerLoad = async (ctx) => {

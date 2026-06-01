@@ -1,25 +1,25 @@
-const path = require("path");
-const webpack = require("webpack");
 const CopyPlugin = require("copy-webpack-plugin");
 const ForkTsCheckerPlugin = require("fork-ts-checker-webpack-plugin");
 const HtmlPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const path = require("path");
+const webpack = require("webpack");
 const { merge } = require("webpack-merge");
 
 const copyPlugin = new CopyPlugin({
+  options: {},
   patterns: [
     {
       context: "./src/assets",
-      to: "assets",
       from: "**/*.*",
+      to: "assets",
     },
     {
       context: "./src",
-      to: ".",
       from: "**/*.json",
+      to: ".",
     },
   ],
-  options: {},
 });
 const forkCheckerPlugin = new ForkTsCheckerPlugin({
   typescript: {
@@ -28,52 +28,55 @@ const forkCheckerPlugin = new ForkTsCheckerPlugin({
   },
 });
 const htmlPlugin = new HtmlPlugin({
-  template: "./src/popup.html",
+  base: false,
+  cache: false,
+  chunks: ["popup"],
+  chunksSortMode: "auto",
+  compile: true,
+  excludeChunks: [],
+  favicon: false,
   filename: "popup.html",
-  publicPath: "auto",
   hash: false,
   inject: "body",
-  scriptLoading: "defer",
-  compile: true,
-  favicon: false,
-  minify: false,
-  cache: false,
-  showErrors: true,
-  chunks: ["popup"],
-  excludeChunks: [],
-  chunksSortMode: "auto",
   meta: {},
-  base: false,
+  minify: false,
+  publicPath: "auto",
+  scriptLoading: "defer",
+  showErrors: true,
+  template: "./src/popup.html",
   title: "Human Accomplishment",
   xhtml: false,
 });
 const cssExtractPlugin = new MiniCssExtractPlugin({
+  chunkFilename: "[name].css",
   filename: "[name].css",
   ignoreOrder: false,
   runtime: false,
-  chunkFilename: "[name].css",
 });
 
 /** @type {import('webpack').Configuration} */
 const base = {
-  node: false,
-  target: "web",
-  mode: "none",
   entry: {
     popup: ["./src/popup.ts"],
   },
+  mode: "none",
   module: {
     rules: [
       {
-        test: /\.ts(x)?$/,
-        loader: "ts-loader",
         exclude: /node_modules/,
+        loader: "ts-loader",
+        test: /\.ts(x)?$/,
       },
     ],
   },
+  node: false,
+  performance: {
+    hints: false,
+    maxAssetSize: 512000,
+    maxEntrypointSize: 512000,
+  },
   plugins: [forkCheckerPlugin, htmlPlugin],
   resolve: {
-    extensions: [".ts", ".tsx", ".mjs", ".js"],
     alias: {
       "@accomplishedh/shared": path.resolve(
         __dirname,
@@ -88,12 +91,8 @@ const base = {
         "./src/environments/environment.ts",
       ),
     },
+    extensions: [".ts", ".tsx", ".mjs", ".js"],
     mainFields: ["browser", "module", "main"],
-  },
-  performance: {
-    hints: false,
-    maxEntrypointSize: 512000,
-    maxAssetSize: 512000,
   },
   stats: {
     assets: true,
@@ -107,18 +106,28 @@ const base = {
     errorDetails: true,
     errors: true,
     hash: true,
-    moduleTrace: true,
     modules: false,
+    moduleTrace: true,
     reasons: true,
     timings: false,
     usedExports: true,
     version: true,
     warnings: true,
   },
+  target: "web",
 };
 
 /** @type {import('webpack').Configuration} */
 const dev = {
+  devServer: {
+    // inline: true,
+    historyApiFallback: false,
+    // contentBase: './dist',
+    // clientLogLevel: 'info',
+    port: 8080,
+    // hot: true,
+  },
+  devtool: "inline-source-map",
   mode: "development",
   module: {
     rules: [
@@ -131,50 +140,23 @@ const dev = {
   output: {
     publicPath: "http://localhost:8080/",
   },
+  performance: {
+    hints: false,
+  },
   plugins: [
     new webpack.ProvidePlugin({
       chrome: [path.resolve(__dirname, "./src/host/browser"), "default"],
     }),
   ],
-  devServer: {
-    // contentBase: './dist',
-    // clientLogLevel: 'info',
-    port: 8080,
-    // inline: true,
-    historyApiFallback: false,
-    // hot: true,
-  },
-  devtool: "inline-source-map",
-  performance: {
-    hints: false,
-  },
 };
 
 /** @type {import('webpack').Configuration} */
 const prod = {
-  mode: "production",
   context: path.resolve(__dirname),
   entry: {
     sw: ["./src/scripts/sw.ts"],
   },
-  output: {
-    clean: true,
-    path: path.resolve(__dirname, "dist"),
-    filename: "[name].js",
-    chunkFilename: "[name].js",
-    scriptType: "module",
-    publicPath: "/",
-  },
-  resolve: {
-    alias: {
-      "@environments/environment": path.resolve(
-        __dirname,
-        "./src/environments/environment.prod.ts",
-      ),
-    },
-  },
-
-  plugins: [cssExtractPlugin, copyPlugin],
+  mode: "production",
   module: {
     rules: [
       {
@@ -184,10 +166,28 @@ const prod = {
     ],
   },
   optimization: {
-    sideEffects: true,
+    concatenateModules: true,
     minimize: false,
     runtimeChunk: false,
-    concatenateModules: true,
+    sideEffects: true,
+  },
+
+  output: {
+    chunkFilename: "[name].js",
+    clean: true,
+    filename: "[name].js",
+    path: path.resolve(__dirname, "dist"),
+    publicPath: "/",
+    scriptType: "module",
+  },
+  plugins: [cssExtractPlugin, copyPlugin],
+  resolve: {
+    alias: {
+      "@environments/environment": path.resolve(
+        __dirname,
+        "./src/environments/environment.prod.ts",
+      ),
+    },
   },
 };
 

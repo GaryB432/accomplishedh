@@ -6,19 +6,19 @@ import type { EdgeDefinition, NodeDefinition, StylesheetJson } from "cytoscape";
 
 export function createElements(
   recordByPerson: Record<PersonQid, FieldsOfWorkSummaryV1>,
-): Array<NodeDefinition | EdgeDefinition> {
+): Array<EdgeDefinition | NodeDefinition> {
   const ckeys = new Set<string>();
   const hkeys = new Set<string>();
   const fkeys = new Set<string>();
-  const nodes: Array<NodeDefinition | EdgeDefinition> = [];
+  const nodes: Array<EdgeDefinition | NodeDefinition> = [];
 
   for (const [hq, summary] of Object.entries(recordByPerson)) {
     hkeys.add(hq);
 
     const person = {
       id: hq,
-      type: "person",
       more: "stuff",
+      type: "person",
     };
     nodes.push({ data: person });
 
@@ -47,7 +47,7 @@ export function createElements(
 }
 
 export function toEdge(source: string, target: string): EdgeDefinition {
-  return { data: { source, target, id: source.concat("→").concat(target) } };
+  return { data: { id: source.concat("→").concat(target), source, target } };
 }
 
 export const style: StylesheetJson = [

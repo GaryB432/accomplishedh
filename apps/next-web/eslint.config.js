@@ -19,18 +19,18 @@ export default [
     },
     rules: {
       ...baseConfig.rules,
-      "@typescript-eslint/no-unused-vars": [
-        "error",
-        {
-          vars: "all",
-          args: "after-used",
-          varsIgnorePattern: "^_",
-          argsIgnorePattern: "^_",
-        },
-      ],
       "@typescript-eslint/no-deprecated": "error",
       "@typescript-eslint/no-floating-promises": "warn",
       "@typescript-eslint/no-unsafe-argument": "warn",
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        {
+          args: "after-used",
+          argsIgnorePattern: "^_",
+          vars: "all",
+          varsIgnorePattern: "^_",
+        },
+      ],
       "no-undef": "off",
       "svelte/no-navigation-without-resolve": ["error", { ignoreLinks: true }],
     },

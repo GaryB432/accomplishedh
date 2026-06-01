@@ -9,6 +9,21 @@ type Reference = {
 const references: Reference[] = [
   {
     snaks: {
+      P1476: [
+        {
+          datatype: "monolingualtext",
+          datavalue: {
+            type: "monolingualtext",
+            value: {
+              language: "en",
+              text: "Albert Einstein (1879-1955), data.bnf.",
+            },
+          },
+
+          property: "P1476",
+          snaktype: "value",
+        },
+      ],
       P248: [
         {
           datatype: "wikibase-item",
@@ -53,21 +68,6 @@ const references: Reference[] = [
           },
 
           property: "P813",
-          snaktype: "value",
-        },
-      ],
-      P1476: [
-        {
-          datatype: "monolingualtext",
-          datavalue: {
-            type: "monolingualtext",
-            value: {
-              language: "en",
-              text: "Albert Einstein (1879-1955), data.bnf.",
-            },
-          },
-
-          property: "P1476",
           snaktype: "value",
         },
       ],
@@ -329,25 +329,6 @@ export const imageClaims: Claims = {
         snaktype: "value",
       },
       qualifiers: {
-        P585: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 9,
-                time: "+1947-00-00T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P585",
-            snaktype: "value",
-          },
-        ],
         P2096: [
           {
             datatype: "monolingualtext",
@@ -428,6 +409,25 @@ export const imageClaims: Claims = {
             snaktype: "value",
           },
         ],
+        P585: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 9,
+                time: "+1947-00-00T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P585",
+            snaktype: "value",
+          },
+        ],
       },
       "qualifiers-order": ["P2096", "P585"],
       rank: "preferred",
@@ -446,41 +446,6 @@ export const imageClaims: Claims = {
         snaktype: "value",
       },
       qualifiers: {
-        P276: [
-          {
-            datatype: "wikibase-item",
-            datavalue: {
-              type: "wikibase-entityid",
-              value: {
-                "entity-type": "item",
-                id: "Q1741",
-                "numeric-id": 1741,
-              },
-            },
-
-            property: "P276",
-            snaktype: "value",
-          },
-        ],
-        P585: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 9,
-                time: "+1921-00-00T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P585",
-            snaktype: "value",
-          },
-        ],
         P2096: [
           {
             datatype: "monolingualtext",
@@ -518,6 +483,41 @@ export const imageClaims: Claims = {
               },
             },
             property: "P2096",
+            snaktype: "value",
+          },
+        ],
+        P276: [
+          {
+            datatype: "wikibase-item",
+            datavalue: {
+              type: "wikibase-entityid",
+              value: {
+                "entity-type": "item",
+                id: "Q1741",
+                "numeric-id": 1741,
+              },
+            },
+
+            property: "P276",
+            snaktype: "value",
+          },
+        ],
+        P585: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 9,
+                time: "+1921-00-00T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P585",
             snaktype: "value",
           },
         ],
@@ -632,6 +632,203 @@ export const otherClaims: Claims = {
 };
 
 const lottaClaims = {
+  P1280: [
+    {
+      id: "Q937$2271da52-4ee1-6a74-8d99-294bc3f6c7de",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "7912035",
+        },
+
+        property: "P1280",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P1810: [
+          {
+            datatype: "string",
+            datavalue: {
+              type: "string",
+              value: "Einstein, Albert",
+            },
+
+            property: "P1810",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P1810"],
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P1321: [
+    {
+      id: "Q937$35460528-4d70-e713-afa7-5494838f3696",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q72",
+            "numeric-id": 72,
+          },
+        },
+
+        property: "P1321",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P1412: [
+    {
+      id: "Q937$fe800b70-414d-3192-59de-94f16ee93233",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q1860",
+            "numeric-id": 1860,
+          },
+        },
+
+        property: "P1412",
+        snaktype: "value",
+      },
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P1476: [
+              {
+                datatype: "monolingualtext",
+                datavalue: {
+                  type: "monolingualtext",
+                  value: {
+                    language: "en",
+                    text: "Albert Einstein (1879-1955), data.bnf.",
+                  },
+                },
+
+                property: "P1476",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q19938912",
+                    "numeric-id": 19938912,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P268: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "119016075",
+                },
+
+                property: "P268",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2015-10-10T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P268", "P813", "P1476"],
+        },
+      ],
+      type: "statement",
+    },
+    {
+      id: "Q937$9964d33c-4674-aa6a-66d2-a0c261007e7e",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q188",
+            "numeric-id": 188,
+          },
+        },
+
+        property: "P1412",
+        snaktype: "value",
+      },
+      rank: "preferred",
+      references: [
+        {
+          snaks: {
+            P1280: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "7912035",
+                },
+
+                property: "P1280",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q16744133",
+                    "numeric-id": 16744133,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P1280", "P248"],
+        },
+      ],
+      type: "statement",
+    },
+  ],
   P19: [
     {
       id: "q937$B3E7F30F-C43D-435D-9EA3-266983130FB1",
@@ -650,22 +847,6 @@ const lottaClaims = {
         snaktype: "value",
       },
       qualifiers: {
-        P17: [
-          {
-            datatype: "wikibase-item",
-            datavalue: {
-              type: "wikibase-entityid",
-              value: {
-                "entity-type": "item",
-                id: "Q43287",
-                "numeric-id": 43287,
-              },
-            },
-
-            property: "P17",
-            snaktype: "value",
-          },
-        ],
         P131: [
           {
             datatype: "wikibase-item",
@@ -679,6 +860,22 @@ const lottaClaims = {
             },
 
             property: "P131",
+            snaktype: "value",
+          },
+        ],
+        P17: [
+          {
+            datatype: "wikibase-item",
+            datavalue: {
+              type: "wikibase-entityid",
+              value: {
+                "entity-type": "item",
+                id: "Q43287",
+                "numeric-id": 43287,
+              },
+            },
+
+            property: "P17",
             snaktype: "value",
           },
         ],
@@ -890,22 +1087,6 @@ const lottaClaims = {
         snaktype: "value",
       },
       qualifiers: {
-        P17: [
-          {
-            datatype: "wikibase-item",
-            datavalue: {
-              type: "wikibase-entityid",
-              value: {
-                "entity-type": "item",
-                id: "Q30",
-                "numeric-id": 30,
-              },
-            },
-
-            property: "P17",
-            snaktype: "value",
-          },
-        ],
         P131: [
           {
             datatype: "wikibase-item",
@@ -919,6 +1100,22 @@ const lottaClaims = {
             },
 
             property: "P131",
+            snaktype: "value",
+          },
+        ],
+        P17: [
+          {
+            datatype: "wikibase-item",
+            datavalue: {
+              type: "wikibase-entityid",
+              value: {
+                "entity-type": "item",
+                id: "Q30",
+                "numeric-id": 30,
+              },
+            },
+
+            property: "P17",
             snaktype: "value",
           },
         ],
@@ -1135,2311 +1332,72 @@ const lottaClaims = {
       type: "statement",
     },
   ],
-  P1280: [
+  ...imageClaims,
+  P1003: [
     {
-      id: "Q937$2271da52-4ee1-6a74-8d99-294bc3f6c7de",
+      id: "Q937$807FF339-0105-4263-8A7A-75A6FFC26533",
       mainsnak: {
         datatype: "external-id",
         datavalue: {
           type: "string",
-          value: "7912035",
+          value: "000074139",
         },
 
-        property: "P1280",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P1810: [
-          {
-            datatype: "string",
-            datavalue: {
-              type: "string",
-              value: "Einstein, Albert",
-            },
-
-            property: "P1810",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P1810"],
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P1321: [
-    {
-      id: "Q937$35460528-4d70-e713-afa7-5494838f3696",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q72",
-            "numeric-id": 72,
-          },
-        },
-
-        property: "P1321",
+        property: "P1003",
         snaktype: "value",
       },
       rank: "normal",
       type: "statement",
     },
   ],
-  P1412: [
+  P1005: [
     {
-      id: "Q937$fe800b70-414d-3192-59de-94f16ee93233",
+      id: "Q937$BABC7A6D-354E-49D9-9D6F-B575794A0546",
       mainsnak: {
-        datatype: "wikibase-item",
+        datatype: "external-id",
         datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q1860",
-            "numeric-id": 1860,
-          },
+          type: "string",
+          value: "26339",
         },
 
-        property: "P1412",
+        property: "P1005",
         snaktype: "value",
       },
       rank: "normal",
-      references: [
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q19938912",
-                    "numeric-id": 19938912,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P268: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "119016075",
-                },
-
-                property: "P268",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2015-10-10T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P1476: [
-              {
-                datatype: "monolingualtext",
-                datavalue: {
-                  type: "monolingualtext",
-                  value: {
-                    language: "en",
-                    text: "Albert Einstein (1879-1955), data.bnf.",
-                  },
-                },
-
-                property: "P1476",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P268", "P813", "P1476"],
-        },
-      ],
-      type: "statement",
-    },
-    {
-      id: "Q937$9964d33c-4674-aa6a-66d2-a0c261007e7e",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q188",
-            "numeric-id": 188,
-          },
-        },
-
-        property: "P1412",
-        snaktype: "value",
-      },
-      rank: "preferred",
-      references: [
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q16744133",
-                    "numeric-id": 16744133,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P1280: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "7912035",
-                },
-
-                property: "P1280",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P1280", "P248"],
-        },
-      ],
       type: "statement",
     },
   ],
-  ...imageClaims,
-  P21: [
+  P1006: [
     {
-      id: "Q937$BA154D92-7A34-4E9F-A2CD-F7B750D24EFA",
+      id: "Q937$356672EF-41CD-4BBA-8010-A4D704268DAB",
       mainsnak: {
-        datatype: "wikibase-item",
+        datatype: "external-id",
         datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q6581097",
-            "numeric-id": 6581097,
-          },
+          type: "string",
+          value: "068350767",
         },
 
-        property: "P21",
+        property: "P1006",
         snaktype: "value",
       },
       rank: "normal",
-      references: [
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q19938912",
-                    "numeric-id": 19938912,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P268: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "119016075",
-                },
-
-                property: "P268",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2015-10-10T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P268", "P813"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q23667505",
-                    "numeric-id": 23667505,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2019-06-19T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P2861: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "1215",
-                },
-
-                property: "P2861",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P2861", "P813"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q77541206",
-                    "numeric-id": 77541206,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2021-02-13T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P7796: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "3852",
-                },
-
-                property: "P7796",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P7796", "P813"],
-        },
-        {
-          snaks: {
-            P227: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "118529579",
-                },
-
-                property: "P227",
-                snaktype: "value",
-              },
-            ],
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q36578",
-                    "numeric-id": 36578,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2024-07-09T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P227", "P813"],
-        },
-      ],
       type: "statement",
     },
   ],
-  P25: [
+  P10069: [
     {
-      id: "Q937$7c2193c0-4c6d-8884-4bf9-9d86dfdc7db6",
+      id: "Q937$614F5C33-8249-436B-ADCC-4CCA5D1F1445",
       mainsnak: {
-        datatype: "wikibase-item",
+        datatype: "external-id",
         datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q4357787",
-            "numeric-id": 4357787,
-          },
+          type: "string",
+          value: "49324",
         },
 
-        property: "P25",
+        property: "P10069",
         snaktype: "value",
       },
       rank: "normal",
-      references: [
-        {
-          snaks: {
-            P143: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q328",
-                    "numeric-id": 328,
-                  },
-                },
-
-                property: "P143",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P143"],
-        },
-      ],
-      type: "statement",
-    },
-  ],
-  P26: [
-    {
-      id: "q937$C6422D5D-6B13-4626-AEE3-60A30E0C2C85",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q76346",
-            "numeric-id": 76346,
-          },
-        },
-
-        property: "P26",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P580: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 11,
-                time: "+1903-01-16T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P580",
-            snaktype: "value",
-          },
-        ],
-        P582: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 11,
-                time: "+1919-02-14T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P582",
-            snaktype: "value",
-          },
-        ],
-        P2842: [
-          {
-            datatype: "wikibase-item",
-            datavalue: {
-              type: "wikibase-entityid",
-              value: {
-                "entity-type": "item",
-                id: "Q70",
-                "numeric-id": 70,
-              },
-            },
-
-            property: "P2842",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P580", "P582", "P2842"],
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P227: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "118529579",
-                },
-
-                property: "P227",
-                snaktype: "value",
-              },
-            ],
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q23833686",
-                    "numeric-id": 23833686,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2024-05-03T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P227", "P248", "P813"],
-        },
-      ],
-      type: "statement",
-    },
-    {
-      id: "q937$881C4FA7-075C-4D48-8182-77D69CA6309C",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q68761",
-            "numeric-id": 68761,
-          },
-        },
-
-        property: "P26",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P580: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 9,
-                time: "+1919-01-01T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P580",
-            snaktype: "value",
-          },
-        ],
-        P582: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 11,
-                time: "+1936-12-20T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P582",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P580", "P582"],
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P227: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "118529579",
-                },
-
-                property: "P227",
-                snaktype: "value",
-              },
-            ],
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q23833686",
-                    "numeric-id": 23833686,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2024-05-03T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P227", "P248", "P813"],
-        },
-      ],
-      type: "statement",
-    },
-  ],
-  P27: [
-    {
-      id: "q937$1D589815-A913-4559-94B0-7751C8D4E5FC",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q159631",
-            "numeric-id": 159631,
-          },
-        },
-
-        property: "P27",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P580: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 11,
-                time: "+1879-03-14T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P580",
-            snaktype: "value",
-          },
-        ],
-        P582: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 11,
-                time: "+1896-01-28T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P582",
-            snaktype: "value",
-          },
-        ],
-        P1545: [
-          {
-            datatype: "string",
-            datavalue: {
-              type: "string",
-              value: "1",
-            },
-
-            property: "P1545",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P580", "P582", "P1545"],
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P854: [
-              {
-                datatype: "url",
-                datavalue: {
-                  type: "string",
-                  value:
-                    "https://www.einstein-website.de/z_information/verschiedenes.html",
-                },
-
-                property: "P854",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P854"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q1420342",
-                    "numeric-id": 1420342,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P888: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "795378",
-                },
-
-                property: "P888",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P888"],
-        },
-      ],
-      type: "statement",
-    },
-    {
-      id: "Q937$08f8c47d-4967-1f71-d553-c520c754bb67",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q223050",
-            "numeric-id": 223050,
-          },
-        },
-
-        property: "P27",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P580: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 11,
-                time: "+1896-01-28T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P580",
-            snaktype: "value",
-          },
-        ],
-        P582: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 11,
-                time: "+1901-02-21T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P582",
-            snaktype: "value",
-          },
-        ],
-        P1545: [
-          {
-            datatype: "string",
-            datavalue: {
-              type: "string",
-              value: "2",
-            },
-
-            property: "P1545",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P580", "P582", "P1545"],
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P854: [
-              {
-                datatype: "url",
-                datavalue: {
-                  type: "string",
-                  value:
-                    "http://www.einsteinsommerhaus.de/index.php?id=539&no_cache=1",
-                },
-
-                property: "P854",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P854"],
-        },
-      ],
-      type: "statement",
-    },
-    {
-      id: "Q937$448fdca3-47f1-606c-a42a-f0282cd42a35",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q39",
-            "numeric-id": 39,
-          },
-        },
-
-        property: "P27",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P580: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 11,
-                time: "+1901-02-21T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P580",
-            snaktype: "value",
-          },
-        ],
-        P1545: [
-          {
-            datatype: "string",
-            datavalue: {
-              type: "string",
-              value: "3",
-            },
-
-            property: "P1545",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P580", "P1545"],
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P227: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "118529579",
-                },
-
-                property: "P227",
-                snaktype: "value",
-              },
-            ],
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q23833686",
-                    "numeric-id": 23833686,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2024-05-03T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P227", "P248", "P813"],
-        },
-      ],
-      type: "statement",
-    },
-    {
-      id: "Q937$432f73a4-47a0-0126-1e69-7fa1d3a4a464",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q533534",
-            "numeric-id": 533534,
-          },
-        },
-
-        property: "P27",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P580: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 11,
-                time: "+1911-04-01T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P580",
-            snaktype: "value",
-          },
-        ],
-        P582: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 11,
-                time: "+1912-09-30T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P582",
-            snaktype: "value",
-          },
-        ],
-        P1545: [
-          {
-            datatype: "string",
-            datavalue: {
-              type: "string",
-              value: "4",
-            },
-
-            property: "P1545",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P580", "P582", "P1545"],
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P854: [
-              {
-                datatype: "url",
-                datavalue: {
-                  type: "string",
-                  value:
-                    "https://www.einstein-website.de/z_information/verschiedenes.html",
-                },
-
-                property: "P854",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P854"],
-        },
-      ],
-      type: "statement",
-    },
-    {
-      id: "Q937$0f8b506b-4d1d-e6df-9d86-59cd38512251",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q41304",
-            "numeric-id": 41304,
-          },
-        },
-
-        property: "P27",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P580: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 9,
-                time: "+1918-00-00T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P580",
-            snaktype: "value",
-          },
-        ],
-        P582: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 9,
-                time: "+1933-00-00T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P582",
-            snaktype: "value",
-          },
-        ],
-        P1545: [
-          {
-            datatype: "string",
-            datavalue: {
-              type: "string",
-              value: "5",
-            },
-
-            property: "P1545",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P580", "P582", "P1545"],
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P854: [
-              {
-                datatype: "url",
-                datavalue: {
-                  type: "string",
-                  value: "http://www.einsteinsommerhaus.de/index.php?id=539",
-                },
-
-                property: "P854",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P854"],
-        },
-      ],
-      type: "statement",
-    },
-    {
-      id: "Q937$6b477f22-4d7d-2931-c80a-fb99ebda87ca",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q183",
-            "numeric-id": 183,
-          },
-        },
-
-        property: "P27",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P580: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 11,
-                time: "+1933-01-30T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P580",
-            snaktype: "value",
-          },
-        ],
-        P582: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 11,
-                time: "+1933-03-28T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P582",
-            snaktype: "value",
-          },
-        ],
-        P1545: [
-          {
-            datatype: "string",
-            datavalue: {
-              type: "string",
-              value: "6",
-            },
-
-            property: "P1545",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P580", "P582", "P1545"],
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P854: [
-              {
-                datatype: "url",
-                datavalue: {
-                  type: "string",
-                  value:
-                    "https://newspapers.ushmm.org/events/albert-einstein-quits-germany-renounces-citizenship",
-                },
-
-                property: "P854",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P854"],
-        },
-        {
-          snaks: {
-            P227: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "118529579",
-                },
-
-                property: "P227",
-                snaktype: "value",
-              },
-            ],
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q23833686",
-                    "numeric-id": 23833686,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2024-05-03T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P227", "P248", "P813"],
-        },
-      ],
-      type: "statement",
-    },
-    {
-      id: "Q937$a3f8227b-43bb-9766-6fb0-80aabaaf0eb2",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q30",
-            "numeric-id": 30,
-          },
-        },
-
-        property: "P27",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P580: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 11,
-                time: "+1940-10-01T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P580",
-            snaktype: "value",
-          },
-        ],
-        P1545: [
-          {
-            datatype: "string",
-            datavalue: {
-              type: "string",
-              value: "7",
-            },
-
-            property: "P1545",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P580", "P1545"],
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P854: [
-              {
-                datatype: "url",
-                datavalue: {
-                  type: "string",
-                  value:
-                    "https://www.einstein-website.de/z_information/verschiedenes.html",
-                },
-
-                property: "P854",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P854"],
-        },
-      ],
-      type: "statement",
-    },
-  ],
-  P31: [
-    {
-      id: "Q937$ED5C61AE-EA02-4E78-932B-FF21A34714EB",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q5",
-            "numeric-id": 5,
-          },
-        },
-
-        property: "P31",
-        snaktype: "value",
-      },
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q19938912",
-                    "numeric-id": 19938912,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P268: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "119016075",
-                },
-
-                property: "P268",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2015-10-10T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P268", "P813"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q77541206",
-                    "numeric-id": 77541206,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2021-02-13T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P7796: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "3852",
-                },
-
-                property: "P7796",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P7796", "P813"],
-        },
-        {
-          snaks: {
-            P227: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "118529579",
-                },
-
-                property: "P227",
-                snaktype: "value",
-              },
-            ],
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q23833686",
-                    "numeric-id": 23833686,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2024-05-03T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P227", "P248", "P813"],
-        },
-      ],
-      type: "statement",
-    },
-  ],
-  P39: [
-    {
-      id: "Q937$ba274185-377e-4c3d-8bb3-a2d513791797",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q121594",
-            "numeric-id": 121594,
-          },
-        },
-
-        property: "P39",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P580: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 9,
-                time: "+1911-00-00T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P580",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P580"],
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P143: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q181163",
-                    "numeric-id": 181163,
-                  },
-                },
-
-                property: "P143",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P143"],
-        },
-      ],
-      type: "statement",
-    },
-  ],
-  P40: [
-    {
-      id: "q937$E06622DC-565F-4DCA-8AAF-FD27B149272A",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q123371",
-            "numeric-id": 123371,
-          },
-        },
-
-        property: "P40",
-        snaktype: "value",
-      },
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P227: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "118529579",
-                },
-
-                property: "P227",
-                snaktype: "value",
-              },
-            ],
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q23833686",
-                    "numeric-id": 23833686,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2024-05-03T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P227", "P248", "P813"],
-        },
-      ],
-      type: "statement",
-    },
-    {
-      id: "q937$23EEE6B9-9930-44E1-99DF-98FC953F2A9F",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q118253",
-            "numeric-id": 118253,
-          },
-        },
-
-        property: "P40",
-        snaktype: "value",
-      },
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P227: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "118529579",
-                },
-
-                property: "P227",
-                snaktype: "value",
-              },
-            ],
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q23833686",
-                    "numeric-id": 23833686,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2024-05-03T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P227", "P248", "P813"],
-        },
-      ],
-      type: "statement",
-    },
-    {
-      id: "q937$6F89DFD4-2E96-457E-BF94-7BC98185C8DD",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q468357",
-            "numeric-id": 468357,
-          },
-        },
-
-        property: "P40",
-        snaktype: "value",
-      },
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P143: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q328",
-                    "numeric-id": 328,
-                  },
-                },
-
-                property: "P143",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P143"],
-        },
-      ],
-      type: "statement",
-    },
-  ],
-  P69: [
-    {
-      id: "q937$9297F2A2-FAD7-466F-8B30-79AA41E8793F",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q11942",
-            "numeric-id": 11942,
-          },
-        },
-
-        property: "P69",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P512: [
-          {
-            datatype: "wikibase-item",
-            datavalue: {
-              type: "wikibase-entityid",
-              value: {
-                "entity-type": "item",
-                id: "Q787674",
-                "numeric-id": 787674,
-              },
-            },
-
-            property: "P512",
-            snaktype: "value",
-          },
-        ],
-        P580: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 9,
-                time: "+1896-00-00T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P580",
-            snaktype: "value",
-          },
-        ],
-        P582: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 9,
-                time: "+1900-00-00T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P582",
-            snaktype: "value",
-          },
-        ],
-        P812: [
-          {
-            datatype: "wikibase-item",
-            datavalue: {
-              type: "wikibase-entityid",
-              value: {
-                "entity-type": "item",
-                id: "Q853077",
-                "numeric-id": 853077,
-              },
-            },
-
-            property: "P812",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P512", "P580", "P582", "P812"],
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P854: [
-              {
-                datatype: "url",
-                datavalue: {
-                  type: "string",
-                  value: "https://www.ige.ch/de/ueber-uns/einstein.html",
-                },
-
-                property: "P854",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P854"],
-        },
-        {
-          snaks: {
-            P854: [
-              {
-                datatype: "url",
-                datavalue: {
-                  type: "string",
-                  value:
-                    "https://www.library.ethz.ch/en/Resources/Digital-library/Einstein-Online/Einstein-s-Studies-at-the-Polytechnic-Institute-in-Zurich-1896-1900",
-                },
-
-                property: "P854",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P854"],
-        },
-      ],
-      type: "statement",
-    },
-    {
-      id: "Q937$bdd0de70-44e3-c7c5-8566-0389c0bd14e7",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q1876751",
-            "numeric-id": 1876751,
-          },
-        },
-
-        property: "P69",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P580: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 9,
-                time: "+1888-00-00T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P580",
-            snaktype: "value",
-          },
-        ],
-        P582: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 9,
-                time: "+1894-00-00T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P582",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P580", "P582"],
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$b2fb71ab-49ad-df08-7b3b-8bd09a55ae77",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q435651",
-            "numeric-id": 435651,
-          },
-        },
-
-        property: "P69",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P512: [
-          {
-            datatype: "wikibase-item",
-            datavalue: {
-              type: "wikibase-entityid",
-              value: {
-                "entity-type": "item",
-                id: "Q694222",
-                "numeric-id": 694222,
-              },
-            },
-
-            property: "P512",
-            snaktype: "value",
-          },
-        ],
-        P580: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 9,
-                time: "+1895-00-00T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P580",
-            snaktype: "value",
-          },
-        ],
-        P582: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 10,
-                time: "+1896-09-00T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P582",
-            snaktype: "value",
-          },
-        ],
-        P585: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 11,
-                time: "+1896-10-03T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P585",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P580", "P512", "P585", "P582"],
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$E90CA760-E20F-4EED-BDB8-F72DCF4B484C",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q206702",
-            "numeric-id": 206702,
-          },
-        },
-
-        property: "P69",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P184: [
-          {
-            datatype: "wikibase-item",
-            datavalue: {
-              type: "wikibase-entityid",
-              value: {
-                "entity-type": "item",
-                id: "Q4175282",
-                "numeric-id": 4175282,
-              },
-            },
-
-            property: "P184",
-            snaktype: "value",
-          },
-          {
-            datatype: "wikibase-item",
-            datavalue: {
-              type: "wikibase-entityid",
-              value: {
-                "entity-type": "item",
-                id: "Q97154",
-                "numeric-id": 97154,
-              },
-            },
-
-            property: "P184",
-            snaktype: "value",
-          },
-        ],
-        P512: [
-          {
-            datatype: "wikibase-item",
-            datavalue: {
-              type: "wikibase-entityid",
-              value: {
-                "entity-type": "item",
-                id: "Q849697",
-                "numeric-id": 849697,
-              },
-            },
-
-            property: "P512",
-            snaktype: "value",
-          },
-        ],
-        P582: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 11,
-                time: "+1905-04-30T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P582",
-            snaktype: "value",
-          },
-        ],
-        P812: [
-          {
-            datatype: "wikibase-item",
-            datavalue: {
-              type: "wikibase-entityid",
-              value: {
-                "entity-type": "item",
-                id: "Q413",
-                "numeric-id": 413,
-              },
-            },
-
-            property: "P812",
-            snaktype: "value",
-          },
-        ],
-        P1026: [
-          {
-            datatype: "wikibase-item",
-            datavalue: {
-              type: "wikibase-entityid",
-              value: {
-                "entity-type": "item",
-                id: "Q51754009",
-                "numeric-id": 51754009,
-              },
-            },
-
-            property: "P1026",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P812", "P582", "P512", "P184", "P1026"],
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q51754009",
-                    "numeric-id": 51754009,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248"],
-        },
-      ],
       type: "statement",
     },
   ],
@@ -3482,6 +1440,111 @@ const lottaClaims = {
             ],
           },
           "snaks-order": ["P143"],
+        },
+      ],
+      type: "statement",
+    },
+  ],
+  P10141: [
+    {
+      id: "Q937$18d12b8d-4bda-bc95-5310-ef1eb8fc1f5e",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "156358",
+        },
+
+        property: "P10141",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P1015: [
+    {
+      id: "Q937$02C20F8E-58BD-4CD1-95A1-C45BF8D3B3A0",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "90053072",
+        },
+
+        property: "P1015",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P1017: [
+    {
+      id: "Q937$DFEE8D9A-C5F7-4A1C-B6EB-76754C1CF3B5",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "ADV10181679",
+        },
+
+        property: "P1017",
+        snaktype: "value",
+      },
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q77541206",
+                    "numeric-id": 77541206,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P7796: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "3852",
+                },
+
+                property: "P7796",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2021-02-13T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P7796", "P813"],
         },
       ],
       type: "statement",
@@ -3530,6 +1593,203 @@ const lottaClaims = {
       type: "statement",
     },
   ],
+  P10227: [
+    {
+      id: "q937$901ac528-4e29-9c58-156a-6b792417f2dd",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "vtls000086385",
+        },
+
+        property: "P10227",
+        snaktype: "value",
+      },
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P214: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "75121530",
+                },
+
+                property: "P214",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q54919",
+                    "numeric-id": 54919,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2022-03-05T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P214", "P813"],
+        },
+      ],
+      type: "statement",
+    },
+  ],
+  P10234: [
+    {
+      id: "Q937$469367a5-4595-f4d4-1f0d-938d3f7e95b6",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "albert_einstein",
+        },
+
+        property: "P10234",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P10242: [
+    {
+      id: "Q937$B1341B66-13D3-43A4-8D3A-AEFB93F49981",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "01682/eu_e_0736/e0736",
+        },
+
+        property: "P10242",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P1932: [
+          {
+            datatype: "string",
+            datavalue: {
+              type: "string",
+              value: "Albert Einstein",
+            },
+
+            property: "P1932",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P1932"],
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P1026: [
+    {
+      id: "Q937$c7c208b8-41b5-6617-14b8-f09f03ca8123",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q51754009",
+            "numeric-id": 51754009,
+          },
+        },
+
+        property: "P1026",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P585: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 9,
+                time: "+1905-00-00T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P585",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P585"],
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P10297: [
+    {
+      id: "Q937$7c5a2eff-4378-d934-f4d4-b7fce1a75171",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "m0jcx",
+        },
+
+        property: "P10297",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P10299: [
+    {
+      id: "Q937$5715b495-4bfa-27ac-08f8-9f78ebd90082",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "albert-einstein",
+        },
+
+        property: "P10299",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
   P103: [
     {
       id: "q937$AEC9F74F-E740-4E5B-AD61-5E6AE0388C7C",
@@ -3545,6 +1805,337 @@ const lottaClaims = {
         },
 
         property: "P103",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P10302: [
+    {
+      id: "Q937$6ad5ded0-e941-42f0-8e44-bfe11baa4c81",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "albert-einstein",
+        },
+
+        property: "P10302",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P1038: [
+    {
+      id: "Q937$7ac1a440-4882-073c-f966-036bda6cd821",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q55594631",
+            "numeric-id": 55594631,
+          },
+        },
+
+        property: "P1038",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P1039: [
+          {
+            datatype: "wikibase-item",
+            datavalue: {
+              type: "wikibase-entityid",
+              value: {
+                "entity-type": "item",
+                id: "Q12051531",
+                "numeric-id": 12051531,
+              },
+            },
+
+            property: "P1039",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P1039"],
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P854: [
+              {
+                datatype: "url",
+                datavalue: {
+                  type: "string",
+                  value:
+                    "http://stolpersteine-fuer-ulm.de/familie/lina-einstein/",
+                },
+
+                property: "P854",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P854"],
+        },
+      ],
+      type: "statement",
+    },
+    {
+      id: "Q937$5d09ed7c-4c6a-5bbb-9106-6653fd49269e",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q68761",
+            "numeric-id": 68761,
+          },
+        },
+
+        property: "P1038",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P1039: [
+          {
+            datatype: "wikibase-item",
+            datavalue: {
+              type: "wikibase-entityid",
+              value: {
+                "entity-type": "item",
+                id: "Q12051531",
+                "numeric-id": 12051531,
+              },
+            },
+
+            property: "P1039",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P1039"],
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P143: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q48183",
+                    "numeric-id": 48183,
+                  },
+                },
+
+                property: "P143",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P143"],
+        },
+      ],
+      type: "statement",
+    },
+  ],
+  P10387: [
+    {
+      id: "Q937$2F8EE879-4C25-4F37-91E3-BFE4CD3D8CCC",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "8278",
+        },
+
+        property: "P10387",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P1048: [
+    {
+      id: "Q937$3B48841C-6CC9-4213-90B2-74532E90D1B9",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "369710",
+        },
+
+        property: "P1048",
+        snaktype: "value",
+      },
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P143: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q30239",
+                    "numeric-id": 30239,
+                  },
+                },
+
+                property: "P143",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P143"],
+        },
+      ],
+      type: "statement",
+    },
+  ],
+  P1050: [
+    {
+      id: "Q937$BB5824E0-B74F-4F93-A14C-CE802E0F9CB5",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q132971",
+            "numeric-id": 132971,
+          },
+        },
+
+        property: "P1050",
+        snaktype: "value",
+      },
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P143: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q328",
+                    "numeric-id": 328,
+                  },
+                },
+
+                property: "P143",
+                snaktype: "value",
+              },
+            ],
+            P4656: [
+              {
+                datatype: "url",
+                datavalue: {
+                  type: "string",
+                  value:
+                    "https://en.wikipedia.org/w/index.php?title=List_of_people_with_dyslexia&oldid=1189241542",
+                },
+
+                property: "P4656",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P143", "P4656"],
+        },
+      ],
+      type: "statement",
+    },
+  ],
+  P10553: [
+    {
+      id: "Q937$DC5C0034-8B57-4289-AE2C-C5D9B0190B95",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "142045950",
+        },
+
+        property: "P10553",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P10565: [
+    {
+      id: "Q937$7dc4b696-4246-5d4d-a056-e269be655515",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "123649",
+        },
+
+        property: "P10565",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P1810: [
+          {
+            datatype: "string",
+            datavalue: {
+              type: "string",
+              value: "爱因斯坦，A.",
+            },
+
+            property: "P1810",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P1810"],
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$9456DEBA-00A4-4F2A-89C4-735AA8277A1F",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "520858",
+        },
+
+        property: "P10565",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$D9095A5E-8027-46D7-8047-C6E01B683531",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "633756",
+        },
+
+        property: "P10565",
         snaktype: "value",
       },
       rank: "normal",
@@ -3830,6 +2421,18 @@ const lottaClaims = {
                 snaktype: "value",
               },
             ],
+            P2861: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "1215",
+                },
+
+                property: "P2861",
+                snaktype: "value",
+              },
+            ],
             P813: [
               {
                 datatype: "time",
@@ -3846,18 +2449,6 @@ const lottaClaims = {
                 },
 
                 property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P2861: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "1215",
-                },
-
-                property: "P2861",
                 snaktype: "value",
               },
             ],
@@ -3887,19 +2478,6 @@ const lottaClaims = {
       references: [
         {
           snaks: {
-            P854: [
-              {
-                datatype: "url",
-                datavalue: {
-                  type: "string",
-                  value:
-                    "http://www.nytimes.com/1993/11/25/obituaries/zhou-peiyuan-is-dead-educator-scientist-91.html",
-                },
-
-                property: "P854",
-                snaktype: "value",
-              },
-            ],
             P1476: [
               {
                 datatype: "monolingualtext",
@@ -3915,24 +2493,24 @@ const lottaClaims = {
                 snaktype: "value",
               },
             ],
-          },
-          "snaks-order": ["P854", "P1476"],
-        },
-        {
-          snaks: {
             P854: [
               {
                 datatype: "url",
                 datavalue: {
                   type: "string",
                   value:
-                    "http://www.nytimes.com/1995/10/23/theater/theater-review-a-fantasy-meeting-of-minds.html",
+                    "http://www.nytimes.com/1993/11/25/obituaries/zhou-peiyuan-is-dead-educator-scientist-91.html",
                 },
 
                 property: "P854",
                 snaktype: "value",
               },
             ],
+          },
+          "snaks-order": ["P854", "P1476"],
+        },
+        {
+          snaks: {
             P1476: [
               {
                 datatype: "monolingualtext",
@@ -3945,6 +2523,19 @@ const lottaClaims = {
                 },
 
                 property: "P1476",
+                snaktype: "value",
+              },
+            ],
+            P854: [
+              {
+                datatype: "url",
+                datavalue: {
+                  type: "string",
+                  value:
+                    "http://www.nytimes.com/1995/10/23/theater/theater-review-a-fantasy-meeting-of-minds.html",
+                },
+
+                property: "P854",
                 snaktype: "value",
               },
             ],
@@ -3969,6 +2560,18 @@ const lottaClaims = {
                 snaktype: "value",
               },
             ],
+            P7796: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "3852",
+                },
+
+                property: "P7796",
+                snaktype: "value",
+              },
+            ],
             P813: [
               {
                 datatype: "time",
@@ -3985,18 +2588,6 @@ const lottaClaims = {
                 },
 
                 property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P7796: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "3852",
-                },
-
-                property: "P7796",
                 snaktype: "value",
               },
             ],
@@ -4021,6 +2612,18 @@ const lottaClaims = {
                 snaktype: "value",
               },
             ],
+            P6844: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "16734",
+                },
+
+                property: "P6844",
+                snaktype: "value",
+              },
+            ],
             P813: [
               {
                 datatype: "time",
@@ -4037,18 +2640,6 @@ const lottaClaims = {
                 },
 
                 property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P6844: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "16734",
-                },
-
-                property: "P6844",
                 snaktype: "value",
               },
             ],
@@ -4130,19 +2721,6 @@ const lottaClaims = {
       references: [
         {
           snaks: {
-            P854: [
-              {
-                datatype: "url",
-                datavalue: {
-                  type: "string",
-                  value:
-                    "http://www.tandfonline.com/doi/full/10.1080/13528165.2012.728445",
-                },
-
-                property: "P854",
-                snaktype: "value",
-              },
-            ],
             P1476: [
               {
                 datatype: "monolingualtext",
@@ -4158,24 +2736,24 @@ const lottaClaims = {
                 snaktype: "value",
               },
             ],
-          },
-          "snaks-order": ["P854", "P1476"],
-        },
-        {
-          snaks: {
             P854: [
               {
                 datatype: "url",
                 datavalue: {
                   type: "string",
                   value:
-                    "http://www.tandfonline.com/doi/full/10.1080/09515081003690418",
+                    "http://www.tandfonline.com/doi/full/10.1080/13528165.2012.728445",
                 },
 
                 property: "P854",
                 snaktype: "value",
               },
             ],
+          },
+          "snaks-order": ["P854", "P1476"],
+        },
+        {
+          snaks: {
             P1476: [
               {
                 datatype: "monolingualtext",
@@ -4188,6 +2766,19 @@ const lottaClaims = {
                 },
 
                 property: "P1476",
+                snaktype: "value",
+              },
+            ],
+            P854: [
+              {
+                datatype: "url",
+                datavalue: {
+                  type: "string",
+                  value:
+                    "http://www.tandfonline.com/doi/full/10.1080/09515081003690418",
+                },
+
+                property: "P854",
                 snaktype: "value",
               },
             ],
@@ -4212,6 +2803,18 @@ const lottaClaims = {
                 snaktype: "value",
               },
             ],
+            P7796: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "3852",
+                },
+
+                property: "P7796",
+                snaktype: "value",
+              },
+            ],
             P813: [
               {
                 datatype: "time",
@@ -4228,18 +2831,6 @@ const lottaClaims = {
                 },
 
                 property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P7796: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "3852",
-                },
-
-                property: "P7796",
                 snaktype: "value",
               },
             ],
@@ -4269,19 +2860,6 @@ const lottaClaims = {
       references: [
         {
           snaks: {
-            P854: [
-              {
-                datatype: "url",
-                datavalue: {
-                  type: "string",
-                  value:
-                    "http://www.smh.com.au/news/book-reviews/einstein-his-life-and-universe/2007/06/22/1182019350450.html?page=fullpage",
-                },
-
-                property: "P854",
-                snaktype: "value",
-              },
-            ],
             P1476: [
               {
                 datatype: "monolingualtext",
@@ -4297,24 +2875,24 @@ const lottaClaims = {
                 snaktype: "value",
               },
             ],
-          },
-          "snaks-order": ["P854", "P1476"],
-        },
-        {
-          snaks: {
             P854: [
               {
                 datatype: "url",
                 datavalue: {
                   type: "string",
                   value:
-                    "http://bleacherreport.com/articles/2172365-modern-day-einstein-smashes-flaming-golf-ball-sets-pants-on-fire",
+                    "http://www.smh.com.au/news/book-reviews/einstein-his-life-and-universe/2007/06/22/1182019350450.html?page=fullpage",
                 },
 
                 property: "P854",
                 snaktype: "value",
               },
             ],
+          },
+          "snaks-order": ["P854", "P1476"],
+        },
+        {
+          snaks: {
             P1476: [
               {
                 datatype: "monolingualtext",
@@ -4327,6 +2905,19 @@ const lottaClaims = {
                 },
 
                 property: "P1476",
+                snaktype: "value",
+              },
+            ],
+            P854: [
+              {
+                datatype: "url",
+                datavalue: {
+                  type: "string",
+                  value:
+                    "http://bleacherreport.com/articles/2172365-modern-day-einstein-smashes-flaming-golf-ball-sets-pants-on-fire",
+                },
+
+                property: "P854",
                 snaktype: "value",
               },
             ],
@@ -4356,6 +2947,21 @@ const lottaClaims = {
       references: [
         {
           snaks: {
+            P1476: [
+              {
+                datatype: "monolingualtext",
+                datavalue: {
+                  type: "monolingualtext",
+                  value: {
+                    language: "en",
+                    text: "Special Relativity and how it all began",
+                  },
+                },
+
+                property: "P1476",
+                snaktype: "value",
+              },
+            ],
             P248: [
               {
                 datatype: "wikibase-item",
@@ -4381,21 +2987,6 @@ const lottaClaims = {
                 },
 
                 property: "P827",
-                snaktype: "value",
-              },
-            ],
-            P1476: [
-              {
-                datatype: "monolingualtext",
-                datavalue: {
-                  type: "monolingualtext",
-                  value: {
-                    language: "en",
-                    text: "Special Relativity and how it all began",
-                  },
-                },
-
-                property: "P1476",
                 snaktype: "value",
               },
             ],
@@ -4477,19 +3068,6 @@ const lottaClaims = {
       references: [
         {
           snaks: {
-            P854: [
-              {
-                datatype: "url",
-                datavalue: {
-                  type: "string",
-                  value:
-                    "http://www.bbc.co.uk/programmes/b00srz5b/episodes/player",
-                },
-
-                property: "P854",
-                snaktype: "value",
-              },
-            ],
             P1476: [
               {
                 datatype: "monolingualtext",
@@ -4505,24 +3083,24 @@ const lottaClaims = {
                 snaktype: "value",
               },
             ],
-          },
-          "snaks-order": ["P854", "P1476"],
-        },
-        {
-          snaks: {
             P854: [
               {
                 datatype: "url",
                 datavalue: {
                   type: "string",
                   value:
-                    "http://www.bbc.co.uk/norfolk/kids/science/az_alberteinstein.shtml",
+                    "http://www.bbc.co.uk/programmes/b00srz5b/episodes/player",
                 },
 
                 property: "P854",
                 snaktype: "value",
               },
             ],
+          },
+          "snaks-order": ["P854", "P1476"],
+        },
+        {
+          snaks: {
             P1476: [
               {
                 datatype: "monolingualtext",
@@ -4535,6 +3113,19 @@ const lottaClaims = {
                 },
 
                 property: "P1476",
+                snaktype: "value",
+              },
+            ],
+            P854: [
+              {
+                datatype: "url",
+                datavalue: {
+                  type: "string",
+                  value:
+                    "http://www.bbc.co.uk/norfolk/kids/science/az_alberteinstein.shtml",
+                },
+
+                property: "P854",
                 snaktype: "value",
               },
             ],
@@ -4559,6 +3150,18 @@ const lottaClaims = {
                 snaktype: "value",
               },
             ],
+            P7796: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "3852",
+                },
+
+                property: "P7796",
+                snaktype: "value",
+              },
+            ],
             P813: [
               {
                 datatype: "time",
@@ -4575,18 +3178,6 @@ const lottaClaims = {
                 },
 
                 property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P7796: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "3852",
-                },
-
-                property: "P7796",
                 snaktype: "value",
               },
             ],
@@ -4691,6 +3282,18 @@ const lottaClaims = {
       references: [
         {
           snaks: {
+            P1932: [
+              {
+                datatype: "string",
+                datavalue: {
+                  type: "string",
+                  value: "Universitäts-Professor",
+                },
+
+                property: "P1932",
+                snaktype: "value",
+              },
+            ],
             P248: [
               {
                 datatype: "wikibase-item",
@@ -4736,18 +3339,6 @@ const lottaClaims = {
                 },
 
                 property: "P854",
-                snaktype: "value",
-              },
-            ],
-            P1932: [
-              {
-                datatype: "string",
-                datavalue: {
-                  type: "string",
-                  value: "Universitäts-Professor",
-                },
-
-                property: "P1932",
                 snaktype: "value",
               },
             ],
@@ -4831,6 +3422,133 @@ const lottaClaims = {
       type: "statement",
     },
   ],
+  P10608: [
+    {
+      id: "Q937$081B24E1-6DFC-42AD-8991-CE992F602DB9",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "agent/gnd_118529579",
+        },
+
+        property: "P10608",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P1066: [
+    {
+      id: "Q937$670c8276-4457-cb31-a7ed-94749ac6b86a",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q116635",
+            "numeric-id": 116635,
+          },
+        },
+
+        property: "P1066",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$1af7745f-44d9-46e2-672e-49e04b5132f3",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q57246",
+            "numeric-id": 57246,
+          },
+        },
+
+        property: "P1066",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P10704: [
+    {
+      id: "Q937$D7F44115-3E07-4991-9481-9DD97634555A",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "1955.0005",
+        },
+
+        property: "P10704",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P10757: [
+    {
+      id: "Q937$65b22a89-4cce-1421-62e5-389b629dbf26",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "395",
+        },
+
+        property: "P10757",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P10780: [
+    {
+      id: "Q937$1EB8E30E-E656-4F1B-9ADB-67FF9579A5D6",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "albert-einstein",
+        },
+
+        property: "P10780",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P407: [
+          {
+            datatype: "wikibase-item",
+            datavalue: {
+              type: "wikibase-entityid",
+              value: {
+                "entity-type": "item",
+                id: "Q150",
+                "numeric-id": 150,
+              },
+            },
+
+            property: "P407",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P407"],
+      rank: "normal",
+      type: "statement",
+    },
+  ],
   P108: [
     {
       id: "Q937$681079d2-4cea-399f-f9aa-132bf91bfe53",
@@ -4893,19 +3611,6 @@ const lottaClaims = {
       references: [
         {
           snaks: {
-            P854: [
-              {
-                datatype: "url",
-                datavalue: {
-                  type: "string",
-                  value:
-                    "https://www.ige.ch/de/ueber-uns/einstein/einstein-beim-amt.html",
-                },
-
-                property: "P854",
-                snaktype: "value",
-              },
-            ],
             P1476: [
               {
                 datatype: "monolingualtext",
@@ -4918,6 +3623,19 @@ const lottaClaims = {
                 },
 
                 property: "P1476",
+                snaktype: "value",
+              },
+            ],
+            P854: [
+              {
+                datatype: "url",
+                datavalue: {
+                  type: "string",
+                  value:
+                    "https://www.ige.ch/de/ueber-uns/einstein/einstein-beim-amt.html",
+                },
+
+                property: "P854",
                 snaktype: "value",
               },
             ],
@@ -5023,19 +3741,6 @@ const lottaClaims = {
       references: [
         {
           snaks: {
-            P854: [
-              {
-                datatype: "url",
-                datavalue: {
-                  type: "string",
-                  value:
-                    "https://www.ige.ch/de/ueber-uns/einstein/einstein-beim-amt.html",
-                },
-
-                property: "P854",
-                snaktype: "value",
-              },
-            ],
             P1476: [
               {
                 datatype: "monolingualtext",
@@ -5048,6 +3753,19 @@ const lottaClaims = {
                 },
 
                 property: "P1476",
+                snaktype: "value",
+              },
+            ],
+            P854: [
+              {
+                datatype: "url",
+                datavalue: {
+                  type: "string",
+                  value:
+                    "https://www.ige.ch/de/ueber-uns/einstein/einstein-beim-amt.html",
+                },
+
+                property: "P854",
                 snaktype: "value",
               },
             ],
@@ -5346,18 +4064,6 @@ const lottaClaims = {
       references: [
         {
           snaks: {
-            P854: [
-              {
-                datatype: "url",
-                datavalue: {
-                  type: "string",
-                  value: "https://www.ige.ch/de/ueber-uns/einstein.html",
-                },
-
-                property: "P854",
-                snaktype: "value",
-              },
-            ],
             P1476: [
               {
                 datatype: "monolingualtext",
@@ -5370,6 +4076,18 @@ const lottaClaims = {
                 },
 
                 property: "P1476",
+                snaktype: "value",
+              },
+            ],
+            P854: [
+              {
+                datatype: "url",
+                datavalue: {
+                  type: "string",
+                  value: "https://www.ige.ch/de/ueber-uns/einstein.html",
+                },
+
+                property: "P854",
                 snaktype: "value",
               },
             ],
@@ -5745,22 +4463,6 @@ const lottaClaims = {
         snaktype: "value",
       },
       qualifiers: {
-        P39: [
-          {
-            datatype: "wikibase-item",
-            datavalue: {
-              type: "wikibase-entityid",
-              value: {
-                "entity-type": "item",
-                id: "Q875424",
-                "numeric-id": 875424,
-              },
-            },
-
-            property: "P39",
-            snaktype: "value",
-          },
-        ],
         P361: [
           {
             datatype: "wikibase-item",
@@ -5774,6 +4476,22 @@ const lottaClaims = {
             },
 
             property: "P361",
+            snaktype: "value",
+          },
+        ],
+        P39: [
+          {
+            datatype: "wikibase-item",
+            datavalue: {
+              type: "wikibase-entityid",
+              value: {
+                "entity-type": "item",
+                id: "Q875424",
+                "numeric-id": 875424,
+              },
+            },
+
+            property: "P39",
             snaktype: "value",
           },
         ],
@@ -5837,6 +4555,18 @@ const lottaClaims = {
                 snaktype: "value",
               },
             ],
+            P2861: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "1215",
+                },
+
+                property: "P2861",
+                snaktype: "value",
+              },
+            ],
             P813: [
               {
                 datatype: "time",
@@ -5853,18 +4583,6 @@ const lottaClaims = {
                 },
 
                 property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P2861: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "1215",
-                },
-
-                property: "P2861",
                 snaktype: "value",
               },
             ],
@@ -5952,6 +4670,22 @@ const lottaClaims = {
                 snaktype: "value",
               },
             ],
+            P3452: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q6375970",
+                    "numeric-id": 6375970,
+                  },
+                },
+
+                property: "P3452",
+                snaktype: "value",
+              },
+            ],
             P813: [
               {
                 datatype: "time",
@@ -5971,26 +4705,61 @@ const lottaClaims = {
                 snaktype: "value",
               },
             ],
-            P3452: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q6375970",
-                    "numeric-id": 6375970,
-                  },
-                },
-
-                property: "P3452",
-                snaktype: "value",
-              },
-            ],
           },
           "snaks-order": ["P813", "P3452", "P143"],
         },
       ],
+      type: "statement",
+    },
+  ],
+  P10832: [
+    {
+      id: "Q937$5a751d54-44ae-b82e-5416-c290a328bbaa",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "E39PBJkhFRgHDtmhvmC6JdfXh3",
+        },
+
+        property: "P10832",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P10861: [
+    {
+      id: "Q937$86f35674-4459-8de2-d7a3-b1ac6de8ae8a",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "013217540103.39",
+        },
+
+        property: "P10861",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P10899: [
+    {
+      id: "Q937$6a2b7d78-430c-1ed7-79b0-73293af31b58",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "882211",
+        },
+
+        property: "P10899",
+        snaktype: "value",
+      },
+      rank: "normal",
       type: "statement",
     },
   ],
@@ -6005,6 +4774,403 @@ const lottaClaims = {
         },
 
         property: "P109",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P10916: [
+    {
+      id: "Q937$de37924c-469d-5607-2ecf-458f0f97fa3f",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "Albert_Einstein",
+        },
+
+        property: "P10916",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P11120: [
+    {
+      id: "Q937$67929d93-4c92-0edd-65eb-e4a730ba190a",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "albert-einstein",
+        },
+
+        property: "P11120",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P11155: [
+    {
+      id: "Q937$709A0C9B-9E40-4C8D-8C42-73EACC67A06F",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "81943",
+        },
+
+        property: "P11155",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P11180: [
+    {
+      id: "Q937$6927D2FF-2E73-4595-8903-03037104504C",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "10590",
+        },
+
+        property: "P11180",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P11194: [
+    {
+      id: "Q937$2DDF78BD-28E7-4C08-B3E7-F57A01116229",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "people/albert-einstein",
+        },
+
+        property: "P11194",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P11196: [
+    {
+      id: "Q937$372FC8C7-27B2-45B8-96E1-5E6F2F5171D6",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "爱因斯坦",
+        },
+
+        property: "P11196",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P3740: [
+          {
+            datatype: "quantity",
+            datavalue: {
+              type: "quantity",
+              value: {
+                amount: "+247103",
+                unit: "1",
+              },
+            },
+
+            property: "P3740",
+            snaktype: "value",
+          },
+        ],
+        P585: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 11,
+                time: "+2023-03-20T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P585",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P3740", "P585"],
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P11239: [
+    {
+      id: "Q937$EE6BF046-A28B-4FA4-8900-F9E9F31D22FB",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "0008824347",
+        },
+
+        property: "P11239",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P11249: [
+    {
+      id: "Q937$0C404BCD-9CA7-4A27-98A3-59991DEA5B05",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "14115549",
+        },
+
+        property: "P11249",
+        snaktype: "value",
+      },
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P4656: [
+              {
+                datatype: "url",
+                datavalue: {
+                  type: "string",
+                  value:
+                    "https://www.wikidata.org/wiki/Wikidata:Property_proposal/KBR_Catalogue_ID_for_writers",
+                },
+
+                property: "P4656",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P4656"],
+        },
+      ],
+      type: "statement",
+    },
+  ],
+  P11386: [
+    {
+      id: "Q937$750C57A8-C600-4166-8FA3-593DE87E2245",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "albert-einstein",
+        },
+
+        property: "P11386",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P11394: [
+    {
+      id: "Q937$7f9996bd-418b-a088-d1ce-cc9b57be0351",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "aor/einstein/index",
+        },
+
+        property: "P11394",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P11496: [
+    {
+      id: "Q937$9C7521F8-F6BB-44A9-A38B-D4B63CF7F44E",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "1140563741718602752",
+        },
+
+        property: "P11496",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P1150: [
+    {
+      id: "Q937$48935E07-C567-4839-BF88-39C8734FAAFD",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "BF 5620",
+        },
+
+        property: "P1150",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P11514: [
+    {
+      id: "Q937$E39D6BE6-F743-4F62-88D1-DA76461A3A25",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "einshtein-al-bert-3ec899",
+        },
+
+        property: "P11514",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P1153: [
+    {
+      id: "Q937$b95d23c2-4002-b6c9-def1-1af0448ef2be",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "22988279600",
+        },
+
+        property: "P1153",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P11683: [
+    {
+      id: "Q937$51B7CB8E-74B8-47E9-9398-CB403560FD90",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "albert-ejnshtejn",
+        },
+
+        property: "P11683",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P11686: [
+    {
+      id: "Q937$599A7A02-8D71-47BC-9D6C-AD100862BA58",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "981058511756306706",
+        },
+
+        property: "P11686",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P11818: [
+    {
+      id: "Q937$157844C7-8B05-4D2A-946A-A37C30274CAA",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "esjiljveqvqreqe",
+        },
+
+        property: "P11818",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P1185: [
+    {
+      id: "Q937$f291e938-8bad-404d-a99b-5bc6d6828566",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "303260",
+        },
+
+        property: "P1185",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P1187: [
+    {
+      id: "Q937$B427CBB4-7940-4FB6-9A3F-A724845C8DB7",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "A028454",
+        },
+
+        property: "P1187",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P11870: [
+    {
+      id: "Q937$C6EA136F-9608-49C2-8119-FCB0EE7AAA1A",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "1404",
+        },
+
+        property: "P11870",
         snaktype: "value",
       },
       rank: "normal",
@@ -6047,10394 +5213,6 @@ const lottaClaims = {
         ],
       },
       "qualifiers-order": ["P518"],
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P140: [
-    {
-      id: "Q937$a7471c5f-03f0-4342-87a4-4c532f8db1ce",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q7066",
-            "numeric-id": 7066,
-          },
-        },
-
-        property: "P140",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P805: [
-          {
-            datatype: "wikibase-item",
-            datavalue: {
-              type: "wikibase-entityid",
-              value: {
-                "entity-type": "item",
-                id: "Q7311409",
-                "numeric-id": 7311409,
-              },
-            },
-
-            property: "P805",
-            snaktype: "value",
-          },
-        ],
-        P1310: [
-          {
-            datatype: "wikibase-item",
-            datavalue: {
-              type: "wikibase-entityid",
-              value: {
-                "entity-type": "item",
-                id: "Q937",
-                "numeric-id": 937,
-              },
-            },
-
-            property: "P1310",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P805", "P1310"],
-      rank: "deprecated",
-      references: [
-        {
-          snaks: {
-            P143: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q206855",
-                    "numeric-id": 206855,
-                  },
-                },
-
-                property: "P143",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2018-12-20T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P143", "P813"],
-        },
-      ],
-      type: "statement",
-    },
-    {
-      id: "Q937$0624c045-4731-1792-d116-ade653e359e3",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q288928",
-            "numeric-id": 288928,
-          },
-        },
-
-        property: "P140",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P3680: [
-          {
-            datatype: "wikibase-item",
-            datavalue: {
-              type: "wikibase-entityid",
-              value: {
-                "entity-type": "item",
-                id: "Q937",
-                "numeric-id": 937,
-              },
-            },
-
-            property: "P3680",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P3680"],
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P50: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q937",
-                    "numeric-id": 937,
-                  },
-                },
-
-                property: "P50",
-                snaktype: "value",
-              },
-            ],
-            P854: [
-              {
-                datatype: "url",
-                datavalue: {
-                  type: "string",
-                  value:
-                    "http://farm3.static.flickr.com/2687/4496554935_0b573db853_o.jpg",
-                },
-
-                property: "P854",
-                snaktype: "value",
-              },
-            ],
-            P1476: [
-              {
-                datatype: "monolingualtext",
-                datavalue: {
-                  type: "monolingualtext",
-                  value: {
-                    language: "en",
-                    text: "Letter to M. Berkowitz, 25 October 1950",
-                  },
-                },
-
-                property: "P1476",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P854", "P1476", "P50"],
-        },
-      ],
-      type: "statement",
-    },
-    {
-      id: "Q937$3dfedb25-4d1a-954c-3b1e-e2ce2f5c08a3",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q9268",
-            "numeric-id": 9268,
-          },
-        },
-
-        property: "P140",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P582: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 9,
-                time: "+1891-00-00T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P582",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P582"],
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P50: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q937",
-                    "numeric-id": 937,
-                  },
-                },
-
-                property: "P50",
-                snaktype: "value",
-              },
-            ],
-            P577: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 9,
-                    time: "+1949-00-00T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P577",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2019-03-07T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P854: [
-              {
-                datatype: "url",
-                datavalue: {
-                  type: "string",
-                  value:
-                    "https://archive.org/details/EinsteinAutobiography/page/n1",
-                },
-
-                property: "P854",
-                snaktype: "value",
-              },
-            ],
-            P1476: [
-              {
-                datatype: "monolingualtext",
-                datavalue: {
-                  type: "monolingualtext",
-                  value: {
-                    language: "en",
-                    text: "Albert Einstein: Notes for an Autobiography",
-                  },
-                },
-
-                property: "P1476",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P854", "P50", "P1476", "P577", "P813"],
-        },
-      ],
-      type: "statement",
-    },
-    {
-      id: "Q937$41e48a33-49ad-5d99-b8ac-eb093e1778b0",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q728455",
-            "numeric-id": 728455,
-          },
-        },
-
-        property: "P140",
-        snaktype: "value",
-      },
-      rank: "preferred",
-      references: [
-        {
-          snaks: {
-            P854: [
-              {
-                datatype: "url",
-                datavalue: {
-                  type: "string",
-                  value:
-                    "https://he.wikipedia.org/wiki/%D7%90%D7%9C%D7%91%D7%A8%D7%98_%D7%90%D7%99%D7%99%D7%A0%D7%A9%D7%98%D7%99%D7%99%D7%9F",
-                },
-
-                property: "P854",
-                snaktype: "value",
-              },
-            ],
-            P1476: [
-              {
-                datatype: "monolingualtext",
-                datavalue: {
-                  type: "monolingualtext",
-                  value: {
-                    language: "en",
-                    text: "Brian, Dennis (1996), Einstein: A Life, New York: John Wiley & Sons, p. 127, ISBN 0-471-11459-6",
-                  },
-                },
-
-                property: "P1476",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P854", "P1476"],
-        },
-      ],
-      type: "statement",
-    },
-  ],
-  P166: [
-    {
-      id: "q937$806C056A-5BBC-4BF5-A8E3-8100E68321AE",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q808424",
-            "numeric-id": 808424,
-          },
-        },
-
-        property: "P166",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P585: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 9,
-                time: "+1920-00-00T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P585",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P585"],
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "q937$67E83EE7-ED3E-44D3-9989-9792CEC63F63",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q38104",
-            "numeric-id": 38104,
-          },
-        },
-
-        property: "P166",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P585: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 9,
-                time: "+1921-00-00T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P585",
-            snaktype: "value",
-          },
-        ],
-        P2121: [
-          {
-            datatype: "quantity",
-            datavalue: {
-              type: "quantity",
-              value: {
-                amount: "+121573",
-                unit: "http://www.wikidata.org/entity/Q122922",
-              },
-            },
-
-            property: "P2121",
-            snaktype: "value",
-          },
-        ],
-        P6208: [
-          {
-            datatype: "monolingualtext",
-            datavalue: {
-              type: "monolingualtext",
-              value: {
-                language: "en",
-                text: "for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect",
-              },
-            },
-
-            property: "P6208",
-            snaktype: "value",
-          },
-          {
-            datatype: "monolingualtext",
-            datavalue: {
-              type: "monolingualtext",
-              value: {
-                language: "sv",
-                text: "för hans förtjänster om den teoretiska fysiken, särskilt hans upptäckt av lagen för den fotoelektriska effekten",
-              },
-            },
-
-            property: "P6208",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P585", "P2121", "P6208"],
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P123: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q1781959",
-                    "numeric-id": 1781959,
-                  },
-                },
-
-                property: "P123",
-                snaktype: "value",
-              },
-            ],
-            P407: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q1860",
-                    "numeric-id": 1860,
-                  },
-                },
-
-                property: "P407",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2015-08-03T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P854: [
-              {
-                datatype: "url",
-                datavalue: {
-                  type: "string",
-                  value:
-                    "http://www.nobelprize.org/nobel_prizes/physics/laureates/1921/index.html",
-                },
-
-                property: "P854",
-                snaktype: "value",
-              },
-            ],
-            P1476: [
-              {
-                datatype: "monolingualtext",
-                datavalue: {
-                  type: "monolingualtext",
-                  value: {
-                    language: "en",
-                    text: "The Nobel Prize in Physics 1921",
-                  },
-                },
-
-                property: "P1476",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P854", "P813", "P123", "P407", "P1476"],
-        },
-        {
-          snaks: {
-            P854: [
-              {
-                datatype: "url",
-                datavalue: {
-                  type: "string",
-                  value:
-                    "https://www.nobelprize.org/nobel_prizes/about/amounts/",
-                },
-
-                property: "P854",
-                snaktype: "value",
-              },
-            ],
-            P1476: [
-              {
-                datatype: "monolingualtext",
-                datavalue: {
-                  type: "monolingualtext",
-                  value: {
-                    language: "en",
-                    text: "The Nobel Prize amounts",
-                  },
-                },
-
-                property: "P1476",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P854", "P1476"],
-        },
-      ],
-      type: "statement",
-    },
-    {
-      id: "q937$734E469F-1D50-4391-A16E-0E9C2F478D6B",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q753072",
-            "numeric-id": 753072,
-          },
-        },
-
-        property: "P166",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P585: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 9,
-                time: "+1926-01-01T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P585",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P585"],
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "q937$F95226FF-1F1D-4A08-B320-9D03DBD6293B",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q1711648",
-            "numeric-id": 1711648,
-          },
-        },
-
-        property: "P166",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P585: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 9,
-                time: "+1931-01-01T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P585",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P585"],
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "q937$000BA6F7-4B85-47CA-ACF6-89590095E5E4",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q1419938",
-            "numeric-id": 1419938,
-          },
-        },
-
-        property: "P166",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P585: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 9,
-                time: "+1921-01-01T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P585",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P585"],
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "q937$70EC89C2-21BF-486F-A1A1-0EFC53D8F358",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q317038",
-            "numeric-id": 317038,
-          },
-        },
-
-        property: "P166",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P585: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 9,
-                time: "+1929-01-01T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P585",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P585"],
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "q937$4325B997-108F-4715-931E-005AC54CEAFB",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q3141777",
-            "numeric-id": 3141777,
-          },
-        },
-
-        property: "P166",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P585: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 9,
-                time: "+1935-01-01T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P585",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P585"],
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "q937$FDB4C682-E267-4D26-8668-72EC724BCAB4",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q28003",
-            "numeric-id": 28003,
-          },
-        },
-
-        property: "P166",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P585: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 9,
-                time: "+1925-01-01T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P585",
-            snaktype: "value",
-          },
-        ],
-        P6208: [
-          {
-            datatype: "monolingualtext",
-            datavalue: {
-              type: "monolingualtext",
-              value: {
-                language: "en",
-                text: "For his theory of relativity and his contributions to the quantum theory.",
-              },
-            },
-
-            property: "P6208",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P585", "P6208"],
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P123: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q123885",
-                    "numeric-id": 123885,
-                  },
-                },
-
-                property: "P123",
-                snaktype: "value",
-              },
-            ],
-            P407: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q1860",
-                    "numeric-id": 1860,
-                  },
-                },
-
-                property: "P407",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2018-12-30T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P854: [
-              {
-                datatype: "url",
-                datavalue: {
-                  type: "string",
-                  value:
-                    "https://docs.google.com/spreadsheets/d/1dsunM9ukGLgaW3HdG9cvJ_QKd7pWjGI0qi_fCb1ROD4/pubhtml?gid=1336391689&single=true",
-                },
-
-                property: "P854",
-                snaktype: "value",
-              },
-            ],
-            P1476: [
-              {
-                datatype: "monolingualtext",
-                datavalue: {
-                  type: "monolingualtext",
-                  value: {
-                    language: "en",
-                    text: "Award winners : Copley Medal",
-                  },
-                },
-
-                property: "P1476",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P854", "P1476", "P123", "P407", "P813"],
-        },
-      ],
-      type: "statement",
-    },
-    {
-      id: "Q937$73C644B6-22F2-4AE9-9C42-0C3AAA545004",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q15056034",
-            "numeric-id": 15056034,
-          },
-        },
-
-        property: "P166",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$F4BB8E43-FF0A-4FD9-8F49-D64E385A0C1C",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q1522873",
-            "numeric-id": 1522873,
-          },
-        },
-
-        property: "P166",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P585: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 9,
-                time: "+1934-01-01T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P585",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P585"],
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$e9700a38-4bc4-0be6-f494-09494f09bb04",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q25287226",
-            "numeric-id": 25287226,
-          },
-        },
-
-        property: "P166",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$24c2aaa7-4417-8642-9e39-61d25e275787",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q28861731",
-            "numeric-id": 28861731,
-          },
-        },
-
-        property: "P166",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P585: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 9,
-                time: "+1949-00-00T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P585",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P585"],
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2017-03-06T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P854: [
-              {
-                datatype: "url",
-                datavalue: {
-                  type: "string",
-                  value:
-                    "http://www3.huji.ac.il/htbin/hon_doc/doc_search.pl?search",
-                },
-
-                property: "P854",
-                snaktype: "value",
-              },
-            ],
-            P1476: [
-              {
-                datatype: "monolingualtext",
-                datavalue: {
-                  type: "monolingualtext",
-                  value: {
-                    language: "en",
-                    text: "The Hebrew University awards honorary degrees",
-                  },
-                },
-
-                property: "P1476",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P854", "P813", "P1476"],
-        },
-      ],
-      type: "statement",
-    },
-    {
-      id: "Q937$d2dcd59a-4529-1c8c-85b4-8b2ce182f8b2",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q42309226",
-            "numeric-id": 42309226,
-          },
-        },
-
-        property: "P166",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$2323D34A-12CA-41D9-8B48-A6AF21145A5B",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q50621171",
-            "numeric-id": 50621171,
-          },
-        },
-
-        property: "P166",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P585: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 9,
-                time: "+1923-00-00T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P585",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P585"],
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$7D740CE6-4FEC-4C62-9672-F5484E7426B7",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q14906020",
-            "numeric-id": 14906020,
-          },
-        },
-
-        property: "P166",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P585: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 11,
-                time: "+1921-05-05T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P585",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P585"],
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q111806251",
-                    "numeric-id": 111806251,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P304: [
-              {
-                datatype: "string",
-                datavalue: {
-                  type: "string",
-                  value: "110",
-                },
-
-                property: "P304",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P304"],
-        },
-      ],
-      type: "statement",
-    },
-    {
-      id: "Q937$2870b88e-4ae5-3ec2-52d0-4d20cc7f10c8",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q63315195",
-            "numeric-id": 63315195,
-          },
-        },
-
-        property: "P166",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P585: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 9,
-                time: "+1942-00-00T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P585",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P585"],
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$A307E274-1A71-4231-A723-127A27967F1B",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q121359767",
-            "numeric-id": 121359767,
-          },
-        },
-
-        property: "P166",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P585: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 9,
-                time: "+2009-00-00T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P585",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P585"],
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P854: [
-              {
-                datatype: "url",
-                datavalue: {
-                  type: "string",
-                  value:
-                    "https://www.carnegie.org/awards/great-immigrants/2009-great-immigrants/",
-                },
-
-                property: "P854",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P854"],
-        },
-      ],
-      type: "statement",
-    },
-    {
-      id: "Q937$8951b01c-43ef-2921-df1a-35540e924f43",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q156478",
-            "numeric-id": 156478,
-          },
-        },
-
-        property: "P166",
-        snaktype: "value",
-      },
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P143: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q58251",
-                    "numeric-id": 58251,
-                  },
-                },
-
-                property: "P143",
-                snaktype: "value",
-              },
-            ],
-            P4656: [
-              {
-                datatype: "url",
-                datavalue: {
-                  type: "string",
-                  value: "https://az.wikipedia.org/?oldid=7441143",
-                },
-
-                property: "P4656",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P143", "P4656"],
-        },
-      ],
-      type: "statement",
-    },
-    {
-      id: "Q937$1D4DBBB0-E023-4F6C-9B88-4C38DB0CC289",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q125121451",
-            "numeric-id": 125121451,
-          },
-        },
-
-        property: "P166",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P580: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 9,
-                time: "+1924-00-00T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P580",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P580"],
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P854: [
-              {
-                datatype: "url",
-                datavalue: {
-                  type: "string",
-                  value:
-                    "https://www.royalsociety.org.nz/who-we-are/our-people/our-fellows/all-honorary-fellows/",
-                },
-
-                property: "P854",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P854"],
-        },
-      ],
-      type: "statement",
-    },
-    {
-      id: "Q937$65aa4447-439c-0e46-3c61-717c07fa290e",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q126418747",
-            "numeric-id": 126418747,
-          },
-        },
-
-        property: "P166",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P585: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 9,
-                time: "+1928-00-00T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P585",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P585"],
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q105750302",
-                    "numeric-id": 105750302,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P304: [
-              {
-                datatype: "string",
-                datavalue: {
-                  type: "string",
-                  value: "90-95",
-                },
-
-                property: "P304",
-                snaktype: "value",
-              },
-            ],
-            P433: [
-              {
-                datatype: "string",
-                datavalue: {
-                  type: "string",
-                  value: "1",
-                },
-
-                property: "P433",
-                snaktype: "value",
-              },
-            ],
-            P478: [
-              {
-                datatype: "string",
-                datavalue: {
-                  type: "string",
-                  value: "9",
-                },
-
-                property: "P478",
-                snaktype: "value",
-              },
-            ],
-            P577: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 9,
-                    time: "+1934-00-00T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P577",
-                snaktype: "value",
-              },
-            ],
-            P854: [
-              {
-                datatype: "url",
-                datavalue: {
-                  type: "string",
-                  value:
-                    "https://gallica.bnf.fr/ark:/12148/bpt6k93885z/f95.item",
-                },
-
-                property: "P854",
-                snaktype: "value",
-              },
-            ],
-            P1476: [
-              {
-                datatype: "monolingualtext",
-                datavalue: {
-                  type: "monolingualtext",
-                  value: {
-                    language: "fr",
-                    text: "Liste des docteurs honoris causa de l'Université de Paris de 1918 à 1933 inclus",
-                  },
-                },
-
-                property: "P1476",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": [
-            "P248",
-            "P577",
-            "P1476",
-            "P304",
-            "P478",
-            "P433",
-            "P854",
-          ],
-        },
-      ],
-      type: "statement",
-    },
-    {
-      id: "Q937$69c0e08d-46f8-6373-d58d-9b96315999f7",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q14705795",
-            "numeric-id": 14705795,
-          },
-        },
-
-        property: "P166",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P585: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 9,
-                time: "+2008-00-00T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P585",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P585"],
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P854: [
-              {
-                datatype: "url",
-                datavalue: {
-                  type: "string",
-                  value:
-                    "https://njhalloffame.org/hall-of-famers/2008-inductees/albert-einstein/",
-                },
-
-                property: "P854",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P854"],
-        },
-      ],
-      type: "statement",
-    },
-  ],
-  P172: [
-    {
-      id: "Q937$4AC1D270-BB85-42E6-9F2C-AF1A0A283399",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q7325",
-            "numeric-id": 7325,
-          },
-        },
-
-        property: "P172",
-        snaktype: "value",
-      },
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P143: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q206855",
-                    "numeric-id": 206855,
-                  },
-                },
-
-                property: "P143",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2018-12-20T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P143", "P813"],
-        },
-      ],
-      type: "statement",
-    },
-  ],
-  P184: [
-    {
-      id: "Q937$99734d53-47c3-cc4b-580e-784486517d39",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q4175282",
-            "numeric-id": 4175282,
-          },
-        },
-
-        property: "P184",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P585: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 9,
-                time: "+1905-00-00T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P585",
-            snaktype: "value",
-          },
-        ],
-        P3831: [
-          {
-            datatype: "wikibase-item",
-            datavalue: {
-              type: "wikibase-entityid",
-              value: {
-                "entity-type": "item",
-                id: "Q26236695",
-                "numeric-id": 26236695,
-              },
-            },
-
-            property: "P3831",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P3831", "P585"],
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q829984",
-                    "numeric-id": 829984,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P549: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "53269",
-                },
-
-                property: "P549",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2019-12-15T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P1476: [
-              {
-                datatype: "monolingualtext",
-                datavalue: {
-                  type: "monolingualtext",
-                  value: {
-                    language: "de",
-                    text: "Eine neue Bestimmung der MoleküldimensionenMathematics Subject Classification: 70—Mechanics of particles and systems",
-                  },
-                },
-
-                property: "P1476",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P549", "P813", "P1476"],
-        },
-      ],
-      type: "statement",
-    },
-    {
-      id: "Q937$e3d28962-43ab-c2d8-e4d6-8284b893dff9",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q97154",
-            "numeric-id": 97154,
-          },
-        },
-
-        property: "P184",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P3831: [
-          {
-            datatype: "wikibase-item",
-            datavalue: {
-              type: "wikibase-entityid",
-              value: {
-                "entity-type": "item",
-                id: "Q26236691",
-                "numeric-id": 26236691,
-              },
-            },
-
-            property: "P3831",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P3831"],
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q829984",
-                    "numeric-id": 829984,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P549: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "53269",
-                },
-
-                property: "P549",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2019-12-15T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P1476: [
-              {
-                datatype: "monolingualtext",
-                datavalue: {
-                  type: "monolingualtext",
-                  value: {
-                    language: "de",
-                    text: "Eine neue Bestimmung der MoleküldimensionenMathematics Subject Classification: 70—Mechanics of particles and systems",
-                  },
-                },
-
-                property: "P1476",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P549", "P813", "P1476"],
-        },
-      ],
-      type: "statement",
-    },
-    {
-      id: "Q937$61A00029-3304-45D0-AF63-38B5696AAAF5",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q116635",
-            "numeric-id": 116635,
-          },
-        },
-
-        property: "P184",
-        snaktype: "value",
-      },
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P3452: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q116635",
-                    "numeric-id": 116635,
-                  },
-                },
-
-                property: "P3452",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P3452"],
-        },
-      ],
-      type: "statement",
-    },
-  ],
-  P185: [
-    {
-      id: "Q937$69D2AFE4-D430-4B01-8138-E38CF21B928D",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q153238",
-            "numeric-id": 153238,
-          },
-        },
-
-        property: "P185",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P213: [
-    {
-      id: "Q937$013D02A7-5EDB-4F4F-B73E-CA4DC7BD4C78",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "000000012281955X",
-        },
-
-        property: "P213",
-        snaktype: "value",
-      },
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P214: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "75121530",
-                },
-
-                property: "P214",
-                snaktype: "value",
-              },
-            ],
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q54919",
-                    "numeric-id": 54919,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P854: [
-              {
-                datatype: "url",
-                datavalue: {
-                  type: "string",
-                  value: "https://viaf.org/hosted/xa/2367/",
-                },
-
-                property: "P854",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P214", "P854"],
-        },
-      ],
-      type: "statement",
-    },
-  ],
-  P214: [
-    {
-      id: "q937$B7F821E9-5E5C-4D51-A153-4CA8A47B6941",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "75121530",
-        },
-
-        property: "P214",
-        snaktype: "value",
-      },
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P143: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q328",
-                    "numeric-id": 328,
-                  },
-                },
-
-                property: "P143",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P143"],
-        },
-        {
-          snaks: {
-            P143: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q48183",
-                    "numeric-id": 48183,
-                  },
-                },
-
-                property: "P143",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P143"],
-        },
-        {
-          snaks: {
-            P143: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q8447",
-                    "numeric-id": 8447,
-                  },
-                },
-
-                property: "P143",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P143"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q77541206",
-                    "numeric-id": 77541206,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2021-02-13T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P7796: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "3852",
-                },
-
-                property: "P7796",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P7796", "P813"],
-        },
-      ],
-      type: "statement",
-    },
-  ],
-  P227: [
-    {
-      id: "Q937$5780ABCF-2F30-4613-B043-1FB2C8482C7D",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "118529579",
-        },
-
-        property: "P227",
-        snaktype: "value",
-      },
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P143: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q15156406",
-                    "numeric-id": 15156406,
-                  },
-                },
-
-                property: "P143",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P143"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q77541206",
-                    "numeric-id": 77541206,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2021-02-13T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P7796: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "3852",
-                },
-
-                property: "P7796",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P7796", "P813"],
-        },
-      ],
-      type: "statement",
-    },
-  ],
-  P244: [
-    {
-      id: "q937$9BA2796D-01EE-4037-9910-029BA945CABA",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "n79022889",
-        },
-
-        property: "P244",
-        snaktype: "value",
-      },
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P143: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q328",
-                    "numeric-id": 328,
-                  },
-                },
-
-                property: "P143",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P143"],
-        },
-        {
-          snaks: {
-            P143: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q48183",
-                    "numeric-id": 48183,
-                  },
-                },
-
-                property: "P143",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P143"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q77541206",
-                    "numeric-id": 77541206,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2021-02-13T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P7796: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "3852",
-                },
-
-                property: "P7796",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P7796", "P813"],
-        },
-      ],
-      type: "statement",
-    },
-  ],
-  P245: [
-    {
-      id: "Q937$F735494D-7107-40C3-B9DE-75F9595E70BB",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "500240971",
-        },
-
-        property: "P245",
-        snaktype: "value",
-      },
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P143: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q328",
-                    "numeric-id": 328,
-                  },
-                },
-
-                property: "P143",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P143"],
-        },
-      ],
-      type: "statement",
-    },
-  ],
-  P268: [
-    {
-      id: "q937$D0E13400-F973-43AA-BD39-466EC0C257FF",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "119016075",
-        },
-
-        property: "P268",
-        snaktype: "value",
-      },
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P143: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q8447",
-                    "numeric-id": 8447,
-                  },
-                },
-
-                property: "P143",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P143"],
-        },
-      ],
-      type: "statement",
-    },
-  ],
-  P269: [
-    {
-      id: "q937$14E9B302-D7A0-488D-BB48-DE1A285827A6",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "026849186",
-        },
-
-        property: "P269",
-        snaktype: "value",
-      },
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P143: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q8447",
-                    "numeric-id": 8447,
-                  },
-                },
-
-                property: "P143",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P143"],
-        },
-      ],
-      type: "statement",
-    },
-  ],
-  P270: [
-    {
-      id: "Q937$EC244A6E-7F96-46D3-A0A1-0010EB63DDF7",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "n2004370668",
-        },
-
-        property: "P270",
-        snaktype: "value",
-      },
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P143: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q30239",
-                    "numeric-id": 30239,
-                  },
-                },
-
-                property: "P143",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P143"],
-        },
-      ],
-      type: "statement",
-    },
-  ],
-  P271: [
-    {
-      id: "Q937$D1CF45C9-1A07-4B0A-B76D-D730D5CBD3D6",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "DA00708434",
-        },
-
-        property: "P271",
-        snaktype: "value",
-      },
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q115920372",
-                    "numeric-id": 115920372,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2023-02-17T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P11496: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "1140563741718602752",
-                },
-
-                property: "P11496",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P11496", "P813"],
-        },
-      ],
-      type: "statement",
-    },
-  ],
-  P345: [
-    {
-      id: "Q937$aca1fb0d-4a60-93ee-95d9-f59f0f376b19",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "nm0251868",
-        },
-
-        property: "P345",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P349: [
-    {
-      id: "q937$F926A784-7C6D-48EB-A49B-E096AEC46FCD",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "00438728",
-        },
-
-        property: "P349",
-        snaktype: "value",
-      },
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P143: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q48183",
-                    "numeric-id": 48183,
-                  },
-                },
-
-                property: "P143",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P143"],
-        },
-      ],
-      type: "statement",
-    },
-  ],
-  P373: [
-    {
-      id: "q937$2F332903-133D-4CA0-AD24-8B4292C2BF89",
-      mainsnak: {
-        datatype: "string",
-        datavalue: {
-          type: "string",
-          value: "Albert Einstein",
-        },
-
-        property: "P373",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P396: [
-    {
-      id: "Q937$A6CF3E97-B780-449A-92D9-7550A687AFD4",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "CFIV035853",
-        },
-
-        property: "P396",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P1810: [
-          {
-            datatype: "string",
-            datavalue: {
-              type: "string",
-              value: "Einstein, Albert",
-            },
-
-            property: "P1810",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P1810"],
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q77541206",
-                    "numeric-id": 77541206,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2021-02-13T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P7796: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "3852",
-                },
-
-                property: "P7796",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P7796", "P813"],
-        },
-      ],
-      type: "statement",
-    },
-  ],
-  P409: [
-    {
-      id: "Q937$A42E665D-E820-42D7-BEF1-7E06A8F4F7AA",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "36582360",
-        },
-
-        property: "P409",
-        snaktype: "value",
-      },
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P143: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q328",
-                    "numeric-id": 328,
-                  },
-                },
-
-                property: "P143",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P143"],
-        },
-      ],
-      type: "statement",
-    },
-  ],
-  P434: [
-    {
-      id: "q937$E0DFBCB9-E69E-4469-A420-60B33E530DC1",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "c98c325e-7277-46e8-8b44-e3517f3e041a",
-        },
-
-        property: "P434",
-        snaktype: "value",
-      },
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q14005",
-                    "numeric-id": 14005,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248"],
-        },
-      ],
-      type: "statement",
-    },
-  ],
-  P443: [
-    {
-      id: "Q937$0aeda9f5-4815-84b9-3711-37cbc130e726",
-      mainsnak: {
-        datatype: "commonsMedia",
-        datavalue: {
-          type: "string",
-          value: "De-Albert Einstein-Pronuciation.ogg",
-        },
-
-        property: "P443",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P407: [
-          {
-            datatype: "wikibase-item",
-            datavalue: {
-              type: "wikibase-entityid",
-              value: {
-                "entity-type": "item",
-                id: "Q188",
-                "numeric-id": 188,
-              },
-            },
-
-            property: "P407",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P407"],
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$a7c5b8f0-a9e4-410b-adb4-d901b227a203",
-      mainsnak: {
-        datatype: "commonsMedia",
-        datavalue: {
-          type: "string",
-          value: "LL-Q34239 (kok)-Fredericknoronha-Albert Einstein.wav",
-        },
-
-        property: "P443",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P407: [
-          {
-            datatype: "wikibase-item",
-            datavalue: {
-              type: "wikibase-entityid",
-              value: {
-                "entity-type": "item",
-                id: "Q34239",
-                "numeric-id": 34239,
-              },
-            },
-
-            property: "P407",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P407"],
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q60024037",
-                    "numeric-id": 60024037,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P10369: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "Q700784",
-                },
-
-                property: "P10369",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P10369"],
-        },
-      ],
-      type: "statement",
-    },
-  ],
-  P463: [
-    {
-      id: "q937$642B1EBB-AED3-455E-9A3C-B4D8B2664031",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q123885",
-            "numeric-id": 123885,
-          },
-        },
-
-        property: "P463",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$7451E5A0-6E6E-4A82-848B-CE55019A96CD",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q329464",
-            "numeric-id": 329464,
-          },
-        },
-
-        property: "P463",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$882DAFA0-5B20-4620-A4DF-B51A0C556ADF",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q543804",
-            "numeric-id": 543804,
-          },
-        },
-
-        property: "P463",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$552717B0-4610-4F96-A70F-56354F68ED41",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q338432",
-            "numeric-id": 338432,
-          },
-        },
-
-        property: "P463",
-        snaktype: "value",
-      },
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P143: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q11920",
-                    "numeric-id": 11920,
-                  },
-                },
-
-                property: "P143",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P143"],
-        },
-      ],
-      type: "statement",
-    },
-    {
-      id: "Q937$78190F69-14B5-4EF5-86AA-3EE6990850F0",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q466089",
-            "numeric-id": 466089,
-          },
-        },
-
-        property: "P463",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$023CD9AD-8957-4662-A45F-40D69693D7BA",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q684415",
-            "numeric-id": 684415,
-          },
-        },
-
-        property: "P463",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$D3C196C2-1C80-4FDB-BBC1-E3105C9C811F",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q414188",
-            "numeric-id": 414188,
-          },
-        },
-
-        property: "P463",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$0C556605-6B7E-4184-83EC-E95289F6D62A",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q2370801",
-            "numeric-id": 2370801,
-          },
-        },
-
-        property: "P463",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$1E3374B7-2511-4A2B-8791-8088B171C0DC",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q188771",
-            "numeric-id": 188771,
-          },
-        },
-
-        property: "P463",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$613DBC15-8BF9-4C25-B5E1-B12F510C4BF3",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q191583",
-            "numeric-id": 191583,
-          },
-        },
-
-        property: "P463",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$08567CBB-2DE3-4CCD-B10A-72E04E7AA468",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q253439",
-            "numeric-id": 253439,
-          },
-        },
-
-        property: "P463",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$74DCC2BF-C874-4BE6-8A6E-5A1A65279ED6",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q463303",
-            "numeric-id": 463303,
-          },
-        },
-
-        property: "P463",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$F1E10DFB-1C54-474A-BB4C-FEC6FD2DFABF",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q4397938",
-            "numeric-id": 4397938,
-          },
-        },
-
-        property: "P463",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P580: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 9,
-                time: "+1922-00-00T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P580",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P580"],
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$D0DAD5E7-6E01-4F03-928B-8684D26364DA",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q2095524",
-            "numeric-id": 2095524,
-          },
-        },
-
-        property: "P463",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$57ABD98B-0DD1-40D6-9B21-A41B86AC9ABB",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q3603946",
-            "numeric-id": 3603946,
-          },
-        },
-
-        property: "P463",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$2a97ea20-4b54-a2f7-b2aa-682efb715bc2",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q2497232",
-            "numeric-id": 2497232,
-          },
-        },
-
-        property: "P463",
-        snaktype: "value",
-      },
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P854: [
-              {
-                datatype: "url",
-                datavalue: {
-                  type: "string",
-                  value:
-                    "http://www.dichistoriasaude.coc.fiocruz.br/iah/pt/verbetes/acadbrci.htm",
-                },
-
-                property: "P854",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P854"],
-        },
-        {
-          snaks: {
-            P854: [
-              {
-                datatype: "url",
-                datavalue: {
-                  type: "string",
-                  value: "http://www.abc.org.br/membro/albert-einstein/",
-                },
-
-                property: "P854",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P854"],
-        },
-      ],
-      type: "statement",
-    },
-    {
-      id: "Q937$d4cf1f6d-4a4b-992e-4d16-e7db8976dc98",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q270794",
-            "numeric-id": 270794,
-          },
-        },
-
-        property: "P463",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P580: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 9,
-                time: "+1922-00-00T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P580",
-            snaktype: "value",
-          },
-        ],
-        P2868: [
-          {
-            datatype: "wikibase-item",
-            datavalue: {
-              type: "wikibase-entityid",
-              value: {
-                "entity-type": "item",
-                id: "Q61664704",
-                "numeric-id": 61664704,
-              },
-            },
-
-            property: "P2868",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P580", "P2868"],
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$b304cb4c-4594-d3dd-6d10-22602a5238c5",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q270794",
-            "numeric-id": 270794,
-          },
-        },
-
-        property: "P463",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P580: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 9,
-                time: "+1942-00-00T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P580",
-            snaktype: "value",
-          },
-        ],
-        P2868: [
-          {
-            datatype: "wikibase-item",
-            datavalue: {
-              type: "wikibase-entityid",
-              value: {
-                "entity-type": "item",
-                id: "Q63315195",
-                "numeric-id": 63315195,
-              },
-            },
-
-            property: "P2868",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P580", "P2868"],
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$fb68e164-4300-788d-b577-2b38bc419789",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q2945826",
-            "numeric-id": 2945826,
-          },
-        },
-
-        property: "P463",
-        snaktype: "value",
-      },
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P143: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q8447",
-                    "numeric-id": 8447,
-                  },
-                },
-
-                property: "P143",
-                snaktype: "value",
-              },
-            ],
-            P4656: [
-              {
-                datatype: "url",
-                datavalue: {
-                  type: "string",
-                  value:
-                    "https://fr.wikipedia.org/w/index.php?title=Centre_international_de_synth%C3%A8se&oldid=159820946",
-                },
-
-                property: "P4656",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P143", "P4656"],
-        },
-      ],
-      type: "statement",
-    },
-  ],
-  P485: [
-    {
-      id: "q937$bfa38bb1-4a58-28da-4662-7123ebe46b5e",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q675617",
-            "numeric-id": 675617,
-          },
-        },
-
-        property: "P485",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$02527dba-46c3-5a8e-076f-102b61f64b7c",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q22095877",
-            "numeric-id": 22095877,
-          },
-        },
-
-        property: "P485",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P973: [
-          {
-            datatype: "url",
-            datavalue: {
-              type: "string",
-              value: "http://www.albert-einstein.org/.index3.html",
-            },
-
-            property: "P973",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P973"],
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$2891A7AE-59CC-4516-B92B-8D2BB8CFA6F3",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q14708020",
-            "numeric-id": 14708020,
-          },
-        },
-
-        property: "P485",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P217: [
-          {
-            datatype: "string",
-            datavalue: {
-              type: "string",
-              value: "3048-z",
-            },
-
-            property: "P217",
-            snaktype: "value",
-          },
-        ],
-        P973: [
-          {
-            datatype: "url",
-            datavalue: {
-              type: "string",
-              value: "https://finding-aids.lib.unc.edu/03048/",
-            },
-
-            property: "P973",
-            snaktype: "value",
-          },
-        ],
-        P1810: [
-          {
-            datatype: "string",
-            datavalue: {
-              type: "string",
-              value: "Albert Einstein Letter, undated.",
-            },
-
-            property: "P1810",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P973", "P217", "P1810"],
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P854: [
-              {
-                datatype: "url",
-                datavalue: {
-                  type: "string",
-                  value: "https://finding-aids.lib.unc.edu/03048/",
-                },
-
-                property: "P854",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P854"],
-        },
-      ],
-      type: "statement",
-    },
-    {
-      id: "Q937$F3A2D721-A412-416F-8307-9B04F5D0EFCA",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q39934978",
-            "numeric-id": 39934978,
-          },
-        },
-
-        property: "P485",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P217: [
-          {
-            datatype: "string",
-            datavalue: {
-              type: "string",
-              value: "Sammelbestand_Einstein_Albert",
-            },
-
-            property: "P217",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P217"],
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2025-01-15T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P854: [
-              {
-                datatype: "url",
-                datavalue: {
-                  type: "string",
-                  value:
-                    "https://vls.hsa.ethz.ch/client/link/de/archiv/einheit/b9b4178f95254672b981174aaee8f06b",
-                },
-
-                property: "P854",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P854", "P813"],
-        },
-      ],
-      type: "statement",
-    },
-  ],
-  P496: [
-    {
-      id: "Q937$749b20a0-45f3-363d-fb0b-29356b9b6da8",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "0000-0001-9183-9538",
-        },
-
-        property: "P496",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P509: [
-    {
-      id: "Q937$9550FD9C-92DF-4276-9194-471D4CF613A5",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q2256736",
-            "numeric-id": 2256736,
-          },
-        },
-
-        property: "P509",
-        snaktype: "value",
-      },
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P143: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q328",
-                    "numeric-id": 328,
-                  },
-                },
-
-                property: "P143",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P143"],
-        },
-      ],
-      type: "statement",
-    },
-  ],
-  P512: [
-    {
-      id: "Q937$e400e96b-4501-7967-8e75-bf98d25b8daf",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q19693354",
-            "numeric-id": 19693354,
-          },
-        },
-
-        property: "P512",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P585: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 9,
-                time: "+1906-00-00T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P585",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P585"],
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P143: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q206855",
-                    "numeric-id": 206855,
-                  },
-                },
-
-                property: "P143",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P143"],
-        },
-      ],
-      type: "statement",
-    },
-  ],
-  P535: [
-    {
-      id: "Q937$21ffa00d-486e-5d1a-43bf-afcb604a6057",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "314",
-        },
-
-        property: "P535",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P549: [
-    {
-      id: "q937$74D92D81-EE56-4941-AA45-C85494191269",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "53269",
-        },
-
-        property: "P549",
-        snaktype: "value",
-      },
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P143: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q11920",
-                    "numeric-id": 11920,
-                  },
-                },
-
-                property: "P143",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P143"],
-        },
-      ],
-      type: "statement",
-    },
-  ],
-  P551: [
-    {
-      id: "Q937$2bcc3000-4b64-0562-be8c-ad8225e41752",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q1309294",
-            "numeric-id": 1309294,
-          },
-        },
-
-        property: "P551",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P131: [
-          {
-            datatype: "wikibase-item",
-            datavalue: {
-              type: "wikibase-entityid",
-              value: {
-                "entity-type": "item",
-                id: "Q625403",
-                "numeric-id": 625403,
-              },
-            },
-
-            property: "P131",
-            snaktype: "value",
-          },
-        ],
-        P580: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 9,
-                time: "+1929-00-00T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P580",
-            snaktype: "value",
-          },
-        ],
-        P582: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 9,
-                time: "+1932-00-00T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P582",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P580", "P582", "P131"],
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P143: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q8447",
-                    "numeric-id": 8447,
-                  },
-                },
-
-                property: "P143",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P143"],
-        },
-      ],
-      type: "statement",
-    },
-    {
-      id: "Q937$576078b8-437c-7b9e-ad1b-4ac16439d20a",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q390003",
-            "numeric-id": 390003,
-          },
-        },
-
-        property: "P551",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P131: [
-          {
-            datatype: "wikibase-item",
-            datavalue: {
-              type: "wikibase-entityid",
-              value: {
-                "entity-type": "item",
-                id: "Q70",
-                "numeric-id": 70,
-              },
-            },
-
-            property: "P131",
-            snaktype: "value",
-          },
-        ],
-        P580: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 10,
-                time: "+1903-10-00T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P580",
-            snaktype: "value",
-          },
-        ],
-        P582: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 10,
-                time: "+1905-05-00T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P582",
-            snaktype: "value",
-          },
-        ],
-        P669: [
-          {
-            datatype: "wikibase-item",
-            datavalue: {
-              type: "wikibase-entityid",
-              value: {
-                "entity-type": "item",
-                id: "Q680298",
-                "numeric-id": 680298,
-              },
-            },
-
-            property: "P669",
-            snaktype: "value",
-          },
-        ],
-        P670: [
-          {
-            datatype: "string",
-            datavalue: {
-              type: "string",
-              value: "49",
-            },
-
-            property: "P670",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P131", "P580", "P582", "P669", "P670"],
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$3B8DA1A3-81A3-4A42-AA52-B83DE77FF254",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q1726",
-            "numeric-id": 1726,
-          },
-        },
-
-        property: "P551",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$68B67BB3-2268-4CE5-B968-0F2AAC9272A7",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q138518",
-            "numeric-id": 138518,
-          },
-        },
-
-        property: "P551",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$891EA76A-93E7-49FC-A9D1-2784E999DA72",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q942842",
-            "numeric-id": 942842,
-          },
-        },
-
-        property: "P551",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P580: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 9,
-                time: "+1911-01-01T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P580",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P580"],
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q104698881",
-                    "numeric-id": 104698881,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2021-01-06T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P854: [
-              {
-                datatype: "url",
-                datavalue: {
-                  type: "string",
-                  value:
-                    "http://digi.nacr.cz/prihlasky2/index.php?action=link&ref=czarch:CZ-100000010:874&karton=3&folium=290",
-                },
-
-                property: "P854",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P854", "P813"],
-        },
-      ],
-      type: "statement",
-    },
-    {
-      id: "Q937$61f1859b-4722-e623-53dd-8ad8b58836d8",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q9009",
-            "numeric-id": 9009,
-          },
-        },
-
-        property: "P551",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P580: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 10,
-                time: "+1901-09-00T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P580",
-            snaktype: "value",
-          },
-        ],
-        P582: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 10,
-                time: "+1902-01-00T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P582",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P580", "P582"],
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P569: [
-    {
-      id: "q937$2ecb21c3-4db1-54e8-27c4-a8a40541930c",
-      mainsnak: {
-        datatype: "time",
-        datavalue: {
-          type: "time",
-          value: {
-            after: 0,
-            before: 0,
-            calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-            precision: 11,
-            time: "+1879-03-14T00:00:00Z",
-            timezone: 0,
-          },
-        },
-
-        property: "P569",
-        snaktype: "value",
-      },
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q36578",
-                    "numeric-id": 36578,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2014-04-09T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P813"],
-        },
-        {
-          snaks: {
-            P854: [
-              {
-                datatype: "url",
-                datavalue: {
-                  type: "string",
-                  value: "https://www.ige.ch/de/ueber-uns/einstein.html",
-                },
-
-                property: "P854",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P854"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q19938912",
-                    "numeric-id": 19938912,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P268: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "119016075",
-                },
-
-                property: "P268",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2015-10-10T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P268", "P813"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q547473",
-                    "numeric-id": 547473,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2017-08-22T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P813"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q29861311",
-                    "numeric-id": 29861311,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2017-10-09T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P1810: [
-              {
-                datatype: "string",
-                datavalue: {
-                  type: "string",
-                  value: "Albert Einstein",
-                },
-
-                property: "P1810",
-                snaktype: "value",
-              },
-            ],
-            P3430: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "w69k499r",
-                },
-
-                property: "P3430",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P3430", "P1810", "P813"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q1165538",
-                    "numeric-id": 1165538,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2017-10-09T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P1810: [
-              {
-                datatype: "string",
-                datavalue: {
-                  type: "string",
-                  value: "Albert Einstein",
-                },
-
-                property: "P1810",
-                snaktype: "value",
-              },
-            ],
-            P3222: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "albert-einstein",
-                },
-
-                property: "P3222",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P3222", "P1810", "P813"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q63056",
-                    "numeric-id": 63056,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P535: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "314",
-                },
-
-                property: "P535",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2017-10-09T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P1810: [
-              {
-                datatype: "string",
-                datavalue: {
-                  type: "string",
-                  value: "Albert Einstein",
-                },
-
-                property: "P1810",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P535", "P1810", "P813"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q2629164",
-                    "numeric-id": 2629164,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2017-10-09T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P1233: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "99141",
-                },
-
-                property: "P1233",
-                snaktype: "value",
-              },
-            ],
-            P1810: [
-              {
-                datatype: "string",
-                datavalue: {
-                  type: "string",
-                  value: "Albert Einstein",
-                },
-
-                property: "P1810",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P1233", "P1810", "P813"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q15706812",
-                    "numeric-id": 15706812,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2017-10-09T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P1810: [
-              {
-                datatype: "string",
-                datavalue: {
-                  type: "string",
-                  value: "Albert Einstein",
-                },
-
-                property: "P1810",
-                snaktype: "value",
-              },
-            ],
-            P2639: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "4533e35f16964c939b82033bb6259e32",
-                },
-
-                property: "P2639",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P2639", "P1810", "P813"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q2728291",
-                    "numeric-id": 2728291,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2017-10-09T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P1810: [
-              {
-                datatype: "string",
-                datavalue: {
-                  type: "string",
-                  value: "Albert Einstein",
-                },
-
-                property: "P1810",
-                snaktype: "value",
-              },
-            ],
-            P6234: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "albert-einstein",
-                },
-
-                property: "P6234",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P6234", "P1810", "P813"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q6023365",
-                    "numeric-id": 6023365,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2017-10-09T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P863: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "thinker/2958",
-                },
-
-                property: "P863",
-                snaktype: "value",
-              },
-            ],
-            P1810: [
-              {
-                datatype: "string",
-                datavalue: {
-                  type: "string",
-                  value: "Albert Einstein",
-                },
-
-                property: "P1810",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P863", "P1810", "P813"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q21491701",
-                    "numeric-id": 21491701,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2017-10-09T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P1810: [
-              {
-                datatype: "string",
-                datavalue: {
-                  type: "string",
-                  value: "Albert Einstein",
-                },
-
-                property: "P1810",
-                snaktype: "value",
-              },
-            ],
-            P2454: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "PE00000116",
-                },
-
-                property: "P2454",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P2454", "P1810", "P813"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q23667505",
-                    "numeric-id": 23667505,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2019-06-19T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P2861: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "1215",
-                },
-
-                property: "P2861",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P2861", "P813"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q237227",
-                    "numeric-id": 237227,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2017-10-09T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P1810: [
-              {
-                datatype: "string",
-                datavalue: {
-                  type: "string",
-                  value: "Albert Einstein",
-                },
-
-                property: "P1810",
-                snaktype: "value",
-              },
-            ],
-            P5019: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "einstein-albert",
-                },
-
-                property: "P5019",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P5019", "P1810", "P813"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q746368",
-                    "numeric-id": 746368,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P1810: [
-              {
-                datatype: "string",
-                datavalue: {
-                  type: "string",
-                  value: "Albert Einstein",
-                },
-
-                property: "P1810",
-                snaktype: "value",
-              },
-            ],
-            P4342: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "Albert_Einstein",
-                },
-
-                property: "P4342",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P4342", "P1810"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q2664168",
-                    "numeric-id": 2664168,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P1296: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "0023623",
-                },
-
-                property: "P1296",
-                snaktype: "value",
-              },
-            ],
-            P1810: [
-              {
-                datatype: "string",
-                datavalue: {
-                  type: "string",
-                  value: "Albert Einstein",
-                },
-
-                property: "P1810",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P1296", "P1810"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q98769076",
-                    "numeric-id": 98769076,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P1810: [
-              {
-                datatype: "string",
-                datavalue: {
-                  type: "string",
-                  value: "Albert Einstein",
-                },
-
-                property: "P1810",
-                snaktype: "value",
-              },
-            ],
-            P8094: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "einsteina",
-                },
-
-                property: "P8094",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P8094", "P1810"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q83365652",
-                    "numeric-id": 83365652,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P1810: [
-              {
-                datatype: "string",
-                datavalue: {
-                  type: "string",
-                  value: "Albert Einstein",
-                },
-
-                property: "P1810",
-                snaktype: "value",
-              },
-            ],
-            P7929: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "p=albert;n=einstein",
-                },
-
-                property: "P7929",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P7929", "P1810"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q1307356",
-                    "numeric-id": 1307356,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P1810: [
-              {
-                datatype: "string",
-                datavalue: {
-                  type: "string",
-                  value: "Albert Einstein",
-                },
-
-                property: "P1810",
-                snaktype: "value",
-              },
-            ],
-            P8854: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "18467",
-                },
-
-                property: "P8854",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P8854", "P1810"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q3407324",
-                    "numeric-id": 3407324,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P1810: [
-              {
-                datatype: "string",
-                datavalue: {
-                  type: "string",
-                  value: "Albert Einstein",
-                },
-
-                property: "P1810",
-                snaktype: "value",
-              },
-            ],
-            P8349: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "56686",
-                },
-
-                property: "P8349",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P8349", "P1810"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q77541206",
-                    "numeric-id": 77541206,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2021-02-13T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P7796: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "3852",
-                },
-
-                property: "P7796",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P7796", "P813"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q107456632",
-                    "numeric-id": 107456632,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2021-04-01T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P6844: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "16734",
-                },
-
-                property: "P6844",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P6844", "P813"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q55740543",
-                    "numeric-id": 55740543,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P1476: [
-              {
-                datatype: "monolingualtext",
-                datavalue: {
-                  type: "monolingualtext",
-                  value: {
-                    language: "fr",
-                    text: "Albert Einstein",
-                  },
-                },
-
-                property: "P1476",
-                snaktype: "value",
-              },
-            ],
-            P2383: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "117243",
-                },
-
-                property: "P2383",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P2383", "P1476"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q105958830",
-                    "numeric-id": 105958830,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P1810: [
-              {
-                datatype: "string",
-                datavalue: {
-                  type: "string",
-                  value: "Albert Einstein",
-                },
-
-                property: "P1810",
-                snaktype: "value",
-              },
-            ],
-            P5375: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "5923",
-                },
-
-                property: "P5375",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P5375", "P1810", "P248"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q107343683",
-                    "numeric-id": 107343683,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2017-10-09T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P1284: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "00000000666",
-                },
-
-                property: "P1284",
-                snaktype: "value",
-              },
-            ],
-            P1810: [
-              {
-                datatype: "string",
-                datavalue: {
-                  type: "string",
-                  value: "Albert Einstein",
-                },
-
-                property: "P1810",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P1284", "P813", "P1810"],
-        },
-      ],
-      type: "statement",
-    },
-  ],
-  P570: [
-    {
-      id: "q937$577aaeb4-4ce9-fdd1-791f-78d893a0e5a8",
-      mainsnak: {
-        datatype: "time",
-        datavalue: {
-          type: "time",
-          value: {
-            after: 0,
-            before: 0,
-            calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-            precision: 11,
-            time: "+1955-04-18T00:00:00Z",
-            timezone: 0,
-          },
-        },
-
-        property: "P570",
-        snaktype: "value",
-      },
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q36578",
-                    "numeric-id": 36578,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2014-04-09T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P813"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q17378135",
-                    "numeric-id": 17378135,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2015-09-28T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P958: [
-              {
-                datatype: "string",
-                datavalue: {
-                  type: "string",
-                  value: "Эйнштейн Альберт",
-                },
-
-                property: "P958",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P958", "P248", "P813"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q19938912",
-                    "numeric-id": 19938912,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P268: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "119016075",
-                },
-
-                property: "P268",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2015-10-10T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P268", "P813"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q547473",
-                    "numeric-id": 547473,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2017-08-22T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P813"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q29861311",
-                    "numeric-id": 29861311,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2017-10-09T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P1810: [
-              {
-                datatype: "string",
-                datavalue: {
-                  type: "string",
-                  value: "Albert Einstein",
-                },
-
-                property: "P1810",
-                snaktype: "value",
-              },
-            ],
-            P3430: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "w69k499r",
-                },
-
-                property: "P3430",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P3430", "P1810", "P813"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q1165538",
-                    "numeric-id": 1165538,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2017-10-09T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P1810: [
-              {
-                datatype: "string",
-                datavalue: {
-                  type: "string",
-                  value: "Albert Einstein",
-                },
-
-                property: "P1810",
-                snaktype: "value",
-              },
-            ],
-            P3222: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "albert-einstein",
-                },
-
-                property: "P3222",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P3222", "P1810", "P813"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q63056",
-                    "numeric-id": 63056,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P535: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "314",
-                },
-
-                property: "P535",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2017-10-09T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P1810: [
-              {
-                datatype: "string",
-                datavalue: {
-                  type: "string",
-                  value: "Albert Einstein",
-                },
-
-                property: "P1810",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P535", "P1810", "P813"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q2629164",
-                    "numeric-id": 2629164,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2017-10-09T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P1233: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "99141",
-                },
-
-                property: "P1233",
-                snaktype: "value",
-              },
-            ],
-            P1810: [
-              {
-                datatype: "string",
-                datavalue: {
-                  type: "string",
-                  value: "Albert Einstein",
-                },
-
-                property: "P1810",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P1233", "P1810", "P813"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q15706812",
-                    "numeric-id": 15706812,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2017-10-09T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P1810: [
-              {
-                datatype: "string",
-                datavalue: {
-                  type: "string",
-                  value: "Albert Einstein",
-                },
-
-                property: "P1810",
-                snaktype: "value",
-              },
-            ],
-            P2639: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "4533e35f16964c939b82033bb6259e32",
-                },
-
-                property: "P2639",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P2639", "P1810", "P813"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q2728291",
-                    "numeric-id": 2728291,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2017-10-09T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P1810: [
-              {
-                datatype: "string",
-                datavalue: {
-                  type: "string",
-                  value: "Albert Einstein",
-                },
-
-                property: "P1810",
-                snaktype: "value",
-              },
-            ],
-            P6234: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "albert-einstein",
-                },
-
-                property: "P6234",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P6234", "P1810", "P813"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q6023365",
-                    "numeric-id": 6023365,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2017-10-09T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P863: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "thinker/2958",
-                },
-
-                property: "P863",
-                snaktype: "value",
-              },
-            ],
-            P1810: [
-              {
-                datatype: "string",
-                datavalue: {
-                  type: "string",
-                  value: "Albert Einstein",
-                },
-
-                property: "P1810",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P863", "P1810", "P813"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q21491701",
-                    "numeric-id": 21491701,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2017-10-09T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P1810: [
-              {
-                datatype: "string",
-                datavalue: {
-                  type: "string",
-                  value: "Albert Einstein",
-                },
-
-                property: "P1810",
-                snaktype: "value",
-              },
-            ],
-            P2454: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "PE00000116",
-                },
-
-                property: "P2454",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P2454", "P1810", "P813"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q23667505",
-                    "numeric-id": 23667505,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2019-06-19T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P2861: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "1215",
-                },
-
-                property: "P2861",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P2861", "P813"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q237227",
-                    "numeric-id": 237227,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2017-10-09T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P1810: [
-              {
-                datatype: "string",
-                datavalue: {
-                  type: "string",
-                  value: "Albert Einstein",
-                },
-
-                property: "P1810",
-                snaktype: "value",
-              },
-            ],
-            P5019: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "einstein-albert",
-                },
-
-                property: "P5019",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P5019", "P1810", "P813"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q746368",
-                    "numeric-id": 746368,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P1810: [
-              {
-                datatype: "string",
-                datavalue: {
-                  type: "string",
-                  value: "Albert Einstein",
-                },
-
-                property: "P1810",
-                snaktype: "value",
-              },
-            ],
-            P4342: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "Albert_Einstein",
-                },
-
-                property: "P4342",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P4342", "P1810"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q2664168",
-                    "numeric-id": 2664168,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P1296: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "0023623",
-                },
-
-                property: "P1296",
-                snaktype: "value",
-              },
-            ],
-            P1810: [
-              {
-                datatype: "string",
-                datavalue: {
-                  type: "string",
-                  value: "Albert Einstein",
-                },
-
-                property: "P1810",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P1296", "P1810"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q98769076",
-                    "numeric-id": 98769076,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P1810: [
-              {
-                datatype: "string",
-                datavalue: {
-                  type: "string",
-                  value: "Albert Einstein",
-                },
-
-                property: "P1810",
-                snaktype: "value",
-              },
-            ],
-            P8094: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "einsteina",
-                },
-
-                property: "P8094",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P8094", "P1810"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q83365652",
-                    "numeric-id": 83365652,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P1810: [
-              {
-                datatype: "string",
-                datavalue: {
-                  type: "string",
-                  value: "Albert Einstein",
-                },
-
-                property: "P1810",
-                snaktype: "value",
-              },
-            ],
-            P7929: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "p=albert;n=einstein",
-                },
-
-                property: "P7929",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P7929", "P1810"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q1307356",
-                    "numeric-id": 1307356,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P1810: [
-              {
-                datatype: "string",
-                datavalue: {
-                  type: "string",
-                  value: "Albert Einstein",
-                },
-
-                property: "P1810",
-                snaktype: "value",
-              },
-            ],
-            P8854: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "18467",
-                },
-
-                property: "P8854",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P8854", "P1810"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q3407324",
-                    "numeric-id": 3407324,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P1810: [
-              {
-                datatype: "string",
-                datavalue: {
-                  type: "string",
-                  value: "Albert Einstein",
-                },
-
-                property: "P1810",
-                snaktype: "value",
-              },
-            ],
-            P8349: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "56686",
-                },
-
-                property: "P8349",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P8349", "P1810"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q77541206",
-                    "numeric-id": 77541206,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2021-02-13T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P7796: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "3852",
-                },
-
-                property: "P7796",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P7796", "P813"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q107456632",
-                    "numeric-id": 107456632,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2021-04-01T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P6844: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "16734",
-                },
-
-                property: "P6844",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P6844", "P813"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q55740543",
-                    "numeric-id": 55740543,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P1476: [
-              {
-                datatype: "monolingualtext",
-                datavalue: {
-                  type: "monolingualtext",
-                  value: {
-                    language: "fr",
-                    text: "Albert Einstein",
-                  },
-                },
-
-                property: "P1476",
-                snaktype: "value",
-              },
-            ],
-            P2383: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "117243",
-                },
-
-                property: "P2383",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P2383", "P1476"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q107343683",
-                    "numeric-id": 107343683,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2017-10-09T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P1284: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "00000000666",
-                },
-
-                property: "P1284",
-                snaktype: "value",
-              },
-            ],
-            P1810: [
-              {
-                datatype: "string",
-                datavalue: {
-                  type: "string",
-                  value: "Albert Einstein",
-                },
-
-                property: "P1810",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P1284", "P813", "P1810"],
-        },
-      ],
-      type: "statement",
-    },
-  ],
-  P646: [
-    {
-      id: "Q937$E34CCE18-850C-4A3F-88D4-B62FB5BD3E0B",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "/m/0jcx",
-        },
-
-        property: "P646",
-        snaktype: "value",
-      },
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q15241312",
-                    "numeric-id": 15241312,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P577: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2013-10-28T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P577",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P577"],
-        },
-      ],
-      type: "statement",
-    },
-  ],
-  P648: [
-    {
-      id: "Q937$ae858c3b-4935-e68a-f3d6-89608a55d451",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "OL3175986A",
-        },
-
-        property: "P648",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P691: [
-    {
-      id: "Q937$677E4BC8-3AC3-4FE7-996F-86F794F6A9E6",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "jn19990002019",
-        },
-
-        property: "P691",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P701: [
-    {
-      id: "Q937$118400BE-4662-4F54-B90E-909A41749C54",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "P20204",
-        },
-
-        property: "P701",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P723: [
-    {
-      id: "Q937$7E75EF73-C1D0-4660-9C74-1CCCA07B55EB",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "eins001",
-        },
-
-        property: "P723",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P734: [
-    {
-      id: "Q937$148f07c2-4670-5dda-0c03-151cbd56e4c2",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q16834800",
-            "numeric-id": 16834800,
-          },
-        },
-
-        property: "P734",
-        snaktype: "value",
-      },
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P213: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "0000000077040933",
-                },
-
-                property: "P213",
-                snaktype: "value",
-              },
-            ],
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q423048",
-                    "numeric-id": 423048,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2015-10-16T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P213", "P813"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q23667505",
-                    "numeric-id": 23667505,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2019-06-19T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P2861: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "1215",
-                },
-
-                property: "P2861",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P2861", "P813"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q104698881",
-                    "numeric-id": 104698881,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2021-01-06T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P854: [
-              {
-                datatype: "url",
-                datavalue: {
-                  type: "string",
-                  value:
-                    "http://digi.nacr.cz/prihlasky2/index.php?action=link&ref=czarch:CZ-100000010:874&karton=3&folium=290",
-                },
-
-                property: "P854",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P854", "P813"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q77541206",
-                    "numeric-id": 77541206,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2021-02-13T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P7796: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "3852",
-                },
-
-                property: "P7796",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P7796", "P813"],
-        },
-      ],
-      type: "statement",
-    },
-  ],
-  P735: [
-    {
-      id: "Q937$AED4F087-0294-4FD7-9507-A6171EAA3F27",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q577011",
-            "numeric-id": 577011,
-          },
-        },
-
-        property: "P735",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P1545: [
-          {
-            datatype: "string",
-            datavalue: {
-              type: "string",
-              value: "1",
-            },
-
-            property: "P1545",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P1545"],
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q23667505",
-                    "numeric-id": 23667505,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2019-06-19T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P2861: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "1215",
-                },
-
-                property: "P2861",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P2861", "P813"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q77541206",
-                    "numeric-id": 77541206,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2021-02-13T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P7796: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "3852",
-                },
-
-                property: "P7796",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P7796", "P813"],
-        },
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q104698881",
-                    "numeric-id": 104698881,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2021-01-06T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P854: [
-              {
-                datatype: "url",
-                datavalue: {
-                  type: "string",
-                  value:
-                    "http://digi.nacr.cz/prihlasky2/index.php?action=link&ref=czarch:CZ-100000010:874&karton=3&folium=290",
-                },
-
-                property: "P854",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P854", "P813"],
-        },
-      ],
-      type: "statement",
-    },
-  ],
-  P737: [
-    {
-      id: "Q937$3C1C425C-62DD-4233-B5F1-D2498C003D09",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q991",
-            "numeric-id": 991,
-          },
-        },
-
-        property: "P737",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$84ED556F-B8FA-460D-93A0-90D5024B158A",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q57246",
-            "numeric-id": 57246,
-          },
-        },
-
-        property: "P737",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$EE46A452-C11E-4AE7-963A-8FF7FB6F6D5C",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q35802",
-            "numeric-id": 35802,
-          },
-        },
-
-        property: "P737",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$19EF14C2-681A-433D-8A75-3A2EEA8F8EF5",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q1001",
-            "numeric-id": 1001,
-          },
-        },
-
-        property: "P737",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$C6E7234B-92BC-4592-BA74-8F03870FE891",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q38193",
-            "numeric-id": 38193,
-          },
-        },
-
-        property: "P737",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$43BC7AAD-82D2-4948-962C-52FAE1EFB24F",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q41688",
-            "numeric-id": 41688,
-          },
-        },
-
-        property: "P737",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$9E49F68A-83BB-4442-9486-8E4F40593D6F",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q19185",
-            "numeric-id": 19185,
-          },
-        },
-
-        property: "P737",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$E4607642-194C-4331-BB6F-BBE8A4CE2710",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q935",
-            "numeric-id": 935,
-          },
-        },
-
-        property: "P737",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$FABE514E-23CC-4C6C-8D82-BF3E2F64C7F3",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q7322195",
-            "numeric-id": 7322195,
-          },
-        },
-
-        property: "P737",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$4C978955-7004-4A30-8761-95A4572597D0",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q37160",
-            "numeric-id": 37160,
-          },
-        },
-
-        property: "P737",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$79A1E4A3-E4FA-4EDA-A94D-DFCAC70A10A2",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q25820",
-            "numeric-id": 25820,
-          },
-        },
-
-        property: "P737",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$059F1D35-CB89-490B-B3F9-44E25FC91BB4",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q42299",
-            "numeric-id": 42299,
-          },
-        },
-
-        property: "P737",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$54302CD2-5FC0-4B2C-A1E4-8F1D76F949F7",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q57193",
-            "numeric-id": 57193,
-          },
-        },
-
-        property: "P737",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$BE15FFD8-6E89-45B2-8713-68FA1436BA78",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q9095",
-            "numeric-id": 9095,
-          },
-        },
-
-        property: "P737",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$FEB22D24-5E00-4E88-BF6C-4572C2AE5957",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q200639",
-            "numeric-id": 200639,
-          },
-        },
-
-        property: "P737",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$390CEB92-E676-4123-9ECD-4C06D20A72AF",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q310794",
-            "numeric-id": 310794,
-          },
-        },
-
-        property: "P737",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$60C51596-943C-4A87-89CF-7C91EC4DA189",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q355245",
-            "numeric-id": 355245,
-          },
-        },
-
-        property: "P737",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$7D6F2F4A-8A25-475F-B29F-A489707ACCC1",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q93996",
-            "numeric-id": 93996,
-          },
-        },
-
-        property: "P737",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P793: [
-    {
-      id: "Q937$0908221D-AE75-4794-97C9-10CA1E858129",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q115784320",
-            "numeric-id": 115784320,
-          },
-        },
-
-        property: "P793",
-        snaktype: "value",
-      },
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P227: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "118529579",
-                },
-
-                property: "P227",
-                snaktype: "value",
-              },
-            ],
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q23833686",
-                    "numeric-id": 23833686,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2024-05-03T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P227", "P248", "P813"],
-        },
-      ],
-      type: "statement",
-    },
-  ],
-  P800: [
-    {
-      id: "Q937$f09b6157-49b5-d3b7-f638-6c38e461680c",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q11455",
-            "numeric-id": 11455,
-          },
-        },
-
-        property: "P800",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$2d7d09a6-470d-307c-b4d8-11f94cc737f1",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q11452",
-            "numeric-id": 11452,
-          },
-        },
-
-        property: "P800",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$3f710f06-4d66-4cdf-59b0-b57faed28cc9",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q83213",
-            "numeric-id": 83213,
-          },
-        },
-
-        property: "P800",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$91bab259-4bcb-82f7-095a-fd310314ae41",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q43514",
-            "numeric-id": 43514,
-          },
-        },
-
-        property: "P800",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$c3b59239-449d-8473-2f9e-dbc3a46c8971",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q56100717",
-            "numeric-id": 56100717,
-          },
-        },
-
-        property: "P800",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$1f3e9c3f-4a10-bcc1-840b-106489f92702",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q35875",
-            "numeric-id": 35875,
-          },
-        },
-
-        property: "P800",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$3d0b3a84-4bbb-7909-c87e-010fd0716d03",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q122894",
-            "numeric-id": 122894,
-          },
-        },
-
-        property: "P800",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$b60d007c-4247-e360-fd0f-c463fc89c70e",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q273711",
-            "numeric-id": 273711,
-          },
-        },
-
-        property: "P800",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$27f4cff0-4ba8-7f23-d09d-30b24dd095a6",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q944",
-            "numeric-id": 944,
-          },
-        },
-
-        property: "P800",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$5d6988b2-494d-032b-5daa-bcb43830d503",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q1080745",
-            "numeric-id": 1080745,
-          },
-        },
-
-        property: "P800",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$360bbb34-467d-ca45-e877-1a94f134a616",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q853656",
-            "numeric-id": 853656,
-          },
-        },
-
-        property: "P800",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P802: [
-    {
-      id: "Q937$72DE4D46-3D7E-49F3-9787-BA064C56C343",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q87554",
-            "numeric-id": 87554,
-          },
-        },
-
-        property: "P802",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P803: [
-    {
-      id: "Q937$dc7412cb-4045-1e15-9e33-b1aad4381b02",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q25339110",
-            "numeric-id": 25339110,
-          },
-        },
-
-        property: "P803",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P580: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 9,
-                time: "+1909-00-00T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P580",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P580"],
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P143: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q206855",
-                    "numeric-id": 206855,
-                  },
-                },
-
-                property: "P143",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2018-12-20T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P4656: [
-              {
-                datatype: "url",
-                datavalue: {
-                  type: "string",
-                  value: "https://ru.wikipedia.org/?oldid=96910806",
-                },
-
-                property: "P4656",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P143", "P4656", "P813"],
-        },
-      ],
-      type: "statement",
-    },
-    {
-      id: "Q937$2aa71e9e-48de-f589-acb2-293861e69c0a",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q414528",
-            "numeric-id": 414528,
-          },
-        },
-
-        property: "P803",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P580: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 9,
-                time: "+1913-00-00T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P580",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P580"],
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P143: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q206855",
-                    "numeric-id": 206855,
-                  },
-                },
-
-                property: "P143",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2018-12-20T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P4656: [
-              {
-                datatype: "url",
-                datavalue: {
-                  type: "string",
-                  value: "https://ru.wikipedia.org/?oldid=96910806",
-                },
-
-                property: "P4656",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P143", "P4656", "P813"],
-        },
-      ],
-      type: "statement",
-    },
-  ],
-  P863: [
-    {
-      id: "Q937$1AA4B8FE-DFE3-45ED-93FB-3E6106EE9520",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "thinker/2958",
-        },
-
-        property: "P863",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P902: [
-    {
-      id: "Q937$C454C727-7E87-4322-8BCD-3E020B5D0667",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "028814",
-        },
-
-        property: "P902",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P906: [
-    {
-      id: "Q937$8DEE4AFA-8D09-4431-A651-1E48CCF61F9C",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "184709",
-        },
-
-        property: "P906",
-        snaktype: "value",
-      },
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P143: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q877583",
-                    "numeric-id": 877583,
-                  },
-                },
-
-                property: "P143",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P143"],
-        },
-      ],
-      type: "statement",
-    },
-  ],
-  P910: [
-    {
-      id: "Q937$d415d195-405e-41b3-18e0-7222736f0659",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q7213562",
-            "numeric-id": 7213562,
-          },
-        },
-
-        property: "P910",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P935: [
-    {
-      id: "Q937$4182BA1C-DA1E-4B66-B6B4-37DEBDA09457",
-      mainsnak: {
-        datatype: "string",
-        datavalue: {
-          type: "string",
-          value: "Albert Einstein",
-        },
-
-        property: "P935",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P937: [
-    {
-      id: "Q937$862B872E-0986-4E1F-BCB5-67EA892B0E21",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q70",
-            "numeric-id": 70,
-          },
-        },
-
-        property: "P937",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P580: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 11,
-                time: "+1902-06-16T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P580",
-            snaktype: "value",
-          },
-        ],
-        P582: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 9,
-                time: "+1909-00-00T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P582",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P580", "P582"],
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q36578",
-                    "numeric-id": 36578,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2015-04-02T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P813"],
-        },
-        {
-          snaks: {
-            P227: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "118529579",
-                },
-
-                property: "P227",
-                snaktype: "value",
-              },
-            ],
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q23833686",
-                    "numeric-id": 23833686,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2024-05-03T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P227", "P248", "P813"],
-        },
-      ],
-      type: "statement",
-    },
-    {
-      id: "Q937$B42B39CD-B046-4D84-AF15-C6FC03B1CBFF",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q1085",
-            "numeric-id": 1085,
-          },
-        },
-
-        property: "P937",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P580: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 10,
-                time: "+1911-01-00T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P580",
-            snaktype: "value",
-          },
-        ],
-        P582: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 10,
-                time: "+1912-10-00T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P582",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P580", "P582"],
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q36578",
-                    "numeric-id": 36578,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2015-04-02T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P813"],
-        },
-        {
-          snaks: {
-            P227: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "118529579",
-                },
-
-                property: "P227",
-                snaktype: "value",
-              },
-            ],
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q23833686",
-                    "numeric-id": 23833686,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2024-05-03T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P227", "P248", "P813"],
-        },
-      ],
-      type: "statement",
-    },
-    {
-      id: "Q937$1DBF6E45-7D71-496F-AADE-ABB4FB5F074F",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q72",
-            "numeric-id": 72,
-          },
-        },
-
-        property: "P937",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P580: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 9,
-                time: "+1909-00-00T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P580",
-            snaktype: "value",
-          },
-        ],
-        P582: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 9,
-                time: "+1911-00-00T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P582",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P580", "P582"],
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q36578",
-                    "numeric-id": 36578,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2015-04-02T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P813"],
-        },
-      ],
-      type: "statement",
-    },
-    {
-      id: "Q937$5FEDB28F-5810-490E-9258-301C36E95BB6",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q64",
-            "numeric-id": 64,
-          },
-        },
-
-        property: "P937",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P580: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 10,
-                time: "+1914-04-00T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P580",
-            snaktype: "value",
-          },
-        ],
-        P582: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 9,
-                time: "+1933-00-00T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P582",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P580", "P582"],
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q36578",
-                    "numeric-id": 36578,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2015-04-02T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P813"],
-        },
-        {
-          snaks: {
-            P227: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "118529579",
-                },
-
-                property: "P227",
-                snaktype: "value",
-              },
-            ],
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q23833686",
-                    "numeric-id": 23833686,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2024-05-03T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P227", "P248", "P813"],
-        },
-      ],
-      type: "statement",
-    },
-    {
-      id: "Q937$af167d49-49ce-e4e5-7167-5a6ce897952e",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q464344",
-            "numeric-id": 464344,
-          },
-        },
-
-        property: "P937",
-        snaktype: "value",
-      },
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P854: [
-              {
-                datatype: "url",
-                datavalue: {
-                  type: "string",
-                  value:
-                    "http://www.einsteinsommerhaus.de/index.php?id=539&no_cache=1",
-                },
-
-                property: "P854",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P854"],
-        },
-      ],
-      type: "statement",
-    },
-    {
-      id: "Q937$280ea2e9-4613-29a2-9eaf-b5150af990c0",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q138518",
-            "numeric-id": 138518,
-          },
-        },
-
-        property: "P937",
-        snaktype: "value",
-      },
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P4656: [
-              {
-                datatype: "url",
-                datavalue: {
-                  type: "string",
-                  value:
-                    "https://en.wikipedia.org/wiki/Institute_for_Advanced_Study",
-                },
-
-                property: "P4656",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P4656"],
-        },
-      ],
-      type: "statement",
-    },
-    {
-      id: "Q937$26125040-4339-417b-cd07-1f0722f2f35d",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q72",
-            "numeric-id": 72,
-          },
-        },
-
-        property: "P937",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P580: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 10,
-                time: "+1912-10-01T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P580",
-            snaktype: "value",
-          },
-        ],
-        P582: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 9,
-                time: "+1914-00-00T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P582",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P580", "P582"],
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q36578",
-                    "numeric-id": 36578,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2015-04-02T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P813"],
-        },
-        {
-          snaks: {
-            P227: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "118529579",
-                },
-
-                property: "P227",
-                snaktype: "value",
-              },
-            ],
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q23833686",
-                    "numeric-id": 23833686,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2024-05-03T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P227", "P248", "P813"],
-        },
-      ],
-      type: "statement",
-    },
-  ],
-  P947: [
-    {
-      id: "Q937$54f115b8-4e47-d4a5-091c-b9c5bea91faa",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "000021094",
-        },
-
-        property: "P947",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P949: [
-    {
-      id: "Q937$91097cfd-420f-24b0-e767-c41bfcea85dd",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "000042773",
-        },
-
-        property: "P949",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P950: [
-    {
-      id: "Q937$8E2AC50E-695D-43E4-80EB-96BD2B5A5CF5",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "XX834035",
-        },
-
-        property: "P950",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P973: [
-    {
-      id: "Q937$11b5e7a8-4c1e-f48a-ced0-c1707226db35",
-      mainsnak: {
-        datatype: "url",
-        datavalue: {
-          type: "string",
-          value: "http://www.einsteinsommerhaus.de/index.php?id=539&no_cache=1",
-        },
-
-        property: "P973",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P407: [
-          {
-            datatype: "wikibase-item",
-            datavalue: {
-              type: "wikibase-entityid",
-              value: {
-                "entity-type": "item",
-                id: "Q188",
-                "numeric-id": 188,
-              },
-            },
-
-            property: "P407",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P407"],
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$37f0d024-415d-a0e6-d9b9-28a0e963191f",
-      mainsnak: {
-        datatype: "url",
-        datavalue: {
-          type: "string",
-          value: "https://www.ige.ch/de/ueber-uns/einstein.html",
-        },
-
-        property: "P973",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P407: [
-          {
-            datatype: "wikibase-item",
-            datavalue: {
-              type: "wikibase-entityid",
-              value: {
-                "entity-type": "item",
-                id: "Q188",
-                "numeric-id": 188,
-              },
-            },
-
-            property: "P407",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P407"],
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$63DAA43E-48B6-4654-B493-928738178FBE",
-      mainsnak: {
-        datatype: "url",
-        datavalue: {
-          type: "string",
-          value: "http://www.digiporta.net/index.php?id=553550365",
-        },
-
-        property: "P973",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P407: [
-          {
-            datatype: "wikibase-item",
-            datavalue: {
-              type: "wikibase-entityid",
-              value: {
-                "entity-type": "item",
-                id: "Q188",
-                "numeric-id": 188,
-              },
-            },
-
-            property: "P407",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P407"],
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$EC12FBB9-05FE-4987-9BEE-6C82F2B4412F",
-      mainsnak: {
-        datatype: "url",
-        datavalue: {
-          type: "string",
-          value: "http://www.digiporta.net/index.php?id=568612883",
-        },
-
-        property: "P973",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P407: [
-          {
-            datatype: "wikibase-item",
-            datavalue: {
-              type: "wikibase-entityid",
-              value: {
-                "entity-type": "item",
-                id: "Q188",
-                "numeric-id": 188,
-              },
-            },
-
-            property: "P407",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P407"],
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$9F63BB27-5275-4FDC-AD23-456899EEF925",
-      mainsnak: {
-        datatype: "url",
-        datavalue: {
-          type: "string",
-          value: "http://www.digiporta.net/index.php?id=707892219",
-        },
-
-        property: "P973",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P407: [
-          {
-            datatype: "wikibase-item",
-            datavalue: {
-              type: "wikibase-entityid",
-              value: {
-                "entity-type": "item",
-                id: "Q188",
-                "numeric-id": 188,
-              },
-            },
-
-            property: "P407",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P407"],
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P989: [
-    {
-      id: "Q937$8b5a15c8-47cb-7529-df61-298660957813",
-      mainsnak: {
-        datatype: "commonsMedia",
-        datavalue: {
-          type: "string",
-          value: "Hy-Ալբերտ Այնշտայն (Albert Einstein).ogg",
-        },
-
-        property: "P989",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P407: [
-          {
-            datatype: "wikibase-item",
-            datavalue: {
-              type: "wikibase-entityid",
-              value: {
-                "entity-type": "item",
-                id: "Q8785",
-                "numeric-id": 8785,
-              },
-            },
-
-            property: "P407",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P407"],
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$ebd8e6e1-4966-ab2a-c10f-fceeea0a3c14",
-      mainsnak: {
-        datatype: "commonsMedia",
-        datavalue: {
-          type: "string",
-          value: "De-Albert Einstein.ogg",
-        },
-
-        property: "P989",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P407: [
-          {
-            datatype: "wikibase-item",
-            datavalue: {
-              type: "wikibase-entityid",
-              value: {
-                "entity-type": "item",
-                id: "Q188",
-                "numeric-id": 188,
-              },
-            },
-
-            property: "P407",
-            snaktype: "value",
-          },
-        ],
-        P585: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 11,
-                time: "+2005-06-19T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P585",
-            snaktype: "value",
-          },
-        ],
-        P2047: [
-          {
-            datatype: "quantity",
-            datavalue: {
-              type: "quantity",
-              value: {
-                amount: "+37.5",
-                unit: "http://www.wikidata.org/entity/Q7727",
-              },
-            },
-
-            property: "P2047",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P407", "P585", "P2047"],
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P990: [
-    {
-      id: "Q937$d28dfcfb-4df9-39b0-68df-db41dc8f363e",
-      mainsnak: {
-        datatype: "commonsMedia",
-        datavalue: {
-          type: "string",
-          value: "03 ALBERT EINSTEIN.ogg",
-        },
-
-        property: "P990",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P407: [
-          {
-            datatype: "wikibase-item",
-            datavalue: {
-              type: "wikibase-entityid",
-              value: {
-                "entity-type": "item",
-                id: "Q1860",
-                "numeric-id": 1860,
-              },
-            },
-
-            property: "P407",
-            snaktype: "value",
-          },
-        ],
-        P585: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 9,
-                time: "+1943-00-00T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P585",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P585", "P407"],
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P998: [
-    {
-      id: "Q937$22A8DE0D-649A-4F71-B6EC-80C767F50CDC",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "Science/Physics/History/People/Einstein,_Albert/",
-        },
-
-        property: "P998",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P407: [
-          {
-            datatype: "wikibase-item",
-            datavalue: {
-              type: "wikibase-entityid",
-              value: {
-                "entity-type": "item",
-                id: "Q1860",
-                "numeric-id": 1860,
-              },
-            },
-
-            property: "P407",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P407"],
-      rank: "preferred",
-      type: "statement",
-    },
-    {
-      id: "Q937$1C3C9040-A752-47F6-9382-2F9557682E78",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value:
-            "World/Français/Sciences/Physique/Histoire/Personnages_historiques/Einstein,_Albert/",
-        },
-
-        property: "P998",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P407: [
-          {
-            datatype: "wikibase-item",
-            datavalue: {
-              type: "wikibase-entityid",
-              value: {
-                "entity-type": "item",
-                id: "Q150",
-                "numeric-id": 150,
-              },
-            },
-
-            property: "P407",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P407"],
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$A8F18655-B3A0-4EC9-AA0B-8597A4AC8D1E",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value:
-            "World/Deutsch/Wissenschaft/Naturwissenschaften/Physik/Personen/Einstein,_Albert/",
-        },
-
-        property: "P998",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P407: [
-          {
-            datatype: "wikibase-item",
-            datavalue: {
-              type: "wikibase-entityid",
-              value: {
-                "entity-type": "item",
-                id: "Q188",
-                "numeric-id": 188,
-              },
-            },
-
-            property: "P407",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P407"],
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$48BB41BA-D982-4E6D-9E78-96DDBB73A5D8",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value:
-            "World/Español/Ciencia_y_tecnología/Física/Historia/Biografías/Einstein,_Albert/",
-        },
-
-        property: "P998",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P407: [
-          {
-            datatype: "wikibase-item",
-            datavalue: {
-              type: "wikibase-entityid",
-              value: {
-                "entity-type": "item",
-                id: "Q1321",
-                "numeric-id": 1321,
-              },
-            },
-
-            property: "P407",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P407"],
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P1003: [
-    {
-      id: "Q937$807FF339-0105-4263-8A7A-75A6FFC26533",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "000074139",
-        },
-
-        property: "P1003",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P1005: [
-    {
-      id: "Q937$BABC7A6D-354E-49D9-9D6F-B575794A0546",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "26339",
-        },
-
-        property: "P1005",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P1006: [
-    {
-      id: "Q937$356672EF-41CD-4BBA-8010-A4D704268DAB",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "068350767",
-        },
-
-        property: "P1006",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P1015: [
-    {
-      id: "Q937$02C20F8E-58BD-4CD1-95A1-C45BF8D3B3A0",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "90053072",
-        },
-
-        property: "P1015",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P1017: [
-    {
-      id: "Q937$DFEE8D9A-C5F7-4A1C-B6EB-76754C1CF3B5",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "ADV10181679",
-        },
-
-        property: "P1017",
-        snaktype: "value",
-      },
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q77541206",
-                    "numeric-id": 77541206,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2021-02-13T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P7796: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "3852",
-                },
-
-                property: "P7796",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P7796", "P813"],
-        },
-      ],
-      type: "statement",
-    },
-  ],
-  P1026: [
-    {
-      id: "Q937$c7c208b8-41b5-6617-14b8-f09f03ca8123",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q51754009",
-            "numeric-id": 51754009,
-          },
-        },
-
-        property: "P1026",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P585: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 9,
-                time: "+1905-00-00T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P585",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P585"],
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P1038: [
-    {
-      id: "Q937$7ac1a440-4882-073c-f966-036bda6cd821",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q55594631",
-            "numeric-id": 55594631,
-          },
-        },
-
-        property: "P1038",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P1039: [
-          {
-            datatype: "wikibase-item",
-            datavalue: {
-              type: "wikibase-entityid",
-              value: {
-                "entity-type": "item",
-                id: "Q12051531",
-                "numeric-id": 12051531,
-              },
-            },
-
-            property: "P1039",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P1039"],
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P854: [
-              {
-                datatype: "url",
-                datavalue: {
-                  type: "string",
-                  value:
-                    "http://stolpersteine-fuer-ulm.de/familie/lina-einstein/",
-                },
-
-                property: "P854",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P854"],
-        },
-      ],
-      type: "statement",
-    },
-    {
-      id: "Q937$5d09ed7c-4c6a-5bbb-9106-6653fd49269e",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q68761",
-            "numeric-id": 68761,
-          },
-        },
-
-        property: "P1038",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P1039: [
-          {
-            datatype: "wikibase-item",
-            datavalue: {
-              type: "wikibase-entityid",
-              value: {
-                "entity-type": "item",
-                id: "Q12051531",
-                "numeric-id": 12051531,
-              },
-            },
-
-            property: "P1039",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P1039"],
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P143: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q48183",
-                    "numeric-id": 48183,
-                  },
-                },
-
-                property: "P143",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P143"],
-        },
-      ],
-      type: "statement",
-    },
-  ],
-  P1048: [
-    {
-      id: "Q937$3B48841C-6CC9-4213-90B2-74532E90D1B9",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "369710",
-        },
-
-        property: "P1048",
-        snaktype: "value",
-      },
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P143: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q30239",
-                    "numeric-id": 30239,
-                  },
-                },
-
-                property: "P143",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P143"],
-        },
-      ],
-      type: "statement",
-    },
-  ],
-  P1050: [
-    {
-      id: "Q937$BB5824E0-B74F-4F93-A14C-CE802E0F9CB5",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q132971",
-            "numeric-id": 132971,
-          },
-        },
-
-        property: "P1050",
-        snaktype: "value",
-      },
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P143: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q328",
-                    "numeric-id": 328,
-                  },
-                },
-
-                property: "P143",
-                snaktype: "value",
-              },
-            ],
-            P4656: [
-              {
-                datatype: "url",
-                datavalue: {
-                  type: "string",
-                  value:
-                    "https://en.wikipedia.org/w/index.php?title=List_of_people_with_dyslexia&oldid=1189241542",
-                },
-
-                property: "P4656",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P143", "P4656"],
-        },
-      ],
-      type: "statement",
-    },
-  ],
-  P1066: [
-    {
-      id: "Q937$670c8276-4457-cb31-a7ed-94749ac6b86a",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q116635",
-            "numeric-id": 116635,
-          },
-        },
-
-        property: "P1066",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$1af7745f-44d9-46e2-672e-49e04b5132f3",
-      mainsnak: {
-        datatype: "wikibase-item",
-        datavalue: {
-          type: "wikibase-entityid",
-          value: {
-            "entity-type": "item",
-            id: "Q57246",
-            "numeric-id": 57246,
-          },
-        },
-
-        property: "P1066",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P1150: [
-    {
-      id: "Q937$48935E07-C567-4839-BF88-39C8734FAAFD",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "BF 5620",
-        },
-
-        property: "P1150",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P1153: [
-    {
-      id: "Q937$b95d23c2-4002-b6c9-def1-1af0448ef2be",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "22988279600",
-        },
-
-        property: "P1153",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P1185: [
-    {
-      id: "Q937$f291e938-8bad-404d-a99b-5bc6d6828566",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "303260",
-        },
-
-        property: "P1185",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P1187: [
-    {
-      id: "Q937$B427CBB4-7940-4FB6-9A3F-A724845C8DB7",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "A028454",
-        },
-
-        property: "P1187",
-        snaktype: "value",
-      },
       rank: "normal",
       type: "statement",
     },
@@ -16516,6 +5294,40 @@ const lottaClaims = {
       type: "statement",
     },
   ],
+  P12086: [
+    {
+      id: "Q937$B937678D-E069-4973-83A8-DCD557715D05",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "Albert_Einstein",
+        },
+
+        property: "P12086",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P12098: [
+    {
+      id: "Q937$AD4C743A-6BF8-4B60-8EE2-DEA685000158",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "855374",
+        },
+
+        property: "P12098",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
   P1213: [
     {
       id: "Q937$1F5EE4D6-597D-4B1C-A59D-0FF3954D378E",
@@ -16556,6 +5368,23 @@ const lottaClaims = {
       type: "statement",
     },
   ],
+  P12153: [
+    {
+      id: "Q937$5f4db2e5-42cf-e474-c43a-1e2a15ef3990",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "650988260",
+        },
+
+        property: "P12153",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
   P1225: [
     {
       id: "Q937$04A90133-EA44-45AC-A728-4A1C08ABB9F6",
@@ -16590,6 +5419,112 @@ const lottaClaims = {
       type: "statement",
     },
   ],
+  P12385: [
+    {
+      id: "Q937$70b72fa7-3aa0-42db-ab27-5721962aa70e",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "albert-einstein",
+        },
+
+        property: "P12385",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P12458: [
+    {
+      id: "Q937$E9FD5427-2D42-4CB1-8714-59F404F2275A",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "264639",
+        },
+
+        property: "P12458",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P1810: [
+          {
+            datatype: "string",
+            datavalue: {
+              type: "string",
+              value: "Einstein, Albert, 1879-1955.",
+            },
+
+            property: "P1810",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P1810"],
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P3452: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q124605379",
+                    "numeric-id": 124605379,
+                  },
+                },
+
+                property: "P3452",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P3452"],
+        },
+      ],
+      type: "statement",
+    },
+  ],
+  P12483: [
+    {
+      id: "Q937$3E99B226-D3B6-4819-9D24-62151AB73ACA",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "11237",
+        },
+
+        property: "P12483",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P12502: [
+    {
+      id: "Q937$454CB7FB-E3E0-4FCD-B53A-85212C60722D",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "14611",
+        },
+
+        property: "P12502",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
   P1258: [
     {
       id: "Q937$83607b46-4f7a-7788-a6e7-d25d20ab9985",
@@ -16601,6 +5536,40 @@ const lottaClaims = {
         },
 
         property: "P1258",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P12582: [
+    {
+      id: "Q937$63E112EF-7936-4F50-8F66-C28DA4CE293C",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "20110803095744712",
+        },
+
+        property: "P12582",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P12597: [
+    {
+      id: "Q937$F941CD61-9078-47F5-837E-B2CF0236C2F2",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "14634",
+        },
+
+        property: "P12597",
         snaktype: "value",
       },
       rank: "normal",
@@ -16635,6 +5604,23 @@ const lottaClaims = {
         },
 
         property: "P1266",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P12674: [
+    {
+      id: "Q937$85A23411-4ADE-4334-B962-CAE8AA2D4149",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "Q95055",
+        },
+
+        property: "P12674",
         snaktype: "value",
       },
       rank: "normal",
@@ -16693,6 +5679,130 @@ const lottaClaims = {
       type: "statement",
     },
   ],
+  P12800: [
+    {
+      id: "Q937$3445205E-0782-4CF6-9D75-145D7BE7166C",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "en:Albert_Einstein",
+        },
+
+        property: "P12800",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$9B057674-A2D6-48C0-9781-AB464C9EBD5B",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "it:Albert_Einstein",
+        },
+
+        property: "P12800",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$ADC97A7F-19CA-41BA-AFF1-2BD00C4FFA64",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "es:Albert_Einstein",
+        },
+
+        property: "P12800",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$441AAC37-A617-4DB8-8C9E-EB24D2C53E98",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "eu:Albert_Einstein",
+        },
+
+        property: "P12800",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$174A978F-C237-4F40-8DEF-6F98E749B12C",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "ca:Albert_Einstein",
+        },
+
+        property: "P12800",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$CFE21E78-4B32-4611-AB3E-E91B2F7CA981",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "fr:Albert_Einstein",
+        },
+
+        property: "P12800",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P12836: [
+    {
+      id: "Q937$732C5E98-200F-4944-8978-5110BFBECCFE",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "27238306",
+        },
+
+        property: "P12836",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P1810: [
+          {
+            datatype: "string",
+            datavalue: {
+              type: "string",
+              value: "阿尔伯特·爱因斯坦 Albert Einstein",
+            },
+
+            property: "P1810",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P1810"],
+      rank: "normal",
+      type: "statement",
+    },
+  ],
   P1284: [
     {
       id: "Q937$F95587F0-3E98-4777-BE3A-9D26AF0B002F",
@@ -16710,6 +5820,23 @@ const lottaClaims = {
       type: "statement",
     },
   ],
+  P12871: [
+    {
+      id: "Q937$f18cf655-4231-9e57-7105-91e8d52baad5",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "0jcx",
+        },
+
+        property: "P12871",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
   P1296: [
     {
       id: "Q937$C63834A2-D913-49E0-84EC-8E08261E0E6E",
@@ -16721,6 +5848,128 @@ const lottaClaims = {
         },
 
         property: "P1296",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P12975: [
+    {
+      id: "Q937$7349c362-ac2a-46e6-b9ba-8e55dcc520c0",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "2607",
+        },
+
+        property: "P12975",
+        snaktype: "value",
+      },
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P4656: [
+              {
+                datatype: "url",
+                datavalue: {
+                  type: "string",
+                  value:
+                    "https://www.wikidata.org/wiki/Wikidata:Property_proposal/Lexikon_der_Mathematik_entry_ID",
+                },
+
+                property: "P4656",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P4656"],
+        },
+      ],
+      type: "statement",
+    },
+  ],
+  P13019: [
+    {
+      id: "Q937$D909F5C2-4686-4D3E-BE02-2709AA4C976B",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "87761",
+        },
+
+        property: "P13019",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P13022: [
+    {
+      id: "Q937$A3B8B824-35FA-401A-A7F4-69B2CD27F15D",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "19857",
+        },
+
+        property: "P13022",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P13030: [
+    {
+      id: "Q937$2583B1EF-2FC2-4F7A-891D-7B4668E83FB2",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "person/2493",
+        },
+
+        property: "P13030",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P13049: [
+    {
+      id: "Q937$8BE290EF-BA0E-4795-B38A-C1963B157611",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "118529579",
+        },
+
+        property: "P13049",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P13051: [
+    {
+      id: "Q937$380F1F6D-03C1-4998-8B94-7721C28348F6",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "34419",
+        },
+
+        property: "P13051",
         snaktype: "value",
       },
       rank: "normal",
@@ -16767,6 +6016,24 @@ const lottaClaims = {
       type: "statement",
     },
   ],
+  P13146: [
+    {
+      id: "Q937$f363a24c-46e1-3712-66b6-e455ff8e1053",
+      mainsnak: {
+        datatype: "commonsMedia",
+        datavalue: {
+          type: "string",
+          value:
+            "Albert Einstein writing on a blackboard in Pasadena (1931).jpg",
+        },
+
+        property: "P13146",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
   P1315: [
     {
       id: "Q937$C1166544-7625-4021-97FF-1102833C1CEB",
@@ -16778,6 +6045,57 @@ const lottaClaims = {
         },
 
         property: "P1315",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P13153: [
+    {
+      id: "Q937$82a82f75-4bec-3e40-3538-424efa2918ab",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "5698",
+        },
+
+        property: "P13153",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P13166: [
+    {
+      id: "Q937$8DA39E16-4D5B-4E6E-BAE2-715ADC9BFF2D",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "144964",
+        },
+
+        property: "P13166",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P13183: [
+    {
+      id: "Q937$C3AA622F-BE01-4CC6-9877-77908BD2E6F9",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "118529579",
+        },
+
+        property: "P13183",
         snaktype: "value",
       },
       rank: "normal",
@@ -16802,18 +6120,6 @@ const lottaClaims = {
         snaktype: "value",
       },
       qualifiers: {
-        P958: [
-          {
-            datatype: "string",
-            datavalue: {
-              type: "string",
-              value: "Albert Einstein",
-            },
-
-            property: "P958",
-            snaktype: "value",
-          },
-        ],
         P2699: [
           {
             datatype: "url",
@@ -16824,6 +6130,18 @@ const lottaClaims = {
             },
 
             property: "P2699",
+            snaktype: "value",
+          },
+        ],
+        P958: [
+          {
+            datatype: "string",
+            datavalue: {
+              type: "string",
+              value: "Albert Einstein",
+            },
+
+            property: "P958",
             snaktype: "value",
           },
         ],
@@ -17141,6 +6459,18 @@ const lottaClaims = {
       references: [
         {
           snaks: {
+            P1932: [
+              {
+                datatype: "string",
+                datavalue: {
+                  type: "string",
+                  value: "Einstein Albert (1879)",
+                },
+
+                property: "P1932",
+                snaktype: "value",
+              },
+            ],
             P854: [
               {
                 datatype: "url",
@@ -17151,18 +6481,6 @@ const lottaClaims = {
                 },
 
                 property: "P854",
-                snaktype: "value",
-              },
-            ],
-            P1932: [
-              {
-                datatype: "string",
-                datavalue: {
-                  type: "string",
-                  value: "Einstein Albert (1879)",
-                },
-
-                property: "P1932",
                 snaktype: "value",
               },
             ],
@@ -17415,6 +6733,377 @@ const lottaClaims = {
         snaktype: "value",
       },
       rank: "normal",
+      type: "statement",
+    },
+  ],
+  P140: [
+    {
+      id: "Q937$a7471c5f-03f0-4342-87a4-4c532f8db1ce",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q7066",
+            "numeric-id": 7066,
+          },
+        },
+
+        property: "P140",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P1310: [
+          {
+            datatype: "wikibase-item",
+            datavalue: {
+              type: "wikibase-entityid",
+              value: {
+                "entity-type": "item",
+                id: "Q937",
+                "numeric-id": 937,
+              },
+            },
+
+            property: "P1310",
+            snaktype: "value",
+          },
+        ],
+        P805: [
+          {
+            datatype: "wikibase-item",
+            datavalue: {
+              type: "wikibase-entityid",
+              value: {
+                "entity-type": "item",
+                id: "Q7311409",
+                "numeric-id": 7311409,
+              },
+            },
+
+            property: "P805",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P805", "P1310"],
+      rank: "deprecated",
+      references: [
+        {
+          snaks: {
+            P143: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q206855",
+                    "numeric-id": 206855,
+                  },
+                },
+
+                property: "P143",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2018-12-20T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P143", "P813"],
+        },
+      ],
+      type: "statement",
+    },
+    {
+      id: "Q937$0624c045-4731-1792-d116-ade653e359e3",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q288928",
+            "numeric-id": 288928,
+          },
+        },
+
+        property: "P140",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P3680: [
+          {
+            datatype: "wikibase-item",
+            datavalue: {
+              type: "wikibase-entityid",
+              value: {
+                "entity-type": "item",
+                id: "Q937",
+                "numeric-id": 937,
+              },
+            },
+
+            property: "P3680",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P3680"],
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P1476: [
+              {
+                datatype: "monolingualtext",
+                datavalue: {
+                  type: "monolingualtext",
+                  value: {
+                    language: "en",
+                    text: "Letter to M. Berkowitz, 25 October 1950",
+                  },
+                },
+
+                property: "P1476",
+                snaktype: "value",
+              },
+            ],
+            P50: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q937",
+                    "numeric-id": 937,
+                  },
+                },
+
+                property: "P50",
+                snaktype: "value",
+              },
+            ],
+            P854: [
+              {
+                datatype: "url",
+                datavalue: {
+                  type: "string",
+                  value:
+                    "http://farm3.static.flickr.com/2687/4496554935_0b573db853_o.jpg",
+                },
+
+                property: "P854",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P854", "P1476", "P50"],
+        },
+      ],
+      type: "statement",
+    },
+    {
+      id: "Q937$3dfedb25-4d1a-954c-3b1e-e2ce2f5c08a3",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q9268",
+            "numeric-id": 9268,
+          },
+        },
+
+        property: "P140",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P582: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 9,
+                time: "+1891-00-00T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P582",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P582"],
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P1476: [
+              {
+                datatype: "monolingualtext",
+                datavalue: {
+                  type: "monolingualtext",
+                  value: {
+                    language: "en",
+                    text: "Albert Einstein: Notes for an Autobiography",
+                  },
+                },
+
+                property: "P1476",
+                snaktype: "value",
+              },
+            ],
+            P50: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q937",
+                    "numeric-id": 937,
+                  },
+                },
+
+                property: "P50",
+                snaktype: "value",
+              },
+            ],
+            P577: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 9,
+                    time: "+1949-00-00T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P577",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2019-03-07T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+            P854: [
+              {
+                datatype: "url",
+                datavalue: {
+                  type: "string",
+                  value:
+                    "https://archive.org/details/EinsteinAutobiography/page/n1",
+                },
+
+                property: "P854",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P854", "P50", "P1476", "P577", "P813"],
+        },
+      ],
+      type: "statement",
+    },
+    {
+      id: "Q937$41e48a33-49ad-5d99-b8ac-eb093e1778b0",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q728455",
+            "numeric-id": 728455,
+          },
+        },
+
+        property: "P140",
+        snaktype: "value",
+      },
+      rank: "preferred",
+      references: [
+        {
+          snaks: {
+            P1476: [
+              {
+                datatype: "monolingualtext",
+                datavalue: {
+                  type: "monolingualtext",
+                  value: {
+                    language: "en",
+                    text: "Brian, Dennis (1996), Einstein: A Life, New York: John Wiley & Sons, p. 127, ISBN 0-471-11459-6",
+                  },
+                },
+
+                property: "P1476",
+                snaktype: "value",
+              },
+            ],
+            P854: [
+              {
+                datatype: "url",
+                datavalue: {
+                  type: "string",
+                  value:
+                    "https://he.wikipedia.org/wiki/%D7%90%D7%9C%D7%91%D7%A8%D7%98_%D7%90%D7%99%D7%99%D7%A0%D7%A9%D7%98%D7%99%D7%99%D7%9F",
+                },
+
+                property: "P854",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P854", "P1476"],
+        },
+      ],
       type: "statement",
     },
   ],
@@ -18567,6 +8256,1342 @@ const lottaClaims = {
       type: "statement",
     },
   ],
+  P166: [
+    {
+      id: "q937$806C056A-5BBC-4BF5-A8E3-8100E68321AE",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q808424",
+            "numeric-id": 808424,
+          },
+        },
+
+        property: "P166",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P585: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 9,
+                time: "+1920-00-00T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P585",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P585"],
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "q937$67E83EE7-ED3E-44D3-9989-9792CEC63F63",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q38104",
+            "numeric-id": 38104,
+          },
+        },
+
+        property: "P166",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P2121: [
+          {
+            datatype: "quantity",
+            datavalue: {
+              type: "quantity",
+              value: {
+                amount: "+121573",
+                unit: "http://www.wikidata.org/entity/Q122922",
+              },
+            },
+
+            property: "P2121",
+            snaktype: "value",
+          },
+        ],
+        P585: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 9,
+                time: "+1921-00-00T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P585",
+            snaktype: "value",
+          },
+        ],
+        P6208: [
+          {
+            datatype: "monolingualtext",
+            datavalue: {
+              type: "monolingualtext",
+              value: {
+                language: "en",
+                text: "for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect",
+              },
+            },
+
+            property: "P6208",
+            snaktype: "value",
+          },
+          {
+            datatype: "monolingualtext",
+            datavalue: {
+              type: "monolingualtext",
+              value: {
+                language: "sv",
+                text: "för hans förtjänster om den teoretiska fysiken, särskilt hans upptäckt av lagen för den fotoelektriska effekten",
+              },
+            },
+
+            property: "P6208",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P585", "P2121", "P6208"],
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P123: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q1781959",
+                    "numeric-id": 1781959,
+                  },
+                },
+
+                property: "P123",
+                snaktype: "value",
+              },
+            ],
+            P1476: [
+              {
+                datatype: "monolingualtext",
+                datavalue: {
+                  type: "monolingualtext",
+                  value: {
+                    language: "en",
+                    text: "The Nobel Prize in Physics 1921",
+                  },
+                },
+
+                property: "P1476",
+                snaktype: "value",
+              },
+            ],
+            P407: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q1860",
+                    "numeric-id": 1860,
+                  },
+                },
+
+                property: "P407",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2015-08-03T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+            P854: [
+              {
+                datatype: "url",
+                datavalue: {
+                  type: "string",
+                  value:
+                    "http://www.nobelprize.org/nobel_prizes/physics/laureates/1921/index.html",
+                },
+
+                property: "P854",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P854", "P813", "P123", "P407", "P1476"],
+        },
+        {
+          snaks: {
+            P1476: [
+              {
+                datatype: "monolingualtext",
+                datavalue: {
+                  type: "monolingualtext",
+                  value: {
+                    language: "en",
+                    text: "The Nobel Prize amounts",
+                  },
+                },
+
+                property: "P1476",
+                snaktype: "value",
+              },
+            ],
+            P854: [
+              {
+                datatype: "url",
+                datavalue: {
+                  type: "string",
+                  value:
+                    "https://www.nobelprize.org/nobel_prizes/about/amounts/",
+                },
+
+                property: "P854",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P854", "P1476"],
+        },
+      ],
+      type: "statement",
+    },
+    {
+      id: "q937$734E469F-1D50-4391-A16E-0E9C2F478D6B",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q753072",
+            "numeric-id": 753072,
+          },
+        },
+
+        property: "P166",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P585: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 9,
+                time: "+1926-01-01T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P585",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P585"],
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "q937$F95226FF-1F1D-4A08-B320-9D03DBD6293B",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q1711648",
+            "numeric-id": 1711648,
+          },
+        },
+
+        property: "P166",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P585: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 9,
+                time: "+1931-01-01T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P585",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P585"],
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "q937$000BA6F7-4B85-47CA-ACF6-89590095E5E4",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q1419938",
+            "numeric-id": 1419938,
+          },
+        },
+
+        property: "P166",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P585: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 9,
+                time: "+1921-01-01T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P585",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P585"],
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "q937$70EC89C2-21BF-486F-A1A1-0EFC53D8F358",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q317038",
+            "numeric-id": 317038,
+          },
+        },
+
+        property: "P166",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P585: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 9,
+                time: "+1929-01-01T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P585",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P585"],
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "q937$4325B997-108F-4715-931E-005AC54CEAFB",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q3141777",
+            "numeric-id": 3141777,
+          },
+        },
+
+        property: "P166",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P585: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 9,
+                time: "+1935-01-01T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P585",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P585"],
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "q937$FDB4C682-E267-4D26-8668-72EC724BCAB4",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q28003",
+            "numeric-id": 28003,
+          },
+        },
+
+        property: "P166",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P585: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 9,
+                time: "+1925-01-01T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P585",
+            snaktype: "value",
+          },
+        ],
+        P6208: [
+          {
+            datatype: "monolingualtext",
+            datavalue: {
+              type: "monolingualtext",
+              value: {
+                language: "en",
+                text: "For his theory of relativity and his contributions to the quantum theory.",
+              },
+            },
+
+            property: "P6208",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P585", "P6208"],
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P123: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q123885",
+                    "numeric-id": 123885,
+                  },
+                },
+
+                property: "P123",
+                snaktype: "value",
+              },
+            ],
+            P1476: [
+              {
+                datatype: "monolingualtext",
+                datavalue: {
+                  type: "monolingualtext",
+                  value: {
+                    language: "en",
+                    text: "Award winners : Copley Medal",
+                  },
+                },
+
+                property: "P1476",
+                snaktype: "value",
+              },
+            ],
+            P407: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q1860",
+                    "numeric-id": 1860,
+                  },
+                },
+
+                property: "P407",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2018-12-30T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+            P854: [
+              {
+                datatype: "url",
+                datavalue: {
+                  type: "string",
+                  value:
+                    "https://docs.google.com/spreadsheets/d/1dsunM9ukGLgaW3HdG9cvJ_QKd7pWjGI0qi_fCb1ROD4/pubhtml?gid=1336391689&single=true",
+                },
+
+                property: "P854",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P854", "P1476", "P123", "P407", "P813"],
+        },
+      ],
+      type: "statement",
+    },
+    {
+      id: "Q937$73C644B6-22F2-4AE9-9C42-0C3AAA545004",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q15056034",
+            "numeric-id": 15056034,
+          },
+        },
+
+        property: "P166",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$F4BB8E43-FF0A-4FD9-8F49-D64E385A0C1C",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q1522873",
+            "numeric-id": 1522873,
+          },
+        },
+
+        property: "P166",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P585: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 9,
+                time: "+1934-01-01T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P585",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P585"],
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$e9700a38-4bc4-0be6-f494-09494f09bb04",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q25287226",
+            "numeric-id": 25287226,
+          },
+        },
+
+        property: "P166",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$24c2aaa7-4417-8642-9e39-61d25e275787",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q28861731",
+            "numeric-id": 28861731,
+          },
+        },
+
+        property: "P166",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P585: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 9,
+                time: "+1949-00-00T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P585",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P585"],
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P1476: [
+              {
+                datatype: "monolingualtext",
+                datavalue: {
+                  type: "monolingualtext",
+                  value: {
+                    language: "en",
+                    text: "The Hebrew University awards honorary degrees",
+                  },
+                },
+
+                property: "P1476",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2017-03-06T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+            P854: [
+              {
+                datatype: "url",
+                datavalue: {
+                  type: "string",
+                  value:
+                    "http://www3.huji.ac.il/htbin/hon_doc/doc_search.pl?search",
+                },
+
+                property: "P854",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P854", "P813", "P1476"],
+        },
+      ],
+      type: "statement",
+    },
+    {
+      id: "Q937$d2dcd59a-4529-1c8c-85b4-8b2ce182f8b2",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q42309226",
+            "numeric-id": 42309226,
+          },
+        },
+
+        property: "P166",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$2323D34A-12CA-41D9-8B48-A6AF21145A5B",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q50621171",
+            "numeric-id": 50621171,
+          },
+        },
+
+        property: "P166",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P585: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 9,
+                time: "+1923-00-00T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P585",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P585"],
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$7D740CE6-4FEC-4C62-9672-F5484E7426B7",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q14906020",
+            "numeric-id": 14906020,
+          },
+        },
+
+        property: "P166",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P585: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 11,
+                time: "+1921-05-05T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P585",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P585"],
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q111806251",
+                    "numeric-id": 111806251,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P304: [
+              {
+                datatype: "string",
+                datavalue: {
+                  type: "string",
+                  value: "110",
+                },
+
+                property: "P304",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P304"],
+        },
+      ],
+      type: "statement",
+    },
+    {
+      id: "Q937$2870b88e-4ae5-3ec2-52d0-4d20cc7f10c8",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q63315195",
+            "numeric-id": 63315195,
+          },
+        },
+
+        property: "P166",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P585: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 9,
+                time: "+1942-00-00T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P585",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P585"],
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$A307E274-1A71-4231-A723-127A27967F1B",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q121359767",
+            "numeric-id": 121359767,
+          },
+        },
+
+        property: "P166",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P585: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 9,
+                time: "+2009-00-00T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P585",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P585"],
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P854: [
+              {
+                datatype: "url",
+                datavalue: {
+                  type: "string",
+                  value:
+                    "https://www.carnegie.org/awards/great-immigrants/2009-great-immigrants/",
+                },
+
+                property: "P854",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P854"],
+        },
+      ],
+      type: "statement",
+    },
+    {
+      id: "Q937$8951b01c-43ef-2921-df1a-35540e924f43",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q156478",
+            "numeric-id": 156478,
+          },
+        },
+
+        property: "P166",
+        snaktype: "value",
+      },
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P143: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q58251",
+                    "numeric-id": 58251,
+                  },
+                },
+
+                property: "P143",
+                snaktype: "value",
+              },
+            ],
+            P4656: [
+              {
+                datatype: "url",
+                datavalue: {
+                  type: "string",
+                  value: "https://az.wikipedia.org/?oldid=7441143",
+                },
+
+                property: "P4656",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P143", "P4656"],
+        },
+      ],
+      type: "statement",
+    },
+    {
+      id: "Q937$1D4DBBB0-E023-4F6C-9B88-4C38DB0CC289",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q125121451",
+            "numeric-id": 125121451,
+          },
+        },
+
+        property: "P166",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P580: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 9,
+                time: "+1924-00-00T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P580",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P580"],
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P854: [
+              {
+                datatype: "url",
+                datavalue: {
+                  type: "string",
+                  value:
+                    "https://www.royalsociety.org.nz/who-we-are/our-people/our-fellows/all-honorary-fellows/",
+                },
+
+                property: "P854",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P854"],
+        },
+      ],
+      type: "statement",
+    },
+    {
+      id: "Q937$65aa4447-439c-0e46-3c61-717c07fa290e",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q126418747",
+            "numeric-id": 126418747,
+          },
+        },
+
+        property: "P166",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P585: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 9,
+                time: "+1928-00-00T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P585",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P585"],
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P1476: [
+              {
+                datatype: "monolingualtext",
+                datavalue: {
+                  type: "monolingualtext",
+                  value: {
+                    language: "fr",
+                    text: "Liste des docteurs honoris causa de l'Université de Paris de 1918 à 1933 inclus",
+                  },
+                },
+
+                property: "P1476",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q105750302",
+                    "numeric-id": 105750302,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P304: [
+              {
+                datatype: "string",
+                datavalue: {
+                  type: "string",
+                  value: "90-95",
+                },
+
+                property: "P304",
+                snaktype: "value",
+              },
+            ],
+            P433: [
+              {
+                datatype: "string",
+                datavalue: {
+                  type: "string",
+                  value: "1",
+                },
+
+                property: "P433",
+                snaktype: "value",
+              },
+            ],
+            P478: [
+              {
+                datatype: "string",
+                datavalue: {
+                  type: "string",
+                  value: "9",
+                },
+
+                property: "P478",
+                snaktype: "value",
+              },
+            ],
+            P577: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 9,
+                    time: "+1934-00-00T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P577",
+                snaktype: "value",
+              },
+            ],
+            P854: [
+              {
+                datatype: "url",
+                datavalue: {
+                  type: "string",
+                  value:
+                    "https://gallica.bnf.fr/ark:/12148/bpt6k93885z/f95.item",
+                },
+
+                property: "P854",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": [
+            "P248",
+            "P577",
+            "P1476",
+            "P304",
+            "P478",
+            "P433",
+            "P854",
+          ],
+        },
+      ],
+      type: "statement",
+    },
+    {
+      id: "Q937$69c0e08d-46f8-6373-d58d-9b96315999f7",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q14705795",
+            "numeric-id": 14705795,
+          },
+        },
+
+        property: "P166",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P585: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 9,
+                time: "+2008-00-00T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P585",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P585"],
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P854: [
+              {
+                datatype: "url",
+                datavalue: {
+                  type: "string",
+                  value:
+                    "https://njhalloffame.org/hall-of-famers/2008-inductees/albert-einstein/",
+                },
+
+                property: "P854",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P854"],
+        },
+      ],
+      type: "statement",
+    },
+  ],
   P1670: [
     {
       id: "Q937$1fbbf23d-412e-528a-fb55-400e25b1cddc",
@@ -18615,6 +9640,69 @@ const lottaClaims = {
         snaktype: "value",
       },
       rank: "normal",
+      type: "statement",
+    },
+  ],
+  P172: [
+    {
+      id: "Q937$4AC1D270-BB85-42E6-9F2C-AF1A0A283399",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q7325",
+            "numeric-id": 7325,
+          },
+        },
+
+        property: "P172",
+        snaktype: "value",
+      },
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P143: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q206855",
+                    "numeric-id": 206855,
+                  },
+                },
+
+                property: "P143",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2018-12-20T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P143", "P813"],
+        },
+      ],
       type: "statement",
     },
   ],
@@ -18803,6 +9891,304 @@ const lottaClaims = {
         },
 
         property: "P1819",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P184: [
+    {
+      id: "Q937$99734d53-47c3-cc4b-580e-784486517d39",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q4175282",
+            "numeric-id": 4175282,
+          },
+        },
+
+        property: "P184",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P3831: [
+          {
+            datatype: "wikibase-item",
+            datavalue: {
+              type: "wikibase-entityid",
+              value: {
+                "entity-type": "item",
+                id: "Q26236695",
+                "numeric-id": 26236695,
+              },
+            },
+
+            property: "P3831",
+            snaktype: "value",
+          },
+        ],
+        P585: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 9,
+                time: "+1905-00-00T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P585",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P3831", "P585"],
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P1476: [
+              {
+                datatype: "monolingualtext",
+                datavalue: {
+                  type: "monolingualtext",
+                  value: {
+                    language: "de",
+                    text: "Eine neue Bestimmung der MoleküldimensionenMathematics Subject Classification: 70—Mechanics of particles and systems",
+                  },
+                },
+
+                property: "P1476",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q829984",
+                    "numeric-id": 829984,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P549: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "53269",
+                },
+
+                property: "P549",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2019-12-15T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P549", "P813", "P1476"],
+        },
+      ],
+      type: "statement",
+    },
+    {
+      id: "Q937$e3d28962-43ab-c2d8-e4d6-8284b893dff9",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q97154",
+            "numeric-id": 97154,
+          },
+        },
+
+        property: "P184",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P3831: [
+          {
+            datatype: "wikibase-item",
+            datavalue: {
+              type: "wikibase-entityid",
+              value: {
+                "entity-type": "item",
+                id: "Q26236691",
+                "numeric-id": 26236691,
+              },
+            },
+
+            property: "P3831",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P3831"],
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P1476: [
+              {
+                datatype: "monolingualtext",
+                datavalue: {
+                  type: "monolingualtext",
+                  value: {
+                    language: "de",
+                    text: "Eine neue Bestimmung der MoleküldimensionenMathematics Subject Classification: 70—Mechanics of particles and systems",
+                  },
+                },
+
+                property: "P1476",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q829984",
+                    "numeric-id": 829984,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P549: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "53269",
+                },
+
+                property: "P549",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2019-12-15T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P549", "P813", "P1476"],
+        },
+      ],
+      type: "statement",
+    },
+    {
+      id: "Q937$61A00029-3304-45D0-AF63-38B5696AAAF5",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q116635",
+            "numeric-id": 116635,
+          },
+        },
+
+        property: "P184",
+        snaktype: "value",
+      },
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P3452: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q116635",
+                    "numeric-id": 116635,
+                  },
+                },
+
+                property: "P3452",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P3452"],
+        },
+      ],
+      type: "statement",
+    },
+  ],
+  P185: [
+    {
+      id: "Q937$69D2AFE4-D430-4B01-8138-E38CF21B928D",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q153238",
+            "numeric-id": 153238,
+          },
+        },
+
+        property: "P185",
         snaktype: "value",
       },
       rank: "normal",
@@ -19144,6 +10530,435 @@ const lottaClaims = {
       type: "statement",
     },
   ],
+  P21: [
+    {
+      id: "Q937$BA154D92-7A34-4E9F-A2CD-F7B750D24EFA",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q6581097",
+            "numeric-id": 6581097,
+          },
+        },
+
+        property: "P21",
+        snaktype: "value",
+      },
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q19938912",
+                    "numeric-id": 19938912,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P268: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "119016075",
+                },
+
+                property: "P268",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2015-10-10T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P268", "P813"],
+        },
+        {
+          snaks: {
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q23667505",
+                    "numeric-id": 23667505,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P2861: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "1215",
+                },
+
+                property: "P2861",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2019-06-19T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P2861", "P813"],
+        },
+        {
+          snaks: {
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q77541206",
+                    "numeric-id": 77541206,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P7796: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "3852",
+                },
+
+                property: "P7796",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2021-02-13T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P7796", "P813"],
+        },
+        {
+          snaks: {
+            P227: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "118529579",
+                },
+
+                property: "P227",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q36578",
+                    "numeric-id": 36578,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2024-07-09T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P227", "P813"],
+        },
+      ],
+      type: "statement",
+    },
+  ],
+  P213: [
+    {
+      id: "Q937$013D02A7-5EDB-4F4F-B73E-CA4DC7BD4C78",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "000000012281955X",
+        },
+
+        property: "P213",
+        snaktype: "value",
+      },
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P214: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "75121530",
+                },
+
+                property: "P214",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q54919",
+                    "numeric-id": 54919,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P854: [
+              {
+                datatype: "url",
+                datavalue: {
+                  type: "string",
+                  value: "https://viaf.org/hosted/xa/2367/",
+                },
+
+                property: "P854",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P214", "P854"],
+        },
+      ],
+      type: "statement",
+    },
+  ],
+  P214: [
+    {
+      id: "q937$B7F821E9-5E5C-4D51-A153-4CA8A47B6941",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "75121530",
+        },
+
+        property: "P214",
+        snaktype: "value",
+      },
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P143: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q328",
+                    "numeric-id": 328,
+                  },
+                },
+
+                property: "P143",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P143"],
+        },
+        {
+          snaks: {
+            P143: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q48183",
+                    "numeric-id": 48183,
+                  },
+                },
+
+                property: "P143",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P143"],
+        },
+        {
+          snaks: {
+            P143: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q8447",
+                    "numeric-id": 8447,
+                  },
+                },
+
+                property: "P143",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P143"],
+        },
+        {
+          snaks: {
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q77541206",
+                    "numeric-id": 77541206,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P7796: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "3852",
+                },
+
+                property: "P7796",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2021-02-13T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P7796", "P813"],
+        },
+      ],
+      type: "statement",
+    },
+  ],
   P2163: [
     {
       id: "Q937$69e5db09-44d7-fa1e-5a07-4c29e593cdda",
@@ -19210,6 +11025,98 @@ const lottaClaims = {
       type: "statement",
     },
   ],
+  P227: [
+    {
+      id: "Q937$5780ABCF-2F30-4613-B043-1FB2C8482C7D",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "118529579",
+        },
+
+        property: "P227",
+        snaktype: "value",
+      },
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P143: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q15156406",
+                    "numeric-id": 15156406,
+                  },
+                },
+
+                property: "P143",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P143"],
+        },
+        {
+          snaks: {
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q77541206",
+                    "numeric-id": 77541206,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P7796: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "3852",
+                },
+
+                property: "P7796",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2021-02-13T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P7796", "P813"],
+        },
+      ],
+      type: "statement",
+    },
+  ],
   P2381: [
     {
       id: "Q937$904ad087-403d-f047-b8dd-51e108dd8a69",
@@ -19261,6 +11168,159 @@ const lottaClaims = {
       type: "statement",
     },
   ],
+  P244: [
+    {
+      id: "q937$9BA2796D-01EE-4037-9910-029BA945CABA",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "n79022889",
+        },
+
+        property: "P244",
+        snaktype: "value",
+      },
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P143: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q328",
+                    "numeric-id": 328,
+                  },
+                },
+
+                property: "P143",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P143"],
+        },
+        {
+          snaks: {
+            P143: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q48183",
+                    "numeric-id": 48183,
+                  },
+                },
+
+                property: "P143",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P143"],
+        },
+        {
+          snaks: {
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q77541206",
+                    "numeric-id": 77541206,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P7796: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "3852",
+                },
+
+                property: "P7796",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2021-02-13T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P7796", "P813"],
+        },
+      ],
+      type: "statement",
+    },
+  ],
+  P245: [
+    {
+      id: "Q937$F735494D-7107-40C3-B9DE-75F9595E70BB",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "500240971",
+        },
+
+        property: "P245",
+        snaktype: "value",
+      },
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P143: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q328",
+                    "numeric-id": 328,
+                  },
+                },
+
+                property: "P143",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P143"],
+        },
+      ],
+      type: "statement",
+    },
+  ],
   P2454: [
     {
       id: "Q937$32E97C2E-E7CF-4DCD-883C-668FC609B6DA",
@@ -19292,6 +11352,296 @@ const lottaClaims = {
         snaktype: "value",
       },
       rank: "normal",
+      type: "statement",
+    },
+  ],
+  P25: [
+    {
+      id: "Q937$7c2193c0-4c6d-8884-4bf9-9d86dfdc7db6",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q4357787",
+            "numeric-id": 4357787,
+          },
+        },
+
+        property: "P25",
+        snaktype: "value",
+      },
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P143: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q328",
+                    "numeric-id": 328,
+                  },
+                },
+
+                property: "P143",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P143"],
+        },
+      ],
+      type: "statement",
+    },
+  ],
+  P26: [
+    {
+      id: "q937$C6422D5D-6B13-4626-AEE3-60A30E0C2C85",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q76346",
+            "numeric-id": 76346,
+          },
+        },
+
+        property: "P26",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P2842: [
+          {
+            datatype: "wikibase-item",
+            datavalue: {
+              type: "wikibase-entityid",
+              value: {
+                "entity-type": "item",
+                id: "Q70",
+                "numeric-id": 70,
+              },
+            },
+
+            property: "P2842",
+            snaktype: "value",
+          },
+        ],
+        P580: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 11,
+                time: "+1903-01-16T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P580",
+            snaktype: "value",
+          },
+        ],
+        P582: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 11,
+                time: "+1919-02-14T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P582",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P580", "P582", "P2842"],
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P227: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "118529579",
+                },
+
+                property: "P227",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q23833686",
+                    "numeric-id": 23833686,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2024-05-03T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P227", "P248", "P813"],
+        },
+      ],
+      type: "statement",
+    },
+    {
+      id: "q937$881C4FA7-075C-4D48-8182-77D69CA6309C",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q68761",
+            "numeric-id": 68761,
+          },
+        },
+
+        property: "P26",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P580: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 9,
+                time: "+1919-01-01T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P580",
+            snaktype: "value",
+          },
+        ],
+        P582: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 11,
+                time: "+1936-12-20T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P582",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P580", "P582"],
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P227: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "118529579",
+                },
+
+                property: "P227",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q23833686",
+                    "numeric-id": 23833686,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2024-05-03T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P227", "P248", "P813"],
+        },
+      ],
       type: "statement",
     },
   ],
@@ -19434,6 +11784,923 @@ const lottaClaims = {
             ],
           },
           "snaks-order": ["P248", "P813"],
+        },
+      ],
+      type: "statement",
+    },
+  ],
+  P268: [
+    {
+      id: "q937$D0E13400-F973-43AA-BD39-466EC0C257FF",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "119016075",
+        },
+
+        property: "P268",
+        snaktype: "value",
+      },
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P143: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q8447",
+                    "numeric-id": 8447,
+                  },
+                },
+
+                property: "P143",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P143"],
+        },
+      ],
+      type: "statement",
+    },
+  ],
+  P269: [
+    {
+      id: "q937$14E9B302-D7A0-488D-BB48-DE1A285827A6",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "026849186",
+        },
+
+        property: "P269",
+        snaktype: "value",
+      },
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P143: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q8447",
+                    "numeric-id": 8447,
+                  },
+                },
+
+                property: "P143",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P143"],
+        },
+      ],
+      type: "statement",
+    },
+  ],
+  P27: [
+    {
+      id: "q937$1D589815-A913-4559-94B0-7751C8D4E5FC",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q159631",
+            "numeric-id": 159631,
+          },
+        },
+
+        property: "P27",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P1545: [
+          {
+            datatype: "string",
+            datavalue: {
+              type: "string",
+              value: "1",
+            },
+
+            property: "P1545",
+            snaktype: "value",
+          },
+        ],
+        P580: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 11,
+                time: "+1879-03-14T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P580",
+            snaktype: "value",
+          },
+        ],
+        P582: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 11,
+                time: "+1896-01-28T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P582",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P580", "P582", "P1545"],
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P854: [
+              {
+                datatype: "url",
+                datavalue: {
+                  type: "string",
+                  value:
+                    "https://www.einstein-website.de/z_information/verschiedenes.html",
+                },
+
+                property: "P854",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P854"],
+        },
+        {
+          snaks: {
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q1420342",
+                    "numeric-id": 1420342,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P888: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "795378",
+                },
+
+                property: "P888",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P888"],
+        },
+      ],
+      type: "statement",
+    },
+    {
+      id: "Q937$08f8c47d-4967-1f71-d553-c520c754bb67",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q223050",
+            "numeric-id": 223050,
+          },
+        },
+
+        property: "P27",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P1545: [
+          {
+            datatype: "string",
+            datavalue: {
+              type: "string",
+              value: "2",
+            },
+
+            property: "P1545",
+            snaktype: "value",
+          },
+        ],
+        P580: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 11,
+                time: "+1896-01-28T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P580",
+            snaktype: "value",
+          },
+        ],
+        P582: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 11,
+                time: "+1901-02-21T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P582",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P580", "P582", "P1545"],
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P854: [
+              {
+                datatype: "url",
+                datavalue: {
+                  type: "string",
+                  value:
+                    "http://www.einsteinsommerhaus.de/index.php?id=539&no_cache=1",
+                },
+
+                property: "P854",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P854"],
+        },
+      ],
+      type: "statement",
+    },
+    {
+      id: "Q937$448fdca3-47f1-606c-a42a-f0282cd42a35",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q39",
+            "numeric-id": 39,
+          },
+        },
+
+        property: "P27",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P1545: [
+          {
+            datatype: "string",
+            datavalue: {
+              type: "string",
+              value: "3",
+            },
+
+            property: "P1545",
+            snaktype: "value",
+          },
+        ],
+        P580: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 11,
+                time: "+1901-02-21T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P580",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P580", "P1545"],
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P227: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "118529579",
+                },
+
+                property: "P227",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q23833686",
+                    "numeric-id": 23833686,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2024-05-03T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P227", "P248", "P813"],
+        },
+      ],
+      type: "statement",
+    },
+    {
+      id: "Q937$432f73a4-47a0-0126-1e69-7fa1d3a4a464",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q533534",
+            "numeric-id": 533534,
+          },
+        },
+
+        property: "P27",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P1545: [
+          {
+            datatype: "string",
+            datavalue: {
+              type: "string",
+              value: "4",
+            },
+
+            property: "P1545",
+            snaktype: "value",
+          },
+        ],
+        P580: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 11,
+                time: "+1911-04-01T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P580",
+            snaktype: "value",
+          },
+        ],
+        P582: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 11,
+                time: "+1912-09-30T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P582",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P580", "P582", "P1545"],
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P854: [
+              {
+                datatype: "url",
+                datavalue: {
+                  type: "string",
+                  value:
+                    "https://www.einstein-website.de/z_information/verschiedenes.html",
+                },
+
+                property: "P854",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P854"],
+        },
+      ],
+      type: "statement",
+    },
+    {
+      id: "Q937$0f8b506b-4d1d-e6df-9d86-59cd38512251",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q41304",
+            "numeric-id": 41304,
+          },
+        },
+
+        property: "P27",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P1545: [
+          {
+            datatype: "string",
+            datavalue: {
+              type: "string",
+              value: "5",
+            },
+
+            property: "P1545",
+            snaktype: "value",
+          },
+        ],
+        P580: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 9,
+                time: "+1918-00-00T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P580",
+            snaktype: "value",
+          },
+        ],
+        P582: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 9,
+                time: "+1933-00-00T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P582",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P580", "P582", "P1545"],
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P854: [
+              {
+                datatype: "url",
+                datavalue: {
+                  type: "string",
+                  value: "http://www.einsteinsommerhaus.de/index.php?id=539",
+                },
+
+                property: "P854",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P854"],
+        },
+      ],
+      type: "statement",
+    },
+    {
+      id: "Q937$6b477f22-4d7d-2931-c80a-fb99ebda87ca",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q183",
+            "numeric-id": 183,
+          },
+        },
+
+        property: "P27",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P1545: [
+          {
+            datatype: "string",
+            datavalue: {
+              type: "string",
+              value: "6",
+            },
+
+            property: "P1545",
+            snaktype: "value",
+          },
+        ],
+        P580: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 11,
+                time: "+1933-01-30T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P580",
+            snaktype: "value",
+          },
+        ],
+        P582: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 11,
+                time: "+1933-03-28T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P582",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P580", "P582", "P1545"],
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P854: [
+              {
+                datatype: "url",
+                datavalue: {
+                  type: "string",
+                  value:
+                    "https://newspapers.ushmm.org/events/albert-einstein-quits-germany-renounces-citizenship",
+                },
+
+                property: "P854",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P854"],
+        },
+        {
+          snaks: {
+            P227: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "118529579",
+                },
+
+                property: "P227",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q23833686",
+                    "numeric-id": 23833686,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2024-05-03T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P227", "P248", "P813"],
+        },
+      ],
+      type: "statement",
+    },
+    {
+      id: "Q937$a3f8227b-43bb-9766-6fb0-80aabaaf0eb2",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q30",
+            "numeric-id": 30,
+          },
+        },
+
+        property: "P27",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P1545: [
+          {
+            datatype: "string",
+            datavalue: {
+              type: "string",
+              value: "7",
+            },
+
+            property: "P1545",
+            snaktype: "value",
+          },
+        ],
+        P580: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 11,
+                time: "+1940-10-01T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P580",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P580", "P1545"],
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P854: [
+              {
+                datatype: "url",
+                datavalue: {
+                  type: "string",
+                  value:
+                    "https://www.einstein-website.de/z_information/verschiedenes.html",
+                },
+
+                property: "P854",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P854"],
+        },
+      ],
+      type: "statement",
+    },
+  ],
+  P270: [
+    {
+      id: "Q937$EC244A6E-7F96-46D3-A0A1-0010EB63DDF7",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "n2004370668",
+        },
+
+        property: "P270",
+        snaktype: "value",
+      },
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P143: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q30239",
+                    "numeric-id": 30239,
+                  },
+                },
+
+                property: "P143",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P143"],
+        },
+      ],
+      type: "statement",
+    },
+  ],
+  P271: [
+    {
+      id: "Q937$D1CF45C9-1A07-4B0A-B76D-D730D5CBD3D6",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "DA00708434",
+        },
+
+        property: "P271",
+        snaktype: "value",
+      },
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P11496: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "1140563741718602752",
+                },
+
+                property: "P11496",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q115920372",
+                    "numeric-id": 115920372,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2023-02-17T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P11496", "P813"],
         },
       ],
       type: "statement",
@@ -19704,25 +12971,6 @@ const lottaClaims = {
         snaktype: "value",
       },
       qualifiers: {
-        P585: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 11,
-                time: "+2020-09-28T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P585",
-            snaktype: "value",
-          },
-        ],
         P1810: [
           {
             datatype: "string",
@@ -19747,6 +12995,25 @@ const lottaClaims = {
             },
 
             property: "P3744",
+            snaktype: "value",
+          },
+        ],
+        P585: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 11,
+                time: "+2020-09-28T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P585",
             snaktype: "value",
           },
         ],
@@ -19787,6 +13054,185 @@ const lottaClaims = {
         snaktype: "value",
       },
       rank: "normal",
+      type: "statement",
+    },
+  ],
+  P31: [
+    {
+      id: "Q937$ED5C61AE-EA02-4E78-932B-FF21A34714EB",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q5",
+            "numeric-id": 5,
+          },
+        },
+
+        property: "P31",
+        snaktype: "value",
+      },
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q19938912",
+                    "numeric-id": 19938912,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P268: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "119016075",
+                },
+
+                property: "P268",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2015-10-10T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P268", "P813"],
+        },
+        {
+          snaks: {
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q77541206",
+                    "numeric-id": 77541206,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P7796: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "3852",
+                },
+
+                property: "P7796",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2021-02-13T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P7796", "P813"],
+        },
+        {
+          snaks: {
+            P227: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "118529579",
+                },
+
+                property: "P227",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q23833686",
+                    "numeric-id": 23833686,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2024-05-03T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P227", "P248", "P813"],
+        },
+      ],
       type: "statement",
     },
   ],
@@ -19957,6 +13403,18 @@ const lottaClaims = {
                 snaktype: "value",
               },
             ],
+            P7796: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "3852",
+                },
+
+                property: "P7796",
+                snaktype: "value",
+              },
+            ],
             P813: [
               {
                 datatype: "time",
@@ -19973,18 +13431,6 @@ const lottaClaims = {
                 },
 
                 property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P7796: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "3852",
-                },
-
-                property: "P7796",
                 snaktype: "value",
               },
             ],
@@ -20154,6 +13600,63 @@ const lottaClaims = {
       type: "statement",
     },
   ],
+  P345: [
+    {
+      id: "Q937$aca1fb0d-4a60-93ee-95d9-f59f0f376b19",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "nm0251868",
+        },
+
+        property: "P345",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P349: [
+    {
+      id: "q937$F926A784-7C6D-48EB-A49B-E096AEC46FCD",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "00438728",
+        },
+
+        property: "P349",
+        snaktype: "value",
+      },
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P143: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q48183",
+                    "numeric-id": 48183,
+                  },
+                },
+
+                property: "P143",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P143"],
+        },
+      ],
+      type: "statement",
+    },
+  ],
   P3569: [
     {
       id: "Q937$712A7500-1C0F-40AE-AF07-017B524A0838",
@@ -20182,6 +13685,23 @@ const lottaClaims = {
         },
 
         property: "P3630",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P373: [
+    {
+      id: "q937$2F332903-133D-4CA0-AD24-8B4292C2BF89",
+      mainsnak: {
+        datatype: "string",
+        datavalue: {
+          type: "string",
+          value: "Albert Einstein",
+        },
+
+        property: "P373",
         snaktype: "value",
       },
       rank: "normal",
@@ -20256,6 +13776,72 @@ const lottaClaims = {
       type: "statement",
     },
   ],
+  P39: [
+    {
+      id: "Q937$ba274185-377e-4c3d-8bb3-a2d513791797",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q121594",
+            "numeric-id": 121594,
+          },
+        },
+
+        property: "P39",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P580: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 9,
+                time: "+1911-00-00T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P580",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P580"],
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P143: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q181163",
+                    "numeric-id": 181163,
+                  },
+                },
+
+                property: "P143",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P143"],
+        },
+      ],
+      type: "statement",
+    },
+  ],
   P3909: [
     {
       id: "Q937$d42de8c6-41af-4967-8792-4a6686c6461d",
@@ -20327,6 +13913,92 @@ const lottaClaims = {
       type: "statement",
     },
   ],
+  P396: [
+    {
+      id: "Q937$A6CF3E97-B780-449A-92D9-7550A687AFD4",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "CFIV035853",
+        },
+
+        property: "P396",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P1810: [
+          {
+            datatype: "string",
+            datavalue: {
+              type: "string",
+              value: "Einstein, Albert",
+            },
+
+            property: "P1810",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P1810"],
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q77541206",
+                    "numeric-id": 77541206,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P7796: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "3852",
+                },
+
+                property: "P7796",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2021-02-13T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P7796", "P813"],
+        },
+      ],
+      type: "statement",
+    },
+  ],
   P3965: [
     {
       id: "Q937$47C7DD6F-77FD-4105-9041-2814BE6D9F6D",
@@ -20361,6 +14033,196 @@ const lottaClaims = {
       type: "statement",
     },
   ],
+  P40: [
+    {
+      id: "q937$E06622DC-565F-4DCA-8AAF-FD27B149272A",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q123371",
+            "numeric-id": 123371,
+          },
+        },
+
+        property: "P40",
+        snaktype: "value",
+      },
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P227: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "118529579",
+                },
+
+                property: "P227",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q23833686",
+                    "numeric-id": 23833686,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2024-05-03T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P227", "P248", "P813"],
+        },
+      ],
+      type: "statement",
+    },
+    {
+      id: "q937$23EEE6B9-9930-44E1-99DF-98FC953F2A9F",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q118253",
+            "numeric-id": 118253,
+          },
+        },
+
+        property: "P40",
+        snaktype: "value",
+      },
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P227: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "118529579",
+                },
+
+                property: "P227",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q23833686",
+                    "numeric-id": 23833686,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2024-05-03T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P227", "P248", "P813"],
+        },
+      ],
+      type: "statement",
+    },
+    {
+      id: "q937$6F89DFD4-2E96-457E-BF94-7BC98185C8DD",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q468357",
+            "numeric-id": 468357,
+          },
+        },
+
+        property: "P40",
+        snaktype: "value",
+      },
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P143: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q328",
+                    "numeric-id": 328,
+                  },
+                },
+
+                property: "P143",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P143"],
+        },
+      ],
+      type: "statement",
+    },
+  ],
   P4012: [
     {
       id: "Q937$4cfba186-48f1-155d-fbb6-0a5acf2f7dbe",
@@ -20375,6 +14237,46 @@ const lottaClaims = {
         snaktype: "value",
       },
       rank: "normal",
+      type: "statement",
+    },
+  ],
+  P409: [
+    {
+      id: "Q937$A42E665D-E820-42D7-BEF1-7E06A8F4F7AA",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "36582360",
+        },
+
+        property: "P409",
+        snaktype: "value",
+      },
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P143: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q328",
+                    "numeric-id": 328,
+                  },
+                },
+
+                property: "P143",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P143"],
+        },
+      ],
       type: "statement",
     },
   ],
@@ -20494,25 +14396,6 @@ const lottaClaims = {
         snaktype: "value",
       },
       qualifiers: {
-        P577: [
-          {
-            datatype: "time",
-            datavalue: {
-              type: "time",
-              value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 9,
-                time: "+1932-01-01T00:00:00Z",
-                timezone: 0,
-              },
-            },
-
-            property: "P577",
-            snaktype: "value",
-          },
-        ],
         P1810: [
           {
             datatype: "string",
@@ -20537,6 +14420,25 @@ const lottaClaims = {
             snaktype: "value",
           },
         ],
+        P577: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 9,
+                time: "+1932-01-01T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P577",
+            snaktype: "value",
+          },
+        ],
       },
       "qualifiers-order": ["P1810", "P2093", "P577"],
       rank: "normal",
@@ -20555,6 +14457,18 @@ const lottaClaims = {
         snaktype: "value",
       },
       qualifiers: {
+        P1810: [
+          {
+            datatype: "string",
+            datavalue: {
+              type: "string",
+              value: "EINSTEIN, Albert",
+            },
+
+            property: "P1810",
+            snaktype: "value",
+          },
+        ],
         P478: [
           {
             datatype: "string",
@@ -20583,18 +14497,6 @@ const lottaClaims = {
             },
 
             property: "P577",
-            snaktype: "value",
-          },
-        ],
-        P1810: [
-          {
-            datatype: "string",
-            datavalue: {
-              type: "string",
-              value: "EINSTEIN, Albert",
-            },
-
-            property: "P1810",
             snaktype: "value",
           },
         ],
@@ -20700,6 +14602,46 @@ const lottaClaims = {
       type: "statement",
     },
   ],
+  P434: [
+    {
+      id: "q937$E0DFBCB9-E69E-4469-A420-60B33E530DC1",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "c98c325e-7277-46e8-8b44-e3517f3e041a",
+        },
+
+        property: "P434",
+        snaktype: "value",
+      },
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q14005",
+                    "numeric-id": 14005,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248"],
+        },
+      ],
+      type: "statement",
+    },
+  ],
   P4342: [
     {
       id: "Q937$A81C7B19-9CE3-4A73-AFD0-E81F5F93E542",
@@ -20767,6 +14709,111 @@ const lottaClaims = {
         snaktype: "value",
       },
       rank: "normal",
+      type: "statement",
+    },
+  ],
+  P443: [
+    {
+      id: "Q937$0aeda9f5-4815-84b9-3711-37cbc130e726",
+      mainsnak: {
+        datatype: "commonsMedia",
+        datavalue: {
+          type: "string",
+          value: "De-Albert Einstein-Pronuciation.ogg",
+        },
+
+        property: "P443",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P407: [
+          {
+            datatype: "wikibase-item",
+            datavalue: {
+              type: "wikibase-entityid",
+              value: {
+                "entity-type": "item",
+                id: "Q188",
+                "numeric-id": 188,
+              },
+            },
+
+            property: "P407",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P407"],
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$a7c5b8f0-a9e4-410b-adb4-d901b227a203",
+      mainsnak: {
+        datatype: "commonsMedia",
+        datavalue: {
+          type: "string",
+          value: "LL-Q34239 (kok)-Fredericknoronha-Albert Einstein.wav",
+        },
+
+        property: "P443",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P407: [
+          {
+            datatype: "wikibase-item",
+            datavalue: {
+              type: "wikibase-entityid",
+              value: {
+                "entity-type": "item",
+                id: "Q34239",
+                "numeric-id": 34239,
+              },
+            },
+
+            property: "P407",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P407"],
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P10369: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "Q700784",
+                },
+
+                property: "P10369",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q60024037",
+                    "numeric-id": 60024037,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P10369"],
+        },
+      ],
       type: "statement",
     },
   ],
@@ -20929,6 +14976,563 @@ const lottaClaims = {
       type: "statement",
     },
   ],
+  P463: [
+    {
+      id: "q937$642B1EBB-AED3-455E-9A3C-B4D8B2664031",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q123885",
+            "numeric-id": 123885,
+          },
+        },
+
+        property: "P463",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$7451E5A0-6E6E-4A82-848B-CE55019A96CD",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q329464",
+            "numeric-id": 329464,
+          },
+        },
+
+        property: "P463",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$882DAFA0-5B20-4620-A4DF-B51A0C556ADF",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q543804",
+            "numeric-id": 543804,
+          },
+        },
+
+        property: "P463",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$552717B0-4610-4F96-A70F-56354F68ED41",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q338432",
+            "numeric-id": 338432,
+          },
+        },
+
+        property: "P463",
+        snaktype: "value",
+      },
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P143: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q11920",
+                    "numeric-id": 11920,
+                  },
+                },
+
+                property: "P143",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P143"],
+        },
+      ],
+      type: "statement",
+    },
+    {
+      id: "Q937$78190F69-14B5-4EF5-86AA-3EE6990850F0",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q466089",
+            "numeric-id": 466089,
+          },
+        },
+
+        property: "P463",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$023CD9AD-8957-4662-A45F-40D69693D7BA",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q684415",
+            "numeric-id": 684415,
+          },
+        },
+
+        property: "P463",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$D3C196C2-1C80-4FDB-BBC1-E3105C9C811F",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q414188",
+            "numeric-id": 414188,
+          },
+        },
+
+        property: "P463",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$0C556605-6B7E-4184-83EC-E95289F6D62A",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q2370801",
+            "numeric-id": 2370801,
+          },
+        },
+
+        property: "P463",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$1E3374B7-2511-4A2B-8791-8088B171C0DC",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q188771",
+            "numeric-id": 188771,
+          },
+        },
+
+        property: "P463",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$613DBC15-8BF9-4C25-B5E1-B12F510C4BF3",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q191583",
+            "numeric-id": 191583,
+          },
+        },
+
+        property: "P463",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$08567CBB-2DE3-4CCD-B10A-72E04E7AA468",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q253439",
+            "numeric-id": 253439,
+          },
+        },
+
+        property: "P463",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$74DCC2BF-C874-4BE6-8A6E-5A1A65279ED6",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q463303",
+            "numeric-id": 463303,
+          },
+        },
+
+        property: "P463",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$F1E10DFB-1C54-474A-BB4C-FEC6FD2DFABF",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q4397938",
+            "numeric-id": 4397938,
+          },
+        },
+
+        property: "P463",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P580: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 9,
+                time: "+1922-00-00T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P580",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P580"],
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$D0DAD5E7-6E01-4F03-928B-8684D26364DA",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q2095524",
+            "numeric-id": 2095524,
+          },
+        },
+
+        property: "P463",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$57ABD98B-0DD1-40D6-9B21-A41B86AC9ABB",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q3603946",
+            "numeric-id": 3603946,
+          },
+        },
+
+        property: "P463",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$2a97ea20-4b54-a2f7-b2aa-682efb715bc2",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q2497232",
+            "numeric-id": 2497232,
+          },
+        },
+
+        property: "P463",
+        snaktype: "value",
+      },
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P854: [
+              {
+                datatype: "url",
+                datavalue: {
+                  type: "string",
+                  value:
+                    "http://www.dichistoriasaude.coc.fiocruz.br/iah/pt/verbetes/acadbrci.htm",
+                },
+
+                property: "P854",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P854"],
+        },
+        {
+          snaks: {
+            P854: [
+              {
+                datatype: "url",
+                datavalue: {
+                  type: "string",
+                  value: "http://www.abc.org.br/membro/albert-einstein/",
+                },
+
+                property: "P854",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P854"],
+        },
+      ],
+      type: "statement",
+    },
+    {
+      id: "Q937$d4cf1f6d-4a4b-992e-4d16-e7db8976dc98",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q270794",
+            "numeric-id": 270794,
+          },
+        },
+
+        property: "P463",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P2868: [
+          {
+            datatype: "wikibase-item",
+            datavalue: {
+              type: "wikibase-entityid",
+              value: {
+                "entity-type": "item",
+                id: "Q61664704",
+                "numeric-id": 61664704,
+              },
+            },
+
+            property: "P2868",
+            snaktype: "value",
+          },
+        ],
+        P580: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 9,
+                time: "+1922-00-00T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P580",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P580", "P2868"],
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$b304cb4c-4594-d3dd-6d10-22602a5238c5",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q270794",
+            "numeric-id": 270794,
+          },
+        },
+
+        property: "P463",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P2868: [
+          {
+            datatype: "wikibase-item",
+            datavalue: {
+              type: "wikibase-entityid",
+              value: {
+                "entity-type": "item",
+                id: "Q63315195",
+                "numeric-id": 63315195,
+              },
+            },
+
+            property: "P2868",
+            snaktype: "value",
+          },
+        ],
+        P580: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 9,
+                time: "+1942-00-00T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P580",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P580", "P2868"],
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$fb68e164-4300-788d-b577-2b38bc419789",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q2945826",
+            "numeric-id": 2945826,
+          },
+        },
+
+        property: "P463",
+        snaktype: "value",
+      },
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P143: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q8447",
+                    "numeric-id": 8447,
+                  },
+                },
+
+                property: "P143",
+                snaktype: "value",
+              },
+            ],
+            P4656: [
+              {
+                datatype: "url",
+                datavalue: {
+                  type: "string",
+                  value:
+                    "https://fr.wikipedia.org/w/index.php?title=Centre_international_de_synth%C3%A8se&oldid=159820946",
+                },
+
+                property: "P4656",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P143", "P4656"],
+        },
+      ],
+      type: "statement",
+    },
+  ],
   P4666: [
     {
       id: "Q937$7595FB9E-2B77-4533-BFAD-63F127634CD5",
@@ -20997,6 +15601,211 @@ const lottaClaims = {
       type: "statement",
     },
   ],
+  P485: [
+    {
+      id: "q937$bfa38bb1-4a58-28da-4662-7123ebe46b5e",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q675617",
+            "numeric-id": 675617,
+          },
+        },
+
+        property: "P485",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$02527dba-46c3-5a8e-076f-102b61f64b7c",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q22095877",
+            "numeric-id": 22095877,
+          },
+        },
+
+        property: "P485",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P973: [
+          {
+            datatype: "url",
+            datavalue: {
+              type: "string",
+              value: "http://www.albert-einstein.org/.index3.html",
+            },
+
+            property: "P973",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P973"],
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$2891A7AE-59CC-4516-B92B-8D2BB8CFA6F3",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q14708020",
+            "numeric-id": 14708020,
+          },
+        },
+
+        property: "P485",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P1810: [
+          {
+            datatype: "string",
+            datavalue: {
+              type: "string",
+              value: "Albert Einstein Letter, undated.",
+            },
+
+            property: "P1810",
+            snaktype: "value",
+          },
+        ],
+        P217: [
+          {
+            datatype: "string",
+            datavalue: {
+              type: "string",
+              value: "3048-z",
+            },
+
+            property: "P217",
+            snaktype: "value",
+          },
+        ],
+        P973: [
+          {
+            datatype: "url",
+            datavalue: {
+              type: "string",
+              value: "https://finding-aids.lib.unc.edu/03048/",
+            },
+
+            property: "P973",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P973", "P217", "P1810"],
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P854: [
+              {
+                datatype: "url",
+                datavalue: {
+                  type: "string",
+                  value: "https://finding-aids.lib.unc.edu/03048/",
+                },
+
+                property: "P854",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P854"],
+        },
+      ],
+      type: "statement",
+    },
+    {
+      id: "Q937$F3A2D721-A412-416F-8307-9B04F5D0EFCA",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q39934978",
+            "numeric-id": 39934978,
+          },
+        },
+
+        property: "P485",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P217: [
+          {
+            datatype: "string",
+            datavalue: {
+              type: "string",
+              value: "Sammelbestand_Einstein_Albert",
+            },
+
+            property: "P217",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P217"],
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2025-01-15T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+            P854: [
+              {
+                datatype: "url",
+                datavalue: {
+                  type: "string",
+                  value:
+                    "https://vls.hsa.ethz.ch/client/link/de/archiv/einheit/b9b4178f95254672b981174aaee8f06b",
+                },
+
+                property: "P854",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P854", "P813"],
+        },
+      ],
+      type: "statement",
+    },
+  ],
   P4862: [
     {
       id: "Q937$AD7A82A0-111D-41F2-B039-2DED52DB4844",
@@ -21025,6 +15834,23 @@ const lottaClaims = {
         },
 
         property: "P4955",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P496: [
+    {
+      id: "Q937$749b20a0-45f3-363d-fb0b-29356b9b6da8",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "0000-0001-9183-9538",
+        },
+
+        property: "P496",
         snaktype: "value",
       },
       rank: "normal",
@@ -21307,6 +16133,116 @@ const lottaClaims = {
       type: "statement",
     },
   ],
+  P509: [
+    {
+      id: "Q937$9550FD9C-92DF-4276-9194-471D4CF613A5",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q2256736",
+            "numeric-id": 2256736,
+          },
+        },
+
+        property: "P509",
+        snaktype: "value",
+      },
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P143: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q328",
+                    "numeric-id": 328,
+                  },
+                },
+
+                property: "P143",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P143"],
+        },
+      ],
+      type: "statement",
+    },
+  ],
+  P512: [
+    {
+      id: "Q937$e400e96b-4501-7967-8e75-bf98d25b8daf",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q19693354",
+            "numeric-id": 19693354,
+          },
+        },
+
+        property: "P512",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P585: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 9,
+                time: "+1906-00-00T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P585",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P585"],
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P143: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q206855",
+                    "numeric-id": 206855,
+                  },
+                },
+
+                property: "P143",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P143"],
+        },
+      ],
+      type: "statement",
+    },
+  ],
   P5125: [
     {
       id: "Q937$241D2F15-A24A-44A3-9DF0-0E432AEACAD9",
@@ -21407,6 +16343,23 @@ const lottaClaims = {
         },
 
         property: "P5340",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P535: [
+    {
+      id: "Q937$21ffa00d-486e-5d1a-43bf-afcb604a6057",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "314",
+        },
+
+        property: "P535",
         snaktype: "value",
       },
       rank: "normal",
@@ -21578,6 +16531,46 @@ const lottaClaims = {
       type: "statement",
     },
   ],
+  P549: [
+    {
+      id: "q937$74D92D81-EE56-4941-AA45-C85494191269",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "53269",
+        },
+
+        property: "P549",
+        snaktype: "value",
+      },
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P143: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q11920",
+                    "numeric-id": 11920,
+                  },
+                },
+
+                property: "P143",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P143"],
+        },
+      ],
+      type: "statement",
+    },
+  ],
   P5504: [
     {
       id: "q937$f430141c-4f89-75fb-766a-b573b010f483",
@@ -21720,6 +16713,405 @@ const lottaClaims = {
       type: "statement",
     },
   ],
+  P551: [
+    {
+      id: "Q937$2bcc3000-4b64-0562-be8c-ad8225e41752",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q1309294",
+            "numeric-id": 1309294,
+          },
+        },
+
+        property: "P551",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P131: [
+          {
+            datatype: "wikibase-item",
+            datavalue: {
+              type: "wikibase-entityid",
+              value: {
+                "entity-type": "item",
+                id: "Q625403",
+                "numeric-id": 625403,
+              },
+            },
+
+            property: "P131",
+            snaktype: "value",
+          },
+        ],
+        P580: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 9,
+                time: "+1929-00-00T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P580",
+            snaktype: "value",
+          },
+        ],
+        P582: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 9,
+                time: "+1932-00-00T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P582",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P580", "P582", "P131"],
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P143: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q8447",
+                    "numeric-id": 8447,
+                  },
+                },
+
+                property: "P143",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P143"],
+        },
+      ],
+      type: "statement",
+    },
+    {
+      id: "Q937$576078b8-437c-7b9e-ad1b-4ac16439d20a",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q390003",
+            "numeric-id": 390003,
+          },
+        },
+
+        property: "P551",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P131: [
+          {
+            datatype: "wikibase-item",
+            datavalue: {
+              type: "wikibase-entityid",
+              value: {
+                "entity-type": "item",
+                id: "Q70",
+                "numeric-id": 70,
+              },
+            },
+
+            property: "P131",
+            snaktype: "value",
+          },
+        ],
+        P580: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 10,
+                time: "+1903-10-00T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P580",
+            snaktype: "value",
+          },
+        ],
+        P582: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 10,
+                time: "+1905-05-00T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P582",
+            snaktype: "value",
+          },
+        ],
+        P669: [
+          {
+            datatype: "wikibase-item",
+            datavalue: {
+              type: "wikibase-entityid",
+              value: {
+                "entity-type": "item",
+                id: "Q680298",
+                "numeric-id": 680298,
+              },
+            },
+
+            property: "P669",
+            snaktype: "value",
+          },
+        ],
+        P670: [
+          {
+            datatype: "string",
+            datavalue: {
+              type: "string",
+              value: "49",
+            },
+
+            property: "P670",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P131", "P580", "P582", "P669", "P670"],
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$3B8DA1A3-81A3-4A42-AA52-B83DE77FF254",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q1726",
+            "numeric-id": 1726,
+          },
+        },
+
+        property: "P551",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$68B67BB3-2268-4CE5-B968-0F2AAC9272A7",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q138518",
+            "numeric-id": 138518,
+          },
+        },
+
+        property: "P551",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$891EA76A-93E7-49FC-A9D1-2784E999DA72",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q942842",
+            "numeric-id": 942842,
+          },
+        },
+
+        property: "P551",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P580: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 9,
+                time: "+1911-01-01T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P580",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P580"],
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q104698881",
+                    "numeric-id": 104698881,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2021-01-06T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+            P854: [
+              {
+                datatype: "url",
+                datavalue: {
+                  type: "string",
+                  value:
+                    "http://digi.nacr.cz/prihlasky2/index.php?action=link&ref=czarch:CZ-100000010:874&karton=3&folium=290",
+                },
+
+                property: "P854",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P854", "P813"],
+        },
+      ],
+      type: "statement",
+    },
+    {
+      id: "Q937$61f1859b-4722-e623-53dd-8ad8b58836d8",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q9009",
+            "numeric-id": 9009,
+          },
+        },
+
+        property: "P551",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P580: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 10,
+                time: "+1901-09-00T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P580",
+            snaktype: "value",
+          },
+        ],
+        P582: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 10,
+                time: "+1902-01-00T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P582",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P580", "P582"],
+      rank: "normal",
+      type: "statement",
+    },
+  ],
   P5534: [
     {
       id: "Q937$c3e98470-44af-4b0c-c90e-164e51cc76b0",
@@ -21829,6 +17221,2664 @@ const lottaClaims = {
         snaktype: "value",
       },
       rank: "normal",
+      type: "statement",
+    },
+  ],
+  P569: [
+    {
+      id: "q937$2ecb21c3-4db1-54e8-27c4-a8a40541930c",
+      mainsnak: {
+        datatype: "time",
+        datavalue: {
+          type: "time",
+          value: {
+            after: 0,
+            before: 0,
+            calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+            precision: 11,
+            time: "+1879-03-14T00:00:00Z",
+            timezone: 0,
+          },
+        },
+
+        property: "P569",
+        snaktype: "value",
+      },
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q36578",
+                    "numeric-id": 36578,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2014-04-09T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P813"],
+        },
+        {
+          snaks: {
+            P854: [
+              {
+                datatype: "url",
+                datavalue: {
+                  type: "string",
+                  value: "https://www.ige.ch/de/ueber-uns/einstein.html",
+                },
+
+                property: "P854",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P854"],
+        },
+        {
+          snaks: {
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q19938912",
+                    "numeric-id": 19938912,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P268: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "119016075",
+                },
+
+                property: "P268",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2015-10-10T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P268", "P813"],
+        },
+        {
+          snaks: {
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q547473",
+                    "numeric-id": 547473,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2017-08-22T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P813"],
+        },
+        {
+          snaks: {
+            P1810: [
+              {
+                datatype: "string",
+                datavalue: {
+                  type: "string",
+                  value: "Albert Einstein",
+                },
+
+                property: "P1810",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q29861311",
+                    "numeric-id": 29861311,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P3430: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "w69k499r",
+                },
+
+                property: "P3430",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2017-10-09T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P3430", "P1810", "P813"],
+        },
+        {
+          snaks: {
+            P1810: [
+              {
+                datatype: "string",
+                datavalue: {
+                  type: "string",
+                  value: "Albert Einstein",
+                },
+
+                property: "P1810",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q1165538",
+                    "numeric-id": 1165538,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P3222: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "albert-einstein",
+                },
+
+                property: "P3222",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2017-10-09T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P3222", "P1810", "P813"],
+        },
+        {
+          snaks: {
+            P1810: [
+              {
+                datatype: "string",
+                datavalue: {
+                  type: "string",
+                  value: "Albert Einstein",
+                },
+
+                property: "P1810",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q63056",
+                    "numeric-id": 63056,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P535: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "314",
+                },
+
+                property: "P535",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2017-10-09T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P535", "P1810", "P813"],
+        },
+        {
+          snaks: {
+            P1233: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "99141",
+                },
+
+                property: "P1233",
+                snaktype: "value",
+              },
+            ],
+            P1810: [
+              {
+                datatype: "string",
+                datavalue: {
+                  type: "string",
+                  value: "Albert Einstein",
+                },
+
+                property: "P1810",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q2629164",
+                    "numeric-id": 2629164,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2017-10-09T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P1233", "P1810", "P813"],
+        },
+        {
+          snaks: {
+            P1810: [
+              {
+                datatype: "string",
+                datavalue: {
+                  type: "string",
+                  value: "Albert Einstein",
+                },
+
+                property: "P1810",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q15706812",
+                    "numeric-id": 15706812,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P2639: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "4533e35f16964c939b82033bb6259e32",
+                },
+
+                property: "P2639",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2017-10-09T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P2639", "P1810", "P813"],
+        },
+        {
+          snaks: {
+            P1810: [
+              {
+                datatype: "string",
+                datavalue: {
+                  type: "string",
+                  value: "Albert Einstein",
+                },
+
+                property: "P1810",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q2728291",
+                    "numeric-id": 2728291,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P6234: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "albert-einstein",
+                },
+
+                property: "P6234",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2017-10-09T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P6234", "P1810", "P813"],
+        },
+        {
+          snaks: {
+            P1810: [
+              {
+                datatype: "string",
+                datavalue: {
+                  type: "string",
+                  value: "Albert Einstein",
+                },
+
+                property: "P1810",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q6023365",
+                    "numeric-id": 6023365,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2017-10-09T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+            P863: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "thinker/2958",
+                },
+
+                property: "P863",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P863", "P1810", "P813"],
+        },
+        {
+          snaks: {
+            P1810: [
+              {
+                datatype: "string",
+                datavalue: {
+                  type: "string",
+                  value: "Albert Einstein",
+                },
+
+                property: "P1810",
+                snaktype: "value",
+              },
+            ],
+            P2454: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "PE00000116",
+                },
+
+                property: "P2454",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q21491701",
+                    "numeric-id": 21491701,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2017-10-09T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P2454", "P1810", "P813"],
+        },
+        {
+          snaks: {
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q23667505",
+                    "numeric-id": 23667505,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P2861: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "1215",
+                },
+
+                property: "P2861",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2019-06-19T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P2861", "P813"],
+        },
+        {
+          snaks: {
+            P1810: [
+              {
+                datatype: "string",
+                datavalue: {
+                  type: "string",
+                  value: "Albert Einstein",
+                },
+
+                property: "P1810",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q237227",
+                    "numeric-id": 237227,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P5019: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "einstein-albert",
+                },
+
+                property: "P5019",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2017-10-09T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P5019", "P1810", "P813"],
+        },
+        {
+          snaks: {
+            P1810: [
+              {
+                datatype: "string",
+                datavalue: {
+                  type: "string",
+                  value: "Albert Einstein",
+                },
+
+                property: "P1810",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q746368",
+                    "numeric-id": 746368,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P4342: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "Albert_Einstein",
+                },
+
+                property: "P4342",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P4342", "P1810"],
+        },
+        {
+          snaks: {
+            P1296: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "0023623",
+                },
+
+                property: "P1296",
+                snaktype: "value",
+              },
+            ],
+            P1810: [
+              {
+                datatype: "string",
+                datavalue: {
+                  type: "string",
+                  value: "Albert Einstein",
+                },
+
+                property: "P1810",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q2664168",
+                    "numeric-id": 2664168,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P1296", "P1810"],
+        },
+        {
+          snaks: {
+            P1810: [
+              {
+                datatype: "string",
+                datavalue: {
+                  type: "string",
+                  value: "Albert Einstein",
+                },
+
+                property: "P1810",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q98769076",
+                    "numeric-id": 98769076,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P8094: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "einsteina",
+                },
+
+                property: "P8094",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P8094", "P1810"],
+        },
+        {
+          snaks: {
+            P1810: [
+              {
+                datatype: "string",
+                datavalue: {
+                  type: "string",
+                  value: "Albert Einstein",
+                },
+
+                property: "P1810",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q83365652",
+                    "numeric-id": 83365652,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P7929: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "p=albert;n=einstein",
+                },
+
+                property: "P7929",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P7929", "P1810"],
+        },
+        {
+          snaks: {
+            P1810: [
+              {
+                datatype: "string",
+                datavalue: {
+                  type: "string",
+                  value: "Albert Einstein",
+                },
+
+                property: "P1810",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q1307356",
+                    "numeric-id": 1307356,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P8854: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "18467",
+                },
+
+                property: "P8854",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P8854", "P1810"],
+        },
+        {
+          snaks: {
+            P1810: [
+              {
+                datatype: "string",
+                datavalue: {
+                  type: "string",
+                  value: "Albert Einstein",
+                },
+
+                property: "P1810",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q3407324",
+                    "numeric-id": 3407324,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P8349: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "56686",
+                },
+
+                property: "P8349",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P8349", "P1810"],
+        },
+        {
+          snaks: {
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q77541206",
+                    "numeric-id": 77541206,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P7796: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "3852",
+                },
+
+                property: "P7796",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2021-02-13T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P7796", "P813"],
+        },
+        {
+          snaks: {
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q107456632",
+                    "numeric-id": 107456632,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P6844: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "16734",
+                },
+
+                property: "P6844",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2021-04-01T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P6844", "P813"],
+        },
+        {
+          snaks: {
+            P1476: [
+              {
+                datatype: "monolingualtext",
+                datavalue: {
+                  type: "monolingualtext",
+                  value: {
+                    language: "fr",
+                    text: "Albert Einstein",
+                  },
+                },
+
+                property: "P1476",
+                snaktype: "value",
+              },
+            ],
+            P2383: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "117243",
+                },
+
+                property: "P2383",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q55740543",
+                    "numeric-id": 55740543,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P2383", "P1476"],
+        },
+        {
+          snaks: {
+            P1810: [
+              {
+                datatype: "string",
+                datavalue: {
+                  type: "string",
+                  value: "Albert Einstein",
+                },
+
+                property: "P1810",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q105958830",
+                    "numeric-id": 105958830,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P5375: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "5923",
+                },
+
+                property: "P5375",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P5375", "P1810", "P248"],
+        },
+        {
+          snaks: {
+            P1284: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "00000000666",
+                },
+
+                property: "P1284",
+                snaktype: "value",
+              },
+            ],
+            P1810: [
+              {
+                datatype: "string",
+                datavalue: {
+                  type: "string",
+                  value: "Albert Einstein",
+                },
+
+                property: "P1810",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q107343683",
+                    "numeric-id": 107343683,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2017-10-09T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P1284", "P813", "P1810"],
+        },
+      ],
+      type: "statement",
+    },
+  ],
+  P570: [
+    {
+      id: "q937$577aaeb4-4ce9-fdd1-791f-78d893a0e5a8",
+      mainsnak: {
+        datatype: "time",
+        datavalue: {
+          type: "time",
+          value: {
+            after: 0,
+            before: 0,
+            calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+            precision: 11,
+            time: "+1955-04-18T00:00:00Z",
+            timezone: 0,
+          },
+        },
+
+        property: "P570",
+        snaktype: "value",
+      },
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q36578",
+                    "numeric-id": 36578,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2014-04-09T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P813"],
+        },
+        {
+          snaks: {
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q17378135",
+                    "numeric-id": 17378135,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2015-09-28T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+            P958: [
+              {
+                datatype: "string",
+                datavalue: {
+                  type: "string",
+                  value: "Эйнштейн Альберт",
+                },
+
+                property: "P958",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P958", "P248", "P813"],
+        },
+        {
+          snaks: {
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q19938912",
+                    "numeric-id": 19938912,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P268: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "119016075",
+                },
+
+                property: "P268",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2015-10-10T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P268", "P813"],
+        },
+        {
+          snaks: {
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q547473",
+                    "numeric-id": 547473,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2017-08-22T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P813"],
+        },
+        {
+          snaks: {
+            P1810: [
+              {
+                datatype: "string",
+                datavalue: {
+                  type: "string",
+                  value: "Albert Einstein",
+                },
+
+                property: "P1810",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q29861311",
+                    "numeric-id": 29861311,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P3430: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "w69k499r",
+                },
+
+                property: "P3430",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2017-10-09T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P3430", "P1810", "P813"],
+        },
+        {
+          snaks: {
+            P1810: [
+              {
+                datatype: "string",
+                datavalue: {
+                  type: "string",
+                  value: "Albert Einstein",
+                },
+
+                property: "P1810",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q1165538",
+                    "numeric-id": 1165538,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P3222: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "albert-einstein",
+                },
+
+                property: "P3222",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2017-10-09T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P3222", "P1810", "P813"],
+        },
+        {
+          snaks: {
+            P1810: [
+              {
+                datatype: "string",
+                datavalue: {
+                  type: "string",
+                  value: "Albert Einstein",
+                },
+
+                property: "P1810",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q63056",
+                    "numeric-id": 63056,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P535: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "314",
+                },
+
+                property: "P535",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2017-10-09T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P535", "P1810", "P813"],
+        },
+        {
+          snaks: {
+            P1233: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "99141",
+                },
+
+                property: "P1233",
+                snaktype: "value",
+              },
+            ],
+            P1810: [
+              {
+                datatype: "string",
+                datavalue: {
+                  type: "string",
+                  value: "Albert Einstein",
+                },
+
+                property: "P1810",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q2629164",
+                    "numeric-id": 2629164,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2017-10-09T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P1233", "P1810", "P813"],
+        },
+        {
+          snaks: {
+            P1810: [
+              {
+                datatype: "string",
+                datavalue: {
+                  type: "string",
+                  value: "Albert Einstein",
+                },
+
+                property: "P1810",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q15706812",
+                    "numeric-id": 15706812,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P2639: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "4533e35f16964c939b82033bb6259e32",
+                },
+
+                property: "P2639",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2017-10-09T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P2639", "P1810", "P813"],
+        },
+        {
+          snaks: {
+            P1810: [
+              {
+                datatype: "string",
+                datavalue: {
+                  type: "string",
+                  value: "Albert Einstein",
+                },
+
+                property: "P1810",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q2728291",
+                    "numeric-id": 2728291,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P6234: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "albert-einstein",
+                },
+
+                property: "P6234",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2017-10-09T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P6234", "P1810", "P813"],
+        },
+        {
+          snaks: {
+            P1810: [
+              {
+                datatype: "string",
+                datavalue: {
+                  type: "string",
+                  value: "Albert Einstein",
+                },
+
+                property: "P1810",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q6023365",
+                    "numeric-id": 6023365,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2017-10-09T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+            P863: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "thinker/2958",
+                },
+
+                property: "P863",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P863", "P1810", "P813"],
+        },
+        {
+          snaks: {
+            P1810: [
+              {
+                datatype: "string",
+                datavalue: {
+                  type: "string",
+                  value: "Albert Einstein",
+                },
+
+                property: "P1810",
+                snaktype: "value",
+              },
+            ],
+            P2454: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "PE00000116",
+                },
+
+                property: "P2454",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q21491701",
+                    "numeric-id": 21491701,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2017-10-09T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P2454", "P1810", "P813"],
+        },
+        {
+          snaks: {
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q23667505",
+                    "numeric-id": 23667505,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P2861: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "1215",
+                },
+
+                property: "P2861",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2019-06-19T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P2861", "P813"],
+        },
+        {
+          snaks: {
+            P1810: [
+              {
+                datatype: "string",
+                datavalue: {
+                  type: "string",
+                  value: "Albert Einstein",
+                },
+
+                property: "P1810",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q237227",
+                    "numeric-id": 237227,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P5019: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "einstein-albert",
+                },
+
+                property: "P5019",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2017-10-09T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P5019", "P1810", "P813"],
+        },
+        {
+          snaks: {
+            P1810: [
+              {
+                datatype: "string",
+                datavalue: {
+                  type: "string",
+                  value: "Albert Einstein",
+                },
+
+                property: "P1810",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q746368",
+                    "numeric-id": 746368,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P4342: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "Albert_Einstein",
+                },
+
+                property: "P4342",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P4342", "P1810"],
+        },
+        {
+          snaks: {
+            P1296: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "0023623",
+                },
+
+                property: "P1296",
+                snaktype: "value",
+              },
+            ],
+            P1810: [
+              {
+                datatype: "string",
+                datavalue: {
+                  type: "string",
+                  value: "Albert Einstein",
+                },
+
+                property: "P1810",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q2664168",
+                    "numeric-id": 2664168,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P1296", "P1810"],
+        },
+        {
+          snaks: {
+            P1810: [
+              {
+                datatype: "string",
+                datavalue: {
+                  type: "string",
+                  value: "Albert Einstein",
+                },
+
+                property: "P1810",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q98769076",
+                    "numeric-id": 98769076,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P8094: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "einsteina",
+                },
+
+                property: "P8094",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P8094", "P1810"],
+        },
+        {
+          snaks: {
+            P1810: [
+              {
+                datatype: "string",
+                datavalue: {
+                  type: "string",
+                  value: "Albert Einstein",
+                },
+
+                property: "P1810",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q83365652",
+                    "numeric-id": 83365652,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P7929: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "p=albert;n=einstein",
+                },
+
+                property: "P7929",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P7929", "P1810"],
+        },
+        {
+          snaks: {
+            P1810: [
+              {
+                datatype: "string",
+                datavalue: {
+                  type: "string",
+                  value: "Albert Einstein",
+                },
+
+                property: "P1810",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q1307356",
+                    "numeric-id": 1307356,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P8854: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "18467",
+                },
+
+                property: "P8854",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P8854", "P1810"],
+        },
+        {
+          snaks: {
+            P1810: [
+              {
+                datatype: "string",
+                datavalue: {
+                  type: "string",
+                  value: "Albert Einstein",
+                },
+
+                property: "P1810",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q3407324",
+                    "numeric-id": 3407324,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P8349: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "56686",
+                },
+
+                property: "P8349",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P8349", "P1810"],
+        },
+        {
+          snaks: {
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q77541206",
+                    "numeric-id": 77541206,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P7796: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "3852",
+                },
+
+                property: "P7796",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2021-02-13T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P7796", "P813"],
+        },
+        {
+          snaks: {
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q107456632",
+                    "numeric-id": 107456632,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P6844: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "16734",
+                },
+
+                property: "P6844",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2021-04-01T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P6844", "P813"],
+        },
+        {
+          snaks: {
+            P1476: [
+              {
+                datatype: "monolingualtext",
+                datavalue: {
+                  type: "monolingualtext",
+                  value: {
+                    language: "fr",
+                    text: "Albert Einstein",
+                  },
+                },
+
+                property: "P1476",
+                snaktype: "value",
+              },
+            ],
+            P2383: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "117243",
+                },
+
+                property: "P2383",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q55740543",
+                    "numeric-id": 55740543,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P2383", "P1476"],
+        },
+        {
+          snaks: {
+            P1284: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "00000000666",
+                },
+
+                property: "P1284",
+                snaktype: "value",
+              },
+            ],
+            P1810: [
+              {
+                datatype: "string",
+                datavalue: {
+                  type: "string",
+                  value: "Albert Einstein",
+                },
+
+                property: "P1810",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q107343683",
+                    "numeric-id": 107343683,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2017-10-09T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P1284", "P813", "P1810"],
+        },
+      ],
       type: "statement",
     },
   ],
@@ -22119,6 +20169,18 @@ const lottaClaims = {
         snaktype: "value",
       },
       qualifiers: {
+        P1810: [
+          {
+            datatype: "string",
+            datavalue: {
+              type: "string",
+              value: "Albert Einstein",
+            },
+
+            property: "P1810",
+            snaktype: "value",
+          },
+        ],
         P407: [
           {
             datatype: "wikibase-item",
@@ -22132,18 +20194,6 @@ const lottaClaims = {
             },
 
             property: "P407",
-            snaktype: "value",
-          },
-        ],
-        P1810: [
-          {
-            datatype: "string",
-            datavalue: {
-              type: "string",
-              value: "Albert Einstein",
-            },
-
-            property: "P1810",
             snaktype: "value",
           },
         ],
@@ -22165,6 +20215,21 @@ const lottaClaims = {
       references: [
         {
           snaks: {
+            P1476: [
+              {
+                datatype: "monolingualtext",
+                datavalue: {
+                  type: "monolingualtext",
+                  value: {
+                    language: "en",
+                    text: "Albert Einstein | CardGuide Wiki | Fandom",
+                  },
+                },
+
+                property: "P1476",
+                snaktype: "value",
+              },
+            ],
             P813: [
               {
                 datatype: "time",
@@ -22196,21 +20261,6 @@ const lottaClaims = {
                 snaktype: "value",
               },
             ],
-            P1476: [
-              {
-                datatype: "monolingualtext",
-                datavalue: {
-                  type: "monolingualtext",
-                  value: {
-                    language: "en",
-                    text: "Albert Einstein | CardGuide Wiki | Fandom",
-                  },
-                },
-
-                property: "P1476",
-                snaktype: "value",
-              },
-            ],
           },
           "snaks-order": ["P854", "P1476", "P813"],
         },
@@ -22230,6 +20280,18 @@ const lottaClaims = {
         snaktype: "value",
       },
       qualifiers: {
+        P1810: [
+          {
+            datatype: "string",
+            datavalue: {
+              type: "string",
+              value: "Albert Einstein",
+            },
+
+            property: "P1810",
+            snaktype: "value",
+          },
+        ],
         P407: [
           {
             datatype: "wikibase-item",
@@ -22243,18 +20305,6 @@ const lottaClaims = {
             },
 
             property: "P407",
-            snaktype: "value",
-          },
-        ],
-        P1810: [
-          {
-            datatype: "string",
-            datavalue: {
-              type: "string",
-              value: "Albert Einstein",
-            },
-
-            property: "P1810",
             snaktype: "value",
           },
         ],
@@ -22389,6 +20439,82 @@ const lottaClaims = {
         },
 
         property: "P6441",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P646: [
+    {
+      id: "Q937$E34CCE18-850C-4A3F-88D4-B62FB5BD3E0B",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "/m/0jcx",
+        },
+
+        property: "P646",
+        snaktype: "value",
+      },
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q15241312",
+                    "numeric-id": 15241312,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P577: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2013-10-28T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P577",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P577"],
+        },
+      ],
+      type: "statement",
+    },
+  ],
+  P648: [
+    {
+      id: "Q937$ae858c3b-4935-e68a-f3d6-89608a55d451",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "OL3175986A",
+        },
+
+        property: "P648",
         snaktype: "value",
       },
       rank: "normal",
@@ -22680,6 +20806,434 @@ const lottaClaims = {
       type: "statement",
     },
   ],
+  P69: [
+    {
+      id: "q937$9297F2A2-FAD7-466F-8B30-79AA41E8793F",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q11942",
+            "numeric-id": 11942,
+          },
+        },
+
+        property: "P69",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P512: [
+          {
+            datatype: "wikibase-item",
+            datavalue: {
+              type: "wikibase-entityid",
+              value: {
+                "entity-type": "item",
+                id: "Q787674",
+                "numeric-id": 787674,
+              },
+            },
+
+            property: "P512",
+            snaktype: "value",
+          },
+        ],
+        P580: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 9,
+                time: "+1896-00-00T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P580",
+            snaktype: "value",
+          },
+        ],
+        P582: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 9,
+                time: "+1900-00-00T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P582",
+            snaktype: "value",
+          },
+        ],
+        P812: [
+          {
+            datatype: "wikibase-item",
+            datavalue: {
+              type: "wikibase-entityid",
+              value: {
+                "entity-type": "item",
+                id: "Q853077",
+                "numeric-id": 853077,
+              },
+            },
+
+            property: "P812",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P512", "P580", "P582", "P812"],
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P854: [
+              {
+                datatype: "url",
+                datavalue: {
+                  type: "string",
+                  value: "https://www.ige.ch/de/ueber-uns/einstein.html",
+                },
+
+                property: "P854",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P854"],
+        },
+        {
+          snaks: {
+            P854: [
+              {
+                datatype: "url",
+                datavalue: {
+                  type: "string",
+                  value:
+                    "https://www.library.ethz.ch/en/Resources/Digital-library/Einstein-Online/Einstein-s-Studies-at-the-Polytechnic-Institute-in-Zurich-1896-1900",
+                },
+
+                property: "P854",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P854"],
+        },
+      ],
+      type: "statement",
+    },
+    {
+      id: "Q937$bdd0de70-44e3-c7c5-8566-0389c0bd14e7",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q1876751",
+            "numeric-id": 1876751,
+          },
+        },
+
+        property: "P69",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P580: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 9,
+                time: "+1888-00-00T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P580",
+            snaktype: "value",
+          },
+        ],
+        P582: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 9,
+                time: "+1894-00-00T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P582",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P580", "P582"],
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$b2fb71ab-49ad-df08-7b3b-8bd09a55ae77",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q435651",
+            "numeric-id": 435651,
+          },
+        },
+
+        property: "P69",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P512: [
+          {
+            datatype: "wikibase-item",
+            datavalue: {
+              type: "wikibase-entityid",
+              value: {
+                "entity-type": "item",
+                id: "Q694222",
+                "numeric-id": 694222,
+              },
+            },
+
+            property: "P512",
+            snaktype: "value",
+          },
+        ],
+        P580: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 9,
+                time: "+1895-00-00T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P580",
+            snaktype: "value",
+          },
+        ],
+        P582: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 10,
+                time: "+1896-09-00T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P582",
+            snaktype: "value",
+          },
+        ],
+        P585: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 11,
+                time: "+1896-10-03T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P585",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P580", "P512", "P585", "P582"],
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$E90CA760-E20F-4EED-BDB8-F72DCF4B484C",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q206702",
+            "numeric-id": 206702,
+          },
+        },
+
+        property: "P69",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P1026: [
+          {
+            datatype: "wikibase-item",
+            datavalue: {
+              type: "wikibase-entityid",
+              value: {
+                "entity-type": "item",
+                id: "Q51754009",
+                "numeric-id": 51754009,
+              },
+            },
+
+            property: "P1026",
+            snaktype: "value",
+          },
+        ],
+        P184: [
+          {
+            datatype: "wikibase-item",
+            datavalue: {
+              type: "wikibase-entityid",
+              value: {
+                "entity-type": "item",
+                id: "Q4175282",
+                "numeric-id": 4175282,
+              },
+            },
+
+            property: "P184",
+            snaktype: "value",
+          },
+          {
+            datatype: "wikibase-item",
+            datavalue: {
+              type: "wikibase-entityid",
+              value: {
+                "entity-type": "item",
+                id: "Q97154",
+                "numeric-id": 97154,
+              },
+            },
+
+            property: "P184",
+            snaktype: "value",
+          },
+        ],
+        P512: [
+          {
+            datatype: "wikibase-item",
+            datavalue: {
+              type: "wikibase-entityid",
+              value: {
+                "entity-type": "item",
+                id: "Q849697",
+                "numeric-id": 849697,
+              },
+            },
+
+            property: "P512",
+            snaktype: "value",
+          },
+        ],
+        P582: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 11,
+                time: "+1905-04-30T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P582",
+            snaktype: "value",
+          },
+        ],
+        P812: [
+          {
+            datatype: "wikibase-item",
+            datavalue: {
+              type: "wikibase-entityid",
+              value: {
+                "entity-type": "item",
+                id: "Q413",
+                "numeric-id": 413,
+              },
+            },
+
+            property: "P812",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P812", "P582", "P512", "P184", "P1026"],
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q51754009",
+                    "numeric-id": 51754009,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248"],
+        },
+      ],
+      type: "statement",
+    },
+  ],
   P6900: [
     {
       id: "Q937$0baaed97-4638-a17a-7ed1-bddc70cc344a",
@@ -22691,6 +21245,23 @@ const lottaClaims = {
         },
 
         property: "P6900",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P691: [
+    {
+      id: "Q937$677E4BC8-3AC3-4FE7-996F-86F794F6A9E6",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "jn19990002019",
+        },
+
+        property: "P691",
         snaktype: "value",
       },
       rank: "normal",
@@ -22725,6 +21296,23 @@ const lottaClaims = {
         },
 
         property: "P6984",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P701: [
+    {
+      id: "Q937$118400BE-4662-4F54-B90E-909A41749C54",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "P20204",
+        },
+
+        property: "P701",
         snaktype: "value",
       },
       rank: "normal",
@@ -22838,6 +21426,23 @@ const lottaClaims = {
       type: "statement",
     },
   ],
+  P723: [
+    {
+      id: "Q937$7E75EF73-C1D0-4660-9C74-1CCCA07B55EB",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "eins001",
+        },
+
+        property: "P723",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
   P7293: [
     {
       id: "Q937$B8F74728-F158-4092-9C57-B4EC0723C7DF",
@@ -22909,6 +21514,433 @@ const lottaClaims = {
       type: "statement",
     },
   ],
+  P734: [
+    {
+      id: "Q937$148f07c2-4670-5dda-0c03-151cbd56e4c2",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q16834800",
+            "numeric-id": 16834800,
+          },
+        },
+
+        property: "P734",
+        snaktype: "value",
+      },
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P213: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "0000000077040933",
+                },
+
+                property: "P213",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q423048",
+                    "numeric-id": 423048,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2015-10-16T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P213", "P813"],
+        },
+        {
+          snaks: {
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q23667505",
+                    "numeric-id": 23667505,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P2861: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "1215",
+                },
+
+                property: "P2861",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2019-06-19T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P2861", "P813"],
+        },
+        {
+          snaks: {
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q104698881",
+                    "numeric-id": 104698881,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2021-01-06T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+            P854: [
+              {
+                datatype: "url",
+                datavalue: {
+                  type: "string",
+                  value:
+                    "http://digi.nacr.cz/prihlasky2/index.php?action=link&ref=czarch:CZ-100000010:874&karton=3&folium=290",
+                },
+
+                property: "P854",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P854", "P813"],
+        },
+        {
+          snaks: {
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q77541206",
+                    "numeric-id": 77541206,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P7796: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "3852",
+                },
+
+                property: "P7796",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2021-02-13T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P7796", "P813"],
+        },
+      ],
+      type: "statement",
+    },
+  ],
+  P735: [
+    {
+      id: "Q937$AED4F087-0294-4FD7-9507-A6171EAA3F27",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q577011",
+            "numeric-id": 577011,
+          },
+        },
+
+        property: "P735",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P1545: [
+          {
+            datatype: "string",
+            datavalue: {
+              type: "string",
+              value: "1",
+            },
+
+            property: "P1545",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P1545"],
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q23667505",
+                    "numeric-id": 23667505,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P2861: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "1215",
+                },
+
+                property: "P2861",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2019-06-19T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P2861", "P813"],
+        },
+        {
+          snaks: {
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q77541206",
+                    "numeric-id": 77541206,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P7796: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "3852",
+                },
+
+                property: "P7796",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2021-02-13T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P7796", "P813"],
+        },
+        {
+          snaks: {
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q104698881",
+                    "numeric-id": 104698881,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2021-01-06T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+            P854: [
+              {
+                datatype: "url",
+                datavalue: {
+                  type: "string",
+                  value:
+                    "http://digi.nacr.cz/prihlasky2/index.php?action=link&ref=czarch:CZ-100000010:874&karton=3&folium=290",
+                },
+
+                property: "P854",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P854", "P813"],
+        },
+      ],
+      type: "statement",
+    },
+  ],
   P7356: [
     {
       id: "Q937$7DCBC3E1-2E13-4749-9502-717DAB6C12DF",
@@ -22937,6 +21969,350 @@ const lottaClaims = {
         },
 
         property: "P7369",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P737: [
+    {
+      id: "Q937$3C1C425C-62DD-4233-B5F1-D2498C003D09",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q991",
+            "numeric-id": 991,
+          },
+        },
+
+        property: "P737",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$84ED556F-B8FA-460D-93A0-90D5024B158A",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q57246",
+            "numeric-id": 57246,
+          },
+        },
+
+        property: "P737",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$EE46A452-C11E-4AE7-963A-8FF7FB6F6D5C",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q35802",
+            "numeric-id": 35802,
+          },
+        },
+
+        property: "P737",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$19EF14C2-681A-433D-8A75-3A2EEA8F8EF5",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q1001",
+            "numeric-id": 1001,
+          },
+        },
+
+        property: "P737",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$C6E7234B-92BC-4592-BA74-8F03870FE891",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q38193",
+            "numeric-id": 38193,
+          },
+        },
+
+        property: "P737",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$43BC7AAD-82D2-4948-962C-52FAE1EFB24F",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q41688",
+            "numeric-id": 41688,
+          },
+        },
+
+        property: "P737",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$9E49F68A-83BB-4442-9486-8E4F40593D6F",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q19185",
+            "numeric-id": 19185,
+          },
+        },
+
+        property: "P737",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$E4607642-194C-4331-BB6F-BBE8A4CE2710",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q935",
+            "numeric-id": 935,
+          },
+        },
+
+        property: "P737",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$FABE514E-23CC-4C6C-8D82-BF3E2F64C7F3",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q7322195",
+            "numeric-id": 7322195,
+          },
+        },
+
+        property: "P737",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$4C978955-7004-4A30-8761-95A4572597D0",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q37160",
+            "numeric-id": 37160,
+          },
+        },
+
+        property: "P737",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$79A1E4A3-E4FA-4EDA-A94D-DFCAC70A10A2",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q25820",
+            "numeric-id": 25820,
+          },
+        },
+
+        property: "P737",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$059F1D35-CB89-490B-B3F9-44E25FC91BB4",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q42299",
+            "numeric-id": 42299,
+          },
+        },
+
+        property: "P737",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$54302CD2-5FC0-4B2C-A1E4-8F1D76F949F7",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q57193",
+            "numeric-id": 57193,
+          },
+        },
+
+        property: "P737",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$BE15FFD8-6E89-45B2-8713-68FA1436BA78",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q9095",
+            "numeric-id": 9095,
+          },
+        },
+
+        property: "P737",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$FEB22D24-5E00-4E88-BF6C-4572C2AE5957",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q200639",
+            "numeric-id": 200639,
+          },
+        },
+
+        property: "P737",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$390CEB92-E676-4123-9ECD-4C06D20A72AF",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q310794",
+            "numeric-id": 310794,
+          },
+        },
+
+        property: "P737",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$60C51596-943C-4A87-89CF-7C91EC4DA189",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q355245",
+            "numeric-id": 355245,
+          },
+        },
+
+        property: "P737",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$7D6F2F4A-8A25-475F-B29F-A489707ACCC1",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q93996",
+            "numeric-id": 93996,
+          },
+        },
+
+        property: "P737",
         snaktype: "value",
       },
       rank: "normal",
@@ -23295,6 +22671,18 @@ const lottaClaims = {
                 snaktype: "value",
               },
             ],
+            P5508: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "56488",
+                },
+
+                property: "P5508",
+                snaktype: "value",
+              },
+            ],
             P813: [
               {
                 datatype: "time",
@@ -23311,18 +22699,6 @@ const lottaClaims = {
                 },
 
                 property: "P813",
-                snaktype: "value",
-              },
-            ],
-            P5508: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "56488",
-                },
-
-                property: "P5508",
                 snaktype: "value",
               },
             ],
@@ -23410,6 +22786,81 @@ const lottaClaims = {
       type: "statement",
     },
   ],
+  P793: [
+    {
+      id: "Q937$0908221D-AE75-4794-97C9-10CA1E858129",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q115784320",
+            "numeric-id": 115784320,
+          },
+        },
+
+        property: "P793",
+        snaktype: "value",
+      },
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P227: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "118529579",
+                },
+
+                property: "P227",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q23833686",
+                    "numeric-id": 23833686,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2024-05-03T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P227", "P248", "P813"],
+        },
+      ],
+      type: "statement",
+    },
+  ],
   P7982: [
     {
       id: "Q937$39387E5B-4A4D-4B38-A1DD-7C1B3A9978A9",
@@ -23441,6 +22892,18 @@ const lottaClaims = {
         snaktype: "value",
       },
       qualifiers: {
+        P1810: [
+          {
+            datatype: "string",
+            datavalue: {
+              type: "string",
+              value: "Einstein, Albert",
+            },
+
+            property: "P1810",
+            snaktype: "value",
+          },
+        ],
         P577: [
           {
             datatype: "time",
@@ -23457,18 +22920,6 @@ const lottaClaims = {
             },
 
             property: "P577",
-            snaktype: "value",
-          },
-        ],
-        P1810: [
-          {
-            datatype: "string",
-            datavalue: {
-              type: "string",
-              value: "Einstein, Albert",
-            },
-
-            property: "P1810",
             snaktype: "value",
           },
         ],
@@ -23490,6 +22941,18 @@ const lottaClaims = {
         snaktype: "value",
       },
       qualifiers: {
+        P1810: [
+          {
+            datatype: "string",
+            datavalue: {
+              type: "string",
+              value: "Einstein, Albert",
+            },
+
+            property: "P1810",
+            snaktype: "value",
+          },
+        ],
         P577: [
           {
             datatype: "time",
@@ -23509,20 +22972,240 @@ const lottaClaims = {
             snaktype: "value",
           },
         ],
-        P1810: [
-          {
-            datatype: "string",
-            datavalue: {
-              type: "string",
-              value: "Einstein, Albert",
-            },
-
-            property: "P1810",
-            snaktype: "value",
-          },
-        ],
       },
       "qualifiers-order": ["P1810", "P577"],
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P800: [
+    {
+      id: "Q937$f09b6157-49b5-d3b7-f638-6c38e461680c",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q11455",
+            "numeric-id": 11455,
+          },
+        },
+
+        property: "P800",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$2d7d09a6-470d-307c-b4d8-11f94cc737f1",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q11452",
+            "numeric-id": 11452,
+          },
+        },
+
+        property: "P800",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$3f710f06-4d66-4cdf-59b0-b57faed28cc9",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q83213",
+            "numeric-id": 83213,
+          },
+        },
+
+        property: "P800",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$91bab259-4bcb-82f7-095a-fd310314ae41",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q43514",
+            "numeric-id": 43514,
+          },
+        },
+
+        property: "P800",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$c3b59239-449d-8473-2f9e-dbc3a46c8971",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q56100717",
+            "numeric-id": 56100717,
+          },
+        },
+
+        property: "P800",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$1f3e9c3f-4a10-bcc1-840b-106489f92702",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q35875",
+            "numeric-id": 35875,
+          },
+        },
+
+        property: "P800",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$3d0b3a84-4bbb-7909-c87e-010fd0716d03",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q122894",
+            "numeric-id": 122894,
+          },
+        },
+
+        property: "P800",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$b60d007c-4247-e360-fd0f-c463fc89c70e",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q273711",
+            "numeric-id": 273711,
+          },
+        },
+
+        property: "P800",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$27f4cff0-4ba8-7f23-d09d-30b24dd095a6",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q944",
+            "numeric-id": 944,
+          },
+        },
+
+        property: "P800",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$5d6988b2-494d-032b-5daa-bcb43830d503",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q1080745",
+            "numeric-id": 1080745,
+          },
+        },
+
+        property: "P800",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$360bbb34-467d-ca45-e877-1a94f134a616",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q853656",
+            "numeric-id": 853656,
+          },
+        },
+
+        property: "P800",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P802: [
+    {
+      id: "Q937$72DE4D46-3D7E-49F3-9787-BA064C56C343",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q87554",
+            "numeric-id": 87554,
+          },
+        },
+
+        property: "P802",
+        snaktype: "value",
+      },
       rank: "normal",
       type: "statement",
     },
@@ -23541,6 +23224,198 @@ const lottaClaims = {
         snaktype: "value",
       },
       rank: "normal",
+      type: "statement",
+    },
+  ],
+  P803: [
+    {
+      id: "Q937$dc7412cb-4045-1e15-9e33-b1aad4381b02",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q25339110",
+            "numeric-id": 25339110,
+          },
+        },
+
+        property: "P803",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P580: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 9,
+                time: "+1909-00-00T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P580",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P580"],
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P143: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q206855",
+                    "numeric-id": 206855,
+                  },
+                },
+
+                property: "P143",
+                snaktype: "value",
+              },
+            ],
+            P4656: [
+              {
+                datatype: "url",
+                datavalue: {
+                  type: "string",
+                  value: "https://ru.wikipedia.org/?oldid=96910806",
+                },
+
+                property: "P4656",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2018-12-20T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P143", "P4656", "P813"],
+        },
+      ],
+      type: "statement",
+    },
+    {
+      id: "Q937$2aa71e9e-48de-f589-acb2-293861e69c0a",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q414528",
+            "numeric-id": 414528,
+          },
+        },
+
+        property: "P803",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P580: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 9,
+                time: "+1913-00-00T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P580",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P580"],
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P143: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q206855",
+                    "numeric-id": 206855,
+                  },
+                },
+
+                property: "P143",
+                snaktype: "value",
+              },
+            ],
+            P4656: [
+              {
+                datatype: "url",
+                datavalue: {
+                  type: "string",
+                  value: "https://ru.wikipedia.org/?oldid=96910806",
+                },
+
+                property: "P4656",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2018-12-20T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P143", "P4656", "P813"],
+        },
+      ],
       type: "statement",
     },
   ],
@@ -23859,6 +23734,23 @@ const lottaClaims = {
       type: "statement",
     },
   ],
+  P863: [
+    {
+      id: "Q937$1AA4B8FE-DFE3-45ED-93FB-3E6106EE9520",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "thinker/2958",
+        },
+
+        property: "P863",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
   P8750: [
     {
       id: "Q937$5900A0C2-F977-47C8-A5DB-5DBB2E6B850D",
@@ -24135,6 +24027,23 @@ const lottaClaims = {
       type: "statement",
     },
   ],
+  P902: [
+    {
+      id: "Q937$C454C727-7E87-4322-8BCD-3E020B5D0667",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "028814",
+        },
+
+        property: "P902",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
   P9037: [
     {
       id: "Q937$44883DD8-9DF1-41A8-9953-E3E33DFC0196",
@@ -24229,6 +24138,67 @@ const lottaClaims = {
         },
 
         property: "P9044",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P906: [
+    {
+      id: "Q937$8DEE4AFA-8D09-4431-A651-1E48CCF61F9C",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "184709",
+        },
+
+        property: "P906",
+        snaktype: "value",
+      },
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P143: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q877583",
+                    "numeric-id": 877583,
+                  },
+                },
+
+                property: "P143",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P143"],
+        },
+      ],
+      type: "statement",
+    },
+  ],
+  P910: [
+    {
+      id: "Q937$d415d195-405e-41b3-18e0-7222736f0659",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q7213562",
+            "numeric-id": 7213562,
+          },
+        },
+
+        property: "P910",
         snaktype: "value",
       },
       rank: "normal",
@@ -24440,6 +24410,23 @@ const lottaClaims = {
       type: "statement",
     },
   ],
+  P935: [
+    {
+      id: "Q937$4182BA1C-DA1E-4B66-B6B4-37DEBDA09457",
+      mainsnak: {
+        datatype: "string",
+        datavalue: {
+          type: "string",
+          value: "Albert Einstein",
+        },
+
+        property: "P935",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
   P9352: [
     {
       id: "Q937$7FFC1FF7-BA07-4831-B89A-D10244262623",
@@ -24454,6 +24441,804 @@ const lottaClaims = {
         snaktype: "value",
       },
       rank: "normal",
+      type: "statement",
+    },
+  ],
+  P937: [
+    {
+      id: "Q937$862B872E-0986-4E1F-BCB5-67EA892B0E21",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q70",
+            "numeric-id": 70,
+          },
+        },
+
+        property: "P937",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P580: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 11,
+                time: "+1902-06-16T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P580",
+            snaktype: "value",
+          },
+        ],
+        P582: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 9,
+                time: "+1909-00-00T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P582",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P580", "P582"],
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q36578",
+                    "numeric-id": 36578,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2015-04-02T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P813"],
+        },
+        {
+          snaks: {
+            P227: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "118529579",
+                },
+
+                property: "P227",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q23833686",
+                    "numeric-id": 23833686,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2024-05-03T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P227", "P248", "P813"],
+        },
+      ],
+      type: "statement",
+    },
+    {
+      id: "Q937$B42B39CD-B046-4D84-AF15-C6FC03B1CBFF",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q1085",
+            "numeric-id": 1085,
+          },
+        },
+
+        property: "P937",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P580: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 10,
+                time: "+1911-01-00T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P580",
+            snaktype: "value",
+          },
+        ],
+        P582: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 10,
+                time: "+1912-10-00T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P582",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P580", "P582"],
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q36578",
+                    "numeric-id": 36578,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2015-04-02T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P813"],
+        },
+        {
+          snaks: {
+            P227: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "118529579",
+                },
+
+                property: "P227",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q23833686",
+                    "numeric-id": 23833686,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2024-05-03T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P227", "P248", "P813"],
+        },
+      ],
+      type: "statement",
+    },
+    {
+      id: "Q937$1DBF6E45-7D71-496F-AADE-ABB4FB5F074F",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q72",
+            "numeric-id": 72,
+          },
+        },
+
+        property: "P937",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P580: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 9,
+                time: "+1909-00-00T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P580",
+            snaktype: "value",
+          },
+        ],
+        P582: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 9,
+                time: "+1911-00-00T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P582",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P580", "P582"],
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q36578",
+                    "numeric-id": 36578,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2015-04-02T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P813"],
+        },
+      ],
+      type: "statement",
+    },
+    {
+      id: "Q937$5FEDB28F-5810-490E-9258-301C36E95BB6",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q64",
+            "numeric-id": 64,
+          },
+        },
+
+        property: "P937",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P580: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 10,
+                time: "+1914-04-00T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P580",
+            snaktype: "value",
+          },
+        ],
+        P582: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 9,
+                time: "+1933-00-00T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P582",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P580", "P582"],
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q36578",
+                    "numeric-id": 36578,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2015-04-02T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P813"],
+        },
+        {
+          snaks: {
+            P227: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "118529579",
+                },
+
+                property: "P227",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q23833686",
+                    "numeric-id": 23833686,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2024-05-03T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P227", "P248", "P813"],
+        },
+      ],
+      type: "statement",
+    },
+    {
+      id: "Q937$af167d49-49ce-e4e5-7167-5a6ce897952e",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q464344",
+            "numeric-id": 464344,
+          },
+        },
+
+        property: "P937",
+        snaktype: "value",
+      },
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P854: [
+              {
+                datatype: "url",
+                datavalue: {
+                  type: "string",
+                  value:
+                    "http://www.einsteinsommerhaus.de/index.php?id=539&no_cache=1",
+                },
+
+                property: "P854",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P854"],
+        },
+      ],
+      type: "statement",
+    },
+    {
+      id: "Q937$280ea2e9-4613-29a2-9eaf-b5150af990c0",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q138518",
+            "numeric-id": 138518,
+          },
+        },
+
+        property: "P937",
+        snaktype: "value",
+      },
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P4656: [
+              {
+                datatype: "url",
+                datavalue: {
+                  type: "string",
+                  value:
+                    "https://en.wikipedia.org/wiki/Institute_for_Advanced_Study",
+                },
+
+                property: "P4656",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P4656"],
+        },
+      ],
+      type: "statement",
+    },
+    {
+      id: "Q937$26125040-4339-417b-cd07-1f0722f2f35d",
+      mainsnak: {
+        datatype: "wikibase-item",
+        datavalue: {
+          type: "wikibase-entityid",
+          value: {
+            "entity-type": "item",
+            id: "Q72",
+            "numeric-id": 72,
+          },
+        },
+
+        property: "P937",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P580: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 10,
+                time: "+1912-10-01T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P580",
+            snaktype: "value",
+          },
+        ],
+        P582: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 9,
+                time: "+1914-00-00T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P582",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P580", "P582"],
+      rank: "normal",
+      references: [
+        {
+          snaks: {
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q36578",
+                    "numeric-id": 36578,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2015-04-02T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P248", "P813"],
+        },
+        {
+          snaks: {
+            P227: [
+              {
+                datatype: "external-id",
+                datavalue: {
+                  type: "string",
+                  value: "118529579",
+                },
+
+                property: "P227",
+                snaktype: "value",
+              },
+            ],
+            P248: [
+              {
+                datatype: "wikibase-item",
+                datavalue: {
+                  type: "wikibase-entityid",
+                  value: {
+                    "entity-type": "item",
+                    id: "Q23833686",
+                    "numeric-id": 23833686,
+                  },
+                },
+
+                property: "P248",
+                snaktype: "value",
+              },
+            ],
+            P813: [
+              {
+                datatype: "time",
+                datavalue: {
+                  type: "time",
+                  value: {
+                    after: 0,
+                    before: 0,
+                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                    precision: 11,
+                    time: "+2024-05-03T00:00:00Z",
+                    timezone: 0,
+                  },
+                },
+
+                property: "P813",
+                snaktype: "value",
+              },
+            ],
+          },
+          "snaks-order": ["P227", "P248", "P813"],
+        },
+      ],
       type: "statement",
     },
   ],
@@ -24474,6 +25259,23 @@ const lottaClaims = {
       type: "statement",
     },
   ],
+  P947: [
+    {
+      id: "Q937$54f115b8-4e47-d4a5-091c-b9c5bea91faa",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "000021094",
+        },
+
+        property: "P947",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
   P9482: [
     {
       id: "Q937$90F90B63-EB05-467E-B9E3-CC68887BAFCF",
@@ -24485,6 +25287,40 @@ const lottaClaims = {
         },
 
         property: "P9482",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P949: [
+    {
+      id: "Q937$91097cfd-420f-24b0-e767-c41bfcea85dd",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "000042773",
+        },
+
+        property: "P949",
+        snaktype: "value",
+      },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P950: [
+    {
+      id: "Q937$8E2AC50E-695D-43E4-80EB-96BD2B5A5CF5",
+      mainsnak: {
+        datatype: "external-id",
+        datavalue: {
+          type: "string",
+          value: "XX834035",
+        },
+
+        property: "P950",
         snaktype: "value",
       },
       rank: "normal",
@@ -24542,6 +25378,178 @@ const lottaClaims = {
       type: "statement",
     },
   ],
+  P973: [
+    {
+      id: "Q937$11b5e7a8-4c1e-f48a-ced0-c1707226db35",
+      mainsnak: {
+        datatype: "url",
+        datavalue: {
+          type: "string",
+          value: "http://www.einsteinsommerhaus.de/index.php?id=539&no_cache=1",
+        },
+
+        property: "P973",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P407: [
+          {
+            datatype: "wikibase-item",
+            datavalue: {
+              type: "wikibase-entityid",
+              value: {
+                "entity-type": "item",
+                id: "Q188",
+                "numeric-id": 188,
+              },
+            },
+
+            property: "P407",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P407"],
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$37f0d024-415d-a0e6-d9b9-28a0e963191f",
+      mainsnak: {
+        datatype: "url",
+        datavalue: {
+          type: "string",
+          value: "https://www.ige.ch/de/ueber-uns/einstein.html",
+        },
+
+        property: "P973",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P407: [
+          {
+            datatype: "wikibase-item",
+            datavalue: {
+              type: "wikibase-entityid",
+              value: {
+                "entity-type": "item",
+                id: "Q188",
+                "numeric-id": 188,
+              },
+            },
+
+            property: "P407",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P407"],
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$63DAA43E-48B6-4654-B493-928738178FBE",
+      mainsnak: {
+        datatype: "url",
+        datavalue: {
+          type: "string",
+          value: "http://www.digiporta.net/index.php?id=553550365",
+        },
+
+        property: "P973",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P407: [
+          {
+            datatype: "wikibase-item",
+            datavalue: {
+              type: "wikibase-entityid",
+              value: {
+                "entity-type": "item",
+                id: "Q188",
+                "numeric-id": 188,
+              },
+            },
+
+            property: "P407",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P407"],
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$EC12FBB9-05FE-4987-9BEE-6C82F2B4412F",
+      mainsnak: {
+        datatype: "url",
+        datavalue: {
+          type: "string",
+          value: "http://www.digiporta.net/index.php?id=568612883",
+        },
+
+        property: "P973",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P407: [
+          {
+            datatype: "wikibase-item",
+            datavalue: {
+              type: "wikibase-entityid",
+              value: {
+                "entity-type": "item",
+                id: "Q188",
+                "numeric-id": 188,
+              },
+            },
+
+            property: "P407",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P407"],
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$9F63BB27-5275-4FDC-AD23-456899EEF925",
+      mainsnak: {
+        datatype: "url",
+        datavalue: {
+          type: "string",
+          value: "http://www.digiporta.net/index.php?id=707892219",
+        },
+
+        property: "P973",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P407: [
+          {
+            datatype: "wikibase-item",
+            datavalue: {
+              type: "wikibase-entityid",
+              value: {
+                "entity-type": "item",
+                id: "Q188",
+                "numeric-id": 188,
+              },
+            },
+
+            property: "P407",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P407"],
+      rank: "normal",
+      type: "statement",
+    },
+  ],
   P9807: [
     {
       id: "Q937$12C12F18-54B7-4B96-B7D8-A913A58B05DF",
@@ -24572,6 +25580,165 @@ const lottaClaims = {
         property: "P9863",
         snaktype: "value",
       },
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P989: [
+    {
+      id: "Q937$8b5a15c8-47cb-7529-df61-298660957813",
+      mainsnak: {
+        datatype: "commonsMedia",
+        datavalue: {
+          type: "string",
+          value: "Hy-Ալբերտ Այնշտայն (Albert Einstein).ogg",
+        },
+
+        property: "P989",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P407: [
+          {
+            datatype: "wikibase-item",
+            datavalue: {
+              type: "wikibase-entityid",
+              value: {
+                "entity-type": "item",
+                id: "Q8785",
+                "numeric-id": 8785,
+              },
+            },
+
+            property: "P407",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P407"],
+      rank: "normal",
+      type: "statement",
+    },
+    {
+      id: "Q937$ebd8e6e1-4966-ab2a-c10f-fceeea0a3c14",
+      mainsnak: {
+        datatype: "commonsMedia",
+        datavalue: {
+          type: "string",
+          value: "De-Albert Einstein.ogg",
+        },
+
+        property: "P989",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P2047: [
+          {
+            datatype: "quantity",
+            datavalue: {
+              type: "quantity",
+              value: {
+                amount: "+37.5",
+                unit: "http://www.wikidata.org/entity/Q7727",
+              },
+            },
+
+            property: "P2047",
+            snaktype: "value",
+          },
+        ],
+        P407: [
+          {
+            datatype: "wikibase-item",
+            datavalue: {
+              type: "wikibase-entityid",
+              value: {
+                "entity-type": "item",
+                id: "Q188",
+                "numeric-id": 188,
+              },
+            },
+
+            property: "P407",
+            snaktype: "value",
+          },
+        ],
+        P585: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 11,
+                time: "+2005-06-19T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P585",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P407", "P585", "P2047"],
+      rank: "normal",
+      type: "statement",
+    },
+  ],
+  P990: [
+    {
+      id: "Q937$d28dfcfb-4df9-39b0-68df-db41dc8f363e",
+      mainsnak: {
+        datatype: "commonsMedia",
+        datavalue: {
+          type: "string",
+          value: "03 ALBERT EINSTEIN.ogg",
+        },
+
+        property: "P990",
+        snaktype: "value",
+      },
+      qualifiers: {
+        P407: [
+          {
+            datatype: "wikibase-item",
+            datavalue: {
+              type: "wikibase-entityid",
+              value: {
+                "entity-type": "item",
+                id: "Q1860",
+                "numeric-id": 1860,
+              },
+            },
+
+            property: "P407",
+            snaktype: "value",
+          },
+        ],
+        P585: [
+          {
+            datatype: "time",
+            datavalue: {
+              type: "time",
+              value: {
+                after: 0,
+                before: 0,
+                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+                precision: 9,
+                time: "+1943-00-00T00:00:00Z",
+                timezone: 0,
+              },
+            },
+
+            property: "P585",
+            snaktype: "value",
+          },
+        ],
+      },
+      "qualifiers-order": ["P585", "P407"],
       rank: "normal",
       type: "statement",
     },
@@ -24610,386 +25777,52 @@ const lottaClaims = {
       type: "statement",
     },
   ],
-  P9984: [
+  P998: [
     {
-      id: "Q937$25DA9494-3E3C-4F53-BC1B-E0821F2AC05A",
+      id: "Q937$22A8DE0D-649A-4F71-B6EC-80C767F50CDC",
       mainsnak: {
         datatype: "external-id",
         datavalue: {
           type: "string",
-          value: "981058511756306706",
+          value: "Science/Physics/History/People/Einstein,_Albert/",
         },
 
-        property: "P9984",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P10069: [
-    {
-      id: "Q937$614F5C33-8249-436B-ADCC-4CCA5D1F1445",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "49324",
-        },
-
-        property: "P10069",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P10141: [
-    {
-      id: "Q937$18d12b8d-4bda-bc95-5310-ef1eb8fc1f5e",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "156358",
-        },
-
-        property: "P10141",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P10227: [
-    {
-      id: "q937$901ac528-4e29-9c58-156a-6b792417f2dd",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "vtls000086385",
-        },
-
-        property: "P10227",
-        snaktype: "value",
-      },
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P214: [
-              {
-                datatype: "external-id",
-                datavalue: {
-                  type: "string",
-                  value: "75121530",
-                },
-
-                property: "P214",
-                snaktype: "value",
-              },
-            ],
-            P248: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q54919",
-                    "numeric-id": 54919,
-                  },
-                },
-
-                property: "P248",
-                snaktype: "value",
-              },
-            ],
-            P813: [
-              {
-                datatype: "time",
-                datavalue: {
-                  type: "time",
-                  value: {
-                    after: 0,
-                    before: 0,
-                    calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                    precision: 11,
-                    time: "+2022-03-05T00:00:00Z",
-                    timezone: 0,
-                  },
-                },
-
-                property: "P813",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P248", "P214", "P813"],
-        },
-      ],
-      type: "statement",
-    },
-  ],
-  P10234: [
-    {
-      id: "Q937$469367a5-4595-f4d4-1f0d-938d3f7e95b6",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "albert_einstein",
-        },
-
-        property: "P10234",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P10242: [
-    {
-      id: "Q937$B1341B66-13D3-43A4-8D3A-AEFB93F49981",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "01682/eu_e_0736/e0736",
-        },
-
-        property: "P10242",
+        property: "P998",
         snaktype: "value",
       },
       qualifiers: {
-        P1932: [
+        P407: [
           {
-            datatype: "string",
+            datatype: "wikibase-item",
             datavalue: {
-              type: "string",
-              value: "Albert Einstein",
+              type: "wikibase-entityid",
+              value: {
+                "entity-type": "item",
+                id: "Q1860",
+                "numeric-id": 1860,
+              },
             },
 
-            property: "P1932",
+            property: "P407",
             snaktype: "value",
           },
         ],
       },
-      "qualifiers-order": ["P1932"],
-      rank: "normal",
+      "qualifiers-order": ["P407"],
+      rank: "preferred",
       type: "statement",
     },
-  ],
-  P10297: [
     {
-      id: "Q937$7c5a2eff-4378-d934-f4d4-b7fce1a75171",
+      id: "Q937$1C3C9040-A752-47F6-9382-2F9557682E78",
       mainsnak: {
         datatype: "external-id",
         datavalue: {
           type: "string",
-          value: "m0jcx",
+          value:
+            "World/Français/Sciences/Physique/Histoire/Personnages_historiques/Einstein,_Albert/",
         },
 
-        property: "P10297",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P10299: [
-    {
-      id: "Q937$5715b495-4bfa-27ac-08f8-9f78ebd90082",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "albert-einstein",
-        },
-
-        property: "P10299",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P10302: [
-    {
-      id: "Q937$6ad5ded0-e941-42f0-8e44-bfe11baa4c81",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "albert-einstein",
-        },
-
-        property: "P10302",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P10387: [
-    {
-      id: "Q937$2F8EE879-4C25-4F37-91E3-BFE4CD3D8CCC",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "8278",
-        },
-
-        property: "P10387",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P10553: [
-    {
-      id: "Q937$DC5C0034-8B57-4289-AE2C-C5D9B0190B95",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "142045950",
-        },
-
-        property: "P10553",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P10565: [
-    {
-      id: "Q937$7dc4b696-4246-5d4d-a056-e269be655515",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "123649",
-        },
-
-        property: "P10565",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P1810: [
-          {
-            datatype: "string",
-            datavalue: {
-              type: "string",
-              value: "爱因斯坦，A.",
-            },
-
-            property: "P1810",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P1810"],
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$9456DEBA-00A4-4F2A-89C4-735AA8277A1F",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "520858",
-        },
-
-        property: "P10565",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$D9095A5E-8027-46D7-8047-C6E01B683531",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "633756",
-        },
-
-        property: "P10565",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P10608: [
-    {
-      id: "Q937$081B24E1-6DFC-42AD-8991-CE992F602DB9",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "agent/gnd_118529579",
-        },
-
-        property: "P10608",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P10704: [
-    {
-      id: "Q937$D7F44115-3E07-4991-9481-9DD97634555A",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "1955.0005",
-        },
-
-        property: "P10704",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P10757: [
-    {
-      id: "Q937$65b22a89-4cce-1421-62e5-389b629dbf26",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "395",
-        },
-
-        property: "P10757",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P10780: [
-    {
-      id: "Q937$1EB8E30E-E656-4F1B-9ADB-67FF9579A5D6",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "albert-einstein",
-        },
-
-        property: "P10780",
+        property: "P998",
         snaktype: "value",
       },
       qualifiers: {
@@ -25014,339 +25847,80 @@ const lottaClaims = {
       rank: "normal",
       type: "statement",
     },
-  ],
-  P10832: [
     {
-      id: "Q937$5a751d54-44ae-b82e-5416-c290a328bbaa",
+      id: "Q937$A8F18655-B3A0-4EC9-AA0B-8597A4AC8D1E",
       mainsnak: {
         datatype: "external-id",
         datavalue: {
           type: "string",
-          value: "E39PBJkhFRgHDtmhvmC6JdfXh3",
+          value:
+            "World/Deutsch/Wissenschaft/Naturwissenschaften/Physik/Personen/Einstein,_Albert/",
         },
 
-        property: "P10832",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P10861: [
-    {
-      id: "Q937$86f35674-4459-8de2-d7a3-b1ac6de8ae8a",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "013217540103.39",
-        },
-
-        property: "P10861",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P10899: [
-    {
-      id: "Q937$6a2b7d78-430c-1ed7-79b0-73293af31b58",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "882211",
-        },
-
-        property: "P10899",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P10916: [
-    {
-      id: "Q937$de37924c-469d-5607-2ecf-458f0f97fa3f",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "Albert_Einstein",
-        },
-
-        property: "P10916",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P11120: [
-    {
-      id: "Q937$67929d93-4c92-0edd-65eb-e4a730ba190a",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "albert-einstein",
-        },
-
-        property: "P11120",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P11155: [
-    {
-      id: "Q937$709A0C9B-9E40-4C8D-8C42-73EACC67A06F",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "81943",
-        },
-
-        property: "P11155",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P11180: [
-    {
-      id: "Q937$6927D2FF-2E73-4595-8903-03037104504C",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "10590",
-        },
-
-        property: "P11180",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P11194: [
-    {
-      id: "Q937$2DDF78BD-28E7-4C08-B3E7-F57A01116229",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "people/albert-einstein",
-        },
-
-        property: "P11194",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P11196: [
-    {
-      id: "Q937$372FC8C7-27B2-45B8-96E1-5E6F2F5171D6",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "爱因斯坦",
-        },
-
-        property: "P11196",
+        property: "P998",
         snaktype: "value",
       },
       qualifiers: {
-        P585: [
+        P407: [
           {
-            datatype: "time",
+            datatype: "wikibase-item",
             datavalue: {
-              type: "time",
+              type: "wikibase-entityid",
               value: {
-                after: 0,
-                before: 0,
-                calendarmodel: "http://www.wikidata.org/entity/Q1985727",
-                precision: 11,
-                time: "+2023-03-20T00:00:00Z",
-                timezone: 0,
+                "entity-type": "item",
+                id: "Q188",
+                "numeric-id": 188,
               },
             },
 
-            property: "P585",
-            snaktype: "value",
-          },
-        ],
-        P3740: [
-          {
-            datatype: "quantity",
-            datavalue: {
-              type: "quantity",
-              value: {
-                amount: "+247103",
-                unit: "1",
-              },
-            },
-
-            property: "P3740",
+            property: "P407",
             snaktype: "value",
           },
         ],
       },
-      "qualifiers-order": ["P3740", "P585"],
+      "qualifiers-order": ["P407"],
       rank: "normal",
       type: "statement",
     },
-  ],
-  P11239: [
     {
-      id: "Q937$EE6BF046-A28B-4FA4-8900-F9E9F31D22FB",
+      id: "Q937$48BB41BA-D982-4E6D-9E78-96DDBB73A5D8",
       mainsnak: {
         datatype: "external-id",
         datavalue: {
           type: "string",
-          value: "0008824347",
+          value:
+            "World/Español/Ciencia_y_tecnología/Física/Historia/Biografías/Einstein,_Albert/",
         },
 
-        property: "P11239",
+        property: "P998",
         snaktype: "value",
       },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P11249: [
-    {
-      id: "Q937$0C404BCD-9CA7-4A27-98A3-59991DEA5B05",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "14115549",
-        },
-
-        property: "P11249",
-        snaktype: "value",
-      },
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P4656: [
-              {
-                datatype: "url",
-                datavalue: {
-                  type: "string",
-                  value:
-                    "https://www.wikidata.org/wiki/Wikidata:Property_proposal/KBR_Catalogue_ID_for_writers",
-                },
-
-                property: "P4656",
-                snaktype: "value",
+      qualifiers: {
+        P407: [
+          {
+            datatype: "wikibase-item",
+            datavalue: {
+              type: "wikibase-entityid",
+              value: {
+                "entity-type": "item",
+                id: "Q1321",
+                "numeric-id": 1321,
               },
-            ],
+            },
+
+            property: "P407",
+            snaktype: "value",
           },
-          "snaks-order": ["P4656"],
-        },
-      ],
-      type: "statement",
-    },
-  ],
-  P11386: [
-    {
-      id: "Q937$750C57A8-C600-4166-8FA3-593DE87E2245",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "albert-einstein",
-        },
-
-        property: "P11386",
-        snaktype: "value",
+        ],
       },
+      "qualifiers-order": ["P407"],
       rank: "normal",
       type: "statement",
     },
   ],
-  P11394: [
+  P9984: [
     {
-      id: "Q937$7f9996bd-418b-a088-d1ce-cc9b57be0351",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "aor/einstein/index",
-        },
-
-        property: "P11394",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P11496: [
-    {
-      id: "Q937$9C7521F8-F6BB-44A9-A38B-D4B63CF7F44E",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "1140563741718602752",
-        },
-
-        property: "P11496",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P11514: [
-    {
-      id: "Q937$E39D6BE6-F743-4F62-88D1-DA76461A3A25",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "einshtein-al-bert-3ec899",
-        },
-
-        property: "P11514",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P11683: [
-    {
-      id: "Q937$51B7CB8E-74B8-47E9-9398-CB403560FD90",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "albert-ejnshtejn",
-        },
-
-        property: "P11683",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P11686: [
-    {
-      id: "Q937$599A7A02-8D71-47BC-9D6C-AD100862BA58",
+      id: "Q937$25DA9494-3E3C-4F53-BC1B-E0821F2AC05A",
       mainsnak: {
         datatype: "external-id",
         datavalue: {
@@ -25354,581 +25928,7 @@ const lottaClaims = {
           value: "981058511756306706",
         },
 
-        property: "P11686",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P11818: [
-    {
-      id: "Q937$157844C7-8B05-4D2A-946A-A37C30274CAA",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "esjiljveqvqreqe",
-        },
-
-        property: "P11818",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P11870: [
-    {
-      id: "Q937$C6EA136F-9608-49C2-8119-FCB0EE7AAA1A",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "1404",
-        },
-
-        property: "P11870",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P12086: [
-    {
-      id: "Q937$B937678D-E069-4973-83A8-DCD557715D05",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "Albert_Einstein",
-        },
-
-        property: "P12086",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P12098: [
-    {
-      id: "Q937$AD4C743A-6BF8-4B60-8EE2-DEA685000158",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "855374",
-        },
-
-        property: "P12098",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P12153: [
-    {
-      id: "Q937$5f4db2e5-42cf-e474-c43a-1e2a15ef3990",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "650988260",
-        },
-
-        property: "P12153",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P12385: [
-    {
-      id: "Q937$70b72fa7-3aa0-42db-ab27-5721962aa70e",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "albert-einstein",
-        },
-
-        property: "P12385",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P12458: [
-    {
-      id: "Q937$E9FD5427-2D42-4CB1-8714-59F404F2275A",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "264639",
-        },
-
-        property: "P12458",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P1810: [
-          {
-            datatype: "string",
-            datavalue: {
-              type: "string",
-              value: "Einstein, Albert, 1879-1955.",
-            },
-
-            property: "P1810",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P1810"],
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P3452: [
-              {
-                datatype: "wikibase-item",
-                datavalue: {
-                  type: "wikibase-entityid",
-                  value: {
-                    "entity-type": "item",
-                    id: "Q124605379",
-                    "numeric-id": 124605379,
-                  },
-                },
-
-                property: "P3452",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P3452"],
-        },
-      ],
-      type: "statement",
-    },
-  ],
-  P12483: [
-    {
-      id: "Q937$3E99B226-D3B6-4819-9D24-62151AB73ACA",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "11237",
-        },
-
-        property: "P12483",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P12502: [
-    {
-      id: "Q937$454CB7FB-E3E0-4FCD-B53A-85212C60722D",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "14611",
-        },
-
-        property: "P12502",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P12582: [
-    {
-      id: "Q937$63E112EF-7936-4F50-8F66-C28DA4CE293C",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "20110803095744712",
-        },
-
-        property: "P12582",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P12597: [
-    {
-      id: "Q937$F941CD61-9078-47F5-837E-B2CF0236C2F2",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "14634",
-        },
-
-        property: "P12597",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P12674: [
-    {
-      id: "Q937$85A23411-4ADE-4334-B962-CAE8AA2D4149",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "Q95055",
-        },
-
-        property: "P12674",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P12800: [
-    {
-      id: "Q937$3445205E-0782-4CF6-9D75-145D7BE7166C",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "en:Albert_Einstein",
-        },
-
-        property: "P12800",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$9B057674-A2D6-48C0-9781-AB464C9EBD5B",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "it:Albert_Einstein",
-        },
-
-        property: "P12800",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$ADC97A7F-19CA-41BA-AFF1-2BD00C4FFA64",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "es:Albert_Einstein",
-        },
-
-        property: "P12800",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$441AAC37-A617-4DB8-8C9E-EB24D2C53E98",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "eu:Albert_Einstein",
-        },
-
-        property: "P12800",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$174A978F-C237-4F40-8DEF-6F98E749B12C",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "ca:Albert_Einstein",
-        },
-
-        property: "P12800",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-    {
-      id: "Q937$CFE21E78-4B32-4611-AB3E-E91B2F7CA981",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "fr:Albert_Einstein",
-        },
-
-        property: "P12800",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P12836: [
-    {
-      id: "Q937$732C5E98-200F-4944-8978-5110BFBECCFE",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "27238306",
-        },
-
-        property: "P12836",
-        snaktype: "value",
-      },
-      qualifiers: {
-        P1810: [
-          {
-            datatype: "string",
-            datavalue: {
-              type: "string",
-              value: "阿尔伯特·爱因斯坦 Albert Einstein",
-            },
-
-            property: "P1810",
-            snaktype: "value",
-          },
-        ],
-      },
-      "qualifiers-order": ["P1810"],
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P12871: [
-    {
-      id: "Q937$f18cf655-4231-9e57-7105-91e8d52baad5",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "0jcx",
-        },
-
-        property: "P12871",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P12975: [
-    {
-      id: "Q937$7349c362-ac2a-46e6-b9ba-8e55dcc520c0",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "2607",
-        },
-
-        property: "P12975",
-        snaktype: "value",
-      },
-      rank: "normal",
-      references: [
-        {
-          snaks: {
-            P4656: [
-              {
-                datatype: "url",
-                datavalue: {
-                  type: "string",
-                  value:
-                    "https://www.wikidata.org/wiki/Wikidata:Property_proposal/Lexikon_der_Mathematik_entry_ID",
-                },
-
-                property: "P4656",
-                snaktype: "value",
-              },
-            ],
-          },
-          "snaks-order": ["P4656"],
-        },
-      ],
-      type: "statement",
-    },
-  ],
-  P13019: [
-    {
-      id: "Q937$D909F5C2-4686-4D3E-BE02-2709AA4C976B",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "87761",
-        },
-
-        property: "P13019",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P13022: [
-    {
-      id: "Q937$A3B8B824-35FA-401A-A7F4-69B2CD27F15D",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "19857",
-        },
-
-        property: "P13022",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P13030: [
-    {
-      id: "Q937$2583B1EF-2FC2-4F7A-891D-7B4668E83FB2",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "person/2493",
-        },
-
-        property: "P13030",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P13049: [
-    {
-      id: "Q937$8BE290EF-BA0E-4795-B38A-C1963B157611",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "118529579",
-        },
-
-        property: "P13049",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P13051: [
-    {
-      id: "Q937$380F1F6D-03C1-4998-8B94-7721C28348F6",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "34419",
-        },
-
-        property: "P13051",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P13146: [
-    {
-      id: "Q937$f363a24c-46e1-3712-66b6-e455ff8e1053",
-      mainsnak: {
-        datatype: "commonsMedia",
-        datavalue: {
-          type: "string",
-          value:
-            "Albert Einstein writing on a blackboard in Pasadena (1931).jpg",
-        },
-
-        property: "P13146",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P13153: [
-    {
-      id: "Q937$82a82f75-4bec-3e40-3538-424efa2918ab",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "5698",
-        },
-
-        property: "P13153",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P13166: [
-    {
-      id: "Q937$8DA39E16-4D5B-4E6E-BAE2-715ADC9BFF2D",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "144964",
-        },
-
-        property: "P13166",
-        snaktype: "value",
-      },
-      rank: "normal",
-      type: "statement",
-    },
-  ],
-  P13183: [
-    {
-      id: "Q937$C3AA622F-BE01-4CC6-9877-77908BD2E6F9",
-      mainsnak: {
-        datatype: "external-id",
-        datavalue: {
-          type: "string",
-          value: "118529579",
-        },
-
-        property: "P13183",
+        property: "P9984",
         snaktype: "value",
       },
       rank: "normal",

@@ -1,22 +1,11 @@
 import type { Entities } from "../types.js";
 
-export type ErrorResponse = BasicResponse & {
+export type Binding = BindingLiteral | BindingUri;
+
+export type ErrorResponse = {
   error?: { info: string };
   success: 0;
-};
-
-type BindingUri = {
-  type: "uri";
-  value: string;
-};
-
-type BindingLiteral = {
-  "xml:lang"?: string | undefined;
-  type: "literal";
-  value: string;
-};
-
-export type Binding = BindingLiteral | BindingUri;
+} & BasicResponse;
 
 export type QueryBindingsResponse = {
   head: { vars: string[] };
@@ -53,14 +42,25 @@ export type SearchResult = {
   url?: string;
 };
 
-export type SuccessResponse = BasicResponse & {
+export type SuccessResponse = {
   entities?: Entities;
   search?: SearchResult[];
   success: 1;
-};
+} & BasicResponse;
 
 export type WikibaseResponse = ErrorResponse | SuccessResponse;
 
 type BasicResponse = {
   warnings?: Record<string, ResponseWarnings>;
+};
+
+type BindingLiteral = {
+  type: "literal";
+  value: string;
+  "xml:lang"?: string | undefined;
+};
+
+type BindingUri = {
+  type: "uri";
+  value: string;
 };

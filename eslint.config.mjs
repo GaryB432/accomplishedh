@@ -28,14 +28,14 @@ export default defineConfig([
     },
     plugins: { js },
     rules: {
-      "@typescript-eslint/no-undef": "off",
-      "@typescript-eslint/no-unused-vars": "off",
-      "no-undef": "off",
-      "no-unused-vars": "off",
       "@typescript-eslint/no-floating-promises": "warn",
       "@typescript-eslint/no-misused-promises": "warn",
+      "@typescript-eslint/no-undef": "off",
+      "@typescript-eslint/no-unused-vars": "off",
       "@typescript-eslint/prefer-promise-reject-errors": "warn",
       "@typescript-eslint/unbound-method": "warn",
+      "no-undef": "off",
+      "no-unused-vars": "off",
     },
   },
   {
@@ -45,8 +45,8 @@ export default defineConfig([
     },
   },
   {
-    files: ["**/*.{cjs,mjs}"],
     extends: [tseslint.configs.disableTypeChecked],
+    files: ["**/*.{cjs,mjs}"],
     rules: {
       "@typescript-eslint/explicit-module-boundary-types": "off",
     },

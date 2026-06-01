@@ -1,8 +1,8 @@
 import type { FeaturedHuman } from "@accomplishedh/shared";
 
+import { redirect } from "@sveltejs/kit";
 import { dev } from "$app/environment";
 import { FeDataSvc } from "$lib/data/fe-data.svelte";
-import { redirect } from "@sveltejs/kit";
 
 import type { Actions, PageServerLoad } from "./$types";
 

@@ -44,8 +44,8 @@ export type Item = {
 
 export type {
   Binding,
-  WikibaseResponse,
   QueryBindingsResponse,
+  WikibaseResponse,
 } from "./types/responses";
 export type { Snak } from "./types/snaks";
 
@@ -73,17 +73,17 @@ type CommonsBasicResponse = {
   query: CommonsQuery;
 };
 
-type CommonsCompleteResponse = CommonsBasicResponse & {
+type CommonsCompleteResponse = {
   batchcomplete?: unknown;
   continue?: never;
-};
-type CommonsContinueResponse = CommonsBasicResponse & {
+} & CommonsBasicResponse;
+type CommonsContinueResponse = {
   batchcomplete?: never;
   continue: {
     continue: string;
     iistart: string;
   };
-};
+} & CommonsBasicResponse;
 
 interface CommonsImageInfo {
   descriptionshorturl: string;

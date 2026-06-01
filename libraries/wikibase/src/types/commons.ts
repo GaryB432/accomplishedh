@@ -6,16 +6,16 @@ type BasicResponse = {
   query: Query;
 };
 
-type CompleteResponse = BasicResponse & {
+type CompleteResponse = {
   batchcomplete: unknown;
-};
+} & BasicResponse;
 
-type ContinueResponse = BasicResponse & {
+type ContinueResponse = {
   continue: {
     continue: string;
     iistart: string;
   };
-};
+} & BasicResponse;
 
 interface ImageInfo {
   descriptionshorturl: string;

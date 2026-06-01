@@ -17,10 +17,10 @@ const ROOTS = {
 };
 
 const categories = new Map([
+  ["Q336", "Science"],
   ["Q36649", "Art"],
   ["Q8242", "Lit"],
   ["Q9730", "Music"],
-  ["Q336", "Science"],
 ]); // TODO compute by reverse ROOTS
 
 const HA_DIRECTORY = join(fileURLToPath(import.meta.url), "../..");
@@ -31,21 +31,28 @@ const FIELDS_FILE_NAME = join(WIKIBASE_DIRECTORY, "fields-of-work.json");
 
 const USER_AGENT = "AccomplishedHBot/1.0 (editor@humanaccomplishment.com)";
 
-async function waitFetch(input, init) {
-  return fetch(input, init);
-  // return new Promise((resolve) => {
-  //   setTimeout(() => {
-  //     resolve(globalThis.fetch(input, init));
-  //   }, 500);
-  // });
+export function extractValue(typedValue) {
+  const popped = typedValue.value.split("/").pop();
+  if (!popped) {
+    throw new Error("no pop");
+  }
+  return popped;
+}
+
+function asQid(value) {
+  if (!/^Q\d+$/.test(value)) {
+    throw new Error(`Invalid field-of-work id: ${value}`);
+  }
+
+  return value;
 }
 
 async function main(today) {
   today ??= new Date().toISOString();
   const fowDataset = {
-    schemaVersion,
     generatedAt: today,
     people: {},
+    schemaVersion,
   };
 
   const everybody = JSON.parse(
@@ -94,10 +101,10 @@ async function main(today) {
     const data = await response.json();
 
     void data.results.bindings.map(toFowEntry).reduce((a, fow) => {
-      const { id, category, label, human } = fow;
+      const { category, human, id, label } = fow;
 
       a[human] ??= { fows: [] };
-      a[human].fows.push({ id, category, label });
+      a[human].fows.push({ category, id, label });
 
       return a;
     }, fowDataset.people);
@@ -116,22 +123,6 @@ async function main(today) {
   console.log(`🔥Complete. ${FIELDS_FILE_NAME}`);
 }
 
-function asQid(value) {
-  if (!/^Q\d+$/.test(value)) {
-    throw new Error(`Invalid field-of-work id: ${value}`);
-  }
-
-  return value;
-}
-
-export function extractValue(typedValue) {
-  const popped = typedValue.value.split("/").pop();
-  if (!popped) {
-    throw new Error("no pop");
-  }
-  return popped;
-}
-
 /**
  * @param {Record<string,import('../libraries/wikibase/src/types').Binding} row
  * @param {number} index
@@ -144,7 +135,16 @@ function toFowEntry(row, index, array) {
   const label = row["fowLabel"].value;
 
   const category = getFowRootCategory(row["root"]);
-  return { id, category, human, label };
+  return { category, human, id, label };
+}
+
+async function waitFetch(input, init) {
+  return fetch(input, init);
+  // return new Promise((resolve) => {
+  //   setTimeout(() => {
+  //     resolve(globalThis.fetch(input, init));
+  //   }, 500);
+  // });
 }
 
 void main();

@@ -8,18 +8,18 @@ export type Snak =
   | TimeSnak
   | UrlSnak
   | WikibaseItemSnak;
-type CommonsMediaSnak = StringSnak & {
+type CommonsMediaSnak = {
   datatype: "commonsMedia";
-};
+} & StringSnak;
 
-type ExternalIdSnak = ValueTypeSnak & {
+type ExternalIdSnak = {
   datatype: "external-id";
   datavalue: {
     type: "string";
     value: string;
   };
-};
-type GlobeCoordinateSnak = ValueTypeSnak & {
+} & ValueTypeSnak;
+type GlobeCoordinateSnak = {
   datatype: "globe-coordinate";
   datavalue: {
     type: "globecoordinate";
@@ -29,33 +29,33 @@ type GlobeCoordinateSnak = ValueTypeSnak & {
       precision: number;
     };
   };
-};
-type MonolinqualTextSnak = (SomeValueTypeSnak | ValueTypeSnak) & {
+} & ValueTypeSnak;
+type MonolinqualTextSnak = {
   datatype: "monolingualtext";
   datavalue?: {
     type: "monolingualtext";
     value: { language: string; text: string };
   };
-};
-type QuantitySnak = ValueTypeSnak & {
+} & (SomeValueTypeSnak | ValueTypeSnak);
+type QuantitySnak = {
   datatype: "quantity";
   datavalue: {
     type: "quantity";
     value: { amount: string; unit: string };
   };
-};
+} & ValueTypeSnak;
 type SomeValueTypeSnak = {
   property: string;
   snaktype: "novalue" | "somevalue";
 };
-type StringSnak = ValueTypeSnak & {
+type StringSnak = {
   datatype: string;
   datavalue: {
     type: "string";
     value: string;
   };
-};
-type TimeSnak = ValueTypeSnak & {
+} & ValueTypeSnak;
+type TimeSnak = {
   datatype: "time";
   datavalue: {
     type: "time";
@@ -68,15 +68,15 @@ type TimeSnak = ValueTypeSnak & {
       timezone?: number;
     };
   };
-};
-type UrlSnak = StringSnak & {
+} & ValueTypeSnak;
+type UrlSnak = {
   datatype: "url";
-};
+} & StringSnak;
 type ValueTypeSnak = {
   property: string;
   snaktype: "value";
 };
-type WikibaseItemSnak = ValueTypeSnak & {
+type WikibaseItemSnak = {
   datatype: "wikibase-item";
   datavalue: {
     type: "wikibase-entityid";
@@ -86,4 +86,4 @@ type WikibaseItemSnak = ValueTypeSnak & {
       "numeric-id"?: number;
     };
   };
-};
+} & ValueTypeSnak;

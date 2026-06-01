@@ -1,4 +1,5 @@
 import { describe, expect, test } from "vitest";
+
 import { lifeDateClaims, schoolClaims } from "../mocks/claims";
 import {
   entityDateOfBirthIso,
@@ -44,18 +45,18 @@ describe("Translators", () => {
           type: "uri",
           value: "http://www.wikidata.org/entity/Q742333",
         },
-        root: {
-          type: "uri",
-          value: "http://www.wikidata.org/entity/Q36649",
+        fowLabel: {
+          type: "literal",
+          value: "history painting",
+          "xml:lang": "en",
         },
         human: {
           type: "uri",
           value: "http://www.wikidata.org/entity/Q49898",
         },
-        fowLabel: {
-          "xml:lang": "en",
-          type: "literal",
-          value: "history painting",
+        root: {
+          type: "uri",
+          value: "http://www.wikidata.org/entity/Q36649",
         },
       }),
     ).toMatchInlineSnapshot(`

@@ -1,9 +1,9 @@
 import {
   type FeaturedHuman,
   Logger,
-  type WikiHuman,
   padSerialForKey,
   shardKeyFor,
+  type WikiHuman,
 } from "@accomplishedh/shared";
 import { join } from "node:path";
 import { SvelteSet } from "svelte/reactivity";

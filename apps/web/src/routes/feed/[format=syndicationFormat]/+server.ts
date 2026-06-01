@@ -1,6 +1,6 @@
-import { FeDataSvc } from "$lib/data/fe-data.svelte";
 import { isValidISO8601 } from "@accomplishedh/shared";
 import { error } from "@sveltejs/kit";
+import { FeDataSvc } from "$lib/data/fe-data.svelte";
 import xmllib from "xml";
 
 import type { RequestHandler } from "./$types";

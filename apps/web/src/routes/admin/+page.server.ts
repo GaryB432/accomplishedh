@@ -1,8 +1,8 @@
 import type { FeaturedHuman } from "@accomplishedh/shared";
 
+import { type Actions, error, redirect } from "@sveltejs/kit";
 import { FeDataSvc } from "$lib/data/fe-data.svelte";
 import { isGary } from "$lib/utils";
-import { type Actions, error, redirect } from "@sveltejs/kit";
 
 import type { PageServerLoad } from "./$types";
 

@@ -11,16 +11,15 @@ export interface EuroHuman {
   knownFor: string;
   name: string;
   nobel?:
-    | undefined
     | {
         laureate: Laureate;
-      };
+      }
+    | undefined;
   osfName: string;
   portrait: Portrait;
   props: Property[];
   serial: string;
   sr:
-    | undefined
     | {
         ns: number;
         pageid: number;
@@ -29,7 +28,8 @@ export interface EuroHuman {
         timestamp: string;
         title: string;
         wordcount: number;
-      };
+      }
+    | undefined;
   yob: string;
 }
 export interface FeaturedHuman extends FeaturedSubject {
@@ -85,6 +85,13 @@ export function highlightDefiniteArticle(message: string): {
   return { marker, p };
 }
 
+export function padSerialForKey(serial: string): string {
+  return serial.padStart(6, "0").slice(0, 6);
+}
+export function shardKeyFor(h: Pick<EuroHuman, "id">): string {
+  return h.id.slice(4, 5);
+}
+
 export function shuffle<T>(array: T[]): T[] {
   let currentIndex = array.length,
     randomIndex: number;
@@ -100,23 +107,16 @@ export function shuffle<T>(array: T[]): T[] {
   }
   return array;
 }
+
 export async function sleep(ms = 1000): Promise<void> {
   return new Promise((cb) => setTimeout(cb, ms));
 }
 
-export function padSerialForKey(serial: string): string {
-  return serial.padStart(6, "0").slice(0, 6);
-}
-
-export function shardKeyFor(h: Pick<EuroHuman, "id">): string {
-  return h.id.slice(4, 5);
-}
-
 // TODO coverage
 const replacements: Record<string, string> = {
+  "'": "&#39;",
   '"': "&quot;",
   "&": "&amp;",
-  "'": "&#39;",
   "<": "&lt;",
   ">": "&gt;",
 };

@@ -1,4 +1,3 @@
-/* eslint-disable no-useless-assignment */
 import {
   type EuroHuman,
   highlightDefiniteArticle,
@@ -47,7 +46,7 @@ export function checkForTweet(
 
   let enhancedText = coolors.good(text);
 
-  let valid = true;
+  let valid: boolean;
 
   const hda = highlightDefiniteArticle(human.knownFor);
 
@@ -90,7 +89,7 @@ export function humanUrl(human: Pick<EuroHuman, "serial">): string {
 function checkForFootnotes(text: string): CheckedTweet {
   const parts: string[] = [];
   let ctext = text;
-  let match: null | RegExpMatchArray = null;
+  let match: RegExpMatchArray | null;
   do {
     match = ctext.match(/\s*\[\d+\]/);
     if (match) {

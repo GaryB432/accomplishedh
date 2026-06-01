@@ -1,7 +1,9 @@
 import { type Portrait, type WikiHuman } from "@accomplishedh/shared";
+
+import type { CommonsPage, CommonsPages, CommonsResponse } from "../types.js";
+
 import { USER_AGENT } from "../constants.js";
 import { thumbnail_query_url } from "../data/urls.js";
-import type { CommonsPage, CommonsPages, CommonsResponse } from "../types.js";
 
 export async function refreshPortraitThumbnails(
   fetchr: typeof fetch,
@@ -13,7 +15,7 @@ export async function refreshPortraitThumbnails(
     batchcomplete: "",
     query: {
       pages: humans.reduce((a, b) => {
-        a[b.entity!.id] = { ns: 0, title: b.entity!.id, pageid: 0 };
+        a[b.entity!.id] = { ns: 0, pageid: 0, title: b.entity!.id };
         return a;
       }, {} as CommonsPages),
     },

@@ -1,9 +1,11 @@
 import { batchify } from "@accomplishedh/shared";
+
+import type { Entity, EntityId } from "../types";
+import type { Snak } from "../types/snaks";
+
 import * as wbApi from "../data/api";
 import { serialize } from "../data/globe-coordinate-value";
 import { isoFrom } from "../data/timevalue";
-import type { Entity, EntityId } from "../types";
-import type { Snak } from "../types/snaks";
 import { fromDictionary } from "./translators";
 
 /** @deprecated */

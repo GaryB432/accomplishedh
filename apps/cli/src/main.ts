@@ -1,4 +1,5 @@
 import { cac } from "cac";
+
 import type { CommandArgs as BotdArgs } from "./app/commands/botd.types.js";
 import type { CommandArgs as FeaturedArgs } from "./app/commands/featured.types.js";
 import type { CommandArgs as RefreshArgs } from "./app/commands/refresh.types.js";

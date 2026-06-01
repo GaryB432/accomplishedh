@@ -2,7 +2,9 @@ import type {
   FieldsOfWorkSummaryV1,
   PersonQid,
 } from "@accomplishedh/shared/lib/dto.types";
+
 import { describe, expect, test } from "vitest";
+
 import { createElements, toEdge } from "./cytoscape";
 
 describe("Cytoscape", () => {
@@ -38,20 +40,11 @@ describe("Cytoscape", () => {
 });
 
 const subject: Record<PersonQid, FieldsOfWorkSummaryV1> = {
-  Q433773: {
+  Q187258: {
     fows: [
       {
-        id: "Q333",
         category: "Science",
-        label: "astronomy",
-      },
-    ],
-  },
-  Q364505: {
-    fows: [
-      {
         id: "Q333",
-        category: "Science",
         label: "astronomy",
       },
     ],
@@ -59,35 +52,17 @@ const subject: Record<PersonQid, FieldsOfWorkSummaryV1> = {
   Q200397: {
     fows: [
       {
+        category: "Science",
         id: "Q12483",
-        category: "Science",
         label: "statistics",
-      },
-    ],
-  },
-  Q187258: {
-    fows: [
-      {
-        id: "Q333",
-        category: "Science",
-        label: "astronomy",
-      },
-    ],
-  },
-  Q81130: {
-    fows: [
-      {
-        id: "Q333",
-        category: "Science",
-        label: "astronomy",
       },
     ],
   },
   Q245355: {
     fows: [
       {
-        id: "Q8242",
         category: "Lit",
+        id: "Q8242",
         label: "literature",
       },
     ],
@@ -95,35 +70,62 @@ const subject: Record<PersonQid, FieldsOfWorkSummaryV1> = {
   Q247603: {
     fows: [
       {
-        id: "Q4",
         category: "Science",
+        id: "Q4",
         label: "electrical engineering",
+      },
+    ],
+  },
+  Q364505: {
+    fows: [
+      {
+        category: "Science",
+        id: "Q333",
+        label: "astronomy",
+      },
+    ],
+  },
+  Q433773: {
+    fows: [
+      {
+        category: "Science",
+        id: "Q333",
+        label: "astronomy",
+      },
+    ],
+  },
+  Q81130: {
+    fows: [
+      {
+        category: "Science",
+        id: "Q333",
+        label: "astronomy",
       },
     ],
   },
 };
 
 const smaller: Record<PersonQid, FieldsOfWorkSummaryV1> = {
-  Q364505: {
-    fows: [
-      {
-        id: "Q333",
-        category: "Science",
-        label: "astronomy",
-      },
-    ],
-  },
   Q200397: {
     fows: [
       {
-        id: "Q12483",
         category: "Science",
+        id: "Q12483",
         label: "statistics",
       },
       {
-        id: "Q4",
         category: "Science",
+        id: "Q4",
         label: "electrical engineering",
+      },
+    ],
+  },
+  Q364505: {
+    fows: [
+      {
+        category: "Science",
+        id: "Q333",
+        label: "astronomy",
       },
     ],
   },
