@@ -176,7 +176,7 @@
   <aside class="panel" aria-label="Selected person details">
     <div class="panel-content">
       {#if selectedMore}
-        <Headshot subject={selectedMore} width={90}></Headshot>
+        <Headshot subject={selectedMore} width={130}></Headshot>
       {/if}
 
       <SimpleClaimsPanel qid={selectedPersonId} />

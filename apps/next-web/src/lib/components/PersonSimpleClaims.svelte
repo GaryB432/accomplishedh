@@ -7,6 +7,7 @@
   const summary = $derived(summarizeQid());
 
   type SummarizedEntity = { summary: { claims: Record<string, string[]> } };
+  
   function summarize(_entity: Item): PromiseLike<SummarizedEntity> {
     return Promise.resolve({
       summary: { claims: { P101: ["P101", "so soon"] } },
