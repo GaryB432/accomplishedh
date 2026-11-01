@@ -4,6 +4,9 @@
   "type": "module",
   "private": true,
   "types": "./dist/index.d.ts",
+  "bin": {
+    "ha": "./dist/main.js"
+  },
   "exports": {
     ".": "./dist/index.js"
   },
