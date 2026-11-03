@@ -58,6 +58,7 @@ export function entity_searh_url(name: string): string {
   url.searchParams.append("format", "json");
   url.searchParams.append("uselang", language);
   url.searchParams.append("type", "item");
+  url.searchParams.append("origin", "*");
   return url.href;
 }
 
