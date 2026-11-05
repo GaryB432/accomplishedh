@@ -26,8 +26,8 @@ export function featuredCommand({ opts, start }: CommandArgs): void {
     throw new Error("start should be ISO");
   }
 
-  if (existsSync(featuredsFileName)) {
-    throw new Error(`featured file already exists.`);
+  if (!opts.dryRun && existsSync(featuredsFileName)) {
+    throw new Error(`featured file: ${featuredsFileName} already exists.`);
   }
   const all = readAll();
   console.log(
