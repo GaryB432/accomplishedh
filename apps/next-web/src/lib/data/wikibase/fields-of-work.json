@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-06T20:01:48.308Z",
+  "generatedAt": "2026-11-06T21:24:44.930Z",
   "people": {
     "Q296": {
       "fows": [
@@ -879,16 +879,6 @@
     "Q5879": {
       "fows": [
         {
-          "id": "Q1069",
-          "category": "Art",
-          "label": "geology"
-        },
-        {
-          "id": "Q25261",
-          "category": "Art",
-          "label": "meteorology"
-        },
-        {
           "id": "Q413",
           "category": "Science",
           "label": "physics"
@@ -897,6 +887,16 @@
           "id": "Q514",
           "category": "Art",
           "label": "anatomy"
+        },
+        {
+          "id": "Q1069",
+          "category": "Art",
+          "label": "geology"
+        },
+        {
+          "id": "Q25261",
+          "category": "Art",
+          "label": "meteorology"
         }
       ]
     },
@@ -945,11 +945,6 @@
     },
     "Q6722": {
       "fows": [
-        {
-          "id": "Q188444",
-          "category": "Science",
-          "label": "differential geometry"
-        },
         {
           "id": "Q333",
           "category": "Science",
@@ -1004,6 +999,11 @@
           "id": "Q131089",
           "category": "Art",
           "label": "geodesy"
+        },
+        {
+          "id": "Q188444",
+          "category": "Science",
+          "label": "differential geometry"
         }
       ]
     },
@@ -1269,34 +1269,19 @@
     "Q7504": {
       "fows": [
         {
-          "id": "Q690200",
-          "category": "Art",
-          "label": "radiobiology"
-        },
-        {
           "id": "Q2329",
           "category": "Science",
           "label": "chemistry"
+        },
+        {
+          "id": "Q690200",
+          "category": "Art",
+          "label": "radiobiology"
         }
       ]
     },
     "Q7604": {
       "fows": [
-        {
-          "id": "Q216861",
-          "category": "Art",
-          "label": "calculus of variations"
-        },
-        {
-          "id": "Q474200",
-          "category": "Art",
-          "label": "shipbuilding"
-        },
-        {
-          "id": "Q28575007",
-          "category": "Science",
-          "label": "theory of differential equations"
-        },
         {
           "id": "Q333",
           "category": "Science",
@@ -1356,6 +1341,21 @@
           "id": "Q193544",
           "category": "Music",
           "label": "music theory"
+        },
+        {
+          "id": "Q216861",
+          "category": "Art",
+          "label": "calculus of variations"
+        },
+        {
+          "id": "Q474200",
+          "category": "Art",
+          "label": "shipbuilding"
+        },
+        {
+          "id": "Q28575007",
+          "category": "Science",
+          "label": "theory of differential equations"
         }
       ]
     },
@@ -2684,6 +2684,16 @@
     "Q33760": {
       "fows": [
         {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q5891",
+          "category": "Art",
+          "label": "philosophy"
+        },
+        {
           "id": "Q8078",
           "category": "Art",
           "label": "logic"
@@ -2732,16 +2742,6 @@
           "id": "Q1166618",
           "category": "Science",
           "label": "mathematical logic"
-        },
-        {
-          "id": "Q395",
-          "category": "Science",
-          "label": "mathematics"
-        },
-        {
-          "id": "Q5891",
-          "category": "Art",
-          "label": "philosophy"
         }
       ]
     },
@@ -3365,21 +3365,6 @@
     "Q39837": {
       "fows": [
         {
-          "id": "Q235258",
-          "category": "Art",
-          "label": "aqidah"
-        },
-        {
-          "id": "Q280817",
-          "category": "Art",
-          "label": "Ilm al-Kalam"
-        },
-        {
-          "id": "Q484181",
-          "category": "Art",
-          "label": "fiqh"
-        },
-        {
           "id": "Q333",
           "category": "Science",
           "label": "astronomy"
@@ -3408,6 +3393,21 @@
           "id": "Q193104",
           "category": "Art",
           "label": "Islamic philosophy"
+        },
+        {
+          "id": "Q235258",
+          "category": "Art",
+          "label": "aqidah"
+        },
+        {
+          "id": "Q280817",
+          "category": "Art",
+          "label": "Ilm al-Kalam"
+        },
+        {
+          "id": "Q484181",
+          "category": "Art",
+          "label": "fiqh"
         }
       ]
     },
@@ -3693,26 +3693,6 @@
     "Q41390": {
       "fows": [
         {
-          "id": "Q43514",
-          "category": "Science",
-          "label": "theory of relativity"
-        },
-        {
-          "id": "Q180536",
-          "category": "Science",
-          "label": "philosophy of mathematics"
-        },
-        {
-          "id": "Q183216",
-          "category": "Art",
-          "label": "analytic philosophy"
-        },
-        {
-          "id": "Q1166618",
-          "category": "Science",
-          "label": "mathematical logic"
-        },
-        {
           "id": "Q395",
           "category": "Science",
           "label": "mathematics"
@@ -3741,6 +3721,26 @@
           "id": "Q35148",
           "category": "Art",
           "label": "predicate logic"
+        },
+        {
+          "id": "Q43514",
+          "category": "Science",
+          "label": "theory of relativity"
+        },
+        {
+          "id": "Q180536",
+          "category": "Science",
+          "label": "philosophy of mathematics"
+        },
+        {
+          "id": "Q183216",
+          "category": "Art",
+          "label": "analytic philosophy"
+        },
+        {
+          "id": "Q1166618",
+          "category": "Science",
+          "label": "mathematical logic"
         }
       ]
     },
@@ -5469,6 +5469,21 @@
     "Q57246": {
       "fows": [
         {
+          "id": "Q395",
+          "category": "Science",
+          "label": "mathematics"
+        },
+        {
+          "id": "Q413",
+          "category": "Science",
+          "label": "physics"
+        },
+        {
+          "id": "Q8087",
+          "category": "Science",
+          "label": "geometry"
+        },
+        {
           "id": "Q12479",
           "category": "Science",
           "label": "number theory"
@@ -5487,21 +5502,6 @@
           "id": "Q464794",
           "category": "Art",
           "label": "Minkowski spacetime"
-        },
-        {
-          "id": "Q395",
-          "category": "Science",
-          "label": "mathematics"
-        },
-        {
-          "id": "Q413",
-          "category": "Science",
-          "label": "physics"
-        },
-        {
-          "id": "Q8087",
-          "category": "Science",
-          "label": "geometry"
         }
       ]
     },
@@ -5891,21 +5891,6 @@
     "Q58720": {
       "fows": [
         {
-          "id": "Q40634",
-          "category": "Art",
-          "label": "philology"
-        },
-        {
-          "id": "Q83353",
-          "category": "Art",
-          "label": "mineralogy"
-        },
-        {
-          "id": "Q484591",
-          "category": "Art",
-          "label": "natural history"
-        },
-        {
           "id": "Q309",
           "category": "Art",
           "label": "history"
@@ -5934,6 +5919,21 @@
           "id": "Q11467",
           "category": "Art",
           "label": "metallurgy"
+        },
+        {
+          "id": "Q40634",
+          "category": "Art",
+          "label": "philology"
+        },
+        {
+          "id": "Q83353",
+          "category": "Art",
+          "label": "mineralogy"
+        },
+        {
+          "id": "Q484591",
+          "category": "Art",
+          "label": "natural history"
         }
       ]
     },
@@ -7870,11 +7870,6 @@
     "Q76970": {
       "fows": [
         {
-          "id": "Q350265",
-          "category": "Science",
-          "label": "high energy physics"
-        },
-        {
           "id": "Q14620",
           "category": "Science",
           "label": "optics"
@@ -7883,6 +7878,11 @@
           "id": "Q81197",
           "category": "Science",
           "label": "nuclear physics"
+        },
+        {
+          "id": "Q350265",
+          "category": "Science",
+          "label": "high energy physics"
         }
       ]
     },
@@ -8985,14 +8985,14 @@
     "Q81716": {
       "fows": [
         {
-          "id": "Q471872",
-          "category": "Science",
-          "label": "soil mechanics"
-        },
-        {
           "id": "Q11406",
           "category": "Art",
           "label": "electromagnetism"
+        },
+        {
+          "id": "Q471872",
+          "category": "Science",
+          "label": "soil mechanics"
         }
       ]
     },
@@ -12533,16 +12533,6 @@
     "Q157701": {
       "fows": [
         {
-          "id": "Q899397",
-          "category": "Art",
-          "label": "polarography"
-        },
-        {
-          "id": "Q115154790",
-          "category": "Art",
-          "label": "discoveries and inventions"
-        },
-        {
           "id": "Q2329",
           "category": "Science",
           "label": "chemistry"
@@ -12551,6 +12541,16 @@
           "id": "Q11372",
           "category": "Science",
           "label": "physical chemistry"
+        },
+        {
+          "id": "Q899397",
+          "category": "Art",
+          "label": "polarography"
+        },
+        {
+          "id": "Q115154790",
+          "category": "Art",
+          "label": "discoveries and inventions"
         }
       ]
     },
@@ -14294,21 +14294,6 @@
     "Q183167": {
       "fows": [
         {
-          "id": "Q58854",
-          "category": "Lit",
-          "label": "literary criticism"
-        },
-        {
-          "id": "Q1143847",
-          "category": "Art",
-          "label": "art criticism"
-        },
-        {
-          "id": "Q1377898",
-          "category": "Art",
-          "label": "Christian apologetics"
-        },
-        {
           "id": "Q482",
           "category": "Lit",
           "label": "poetry"
@@ -14337,6 +14322,21 @@
           "id": "Q35760",
           "category": "Lit",
           "label": "essay"
+        },
+        {
+          "id": "Q58854",
+          "category": "Lit",
+          "label": "literary criticism"
+        },
+        {
+          "id": "Q1143847",
+          "category": "Art",
+          "label": "art criticism"
+        },
+        {
+          "id": "Q1377898",
+          "category": "Art",
+          "label": "Christian apologetics"
         }
       ]
     },
@@ -17888,6 +17888,21 @@
     "Q270275": {
       "fows": [
         {
+          "id": "Q676",
+          "category": "Lit",
+          "label": "prose"
+        },
+        {
+          "id": "Q49757",
+          "category": "Lit",
+          "label": "poet"
+        },
+        {
+          "id": "Q214917",
+          "category": "Lit",
+          "label": "playwright"
+        },
+        {
           "id": "Q382887",
           "category": "Art",
           "label": "chinovnik"
@@ -17906,21 +17921,6 @@
           "id": "Q12144794",
           "category": "Lit",
           "label": "prose writer"
-        },
-        {
-          "id": "Q676",
-          "category": "Lit",
-          "label": "prose"
-        },
-        {
-          "id": "Q49757",
-          "category": "Lit",
-          "label": "poet"
-        },
-        {
-          "id": "Q214917",
-          "category": "Lit",
-          "label": "playwright"
         }
       ]
     },
@@ -20617,11 +20617,6 @@
     "Q332105": {
       "fows": [
         {
-          "id": "Q115154790",
-          "category": "Art",
-          "label": "discoveries and inventions"
-        },
-        {
           "id": "Q395",
           "category": "Science",
           "label": "mathematics"
@@ -20645,6 +20640,11 @@
           "id": "Q805325",
           "category": "Art",
           "label": "ballooning"
+        },
+        {
+          "id": "Q115154790",
+          "category": "Art",
+          "label": "discoveries and inventions"
         }
       ]
     },
@@ -20825,14 +20825,14 @@
     "Q334188": {
       "fows": [
         {
-          "id": "Q34178",
-          "category": "Art",
-          "label": "theology"
-        },
-        {
           "id": "Q8242",
           "category": "Lit",
           "label": "literature"
+        },
+        {
+          "id": "Q34178",
+          "category": "Art",
+          "label": "theology"
         }
       ]
     },
@@ -23516,6 +23516,16 @@
     "Q581763": {
       "fows": [
         {
+          "id": "Q483501",
+          "category": "Art",
+          "label": "artist"
+        },
+        {
+          "id": "Q1028181",
+          "category": "Art",
+          "label": "painter"
+        },
+        {
           "id": "Q3391743",
           "category": "Art",
           "label": "visual artist"
@@ -23529,16 +23539,6 @@
           "id": "Q16947657",
           "category": "Art",
           "label": "lithographer"
-        },
-        {
-          "id": "Q483501",
-          "category": "Art",
-          "label": "artist"
-        },
-        {
-          "id": "Q1028181",
-          "category": "Art",
-          "label": "painter"
         }
       ]
     },
@@ -24582,25 +24582,6 @@
         }
       ]
     },
-    "Q25539274": {
-      "fows": [
-        {
-          "id": "Q441",
-          "category": "Art",
-          "label": "botany"
-        },
-        {
-          "id": "Q7193",
-          "category": "Art",
-          "label": "microbiology"
-        },
-        {
-          "id": "Q7215",
-          "category": "Art",
-          "label": "virology"
-        }
-      ]
-    },
     "Q2706353": {
       "fows": [
         {
@@ -24715,6 +24696,25 @@
           "id": "Q593644",
           "category": "Science",
           "label": "chemist"
+        }
+      ]
+    },
+    "Q25539274": {
+      "fows": [
+        {
+          "id": "Q441",
+          "category": "Art",
+          "label": "botany"
+        },
+        {
+          "id": "Q7193",
+          "category": "Art",
+          "label": "microbiology"
+        },
+        {
+          "id": "Q7215",
+          "category": "Art",
+          "label": "virology"
         }
       ]
     },
