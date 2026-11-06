@@ -112,7 +112,7 @@ async function main(today) {
     return sa.localeCompare(sb);
   });
   fowDataset.people = sorteds.reduce((a, b) => {
-    a[b] = fowDataset.people[b];
+    a[b] = fowDataset.people[b].fows.filter((g) => g.category !== "Ignore");
     return a;
   }, {});
 
@@ -167,27 +167,6 @@ function toFowEntry(row, index, array) {
   if (!human) {
     throw new Error("dehumanized");
   }
-
-  // console.log(dob, " not using dob");
-
-  // if (!fow) {
-  //   return {
-  //     id: "asdf ".concat(occupation ?? "clueless"),
-  //     human,
-  //     label: "occ ".concat(occupationLabel ?? "??"),
-  //   };
-  // }
-
-  // const human = row["human"];
-  // const humanLabel = row["humanLabel"];
-  // const dob = row["dob"];
-  // const fow = row["fow"];
-  // const fowLabel = row["fowLabel"];
-  // const occupation = row["occupation"];
-  // const occupationLabel = row["occupationLabel"] ?? "no idea";
-
-  // 3. Classify incoming raw strings from Wikidata
-  // Returns 'Lit'
 
   const id = fow ?? occupation;
   const label = fowLabel ?? occupationLabel;
