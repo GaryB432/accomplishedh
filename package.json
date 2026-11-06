@@ -20,6 +20,7 @@
     "eslint": "^10.3.0",
     "eslint-plugin-svelte": "^3.17.1",
     "globals": "^17.6.0",
+    "natural": "^8.2.6",
     "prettier-plugin-svelte": "^3.5.2",
     "svelte": "^5.55.5",
     "svelte-check": "^4.4.7",
