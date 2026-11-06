@@ -1,27 +1,13 @@
-import natural from "natural";
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { setTimeout as sleep } from "node:timers/promises";
 import { fileURLToPath } from "node:url";
+import { classifier } from "./fows/classifier.mjs";
 
 const WIKIDATA_SPARQL_URL = "https://query.wikidata.org/sparql";
 const BATCH_SIZE = 200;
 
 const schemaVersion = 1;
-
-const ROOTS = {
-  Art: "Q735",
-  Lit: "Q8242",
-  Music: "Q1338",
-  Science: "Q336",
-};
-
-const categories = new Map([
-  ["Q735", "Art"],
-  ["Q8242", "Lit"],
-  ["Q1338", "Music"],
-  ["Q336", "Science"],
-]); // TODO compute by reverse ROOTS
 
 const HA_DIRECTORY = join(fileURLToPath(import.meta.url), "../..");
 const HA_DATA = join(HA_DIRECTORY, "apps/next-web/src/lib/data");
@@ -30,11 +16,32 @@ const WIKIBASE_DIRECTORY = join(HA_DATA, "wikibase");
 const FIELDS_FILE_NAME = join(WIKIBASE_DIRECTORY, "fields-of-work.json");
 
 const USER_AGENT = "AccomplishedHBot/1.0 (editor@humanaccomplishment.com)";
-const classifier = new natural.BayesClassifier();
 
 async function waitFetch(input, init) {
   await sleep(250);
   return fetch(input, init);
+}
+
+/**
+ * from {id: 'Q1234'} receive 0001234
+ * @param {import("../libraries/wikibase/src/types").Entity | string} entity
+ * @returns {string}
+ */
+function qnumpart(entity) {
+  const qn = entity.id ?? entity;
+  return qn.slice(1).padStart(14, "0");
+}
+
+/**
+ *
+ * @param {import("../libraries/wikibase/src/types").Entity} a
+ * @param {import("../libraries/wikibase/src/types").Entity} b
+ * @returns {number}
+ */
+function compareEntities(a, b) {
+  // console.log(JSON.stringify({ a, b }));
+
+  return qnumpart(a).localeCompare(qnumpart(b));
 }
 
 async function main(today) {
@@ -49,6 +56,7 @@ async function main(today) {
     readFileSync(join(HA_DATA, "identifiers.json"), "utf-8"),
   );
 
+  /** @type {Array<string>} */
   const allIds = everybody.map((s) => s.wb);
 
   console.log(`🚀 Mapping FOWs for ${allIds.length} humans...`);
@@ -58,22 +66,18 @@ async function main(today) {
 
     const humansValues = currentBatch.map((id) => `wd:${id}`).join(" ");
 
-    const rootValues = Object.entries(ROOTS)
-      .map(([, qid]) => `wd:${qid}`)
-      .join(" ");
-
     const query = `
       SELECT ?human ?humanLabel ?dob ?fow ?fowLabel ?occupation ?occupationLabel WHERE {
         VALUES ?human { 
           ${humansValues}
-        }
-
-        OPTIONAL { ?human wdt:P569 ?dob . }
-        OPTIONAL { ?human wdt:P101 ?fow . }
-        OPTIONAL { ?human wdt:P106 ?occupation . }
-
-        SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
-      }`;
+          }
+          
+          OPTIONAL { ?human wdt:P569 ?dob . }
+          OPTIONAL { ?human wdt:P101 ?fow . }
+          OPTIONAL { ?human wdt:P106 ?occupation . }
+          
+          SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+          }`;
 
     const url = `${WIKIDATA_SPARQL_URL}?query=${encodeURIComponent(query)}`;
 
@@ -106,17 +110,13 @@ async function main(today) {
     console.log(`✅ Processed batch ${Math.floor(i / BATCH_SIZE) + 1}.`);
   }
 
-  const qnumpart = (s) => s.slice(1).padStart(7, "0");
-
-  const sorteds = Object.keys(fowDataset.people).toSorted((a, b) => {
-    const sa = qnumpart(a);
-    const sb = qnumpart(b);
-    return sa.localeCompare(sb);
-  });
+  const sorteds = Object.keys(fowDataset.people).toSorted(compareEntities);
   fowDataset.people = sorteds.reduce((a, hid) => {
     const fows = [
       ...new Map(
-        fowDataset.people[hid].fows.map((item) => [item.id, item]),
+        fowDataset.people[hid].fows
+          .toSorted(compareEntities)
+          .map((item) => [item.id, item]),
       ).values(),
     ];
     a[hid] = { ...fowDataset.people[hid], fows };
@@ -160,7 +160,7 @@ function unbind(binding) {
  * @param {Record<string,import('../libraries/wikibase/src/types').Binding} row
  * @param {number} index
  * @param {Record<string,Binding>[]} array
- * @returns {FieldOfWorkEntryV1 & { human: EntityQid }}
+ * @returns  {import('../libraries/shared/src/lib/dto.types').FieldOfWorkEntryV1 & { human: import('../libraries/shared/src/lib/dto.types').EntityQid   }}
  */
 function toFowEntry(row, index, array) {
   const human = unbind(row["human"]);
@@ -180,23 +180,5 @@ function toFowEntry(row, index, array) {
 
   return { id, category: classifier.classify(label), human, label };
 }
-
-const artDocument = "painting sculpture drawing art artist artwork";
-const scienceDocument =
-  "optics theory mechanics inventor algebra geometry physics physician chemist physiologist biochemist medicine chemistry mathematics mathematician astronomy biology pathology biochemistry science scientific engineering";
-const literatureDocument =
-  "autobiographer diarist biographer playwright poetry novel novelist essay essayist literature fiction short story writing screenwriter author poet prose writer literary";
-const musicDocument =
-  "conductor choir music musician musicologist composition orchestra singing composer song librettist lyricist";
-const bsDocument =
-  "group theory politician topology education dramaturge historian diplomat pacifist pedagogue histology journalist collector translator teacher quaternion";
-
-classifier.addDocument(artDocument, "Art");
-classifier.addDocument(literatureDocument, "Lit");
-classifier.addDocument(musicDocument, "Music");
-classifier.addDocument(scienceDocument, "Science");
-classifier.addDocument(bsDocument, "Ignore");
-
-classifier.train();
 
 void main();
