@@ -92,14 +92,16 @@ async function main(today) {
     const data = await response.json();
     // console.log(JSON.stringify(data.results.bindings[0], null, 2));
 
-    void data.results.bindings.map(toFowEntry).reduce((a, fow) => {
-      const { id, category, label, human } = fow;
+    void data.results.bindings
+      .map(toFowEntry)
+      .filter((fow) => fow.category !== "Ignore")
+      .reduce((a, fow) => {
+        const { id, category, label, human } = fow;
 
-      a[human] ??= { fows: [] };
-      a[human].fows.push({ id, category, label });
-
-      return a;
-    }, fowDataset.people);
+        a[human] ??= { fows: [] };
+        a[human].fows.push({ id, category, label });
+        return a;
+      }, fowDataset.people);
 
     console.log(`✅ Processed batch ${Math.floor(i / BATCH_SIZE) + 1}.`);
   }
@@ -112,13 +114,12 @@ async function main(today) {
     return sa.localeCompare(sb);
   });
   fowDataset.people = sorteds.reduce((a, hid) => {
-    a[hid] = [
+    const fows = [
       ...new Map(
-        fowDataset.people[hid].fows
-          .filter((g) => g.category !== "Ignore")
-          .map((item) => [item.id, item]),
+        fowDataset.people[hid].fows.map((item) => [item.id, item]),
       ).values(),
     ];
+    a[hid] = { ...fowDataset.people[hid], fows };
     return a;
   }, {});
 
