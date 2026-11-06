@@ -111,8 +111,14 @@ async function main(today) {
     const sb = qnumpart(b);
     return sa.localeCompare(sb);
   });
-  fowDataset.people = sorteds.reduce((a, b) => {
-    a[b] = fowDataset.people[b].fows.filter((g) => g.category !== "Ignore");
+  fowDataset.people = sorteds.reduce((a, hid) => {
+    a[hid] = [
+      ...new Map(
+        fowDataset.people[hid].fows
+          .filter((g) => g.category !== "Ignore")
+          .map((item) => [item.id, item]),
+      ).values(),
+    ];
     return a;
   }, {});
 
@@ -180,8 +186,8 @@ const scienceDocument =
 const literatureDocument =
   "autobiographer diarist biographer poetry novel novelist essay essayist literature writing screenwriter author poet prose writer literary";
 const musicDocument =
-  "music musician composition orchestra singing composer song";
-const bsDocument = "diplomat pacifist journalist collector translator";
+  "music musician composition orchestra singing composer song librettist";
+const bsDocument = "historian diplomat pacifist journalist collector translator teacher";
 
 classifier.addDocument(artDocument, "Art");
 classifier.addDocument(literatureDocument, "Lit");
