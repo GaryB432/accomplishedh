@@ -182,12 +182,13 @@ function toFowEntry(row, index, array) {
 
 const artDocument = "painting sculpture drawing art artist artwork";
 const scienceDocument =
-  "physics chemistry biology biochemistry science scientific";
+  "optics theory mechanics inventor algebra geometry physics physician chemist physiologist biochemist medicine chemistry mathematics mathematician astronomy biology pathology biochemistry science scientific engineering";
 const literatureDocument =
-  "autobiographer diarist biographer poetry novel novelist essay essayist literature writing screenwriter author poet prose writer literary";
+  "autobiographer diarist biographer playwright poetry novel novelist essay essayist literature fiction short story writing screenwriter author poet prose writer literary";
 const musicDocument =
-  "music musician composition orchestra singing composer song librettist";
-const bsDocument = "historian diplomat pacifist journalist collector translator teacher";
+  "conductor choir music musician musicologist composition orchestra singing composer song librettist lyricist";
+const bsDocument =
+  "group theory politician topology education dramaturge historian diplomat pacifist pedagogue histology journalist collector translator teacher quaternion";
 
 classifier.addDocument(artDocument, "Art");
 classifier.addDocument(literatureDocument, "Lit");
