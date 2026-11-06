@@ -1,3 +1,4 @@
+import natural from "natural";
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { setTimeout as sleep } from "node:timers/promises";
@@ -29,6 +30,7 @@ const WIKIBASE_DIRECTORY = join(HA_DATA, "wikibase");
 const FIELDS_FILE_NAME = join(WIKIBASE_DIRECTORY, "fields-of-work.json");
 
 const USER_AGENT = "AccomplishedHBot/1.0 (editor@humanaccomplishment.com)";
+const classifier = new natural.BayesClassifier();
 
 async function waitFetch(input, init) {
   await sleep(250);
@@ -156,7 +158,7 @@ function unbind(binding) {
 function toFowEntry(row, index, array) {
   const human = unbind(row["human"]);
   // const humanLabel = unbind(row["humanLabel"]);
-  const dob = unbind(row["dob"]);
+  // const dob = unbind(row["dob"]);
   const fow = unbind(row["fow"]);
   const fowLabel = unbind(row["fowLabel"]);
   const occupation = unbind(row["occupation"]);
@@ -166,7 +168,7 @@ function toFowEntry(row, index, array) {
     throw new Error("dehumanized");
   }
 
-  console.log(dob, " for fun");
+  // console.log(dob, " not using dob");
 
   // if (!fow) {
   //   return {
@@ -184,21 +186,30 @@ function toFowEntry(row, index, array) {
   // const occupation = row["occupation"];
   // const occupationLabel = row["occupationLabel"] ?? "no idea";
 
-  const category = "category-dunno";
+  // 3. Classify incoming raw strings from Wikidata
+  // Returns 'Lit'
 
   const id = fow ?? occupation;
   const label = fowLabel ?? occupationLabel;
 
-  return { id, category, human, label };
+  return { id, category: classifier.classify(label), human, label };
 }
+
+const artDocument = "painting sculpture drawing art artist artwork";
+const scienceDocument =
+  "physics chemistry biology biochemistry science scientific";
+const literatureDocument =
+  "autobiographer diarist biographer poetry novel novelist essay essayist literature writing screenwriter author poet prose writer literary";
+const musicDocument =
+  "music musician composition orchestra singing composer song";
+const bsDocument = "diplomat pacifist journalist collector translator";
+
+classifier.addDocument(artDocument, "Art");
+classifier.addDocument(literatureDocument, "Lit");
+classifier.addDocument(musicDocument, "Music");
+classifier.addDocument(scienceDocument, "Science");
+classifier.addDocument(bsDocument, "Ignore");
+
+classifier.train();
 
 void main();
-
-/**
- *
- * @param {import('../libraries/wikibase/src/types/responses').Binding} binding
- * @returns {import('../libraries/shared/src/lib/dto.types'.EntityRefV1)}
- */
-function getFowRootCategory(binding) {
-  return categories.get(asQid(extractBullshitFromURLTypedValue(binding)));
-}
