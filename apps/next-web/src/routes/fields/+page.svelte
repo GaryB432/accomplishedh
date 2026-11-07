@@ -10,8 +10,13 @@
 
   let devmode = $state(false);
 
+  const PADDING = 24;
+
   let { data }: PageProps = $props();
-  let elements = $derived(devmode ? data.elements.slice(0, 30) : data.elements);
+
+  let cy = $state<cytoscape.Core>();
+
+  let elements = $derived(devmode ? data.elements.slice(0, 50) : data.elements);
 
   let shell = $state<HTMLElement>();
   let cydiv = $state<HTMLDivElement>();
@@ -22,101 +27,96 @@
     selectedPersonId ? { id: selectedPersonId, type: "item" } : void 0,
   );
 
-  let cy = $state<cytoscape.Core>();
+  let main = $derived(shell?.closest("main"));
+  let appShell = $derived(main?.closest(".app-shell"));
+  let header = $derived(appShell?.querySelector(".top-nav"));
+  let footer = $derived(appShell?.querySelector("footer"));
+
+  const updateShellHeight = () => {
+    if (!shell || !main || !cy) return;
+
+    const viewportHeight = window.visualViewport?.height ?? window.innerHeight;
+    const headerHeight = header?.getBoundingClientRect().height ?? 0;
+    const footerHeight = footer?.getBoundingClientRect().height ?? 0;
+    const mainStyles = getComputedStyle(main);
+    const mainPaddingTop = Number.parseFloat(mainStyles.paddingTop) || 0;
+    const mainPaddingBottom = Number.parseFloat(mainStyles.paddingBottom) || 0;
+    const availableHeight = Math.max(
+      0,
+      Math.floor(
+        viewportHeight -
+          headerHeight -
+          footerHeight -
+          mainPaddingTop -
+          mainPaddingBottom,
+      ),
+    );
+
+    shell.style.height = `${availableHeight}px`;
+    cy.resize();
+    cy.fit(cy.elements(":visible"), PADDING);
+  };
+
+  const runVisibleLayout = (animate = false) => {
+    const graph = cy;
+
+    if (!graph) return;
+
+    const visibleElements = graph.elements(":visible");
+
+    if (visibleElements.nonempty()) {
+      visibleElements
+        .layout({
+          name: "breadthfirst",
+          fit: true,
+          animate,
+          // padding: PADDING,
+          avoidOverlap: true,
+        })
+        .run();
+    }
+  };
+
+  const showOnlyCategories = () => {
+    const graph = cy;
+
+    if (!graph) return;
+
+    graph.batch(() => {
+      graph.elements().style("display", "none");
+      graph.nodes("[type = 'cat']").style("display", "element");
+    });
+
+    runVisibleLayout();
+  };
+
+  const toggleIncomingBranch = (node: NodeSingular) => {
+    const graph = cy;
+
+    if (!graph) return;
+
+    const directBranch = node.incomers();
+    const directNodes = directBranch.nodes();
+
+    if (directNodes.empty()) return;
+
+    const shouldOpen = directNodes.every((incomingNode) =>
+      incomingNode.is(":hidden"),
+    );
+    const branchToHide = node.predecessors().union(directBranch);
+
+    graph.batch(() => {
+      if (shouldOpen) {
+        directBranch.style("display", "element");
+      } else {
+        branchToHide.style("display", "none");
+      }
+    });
+
+    runVisibleLayout(true);
+  };
 
   onMount(() => {
-    const main = shell?.closest("main");
-    const appShell = main?.closest(".app-shell");
-    const header = appShell?.querySelector(".top-nav") as HTMLElement | null;
-    const footer = appShell?.querySelector("footer") as HTMLElement | null;
-
-    const runVisibleLayout = (animate = false) => {
-      const graph = cy;
-
-      if (!graph) return;
-
-      const visibleElements = graph.elements(":visible");
-
-      if (visibleElements.nonempty()) {
-        visibleElements
-          .layout({
-            name: "grid",
-            fit: true,
-            animate,
-            padding: 36,
-            avoidOverlap: true,
-            condense: true,
-          })
-          .run();
-      }
-    };
-
-    const showOnlyCategories = () => {
-      const graph = cy;
-
-      if (!graph) return;
-
-      graph.batch(() => {
-        graph.elements().style("display", "none");
-        graph.nodes("[type = 'cat']").style("display", "element");
-      });
-
-      runVisibleLayout();
-    };
-
-    const toggleIncomingBranch = (node: NodeSingular) => {
-      const graph = cy;
-
-      if (!graph) return;
-
-      const directBranch = node.incomers();
-      const directNodes = directBranch.nodes();
-
-      if (directNodes.empty()) return;
-
-      const shouldOpen = directNodes.every((incomingNode) =>
-        incomingNode.is(":hidden"),
-      );
-      const branchToHide = node.predecessors().union(directBranch);
-
-      graph.batch(() => {
-        if (shouldOpen) {
-          directBranch.style("display", "element");
-        } else {
-          branchToHide.style("display", "none");
-        }
-      });
-
-      runVisibleLayout(true);
-    };
-
-    const updateShellHeight = () => {
-      if (!shell || !main) return;
-
-      const viewportHeight =
-        window.visualViewport?.height ?? window.innerHeight;
-      const headerHeight = header?.getBoundingClientRect().height ?? 0;
-      const footerHeight = footer?.getBoundingClientRect().height ?? 0;
-      const mainStyles = getComputedStyle(main);
-      const mainPaddingTop = Number.parseFloat(mainStyles.paddingTop) || 0;
-      const mainPaddingBottom =
-        Number.parseFloat(mainStyles.paddingBottom) || 0;
-      const availableHeight = Math.max(
-        0,
-        Math.floor(
-          viewportHeight -
-            headerHeight -
-            footerHeight -
-            mainPaddingTop -
-            mainPaddingBottom,
-        ),
-      );
-
-      shell.style.height = `${availableHeight}px`;
-      cy?.resize();
-      cy?.fit(cy.elements(":visible"), 36);
-    };
-
     cy = cytoscape({
       container: cydiv,
       elements,
@@ -188,12 +188,12 @@
           cy
             ?.elements(":visible")
             .layout({
-              name: "grid",
+              name: "breadthfirst",
               fit: true,
               animate: true,
-              padding: 36,
+              // padding: PADDING,
               avoidOverlap: true,
-              condense: true,
+              // condense: true,
             })
             .run()}
       >
