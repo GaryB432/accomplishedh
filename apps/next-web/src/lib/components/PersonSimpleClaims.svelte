@@ -1,6 +1,7 @@
 <script lang="ts">
   import { fetchEntities } from "$lib/wikibase/api";
   import { firstAndOnly } from "@accomplishedh/shared";
+  import type { Item } from "@accomplishedh/wikibase/types";
 
   let { qid }: { qid?: string } = $props();
 
@@ -9,6 +10,21 @@
   type SummarizedEntity = { summary: { claims: Record<string, string[]> } };
 
   function summarize(_entity: Item): PromiseLike<SummarizedEntity> {
+    const cs = _entity.claims ?? {};
+    const p101 = cs["P101"] ?? [];
+
+    
+    
+    // const jj = p101.map(pp=> pp.mainsnak.datatype)
+
+    const someOfTRhem = Object.values(_entity.claims ?? {}).flat()
+
+
+    
+    console.log(JSON.stringify(someOfTRhem, null, 2), p101.length);
+
+
+
     return Promise.resolve({
       summary: { claims: { P101: ["P101", "so soon"] } },
     });
@@ -22,8 +38,6 @@
     );
     return summarize(firstAndOnly(sub)!);
   }
-
-  import type { Item } from "@accomplishedh/wikibase/types";
 </script>
 
 <article class="sidebar">
