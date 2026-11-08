@@ -13,20 +13,23 @@
     const cs = _entity.claims ?? {};
     const p101 = cs["P101"] ?? [];
 
-    
-    
     // const jj = p101.map(pp=> pp.mainsnak.datatype)
 
-    const someOfTRhem = Object.values(_entity.claims ?? {}).flat()
+    const someOfTRhem = Object.values(_entity.claims ?? {});
 
-
-    
     console.log(JSON.stringify(someOfTRhem, null, 2), p101.length);
 
-
+    const multiples = someOfTRhem.filter((qs) => qs.length !== 1);
+    console.log(JSON.stringify(multiples, null, 2));
 
     return Promise.resolve({
-      summary: { claims: { P101: ["P101", "so soon"] } },
+      summary: {
+        claims: {
+          P101: ["P101", "so soon"],
+          P403: ["light switches"],
+          P785: ["now", "is", "the", "time"],
+        },
+      },
     });
   }
 
@@ -46,11 +49,11 @@
       <p class="status">Retrieving {qid}</p>
     {:then summ}
       {#if summ}
-        <div class="claims">
+        <div class="claims" data-testid="claims-list">
           {#each Object.entries(summ.summary.claims) as [pkey, strs] (pkey)}
             <div class="claim-row">
               <p class="claim-key">{pkey}</p>
-              <p class="claim-value">{strs.join(" and ")}</p>
+              <p class="claim-value">{strs.join(", ")}</p>
             </div>
           {/each}
         </div>
