@@ -1,37 +1,28 @@
 <script lang="ts">
-  import { fetchEntities } from "$lib/wikibase/api";
-  import { firstAndOnly } from "@accomplishedh/shared";
-  import type { Claims, Item } from "@accomplishedh/wikibase/types";
+  import type { Claims } from "@accomplishedh/wikibase/types";
 
-  let { qid }: { qid?: string } = $props();
-
-  const summary = $derived(summarizeQid());
+  let { claims }: { claims: Claims } = $props();
 
   type SummarizedEntity = { summary: { claims: Record<string, string[]> } };
 
-  function summarize(_entity: Item): PromiseLike<SummarizedEntity> {
-    const cs = _entity.claims ?? {};
-    // const p101 = cs["P101"] ?? [];
+  let summaryPromise = $derived(summarizeClaims(claims));
 
-    // const jj = p101.map(pp=> pp.mainsnak.datatype)
-
-    const someOfTRhem = Object.values(_entity.claims ?? {});
+  async function summarizeClaims(claims: Claims): Promise<SummarizedEntity> {
+    const someOfTRhem = Object.values(claims ?? {});
 
     const flatclaims = someOfTRhem.flat();
 
-    const basics = flatclaims.reduce((a, claim) => {
-      a[claim.mainsnak.property] = [
-        ...(a[claim.mainsnak.property] ?? []),
-        claim,
-      ];
-      return a;
-    }, {} as Claims);
+    // const _basics = flatclaims.reduce((a, claim) => {
+    //   a[claim.mainsnak.property] = [
+    //     ...(a[claim.mainsnak.property] ?? []),
+    //     claim,
+    //   ];
+    //   return a;
+    // }, {} as Claims);
 
     const stringyClaims = flatclaims.reduce(
       (a, b) => {
-        console.log("handle", b);
-
-        // const canary = {a: b.mainsnak.datavalue, b: b.mainsnak.datatype, c: b.mainsnak.snaktype}
+        // console.log("handle", b);
 
         a[b.mainsnak.property] ??= [];
         a[b.mainsnak.property].push(
@@ -42,37 +33,24 @@
       {} as Record<string, string[]>,
     );
 
-    console.log(JSON.stringify(stringyClaims, null, 2));
-
-    const totallyFakeResponse = {
-      summary: {
-        claims: {
-          P101: ["P101", "so soon"],
-          P403: ["light switches"],
-          P785: ["now", "is", "the", "time"],
-        },
-      },
-    };
-    // const multiples = someOfTRhem.filter((qs) => qs.length !== 1);
-    // console.log(JSON.stringify(multiples, null, 2), "<- multiples! plain and tall");
+    // const totallyFakeResponse = {
+    //   summary: {
+    //     claims: {
+    //       P101: ["P101", "so soon"],
+    //       P403: ["light switches"],
+    //       P785: ["now", "is", "the", "time"],
+    //     },
+    //   },
+    // };
 
     return Promise.resolve({ summary: { claims: stringyClaims } });
-  }
-
-  async function summarizeQid(): Promise<SummarizedEntity> {
-    const sub = await fetchEntities(
-      globalThis.fetch,
-      [qid ?? ""],
-      ["claims", "labels"],
-    );
-    return summarize(firstAndOnly(sub)!);
   }
 </script>
 
 <article class="sidebar">
-  {#if qid}
-    {#await summary}
-      <p class="status">Retrieving {qid}</p>
+  {#if claims}
+    {#await summaryPromise}
+      <p class="status">Retrieving claims</p>
     {:then summ}
       {#if summ}
         <div class="claims" data-testid="claims-list">
