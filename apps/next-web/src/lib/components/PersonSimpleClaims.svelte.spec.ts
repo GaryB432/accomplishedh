@@ -4,7 +4,7 @@ import { render } from "vitest-browser-svelte";
 import SimpleClaims from "./PersonSimpleClaims.svelte";
 
 describe("PersonSimpleClaims.svelte", () => {
-  it("renders greetings for host and guest", async () => {
+  it("renders claims list", async () => {
     render(SimpleClaims, { qid: "Q999999" });
 
     // await expect

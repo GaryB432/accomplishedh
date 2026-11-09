@@ -1,7 +1,7 @@
 <script lang="ts">
   import { fetchEntities } from "$lib/wikibase/api";
   import { firstAndOnly } from "@accomplishedh/shared";
-  import type { Item } from "@accomplishedh/wikibase/types";
+  import type { Claims, Item } from "@accomplishedh/wikibase/types";
 
   let { qid }: { qid?: string } = $props();
 
@@ -11,18 +11,40 @@
 
   function summarize(_entity: Item): PromiseLike<SummarizedEntity> {
     const cs = _entity.claims ?? {};
-    const p101 = cs["P101"] ?? [];
+    // const p101 = cs["P101"] ?? [];
 
     // const jj = p101.map(pp=> pp.mainsnak.datatype)
 
     const someOfTRhem = Object.values(_entity.claims ?? {});
 
-    console.log(JSON.stringify(someOfTRhem, null, 2), p101.length);
+    const flatclaims = someOfTRhem.flat();
 
-    const multiples = someOfTRhem.filter((qs) => qs.length !== 1);
-    console.log(JSON.stringify(multiples, null, 2));
+    const basics = flatclaims.reduce((a, claim) => {
+      a[claim.mainsnak.property] = [
+        ...(a[claim.mainsnak.property] ?? []),
+        claim,
+      ];
+      return a;
+    }, {} as Claims);
 
-    return Promise.resolve({
+    const stringyClaims = flatclaims.reduce(
+      (a, b) => {
+        console.log("handle", b);
+
+        // const canary = {a: b.mainsnak.datavalue, b: b.mainsnak.datatype, c: b.mainsnak.snaktype}
+
+        a[b.mainsnak.property] ??= [];
+        a[b.mainsnak.property].push(
+          `something about ${JSON.stringify(b.mainsnak, null, 1)}`,
+        );
+        return a;
+      },
+      {} as Record<string, string[]>,
+    );
+
+    console.log(JSON.stringify(stringyClaims, null, 2));
+
+    const totallyFakeResponse = {
       summary: {
         claims: {
           P101: ["P101", "so soon"],
@@ -30,7 +52,11 @@
           P785: ["now", "is", "the", "time"],
         },
       },
-    });
+    };
+    // const multiples = someOfTRhem.filter((qs) => qs.length !== 1);
+    // console.log(JSON.stringify(multiples, null, 2), "<- multiples! plain and tall");
+
+    return Promise.resolve({ summary: { claims: stringyClaims } });
   }
 
   async function summarizeQid(): Promise<SummarizedEntity> {
@@ -66,8 +92,10 @@
 
 <style>
   .sidebar {
-    height: 100%;
+    border: thin solid red;
+    flex: 1;
     min-height: 0;
+    min-width: 0;
     margin: 0;
     padding: 0.75rem;
     overflow-y: auto;

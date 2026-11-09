@@ -70,7 +70,7 @@
           name: "breadthfirst",
           fit: true,
           animate,
-          // padding: PADDING,
+          padding: PADDING,
           avoidOverlap: true,
         })
         .run();
@@ -213,7 +213,7 @@
     grid-template-rows: minmax(0, 1fr);
     width: 100%;
     height: calc(100dvh - var(--shell-offset));
-    overflow: hidden;
+    overflow-y: scroll;
     border: 1px solid var(--pane-border);
     border-radius: 0.6rem;
   }
@@ -235,12 +235,16 @@
     grid-row: 1;
     min-width: 0;
     min-height: 0;
-    display: grid;
-    grid-template-rows: minmax(0, 1fr) auto;
+    display: flex;
+    flex-direction: column;
     background: var(--bg);
   }
 
   .panel-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
     min-height: 0;
     overflow: hidden;
   }
@@ -251,6 +255,7 @@
     padding: 0.6rem 0.75rem;
     align-items: center;
     gap: 1rem;
+    flex-shrink: 0;
   }
 
   @media (max-width: 980px) {
