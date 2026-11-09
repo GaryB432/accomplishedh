@@ -2,6 +2,8 @@
   import Headshot from "$lib/components/Headshot.svelte";
   import SimpleClaimsPanel from "$lib/components/PersonSimpleClaims.svelte";
   import ToggleButton from "$lib/components/ToggleButton.svelte";
+  import { fetchEntities } from "$lib/wikibase/api";
+  import { firstAndOnly } from "@accomplishedh/shared";
   import type { Item } from "@accomplishedh/wikibase/types";
   import cytoscape, { type NodeSingular } from "cytoscape";
   import { onMount } from "svelte";
@@ -21,10 +23,16 @@
   let shell = $state<HTMLElement>();
   let cydiv = $state<HTMLDivElement>();
 
-  let selectedPersonId = $state<string>();
+  let selectedQid = $state<string>();
 
-  let selectedMore = $derived<Item | undefined>(
-    selectedPersonId ? { id: selectedPersonId, type: "item" } : void 0,
+  let selectedSubject = $derived<Promise<Item | undefined>>(
+    selectedQid
+      ? fetchEntities(
+          globalThis.fetch,
+          [selectedQid],
+          ["claims", "labels"],
+        ).then((entities) => firstAndOnly(entities))
+      : Promise.resolve(undefined),
   );
 
   let main = $derived(shell?.closest("main"));
@@ -138,7 +146,7 @@
     });
     cy.on("tap", "node[type='person']", (evt) => {
       const node = evt.target as NodeSingular;
-      selectedPersonId = node.id();
+      selectedQid = node.id();
     });
 
     // cy.on("free", "node.person", (evt) => {
@@ -174,13 +182,19 @@
 <section class="fields-shell" bind:this={shell}>
   <div id="cy" class="graph" bind:this={cydiv}></div>
   <aside class="panel" aria-label="Selected person details">
-    <div class="panel-content">
-      {#if selectedMore}
-        <Headshot subject={selectedMore} width={130}></Headshot>
-      {/if}
+    {#await selectedSubject}
+      this goes pretty fast!
+    {:then subject}
+      <div class="panel-content">
+        {#if subject}
+          <Headshot {subject} width={130}></Headshot>
+        {/if}
 
-      <SimpleClaimsPanel qid={selectedPersonId} />
-    </div>
+        <!-- <SimpleClaimsPanel qid={selectedPersonId} /> -->
+        <SimpleClaimsPanel claims={subject?.claims ?? {}} />
+      </div>
+    {/await}
+
     <div class="panel-controls">
       <button
         class="btn"
