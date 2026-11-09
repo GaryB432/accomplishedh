@@ -2,6 +2,8 @@
   import Headshot from "$lib/components/Headshot.svelte";
   import SimpleClaimsPanel from "$lib/components/PersonSimpleClaims.svelte";
   import ToggleButton from "$lib/components/ToggleButton.svelte";
+  import { fetchEntities } from "$lib/wikibase/api";
+  import { firstAndOnly } from "@accomplishedh/shared";
   import type { Item } from "@accomplishedh/wikibase/types";
   import cytoscape, { type NodeSingular } from "cytoscape";
   import { onMount } from "svelte";
@@ -10,113 +12,119 @@
 
   let devmode = $state(false);
 
+  const PADDING = 24;
+
   let { data }: PageProps = $props();
-  let elements = $derived(devmode ? data.elements.slice(0, 30) : data.elements);
+
+  let cy = $state<cytoscape.Core>();
+
+  let elements = $derived(devmode ? data.elements.slice(0, 50) : data.elements);
 
   let shell = $state<HTMLElement>();
   let cydiv = $state<HTMLDivElement>();
 
-  let selectedPersonId = $state<string>();
+  let selectedQid = $state<string>();
 
-  let selectedMore = $derived<Item | undefined>(
-    selectedPersonId ? { id: selectedPersonId, type: "item" } : void 0,
+  let selectedSubject = $derived<Promise<Item | undefined>>(
+    selectedQid
+      ? fetchEntities(
+          globalThis.fetch,
+          [selectedQid],
+          ["claims", "labels"],
+        ).then((entities) => firstAndOnly(entities))
+      : Promise.resolve(undefined),
   );
 
-  let cy = $state<cytoscape.Core>();
+  let main = $derived(shell?.closest("main"));
+  let appShell = $derived(main?.closest(".app-shell"));
+  let header = $derived(appShell?.querySelector(".top-nav"));
+  let footer = $derived(appShell?.querySelector("footer"));
+
+  const updateShellHeight = () => {
+    if (!shell || !main || !cy) return;
+
+    const viewportHeight = window.visualViewport?.height ?? window.innerHeight;
+    const headerHeight = header?.getBoundingClientRect().height ?? 0;
+    const footerHeight = footer?.getBoundingClientRect().height ?? 0;
+    const mainStyles = getComputedStyle(main);
+    const mainPaddingTop = Number.parseFloat(mainStyles.paddingTop) || 0;
+    const mainPaddingBottom = Number.parseFloat(mainStyles.paddingBottom) || 0;
+    const availableHeight = Math.max(
+      0,
+      Math.floor(
+        viewportHeight -
+          headerHeight -
+          footerHeight -
+          mainPaddingTop -
+          mainPaddingBottom,
+      ),
+    );
+
+    shell.style.height = `${availableHeight}px`;
+    cy.resize();
+    cy.fit(cy.elements(":visible"), PADDING);
+  };
+
+  const runVisibleLayout = (animate = false) => {
+    const graph = cy;
+
+    if (!graph) return;
+
+    const visibleElements = graph.elements(":visible");
+
+    if (visibleElements.nonempty()) {
+      visibleElements
+        .layout({
+          name: "breadthfirst",
+          fit: true,
+          animate,
+          padding: PADDING,
+          avoidOverlap: true,
+        })
+        .run();
+    }
+  };
+
+  const showOnlyCategories = () => {
+    const graph = cy;
+
+    if (!graph) return;
+
+    graph.batch(() => {
+      graph.elements().style("display", "none");
+      graph.nodes("[type = 'cat']").style("display", "element");
+    });
+
+    runVisibleLayout();
+  };
+
+  const toggleIncomingBranch = (node: NodeSingular) => {
+    const graph = cy;
+
+    if (!graph) return;
+
+    const directBranch = node.incomers();
+    const directNodes = directBranch.nodes();
+
+    if (directNodes.empty()) return;
+
+    const shouldOpen = directNodes.every((incomingNode) =>
+      incomingNode.is(":hidden"),
+    );
+    const branchToHide = node.predecessors().union(directBranch);
+
+    graph.batch(() => {
+      if (shouldOpen) {
+        directBranch.style("display", "element");
+      } else {
+        branchToHide.style("display", "none");
+      }
+    });
+
+    runVisibleLayout(true);
+  };
 
   onMount(() => {
-    const main = shell?.closest("main");
-    const appShell = main?.closest(".app-shell");
-    const header = appShell?.querySelector(".top-nav") as HTMLElement | null;
-    const footer = appShell?.querySelector("footer") as HTMLElement | null;
-
-    const runVisibleLayout = (animate = false) => {
-      const graph = cy;
-
-      if (!graph) return;
-
-      const visibleElements = graph.elements(":visible");
-
-      if (visibleElements.nonempty()) {
-        visibleElements
-          .layout({
-            name: "grid",
-            fit: true,
-            animate,
-            padding: 36,
-            avoidOverlap: true,
-            condense: true,
-          })
-          .run();
-      }
-    };
-
-    const showOnlyCategories = () => {
-      const graph = cy;
-
-      if (!graph) return;
-
-      graph.batch(() => {
-        graph.elements().style("display", "none");
-        graph.nodes("[type = 'cat']").style("display", "element");
-      });
-
-      runVisibleLayout();
-    };
-
-    const toggleIncomingBranch = (node: NodeSingular) => {
-      const graph = cy;
-
-      if (!graph) return;
-
-      const directBranch = node.incomers();
-      const directNodes = directBranch.nodes();
-
-      if (directNodes.empty()) return;
-
-      const shouldOpen = directNodes.every((incomingNode) =>
-        incomingNode.is(":hidden"),
-      );
-      const branchToHide = node.predecessors().union(directBranch);
-
-      graph.batch(() => {
-        if (shouldOpen) {
-          directBranch.style("display", "element");
-        } else {
-          branchToHide.style("display", "none");
-        }
-      });
-
-      runVisibleLayout(true);
-    };
-
-    const updateShellHeight = () => {
-      if (!shell || !main) return;
-
-      const viewportHeight =
-        window.visualViewport?.height ?? window.innerHeight;
-      const headerHeight = header?.getBoundingClientRect().height ?? 0;
-      const footerHeight = footer?.getBoundingClientRect().height ?? 0;
-      const mainStyles = getComputedStyle(main);
-      const mainPaddingTop = Number.parseFloat(mainStyles.paddingTop) || 0;
-      const mainPaddingBottom =
-        Number.parseFloat(mainStyles.paddingBottom) || 0;
-      const availableHeight = Math.max(
-        0,
-        Math.floor(
-          viewportHeight -
-            headerHeight -
-            footerHeight -
-            mainPaddingTop -
-            mainPaddingBottom,
-        ),
-      );
-
-      shell.style.height = `${availableHeight}px`;
-      cy?.resize();
-      cy?.fit(cy.elements(":visible"), 36);
-    };
-
     cy = cytoscape({
       container: cydiv,
       elements,
@@ -138,7 +146,7 @@
     });
     cy.on("tap", "node[type='person']", (evt) => {
       const node = evt.target as NodeSingular;
-      selectedPersonId = node.id();
+      selectedQid = node.id();
     });
 
     // cy.on("free", "node.person", (evt) => {
@@ -174,13 +182,19 @@
 <section class="fields-shell" bind:this={shell}>
   <div id="cy" class="graph" bind:this={cydiv}></div>
   <aside class="panel" aria-label="Selected person details">
-    <div class="panel-content">
-      {#if selectedMore}
-        <Headshot subject={selectedMore} width={130}></Headshot>
-      {/if}
+    {#await selectedSubject}
+      this goes pretty fast!
+    {:then subject}
+      <div class="panel-content">
+        {#if subject}
+          <Headshot {subject} width={130}></Headshot>
+        {/if}
 
-      <SimpleClaimsPanel qid={selectedPersonId} />
-    </div>
+        <!-- <SimpleClaimsPanel qid={selectedPersonId} /> -->
+        <SimpleClaimsPanel claims={subject?.claims ?? {}} />
+      </div>
+    {/await}
+
     <div class="panel-controls">
       <button
         class="btn"
@@ -188,12 +202,12 @@
           cy
             ?.elements(":visible")
             .layout({
-              name: "grid",
+              name: "breadthfirst",
               fit: true,
               animate: true,
-              padding: 36,
+              // padding: PADDING,
               avoidOverlap: true,
-              condense: true,
+              // condense: true,
             })
             .run()}
       >
@@ -213,7 +227,7 @@
     grid-template-rows: minmax(0, 1fr);
     width: 100%;
     height: calc(100dvh - var(--shell-offset));
-    overflow: hidden;
+    overflow-y: scroll;
     border: 1px solid var(--pane-border);
     border-radius: 0.6rem;
   }
@@ -235,12 +249,16 @@
     grid-row: 1;
     min-width: 0;
     min-height: 0;
-    display: grid;
-    grid-template-rows: minmax(0, 1fr) auto;
+    display: flex;
+    flex-direction: column;
     background: var(--bg);
   }
 
   .panel-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
     min-height: 0;
     overflow: hidden;
   }
@@ -251,6 +269,7 @@
     padding: 0.6rem 0.75rem;
     align-items: center;
     gap: 1rem;
+    flex-shrink: 0;
   }
 
   @media (max-width: 980px) {

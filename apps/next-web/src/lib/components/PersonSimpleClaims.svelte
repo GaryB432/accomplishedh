@@ -1,42 +1,63 @@
 <script lang="ts">
-  import { fetchEntities } from "$lib/wikibase/api";
-  import { firstAndOnly } from "@accomplishedh/shared";
+  import type { Claims } from "@accomplishedh/wikibase/types";
 
-  let { qid }: { qid?: string } = $props();
-
-  const summary = $derived(summarizeQid());
+  let { claims }: { claims: Claims } = $props();
 
   type SummarizedEntity = { summary: { claims: Record<string, string[]> } };
 
-  function summarize(_entity: Item): PromiseLike<SummarizedEntity> {
-    return Promise.resolve({
-      summary: { claims: { P101: ["P101", "so soon"] } },
-    });
-  }
+  let summaryPromise = $derived(summarizeClaims(claims));
 
-  async function summarizeQid(): Promise<SummarizedEntity> {
-    const sub = await fetchEntities(
-      globalThis.fetch,
-      [qid ?? ""],
-      ["claims", "labels"],
+  async function summarizeClaims(claims: Claims): Promise<SummarizedEntity> {
+    const someOfTRhem = Object.values(claims ?? {});
+
+    const flatclaims = someOfTRhem.flat();
+
+    // const _basics = flatclaims.reduce((a, claim) => {
+    //   a[claim.mainsnak.property] = [
+    //     ...(a[claim.mainsnak.property] ?? []),
+    //     claim,
+    //   ];
+    //   return a;
+    // }, {} as Claims);
+
+    const stringyClaims = flatclaims.reduce(
+      (a, b) => {
+        // console.log("handle", b);
+
+        a[b.mainsnak.property] ??= [];
+        a[b.mainsnak.property].push(
+          `something about ${JSON.stringify(b.mainsnak, null, 1)}`,
+        );
+        return a;
+      },
+      {} as Record<string, string[]>,
     );
-    return summarize(firstAndOnly(sub)!);
-  }
 
-  import type { Item } from "@accomplishedh/wikibase/types";
+    // const totallyFakeResponse = {
+    //   summary: {
+    //     claims: {
+    //       P101: ["P101", "so soon"],
+    //       P403: ["light switches"],
+    //       P785: ["now", "is", "the", "time"],
+    //     },
+    //   },
+    // };
+
+    return Promise.resolve({ summary: { claims: stringyClaims } });
+  }
 </script>
 
 <article class="sidebar">
-  {#if qid}
-    {#await summary}
-      <p class="status">Retrieving {qid}</p>
+  {#if claims}
+    {#await summaryPromise}
+      <p class="status">Retrieving claims</p>
     {:then summ}
       {#if summ}
-        <div class="claims">
+        <div class="claims" data-testid="claims-list">
           {#each Object.entries(summ.summary.claims) as [pkey, strs] (pkey)}
             <div class="claim-row">
               <p class="claim-key">{pkey}</p>
-              <p class="claim-value">{strs.join(" and ")}</p>
+              <p class="claim-value">{strs.join(", ")}</p>
             </div>
           {/each}
         </div>
@@ -49,8 +70,10 @@
 
 <style>
   .sidebar {
-    height: 100%;
+    border: thin solid red;
+    flex: 1;
     min-height: 0;
+    min-width: 0;
     margin: 0;
     padding: 0.75rem;
     overflow-y: auto;
