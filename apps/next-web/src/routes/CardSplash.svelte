@@ -31,18 +31,18 @@
     style="--animate-order: {index};"
     href={resolve("/human/[id]", { id: df.wb.id })}
   >
-    <span class="rank" aria-hidden="true"
-      >{String(index + 1).padStart(2, "0")}</span
-    >
+    <span class="rank" aria-hidden="true">
+      {String(index + 1).padStart(2, "0")}
+    </span>
     <span class="portrait">
       <Headshot subject={{ ...df.wb, type: "item" }} />
     </span>
     <span class="person-copy">
       <span class="person-name">{df.name}</span>
       {#if fromDictionary(df.wb.descriptions)}
-        <span class="person-description"
-          >{fromDictionary(df.wb.descriptions)}</span
-        >
+        <span class="person-description">
+          {fromDictionary(df.wb.descriptions)}
+        </span>
       {/if}
     </span>
   </a>
@@ -52,8 +52,10 @@
   aria-pressed={wayout}
   onclick={() => {
     wayout = !wayout;
-  }}>🎉</button
+  }}
 >
+  🎉
+</button>
 
 <style>
   .person-card {

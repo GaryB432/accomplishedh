@@ -36,7 +36,8 @@
           enable-background="new 0 0 32 32"
           xml:space="preserve"
           fill="#000000"
-          ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
+        >
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
             id="SVGRepo_tracerCarrier"
             stroke-linecap="round"
             stroke-linejoin="round"
@@ -105,14 +106,16 @@
             rel="external nofollow noopener noreferrer"
             target="_blank"
           >
-            more about this individual</a
-          >
+            more about this individual
+          </a>
           at
           <a
             rel="external nofollow noopener noreferrer"
             target="_blank"
-            href="https://wikidata.org">wikidata.org</a
+            href="https://wikidata.org"
           >
+            wikidata.org
+          </a>
         </div>
       </div>
       <div>

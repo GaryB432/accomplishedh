@@ -84,8 +84,10 @@
         <a
           href="https://humanaccomplishment.com"
           rel="external nofollow noopener noreferrer"
-          target="_blank">https://humanaccomplishment.com</a
+          target="_blank"
         >
+          https://humanaccomplishment.com
+        </a>
       </p>
     </li>
     <li>
@@ -163,8 +165,10 @@
     web browser. Learn more about cookies on the <a
       href="https://www.freeprivacypolicy.com/blog/sample-privacy-policy-template/#Use_Of_Cookies_And_Tracking"
       rel="external nofollow noopener noreferrer"
-      target="_blank">Free Privacy Policy website</a
-    > article.
+      target="_blank"
+    >
+      Free Privacy Policy website
+    </a> article.
   </p>
   <p>
     We use both Session and Persistent Cookies for the purposes set out below:
