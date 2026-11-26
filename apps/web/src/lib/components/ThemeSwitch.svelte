@@ -27,9 +27,10 @@
       formaction="/?/setTheme&theme={theme === 'light'
         ? 'dark'
         : 'light'}&redirectTo={page.url.pathname}"
-      ><span class:checked={pressed} class="check"
-        ><span class="icon"
-          ><svg width="32" height="32" viewBox="0 0 24 24">
+    >
+      <span class:checked={pressed} class="check">
+        <span class="icon">
+          <svg width="32" height="32" viewBox="0 0 24 24">
             {#if pressed}
               <path
                 fill="currentColor"
@@ -49,10 +50,10 @@
                 ></path>
               </g>
             {/if}
-          </svg></span
-        ></span
-      ></button
-    >
+          </svg>
+        </span>
+      </span>
+    </button>
   </form>
 </div>
 

@@ -44,21 +44,26 @@
       href="https://osf.io/z9cnk/"
       rel="external nofollow noopener noreferrer"
       target="_blank"
-      >Charles Murray's
-      <b>Human Accomplishment database</b></a
     >
+      Charles Murray's
+      <b>Human Accomplishment database</b>
+    </a>
     available by the
     <a
       href="https://osf.io"
       rel="external nofollow noopener noreferrer"
-      target="_blank">Open Science Framework</a
+      target="_blank"
     >
+      Open Science Framework
+    </a>
     and from
     <a
       href="https://en.wikipedia.org/wiki/Main_Page"
       rel="external nofollow noopener noreferrer"
-      target="_blank">Wikipedia</a
-    >, the Free Encyclopedia.
+      target="_blank"
+    >
+      Wikipedia
+    </a>, the Free Encyclopedia.
   </p>
   <div class="bottom">
     <ExtensionPromo></ExtensionPromo>

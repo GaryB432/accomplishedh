@@ -23,8 +23,9 @@
     <p>
       See the <a
         href="https://github.com/GaryB432/accomplishedh/blob/master/docs/wiki/UpdatingFeatureds.md"
-        >development wiki</a
-      > for information about refreshing the list of featured humans.
+      >
+        development wiki
+      </a> for information about refreshing the list of featured humans.
     </p>
   </div>
 {/if}

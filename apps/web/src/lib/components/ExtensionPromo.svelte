@@ -52,7 +52,8 @@
           target="_blank"
           rel="noreferrer"
           href={activeInfo.storeUrl}
-          >Get the Free Extension
+        >
+          Get the Free Extension
         </a>
       {:else}
         <div class="unknown-ua">Get the Free Extension</div>

@@ -15,8 +15,10 @@
   <a
     rel="external nofollow noopener noreferrer"
     target="_blank"
-    href={entityOnNextWeb.href}>Preview Next Web</a
+    href={entityOnNextWeb.href}
   >
+    Preview Next Web
+  </a>
   <aside>
     <div>
       <svg aria-hidden="true" viewBox="0 0 1160 1020" width="102" height="90">
