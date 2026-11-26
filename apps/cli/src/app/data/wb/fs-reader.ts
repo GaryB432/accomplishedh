@@ -1,15 +1,16 @@
 import { readFileSync } from "node:fs";
 import { join, normalize } from "node:path";
 
-const dataPath = "apps/next-web/src/data";
+export const dataPath = "apps/next-web/src/lib/data";
 
 type EsteemedIndividual = {
   field?: string | undefined;
   id: string;
+  name: string;
 };
 
 export const dataRoot = normalize(
-  join(import.meta.dirname, "..", "..", "..", dataPath),
+  join(import.meta.dirname, "../../..", dataPath),
 );
 
 let everybody: EsteemedIndividual[] | undefined;
@@ -31,27 +32,18 @@ export function readAll(): EsteemedIndividual[] {
   if (!everybody) {
     const dto = JSON.parse(
       readFileSync(join(dataRoot, "identifiers.json"), "utf-8"),
-    ) as Array<{ wb: string }>;
+    ) as Array<{ wb: string; name: string }>;
     everybody = dto
-      .map((s) => s.wb)
-      .map<EsteemedIndividual>((id) => {
-        return { field: undefined, id };
+      .map<EsteemedIndividual>((s) => {
+        return { id: s.wb, name: s.name, field: undefined };
       })
       .toSorted(localeCompareEsteemedIndividuals);
   }
   return everybody;
 }
 
-export function readById(id: string): EsteemedIndividual | undefined {
-  const all = readAll();
-  return all[0];
+export function readById(_id: string): EsteemedIndividual | undefined {
+  throw new Error("not supported");
+  // const all = readAll();
+  // return all[0];
 }
-
-// export function serialToId(serial: string): string | undefined {
-//   if (!idBySerial) {
-//     idBySerial = JSON.parse(
-//       readFileSync(join(dataRoot, "serials.json"), "utf-8"),
-//     );
-//   }
-//   return idBySerial![padSerialForKey(serial)];
-// }

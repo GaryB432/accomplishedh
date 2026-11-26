@@ -11,11 +11,7 @@ export type EntityPropertyName =
   | "sitelinks/urls";
 
 export type ImagePropertyName =
-  | "extmetadata"
-  | "metadata"
-  | "mime"
-  | "size"
-  | "url";
+  "extmetadata" | "metadata" | "mime" | "size" | "url";
 
 const config: WikibaseConfig = {
   commons: "https://commons.wikimedia.org",
@@ -58,6 +54,7 @@ export function entity_searh_url(name: string): string {
   url.searchParams.append("format", "json");
   url.searchParams.append("uselang", language);
   url.searchParams.append("type", "item");
+  url.searchParams.append("origin", "*");
   return url.href;
 }
 

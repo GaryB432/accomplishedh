@@ -16,6 +16,7 @@ export async function fetchEntities(
   if (ids.length === 0 || props.length === 0) {
     throw new Error("do not get empty arrays");
   }
+
   const batches = split(ids, 20).map((qs) =>
     entities_get_url({ ids: qs, props }),
   );
@@ -34,10 +35,7 @@ export async function fetchEntities(
   }
 
   return wikibaseResponses
-    .filter((j) => j.success === 1)
-    .map((a) => a.entities ?? {})
-    .reduce((a, b) => {
-      const f = { ...b, ...a };
-      return f;
-    }, {} as Entities);
+    .filter((response) => response.success === 1)
+    .map((successResponse) => successResponse.entities ?? {})
+    .reduce((a, b) => ({ ...b, ...a }), {} as Entities);
 }

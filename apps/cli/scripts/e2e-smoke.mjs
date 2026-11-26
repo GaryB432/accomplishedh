@@ -76,6 +76,16 @@ const steps = [
     name: "help",
   },
   {
+    args: ["apps/cli/dist/main.js", "featured", "2094-04-02", "--dry-run"],
+    cmd: "node",
+    exitCode: 0,
+    mustMatch: [
+      /HA featureds run out on 04\/09\/2094/,
+      /Visit https:.*\/UpdatingFeatureds.md for information on refreshing./,
+    ],
+    name: "featured-happy-path",
+  },
+  {
     args: ["apps/cli/dist/main.js", "featured", "2094-04", "--dry-run"],
     cmd: "node",
     exitCode: 1,

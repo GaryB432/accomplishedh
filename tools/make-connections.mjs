@@ -1,30 +1,16 @@
-import { FILE } from "node:dns";
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
-import { setTimeout } from "node:timers/promises";
+import { setTimeout as sleep } from "node:timers/promises";
 import { fileURLToPath } from "node:url";
+import { classifier } from "./fows/classifier.mjs";
 
 const WIKIDATA_SPARQL_URL = "https://query.wikidata.org/sparql";
 const BATCH_SIZE = 200;
 
 const schemaVersion = 1;
 
-const ROOTS = {
-  Art: "Q36649",
-  Lit: "Q8242",
-  Music: "Q9730",
-  Science: "Q336",
-};
-
-const categories = new Map([
-  ["Q36649", "Art"],
-  ["Q8242", "Lit"],
-  ["Q9730", "Music"],
-  ["Q336", "Science"],
-]); // TODO compute by reverse ROOTS
-
 const HA_DIRECTORY = join(fileURLToPath(import.meta.url), "../..");
-const HA_DATA = join(HA_DIRECTORY, "apps/next-web/src/data");
+const HA_DATA = join(HA_DIRECTORY, "apps/next-web/src/lib/data");
 
 const WIKIBASE_DIRECTORY = join(HA_DATA, "wikibase");
 const FIELDS_FILE_NAME = join(WIKIBASE_DIRECTORY, "fields-of-work.json");
@@ -32,12 +18,30 @@ const FIELDS_FILE_NAME = join(WIKIBASE_DIRECTORY, "fields-of-work.json");
 const USER_AGENT = "AccomplishedHBot/1.0 (editor@humanaccomplishment.com)";
 
 async function waitFetch(input, init) {
+  await sleep(250);
   return fetch(input, init);
-  // return new Promise((resolve) => {
-  //   setTimeout(() => {
-  //     resolve(globalThis.fetch(input, init));
-  //   }, 500);
-  // });
+}
+
+/**
+ * from {id: 'Q1234'} receive 0001234
+ * @param {import("../libraries/wikibase/src/types").Entity | string} entity
+ * @returns {string}
+ */
+function qnumpart(entity) {
+  const qn = entity.id ?? entity;
+  return qn.slice(1).padStart(14, "0");
+}
+
+/**
+ *
+ * @param {import("../libraries/wikibase/src/types").Entity} a
+ * @param {import("../libraries/wikibase/src/types").Entity} b
+ * @returns {number}
+ */
+function compareEntities(a, b) {
+  // console.log(JSON.stringify({ a, b }));
+
+  return qnumpart(a).localeCompare(qnumpart(b));
 }
 
 async function main(today) {
@@ -52,6 +56,7 @@ async function main(today) {
     readFileSync(join(HA_DATA, "identifiers.json"), "utf-8"),
   );
 
+  /** @type {Array<string>} */
   const allIds = everybody.map((s) => s.wb);
 
   console.log(`🚀 Mapping FOWs for ${allIds.length} humans...`);
@@ -61,21 +66,18 @@ async function main(today) {
 
     const humansValues = currentBatch.map((id) => `wd:${id}`).join(" ");
 
-    const rootValues = Object.entries(ROOTS)
-      .map(([, qid]) => `wd:${qid}`)
-      .join(" ");
-
     const query = `
-        SELECT ?human ?fow ?fowLabel ?root WHERE {
-          VALUES ?human { ${humansValues} }
-          VALUES ?root { ${rootValues} }
-
-          ?human wdt:P101 ?fow .
-          ?fow wdt:P279* ?root .
-
+      SELECT ?human ?humanLabel ?dob ?fow ?fowLabel ?occupation ?occupationLabel WHERE {
+        VALUES ?human { 
+          ${humansValues}
+          }
+          
+          OPTIONAL { ?human wdt:P569 ?dob . }
+          OPTIONAL { ?human wdt:P101 ?fow . }
+          OPTIONAL { ?human wdt:P106 ?occupation . }
+          
           SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
-        }
-      `;
+          }`;
 
     const url = `${WIKIDATA_SPARQL_URL}?query=${encodeURIComponent(query)}`;
 
@@ -92,19 +94,34 @@ async function main(today) {
 
     /**  @type {import('../libraries/wikibase/src/types').QueryBindingsResponse} */
     const data = await response.json();
+    // console.log(JSON.stringify(data.results.bindings[0], null, 2));
 
-    void data.results.bindings.map(toFowEntry).reduce((a, fow) => {
-      const { id, category, label, human } = fow;
+    void data.results.bindings
+      .map(toFowEntry)
+      .filter((fow) => fow.category !== "Ignore")
+      .reduce((a, fow) => {
+        const { id, category, label, human } = fow;
 
-      a[human] ??= { fows: [] };
-      a[human].fows.push({ id, category, label });
-
-      return a;
-    }, fowDataset.people);
+        a[human] ??= { fows: [] };
+        a[human].fows.push({ id, category, label });
+        return a;
+      }, fowDataset.people);
 
     console.log(`✅ Processed batch ${Math.floor(i / BATCH_SIZE) + 1}.`);
-    await new Promise((res) => setTimeout(res, 250));
   }
+
+  const sorteds = Object.keys(fowDataset.people).toSorted(compareEntities);
+  fowDataset.people = sorteds.reduce((a, hid) => {
+    const fows = [
+      ...new Map(
+        fowDataset.people[hid].fows
+          .toSorted(compareEntities)
+          .map((item) => [item.id, item]),
+      ).values(),
+    ];
+    a[hid] = { ...fowDataset.people[hid], fows };
+    return a;
+  }, {});
 
   mkdirSync(WIKIBASE_DIRECTORY, { recursive: true });
 
@@ -116,44 +133,52 @@ async function main(today) {
   console.log(`🔥Complete. ${FIELDS_FILE_NAME}`);
 }
 
-function asQid(value) {
-  if (!/^Q\d+$/.test(value)) {
-    throw new Error(`Invalid field-of-work id: ${value}`);
+/**
+ *
+ * @param {Binding} binding
+ * @returns {string | undefined}
+ */
+function unbind(binding) {
+  if (!binding) {
+    return undefined;
   }
-
-  return value;
-}
-
-export function extractValue(typedValue) {
-  const popped = typedValue.value.split("/").pop();
-  if (!popped) {
-    throw new Error("no pop");
+  switch (binding.type) {
+    case "literal": {
+      return binding.value;
+    }
+    case "uri": {
+      return binding.value.split("/").at(-1);
+    }
+    default: {
+      console.log(JSON.stringify(binding));
+      throw new Error(`what is that`);
+    }
   }
-  return popped;
 }
 
 /**
  * @param {Record<string,import('../libraries/wikibase/src/types').Binding} row
  * @param {number} index
  * @param {Record<string,Binding>[]} array
- * @returns {FieldOfWorkEntryV1 & { human: EntityQid }}
+ * @returns  {import('../libraries/shared/src/lib/dto.types').FieldOfWorkEntryV1 & { human: import('../libraries/shared/src/lib/dto.types').EntityQid   }}
  */
 function toFowEntry(row, index, array) {
-  const human = asQid(extractValue(row["human"]));
-  const id = asQid(extractValue(row["fow"]));
-  const label = row["fowLabel"].value;
+  const human = unbind(row["human"]);
+  // const humanLabel = unbind(row["humanLabel"]);
+  // const dob = unbind(row["dob"]);
+  const fow = unbind(row["fow"]);
+  const fowLabel = unbind(row["fowLabel"]);
+  const occupation = unbind(row["occupation"]);
+  const occupationLabel = unbind(row["occupationLabel"]);
 
-  const category = getFowRootCategory(row["root"]);
-  return { id, category, human, label };
+  if (!human) {
+    throw new Error("dehumanized");
+  }
+
+  const id = fow ?? occupation;
+  const label = fowLabel ?? occupationLabel;
+
+  return { id, category: classifier.classify(label), human, label };
 }
 
 void main();
-
-/**
- *
- * @param {import('../libraries/wikibase/src/types/responses').Binding} binding
- * @returns {import('../libraries/shared/src/lib/dto.types'.EntityRefV1)}
- */
-function getFowRootCategory(binding) {
-  return categories.get(asQid(extractValue(binding)));
-}

@@ -9,11 +9,7 @@ export type EntityPropertyName =
   | "sitelinks/urls";
 
 export type ImagePropertyName =
-  | "extmetadata"
-  | "metadata"
-  | "mime"
-  | "size"
-  | "url";
+  "extmetadata" | "metadata" | "mime" | "size" | "url";
 
 const config = {
   commons: "https://commons.wikimedia.org",
