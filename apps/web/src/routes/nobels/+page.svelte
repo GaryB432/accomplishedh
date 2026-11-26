@@ -29,10 +29,10 @@
     </h1>
     {#if w.human}
       <div class="hum">
-        <a href={resolve("/human/[serial=integer]", w.human)}
-          >{w.firstname}
-          {w.surname}</a
-        >
+        <a href={resolve("/human/[serial=integer]", w.human)}>
+          {w.firstname}
+          {w.surname}
+        </a>
       </div>
     {:else}
       <div class="reason">{w.reason}</div>

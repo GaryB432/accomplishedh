@@ -357,15 +357,19 @@
         type="button"
         onclick={() => {
           dialog!.showModal();
-        }}>UPDATE</button
+        }}
       >
+        UPDATE
+      </button>
       <button
         type="button"
         aria-label="close"
         onclick={() => {
           showAdminPanel = false;
-        }}>&times;</button
+        }}
       >
+        &times;
+      </button>
     </div>
     <div>
       {id}
