@@ -19,7 +19,6 @@
     "@accomplishedh/social-media": "workspace:^",
     "@accomplishedh/wikibase": "workspace:^",
     "@fontsource/montserrat": "^5.2.8",
-    "crypto-js": "^4.2.0",
     "cytoscape": "^3.33.3",
     "cytoscape-dagre": "^3.0.0",
     "xml": "^1.0.1"
