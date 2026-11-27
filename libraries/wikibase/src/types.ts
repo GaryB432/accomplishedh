@@ -4,7 +4,7 @@ export type Claim = {
   mainsnak: Snak;
   qualifiers?: unknown;
   "qualifiers-order"?: string[];
-  rank?: "normal";
+  rank?: "normal" | "preferred";
   references?: unknown;
   type: "statement";
 };
