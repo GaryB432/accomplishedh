@@ -14,138 +14,13 @@ const RANING_PROPERTIES = {
 };
 
 describe("PersonSimpleClaims.svelte", () => {
-  const claims: Claims = {
-    PUNUSED: [
-      {
-        mainsnak: {
-          snaktype: "value",
-          property: WIKIDATA_PERSON_PROPERTIES.GIVEN_NAME,
-          datavalue: {
-            value: {
-              "entity-type": "item",
-              "numeric-id": 15731830,
-              id: "Q15731830",
-            },
-            type: "wikibase-entityid",
-          },
-          datatype: "wikibase-item",
-        },
-        type: "statement",
-        qualifiers: {
-          [RANING_PROPERTIES.SERIES_ORDINAL]: [
-            {
-              snaktype: "value",
-              property: RANING_PROPERTIES.SERIES_ORDINAL,
-              datavalue: { value: "1", type: "string" },
-              datatype: "string",
-            },
-          ],
-        },
-        "qualifiers-order": [RANING_PROPERTIES.SERIES_ORDINAL],
-        id: "Q154014$7a1b6913-4149-07f1-1823-7d55ef7f07b9",
-        rank: "normal",
-        references: [
-          {
-            snaks: {
-              [RANING_PROPERTIES.STATED_IN]: [
-                {
-                  snaktype: "value",
-                  property: RANING_PROPERTIES.STATED_IN,
-                  datavalue: {
-                    value: {
-                      "entity-type": "item",
-                      "numeric-id": 15712417,
-                      id: "Q15712417",
-                    },
-                    type: "wikibase-entityid",
-                  },
-                  datatype: "wikibase-item",
-                },
-              ],
-            },
-            "snaks-order": [RANING_PROPERTIES.STATED_IN],
-          },
-        ],
-      },
-      {
-        mainsnak: {
-          snaktype: "value",
-          property: WIKIDATA_PERSON_PROPERTIES.GIVEN_NAME,
-          datavalue: {
-            value: {
-              "entity-type": "item",
-              "numeric-id": 1985538,
-              id: "Q1985538",
-            },
-            type: "wikibase-entityid",
-          },
-          datatype: "wikibase-item",
-        },
-        type: "statement",
-        qualifiers: {
-          [RANING_PROPERTIES.SERIES_ORDINAL]: [
-            {
-              snaktype: "value",
-              property: RANING_PROPERTIES.SERIES_ORDINAL,
-              datavalue: { value: "2", type: "string" },
-              datatype: "string",
-            },
-          ],
-          [RANING_PROPERTIES.OBJECT_OF_STATEMENT_HAS_ROLE]: [
-            {
-              snaktype: "value",
-              property: RANING_PROPERTIES.OBJECT_OF_STATEMENT_HAS_ROLE,
-              datavalue: {
-                value: {
-                  "entity-type": "item",
-                  "numeric-id": 3409033,
-                  id: "Q3409033",
-                },
-                type: "wikibase-entityid",
-              },
-              datatype: "wikibase-item",
-            },
-          ],
-        },
-        "qualifiers-order": [
-          RANING_PROPERTIES.SERIES_ORDINAL,
-          RANING_PROPERTIES.OBJECT_OF_STATEMENT_HAS_ROLE,
-        ],
-        id: "Q154014$61F4B279-63B9-4CB4-83CE-DC1EB57E0125",
-        rank: "normal",
-        references: [
-          {
-            snaks: {
-              [RANING_PROPERTIES.STATED_IN]: [
-                {
-                  snaktype: "value",
-                  property: RANING_PROPERTIES.STATED_IN,
-                  datavalue: {
-                    value: {
-                      "entity-type": "item",
-                      "numeric-id": 15712417,
-                      id: "Q15712417",
-                    },
-                    type: "wikibase-entityid",
-                  },
-                  datatype: "wikibase-item",
-                },
-              ],
-            },
-            "snaks-order": [RANING_PROPERTIES.STATED_IN],
-          },
-        ],
-      },
-    ],
-  };
-  
   it("renders claims list", async () => {
     render(SimpleClaims, { claims: subjectClaims });
 
     await expect
       .element(page.getByTestId("claims-list"))
       .toHaveTextContent(
-        'P735 something about { "snaktype": "value", "property": "P735", "datavalue": { "value": { "entity-type": "item", "numeric-id": 15731830, "id": "Q15731830" }, "type": "wikibase-entityid" }, "datatype": "wikibase-item" } given name, something about { "snaktype": "value", "property": "P735", "datavalue": { "value": { "entity-type": "item", "numeric-id": 1985538, "id": "Q1985538" }, "type": "wikibase-entityid" }, "datatype": "wikibase-item" } given name',
+        'P19 something about { "snaktype": "value", "property": "P19", "datavalue": { "value": { "entity-type": "item", "numeric-id": 478797, "id": "Q478797" }, "type": "wikibase-entityid" }, "datatype": "wikibase-item" } place of birthP20 something about { "snaktype": "value", "property": "P20", "datavalue": { "value": { "entity-type": "item", "numeric-id": 12892, "id": "Q12892" }, "type": "wikibase-entityid" }, "datatype": "wikibase-item" } place of deathP31 something about { "snaktype": "value", "property": "P31", "datavalue": { "value": { "entity-type": "item", "numeric-id": 5, "id": "Q5" }, "type": "wikibase-entityid" }, "datatype": "wikibase-item" } instance ofP569 something about { "snaktype": "value", "property": "P569", "datavalue": { "value": { "time": "+1834-08-17T00:00:00Z", "timezone": 0, "before": 0, "after": 0, "precision": 11, "calendarmodel": "http://www.wikidata.org/entity/Q1985727" }, "type": "time" }, "datatype": "time" } date of birthP570 something about { "snaktype": "value", "property": "P570", "datavalue": { "value": { "time": "+1901-03-08T00:00:00Z", "timezone": 0, "before": 0, "after": 0, "precision": 11, "calendarmodel": "http://www.wikidata.org/entity/Q1985727" }, "type": "time" }, "datatype": "time" } date of deathP18 something about { "snaktype": "value", "property": "P18", "datavalue": { "value": "Peter Benoit, PA00421.jpg", "type": "string" }, "datatype": "commonsMedia" } imageP734 something about { "snaktype": "value", "property": "P734", "datavalue": { "value": { "entity-type": "item", "numeric-id": 23722326, "id": "Q23722326" }, "type": "wikibase-entityid" }, "datatype": "wikibase-item" } family nameP27 something about { "snaktype": "value", "property": "P27", "datavalue": { "value": { "entity-type": "item", "numeric-id": 31, "id": "Q31" }, "type": "wikibase-entityid" }, "datatype": "wikibase-item" } country of citizenshipP106 something about { "snaktype": "value", "property": "P106", "datavalue": { "value": { "entity-type": "item", "numeric-id": 158852, "id": "Q158852" }, "type": "wikibase-entityid" }, "datatype": "wikibase-item" } occupation, something about { "snaktype": "value", "property": "P106", "datavalue": { "value": { "entity-type": "item", "numeric-id": 36834, "id": "Q36834" }, "type": "wikibase-entityid" }, "datatype": "wikibase-item" } occupation, something about { "snaktype": "value", "property": "P106", "datavalue": { "value": { "entity-type": "item", "numeric-id": 82955, "id": "Q82955" }, "type": "wikibase-entityid" }, "datatype": "wikibase-item" } occupation, something about { "snaktype": "value", "property": "P106", "datavalue": { "value": { "entity-type": "item", "numeric-id": 14915627, "id": "Q14915627" }, "type": "wikibase-entityid" }, "datatype": "wikibase-item" } occupation, something about { "snaktype": "value", "property": "P106", "datavalue": { "value": { "entity-type": "item", "numeric-id": 2675537, "id": "Q2675537" }, "type": "wikibase-entityid" }, "datatype": "wikibase-item" } occupationP735 something about { "snaktype": "value", "property": "P735", "datavalue": { "value": { "entity-type": "item", "numeric-id": 2793400, "id": "Q2793400" }, "type": "wikibase-entityid" }, "datatype": "wikibase-item" } given nameP800 something about { "snaktype": "value", "property": "P800", "datavalue": { "value": { "entity-type": "item", "numeric-id": 1912251, "id": "Q1912251" }, "type": "wikibase-entityid" }, "datatype": "wikibase-item" } notable workP1343 something about { "snaktype": "value", "property": "P1343", "datavalue": { "value": { "entity-type": "item", "numeric-id": 1766280, "id": "Q1766280" }, "type": "wikibase-entityid" }, "datatype": "wikibase-item" } described by source, something about { "snaktype": "value", "property": "P1343", "datavalue": { "value": { "entity-type": "item", "numeric-id": 20078554, "id": "Q20078554" }, "type": "wikibase-entityid" }, "datatype": "wikibase-item" } described by source, something about { "snaktype": "value", "property": "P1343", "datavalue": { "value": { "entity-type": "item", "numeric-id": 27680201, "id": "Q27680201" }, "type": "wikibase-entityid" }, "datatype": "wikibase-item" } described by source, something about { "snaktype": "value", "property": "P1343", "datavalue": { "value": { "entity-type": "item", "numeric-id": 602358, "id": "Q602358" }, "type": "wikibase-entityid" }, "datatype": "wikibase-item" } described by source, something about { "snaktype": "value", "property": "P1343", "datavalue": { "value": { "entity-type": "item", "numeric-id": 19180675, "id": "Q19180675" }, "type": "wikibase-entityid" }, "datatype": "wikibase-item" } described by source, something about { "snaktype": "value", "property": "P1343", "datavalue": { "value": { "entity-type": "item", "numeric-id": 867541, "id": "Q867541" }, "type": "wikibase-entityid" }, "datatype": "wikibase-item" } described by source, something about { "snaktype": "value", "property": "P1343", "datavalue": { "value": { "entity-type": "item", "numeric-id": 125935456, "id": "Q125935456" }, "type": "wikibase-entityid" }, "datatype": "wikibase-item" } described by source, something about { "snaktype": "value", "property": "P1343", "datavalue": { "value": { "entity-type": "item", "numeric-id": 13028710, "id": "Q13028710" }, "type": "wikibase-entityid" }, "datatype": "wikibase-item" } described by sourceP69 something about { "snaktype": "value", "property": "P69", "datavalue": { "value": { "entity-type": "item", "numeric-id": 336968, "id": "Q336968" }, "type": "wikibase-entityid" }, "datatype": "wikibase-item" } educated atP1412 something about { "snaktype": "value", "property": "P1412", "datavalue": { "value": { "entity-type": "item", "numeric-id": 7411, "id": "Q7411" }, "type": "wikibase-entityid" }, "datatype": "wikibase-item" } languages spoken, written or signedP21 something about { "snaktype": "value", "property": "P21", "datavalue": { "value": { "entity-type": "item", "numeric-id": 6581097, "id": "Q6581097" }, "type": "wikibase-entityid" }, "datatype": "wikibase-item" } sex or genderP103 something about { "snaktype": "value", "property": "P103", "datavalue": { "value": { "entity-type": "item", "numeric-id": 7411, "id": "Q7411" }, "type": "wikibase-entityid" }, "datatype": "wikibase-item" } native languageP25 something about { "snaktype": "value", "property": "P25", "datavalue": { "value": { "entity-type": "item", "numeric-id": 137439917, "id": "Q137439917" }, "type": "wikibase-entityid" }, "datatype": "wikibase-item" } mother',
       );
   });
 });
