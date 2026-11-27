@@ -1,16 +1,44 @@
 <script lang="ts">
-  import type { Claims } from "@accomplishedh/wikibase/types";
+  import { fetchEntities } from "$lib/wikibase/api";
+  import { WIKIDATA_PERSON_PROPERTIES } from "@accomplishedh/wikibase";
+  import type { Claims, Entities, Snak } from "@accomplishedh/wikibase/types";
 
   let { claims }: { claims: Claims } = $props();
 
-  type SummarizedEntity = { summary: { claims: Record<string, string[]> } };
+  type SummarizedEntity_reduced_to_strings = {
+    summary: { claims: Record<string, string[]> };
+  };
+
+  let fetchedPersonPropertyLabels = $state<Promise<Entities>>(
+    fetchEntities(fetch, Object.values(WIKIDATA_PERSON_PROPERTIES), ["labels"]),
+  );
 
   let summaryPromise = $derived(summarizeClaims(claims));
 
-  async function summarizeClaims(claims: Claims): Promise<SummarizedEntity> {
+  async function summarizeClaims(
+    claims: Claims,
+  ): Promise<SummarizedEntity_reduced_to_strings> {
     const someOfTRhem = Object.values(claims ?? {});
 
     const flatclaims = someOfTRhem.flat();
+
+    const _claimsMap = flatclaims
+      .map((c) => c.mainsnak)
+      .filter(
+        (snak) =>
+          snak.snaktype === "value" &&
+          Object.values(WIKIDATA_PERSON_PROPERTIES).includes(snak.property),
+      )
+      .reduce((a, snak) => {
+        const propSnaks = a.getOrInsert(snak.property, []);
+        propSnaks.push(snak);
+        return a;
+      }, new Map<string, Snak[]>());
+
+    const labeled_person_entities = await fetchedPersonPropertyLabels;
+
+    // console.log(fdf);
+    // console.log(labeled_person_entities);
 
     // const _basics = flatclaims.reduce((a, claim) => {
     //   a[claim.mainsnak.property] = [
@@ -23,11 +51,16 @@
     const stringyClaims = flatclaims.reduce(
       (a, b) => {
         // console.log("handle", b);
+        const property_info = labeled_person_entities[b.mainsnak.property];
+        if (property_info) {
+          const lnd = property_info.labels ?? { en: { value: "?" } };
+          // console.log(property_info.labels);
+          a[b.mainsnak.property] ??= [];
+          a[b.mainsnak.property].push(
+            `something about ${JSON.stringify(b.mainsnak, null, 1)} ${lnd["en"].value}`,
+          );
+        }
 
-        a[b.mainsnak.property] ??= [];
-        a[b.mainsnak.property].push(
-          `something about ${JSON.stringify(b.mainsnak, null, 1)}`,
-        );
         return a;
       },
       {} as Record<string, string[]>,
@@ -70,7 +103,6 @@
 
 <style>
   .sidebar {
-    border: thin solid red;
     flex: 1;
     min-height: 0;
     min-width: 0;
