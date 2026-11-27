@@ -1,5 +1,6 @@
 import type { AccomplishedHuman } from "@accomplishedh/shared";
 import type { Entities, ItemId } from "@accomplishedh/wikibase/types";
+import { hash } from "node:crypto";
 
 import { fetchEntities } from "$lib/wikibase/api";
 import { toAccomplishedH } from "$lib/wikibase/utils";
@@ -20,9 +21,13 @@ type ISODate = string;
 export const load = (async (ctx) => {
   const dtos = featuredJsonData as FeaturedDTO[];
   const featureds = await grabDayFeatureds(dtos, ctx.locals.todayISO);
-  const admin = false;
+  const admin = isAdministrativeUser(ctx.locals);
   return { admin, featureds };
 }) satisfies LayoutServerLoad;
+
+function isAdministrativeUser(locals: App.Locals): boolean {
+  return hash("md5", locals.userid) === "03b083fd0aadc8883198881ba88111ab";
+}
 
 async function grabDayFeatureds(
   featuredJson: FeaturedDTO[],
