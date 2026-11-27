@@ -1,16 +1,25 @@
-import { page } from "vitest/browser";
+import {
+  WIKIDATA_PERSON_PROPERTIES,
+  type Claims,
+} from "@accomplishedh/wikibase";
 import { describe, expect, it } from "vitest";
 import { render } from "vitest-browser-svelte";
+import { page } from "vitest/browser";
 import SimpleClaims from "./PersonSimpleClaims.svelte";
-import type { Claims } from "@accomplishedh/wikibase";
+
+const RANING_PROPERTIES = {
+  SERIES_ORDINAL: "P1545",
+  OBJECT_OF_STATEMENT_HAS_ROLE: "P3831",
+  STATED_IN: "P248",
+};
 
 describe("PersonSimpleClaims.svelte", () => {
   const claims: Claims = {
-    P375: [
+    PUNUSED: [
       {
         mainsnak: {
           snaktype: "value",
-          property: "P735",
+          property: WIKIDATA_PERSON_PROPERTIES.GIVEN_NAME,
           datavalue: {
             value: {
               "entity-type": "item",
@@ -23,28 +32,25 @@ describe("PersonSimpleClaims.svelte", () => {
         },
         type: "statement",
         qualifiers: {
-          P1545: [
+          [RANING_PROPERTIES.SERIES_ORDINAL]: [
             {
               snaktype: "value",
-              property: "P1545",
-              hash: "2a1ced1dca90648ea7e306acbadd74fc81a10722",
+              property: RANING_PROPERTIES.SERIES_ORDINAL,
               datavalue: { value: "1", type: "string" },
               datatype: "string",
             },
           ],
         },
-        "qualifiers-order": ["P1545"],
+        "qualifiers-order": [RANING_PROPERTIES.SERIES_ORDINAL],
         id: "Q154014$7a1b6913-4149-07f1-1823-7d55ef7f07b9",
         rank: "normal",
         references: [
           {
-            hash: "4d200371a7e87e8e8bc6ac26829c6afa4eee55e0",
             snaks: {
-              P248: [
+              [RANING_PROPERTIES.STATED_IN]: [
                 {
                   snaktype: "value",
-                  property: "P248",
-                  hash: "0077878fdbbc3386263c1f9cb475fec6d405abb7",
+                  property: RANING_PROPERTIES.STATED_IN,
                   datavalue: {
                     value: {
                       "entity-type": "item",
@@ -57,14 +63,14 @@ describe("PersonSimpleClaims.svelte", () => {
                 },
               ],
             },
-            "snaks-order": ["P248"],
+            "snaks-order": [RANING_PROPERTIES.STATED_IN],
           },
         ],
       },
       {
         mainsnak: {
           snaktype: "value",
-          property: "P735",
+          property: WIKIDATA_PERSON_PROPERTIES.GIVEN_NAME,
           datavalue: {
             value: {
               "entity-type": "item",
@@ -77,20 +83,18 @@ describe("PersonSimpleClaims.svelte", () => {
         },
         type: "statement",
         qualifiers: {
-          P1545: [
+          [RANING_PROPERTIES.SERIES_ORDINAL]: [
             {
               snaktype: "value",
-              property: "P1545",
-              hash: "7241753c62a310cf84895620ea82250dcea65835",
+              property: RANING_PROPERTIES.SERIES_ORDINAL,
               datavalue: { value: "2", type: "string" },
               datatype: "string",
             },
           ],
-          P3831: [
+          [RANING_PROPERTIES.OBJECT_OF_STATEMENT_HAS_ROLE]: [
             {
               snaktype: "value",
-              property: "P3831",
-              hash: "dbd40245cfc74fad93188d2f44e7b227d46047a2",
+              property: RANING_PROPERTIES.OBJECT_OF_STATEMENT_HAS_ROLE,
               datavalue: {
                 value: {
                   "entity-type": "item",
@@ -103,18 +107,19 @@ describe("PersonSimpleClaims.svelte", () => {
             },
           ],
         },
-        "qualifiers-order": ["P1545", "P3831"],
+        "qualifiers-order": [
+          RANING_PROPERTIES.SERIES_ORDINAL,
+          RANING_PROPERTIES.OBJECT_OF_STATEMENT_HAS_ROLE,
+        ],
         id: "Q154014$61F4B279-63B9-4CB4-83CE-DC1EB57E0125",
         rank: "normal",
         references: [
           {
-            hash: "4d200371a7e87e8e8bc6ac26829c6afa4eee55e0",
             snaks: {
-              P248: [
+              [RANING_PROPERTIES.STATED_IN]: [
                 {
                   snaktype: "value",
-                  property: "P248",
-                  hash: "0077878fdbbc3386263c1f9cb475fec6d405abb7",
+                  property: RANING_PROPERTIES.STATED_IN,
                   datavalue: {
                     value: {
                       "entity-type": "item",
@@ -127,7 +132,7 @@ describe("PersonSimpleClaims.svelte", () => {
                 },
               ],
             },
-            "snaks-order": ["P248"],
+            "snaks-order": [RANING_PROPERTIES.STATED_IN],
           },
         ],
       },
