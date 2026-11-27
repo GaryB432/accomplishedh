@@ -14,3 +14,4 @@ trustPolicy: no-downgrade
 
 trustPolicyExclude:
   - chokidar@4.0.3 # https://github.com/paulmillr/chokidar/issues/1440
+  - webpack-dev-middleware@7.4.6
