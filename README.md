@@ -81,7 +81,6 @@ The project makes use of many open source packages
 | [`cac`](https://www.npmjs.com/package/cac) | Command-line framework and help-generation for `cli` |
 | [`cli-progress`](https://www.npmjs.com/package/cli-progress) | A progress indicator for `cli` |
 | [`clipboardy`](https://www.npmjs.com/package/clipboardy) | Copies to the system clipboard for e.g., social-media posting |
-| [`crypto-js`](https://www.npmjs.com/package/crypto-js) | Basic cryptographic functions e.g., `SHA256` |
 | [`eslint`](https://www.npmjs.com/package/eslint) | Enforces code style and consistency throughout |
 | [`eslint-plugin-gb`](https://www.npmjs.com/package/eslint-plugin-gb) | My favorite rules for style and consistency |
 | [`picocolors`](https://www.npmjs.com/package/picocolors) | Terminal colors for `cli` |
