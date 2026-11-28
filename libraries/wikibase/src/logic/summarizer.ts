@@ -33,15 +33,16 @@ const datatype_info_map = new Map([
  *
  * @param id_record an object whose keys are the wikidata IDs to apply
  * @returns an object whose entries are the english labels for the wikidata items
- * @deprecated
  */
-export async function labelify(
+export async function fetch_entity_labels(
   id_record: Record<string, unknown>,
 ): Promise<Record<string, string>> {
   const label_record: Record<string, string> = {};
   const batches = batchify(Object.keys(id_record));
   for (const batch of batches) {
-    const labeled_people = await wbApi.reanimated__fetchEntities(batch, ["labels"]);
+    const labeled_people = await wbApi.reanimated__fetchEntities(batch, [
+      "labels",
+    ]);
 
     for (const ent of Object.values(labeled_people)) {
       label_record[ent.id] = fromDictionary(ent.labels); // .concat('@@');
@@ -50,7 +51,6 @@ export async function labelify(
   return label_record;
 }
 
-/** @deprecated */
 export async function summarize(entity: Entity): Promise<SummarizedEntity> {
   const subject = { ...entity };
   // const summary = { fun: false, claims: { coming: 'soon' } };
@@ -117,7 +117,7 @@ async function fetch_label_dictionary_for_claimed_entities(
     .map(snakkedEntityId)
     .filter((qid) => qid !== void 0);
 
-  return labelify(record_from(claimed_entities_qids));
+  return fetch_entity_labels(record_from(claimed_entities_qids));
 }
 
 function hasSupportedDataType(snak: Snak): boolean {
