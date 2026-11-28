@@ -11,7 +11,6 @@ import { isoFrom } from "../data/timevalue.js";
  * @returns the first value of the record
  */
 export function firstAndOnly(e: Entities): Entity {
-  const valls = Object.values(e);
   const keys = Object.keys(e);
 
   if (keys.length === 1) {

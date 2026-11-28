@@ -14,11 +14,13 @@ export async function fetchDetailedEntity(
   return entities ? entities[id] : undefined;
 }
 
+/**
+ * @deprecated
+ */
 export async function findAlternativeHumansFor(
   h: unknown,
 ): Promise<SummarizedEntities> {
-  const f: SummarizedEntities = {};
-  return f;
+  return Promise.resolve({});
 }
 
 export function simplifyClaim(c: Claim): unknown {
