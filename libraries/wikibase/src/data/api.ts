@@ -1,16 +1,9 @@
-import { type EuroHuman } from "@accomplishedh/shared";
-
-import type { Entities, EntityId, ItemId } from "../types";
+import type { Entities, EntityId } from "../types";
 import type { WikibaseResponse } from "../types/responses";
 
-import {
-  entities_get_url,
-  entity_searh_url,
-  type EntityPropertyName,
-} from "./urls";
+import { entities_get_url, type EntityPropertyName } from "./urls";
 
-/** @deprecated */
-export async function fetchEntities(
+export async function reanimated__fetchEntities(
   ids: EntityId[],
   props: EntityPropertyName[],
 ): Promise<Entities> {
@@ -41,26 +34,4 @@ export async function fetchEntities(
     }
   }
   return {};
-}
-
-/** @deprecated */
-export async function searchEntitiesByTitle(
-  search: EuroHuman | string,
-): Promise<Entities> {
-  const term = typeof search === "string" ? search : search.name;
-  const searcher = entity_searh_url(term);
-
-  const response = await fetch(searcher);
-  const data = (await response.json()) as WikibaseResponse;
-
-  if (data.success !== 1 || data.search === void 0) {
-    throw new Error(JSON.stringify(data));
-  }
-
-  return data.search.length > 0
-    ? await fetchEntities(
-        data.search.map<ItemId>((s) => s.id),
-        ["claims", "descriptions", "labels"],
-      )
-    : {};
 }

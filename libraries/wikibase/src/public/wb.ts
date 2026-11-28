@@ -1,15 +1,12 @@
-import type { EuroHuman } from "@accomplishedh/shared";
-
 import type { Claim, Entity, EntityId } from "../types.js"; // TODO weird extensions
 
 import * as wbApi from "../data/api.js";
-import { isInstanceOfHuman } from "../logic/filters.js";
-import { summarize, type SummarizedEntities } from "../logic/summarizer.js";
+import { type SummarizedEntities } from "../logic/summarizer.js";
 
 export async function fetchDetailedEntity(
   id: EntityId,
 ): Promise<Entity | undefined> {
-  const entities = await wbApi.fetchEntities(
+  const entities = await wbApi.reanimated__fetchEntities(
     [id],
     ["labels", "descriptions", "aliases", "claims", "sitelinks"],
   );
@@ -18,22 +15,10 @@ export async function fetchDetailedEntity(
 }
 
 export async function findAlternativeHumansFor(
-  h: EuroHuman,
+  h: unknown,
 ): Promise<SummarizedEntities> {
-  const things_in_the_world = await wbApi.searchEntitiesByTitle(h);
-
-  const promised_summarized_entity_array = Object.values(
-    things_in_the_world,
-  ).map((thing) => summarize(thing));
-
-  const summarized_array = await Promise.all(promised_summarized_entity_array);
-
-  return summarized_array
-    .filter((h) => isInstanceOfHuman(h))
-    .reduce((a, b) => {
-      a[b.id] = b;
-      return a;
-    }, {} as SummarizedEntities);
+  const f: SummarizedEntities = {};
+  return f;
 }
 
 export function simplifyClaim(c: Claim): unknown {

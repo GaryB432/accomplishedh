@@ -10,7 +10,7 @@ const mockedApi = wbApi as Mocked<typeof wbApi>;
 
 describe("Summarizer", () => {
   test("summarize", async () => {
-    mockedApi.fetchEntities.mockResolvedValue({
+    mockedApi.reanimated__fetchEntities.mockResolvedValue({
       Q10001: {
         id: "Q10001",
         labels: { en: { value: "ENTITY 10001" } },

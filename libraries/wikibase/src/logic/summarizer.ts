@@ -6,10 +6,8 @@ import type { Entity, EntityId } from "../types";
 import type { Snak } from "../types/snaks";
 import { fromDictionary } from "./translators";
 
-/** @deprecated */
 export type SummarizedEntities = Record<EntityId, SummarizedEntity>;
 
-/** @deprecated */
 export type SummarizedEntity = Entity & Summary;
 
 export type Summary = {
@@ -43,7 +41,7 @@ export async function labelify(
   const label_record: Record<string, string> = {};
   const batches = batchify(Object.keys(id_record));
   for (const batch of batches) {
-    const labeled_people = await wbApi.fetchEntities(batch, ["labels"]);
+    const labeled_people = await wbApi.reanimated__fetchEntities(batch, ["labels"]);
 
     for (const ent of Object.values(labeled_people)) {
       label_record[ent.id] = fromDictionary(ent.labels); // .concat('@@');
