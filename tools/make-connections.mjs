@@ -18,7 +18,7 @@ const FIELDS_FILE_NAME = join(WIKIBASE_DIRECTORY, "fields-of-work.json");
 const USER_AGENT = "AccomplishedHBot/1.0 (editor@humanaccomplishment.com)";
 
 async function waitFetch(input, init) {
-  await sleep(250);
+  await sleep(1500);
   return fetch(input, init);
 }
 
