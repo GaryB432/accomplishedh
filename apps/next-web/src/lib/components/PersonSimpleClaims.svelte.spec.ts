@@ -7,7 +7,7 @@ import { render } from "vitest-browser-svelte";
 import { page } from "vitest/browser";
 import SimpleClaims from "./PersonSimpleClaims.svelte";
 
-const RANING_PROPERTIES = {
+const RANKING_PROPERTIES = {
   SERIES_ORDINAL: "=1545",
   OBJECT_OF_STATEMENT_HAS_ROLE: "=3831",
   STATED_IN: "=248",
