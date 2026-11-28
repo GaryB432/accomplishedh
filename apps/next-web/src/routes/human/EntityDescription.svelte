@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { fromDictionary } from "$lib/wikibase/utils";
+  import { fromDictionary } from "@accomplishedh/wikibase";
   import type { Item } from "@accomplishedh/wikibase/types";
 
   let { subject }: { subject: Item } = $props();

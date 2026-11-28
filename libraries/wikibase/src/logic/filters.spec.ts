@@ -47,7 +47,7 @@ describe("Filters", () => {
   });
 });
 
-const bareClaim = { id: "", rank: "", type: "statement" as const };
+const bareClaim = { id: "", rank: "normal", type: "statement" } as const;
 const dobclaims: Claims = {
   Y1879: [
     {

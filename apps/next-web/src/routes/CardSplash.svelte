@@ -2,8 +2,8 @@
   import { resolve } from "$app/paths";
   import Headshot from "$lib/components/Headshot.svelte";
   import type { Entity } from "$lib/wikibase/types.js";
-  import { fromDictionary } from "$lib/wikibase/utils";
   import type { AccomplishedHuman } from "@accomplishedh/shared";
+  import { fromDictionary } from "@accomplishedh/wikibase";
   import { onMount } from "svelte";
 
   type WikiHumanLike = AccomplishedHuman & { wb: Entity };

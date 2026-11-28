@@ -1,12 +1,11 @@
 <script lang="ts">
-  import type { Entities } from "@accomplishedh/wikibase";
+  import { fromDictionary, type Entities } from "@accomplishedh/wikibase";
 
   import { fetchEntities } from "$lib/wikibase/api";
   import {
-    type Entity,
     WIKIDATA_PERSON_PROPERTIES as p,
+    type Entity,
   } from "$lib/wikibase/types";
-  import { fromDictionary } from "$lib/wikibase/utils";
   import { onMount } from "svelte";
 
   let { subject }: { subject: Entity } = $props();

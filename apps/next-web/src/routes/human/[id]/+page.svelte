@@ -1,6 +1,6 @@
 <script lang="ts">
   import Headshot from "$lib/components/Headshot.svelte";
-  import { fromDictionary } from "$lib/wikibase/utils.js";
+  import { fromDictionary } from "@accomplishedh/wikibase";
   import EntityDescription from "../EntityDescription.svelte";
   import FeaturedToday from "../FeaturedToday.svelte";
   import LifeSpan from "../LifeSpan.svelte";
