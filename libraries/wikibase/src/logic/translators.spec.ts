@@ -1,10 +1,6 @@
 import { describe, expect, test } from "vitest";
 import { lifeDateClaims, schoolClaims } from "../mocks/claims";
-import {
-  entityDateOfBirthIso,
-  fromDictionary,
-  toFowEntry,
-} from "./translators";
+import { entityDateOfBirthIso, fromDictionary } from "./translators";
 
 type LanguageDictionary = Record<string, { value: string }>;
 
@@ -35,36 +31,5 @@ describe("Translators", () => {
 
   test("entityDateOfBirthIso no claims", () => {
     expect(entityDateOfBirthIso({})).toBeUndefined();
-  });
-
-  test("mapFieldOfWorkEntry", () => {
-    expect(
-      toFowEntry({
-        fow: {
-          type: "uri",
-          value: "http://www.wikidata.org/entity/Q742333",
-        },
-        root: {
-          type: "uri",
-          value: "http://www.wikidata.org/entity/Q36649",
-        },
-        human: {
-          type: "uri",
-          value: "http://www.wikidata.org/entity/Q49898",
-        },
-        fowLabel: {
-          "xml:lang": "en",
-          type: "literal",
-          value: "history painting",
-        },
-      }),
-    ).toMatchInlineSnapshot(`
-      {
-        "category": "Art",
-        "human": "Q49898",
-        "id": "Q742333",
-        "label": "history painting",
-      }
-    `);
   });
 });

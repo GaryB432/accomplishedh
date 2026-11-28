@@ -45,21 +45,6 @@ export function fromDictionary(
   return "dunno af";
 }
 
-/** @deprecated */
-export function toFowEntry(
-  row: Record<string, Binding>,
-  index?: number,
-  array?: Record<string, Binding>[],
-): FieldOfWorkEntryV1 & { human: EntityQid } {
-  const human = asQid(extractValue(row["human"]!));
-  const id = asQid(extractValue(row["fow"]!));
-  const label = row["fowLabel"]!.value;
-
-  const category = getFowRootCategory(row["root"]!);
-
-  return { id, category, human, label };
-}
-
 export function asQid(value: string): `Q${number}` {
   if (!/^Q\d+$/.test(value)) {
     throw new Error(`Invalid field-of-work id: ${value}`);
@@ -75,13 +60,4 @@ export function extractValue(typedValue: { value: string }): string {
     throw new Error("no pop");
   }
   return popped;
-}
-
-const missing: EntityQid[] = [];
-
-/** @deprecated */
-function getFowRootCategory(arg0: Binding): FowRootCategoryV1 {
-  const df = categories.get(asQid(extractValue(arg0)));
-
-  return df!;
 }
