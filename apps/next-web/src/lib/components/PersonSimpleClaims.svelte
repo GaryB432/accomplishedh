@@ -4,19 +4,42 @@
     fromDictionary,
     WIKIDATA_PERSON_PROPERTIES,
   } from "@accomplishedh/wikibase";
-  import type { Claims, Entities, Snak } from "@accomplishedh/wikibase/types";
+  import type {
+    Claim,
+    Claims,
+    Entities,
+    Item,
+    Snak,
+  } from "@accomplishedh/wikibase/types";
 
-  let { claims }: { claims: Claims } = $props();
+  let { claims } = $props();
+
+  const exclusions = [
+    WIKIDATA_PERSON_PROPERTIES.INSTANCE_OF,
+    WIKIDATA_PERSON_PROPERTIES.DOCTORAL_ADVISOR,
+    WIKIDATA_PERSON_PROPERTIES.DOCTORAL_STUDENT,
+  ];
 
   type SummarizedEntity_reduced_to_strings = {
     summary: { claims: Record<string, string[]> };
   };
 
   let fetchedPersonPropertyLabels = $state<Promise<Entities>>(
-    fetchEntities(fetch, Object.values(WIKIDATA_PERSON_PROPERTIES), ["labels"]),
+    fetchEntities(
+      fetch,
+      Object.values(WIKIDATA_PERSON_PROPERTIES).filter(
+        (p) => !exclusions.includes(p),
+      ),
+      ["labels"],
+    ),
   );
 
   let summaryPromise = $derived(summarizeClaims(claims));
+
+  function fromClaim(b: Claim, i: Item) {
+    const m = fromDictionary(i.labels ?? { en: { value: "?" } });
+    return `something about ${JSON.stringify(b.mainsnak.datavalue, null, 1)} ${m}`;
+  }
 
   async function summarizeClaims(
     claims: Claims,
@@ -53,16 +76,10 @@
 
     const stringyClaims = flatclaims.reduce(
       (a, b) => {
-        // console.log("handle", b);
         const property_info = labeled_person_entities[b.mainsnak.property];
         if (property_info) {
-          const lnd = property_info.labels ?? { en: { value: "?" } };
-          const m = fromDictionary(lnd);
-          // console.log(property_info.labels);
           a[b.mainsnak.property] ??= [];
-          a[b.mainsnak.property].push(
-            `something about ${JSON.stringify(b.mainsnak, null, 1)} ${m}`,
-          );
+          a[b.mainsnak.property].push(fromClaim(b, property_info));
         }
 
         return a;
