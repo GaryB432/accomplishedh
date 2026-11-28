@@ -1,7 +1,6 @@
 import { cac } from "cac";
 import type { CommandArgs as BotdArgs } from "./app/commands/botd.types.js";
 import type { CommandArgs as FeaturedArgs } from "./app/commands/featured.types.js";
-import type { CommandArgs as RefreshArgs } from "./app/commands/refresh.types.js";
 import type { SharedOptions } from "./app/shared.js";
 
 const prog = cac("ha");
@@ -33,18 +32,6 @@ prog
   .action(async (today: string, opts: SharedOptions) => {
     const { botdCommand } = await import("./app/commands/botd.command.js");
     void (await botdCommand({ opts, today } as BotdArgs));
-  });
-
-prog
-  .command(
-    "refresh <today>",
-    "Refreshes Wikibase caches using online resources",
-  )
-  .option("-a, --all", "Refresh all Wikibase Caches")
-  .action(async (today: string, opts: SharedOptions) => {
-    const { refreshCommand } =
-      await import("./app/commands/refresh.command.js");
-    void (await refreshCommand({ opts, today } as RefreshArgs));
   });
 
 // Display help message when `-h` or `--help` appears
