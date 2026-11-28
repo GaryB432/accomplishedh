@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-06T21:24:44.930Z",
+  "generatedAt": "2026-11-28T17:36:32.433Z",
   "people": {
     "Q296": {
       "fows": [
@@ -27,11 +27,6 @@
           "id": "Q413",
           "category": "Science",
           "label": "physics"
-        },
-        {
-          "id": "Q5891",
-          "category": "Art",
-          "label": "philosophy"
         },
         {
           "id": "Q41217",
@@ -434,15 +429,6 @@
           "id": "Q5862903",
           "category": "Science",
           "label": "probability theory"
-        }
-      ]
-    },
-    "Q1401": {
-      "fows": [
-        {
-          "id": "Q5891",
-          "category": "Art",
-          "label": "philosophy"
         }
       ]
     },
@@ -1077,11 +1063,6 @@
           "label": "physics"
         },
         {
-          "id": "Q5891",
-          "category": "Art",
-          "label": "philosophy"
-        },
-        {
           "id": "Q12479",
           "category": "Science",
           "label": "number theory"
@@ -1128,11 +1109,6 @@
           "id": "Q4184",
           "category": "Art",
           "label": "autobiography"
-        },
-        {
-          "id": "Q5891",
-          "category": "Art",
-          "label": "philosophy"
         },
         {
           "id": "Q7252",
@@ -1186,11 +1162,6 @@
     },
     "Q7243": {
       "fows": [
-        {
-          "id": "Q5891",
-          "category": "Art",
-          "label": "philosophy"
-        },
         {
           "id": "Q7922",
           "category": "Art",
@@ -1301,11 +1272,6 @@
           "id": "Q7754",
           "category": "Science",
           "label": "mathematical analysis"
-        },
-        {
-          "id": "Q8078",
-          "category": "Art",
-          "label": "logic"
         },
         {
           "id": "Q12479",
@@ -1603,11 +1569,6 @@
           "label": "physics"
         },
         {
-          "id": "Q5891",
-          "category": "Art",
-          "label": "philosophy"
-        },
-        {
           "id": "Q11473",
           "category": "Art",
           "label": "thermodynamics"
@@ -1777,11 +1738,6 @@
           "label": "physics"
         },
         {
-          "id": "Q5891",
-          "category": "Art",
-          "label": "philosophy"
-        },
-        {
           "id": "Q9471",
           "category": "Art",
           "label": "epistemology"
@@ -1886,11 +1842,6 @@
     },
     "Q9364": {
       "fows": [
-        {
-          "id": "Q5891",
-          "category": "Art",
-          "label": "philosophy"
-        },
         {
           "id": "Q7163",
           "category": "Art",
@@ -2101,11 +2052,6 @@
           "id": "Q373665",
           "category": "Art",
           "label": "biblical criticism"
-        },
-        {
-          "id": "Q1203109",
-          "category": "Art",
-          "label": "biblical theology"
         }
       ]
     },
@@ -2403,11 +2349,6 @@
           "label": "poetry"
         },
         {
-          "id": "Q5891",
-          "category": "Art",
-          "label": "philosophy"
-        },
-        {
           "id": "Q8242",
           "category": "Lit",
           "label": "literature"
@@ -2574,6 +2515,11 @@
           "label": "photographer"
         },
         {
+          "id": "Q483501",
+          "category": "Art",
+          "label": "artist"
+        },
+        {
           "id": "Q1028181",
           "category": "Art",
           "label": "painter"
@@ -2689,16 +2635,6 @@
           "label": "mathematics"
         },
         {
-          "id": "Q5891",
-          "category": "Art",
-          "label": "philosophy"
-        },
-        {
-          "id": "Q8078",
-          "category": "Art",
-          "label": "logic"
-        },
-        {
           "id": "Q9174",
           "category": "Art",
           "label": "religion"
@@ -2724,19 +2660,9 @@
           "label": "sociology"
         },
         {
-          "id": "Q27654",
-          "category": "Art",
-          "label": "history of philosophy"
-        },
-        {
           "id": "Q59115",
           "category": "Science",
           "label": "philosophy of science"
-        },
-        {
-          "id": "Q484761",
-          "category": "Art",
-          "label": "philosophy of language"
         },
         {
           "id": "Q1166618",
@@ -3071,11 +2997,6 @@
           "label": "scientist"
         },
         {
-          "id": "Q5891",
-          "category": "Art",
-          "label": "philosophy"
-        },
-        {
           "id": "Q7163",
           "category": "Art",
           "label": "politics"
@@ -3390,9 +3311,9 @@
           "label": "medicine"
         },
         {
-          "id": "Q193104",
-          "category": "Art",
-          "label": "Islamic philosophy"
+          "id": "Q193544",
+          "category": "Music",
+          "label": "music theory"
         },
         {
           "id": "Q235258",
@@ -3413,6 +3334,11 @@
     },
     "Q39931": {
       "fows": [
+        {
+          "id": "Q483501",
+          "category": "Art",
+          "label": "artist"
+        },
         {
           "id": "Q644687",
           "category": "Art",
@@ -3703,24 +3629,9 @@
           "label": "physics"
         },
         {
-          "id": "Q5891",
-          "category": "Art",
-          "label": "philosophy"
-        },
-        {
-          "id": "Q8078",
-          "category": "Art",
-          "label": "logic"
-        },
-        {
           "id": "Q12482",
           "category": "Science",
           "label": "set theory"
-        },
-        {
-          "id": "Q35148",
-          "category": "Art",
-          "label": "predicate logic"
         },
         {
           "id": "Q43514",
@@ -3731,11 +3642,6 @@
           "id": "Q180536",
           "category": "Science",
           "label": "philosophy of mathematics"
-        },
-        {
-          "id": "Q183216",
-          "category": "Art",
-          "label": "analytic philosophy"
         },
         {
           "id": "Q1166618",
@@ -3831,11 +3737,6 @@
           "id": "Q735",
           "category": "Art",
           "label": "art"
-        },
-        {
-          "id": "Q5891",
-          "category": "Art",
-          "label": "philosophy"
         },
         {
           "id": "Q7867",
@@ -4028,11 +3929,6 @@
           "id": "Q2329",
           "category": "Science",
           "label": "chemistry"
-        },
-        {
-          "id": "Q5891",
-          "category": "Art",
-          "label": "philosophy"
         }
       ]
     },
@@ -4436,6 +4332,11 @@
     "Q45205": {
       "fows": [
         {
+          "id": "Q483501",
+          "category": "Art",
+          "label": "artist"
+        },
+        {
           "id": "Q644687",
           "category": "Art",
           "label": "illustrator"
@@ -4624,6 +4525,11 @@
           "label": "biographer"
         },
         {
+          "id": "Q1350157",
+          "category": "Music",
+          "label": "music critic"
+        },
+        {
           "id": "Q6625963",
           "category": "Lit",
           "label": "novelist"
@@ -4801,15 +4707,6 @@
           "id": "Q268416",
           "category": "Lit",
           "label": "belletristic literature"
-        }
-      ]
-    },
-    "Q49747": {
-      "fows": [
-        {
-          "id": "Q5891",
-          "category": "Art",
-          "label": "philosophy"
         }
       ]
     },
@@ -5080,11 +4977,6 @@
           "id": "Q205375",
           "category": "Science",
           "label": "inventor"
-        },
-        {
-          "id": "Q6606110",
-          "category": "Art",
-          "label": "industrialist"
         }
       ]
     },
@@ -5172,8 +5064,13 @@
         },
         {
           "id": "Q486748",
-          "category": "Art",
+          "category": "Music",
           "label": "pianist"
+        },
+        {
+          "id": "Q639669",
+          "category": "Music",
+          "label": "musician"
         },
         {
           "id": "Q765778",
@@ -5392,7 +5289,7 @@
         },
         {
           "id": "Q486748",
-          "category": "Art",
+          "category": "Music",
           "label": "pianist"
         },
         {
@@ -5911,11 +5808,6 @@
           "label": "chemistry"
         },
         {
-          "id": "Q5891",
-          "category": "Art",
-          "label": "philosophy"
-        },
-        {
           "id": "Q11467",
           "category": "Art",
           "label": "metallurgy"
@@ -6053,11 +5945,6 @@
           "label": "quantum mechanics"
         },
         {
-          "id": "Q5891",
-          "category": "Art",
-          "label": "philosophy"
-        },
-        {
           "id": "Q54505",
           "category": "Science",
           "label": "quantum field theory"
@@ -6175,11 +6062,6 @@
           "label": "inventor"
         },
         {
-          "id": "Q4991371",
-          "category": "Art",
-          "label": "soldier"
-        },
-        {
           "id": "Q10497074",
           "category": "Science",
           "label": "military flight engineer"
@@ -6188,11 +6070,6 @@
     },
     "Q60584": {
       "fows": [
-        {
-          "id": "Q5891",
-          "category": "Art",
-          "label": "philosophy"
-        },
         {
           "id": "Q7922",
           "category": "Art",
@@ -6489,6 +6366,11 @@
           "id": "Q169470",
           "category": "Art",
           "label": "physicist"
+        },
+        {
+          "id": "Q593644",
+          "category": "Science",
+          "label": "chemist"
         }
       ]
     },
@@ -6538,11 +6420,6 @@
     "Q62377": {
       "fows": [
         {
-          "id": "Q43845",
-          "category": "Art",
-          "label": "businessperson"
-        },
-        {
           "id": "Q81096",
           "category": "Science",
           "label": "engineer"
@@ -6556,11 +6433,6 @@
           "id": "Q1326886",
           "category": "Science",
           "label": "electrical engineer"
-        },
-        {
-          "id": "Q6606110",
-          "category": "Art",
-          "label": "industrialist"
         },
         {
           "id": "Q18576582",
@@ -6933,11 +6805,6 @@
           "label": "quantum mechanics"
         },
         {
-          "id": "Q5891",
-          "category": "Art",
-          "label": "philosophy"
-        },
-        {
           "id": "Q12479",
           "category": "Science",
           "label": "number theory"
@@ -7140,11 +7007,6 @@
           "id": "Q676",
           "category": "Lit",
           "label": "prose"
-        },
-        {
-          "id": "Q5891",
-          "category": "Art",
-          "label": "philosophy"
         }
       ]
     },
@@ -7163,11 +7025,6 @@
           "id": "Q395",
           "category": "Science",
           "label": "mathematics"
-        },
-        {
-          "id": "Q8078",
-          "category": "Art",
-          "label": "logic"
         },
         {
           "id": "Q12479",
@@ -7218,11 +7075,6 @@
           "label": "mathematics"
         },
         {
-          "id": "Q8078",
-          "category": "Art",
-          "label": "logic"
-        },
-        {
           "id": "Q12482",
           "category": "Science",
           "label": "set theory"
@@ -7246,11 +7098,6 @@
           "id": "Q1166618",
           "category": "Science",
           "label": "mathematical logic"
-        },
-        {
-          "id": "Q115154807",
-          "category": "Art",
-          "label": "theology and philosophy"
         }
       ]
     },
@@ -7720,11 +7567,6 @@
           "id": "Q11190",
           "category": "Science",
           "label": "medicine"
-        },
-        {
-          "id": "Q34178",
-          "category": "Art",
-          "label": "theology"
         }
       ]
     },
@@ -8002,11 +7844,6 @@
           "id": "Q205375",
           "category": "Science",
           "label": "inventor"
-        },
-        {
-          "id": "Q6606110",
-          "category": "Art",
-          "label": "industrialist"
         }
       ]
     },
@@ -8066,7 +7903,7 @@
         },
         {
           "id": "Q486748",
-          "category": "Art",
+          "category": "Music",
           "label": "pianist"
         },
         {
@@ -8248,11 +8085,6 @@
     "Q77288": {
       "fows": [
         {
-          "id": "Q18805",
-          "category": "Art",
-          "label": "naturalist"
-        },
-        {
           "id": "Q169470",
           "category": "Art",
           "label": "physicist"
@@ -8344,11 +8176,6 @@
           "id": "Q1209498",
           "category": "Lit",
           "label": "poet lawyer"
-        },
-        {
-          "id": "Q115793211",
-          "category": "Art",
-          "label": "independent publisher"
         }
       ]
     },
@@ -8396,6 +8223,21 @@
           "id": "Q105186",
           "category": "Art",
           "label": "pharmacist"
+        },
+        {
+          "id": "Q486748",
+          "category": "Music",
+          "label": "pianist"
+        },
+        {
+          "id": "Q1419769",
+          "category": "Art",
+          "label": "military pharmacist"
+        },
+        {
+          "id": "Q8178443",
+          "category": "Music",
+          "label": "librettist"
         }
       ]
     },
@@ -8521,11 +8363,6 @@
     "Q78496": {
       "fows": [
         {
-          "id": "Q5891",
-          "category": "Art",
-          "label": "philosophy"
-        },
-        {
           "id": "Q7155",
           "category": "Art",
           "label": "ethology"
@@ -8577,6 +8414,11 @@
           "id": "Q2324479",
           "category": "Art",
           "label": "speaker"
+        },
+        {
+          "id": "Q2405480",
+          "category": "Art",
+          "label": "voice actor"
         },
         {
           "id": "Q8178443",
@@ -8735,7 +8577,7 @@
         },
         {
           "id": "Q486748",
-          "category": "Art",
+          "category": "Music",
           "label": "pianist"
         }
       ]
@@ -8808,11 +8650,6 @@
           "id": "Q395",
           "category": "Science",
           "label": "mathematics"
-        },
-        {
-          "id": "Q5891",
-          "category": "Art",
-          "label": "philosophy"
         },
         {
           "id": "Q7754",
@@ -9091,15 +8928,6 @@
         }
       ]
     },
-    "Q82409": {
-      "fows": [
-        {
-          "id": "Q5891",
-          "category": "Art",
-          "label": "philosophy"
-        }
-      ]
-    },
     "Q82445": {
       "fows": [
         {
@@ -9148,7 +8976,7 @@
         {
           "id": "Q1227195",
           "category": "Art",
-          "label": "political economist"
+          "label": "Q1227195"
         },
         {
           "id": "Q2306091",
@@ -9476,6 +9304,11 @@
           "id": "Q12144794",
           "category": "Lit",
           "label": "prose writer"
+        },
+        {
+          "id": "Q84315222",
+          "category": "Science",
+          "label": "textile engineer"
         }
       ]
     },
@@ -9537,6 +9370,11 @@
           "id": "Q4964182",
           "category": "Art",
           "label": "philosopher"
+        },
+        {
+          "id": "Q15924224",
+          "category": "Science",
+          "label": "internist"
         }
       ]
     },
@@ -9661,11 +9499,6 @@
     },
     "Q93496": {
       "fows": [
-        {
-          "id": "Q121594",
-          "category": "Art",
-          "label": "professor"
-        },
         {
           "id": "Q131524",
           "category": "Art",
@@ -9940,11 +9773,6 @@
     "Q108206": {
       "fows": [
         {
-          "id": "Q1381199",
-          "category": "Art",
-          "label": "Protestant theology"
-        },
-        {
           "id": "Q6423963",
           "category": "Art",
           "label": "Anglicanism"
@@ -10087,11 +9915,6 @@
           "id": "Q2374149",
           "category": "Art",
           "label": "botanist"
-        },
-        {
-          "id": "Q11827483",
-          "category": "Art",
-          "label": "ordinary professor"
         }
       ]
     },
@@ -10223,11 +10046,6 @@
           "id": "Q2329",
           "category": "Science",
           "label": "chemistry"
-        },
-        {
-          "id": "Q5891",
-          "category": "Art",
-          "label": "philosophy"
         }
       ]
     },
@@ -10565,11 +10383,6 @@
           "id": "Q420",
           "category": "Science",
           "label": "biology"
-        },
-        {
-          "id": "Q5891",
-          "category": "Art",
-          "label": "philosophy"
         }
       ]
     },
@@ -10610,11 +10423,6 @@
           "label": "prose"
         },
         {
-          "id": "Q5891",
-          "category": "Art",
-          "label": "philosophy"
-        },
-        {
           "id": "Q9465",
           "category": "Art",
           "label": "ethics"
@@ -10623,11 +10431,6 @@
           "id": "Q35986",
           "category": "Art",
           "label": "aesthetics"
-        },
-        {
-          "id": "Q179805",
-          "category": "Art",
-          "label": "political philosophy"
         },
         {
           "id": "Q747483",
@@ -10695,15 +10498,6 @@
           "id": "Q413",
           "category": "Science",
           "label": "physics"
-        }
-      ]
-    },
-    "Q126596": {
-      "fows": [
-        {
-          "id": "Q5891",
-          "category": "Art",
-          "label": "philosophy"
         }
       ]
     },
@@ -10920,6 +10714,11 @@
           "label": "graphic artist"
         },
         {
+          "id": "Q11613590",
+          "category": "Art",
+          "label": "theatre designer"
+        },
+        {
           "id": "Q23011096",
           "category": "Art",
           "label": "daguerreotypist"
@@ -11086,11 +10885,6 @@
           "label": "literary critic"
         },
         {
-          "id": "Q4991371",
-          "category": "Art",
-          "label": "soldier"
-        },
-        {
           "id": "Q8178443",
           "category": "Music",
           "label": "librettist"
@@ -11161,6 +10955,11 @@
     },
     "Q134741": {
       "fows": [
+        {
+          "id": "Q483501",
+          "category": "Art",
+          "label": "artist"
+        },
         {
           "id": "Q1028181",
           "category": "Art",
@@ -11235,11 +11034,6 @@
           "label": "pharmacist"
         },
         {
-          "id": "Q121594",
-          "category": "Art",
-          "label": "professor"
-        },
-        {
           "id": "Q593644",
           "category": "Science",
           "label": "chemist"
@@ -11262,6 +11056,11 @@
           "id": "Q205375",
           "category": "Science",
           "label": "inventor"
+        },
+        {
+          "id": "Q327029",
+          "category": "Science",
+          "label": "mechanic"
         }
       ]
     },
@@ -11645,11 +11444,6 @@
           "id": "Q10732476",
           "category": "Art",
           "label": "art collector"
-        },
-        {
-          "id": "Q23833535",
-          "category": "Art",
-          "label": "French resistance fighter"
         }
       ]
     },
@@ -11804,11 +11598,6 @@
           "label": "mathematics"
         },
         {
-          "id": "Q8078",
-          "category": "Art",
-          "label": "logic"
-        },
-        {
           "id": "Q8087",
           "category": "Science",
           "label": "geometry"
@@ -11856,7 +11645,7 @@
         {
           "id": "Q205084",
           "category": "Science",
-          "label": "computational complexity theory"
+          "label": "computation complexity theory"
         },
         {
           "id": "Q745328",
@@ -11944,11 +11733,6 @@
     },
     "Q154014": {
       "fows": [
-        {
-          "id": "Q18805",
-          "category": "Art",
-          "label": "naturalist"
-        },
         {
           "id": "Q36180",
           "category": "Lit",
@@ -12145,6 +11929,16 @@
           "id": "Q214917",
           "category": "Lit",
           "label": "playwright"
+        },
+        {
+          "id": "Q17749309",
+          "category": "Art",
+          "label": "archive manager"
+        },
+        {
+          "id": "Q61820542",
+          "category": "Art",
+          "label": "Inspecteur général des finances"
         }
       ]
     },
@@ -12373,11 +12167,6 @@
           "id": "Q16145150",
           "category": "Music",
           "label": "music educator"
-        },
-        {
-          "id": "Q115793211",
-          "category": "Art",
-          "label": "independent publisher"
         }
       ]
     },
@@ -13184,6 +12973,16 @@
           "label": "poet"
         },
         {
+          "id": "Q4164507",
+          "category": "Art",
+          "label": "art critic"
+        },
+        {
+          "id": "Q4263842",
+          "category": "Lit",
+          "label": "literary critic"
+        },
+        {
           "id": "Q6625963",
           "category": "Lit",
           "label": "novelist"
@@ -13656,11 +13455,6 @@
           "label": "poetry"
         },
         {
-          "id": "Q5891",
-          "category": "Art",
-          "label": "philosophy"
-        },
-        {
           "id": "Q8242",
           "category": "Lit",
           "label": "literature"
@@ -13717,6 +13511,11 @@
           "id": "Q1028181",
           "category": "Art",
           "label": "painter"
+        },
+        {
+          "id": "Q13365770",
+          "category": "Art",
+          "label": "copper engraver"
         },
         {
           "id": "Q15296811",
@@ -13786,11 +13585,6 @@
     },
     "Q170076": {
       "fows": [
-        {
-          "id": "Q5891",
-          "category": "Art",
-          "label": "philosophy"
-        },
         {
           "id": "Q11629",
           "category": "Art",
@@ -14314,11 +14108,6 @@
           "label": "drama"
         },
         {
-          "id": "Q34178",
-          "category": "Art",
-          "label": "theology"
-        },
-        {
           "id": "Q35760",
           "category": "Lit",
           "label": "essay"
@@ -14355,11 +14144,6 @@
           "id": "Q395",
           "category": "Science",
           "label": "mathematics"
-        },
-        {
-          "id": "Q8078",
-          "category": "Art",
-          "label": "logic"
         },
         {
           "id": "Q35277",
@@ -14524,7 +14308,7 @@
         {
           "id": "Q25241",
           "category": "Art",
-          "label": "Q25241"
+          "label": "Vertebrata"
         }
       ]
     },
@@ -14613,29 +14397,14 @@
           "label": "mathematics"
         },
         {
-          "id": "Q5891",
-          "category": "Art",
-          "label": "philosophy"
-        },
-        {
           "id": "Q7754",
           "category": "Science",
           "label": "mathematical analysis"
         },
         {
-          "id": "Q8078",
-          "category": "Art",
-          "label": "logic"
-        },
-        {
           "id": "Q9471",
           "category": "Art",
           "label": "epistemology"
-        },
-        {
-          "id": "Q34178",
-          "category": "Art",
-          "label": "theology"
         },
         {
           "id": "Q34651",
@@ -14651,15 +14420,6 @@
           "id": "Q59115",
           "category": "Science",
           "label": "philosophy of science"
-        }
-      ]
-    },
-    "Q185085": {
-      "fows": [
-        {
-          "id": "Q5891",
-          "category": "Art",
-          "label": "philosophy"
         }
       ]
     },
@@ -14706,12 +14466,12 @@
         },
         {
           "id": "Q486748",
-          "category": "Art",
+          "category": "Music",
           "label": "pianist"
         },
         {
           "id": "Q61996187",
-          "category": "Art",
+          "category": "Music",
           "label": "classical pianist"
         }
       ]
@@ -14722,11 +14482,6 @@
           "id": "Q336",
           "category": "Science",
           "label": "science"
-        },
-        {
-          "id": "Q5891",
-          "category": "Art",
-          "label": "philosophy"
         },
         {
           "id": "Q7991",
@@ -14778,7 +14533,7 @@
         },
         {
           "id": "Q486748",
-          "category": "Art",
+          "category": "Music",
           "label": "pianist"
         },
         {
@@ -15136,11 +14891,6 @@
           "label": "mathematics"
         },
         {
-          "id": "Q5891",
-          "category": "Art",
-          "label": "philosophy"
-        },
-        {
           "id": "Q8162",
           "category": "Art",
           "label": "linguistics"
@@ -15234,22 +14984,8 @@
         }
       ]
     },
-    "Q192315": {
-      "fows": [
-        {
-          "id": "Q5891",
-          "category": "Art",
-          "label": "philosophy"
-        }
-      ]
-    },
     "Q192331": {
       "fows": [
-        {
-          "id": "Q5891",
-          "category": "Art",
-          "label": "philosophy"
-        },
         {
           "id": "Q8242",
           "category": "Lit",
@@ -15435,7 +15171,7 @@
         },
         {
           "id": "Q486748",
-          "category": "Art",
+          "category": "Music",
           "label": "pianist"
         },
         {
@@ -15506,11 +15242,6 @@
     "Q200639": {
       "fows": [
         {
-          "id": "Q5891",
-          "category": "Art",
-          "label": "philosophy"
-        },
-        {
           "id": "Q8242",
           "category": "Lit",
           "label": "literature"
@@ -15529,11 +15260,6 @@
     },
     "Q201221": {
       "fows": [
-        {
-          "id": "Q5891",
-          "category": "Art",
-          "label": "philosophy"
-        },
         {
           "id": "Q7163",
           "category": "Art",
@@ -15755,6 +15481,11 @@
           "label": "Lp space"
         },
         {
+          "id": "Q853831",
+          "category": "Art",
+          "label": "Lebesgue integration"
+        },
+        {
           "id": "Q15614122",
           "category": "Science",
           "label": "measure theory"
@@ -15843,8 +15574,8 @@
         },
         {
           "id": "Q66711686",
-          "category": "Science",
-          "label": "railway engineer"
+          "category": "Art",
+          "label": "Q66711686"
         }
       ]
     },
@@ -15915,11 +15646,6 @@
           "id": "Q3968",
           "category": "Science",
           "label": "algebra"
-        },
-        {
-          "id": "Q8078",
-          "category": "Art",
-          "label": "logic"
         },
         {
           "id": "Q200694",
@@ -16715,11 +16441,6 @@
           "label": "writer"
         },
         {
-          "id": "Q43845",
-          "category": "Art",
-          "label": "businessperson"
-        },
-        {
           "id": "Q214917",
           "category": "Lit",
           "label": "playwright"
@@ -16908,11 +16629,6 @@
     },
     "Q217470": {
       "fows": [
-        {
-          "id": "Q5891",
-          "category": "Art",
-          "label": "philosophy"
-        },
         {
           "id": "Q8242",
           "category": "Lit",
@@ -17843,6 +17559,11 @@
           "id": "Q36834",
           "category": "Music",
           "label": "composer"
+        },
+        {
+          "id": "Q158852",
+          "category": "Music",
+          "label": "conductor"
         }
       ]
     },
@@ -18104,11 +17825,6 @@
     },
     "Q281020": {
       "fows": [
-        {
-          "id": "Q121594",
-          "category": "Art",
-          "label": "professor"
-        },
         {
           "id": "Q169470",
           "category": "Art",
@@ -18479,11 +18195,6 @@
           "label": "physics"
         },
         {
-          "id": "Q5891",
-          "category": "Art",
-          "label": "philosophy"
-        },
-        {
           "id": "Q11633",
           "category": "Art",
           "label": "photography"
@@ -18800,11 +18511,6 @@
           "label": "astronomy"
         },
         {
-          "id": "Q5891",
-          "category": "Art",
-          "label": "philosophy"
-        },
-        {
           "id": "Q6689",
           "category": "Lit",
           "label": "French literature"
@@ -18823,6 +18529,11 @@
     },
     "Q310715": {
       "fows": [
+        {
+          "id": "Q483501",
+          "category": "Art",
+          "label": "artist"
+        },
         {
           "id": "Q1028181",
           "category": "Art",
@@ -19277,11 +18988,6 @@
           "label": "paleontology"
         },
         {
-          "id": "Q34178",
-          "category": "Art",
-          "label": "theology"
-        },
-        {
           "id": "Q131056",
           "category": "Art",
           "label": "Megalosaurus"
@@ -19454,7 +19160,7 @@
         },
         {
           "id": "Q486748",
-          "category": "Art",
+          "category": "Music",
           "label": "pianist"
         },
         {
@@ -19490,15 +19196,6 @@
           "id": "Q116263992",
           "category": "Art",
           "label": "rhetorician"
-        }
-      ]
-    },
-    "Q312829": {
-      "fows": [
-        {
-          "id": "Q5891",
-          "category": "Art",
-          "label": "philosophy"
         }
       ]
     },
@@ -20411,7 +20108,7 @@
         },
         {
           "id": "Q486748",
-          "category": "Art",
+          "category": "Music",
           "label": "pianist"
         },
         {
@@ -20535,15 +20232,6 @@
         }
       ]
     },
-    "Q326459": {
-      "fows": [
-        {
-          "id": "Q5891",
-          "category": "Art",
-          "label": "philosophy"
-        }
-      ]
-    },
     "Q327185": {
       "fows": [
         {
@@ -20555,11 +20243,6 @@
     },
     "Q327722": {
       "fows": [
-        {
-          "id": "Q121594",
-          "category": "Art",
-          "label": "professor"
-        },
         {
           "id": "Q593644",
           "category": "Science",
@@ -20602,15 +20285,6 @@
           "id": "Q214917",
           "category": "Lit",
           "label": "playwright"
-        }
-      ]
-    },
-    "Q331893": {
-      "fows": [
-        {
-          "id": "Q5891",
-          "category": "Art",
-          "label": "philosophy"
         }
       ]
     },
@@ -20828,11 +20502,6 @@
           "id": "Q8242",
           "category": "Lit",
           "label": "literature"
-        },
-        {
-          "id": "Q34178",
-          "category": "Art",
-          "label": "theology"
         }
       ]
     },
@@ -20911,15 +20580,6 @@
         }
       ]
     },
-    "Q335112": {
-      "fows": [
-        {
-          "id": "Q5891",
-          "category": "Art",
-          "label": "philosophy"
-        }
-      ]
-    },
     "Q336489": {
       "fows": [
         {
@@ -20981,8 +20641,13 @@
         },
         {
           "id": "Q486748",
-          "category": "Art",
+          "category": "Music",
           "label": "pianist"
+        },
+        {
+          "id": "Q1350157",
+          "category": "Music",
+          "label": "music critic"
         },
         {
           "id": "Q14915627",
@@ -21401,6 +21066,11 @@
           "id": "Q36180",
           "category": "Lit",
           "label": "writer"
+        },
+        {
+          "id": "Q4964182",
+          "category": "Art",
+          "label": "philosopher"
         }
       ]
     },
@@ -21499,6 +21169,11 @@
           "id": "Q49757",
           "category": "Lit",
           "label": "poet"
+        },
+        {
+          "id": "Q189290",
+          "category": "Art",
+          "label": "military officer"
         }
       ]
     },
@@ -21873,11 +21548,6 @@
           "id": "Q1069",
           "category": "Art",
           "label": "geology"
-        },
-        {
-          "id": "Q269323",
-          "category": "Art",
-          "label": "natural philosophy"
         }
       ]
     },
@@ -21942,7 +21612,7 @@
         },
         {
           "id": "Q486748",
-          "category": "Art",
+          "category": "Music",
           "label": "pianist"
         },
         {
@@ -22055,11 +21725,6 @@
     },
     "Q379816": {
       "fows": [
-        {
-          "id": "Q18805",
-          "category": "Art",
-          "label": "naturalist"
-        },
         {
           "id": "Q36180",
           "category": "Lit",
@@ -22206,6 +21871,11 @@
           "label": "painter"
         },
         {
+          "id": "Q10872101",
+          "category": "Art",
+          "label": "anatomist"
+        },
+        {
           "id": "Q11569986",
           "category": "Art",
           "label": "printmaker"
@@ -22257,11 +21927,6 @@
           "id": "Q189290",
           "category": "Art",
           "label": "military officer"
-        },
-        {
-          "id": "Q4991371",
-          "category": "Art",
-          "label": "soldier"
         }
       ]
     },
@@ -22562,11 +22227,6 @@
           "id": "Q521",
           "category": "Art",
           "label": "physiology"
-        },
-        {
-          "id": "Q1129353",
-          "category": "Art",
-          "label": "natural theology"
         }
       ]
     },
@@ -22982,11 +22642,6 @@
           "label": "astronomer"
         },
         {
-          "id": "Q18805",
-          "category": "Art",
-          "label": "naturalist"
-        },
-        {
           "id": "Q33231",
           "category": "Art",
           "label": "photographer"
@@ -23180,11 +22835,6 @@
           "id": "Q16031530",
           "category": "Music",
           "label": "music theorist"
-        },
-        {
-          "id": "Q115793211",
-          "category": "Art",
-          "label": "independent publisher"
         }
       ]
     },
@@ -23354,6 +23004,11 @@
           "id": "Q49757",
           "category": "Lit",
           "label": "poet"
+        },
+        {
+          "id": "Q1028181",
+          "category": "Art",
+          "label": "painter"
         }
       ]
     },
@@ -23644,6 +23299,11 @@
           "label": "artist"
         },
         {
+          "id": "Q1028181",
+          "category": "Art",
+          "label": "painter"
+        },
+        {
           "id": "Q1281618",
           "category": "Art",
           "label": "sculptor"
@@ -23722,6 +23382,11 @@
           "id": "Q33231",
           "category": "Art",
           "label": "photographer"
+        },
+        {
+          "id": "Q483501",
+          "category": "Art",
+          "label": "artist"
         },
         {
           "id": "Q1028181",
@@ -23901,6 +23566,16 @@
           "id": "Q170790",
           "category": "Science",
           "label": "mathematician"
+        },
+        {
+          "id": "Q12094958",
+          "category": "Art",
+          "label": "geophysicist"
+        },
+        {
+          "id": "Q88208585",
+          "category": "Art",
+          "label": "natural philosopher"
         }
       ]
     },
@@ -23988,11 +23663,6 @@
     "Q905534": {
       "fows": [
         {
-          "id": "Q121594",
-          "category": "Art",
-          "label": "professor"
-        },
-        {
           "id": "Q593644",
           "category": "Science",
           "label": "chemist"
@@ -24033,11 +23703,6 @@
     },
     "Q936499": {
       "fows": [
-        {
-          "id": "Q43845",
-          "category": "Art",
-          "label": "businessperson"
-        },
         {
           "id": "Q81096",
           "category": "Science",
@@ -24371,11 +24036,6 @@
     "Q1346007": {
       "fows": [
         {
-          "id": "Q18805",
-          "category": "Art",
-          "label": "naturalist"
-        },
-        {
           "id": "Q81096",
           "category": "Science",
           "label": "engineer"
@@ -24485,11 +24145,6 @@
           "id": "Q17132038",
           "category": "Art",
           "label": "palaeographer"
-        },
-        {
-          "id": "Q20826540",
-          "category": "Art",
-          "label": "scholar"
         }
       ]
     },
@@ -24620,7 +24275,7 @@
         },
         {
           "id": "Q15924224",
-          "category": "Art",
+          "category": "Science",
           "label": "internist"
         }
       ]

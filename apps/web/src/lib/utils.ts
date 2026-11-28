@@ -1,4 +1,4 @@
-import crypto from "crypto-js";
+import { hash } from "node:crypto";
 
 export async function delay<T>(cb: () => Promise<T>, seconds = 1): Promise<T> {
   return new Promise((success) => {
@@ -9,8 +9,5 @@ export async function delay<T>(cb: () => Promise<T>, seconds = 1): Promise<T> {
 }
 
 export function isGary(locals: App.Locals): boolean {
-  return (
-    crypto.MD5(locals.userid).toString(crypto.enc.Hex) ===
-    "03b083fd0aadc8883198881ba88111ab"
-  );
+  return hash("md5", locals.userid) === "03b083fd0aadc8883198881ba88111ab";
 }
