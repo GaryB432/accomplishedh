@@ -1,6 +1,9 @@
 <script lang="ts">
   import { fetchEntities } from "$lib/wikibase/api";
-  import { WIKIDATA_PERSON_PROPERTIES } from "@accomplishedh/wikibase";
+  import {
+    fromDictionary,
+    WIKIDATA_PERSON_PROPERTIES,
+  } from "@accomplishedh/wikibase";
   import type { Claims, Entities, Snak } from "@accomplishedh/wikibase/types";
 
   let { claims }: { claims: Claims } = $props();
@@ -54,10 +57,11 @@
         const property_info = labeled_person_entities[b.mainsnak.property];
         if (property_info) {
           const lnd = property_info.labels ?? { en: { value: "?" } };
+          const m = fromDictionary(lnd);
           // console.log(property_info.labels);
           a[b.mainsnak.property] ??= [];
           a[b.mainsnak.property].push(
-            `something about ${JSON.stringify(b.mainsnak, null, 1)} ${lnd["en"].value}`,
+            `something about ${JSON.stringify(b.mainsnak, null, 1)} ${m}`,
           );
         }
 

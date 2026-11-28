@@ -1,17 +1,8 @@
-import {
-  WIKIDATA_PERSON_PROPERTIES,
-  type Claims,
-} from "@accomplishedh/wikibase";
+import { type Claims } from "@accomplishedh/wikibase";
 import { describe, expect, it } from "vitest";
 import { render } from "vitest-browser-svelte";
 import { page } from "vitest/browser";
 import SimpleClaims from "./PersonSimpleClaims.svelte";
-
-const RANKING_PROPERTIES = {
-  SERIES_ORDINAL: "=1545",
-  OBJECT_OF_STATEMENT_HAS_ROLE: "=3831",
-  STATED_IN: "=248",
-};
 
 describe("PersonSimpleClaims.svelte", () => {
   it("renders claims list", async () => {
